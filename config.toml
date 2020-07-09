@@ -10,6 +10,7 @@ disqusShortname         = ""
 googleAnalytics         = ""
 pluralizeListTitles     = false
 disableLanguages        = ["en", "fr", "pl", "de", "es", "zh-CN", "zh-TW", "ja"]
+ignoreFiles = ["\\.R$", "\\.Rmd$", "\\.sh$", "\\.txt$", "_files$", "_cache$"]
 
 [outputs]
   home                  = ["html", "json"]
