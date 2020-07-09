@@ -3,7 +3,7 @@
 baseurl                 = "http://pet.leg.ufpr.br/"
 DefaultContentLanguage  = "pt"
 publishDir              = "docs"
-title                   = "Hugo Future Imperfect Slim"
+title                   = "PET Estatística UFPR"
 theme                   = "hugo-future-imperfect-slim"
 paginate                = 3
 disqusShortname         = ""
