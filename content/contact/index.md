@@ -1,6 +1,8 @@
 +++
 title = "Contato"
-layout = "about"
+layout = "contact"
+description = "Entre em contato conosco"
 +++
 
-Contatos aqui.
+Entre em contato pelas redes sociais ou pelo email:
+`pet.estatistica.ufpr@gmail.com`.
