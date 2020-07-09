@@ -1,26 +1,49 @@
 +++
-title = "About"
+title = "Sobre"
 layout = "about"
-description = "Hugo, the world’s fastest framework for building websites"
-date = "2019-02-28"
-aliases = ["about-us","about-hugo"]
-author = "Hugo Authors"
+description = "O que é o PET Estatística?"
+date = "2020-07-09"
+aliases = ["about-us"]
+author = "PET Estatística UFPR"
 +++
 
-Written in Go, Hugo is an open source static site generator available under the [Apache Licence 2.0.](https://github.com/gohugoio/hugo/blob/master/LICENSE) Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.
+## O PET
 
-Hugo makes use of a variety of open source projects including:
+O Programa de Educação Tutorial (PET) é desenvolvido por grupos de
+estudantes, com tutor de um docente, organizados a partir de formações
+em nível de graduação nas Instituições de Ensino Superior do País
+orientados pelo princípio da indissociabilidade entre ensino, pesquisa e
+extensão e da educação tutorial.
 
-* https://github.com/yuin/goldmark
-* https://github.com/alecthomas/chroma
-* https://github.com/muesli/smartcrop
-* https://github.com/spf13/cobra
-* https://github.com/spf13/viper
+Atualmente, o PET conta com 842 grupos distribuídos entre 121 IES.O
+grupo PET, uma vez criado, mantém suas atividades por tempo
+indeterminado. No entanto, os seus membros possuem um tempo máximo de
+vínculo: ao bolsista de graduação é permitida a permanência até a
+conclusão da sua graduação e, ao tutor, por um período de, no máximo,
+seis anos, desde que obedecidas as normas do Programa
 
-Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.
+### Objetivos do Programa:
 
-Hugo is for people who want to hand code their own website without worrying about setting up complicated runtimes, dependencies and databases.
+- Desenvolver atividades acadêmicas em padrões de qualidade de
+  excelência, mediante grupos de aprendizagem tutorial de natureza
+  coletiva e interdisciplinar.
+- Contribuir para a elevação da qualidade da formação acadêmica dos
+  alunos de graduação.- Estimular a formação de profissionais e docentes
+  de elevada qualificação técnica, científica, tecnológica e
+  acadêmica.
+- Formular novas estratégias de desenvolvimento e modernização do ensino
+  superior no país.
+- Estimular o espírito crítico, bem como a atuação profissional pautada
+  pela ética, pela cidadania e pela função social da educação
+  superior.
 
-Websites built with Hugo are extremelly fast, secure and can be deployed anywhere including, AWS, GitHub Pages, Heroku, Netlify and any other hosting provider.
+(Fonte: Portal do Ministério da Educação)
 
-Learn more and contribute on [GitHub](https://github.com/gohugoio).
+## O PET Estatística
+
+Em 1992, o PET Estatística (Programa de Educação Tutorial do curso de
+Estatística) foi fundado com o intuito de oferecer aos alunos da
+graduação, a possibilidade de ampliar o conhecimento e a interação com
+os professores do departamento, através de atividades como: Pesquisa
+Indivídual, Projetos de Extensão, Projetos Coletivos, além de auxilio em
+eventos acadêmicos.
