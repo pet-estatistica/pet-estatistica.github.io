@@ -1,0 +1,8 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+docs/
+static/rmarkdown-libs/
+content/blog/*.html
+static/blog/*_files/

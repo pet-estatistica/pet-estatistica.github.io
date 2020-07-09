@@ -1,0 +1,47 @@
+---
+title: Usando Rmarkdown no blog
+author: Fernando Mayer
+date: '2020-07-09'
+slug: usando-rmarkdown-no-blog
+categories:
+  - tutoriais
+tags:
+  - blogdown
+  - rmarkdown
+description: 'Como usar o Rmarkdown para escrever no blog'
+images:
+  - 'img/2014/04/pic02.jpg'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+    fig.align = "center",
+    out.width = "80%")
+```
+
+## Inserindo códigos
+
+Para inserir códigos, basta abrir um chunk
+
+```{r}
+data(cars)
+str(cars)
+```
+
+## Inserindo figuras
+
+Para fazer um gráfico o procedimento é o mesmo
+
+```{r, echo=FALSE}
+plot(dist ~ speed, data = cars)
+```
+
+## Equações matemáticas
+
+Uma equação pode ser escrita com
+
+$$
+Y_i = \beta_0 + \beta_1 X_i + \epsilon_i, \quad i = 1, \ldots, n
+$$
+
+E uma equação na linha, por exemplo, $\bar{X} =$ `r mean(cars$dist)`.
