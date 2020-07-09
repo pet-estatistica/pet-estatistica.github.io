@@ -42,18 +42,18 @@ disableLanguages        = ["en", "fr", "pl", "de", "es", "zh-CN", "zh-TW", "ja"]
     languageMenu        = false
 
   [params.intro]
-    header                = "Hugo Future Imperfect Slim"
-    paragraph             = "Another fine, responsive site template by <a href='http://html5up.net'>HTML5 UP</a>."
+    header                = "PET Estatística UFPR"
+    paragraph             = "Programa de Educação Tutorial (PET) do curso de Estatística da UFPR"
     rssIntro              = true
     socialIntro           = true
     hideWhenSingleColumn  = false
     alwaysOnHomepage      = false
 
     [params.intro.pic]
-      src                 = "img/main/logo.jpg"
+      src                 = "img/main/logo-pet-azul-logo.png"
       shape               = "circle"
       width               = ""
-      alt                 = "Hugo Future Imperfect Slim"
+      alt                 = "PET Estatística UFPR"
 
   [params.sidebar]
     about               = "This theme was developed for Hugo static site generator."
