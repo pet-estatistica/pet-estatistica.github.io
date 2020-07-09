@@ -26,9 +26,9 @@ disableLanguages        = ["en", "fr", "pl", "de", "es", "zh-CN", "zh-TW", "ja"]
   socialShare           = ["facebook", "linkedin", "email"]
 
   [params.meta]
-    description         = "A theme by HTML5 UP, ported by Julio Pescador. Slimmed and enhanced by Patrick Collins. Multilingual by StatnMap. Powered by Hugo."
-    author              = "HTML5UP and Hugo"
-    favicon             = false
+    description         = "Site oficial do PET Estatística UFPR"
+    author              = "Membros do PET Estatística UFPR"
+    favicon             = true
     svg                 = true
     faviconVersion      = "1"
     msColor             = "#ffffff"
