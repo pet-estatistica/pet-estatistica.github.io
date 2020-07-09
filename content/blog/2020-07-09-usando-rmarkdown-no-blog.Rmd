@@ -44,4 +44,4 @@ $$
 Y_i = \beta_0 + \beta_1 X_i + \epsilon_i, \quad i = 1, \ldots, n
 $$
 
-
+E uma equação na linha, por exemplo, $\bar{X} =$ `r mean(cars$dist)`.
