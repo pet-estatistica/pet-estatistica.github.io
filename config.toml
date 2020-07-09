@@ -116,50 +116,21 @@ disableLanguages        = ["en", "fr", "pl", "de", "es", "zh-CN", "zh-TW", "ja"]
 
 [social]
   # Coding Communities
-  github                = "pacollins/hugo-future-imperfect-slim"
-  gitlab                = ""
-  stackoverflow         = "" # User Number
-  bitbucket             = ""
-  jsfiddle              = ""
-  codepen               = ""
+  github                = "pet-estatistica"
   # Visual Art Communities
-  deviantart            = ""
-  flickr                = "example"
-  behance               = ""
-  dribbble              = ""
+  # flickr                = "example"
   # Publishing Communities
-  wordpress             = ""
-  medium                = ""
+  # medium                = ""
   # Professional/Business Oriented Communities
-  linkedin              = "example"
-  linkedin_company      = "examplebusiness"
-  foursquare            = ""
-  xing                  = ""
-  slideshare            = ""
+  # linkedin              = "example"
+  linkedin_company      = "pet-estatistica-ufpr"
+  # slideshare            = ""
   # Social Networks
-  facebook              = "example"
-  googleplus            = ""
-  reddit                = "example"
-  quora                 = ""
-  youtube               = ""
-  vimeo                 = ""
-  whatsapp              = "" # WhatsApp Number
-    # WeChat and QQ need testing.
-    wechat              = ""
-    qq                  = "" # User ID Number
-  instagram             = "example"
-  tumblr                = ""
-  twitter               = "example"
-  strava                = ""
-  skype                 = ""
-  snapchat              = ""
-  pinterest             = "example"
-  telegram              = "example"
-  vine                  = ""
-  googlescholar         = ""
-  orcid                 = ""
-  researchgate          = "example"
-  keybase               = "example"
-  mastodon              = "example.com/@example"
+  facebook              = "PET.Estatistica.UFPR"
+  youtube               = "channel/UCPFo2Z9zZeB-Xgg8sm9sBKg"
+  # whatsapp              = "" # WhatsApp Number
+  instagram             = "pet.est.ufpr"
+  # twitter               = "example"
+  # telegram              = "example"
   # Email
-  email                 = "example"
+  email                 = "pet.estatistica.ufpr@gmail.com"
