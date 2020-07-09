@@ -1,14 +1,15 @@
 # For a description of these parameters, please visit the theme wiki.
 # https://github.com/pacollins/hugo-future-imperfect-slim/wiki/config.toml
-baseurl                 = "https://example.com/"
-DefaultContentLanguage  = "en"
+baseurl                 = "http://pet.leg.ufpr.br/"
+DefaultContentLanguage  = "pt"
+publishDir              = "docs"
 title                   = "Hugo Future Imperfect Slim"
 theme                   = "hugo-future-imperfect-slim"
 paginate                = 3
 disqusShortname         = ""
 googleAnalytics         = ""
 pluralizeListTitles     = false
-disableLanguages        = [""]
+disableLanguages        = ["en", "fr", "pl", "de", "es", "zh-CN", "zh-TW", "ja"]
 
 [outputs]
   home                  = ["html", "json"]
