@@ -3,3 +3,5 @@
 .RData
 .Ruserdata
 docs/
+static/rmarkdown-libs/
+content/blog/*.html
