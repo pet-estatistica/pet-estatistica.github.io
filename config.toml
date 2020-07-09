@@ -56,7 +56,7 @@ disableLanguages        = ["en", "fr", "pl", "de", "es", "zh-CN", "zh-TW", "ja"]
       alt                 = "PET Estatística UFPR"
 
   [params.sidebar]
-    about               = "This theme was developed for Hugo static site generator."
+    about               = "O PET Estatística foi fundado com o intuito de oferecer aos alunos da graduação, a possibilidade de ampliar o conhecimento e a interação com os professores do departamento."
     postAmount          = 5
     categories          = true
     categoriesByCount   = true
