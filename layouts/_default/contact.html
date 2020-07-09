@@ -1,0 +1,21 @@
+{{ define "main" }}
+  <article class="post">
+    <header>
+      <div class="title">
+        {{ if $.Scratch.Get "h1" }}
+          <h1><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
+          {{ $.Scratch.Set "h1" false }}
+        {{ else }}
+          <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        {{ end }}
+        {{ with .Description }}<p>{{ . }}</p>{{ end }}
+      </div>
+    </header>
+    <div id="content">
+        {{ .Content }}
+        <p align="center">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d900.6563398917564!2d-49.23203217076708!3d-25.450785788029222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce510db1637fd%3A0x2679096726e30573!2sPrograma%20de%20Educa%C3%A7%C3%A3o%20Tutorial%20(PET)%20UFPR!5e0!3m2!1sen!2sbr!4v1594265157203!5m2!1sen!2sbr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </p>
+    </div>
+  </article>
+{{ end }}
