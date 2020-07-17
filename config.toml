@@ -125,11 +125,18 @@ ignoreFiles             = ["\\.R$", "\\.Rmd$", "\\.Rproj$", "\\.sh$", "\\.txt$",
     weight            = 6
 
   [[menu.main]]
+    name              = "Processo Seletivo"
+    identifier        = "selecao"
+    url               = "/selecao/"
+    pre               = "<i class='fas fa-bullhorn'></i>"
+    weight            = 7
+
+  [[menu.main]]
     name              = "Categorias"
     identifier        = "categories"
     url               = "/categories/"
     pre               = "<i class='fas fa-sitemap'></i>"
-    weight            = 7
+    weight            = 8
 
 
 [social]
