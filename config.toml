@@ -113,7 +113,7 @@ ignoreFiles             = ["\\.R$", "\\.Rmd$", "\\.Rproj$", "\\.sh$", "\\.txt$",
   [[menu.main]]
     name              = "Contato"
     identifier        = "contact"
-    url               = "/contact/"
+    url               = "/contato/"
     pre               = "<i class='far fa-envelope'></i>"
     weight            = 6
 
