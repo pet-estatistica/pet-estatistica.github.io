@@ -1,0 +1,40 @@
+---
+title: Usando Rmarkdown no blog
+author: Fernando Mayer
+date: '2020-07-09'
+slug: usando-rmarkdown-no-blog
+categories:
+  - tutoriais
+tags:
+  - blogdown
+  - rmarkdown
+description: 'Como usar o Rmarkdown para escrever no blog'
+images:
+  - 'img/2014/04/pic02.jpg'
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<div id="inserindo-códigos" class="section level2">
+<h2>Inserindo códigos</h2>
+<p>Para inserir códigos, basta abrir um chunk</p>
+<pre class="r"><code>data(cars)
+str(cars)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    50 obs. of  2 variables:
+##  $ speed: num  4 4 7 7 8 9 10 10 10 11 ...
+##  $ dist : num  2 10 4 22 16 10 18 26 34 17 ...</code></pre>
+</div>
+<div id="inserindo-figuras" class="section level2">
+<h2>Inserindo figuras</h2>
+<p>Para fazer um gráfico o procedimento é o mesmo</p>
+<p><img src="/blog/2020-07-09-usando-rmarkdown-no-blog_files/figure-html/unnamed-chunk-2-1.png" width="80%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="equações-matemáticas" class="section level2">
+<h2>Equações matemáticas</h2>
+<p>Uma equação pode ser escrita com</p>
+<p><span class="math display">\[
+Y_i = \beta_0 + \beta_1 X_i + \epsilon_i, \quad i = 1, \ldots, n
+\]</span></p>
+<p>E uma equação na linha, por exemplo, <span class="math inline">\(\bar{X} =\)</span> 42.98.</p>
+</div>
