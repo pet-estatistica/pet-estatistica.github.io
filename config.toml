@@ -26,7 +26,7 @@ ignoreFiles             = ["\\.R$", "\\.Rmd$", "\\.Rproj$", "\\.sh$", "\\.txt$",
   highlightjsLang       = ["html", "css", "js", "toml"]
   viewMorePostsLink     = "/blog/"
   readingTime           = true
-  socialShare           = ["facebook", "linkedin", "email"]
+  socialShare           = ["twitter", "facebook", "linkedin", "email"]
 
   [params.meta]
     description         = "Site oficial do PET Estatística UFPR"
