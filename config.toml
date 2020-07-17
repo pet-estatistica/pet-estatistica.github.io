@@ -97,11 +97,18 @@ ignoreFiles             = ["\\.R$", "\\.Rmd$", "\\.Rproj$", "\\.sh$", "\\.txt$",
     weight            = 2
 
   [[menu.main]]
+    name              = "Integrantes"
+    identifier        = "integrantes"
+    url               = "/integrantes/"
+    pre               = "<i class='fas fa-users'></i>"
+    weight            = 3
+
+  [[menu.main]]
     name              = "Blog"
     identifier        = "blog"
     url               = "/blog/"
     pre               = "<i class='far fa-newspaper'></i>"
-    weight            = 3
+    weight            = 4
 
   [[menu.main]]
     name              = "Categorias"
