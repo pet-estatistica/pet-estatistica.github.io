@@ -12,7 +12,7 @@ disqusShortname         = ""
 googleAnalytics         = ""
 pluralizeListTitles     = false
 disableLanguages        = ["en", "fr", "pl", "de", "es", "zh-CN", "zh-TW", "ja"]
-ignoreFiles             = ["\\.R$", "\\.Rmd$", "\\.sh$", "\\.txt$", "_files$", "_cache$"]
+ignoreFiles             = ["\\.R$", "\\.Rmd$", "\\.Rproj$", "\\.sh$", "\\.txt$", "_files$", "_cache$"]
 
 [outputs]
   home                  = ["html", "json"]
@@ -26,7 +26,7 @@ ignoreFiles             = ["\\.R$", "\\.Rmd$", "\\.sh$", "\\.txt$", "_files$", "
   highlightjsLang       = ["html", "css", "js", "toml"]
   viewMorePostsLink     = "/blog/"
   readingTime           = true
-  socialShare           = ["facebook", "linkedin", "email"]
+  socialShare           = ["twitter", "facebook", "linkedin", "email"]
 
   [params.meta]
     description         = "Site oficial do PET Estatística UFPR"
@@ -92,30 +92,52 @@ ignoreFiles             = ["\\.R$", "\\.Rmd$", "\\.sh$", "\\.txt$", "_files$", "
   [[menu.main]]
     name              = "Sobre"
     identifier        = "about"
-    url               = "/about/"
+    url               = "/sobre/"
     pre               = "<i class='far fa-id-card'></i>"
     weight            = 2
+
+  [[menu.main]]
+    name              = "Integrantes"
+    identifier        = "integrantes"
+    url               = "/integrantes/"
+    pre               = "<i class='fas fa-users'></i>"
+    weight            = 3
+
+  [[menu.main]]
+    name              = "Projetos"
+    identifier        = "projetos"
+    url               = "/projetos/"
+    pre               = "<i class='fas fa-terminal'></i>"
+    weight            = 4
 
   [[menu.main]]
     name              = "Blog"
     identifier        = "blog"
     url               = "/blog/"
     pre               = "<i class='far fa-newspaper'></i>"
-    weight            = 3
+    weight            = 5
+
+  [[menu.main]]
+    name              = "Contato"
+    identifier        = "contact"
+    url               = "/contato/"
+    pre               = "<i class='far fa-envelope'></i>"
+    weight            = 6
+
+  [[menu.main]]
+    name              = "Processo Seletivo"
+    identifier        = "selecao"
+    url               = "/selecao/"
+    pre               = "<i class='fas fa-bullhorn'></i>"
+    weight            = 7
 
   [[menu.main]]
     name              = "Categorias"
     identifier        = "categories"
     url               = "/categories/"
     pre               = "<i class='fas fa-sitemap'></i>"
-    weight            = 5
+    weight            = 8
 
-  [[menu.main]]
-    name              = "Contato"
-    identifier        = "contact"
-    url               = "/contact/"
-    pre               = "<i class='far fa-envelope'></i>"
-    weight            = 6
 
 [social]
   # Coding Communities
