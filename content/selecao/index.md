@@ -10,3 +10,5 @@ author = "PET Estatística UFPR"
 Informações e links para o processo seletivo 2020.
 
 Período de inscrições.
+
+Edital.
