@@ -104,25 +104,32 @@ ignoreFiles             = ["\\.R$", "\\.Rmd$", "\\.Rproj$", "\\.sh$", "\\.txt$",
     weight            = 3
 
   [[menu.main]]
+    name              = "Projetos"
+    identifier        = "projetos"
+    url               = "/projetos/"
+    pre               = "<i class='fas fa-terminal'></i>"
+    weight            = 4
+
+  [[menu.main]]
     name              = "Blog"
     identifier        = "blog"
     url               = "/blog/"
     pre               = "<i class='far fa-newspaper'></i>"
-    weight            = 4
+    weight            = 5
 
   [[menu.main]]
     name              = "Categorias"
     identifier        = "categories"
     url               = "/categories/"
     pre               = "<i class='fas fa-sitemap'></i>"
-    weight            = 5
+    weight            = 6
 
   [[menu.main]]
     name              = "Contato"
     identifier        = "contact"
     url               = "/contato/"
     pre               = "<i class='far fa-envelope'></i>"
-    weight            = 6
+    weight            = 7
 
 [social]
   # Coding Communities
