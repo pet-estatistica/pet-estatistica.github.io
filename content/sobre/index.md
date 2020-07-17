@@ -3,7 +3,7 @@ title = "Sobre"
 layout = "about"
 description = "O que é o PET Estatística?"
 date = "2020-07-09"
-aliases = ["about-us"]
+aliases = ["about"]
 author = "PET Estatística UFPR"
 +++
 
