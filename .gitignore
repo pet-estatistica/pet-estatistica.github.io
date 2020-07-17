@@ -5,4 +5,4 @@
 docs/
 static/rmarkdown-libs/
 # content/blog/*.html
-static/blog/*_files/
+# static/blog/*_files/
