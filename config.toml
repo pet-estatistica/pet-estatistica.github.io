@@ -92,7 +92,7 @@ ignoreFiles             = ["\\.R$", "\\.Rmd$", "\\.Rproj$", "\\.sh$", "\\.txt$",
   [[menu.main]]
     name              = "Sobre"
     identifier        = "about"
-    url               = "/about/"
+    url               = "/sobre/"
     pre               = "<i class='far fa-id-card'></i>"
     weight            = 2
 
