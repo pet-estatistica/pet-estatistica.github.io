@@ -63,8 +63,15 @@ exemplo, para editar a página "Integrantes", abra e edite o arquivo
 Se as alterações forem grandes, crie um *branch* e faça um *pull
 request* (similar ao processo de criação de posts).
 
+## Publicando o site
 
+O site está configurado para ser publicado automaticamente quando
+qualquer *push* for dado para o repositório (no ramo *master*), por meio
+do [Netlify][]. O arquivo `netlify.toml` já possui as informações
+necessárias para gerar o site.
 
+O *custom domain* `pet.leg.ufpr.br` foi configurado no Netlify e as
+entradas apropriadas foram inseridas no DNS do servidor do LEG.
 
 ## Criação do site
 
@@ -185,6 +192,8 @@ Veja também https://bookdown.org/yihui/blogdown/templates.html.
 
 ## Links e referências
 
+### Configurações
+
 - [Hugo Future Imperfect Slim wiki][]
 - [Configure Hugo][]: configurações básicas
 - [Hugo's Lookup Order][]: importante para saber o que é executado
@@ -194,8 +203,22 @@ Veja também https://bookdown.org/yihui/blogdown/templates.html.
 - [Multilingual Mode][]: sobre páginas multi-línguas
 - [Image Processing][]: processamento de figuras
 
+### Tutoriais
+
+- [A Blogdown New Post Workflow with Github and Netlify][]
+- [Fun blogdown in R to design a personal website][]
+- [Blogdown Tutorial (in Portuguese)][]
+- [How to build a website with Blogdown in R][]
+- [How Not To Knit All Rmd Files With Blogdown][]
+
+[How Not To Knit All Rmd Files With Blogdown]: https://yutani.rbind.io/post/2017-10-25-blogdown-custom/
+[How to build a website with Blogdown in R]: https://www.storybench.org/how-to-build-a-website-with-blogdown-in-r/
+[Blogdown Tutorial (in Portuguese)]: https://diegopftrindade.netlify.app/post/blogdown-tutorial-in-portuguese/
+[Fun blogdown in R to design a personal website]: https://annielyu.com/2020/01/12/blogdown-website/
+[A Blogdown New Post Workflow with Github and Netlify]: https://www.garrickadenbuie.com/blog/blogdown-netlify-new-post-workflow/
 [blogdown]: https://bookdown.org/yihui/blogdown/
 [Hugo]: https://gohugo.io/
+[Netlify]: https://www.netlify.com/
 [Hugo Future Imperfect Slim]: https://themes.gohugo.io/hugo-future-imperfect-slim/
 [Hugo Future Imperfect Slim wiki]: https://github.com/pacollins/hugo-future-imperfect-slim/wiki
 [Hugo's Lookup Order]: https://gohugo.io/templates/lookup-order/
