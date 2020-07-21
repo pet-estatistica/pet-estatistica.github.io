@@ -2,6 +2,70 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/02ea8d59-deed-4afb-943e-fc1c475f9f35/deploy-status)](https://app.netlify.com/sites/pet-est/deploys)
 
+## Como usar
+
+O site foi construído com o pacote [blogdown][], que permite escrever
+com documentos do Rmarkdown. O mecanismo por trás do site é o [Hugo][],
+que transforma em HTML páginas escritas em Markdown (`*.md`). Portanto,
+nós escrevemos em Rmarkdown (`*.Rmd*`), o pacote **blogdown** converte
+para Markdown (`*md`) e o Hugo converte para HTML.
+
+A primeira coisa a fazer é clonar este repositório com
+```bash
+git clone https://github.com/pet-estatistica/pet-estatistica.github.io.git
+```
+ou usando a interface do RStudio.
+
+Depois basta abrir o R neste diretório e rodar
+```r
+blogdown::serve_site()
+```
+que uma página irá abrir no seu navegador com o conteúdo do site já
+renderizado.
+
+No RStudio, basta clicar no botão "Addins > Serve Site" que o mesmo
+acontecerá automaticamente.
+
+### O que alterar
+
+Só altere arquivos quando você realmente souber aonde deve mexer.
+Qualquer modificação errada pode quebrar todo o site!
+
+**IMPORTANTE!** NUNCA altere arquivos diretamente da pasta
+`themes/hugo-future-imperfect-slim`. Este diretório é onde ficam
+armazenados os templates de páginas e demais configurações internas do
+site. Se realmente for necessário alterar algum arquivo que está aqui,
+então você deve primieiro fazer uma cópio desse arquivo para a raíz do
+site, e alterar essa cópia do arquivo. Veja a ordem de execução doa
+arquivos nesta [página](https://gohugo.io/templates/lookup-order/).
+
+### Criando posts no blog
+
+Para criar um novo post no blog siga estes passos (supondo que está no
+RStudio):
+
+1. Crie um novo branch
+2. Clique em "Addins > New Post"
+3. Na janela que irá se avrir, preencha as informações sobre seu post
+4. Edite o arquivo e salve
+5. Faça um push para o GitHub
+6. No GitHub, crie um *pull request* e marque alguém para revisar o post
+
+Depois de finalizadas estas etapas, o responsável deverá fazer o *merge*
+do post no ramo principal.
+
+### Editando páginas estáticas
+
+As páginas estáticas podem ser editadas diretamente em `content`. Por
+exemplo, para editar a página "Integrantes", abra e edite o arquivo
+`content/integrantes/index.md`.
+
+Se as alterações forem grandes, crie um *branch* e faça um *pull
+request* (similar ao processo de criação de posts).
+
+
+
+
 ## Criação do site
 
 O site foi criado usando a plataforma [Hugo][] com o tema [Hugo Future
@@ -130,6 +194,7 @@ Veja também https://bookdown.org/yihui/blogdown/templates.html.
 - [Multilingual Mode][]: sobre páginas multi-línguas
 - [Image Processing][]: processamento de figuras
 
+[blogdown]: https://bookdown.org/yihui/blogdown/
 [Hugo]: https://gohugo.io/
 [Hugo Future Imperfect Slim]: https://themes.gohugo.io/hugo-future-imperfect-slim/
 [Hugo Future Imperfect Slim wiki]: https://github.com/pacollins/hugo-future-imperfect-slim/wiki
