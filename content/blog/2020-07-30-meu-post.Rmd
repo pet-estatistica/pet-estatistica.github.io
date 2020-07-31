@@ -26,3 +26,11 @@ Esse é o Poisson:
 
 ![](/blog/2020-07-30-meu-post_files/Simeon_Poisson.jpg){width=80% height=60%}
 
+Um histograma
+
+```{r}
+set.seed(1)
+hist(rnorm(100))
+```
+
+
