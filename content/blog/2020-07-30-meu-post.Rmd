@@ -20,11 +20,9 @@ Ainda mais.
 
 Uma imagem
 
-```{r}
-getwd()
-##knitr::include_graphics("blog/2020-07-30-meu-post_files/matrix.png") 
-```
 ![](/blog/2020-07-30-meu-post_files/Standard_Normal_Distribution.png){width=80%}
- 
+
+Esse é o Poisson:
+
 ![](/blog/2020-07-30-meu-post_files/Simeon_Poisson.jpg){width=80% height=60%}
 
