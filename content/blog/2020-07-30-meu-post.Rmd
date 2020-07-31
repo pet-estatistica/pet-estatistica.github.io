@@ -9,7 +9,7 @@ tags:
   - blogdown
 description: 'Um post novo'
 images:
-  - ''
+  - 'img/2020/07/matrix.png'
 ---
 
 Alguma coisa aqui.
