@@ -1,0 +1,18 @@
+---
+title: Post de teste
+author: Fernando Mayer
+date: '2020-08-04'
+slug: post-de-teste
+categories:
+  - nova
+tags:
+  - blogdown
+  - site
+description: 'Um subtítulo'
+images:
+  - 'img/2020/08/ilha.jpg'
+---
+
+Alguma coisa.
+
+Outra coisa.
