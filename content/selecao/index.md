@@ -11,4 +11,4 @@ Informações e links para o processo seletivo 2020.
 
 Período de inscrições.
 
-Edital.
+[Edital](Edital.pdf).
