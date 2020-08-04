@@ -28,4 +28,7 @@ Um gráfico
 hist(x)
 ```
 
+O Poisson
+
+![](/blog/2020-08-04-post-de-teste_files/poisson.jpg){width=80% height=80%}
 
