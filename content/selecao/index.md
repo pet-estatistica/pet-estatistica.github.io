@@ -7,8 +7,18 @@ aliases = ["selecao"]
 author = "PET Estatística UFPR"
 +++
 
-Informações e links para o processo seletivo 2020.
+## Informações e links para o processo seletivo 2020
 
-Período de inscrições.
+O processo seletivo 2020 do PET Estatística será totalmente *online* e
+ocorrerá entre 20/08/2020 e 28/08/2020.
 
-Edital.
+O período de inscrição é de 04/08/2020 até 19/08/2020. Neste ano serão
+admitidos **até 6 estudantes não bolsistas**. 
+
+Veja as principais informações abaixo, e leia atentamente o 
+[edital de seleção](Edital_PS_PET_Estatistica_2020.pdf):
+
+- Período de inscrições: 04/08/2020 a 19/08/2020
+- Realização do processo seletivo: 20/08/2020 a 28/08/2020
+- [Edital de seleção](Edital_PS_PET_Estatistica_2020.pdf)
+- [Link para inscrição](https://form.jotformz.com/90646572957673)
