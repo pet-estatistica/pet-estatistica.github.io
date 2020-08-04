@@ -16,3 +16,16 @@ images:
 Alguma coisa.
 
 Outra coisa.
+
+```{r}
+x <- rnorm(10)
+x
+```
+
+Um gráfico
+
+```{r}
+hist(x)
+```
+
+
