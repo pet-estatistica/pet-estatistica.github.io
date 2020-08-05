@@ -11,13 +11,13 @@ tags:
   - site
 description: ''
 images:
-  - 'img/covid/chamada.jpg'
+  - 'img/covid/chamada.png'
 ---
 # O que é Coronavírus?
 
- O Coronavírus, causador da pandemia global, pertence a uma família de vírus (CoV) que já circula no Brasil. Os vírus dessa família podem causar desde resfriados comuns a doenças mais graves, como a Síndrome Aguda Respiratória Severa (SARS) e a Síndrome Respiratória do Oriente Médio (MERS). O Novo Coronavírus recebeu a denominação SARS-CoV-2 pela Organização Mundial da Saúde (OMS) e a doença que ele provoca tem a denominação COVID-19.
+ O Coronavírus, causador da pandemia global, pertence a uma família de vírus (CoV) que já circula no Brasil. Os vírus dessa família podem causar desde resfriados comuns à doenças mais graves, como a Síndrome Aguda Respiratória Severa (SARS) e a Síndrome Respiratória do Oriente Médio (MERS). O Novo Coronavírus recebeu a denominação SARS-CoV-2 pela Organização Mundial da Saúde (OMS) e a doença que ele provoca tem a denominação COVID-19.
 
-![](/blog/2020-08-05-tutorial-para-análise-covid-19_files/corona.jpg){width=80% height=60%}
+![](/blog/2020-08-05-tutorial-para-análise-covid-19_files/corona.png){width=80% height=60%}
 
 
 ## Mas o que a estatística tem haver com essa doença?
@@ -44,7 +44,7 @@ devtools::install_github("Freguglia/datacovidbr")
 library(datacovidbr) #lendo a biblioteca 
 ```
 
-  Para fazer esse exemplar utilizamos a base de dados da *brasilio()*, mas no pacote que ensinamos vocês a instalar direto do Git, contém outras bases como a do ministério da saúde chamada de *brMinisterioSaude()* entre outras. 
+  Para fazer esse exemplar utilizamos a base de dados da *brasilio()*, mas no pacote que ensinamos vocês a instalar direto do Git, contém outras bases como a do Ministério da Saúde chamada de *brMinisterioSaude()* entre outras. 
 
 ## Quais os primeiros passos para começar a analisar?
 
@@ -54,7 +54,7 @@ library(datacovidbr) #lendo a biblioteca
 library(tidyverse) #utilizado para fazer as manipulações dos dados
 
 dados <- brasilio()#atribuindo nossa base de dados para uma variável
-dados
+head(dados)
 ```
 
 - Mas se o passo anterior não ficou muito claro e não temos o conhecimento de quais são as classes e tipos de variáveis que estamos lidando, usamos a função *summary()* que nos retorna essas informações entre outras.
@@ -65,7 +65,7 @@ summary(dados)
 
 # Análise gráfica
 
-  Nessa etapa mostraremos dois gráficos de acumulação para os casos de confirmação e mortes da doença no Estado do **Paraná**.
+  Nessa etapa mostraremos dois gráficos cumulativos para os casos de confirmação e mortes da doença no Estado do **Paraná**.
   Vale ressaltar que esse material é apenas uma fonte de ajuda para quem gostaria de fazer análises da COVID-19 e não encontra dados ou até mesmo tem dificuldades para isso.
 
 ## Como analisar graficamente esses dados?
@@ -77,7 +77,8 @@ dados.cidades <- dados%>%filter(dados$state =="PR")
 #dentro da coluna state pegamos apenas os dados que forem igual a PR
 
 dados.pr <- dados.cidades%>%filter(dados.cidades$place_type =="state")
-#selecionamos dentro da variável dados.cidades apenas os dados que contém o tipo de local igual a state
+#selecionamos dentro da variável dados.cidades apenas os dados que contém o tipo de local
+#igual a state
 
 dados.cidades #visualizando os dados
 ```
@@ -122,4 +123,4 @@ graph_deaths
   Para concluir este material gostaríamos de pedir a conscientização de todos, saia de casa apenas se for muito necessário e se sair utilize a máscara e higienize suas mãos.
   Estamos passando por uma situação muito complicada mundialmente, mas se fizermos nossa parte isso acabará rápido e sem maiores problemáticas.
 
-![](/blog/2020-08-05-tutorial-para-análise-covid-19_files/consciencia.jpg){width=60% height=70%}
+![](/blog/2020-08-05-tutorial-para-análise-covid-19_files/consciencia.png){width=60% height=70%}
