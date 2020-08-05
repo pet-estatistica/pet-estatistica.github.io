@@ -1,0 +1,173 @@
+---
+title: Tutorial para Análise COVID-19
+author: Altamiro, Davi e Marcelo
+date: '2020-08-05'
+slug: tutorial-para-análise-covid-19
+categories:
+  - covid19
+tags:
+  - covid
+  - rmarkdown
+  - site
+description: ''
+images:
+  - 'img/covid/chamada.jpg'
+---
+
+
+
+<div id="o-que-é-coronavírus" class="section level1">
+<h1>O que é Coronavírus?</h1>
+<p>O Coronavírus, causador da pandemia global, pertence a uma família de vírus (CoV) que já circula no Brasil. Os vírus dessa família podem causar desde resfriados comuns a doenças mais graves, como a Síndrome Aguda Respiratória Severa (SARS) e a Síndrome Respiratória do Oriente Médio (MERS). O Novo Coronavírus recebeu a denominação SARS-CoV-2 pela Organização Mundial da Saúde (OMS) e a doença que ele provoca tem a denominação COVID-19.</p>
+<p><img src="/blog/2020-08-05-tutorial-para-análise-covid-19_files/corona.jpg" style="width:80.0%;height:60.0%" /></p>
+<div id="mas-o-que-a-estatística-tem-haver-com-essa-doença" class="section level2">
+<h2>Mas o que a estatística tem haver com essa doença?</h2>
+<p>A estatística está presente em todas as ciências e um dos ramos dela é a bioestatística, ajudando especialistas em saúde com modelagem de estudos, análises de eficácia de drogas e até mesmo previsões para população baseado em cálculos e estimativas dos dados. Sendo assim, a estatística é muito importante para esse período vivido pelo nosso país e pelo mundo.</p>
+</div>
+</div>
+<div id="analisando-dados-da-covid-19" class="section level1">
+<h1>Analisando dados da COVID-19</h1>
+<div id="como-achar-uma-base-de-dados-para-isso" class="section level2">
+<h2>Como achar uma base de dados para isso?</h2>
+<p>Muito simples, siga o tutorial que fizemos para vocês e ajude a todos com suas análises.</p>
+<pre class="r"><code># install.packages(&quot;devtools&quot;) 
+## necessário, pacote de instalação *(certifique-se que todas as suas bibliotecas estão atualizadas)*
+
+library(devtools) #carregamento do pacote
+
+devtools::install_github(&quot;Freguglia/datacovidbr&quot;) 
+#instalando o pacote direto do GitHub que contém as pricipais bases de dados 
+
+library(datacovidbr) #lendo a biblioteca </code></pre>
+<p>Para fazer esse exemplar utilizamos a base de dados da <em>brasilio()</em>, mas no pacote que ensinamos vocês a instalar direto do Git, contém outras bases como a do ministério da saúde chamada de <em>brMinisterioSaude()</em> entre outras.</p>
+</div>
+<div id="quais-os-primeiros-passos-para-começar-a-analisar" class="section level2">
+<h2>Quais os primeiros passos para começar a analisar?</h2>
+<ul>
+<li>Quando importamos uma base para dentro do R precisamos antes de tudo conferir nossas colunas para saber exatamente com o que iremos trabalhar.</li>
+</ul>
+<pre class="r"><code>library(tidyverse) #utilizado para fazer as manipulações dos dados
+
+dados &lt;- brasilio()#atribuindo nossa base de dados para uma variável
+dados</code></pre>
+<pre><code>## # A tibble: 465,042 x 12
+##    date       state city  place_type confirmed deaths order_for_place is_last
+##    &lt;date&gt;     &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;          &lt;dbl&gt;  &lt;dbl&gt;           &lt;dbl&gt; &lt;lgl&gt;  
+##  1 2020-08-04 AP    &lt;NA&gt;  state          36999    581             137 TRUE   
+##  2 2020-08-03 AP    &lt;NA&gt;  state          36804    576             136 FALSE  
+##  3 2020-08-02 AP    &lt;NA&gt;  state          36639    571             135 FALSE  
+##  4 2020-08-01 AP    &lt;NA&gt;  state          36595    568             134 FALSE  
+##  5 2020-07-31 AP    &lt;NA&gt;  state          36468    565             133 FALSE  
+##  6 2020-07-30 AP    &lt;NA&gt;  state          36272    561             132 FALSE  
+##  7 2020-07-29 AP    &lt;NA&gt;  state          35973    559             131 FALSE  
+##  8 2020-07-28 AP    &lt;NA&gt;  state          35697    558             130 FALSE  
+##  9 2020-07-27 AP    &lt;NA&gt;  state          35364    556             129 FALSE  
+## 10 2020-07-26 AP    &lt;NA&gt;  state          35220    554             128 FALSE  
+## # ... with 465,032 more rows, and 4 more variables:
+## #   estimated_population_2019 &lt;dbl&gt;, city_ibge_code &lt;dbl&gt;,
+## #   confirmed_per_100k_inhabitants &lt;dbl&gt;, death_rate &lt;dbl&gt;</code></pre>
+<ul>
+<li>Mas se o passo anterior não ficou muito claro e não temos o conhecimento de quais são as classes e tipos de variáveis que estamos lidando, usamos a função <em>summary()</em> que nos retorna essas informações entre outras.</li>
+</ul>
+<pre class="r"><code>summary(dados)</code></pre>
+<pre><code>##       date               state               city            place_type       
+##  Min.   :2020-02-25   Length:465042      Length:465042      Length:465042     
+##  1st Qu.:2020-05-25   Class :character   Class :character   Class :character  
+##  Median :2020-06-20   Mode  :character   Mode  :character   Mode  :character  
+##  Mean   :2020-06-16                                                           
+##  3rd Qu.:2020-07-12                                                           
+##  Max.   :2020-08-04                                                           
+##                                                                               
+##    confirmed          deaths         order_for_place   is_last       
+##  Min.   :     0   Min.   :    0.00   Min.   :  1.00   Mode :logical  
+##  1st Qu.:     3   1st Qu.:    0.00   1st Qu.: 22.00   FALSE:459511   
+##  Median :    17   Median :    0.00   Median : 44.00   TRUE :5531     
+##  Mean   :   469   Mean   :   19.86   Mean   : 47.57                  
+##  3rd Qu.:    88   3rd Qu.:    2.00   3rd Qu.: 70.00                  
+##  Max.   :575589   Max.   :23702.00   Max.   :160.00                  
+##                                                                      
+##  estimated_population_2019 city_ibge_code    confirmed_per_100k_inhabitants
+##  Min.   :     781          Min.   :     11   Min.   :    0.002             
+##  1st Qu.:    7067          1st Qu.:2500908   1st Qu.:   31.376             
+##  Median :   15588          Median :3137205   Median :  132.129             
+##  Mean   :  120558          Mean   :3162523   Mean   :  393.834             
+##  3rd Qu.:   34780          3rd Qu.:4107652   3rd Qu.:  456.148             
+##  Max.   :45919049          Max.   :5300108   Max.   :15730.064             
+##  NA&#39;s   :2126              NA&#39;s   :2126      NA&#39;s   :12603                 
+##    death_rate     
+##  Min.   :0.00000  
+##  1st Qu.:0.00000  
+##  Median :0.00000  
+##  Mean   :0.04582  
+##  3rd Qu.:0.03950  
+##  Max.   :1.00000  
+## </code></pre>
+</div>
+</div>
+<div id="análise-gráfica" class="section level1">
+<h1>Análise gráfica</h1>
+<p>Nessa etapa mostraremos dois gráficos de acumulação para os casos de confirmação e mortes da doença no Estado do <strong>Paraná</strong>.
+Vale ressaltar que esse material é apenas uma fonte de ajuda para quem gostaria de fazer análises da COVID-19 e não encontra dados ou até mesmo tem dificuldades para isso.</p>
+<div id="como-analisar-graficamente-esses-dados" class="section level2">
+<h2>Como analisar graficamente esses dados?</h2>
+<ul>
+<li>Como iremos utilizar apenas os dados do estado do Paraná, precisamos fazer algumas modificações para nós mostrar apenas o que queremos, como já carregamos nossa base e um pacote responsável por essas modificações acima em, <a href="##%20Quais-os-primeiros-passos-para-começar-a-analisar?">Quais os primeiros passos para começar a analisar?</a>, vamos dar continuidade com a exploração gráfica.</li>
+</ul>
+<pre class="r"><code>dados.cidades &lt;- dados%&gt;%filter(dados$state ==&quot;PR&quot;)
+#dentro da coluna state pegamos apenas os dados que forem igual a PR
+
+dados.pr &lt;- dados.cidades%&gt;%filter(dados.cidades$place_type ==&quot;state&quot;)
+#selecionamos dentro da variável dados.cidades apenas os dados que contém o tipo de local igual a state
+
+dados.cidades #visualizando os dados</code></pre>
+<pre><code>## # A tibble: 27,763 x 12
+##    date       state city  place_type confirmed deaths order_for_place is_last
+##    &lt;date&gt;     &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;          &lt;dbl&gt;  &lt;dbl&gt;           &lt;dbl&gt; &lt;lgl&gt;  
+##  1 2020-08-04 PR    &lt;NA&gt;  state          82718   2128             144 TRUE   
+##  2 2020-08-03 PR    &lt;NA&gt;  state          80865   2050             143 FALSE  
+##  3 2020-08-02 PR    &lt;NA&gt;  state          79605   2005             142 FALSE  
+##  4 2020-08-01 PR    &lt;NA&gt;  state          77930   1975             141 FALSE  
+##  5 2020-07-31 PR    &lt;NA&gt;  state          76112   1920             140 FALSE  
+##  6 2020-07-30 PR    &lt;NA&gt;  state          73488   1861             139 FALSE  
+##  7 2020-07-29 PR    &lt;NA&gt;  state          70920   1814             138 FALSE  
+##  8 2020-07-28 PR    &lt;NA&gt;  state          69392   1743             137 FALSE  
+##  9 2020-07-27 PR    &lt;NA&gt;  state          68001   1703             136 FALSE  
+## 10 2020-07-26 PR    &lt;NA&gt;  state          67220   1671             135 FALSE  
+## # ... with 27,753 more rows, and 4 more variables:
+## #   estimated_population_2019 &lt;dbl&gt;, city_ibge_code &lt;dbl&gt;,
+## #   confirmed_per_100k_inhabitants &lt;dbl&gt;, death_rate &lt;dbl&gt;</code></pre>
+<ul>
+<li>Utilizaremos o pacote <em>ggplot2</em> para fazer estes gráficos com uma melhor qualidade</li>
+</ul>
+<pre class="r"><code>library(ggplot2)#biblioteca para análise gráfica
+library(plotly)#biblioteca para análise gráfica</code></pre>
+<p>Gráfico acumulado do número de confirmações de COVID-19 no estado do Paraná</p>
+<pre class="r"><code>graph_conf &lt;- dados.pr %&gt;%
+  ggplot(aes(x=date)) +
+  xlab(&quot;Dias/Meses&quot;) +
+  ylab(&quot;Confirmados&quot;) +
+  geom_area( aes(y = confirmed), fill  = &quot;#35b779&quot;, alpha = 0.4) +
+  geom_line( aes(y = confirmed), color = &quot;#35b779&quot;, size = 0.4) +
+  geom_point(aes(y = confirmed), color = &quot;#35b779&quot;, size = 1.3) 
+
+graph_conf  </code></pre>
+<p><img src="/blog/2020-08-05-tutorial-para-análise-covid-19_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p>Gráfico acumulado do número de confirmações de óbitos por COVID-19 no estado do Paraná.</p>
+<pre class="r"><code>graph_deaths &lt;- dados.pr %&gt;%
+  ggplot(aes(x=date)) +
+  xlab(&quot;Dias/Meses&quot;) +
+  ylab(&quot;Mortes&quot;) +
+  geom_area( aes(y = deaths), fill  = &quot;#f25a5a&quot;, alpha = 0.4) +
+  geom_line( aes(y = deaths), color = &quot;#f25a5a&quot;, size = 0.4) +
+  geom_point(aes(y = deaths), color = &quot;#f25a5a&quot;, size = 1.3)
+
+graph_deaths</code></pre>
+<p><img src="/blog/2020-08-05-tutorial-para-análise-covid-19_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+</div>
+</div>
+<div id="conscientização-de-todos" class="section level1">
+<h1>Conscientização de todos</h1>
+<p>Para concluir este material gostaríamos de pedir a conscientização de todos, saia de casa apenas se for muito necessário e se sair utilize a máscara e higienize suas mãos.
+Estamos passando por uma situação muito complicada mundialmente, mas se fizermos nossa parte isso acabará rápido e sem maiores problemáticas.</p>
+<p><img src="/blog/2020-08-05-tutorial-para-análise-covid-19_files/consciencia.jpg" style="width:60.0%;height:70.0%" /></p>
+</div>
