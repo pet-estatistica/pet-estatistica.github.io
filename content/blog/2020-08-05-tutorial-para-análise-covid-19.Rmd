@@ -1,0 +1,125 @@
+---
+title: Tutorial para Análise de Dados da COVID-19
+author: Altamiro, Davi e Marcelo
+date: '2020-08-05'
+slug: tutorial-para-analise-covid-19
+categories:
+  - covid19
+tags:
+  - covid
+  - rmarkdown
+description: 'Utilizando o R para importação e vizualização de dados da COVID-19'
+images:
+  - 'img/covid/chamada.png'
+---
+# O que é Coronavírus?
+
+ O Coronavírus, causador da pandemia global, pertence a uma família de vírus (CoV) que já circula no Brasil. Os vírus dessa família podem causar desde resfriados comuns à doenças mais graves, como a Síndrome Aguda Respiratória Severa (SARS) e a Síndrome Respiratória do Oriente Médio (MERS). O Novo Coronavírus recebeu a denominação SARS-CoV-2 pela Organização Mundial da Saúde (OMS) e a doença que ele provoca tem a denominação COVID-19.
+
+![](/blog/2020-08-05-tutorial-para-análise-covid-19_files/corona.png){width=80% height=60%}
+
+
+## Mas o que a estatística tem haver com essa doença?
+
+ A estatística está presente em todas as ciências e um dos ramos dela é a bioestatística, ajudando especialistas em saúde com modelagem de estudos, análises de eficácia de drogas e até mesmo previsões para população baseado em cálculos e estimativas dos dados. Sendo assim, a estatística é muito importante para esse período vivido pelo nosso país e pelo mundo. 
+
+
+
+# Analisando dados da COVID-19
+
+## Como achar uma base de dados para isso?
+
+ Muito simples, siga o tutorial que fizemos para vocês e ajude a todos com suas análises. 
+
+```{r echo=TRUE,warning=FALSE,message=FALSE}
+# install.packages("devtools") 
+## necessário, pacote de instalação *(certifique-se que todas as suas bibliotecas estão atualizadas)*
+
+library(devtools) #carregamento do pacote
+
+devtools::install_github("Freguglia/datacovidbr") 
+#instalando o pacote direto do GitHub que contém as pricipais bases de dados 
+
+library(datacovidbr) #lendo a biblioteca 
+```
+
+  Para fazer esse exemplar utilizamos a base de dados da *brasilio()*, mas no pacote que ensinamos vocês a instalar direto do Git, contém outras bases como a do Ministério da Saúde chamada de *brMinisterioSaude()* entre outras. 
+
+## Quais os primeiros passos para começar a analisar?
+
+- Quando importamos uma base para dentro do R precisamos antes de tudo conferir nossas colunas para saber exatamente com o que iremos trabalhar. 
+
+```{r echo=TRUE,warning=FALSE,message=FALSE}
+library(tidyverse) #utilizado para fazer as manipulações dos dados
+
+dados <- brasilio()#atribuindo nossa base de dados para uma variável
+head(dados)
+```
+
+- Mas se o passo anterior não ficou muito claro e não temos o conhecimento de quais são as classes e tipos de variáveis que estamos lidando, usamos a função *summary()* que nos retorna essas informações entre outras.
+
+```{r echo=TRUE}
+summary(dados)
+```
+
+# Análise gráfica
+
+  Nessa etapa mostraremos dois gráficos cumulativos para os casos de confirmação e mortes da doença no Estado do **Paraná**.
+  Vale ressaltar que esse material é apenas uma fonte de ajuda para quem gostaria de fazer análises da COVID-19 e não encontra dados ou até mesmo tem dificuldades para isso.
+
+## Como analisar graficamente esses dados?
+
+-  Como iremos utilizar apenas os dados do estado do Paraná, precisamos fazer algumas modificações para nós mostrar apenas o que queremos, como já carregamos nossa base e um pacote responsável por essas modificações acima em, [Quais os primeiros passos para começar a analisar?](## Quais-os-primeiros-passos-para-começar-a-analisar?), vamos dar continuidade com a exploração gráfica.
+
+```{r echo=TRUE,warning=FALSE,message=FALSE}
+dados.cidades <- dados%>%filter(dados$state =="PR")
+#dentro da coluna state pegamos apenas os dados que forem igual a PR
+
+dados.pr <- dados.cidades%>%filter(dados.cidades$place_type =="state")
+#selecionamos dentro da variável dados.cidades apenas os dados que contém o tipo de local
+#igual a state
+
+dados.cidades #visualizando os dados
+```
+
+- Utilizaremos o pacote *ggplot2* para fazer estes gráficos com uma melhor qualidade
+
+```{r echo=TRUE,warning=FALSE,message=FALSE}
+library(ggplot2)#biblioteca para análise gráfica
+library(plotly)#biblioteca para análise gráfica
+```
+
+ Gráfico acumulado do número de confirmações de COVID-19 no estado do Paraná
+
+```{r echo=TRUE,warning=FALSE,message=FALSE}
+graph_conf <- dados.pr %>%
+  ggplot(aes(x=date)) +
+  xlab("Dias/Meses") +
+  ylab("Confirmados") +
+  geom_area( aes(y = confirmed), fill  = "#35b779", alpha = 0.4) +
+  geom_line( aes(y = confirmed), color = "#35b779", size = 0.4) +
+  geom_point(aes(y = confirmed), color = "#35b779", size = 1.3) 
+
+graph_conf  
+```
+
+ Gráfico acumulado do número de confirmações de óbitos por COVID-19 no estado do Paraná.
+
+```{r echo=TRUE,warning=FALSE,message=FALSE}
+graph_deaths <- dados.pr %>%
+  ggplot(aes(x=date)) +
+  xlab("Dias/Meses") +
+  ylab("Mortes") +
+  geom_area( aes(y = deaths), fill  = "#f25a5a", alpha = 0.4) +
+  geom_line( aes(y = deaths), color = "#f25a5a", size = 0.4) +
+  geom_point(aes(y = deaths), color = "#f25a5a", size = 1.3)
+
+graph_deaths
+```
+
+# Conscientização de todos
+
+  Para concluir este material gostaríamos de pedir a conscientização de todos, saia de casa apenas se for muito necessário e se sair utilize a máscara e higienize suas mãos.
+  Estamos passando por uma situação muito complicada mundialmente, mas se fizermos nossa parte isso acabará rápido e sem maiores problemáticas.
+
+![](/blog/2020-08-05-tutorial-para-análise-covid-19_files/consciencia.png){width=60% height=70%}
