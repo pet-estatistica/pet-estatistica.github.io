@@ -1,15 +1,14 @@
 ---
-title: Tutorial para Análise COVID-19
+title: Tutorial para Análise de Dados da COVID-19
 author: Altamiro, Davi e Marcelo
 date: '2020-08-05'
-slug: tutorial-para-análise-covid-19
+slug: tutorial-para-analise-covid-19
 categories:
   - covid19
 tags:
   - covid
   - rmarkdown
-  - site
-description: ''
+description: 'Utilizando o R para importação e vizualização de dados da COVID-19'
 images:
   - 'img/covid/chamada.png'
 ---
@@ -53,12 +52,12 @@ head(dados)</code></pre>
 <pre><code>## # A tibble: 6 x 12
 ##   date       state city  place_type confirmed deaths order_for_place is_last
 ##   &lt;date&gt;     &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;          &lt;dbl&gt;  &lt;dbl&gt;           &lt;dbl&gt; &lt;lgl&gt;  
-## 1 2020-08-05 AC    &lt;NA&gt;  state          21033    547             142 TRUE   
-## 2 2020-08-04 AC    &lt;NA&gt;  state          20710    545             141 FALSE  
-## 3 2020-08-03 AC    &lt;NA&gt;  state          20339    539             140 FALSE  
-## 4 2020-08-02 AC    &lt;NA&gt;  state          19966    537             139 FALSE  
-## 5 2020-08-01 AC    &lt;NA&gt;  state          19930    535             138 FALSE  
-## 6 2020-07-31 AC    &lt;NA&gt;  state          19625    531             137 FALSE  
+## 1 2020-08-05 AP    &lt;NA&gt;  state          37318    588             138 TRUE   
+## 2 2020-08-04 AP    &lt;NA&gt;  state          36999    581             137 FALSE  
+## 3 2020-08-03 AP    &lt;NA&gt;  state          36804    576             136 FALSE  
+## 4 2020-08-02 AP    &lt;NA&gt;  state          36639    571             135 FALSE  
+## 5 2020-08-01 AP    &lt;NA&gt;  state          36595    568             134 FALSE  
+## 6 2020-07-31 AP    &lt;NA&gt;  state          36468    565             133 FALSE  
 ## # … with 4 more variables: estimated_population_2019 &lt;dbl&gt;,
 ## #   city_ibge_code &lt;dbl&gt;, confirmed_per_100k_inhabitants &lt;dbl&gt;,
 ## #   death_rate &lt;dbl&gt;</code></pre>
@@ -67,7 +66,7 @@ head(dados)</code></pre>
 </ul>
 <pre class="r"><code>summary(dados)</code></pre>
 <pre><code>##       date               state               city            place_type       
-##  Min.   :2020-02-25   Length:467197      Length:467197      Length:467197     
+##  Min.   :2020-02-25   Length:469924      Length:469924      Length:469924     
 ##  1st Qu.:2020-05-25   Class :character   Class :character   Class :character  
 ##  Median :2020-06-20   Mode  :character   Mode  :character   Mode  :character  
 ##  Mean   :2020-06-16                                                           
@@ -76,26 +75,26 @@ head(dados)</code></pre>
 ##                                                                               
 ##    confirmed            deaths         order_for_place   is_last       
 ##  Min.   :     0.0   Min.   :    0.00   Min.   :  1.00   Mode :logical  
-##  1st Qu.:     3.0   1st Qu.:    0.00   1st Qu.: 22.00   FALSE:461664   
+##  1st Qu.:     4.0   1st Qu.:    0.00   1st Qu.: 22.00   FALSE:464391   
 ##  Median :    17.0   Median :    0.00   Median : 44.00   TRUE :5533     
-##  Mean   :   475.6   Mean   :   20.07   Mean   : 47.76                  
-##  3rd Qu.:    88.0   3rd Qu.:    2.00   3rd Qu.: 70.00                  
+##  Mean   :   476.2   Mean   :   20.06   Mean   : 47.97                  
+##  3rd Qu.:    89.0   3rd Qu.:    2.00   3rd Qu.: 70.00                  
 ##  Max.   :585265.0   Max.   :24109.00   Max.   :161.00                  
 ##                                                                        
 ##  estimated_population_2019 city_ibge_code    confirmed_per_100k_inhabitants
 ##  Min.   :     781          Min.   :     11   Min.   :    0.002             
-##  1st Qu.:    7066          1st Qu.:2501153   1st Qu.:   31.626             
-##  Median :   15579          Median :3137601   Median :  133.414             
-##  Mean   :  120653          Mean   :3163521   Mean   :  396.537             
-##  3rd Qu.:   34775          3rd Qu.:4107900   3rd Qu.:  460.668             
+##  1st Qu.:    7041          1st Qu.:2500734   1st Qu.:   31.908             
+##  Median :   15510          Median :3136959   Median :  135.100             
+##  Mean   :  120141          Mean   :3162411   Mean   :  402.598             
+##  3rd Qu.:   34710          3rd Qu.:4107801   3rd Qu.:  468.457             
 ##  Max.   :45919049          Max.   :5300108   Max.   :15730.064             
-##  NA&#39;s   :2134              NA&#39;s   :2134      NA&#39;s   :12620                 
+##  NA&#39;s   :2147              NA&#39;s   :2147      NA&#39;s   :12646                 
 ##    death_rate     
 ##  Min.   :0.00000  
 ##  1st Qu.:0.00000  
 ##  Median :0.00000  
-##  Mean   :0.04573  
-##  3rd Qu.:0.03940  
+##  Mean   :0.04561  
+##  3rd Qu.:0.03930  
 ##  Max.   :1.00000  
 ## </code></pre>
 </div>

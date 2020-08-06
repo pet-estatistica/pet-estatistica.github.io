@@ -1,15 +1,14 @@
 ---
-title: Tutorial para Análise COVID-19
+title: Tutorial para Análise de Dados da COVID-19
 author: Altamiro, Davi e Marcelo
 date: '2020-08-05'
-slug: tutorial-para-análise-covid-19
+slug: tutorial-para-analise-covid-19
 categories:
   - covid19
 tags:
   - covid
   - rmarkdown
-  - site
-description: ''
+description: 'Utilizando o R para importação e vizualização de dados da COVID-19'
 images:
   - 'img/covid/chamada.png'
 ---
