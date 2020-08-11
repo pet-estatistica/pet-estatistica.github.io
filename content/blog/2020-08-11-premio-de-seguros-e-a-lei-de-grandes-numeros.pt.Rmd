@@ -41,7 +41,7 @@ Iremos tratar aqui de cálculos referentes a Prêmio de Seguro, mas afinal, voc�
 ## A preferência por agregar riscos
 
  
-<center>![](/blog/2020-08-11-premio-de-seguros-e-a-lei-de-grandes-numeros_files/agrsim.png){width=250px}</center>
+<center>![](/blog/2020-08-11-premio-de-seguros-e-a-lei-de-grandes-numeros_files/agorasim.png){width=250px}</center>
  
  
   Para quem está determinando o prêmio de seguro é mais vantajoso fazer o maior número de contratos similares possível, diminuindo a chance de pagar o valor máximo (n vezes R$800,00) e com isso, mais o cliente pagará para a seguradora a perda esperada probabilisticamente já calculada (n vezes R$400,00). Tal raciocínio se dá pela Lei dos Grandes Números.
