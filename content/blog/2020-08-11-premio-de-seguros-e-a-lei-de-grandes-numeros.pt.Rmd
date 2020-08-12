@@ -45,7 +45,7 @@ Iremos tratar aqui de cálculos referentes a Prêmio de Seguro, mas afinal, voc�
  
  
   
-  Para quem está determinando o prêmio de seguro é mais vantajoso fazer o maior número de contratos similares possível, diminuindo a chance de pagar o valor máximo, dado que a probabilidade de se cair cara 2 vezes para todos os n clientes é de $1/(4^n)$ e que a mesma diminui conforme se aumenta o n. Contudo, o valor total pago à seguradora  vai se aproximando cada vez mais da perda esperada (n vezes R$ 400,00)". Tal raciocínio se dá pela Lei dos Grandes Números.
+  Para quem está determinando o prêmio de seguro é mais vantajoso fazer o maior número de contratos similares possível, diminuindo a chance de pagar o valor máximo, dado que a probabilidade de se cair cara 2 vezes para todos os n clientes é de $1/(4^n)$ e que a mesma diminui conforme se aumenta o n. Contudo, o valor total pago à seguradora  vai se aproximando cada vez mais da perda esperada (n vezes R$ 400,00). Tal raciocínio se dá pela Lei dos Grandes Números.
   
   
 ## O que é a Lei dos Grandes Números?
