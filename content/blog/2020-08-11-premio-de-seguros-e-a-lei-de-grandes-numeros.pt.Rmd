@@ -10,7 +10,7 @@ tags:
   - seguros
 description: ''
 images:
-  - 'img/2020/08/leidosgrandesnumeros/imagemprobabilidadejpg'
+  - 'img/2020/08/leidosgrandesnumeros/imagemprobabilidade.jpg'
 ---
 
 ## Prêmio de Seguro e Tarifação
