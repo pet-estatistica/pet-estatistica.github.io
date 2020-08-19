@@ -1,0 +1,54 @@
+---
+title: Prêmio de Seguros e a Lei de Grandes Números
+author: Geisyane Karina Gonzaga
+date: '2020-08-11'
+slug: premio-de-seguros-e-a-lei-de-grandes-numeros
+categories:
+  - probabilidade
+tags:
+  - probabilidade
+  - seguros
+description: ''
+images:
+  - 'img/2020/08/leidosgrandesnumeros/imagemprobabilidade.jpg'
+---
+
+
+
+<div id="prêmio-de-seguro-e-tarifação" class="section level2">
+<h2>Prêmio de Seguro e Tarifação</h2>
+<p>Iremos tratar aqui de cálculos referentes a Prêmio de Seguro, mas afinal, você sabe o que é isso? Nada mais é do que o preço do risco associado à situação apresentada pelo segurado.
+A tarifação, por sua vez, é o processo de precificação do risco, e é este que determina a tarifa ou prêmio a cobrar pelo seguro.</p>
+</div>
+<div id="como-é-calculado-o-prêmio" class="section level2">
+<h2>Como é calculado o prêmio</h2>
+<center>
+<img src="/blog/2020-08-11-premio-de-seguros-e-a-lei-de-grandes-numeros_files/Seguros.png" width="250" />
+</center>
+<p>Grande parte das tarifas é determinada por análise estatística de sinistros passados com base nos dados pertencentes ao segurado, produzindo melhores previsões.
+Contudo, em casos de riscos de baixa frequência, a análise histórica não é o suficiente. Assim, usam-se modelos matemáticos mais complexos.</p>
+</div>
+<div id="precificação-de-um-prêmio-simples" class="section level2">
+<h2>Precificação de um prêmio simples</h2>
+<p>Para entender como esse cálculo funciona, imagine que um cliente leva à seguradora o seguinte problema: ele deve pagar R$400,00 sempre que jogar uma moeda e o resultado for cara. Se cair coroa, não precisará pagar. Suponha que no caso do cliente, a moeda será lançada duas vezes e que ele deseja fazer um seguro desse risco.
+Na pior das hipóteses, o cliente terá que pagar R$800,00, e na melhor, não terá gasto algum. Contudo, a probabilidade de se obter cara no lançamento de uma moeda justa é de 1/2, portanto, a perda esperada acerca do risco é de R$200,00 (1/2 multiplicado pelo valor caso obtenha cara, que é R$400,00). Sendo o lançamento realizado duas vezes, a perda esperada total é de R$400,00. Este é o valor a ser pago pelo segurado à seguradora.</p>
+</div>
+<div id="a-preferência-por-agregar-riscos" class="section level2">
+<h2>A preferência por agregar riscos</h2>
+<center>
+<img src="/blog/2020-08-11-premio-de-seguros-e-a-lei-de-grandes-numeros_files/agorasim.png" width="250" />
+</center>
+<p>Para quem está determinando o prêmio de seguro é mais vantajoso fazer o maior número de contratos similares possível, diminuindo a chance de pagar o valor máximo, dado que a probabilidade de se cair cara 2 vezes para todos os n clientes é de <span class="math inline">\(1/(4^n)\)</span> e que a mesma diminui conforme se aumenta o n. Contudo, o valor total pago à seguradora vai se aproximando cada vez mais da perda esperada (n vezes R$ 400,00). Tal raciocínio se dá pela Lei dos Grandes Números.</p>
+</div>
+<div id="o-que-é-a-lei-dos-grandes-números" class="section level2">
+<h2>O que é a Lei dos Grandes Números?</h2>
+<p>Se você cursa exatas, é possível que já tenha ouvido falar na Lei dos Grandes Números. Para entendê-la, é necessário contemplar dois conceitos: probabilidade teórica e empírica. A probabilidade teórica se baseia no conhecimento prévio do processo envolvido, em que cada resultado no espaço amostral possui a mesma probabilidade de ocorrer.
+Já na probabilidade empírica os resultados são baseados nos dados observados, e não no conhecimento prévio. Assim, o que a Lei dos Grandes Números diz é que quanto mais um experimento é repetido, mais a probabilidade empírica tende à probabilidade teórica.
+Por isso, para a seguradora é mais vantajoso realizar o máximo de contratos semelhantes (como o de lançamentos de moedas, no problema anteriormente apresentado), diminuindo seu risco. Agora que você já sabe como é calculado o prêmio de seguros e como isso se relaciona com a Lei dos Grandes Números, já pode fazer seguros pensando na Estatística.</p>
+</div>
+<div id="referências" class="section level2">
+<h2>Referências</h2>
+<p><a href="https://www.tudosobreseguros.org.br/tss-calculo-de-premios-de-seguros/">TSS - Tudo Sobre Seguros</a></p>
+<p><a href="https://www.infoescola.com/matematica/probabilidade-em-estatistica-e-lei-dos-grandes-numeros/">Info Escola - Probabilidade em Estatística e Lei dos Grandes Números</a></p>
+<p><a href="http://www.portalaction.com.br/probabilidades/72-lei-dos-grandes-numeros">Portal Action</a></p>
+</div>
