@@ -14,6 +14,9 @@ pluralizeListTitles     = false
 disableLanguages        = ["en", "fr", "pl", "de", "es", "zh-CN", "zh-TW", "ja"]
 ignoreFiles             = ["\\.R$", "\\.Rmd$", "\\.Rproj$", "\\.sh$", "\\.txt$", "_files$", "_cache$"]
 
+[markup.goldmark.renderer]
+  unsafe                = true
+
 [outputs]
   home                  = ["html", "json"]
 
