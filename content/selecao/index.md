@@ -9,7 +9,9 @@ author = "PET Estatística UFPR"
 
 ## Informações e links para o processo seletivo 2020
 
-### INSCRIÇOES PRORROGADAS ATÉ 26/08/2020
+{{% alert warning %}}
+**INSCRIÇOES PRORROGADAS ATÉ 26/08/2020**
+{{% /alert %}}
 
 O processo seletivo 2020 do PET Estatística será totalmente *online* e
 ocorrerá entre ~~20/08/2020 e 28/08/2020~~ **27/08/2020 e 01/09/2020**.
