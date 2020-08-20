@@ -4,3 +4,69 @@
   is an official part of the theme (ex. Pull Requests) should be included in main.css
   and follow the formatting and style given.
 */
+
+/*************************************************
+ *  Alerts
+ **************************************************/
+
+/*
+Copiado de https://github.com/gcushen/hugo-academic/blob/66b71fa2f6a41f26d6c3b202fef212fab151112e/layouts/partials/css/academic.css#L1370-L1426
+
+O shortcode correspondente está em layouts/shortcodes/alert.html
+
+*/
+
+div.alert {
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+div.alert p {
+  position: relative;
+  display: block;
+  font-size: 1rem;
+  margin-left: 2rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+div.alert p:first-child::before {
+  position: absolute;
+  top: -0.5rem;
+  left: -2rem;
+  font-family: 'FontAwesome';
+  font-size: 1.5rem;
+  color: #fff;
+  content: '\f05a';
+  width: 1.5rem;
+  text-align: center;
+}
+
+div.alert-warning p:first-child::before {
+  content: '\f071';
+}
+
+div.alert a {
+  color: rgba(255,255,255,0.9);
+  text-decoration: none;
+  border-bottom: solid 1px #e4e4e4;
+  transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+div.alert a:hover {
+  border-bottom-color: transparent;
+  color: rgba(255,255,255,0.5) !important;
+}
+
+.alert-note {
+  color: #fff;
+  background-color: #03A9F4; /* Material LightBlue500 */
+  border-color: #bce8f1;
+}
+
+.alert-warning {
+  color: #fff;
+  background-color: #f44336; /* Material Red500 */
+  border-color: #ebccd1;
+  text-align: center;
+}
