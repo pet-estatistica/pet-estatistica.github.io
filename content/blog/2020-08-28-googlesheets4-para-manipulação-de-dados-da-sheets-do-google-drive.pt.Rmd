@@ -1,0 +1,210 @@
+---
+title: googlesheets4 para manipulação de dados da Sheets do Google Drive
+author: Davi Miguel Yokogawa
+date: '2020-08-28'
+slug: googlesheets4-para-manipulação-de-dados-da-sheets-do-google-drive
+categories:
+  - tutoriais
+  - googlesheets
+  - packages
+tags:
+  - blogdown
+  - rmarkdown
+description: 'Esse post foi desenvolvido para ajudar no entendimento do pacote googlesheets4, fazendo com que você possa manipular mais facilmente seus dados que estão armazenados no Google Drive através do R.'
+images:
+  - 'static/img/googlesheets/R+googlesheets4.png'
+---
+# Instalação do Pacote googlesheets4
+
+Existem duas maneiras para fazer a instalação do pacote
+
+A primeira é pelo próprio CRAN do R:
+```{r echo=TRUE}
+# install.packages("googlesheets4")
+```
+A segunda é através do devtools:
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+# install.packages("devtools")
+devtools::install_github("tidyverse/googlesheets4")
+library(googlesheets4)
+library(googledrive)
+```
+
+# Autorizando o googlesheets4 a manipular suas Google Sheets
+
+Em seguida será necessário fazer a autorização, para que seja possivel editar arquivos do Google Drive no R, isso será feito a partir da função:
+```{r echo=TRUE, results='hide'}
+gs4_auth()
+```
+Assim que executado, ele vai te redirecionar para o seu navegador padrão para ser selecionada a conta de email em que será liberado o acesso:
+
+![](/blog/2020-08-28-googlesheets4-para-manipulação-de-dados-da-sheets-do-google-drive.pt_files/gs4_auth.png){width=60% height=60%}
+
+Feito isso, o seu R e o Google Drive já estaram vinculados, fazendo com que possamos manipular arquivos do Google Sheets através do R
+
+# Criando Uma Google Sheet no R e Exportando pelo googlesheets4
+
+Primeiro precisamos de alguns dados para popular nossos Data Frames:
+```{r echo=TRUE,warning=FALSE,message=FALSE}
+naturais <- c(1,2,3,4,5,6,7,8,9,10)
+nomes <- c("Davi", "Alex", "Renan", "Patricia", "Maria", "Gilherme", "Rosa", "Julia", "Robson", "Jose")
+racionais <- c(1, 2.2, 3.4, 4.6, 5.8, 6, 7.2, 8.4, 9.6, 10.8)
+
+df <- data.frame(naturais, nomes, racionais)
+data_iris_mtcars <- list(iris, mtcars)
+
+```
+Esses serão os primeiros dados que utilizaremos, um data frame com 3 colunas e 10 linhas e uma lista com 2 data frames dentro da mesma
+
+A função utilizada para criar uma google sheet no R é a **gs4_create**, nela temos como parâmetros:
+
+**name**: é utilizado para determinar o nome da Google Sheet;
+
+**sheets**: é utilizado para determinar quais dados vão popular sua tabela. Vale resaltar que se não for determinada as sheets da função, por padrão a função irá criar a Google Sheet com uma Sheet chamada **Página1** e sem nada dentro, segue abaixo os exemplos:
+
+```{r echo=TRUE,warning=FALSE,message=FALSE}
+gs1 <- gs4_create("google-sheets-data-frame", sheets = df) # Criando uma google sheet com dados criados
+
+gs2 <- gs4_create("google-sheets-iris-mtcars", sheets = data_iris_mtcars) # Criando uma google sheet com 2 data frames já existentes
+
+gs3 <- gs4_create("google-sheets-nula") # Criando uma google sheet nula
+
+```
+
+![](/blog/2020-08-28-googlesheets4-para-manipulação-de-dados-da-sheets-do-google-drive.pt_files/gs1_ID.png){width=60% height=60%}
+
+Após a criação da tabela, rodando a variável em que ela foi inserida você terá um resultado similar ao demonstrado na imagem acima
+
+# Importando GoogleSheets pelo googlesheets4
+
+Agora vamos importar as mesmas tabelas que foram criadas acima, para assim podermos manipular e trabalhar com as mesmas
+
+A função utilizada para isso é a **read_sheet**, nela temos como principais parâmetros:
+
+**ss**: em que nele colocamos o ID da Google Sheet que queremos acessar;
+
+**sheet**: que usamos para selecionar qual tabela queremos acessar dentro do arquivo.
+Segue abaixo os exemplos:
+```{r echo=TRUE,warning=FALSE,message=FALSE}
+gs1_import <- read_sheet("1iH1PQ6QA0fNgrZC2SW8Kk-BHhce9WlcU4AMfdGYQwjU", sheet = "df") # Importando gs1 através do ID
+
+gs2_import_iris <- read_sheet("1jharBY23L8UYNBCIEIzt0y1ji4OlZm1Q0NaF9xs3Q1s", sheet = "Página1") # Importando gs2 através do ID e acessando a primeira página
+
+gs2_import_mtcars <- read_sheet("1jharBY23L8UYNBCIEIzt0y1ji4OlZm1Q0NaF9xs3Q1s", sheet = "Página2") # Importando gs2 através do ID e acessando a segunda página
+
+gs3_import <- read_sheet("19_9yJ1s7g9KBdAv1DJ9wwJ2JSatj-xBqWGnLla88LDg", sheet = 1) # Importando gs3 através do ID
+
+```
+
+# Editando nomes de sheets
+
+A função utilizada para renomear uma Sheet da sua tabela é o **sheet_rename**, em que temos como principais parâmetros:
+
+**ss**: em que nele colocamos o ID da Google Sheet que queremos acessar;
+
+**sheet**: usamos para selecionar qual tabela queremos renomear dentro do arquivo;
+
+**new_name**: será utilizado para adicionar o novo nome à Sheet.
+
+```{r echo=TRUE,warning=FALSE,message=FALSE}
+gs2_iris_renamed <- sheet_rename("1jharBY23L8UYNBCIEIzt0y1ji4OlZm1Q0NaF9xs3Q1s", sheet = "Página1", new_name = "iris") # Renomeando a sheet Página1 para iris
+```
+
+# Abrindo sua GoogleSheet no seu navegador padrão 
+
+A função apresentada a seguir é uma das funções que irá ser utilizada constantemente quando estiver editando suas Sheets, pois nela você acessa suas tabelas diretamente no Google Sheets, então você pode ver se está tudo certo com o que você está mexendo.
+
+```{r echo=TRUE,warning=FALSE,message=FALSE}
+gs4_browse(gs2)
+```
+
+# Adicionando dados às tabelas
+
+No chunk abaixo estamos criando algumas variáveis com dados, para que possam ser consumidos pelas nossas tabelas que utilizaremos de exemplo a seguir
+```{r echo=TRUE,warning=FALSE,message=FALSE}
+#install.packages(tibble) é um data frame com melhorias e mais simples de utilizar
+library(tibble)
+
+df2 <- data.frame(11, "Joao", 11) 
+dfiris3 <- data.frame(iris3)
+df3 <- tibble(A = 1:5, B = head(letters,5))
+df4 <- tibble(A = naturais, B = racionais)
+
+```
+
+
+A função utilizada para acrescentar dados na tabela é **sheet_append**, temos como principais parâmetros da função:
+
+**ss**: utilizado para adicionar o ID da Google Sheet que deve ser editada;
+
+**data**: são os dados que precisamos para acrescentar no data frame;
+
+**sheet**: usamos para selecionar qual tabela queremos editar dentro do arquivo.
+
+```{r echo=TRUE,warning=FALSE,message=FALSE}
+sheet_append(gs1, df2) # Adicionando uma linha ao gs1
+
+sheet_append(gs3, dfiris3) # Adicionando um data frame inteiro em um GoogleSheet
+
+```
+
+Nesse segundo exemplo temos a função **range_write** que é utilizada para adicionar novos dados em uma determinada dimensão da tabela, temos como principais parâmetros da função:
+
+**ss**: utilizado para adicionar o ID da Google Sheet que deve ser editada;
+
+**data**: são os dados que precisamos para acrescentar no data frame;
+
+**sheet**: usamos para selecionar qual tabela queremos editar dentro do arquivo;
+
+**range**: utilizado para determinar a partir de que células seus dados devem popular a tabela, sendo que as colunas são representadas por letras maiúsculas e as linhas por números.
+
+```{r echo=TRUE,warning=FALSE,message=FALSE}
+gs5 <- gs4_create("google-sheets-to-edit") # Criando uma Google Sheet vazia para demosntrar os exemplos 
+
+range_write(gs5, df3) # Adicionando dados sem especificar linhas e colunas desejadas
+
+range_write(gs5, df4, range = "D10") # Adicionando dados especificando linhas e colunas
+
+```
+
+# Limpando uma área de uma GoogleSheet
+
+Nessa chunk criamos o df5 para que possamos popular a nossa tabela **google-sheets-to-delete** com os dados que foram adicionados nessa variável para demonstrar a utilização da função que será apresentada abaixo:
+
+```{r echo=TRUE,warning=FALSE,message=FALSE}
+df5 <- gs4_fodder(n = 20, m = 20) # Criei um Data Frame com a função gs4_fodder, que lhe entrega uma tabela com n linhas e m colunas 
+
+gs6 <- gs4_create("google-sheets-to-delete", sheets = df5)
+
+```
+
+A função utilizada para deletar dados das GoogleSheets é **range_delete**, temos como seus principais parâmetros:
+
+**ss**: utilizado para adicionar o ID da Google Sheet que deve ser editada;
+
+**sheet**: que usamos para selecionar qual tabela queremos editar dentro do arquivo;
+
+**range**: utilizado para determinar a partir de que células seus dados devem ser excluidos da tabela, tendo que as colunas são representadas por letras maiúsculas e as linhas por números.
+
+```{r echo=TRUE,warning=FALSE,message=FALSE}
+range_delete(gs6, range = "2") # Deletando a segunda linha da tabela
+
+range_delete(gs6, range = "D") # Deletando a coluna D da tabela
+```
+
+# Deletando uma tabela
+
+Para deletar uma tabela temos que utilizar um pacote que vem instalado junto ao **googlesheets4** chamado **googledrive**, nele utilizaremos a função **drive_trash** para mover o arquivo selecionado para a lixeira do Google Drive, em conjunto ao drive_trash, utilizaremos a função **gs4_find** para achar pelo nome o arquivo que desejamos, como demonstrado abaixo.
+```{r echo=TRUE,warning=FALSE,message=FALSE}
+library(googledrive)
+
+drive_trash(gs4_find("google-sheets-to-delete")) # Deletando uma GoogleSheet
+```
+
+# Referências:
+
+https://googlesheets4.tidyverse.org/index.html (site do pacote)
+
+https://cran.r-project.org/web/packages/googlesheets4/googlesheets4.pdf (documentação do pacote)
+
+https://github.com/tidyverse/googlesheets4 (repositório no GitHub do pacote)
