@@ -161,7 +161,7 @@ Vamos voltar à probabilidade de interseção de eventos. Digamos que você quer
 
 Portanto, a chance de se ocorrerem 5 lançamentos seguidos que resultem em Cara é de $\frac{1}{32}$.
 
-##Bônus: Gerador de lançamentos de dados e moedas em R:
+## Bônus: Gerador de lançamentos de dados e moedas em R:
 Agora que já sabemos como funcionam as probabilidades por trás de lançamentos de moedas e dados, vamos criar um gerador de lançamentos pelo R. Comecemos com o básico:
 
 ```{r echo=TRUE,warning=FALSE,message=FALSE}
