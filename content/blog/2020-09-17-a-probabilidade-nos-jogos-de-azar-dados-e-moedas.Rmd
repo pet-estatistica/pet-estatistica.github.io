@@ -1,7 +1,7 @@
 ---
 title: 'A probabilidade nos jogos de azar: Dados e moedas'
-author: Caio Gomes Alves
-date: '2020-09-16'
+author: Caio Gomes
+date: '2020-09-17'
 slug: a-probabilidade-nos-jogos-de-azar-dados-e-moedas
 categories:
   - prob
@@ -12,17 +12,17 @@ tags:
   - azar
 description: ''
 images:
-  - '![](/post/2020-09-16-a-probabilidade-nos-jogos-de-azar-dados-e-moedas_files/WhatsApp Image 2020-09-15 at 22.44.34.jpeg){width=50% height=50%}'
+  - 'img/caio_post/caio_dado.jpeg'
 ---
 Neste post iremos discutir as noções básicas de jogos de azar, e entender as probabilidades sobre os mais antigos e comuns que existem: a moeda e o dado.
 
-#O que são jogos de azar?
+# O que são jogos de azar?
 
 Jogos de azar são quaisquer tipos de jogos que baseiam o ato de vencer apenas na sorte de seus participantes. Ou seja, qualquer jogo em que, a chance de se vencer ou perder é definida apenas pelo acaso (ou sorte) dos jogadores, e a habilidade dos mesmos não aumentam as chances de vitória, é um jogo de azar.
 
 Alguns dos exemplos mais conhecidos envolvem jogos com cartas (Poker, BlackJack, Truco, Cacheta etc.). Mas as cartas para esses jogos foram inventadas apenas no século IX na China e introduzidas na Europa apenas no século XIV. Neste post iremos focar nos jogos de azar mais antigos de que se tem registro: os dados e as moedas.
 
-#Uma breve história dos dados e da moeda:
+# Uma breve história dos dados e da moeda:
 
 Os primeiros dados da qual se tem registro foram descobertos em 1920, na região da Antiga Suméria e datam cerca de 2600 a.C. Eles possuiam formato de pirâmide e faces numeradas de 1 a 4, e presume-se que eram usados em jogos de adivinhação e para fins religiosos.
 
@@ -36,20 +36,20 @@ O uso de moedas como meio de aposta foi criado também pelos romanos, durante os
 
 Os problemas desses jogos de azar da Antiguidade é que boa parte deles não era realmente aleatória, já que não havia meios de criar dados e moedas totalmente balanceados, levando a todos os tipos de trapaças com dados viciados e moedas desbalanceadas.
 
-#A probabilidade por trás dos dados e moedas
+# A probabilidade por trás dos dados e moedas
 
 Vamos agora entender como funcionam as probabilidades que envolvem os principais jogos de azar com dados e moedas. Para fins de esclarecimento, todos os dados e moedas que serão utilizados nos exemplos são justos e balanceados, sem nenhum tipo de viés. Isso é um condição necessária para se analizar a aleatoriedade por trás deles, e não ocorrer nenhum problema causado por processos pseudoaleatórios (para mais informações sobre pseudoaleatoriedade, vide [Pseudoaleatoriedade](https://pt.wikipedia.org/wiki/Pseudoaleatoriedade))
 
-##Analisando lançamentos de um dado honesto
+## Analisando lançamentos de um dado honesto
 
 Considerando um dado honesto (ou seja, um em que todas as faces possuem a mesma chance de ocorrência), vamos analizar como se comportam as probabilidades de sair o número indicado na face superior. Inicialmente, iremos focar em apenas um lançamento de um dado cúbico de 6 faces. Posteriormente iremos tratar de múltiplos lançamentos e de dados com mais ou menos faces. Mas antes, vamos nos lembrar de alguns conceitos básicos de probabilidade antes de começar:
 
-###Espaço amostral:
+### Espaço amostral:
 Suponhamos que um experimento (neste caso um lançamento um dado honesto) seja realizado sob certas condições fixas. Define-se o espaço amostral desse experimento como o conjunto de todos os resultados possíveis e denota-se por $\Omega$.
 
 No caso do lançamento de um dado de seis faces, o nosso espaço amostral é $\Omega = \{ 1,2,3,4,5,6 \}$, pois esses são os únicos resultados possíveis.
 
-###Evento:
+### Evento:
 Um evento A é um subconjunto do espaço amostral, com $A\subset\Omega$. Se atribuirmos um valor de probabilidade a esse evento, ele será dito aleatório. Analogamente, no lançamento de um dado de seis faces, os possíveis eventos são:
 
 - $A_1=\{1\}$;
@@ -61,12 +61,12 @@ Um evento A é um subconjunto do espaço amostral, com $A\subset\Omega$. Se atri
 
 Vale ressaltar que os eventos, neste caso, são equiprováveis, ou seja, todos os eventos possuem a mesma chance de ocorrer, já que o dado é honesto.
 
-###Definição clássica de Probabilidade:
+### Definição clássica de Probabilidade:
 Seja $\Omega$ um espaço amostral finito e A um evento, com $A\subset\Omega$. A probabilidade de ocorrência do evento A é dada por: $P(A)=\frac{A}{\Omega}$. Deste modo, podemos calcular a chance de ocorrer um resultado favorável no lançamento de um dado de seis faces.
 
 Digamos que você esteja apostando com o seu amigo qual face irá cair virada para cima no lançamento de um dado. Você acha que será o número 5, enquanto o seu amigo acredita que será o número 2. A chance de ocorrer o evento $A=\{5\}$ é de $\frac{1}{6}$, já que há apenas um resultado em que o dado cairá com o número 5 com a face para cima. Similarmente, seu amigo possui a mesma chance de ganhar ($\frac{1}{6}$), pois o dado é honesto, e há apenas um resultado em que ele cairá com o número 3 com a face para cima.
 
-###Lançando um dado mais de uma vez:
+### Lançando um dado mais de uma vez:
 Agora, considere que você e seu amigo estão lançando o dado duas vezes e estão apostando qual o valor da soma dos dois lançamentos. Como escolher em qual número apostar?
 
 Vamos começar analizando o nosso espaço amostral. Como agora estamos lançando o dado duas vezes, vejamos quais são os possíveis resultados:
@@ -122,7 +122,7 @@ hist(soma,col = "blue",labels = TRUE,main = "Soma dos lançamentos",xlab="Valor 
 
 Como se pôde ver com auxílio do histograma, o número 7 é o valor que mais se repete no espaço amostral, com 6 repetições em 36 possíveis resultados. Outros valores, como o 5 (que possui apenas 5 repetições) ou o 3 (que possui 3 repetições) são menos prováveis de se obter do que o 7. Com isso, agora você já sabe em qual valor apostar para ter mais chances de ganhar o jogo contra o seu amigo.
 
-###Probabilidade condicional com os dados:
+### Probabilidade condicional com os dados:
 Sejam dois eventos A e B subconjuntos do espaço amostral $\Omega$, tais que $A\subset\Omega$ e $B\subset\Omega$. A probabilidade da interseção dos dois eventos (a chance de ocorrência de ambos os eventos) é dada por: $P(A\cap B)=P(A)*P(B)$.
 
 Por exemplo, em um dado honesto de 6 faces, qual a probabilidade de o resultado de um lançamento ser um número par e menor do que 5?
@@ -141,7 +141,7 @@ No caso apresentado,já sabemos que o número é menor do que 5, e a probabilida
 
 $P(A\vert B)=\frac{P(A\cap B)}{P(B)}=\frac{\frac{1}{3}}{\frac{2}{3}}=\frac{1}{3}*\frac{3}{2}=\frac{3}{6}=\frac{1}{2}$
 
-###Dados não-cúbicos:
+### Dados não-cúbicos:
 Os dados mais comuns que existem são os que possuem formato de cubo, com 6 faces. Mas existem outros tipos de dados que não possuem essa forma.
 
 Um dado que está cada vez mais ganhando espaço no mercado é o icosaedro, formado por 20 lados triângulares, devido ao seu uso em sessões de RPG ao redor do mundo. Ele oferece um espaço amostral muito maior do que os dados comvencionais, o que aumenta as possibilidades de uso.
@@ -154,14 +154,14 @@ E como se comportam as probabilidades desses dados não-cúbicos? Simples: como 
 
 Por exemplo, a chance de um dado em formato de icosaedro (d20, para os mais íntimos) cair com o número 20 virado para cima é de $\frac{1}{20}$. Vale ressaltar que todas as propriedades de cálculo de probabilidades (Interseção de eventos, probabilidade condicional etc) também se aplicam a dados não-cúbicos.
 
-##E as moedas?
+## E as moedas?
 As moedas são primordialmente mais fáceis de se analizar. Para cada lançamento, há apenas dois possíveis resultados: Cara ou Coroa. Logo, a probabilidade de se cair um resultado esperado é de $\frac{1}{2}$, e se diversos lançamentos forem realizados, a chance de n jogadas serem favoráveis é de $(\frac{1}{2})^n$. De omde surgiu esse resultado?
 
 Vamos voltar à probabilidade de interseção de eventos. Digamos que você quer lançar a moeda 5 vezes, e anotar o resultado da face superior. Qual a chance de todos os lançamentos resultarem em Cara? O nosso espaço amostral é $\Omega=\{(c,c,c,c,c),(c,c,c,c,k),(c,c,c,k,c),...,(k,k,k,k,c),(k,k,k,k,k)\}$ (note que o número de resultados possíveis é 32, já que podemos calcular o tamanho de $\Omega$ por meio de permutações. Temos 5 lançamentos, cada um podendo adotar um de dois valores (Cara ou Coroa), logo temos $2^5 = 32$ possíveis resultados de lançamentos).
 
 Portanto, a chance de se ocorrerem 5 lançamentos seguidos que resultem em Cara é de $\frac{1}{32}$.
 
-##Bônus: Gerador de lançamentos de dados e moedas em R:
+## Bônus: Gerador de lançamentos de dados e moedas em R:
 Agora que já sabemos como funcionam as probabilidades por trás de lançamentos de moedas e dados, vamos criar um gerador de lançamentos pelo R. Comecemos com o básico:
 
 ```{r echo=TRUE,warning=FALSE,message=FALSE}
@@ -247,4 +247,3 @@ d_12
 d_20
 
 ```
-
