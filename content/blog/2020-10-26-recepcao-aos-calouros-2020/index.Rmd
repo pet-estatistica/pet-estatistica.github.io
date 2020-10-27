@@ -1,0 +1,23 @@
+---
+title: Recepção aos calouros 2020
+author: Fernando Mayer
+date: '2020-10-26'
+slug: recepcao-aos-calouros-2020
+categories:
+  - noticias
+tags:
+  - pse
+  - estatistica
+description: ''
+images:
+  - 'img/2020/10/pse_2020.jpeg'
+---
+
+Nesta quarta-feira (28/10/2020), o PET estará promovendo uma "mesa redonda" dedicada aos calouros do Processo Seletivo Estendido (PSE) 2020 de Estatística. Participarão deste evento o coordenador do curso de Estatística, Cesar Augusto Taconeli, professores responsáveis pelas disciplinas do PSE e alunos do PET. A ideia é auxiliar os calouros a sanar suas dúvidas nesse momento de distanciamento, por meio de perguntas e respostas.
+
+Para auxiliar os calouros no processo inicial de matrícula, o PET criou um [tutorial em PDF](Acesso_ao_SIGA.pdf), com todos os passos necessários.
+
+Além disso, também foi criado um vídeo para mostrar estes passos do tutorial para o processo de primeira matrícula.
+
+{{% youtube LEyZd3zo4Jg %}}
+
