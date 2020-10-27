@@ -12,7 +12,7 @@ disqusShortname         = ""
 googleAnalytics         = "UA-174760536-1"
 pluralizeListTitles     = false
 disableLanguages        = ["en", "fr", "pl", "de", "es", "zh-CN", "zh-TW", "ja"]
-ignoreFiles             = ["\\.R$", "\\.Rmd$", "\\.Rproj$", "\\.sh$", "\\.txt$", "_files$", "_cache$"]
+ignoreFiles             = ["\\.R$", "\\.Rmd$", "\\.Rproj$", "\\.sh$", "\\.txt$", "\\.Rmarkdown$", "\\.knit\\.md$", "\\.utf8\\.md$", "_cache$"]
 
 [markup.goldmark.renderer]
   unsafe                = true
