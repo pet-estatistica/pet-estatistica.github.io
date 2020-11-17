@@ -1,0 +1,16 @@
+---
+title: Sobre Rmarkdown
+author: Fernando Mayer
+date: '2020-11-17'
+slug: sobre-rmarkdown
+categories:
+  - teste
+tags:
+  - rmarkdown
+  - tutorial
+description: ''
+images:
+  - 'img/2020/11/ilha-do-mel.jpg'
+---
+
+Uma linha aqui.
