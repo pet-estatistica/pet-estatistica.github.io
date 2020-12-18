@@ -31,9 +31,9 @@ df.cidades.analisadas["deaths_per_100k_inhabitants"] <- (df.cidades.analisadas$d
 
 # Criação de bandeiras da COVID-19 no estado do Paraná
 
- O estado do Paraná adotou no mês de junho bandeiras com as cores amarelo,laranja e vermelho tendo como significado respectivamente alerta, risco médio e alto risco. Para protocolar essas cores o estado deve levar em consideração alguns requisitos dividido em dois critérios, propagação da doença e capacidade de atendimento.
+ O estado do Paraná adotou no mês de junho bandeiras com as cores amarelo, laranja e vermelho tendo como significado respectivamente alerta, risco médio e alto risco. Para protocolar essas cores o estado deve levar em consideração alguns requisitos dividido em dois critérios, propagação da doença e capacidade de atendimento.
 
-# Casos confirmados e por 100 mil habitantes em Cascavel, Curitiba e Londrina
+# Casos confirmados em Cascavel, Curitiba e Londrina
 
 ```{r echo=FALSE,message=FALSE,warning=FALSE}
 # GRAFICO CONFIRMADOS
@@ -89,7 +89,7 @@ ggplotly(graph.obitos, tooltip = "text")
 
   Curitiba se destaca atingindo a marca de 1388 óbitos, devendo ressaltar que o tamanho da população da cidade de Curitiba é superior aos demais municípios e, portanto o número de casos confirmados e consequentemente de óbitos será maior. Devido a isso podemos calcular até mesmo a taxa de mortalidade dessa doença, que tem como fórmula para esse cálculo $$\frac{\sum_{i=1}^{n}obitos}{\sum_{j=1}^{n} desfecho}$$ no qual a conotação "desfecho" é o número de recuperados + óbitos. Sendo assim tivemos uma baixa mortalidade para essa doença, no entanto o que preocupa as equipes da área da saúde principalmente é seu grande poder de proliferação, podendo deixar pessoas com grandes [sequelas no pós alta](http://saudedebate.com.br/noticias/sequelas-da-covid-19-a-vida-nao-voltou-ao-normal-apos-a-alta-hospitalar).
 
-## Óbitos para 100 mil habitantes com casos confirmados
+## Óbitos por 100 mil habitantes com casos confirmados
 
 ```{r echo=FALSE,message=FALSE,warning=FALSE}
 graph.obitos.p.100k <- df.cidades.analisadas %>% 
