@@ -1,0 +1,427 @@
+---
+title: 'A Probabilidade nos Jogos de Azar: O Jogo do Bicho'
+author: Caio Gomes Alves
+date: '2021-01-20'
+slug: []
+categories:
+  - prob
+  - probabilidade
+tags:
+  - azar
+  - blogdown
+  - estatistica
+  - jogos
+  - probabilidade
+description: ''
+images:
+  - ''
+---
+
+
+
+<p>Continuando a série de posts sobre jogos de azar, vamos dar uma olhada na probabilidade por trás de um dos jogos mais tradicionais das terras Tupiniquins: O Jogo do Bicho.</p>
+<div id="uma-breve-história-do-jogo-do-bicho" class="section level1">
+<h1>Uma breve história do Jogo do Bicho:</h1>
+<p>Nos primórdios da recém-formada República do Brasil, a capital (na época o Rio de Janeiro) sofria com uma grave crise no comércio, causada principalmente pela grande especulação financeira dos mercados europeus sobre a nova nação e pela má administração de bolsas de valores pelos governantes.</p>
+<p>Nesse contexto, o barão João Batista Viana Drummond, fundador e dono do Jardim Zoológico do Rio de Janeiro, passava por maus bocados. O número de visitantes do Zoo estava cada vez menor e a quantidade de dinheiro que entrava no caixa não daria para manter os animais por muito tempo.</p>
+<p>Tendo isso em mente, o barão teve a brilhante ideia de imprimir em cada bilhete de entrada a imagem de um entre os 25 animais presentes no Zoo, para, ao final do dia, sortear qual animal seria premiado. Os visitantes que possuíssem o bilhete com a imagem do animal sorteado receberiam o valor do ingresso mais uma bonificação.</p>
+<p>A proposta foi um sucesso. A quantidade de pessoas que passaram a visitar regularmente o Zoo aumentou de maneira sem precedentes. Mas, não foi por muito tempo que esse crescimento se manteve. Muitos apostadores compulsivos começaram a comprar diversos bilhetes de uma vez, não para visitar o Zoológico diversas vezes, mas para receber prêmios por causa do recém criado “Jogo do Bicho”.</p>
+<p>Após algum tempo o “Bicho” ficou tão popular e o Zoo estava recebendo cada vez menos visitantes (ainda que o montante de dinheiro que estava entrando em caixa estava cada vez mais alto) que decidiram que ele seria uma instituição independente.</p>
+<div id="a-ilegalidade-do-jogo-do-bicho" class="section level2">
+<h2>A (i)legalidade do Jogo do Bicho:</h2>
+<p>Com o crescimento da popularidade do Jogo do Bicho em diversas cidades por todo o Brasil, o Jogo do Bicho começou a ter diversos problemas com a Lei. Mas engana-se quem acha que demorou para surgirem esses problemas. A primeira notificação formal da Polícia para com o Bicho foi feita apenas duas semanas após duas semanas de sua criação.</p>
+<p>De início, as autoridades permitiram que o Zoológico fizesse os sorteios para arrecadar dinheiro. Entretanto, assim que perceberam que quem comprava os bilhetes não estava visitando Zoo, as coisas mudaram. Como nos dias atuais, todo tipo de jogo de azar também era proibido na época, mas demorou muito para ações legais acontecerem.</p>
+<p>Somente em 1941 (49 anos após a sua criação) que o Jogo do Bicho foi considerado ilegal em todo território nacional, a partir do Artigo 58 da Lei de Contravenções Penais, como segue:</p>
+<blockquote>
+<p>“Art. 58 - Explorar ou realizar a loteria denominada jogo do bicho, ou praticar qualquer ato relativo à sua realização ou exploração:<br />
+Pena – prisão simples, de quatro meses a um ano, e multa, de dois a vinte contos de réis.<br />
+Parágrafo único - Incorre na pena de multa, de duzentos mil réis a dois contos de réis, aquele que participa da loteria, visando a obtenção de prêmio, para si ou para terceiro.”</p>
+</blockquote>
+<p>Como visto, a Lei segue em moldes antiquados e encontra-se desatualizada (para maiores informações, visite o site da <a href="http://www.planalto.gov.br/ccivil_03/decreto-lei/Del3688.htm">Lei de Contravenções Penais</a>). Um projeto de Lei criado em 2014 (Projeto de Lei do Senado n° 186, de 2014) prevê a descriminalização de todos os jogos de azar no Brasil, mas encontra-se atualmente em tramitação (para ler o projeto, visite o <a href="https://www25.senado.leg.br/web/atividade/materias/-/materia/117805">site</a> do senado).</p>
+</div>
+</div>
+<div id="a-probabilidade-no-jogo-do-bicho" class="section level1">
+<h1>A probabilidade no Jogo do Bicho:</h1>
+<p>Agora que já sabemos um pouco da (conturbada) história do Jogo do Bicho, vamos para a parte que interessa: a matemática por trás do Jogo. Mas, para entendermos como funcionam os cálculos, temos que primeiro entender:</p>
+<div id="como-funciona-o-jogo-do-bicho" class="section level2">
+<h2>Como funciona o Jogo do Bicho:</h2>
+<p>Como o Jogo do Bicho não possui uma centralização do poder, cada banca (organização que garante o pagamento dos vencedores e cobra as dívidas dos perdedores) possui os seus bicheiros, que são os responsáveis por receber as apostas, pagar os vencedores e repassar parte dos lucros de volta para a banca.</p>
+<p>Todos os dias, quatro vezes ao dia (11h30, 14h30, 18h30 e às 21h30, menos aos domingos, que possui um único sorteio), cinco números entre 0000 e 9999 são sorteados no Rio de Janeiro e pregados no mesmo poste onde o resultado do Bicho era divulgado em 1892.</p>
+<p>Esses números são divulgados por todo o Brasil via rádio, internet e telefone. A grande maioria das bancas considera o sorteio do Rio de Janeiro oficial, mas há estados que usam outros métodos para escolher os números (normalmente usam os dois resultados semanais da Loteria Federal).</p>
+<p>Existem duas modalidades de apostas no Bicho: o Grupo (a mais popular) e o Número (a que possui prêmios maiores). Os animais que originalmente haviam no Jardim Zoológico do Rio de Janeiro formaram os grupos que são usados em uma das modalidades. São eles:</p>
+<p>-Avestruz: 01,02,03,04;</p>
+<p>-Águia: 05,06,07,08;</p>
+<p>-Burro: 09,10,11,12;</p>
+<p>-Borboleta: 13,14,15,16;</p>
+<p>-Cachorro: 17,18,19,20;</p>
+<p>-Cabra: 21,22,23,24;</p>
+<p>-Carneiro: 25,26,27,28;</p>
+<p>-Camelo: 29,30,31,32;</p>
+<p>-Cobra: 33,34,35,36;</p>
+<p>-Coelho: 37,38,39,40;</p>
+<p>-Cavalo: 41,42,43,44;</p>
+<p>-Elefante: 45,46,47,48;</p>
+<p>-Galo: 49,50,51,52;</p>
+<p>-Gato: 53,54,55,56;</p>
+<p>-Jacaré: 57,58,59,60;</p>
+<p>-Leão: 61,62,63,64;</p>
+<p>-Macaco: 65,66,67,68;</p>
+<p>-Porco: 69,70,71,72;</p>
+<p>-Pavão: 73,74,75,76;</p>
+<p>-Peru: 77,78,79,80;</p>
+<p>-Touro: 81,82,83,84;</p>
+<p>-Tigre: 85,86,87,88;</p>
+<p>-Urso: 89,90,91,92;</p>
+<p>-Veado: 93,94,95,96;</p>
+<p>-Vaca: 97,98,99,00.</p>
+<p>Vamos simular um Jogo, a partir de 5 números aleatórios. Serão eles:</p>
+<p>-1°: 5534;</p>
+<p>-2°: 8486;</p>
+<p>-3°: 9072;</p>
+<p>-4°: 6617;</p>
+<p>-5°: 8766.</p>
+<p>A partir deste ponto, esses números serão usados em todos os exemplos. Vamos dizer que alguém queira apostar no Bicho, e decida que vai apostar no grupo do Macaco, porque sonhou com um macaco na noite anterior.</p>
+<p>Note que o grupo do macaco contempla os números 65, 66, 67 e 68. A aposta funciona da seguinte maneira: caso o apostador tenha escolhido apostar apenas na “Cabeça” do sorteio, ele irá ganhar caso o primeiro número entre os sorteados possua os dois últimos dígitos pertencentes ao grupo do macaco.</p>
+<p>No caso do exemplo, ele não teria ganhado, já que o primeiro número (5534) termina em 34, que pertence ao grupo da Cobra (33,34,35,36). Mas essa não é a única forma de apostar no Grupo. Caso o apostador escolha “Cercar” os números, se qualquer um dos cinco sorteados possua os dois últimos dígitos pertencentes ao grupo escolhido, ele vence, mas o prêmio será 5 vezes menor.</p>
+<p>Caso o nosso apostador tivesse escolhido cercar, ele teria ganhado, já que o 5º número sorteado termina em 66, que pertence ao grupo do macaco.</p>
+<p>A outra modalidade é a do número. Neste caso, o apostador deverá escolher uma entre três opções: apostar na dezena, na centena ou no milhar. Vamos analizar cada caso:</p>
+<div id="a-dezena" class="section level3">
+<h3>A dezena:</h3>
+<p>Escolhendo a dezena, o apostador (vamos chamá-lo de Zé, a partir daqui, para criarmos uma intimidade maior com ele) deverá escolher um número entre 00 e 99. Esse número será usado para comparação com os dois últimos dígitos dos 5 números sorteados. Aqui, vale-se também a escolha de cercar ou não os números, a troco de um prêmio 5 vezes menor.</p>
+<p>Vamos dizer que o Zé escolheu a dezena 72 para a sua aposta. Ele venceria caso escolhesse cercar os números, pois o 3º sorteado termina em 72. Como essa modalidade poosui menos chances de acerto do que apostar em um grupo, as recompensas são maiores.</p>
+</div>
+<div id="a-centena" class="section level3">
+<h3>A centena:</h3>
+<p>Semelhante à dezena, caso o apostador escolha apostar na centena ele deverá escolher um número entre 000 e 999, para ser comparado com os três últimos dígitos dos 5 números sorteados. Assim como no caso anterior, pode-se cercar ou não os números, para se aumentarem as chances de acerto em troca de um prêmio menor.</p>
+<p>Desta vez, o Zé decidiu apostar na centena 534. Ele iria ganhar se escolhesse cercar ou não, já que o resultado que lhe garantiria a vitória é o do primeiro número sorteado. Mas, caso escolhesse cercar, as recompensas seriam cinco vezes menor.</p>
+</div>
+<div id="o-milhar" class="section level3">
+<h3>O milhar:</h3>
+<p>A modalidade que mais paga, mas também a mais difícil de se ganhar. Para apostar no milhar o apostador deve escolher um número entre 0000 e 9999 que será comparado com os 4 dígitos dos números sorteados. A opção de cercar também é válida para esta modalidade, como sempre, a troco de prêmios menores.</p>
+<p>Considere que o Zé tenha escolhido o milhar 8485. Neste caso, ele não teria ganhado, independentemente de ter escohido cercar o não, já que o número escolhido não é igual a nenhum dos sorteados, ainda que muito próximo (O segundo sorteado é apenas uma unidade maior do que o escolhido).</p>
+</div>
+<div id="os-prêmios" class="section level3">
+<h3>Os prêmios:</h3>
+<p>Caso alguém venha a ganhar o Jogo do Bicho, três fatores definem o valor do prêmio: o valor da aposta, a modalidade do Jogo e a escolha de cercar ou não. Digamos que em todos os casos o valor apostado tenha sido de R$10,00.</p>
+<p>No caso de ter sido escolhido apostar no Grupo, o valor da recompensa é de 18 vezes o valor apostado, ou seja, R$180,00. Para a dezena, essa recompensa é de 60 vezes a aposta, totalizando R$600,00. Para a centena é de 600 vezes o valor apostado, no caso, R$6.000,00. Por fim, caso o apostador tenha acertado o milhar, o prêmio é de 4.000 vezes a aposta, ou seja, R$40.000,00.</p>
+<p>Vale lembrar que esses valores só valem se for escolhido apostar apenas na “Cabeça”. Caso o apostador tenha escolhido cercar os números sorteados as recompensas são 5 vezes menores. Ou seja, ao invés dos prêmios serem R$180,00 , R$600,00 , R$6.000,00 e R$40.000,00 , eles seriam R$36,00 , R$120,00 , R$1.200,00 e R$8.000,00.</p>
+</div>
+</div>
+<div id="de-volta-à-parte-que-nos-interessa" class="section level2">
+<h2>De volta à parte que nos interessa:</h2>
+<p>Agora que já sabemos como funciona o Jogo do Bicho, vamos estudar as probabilidades por trás dele. Primeiramente, vamos dividir por modalidades:</p>
+<div id="as-chances-do-grupo" class="section level3">
+<h3>As chances do Grupo:</h3>
+<p>Temos no total 25 grupos no Jogo, cada um com 4 números, como já mostrado anteriormente. Neste caso, como não importa os números específicos a serem sorteados, desde que estejam no grupo escolhido, vamos observar os casos que podem ocorrrer:</p>
+<p>A chance do primeiro número sorteado ser o grupo escolhido é de <span class="math inline">\(\frac{1}{25}\)</span>, já que são 4 números para cada grupo, dentre 100 números possíveis (00 a 99). De maneira mais estendida: <span class="math inline">\(\frac{40}{1000}=\frac{44}{100}=\frac{1}{25}\)</span>.</p>
+<p>A chance do segundo número também ser do grupo escolhido depende do resultado do primeiro número sorteado. Como os 5 são diferentes entre si (não há reposição de valores já sorteados), caso o primeiro número sorteado pertença ao grupo, a chance do segundo também o ser é de <span class="math inline">\(\frac{39}{999}\)</span>. Porém, se o primeiro número sorteado não pertencer ao grupo, a chance do segundo também o ser é de <span class="math inline">\(\frac{40}{999}\)</span>.</p>
+<p>O mesmo raciocínio se estende para os 3º, 4º e 5º números sorteados. No geral, a chance de apenas um dos 5 números pertecer ao grupo é de <span class="math inline">\(\frac{40}{1000}+\frac{40}{999}+\frac{40}{998}+\frac{40}{997}+\frac{40}{996} ≃ 0,2004012\)</span>, enquanto a chance de todos eles pertencerem ao grupo é de <span class="math inline">\(\frac{40}{1000}+\frac{39}{999}+\frac{38}{998}+\frac{37}{997}+\frac{36}{996} ≃ 0,1903711\)</span>. Caso o apostador tenha escolhido cercar os números, não importa se apenas 1 ou todos os 5 pertencem ao grupo, o prêmio é o mesmo.</p>
+<p>Ou seja, a chance de ganhar apostando apenas na cabeça é de <span class="math inline">\(\frac{1}{25}\)</span> e a chance de ganhar cercando é de, em média, <span class="math inline">\(0,1954\)</span>. Por isso é mais vantajoso sempre apostar apenas na cabeça, já que a chance de ganhar cercando é menor do que 5 vezes a chance de ganhar apostando na cabeça (<span class="math inline">\(0,1954&lt;0,2 = \frac{5}{25}\)</span>).</p>
+</div>
+<div id="as-chances-da-dezena" class="section level3">
+<h3>As chances da dezena:</h3>
+<p>No caso da dezena, como são os dois últimos dígitos que são importantes, vamos ver os diferentes cenários que podem ocorrer:</p>
+<p>A chance do primeiro número sorteado possuir a dezena escolhida é de <span class="math inline">\(\frac{1}{100}\)</span>, já que apenas um dos 100 números possíves (00 a 99) é o que garantirá a vitória. De maneira mais estendida: <span class="math inline">\(\frac{10}{1000}=\frac{1}{100}\)</span></p>
+<p>De maneira similar ao caso anterior, a chance do segundo número também ter a dezena escolhida depende do primeiro. Caso o primeiro número sorteado possua a dezena escolhida, a chance do segundo também o ter é de <span class="math inline">\(\frac{9}{999} ≃ 0,009\)</span>. Porém, se o primeiro não possuir a dezena escolhida, a chance do segundo ter é de <span class="math inline">\(\frac{10}{999} ≃0,01\)</span>.</p>
+<p>O mesmo raciocínio se estende para os outros 3 números sorteados. A chance de que apenas um dos 5 números tenha a dezena escolhida é de <span class="math inline">\(\frac{10}{1000}+\frac{10}{999}+\frac{10}{998}+\frac{10}{997}+\frac{10}{996} ≃ 0,0501\)</span>, enquanto a chance de todos os 5 terem a dezena escolhida é de <span class="math inline">\(\frac{10}{1000}+\frac{9}{999}+\frac{8}{998}+\frac{7}{997}+\frac{6}{996} ≃ 0,04007\)</span>.</p>
+<p>Assim como acontece com o grupo, caso o apostador escolha cercar os números sorteados, não importa se apenas 1 ou todos os 5 possuem a dezena escolhida, a recompensa é a mesma. No caso da dezena, a chance de ganhar na cabeça é de apenas <span class="math inline">\(\frac{1}{100}\)</span> e a chance de ganhar cercando é de, em média, <span class="math inline">\(0,04508\)</span>, portanto, também é mais vantajoso apostar apenas na cabeça, já que a chance de ganhar cercando é menor do que 5 vezes a chance de ganhar apostando apenas na cabeça (<span class="math inline">\(0,04508&lt;0,05=\frac{5}{100}\)</span>).</p>
+</div>
+<div id="as-chances-da-centena" class="section level3">
+<h3>As chances da centena:</h3>
+<p>No caso da centena, os três últimos números que importam para a análise, portanto, vejamos os cenários que podem ocorrer:</p>
+<p>A chance do primeiro número sorteado possuir a centena escolhida é de <span class="math inline">\(\frac{1}{1000}=\frac{10}{10000}\)</span>, já que apenas um dos 1000 números possíveis (000 a 999) garantirá a vitória, enquanto os outros 999 não são favoráveis.</p>
+<p>Similar aos casos anteriores, a chance do segundo número também possuir a centena escolhida depende do primeiro número sorteado. Caso o primeiro possua, a chance do segundo também possuir é de <span class="math inline">\(\frac{9}{9999} ≃ 0,0009\)</span>. Porém, caso o primeiro não possuir a dezena escolhida, a chance do segundo possuir é de <span class="math inline">\(\frac{10}{9999} ≃ 0,001\)</span>.</p>
+<p>O mesmo raciocínio é estendido para os 3 últimos números sorteados. A chance de que apenas um dos 5 números sorteados tenha a centena escolhida é de <span class="math inline">\(\frac{10}{10000}+\frac{10}{9999}+\frac{10}{9998}+\frac{10}{9997}+\frac{10}{9996} ≃ 0,005\)</span>, enquanto a chance de que todos os 5 sorteados possuam a centena escolhida é de <span class="math inline">\(\frac{10}{10000}+\frac{9}{9999}+\frac{8}{9998}+\frac{7}{9997}+\frac{6}{9996} ≃ 0,004\)</span>.</p>
+<p>Similarmente ao que acontece com a dezena, caso o apostador deseje cercar os números sorteados, não importa se apenas 1 dos números ou todos os 5 possuam a centena escolhida, a recompensa é a mesma. No caso da centena, a chance de ganhar apostando apenas na cabeça é de <span class="math inline">\(\frac{1}{1000}\)</span>, enquanto a chance de ganhar cercando é de, em média, 0,0044, logo é mais vantajoso apostar apenas na cabeça, já que a chance de ganhar cercando é menor do que 5 vezes a chance de ganhar apostando apenas na cabeça (<span class="math inline">\(0,0044 &lt;0,005=\frac{5}{1000}\)</span>).</p>
+</div>
+<div id="as-chances-do-milhar" class="section level3">
+<h3>As chances do milhar:</h3>
+<p>O milhar é diferente das outras modalidades de aposta, pois apenas o número escolhido é o que leva à vitória.</p>
+<p>A chance de cada um dos números sorteados ser o escolhido é igual, já que é apenas um número que pode ganhar. Ou seja, a chance do primeiro número sorteado ser o apostado é igual a <span class="math inline">\(\frac{1}{10000}\)</span>, a chance do segundo número sorteado ser o apostado é de <span class="math inline">\(\frac{1}{10000}\)</span>, e assim por diante.</p>
+<p>Dessa forma, a chance de ganhar apostando apenas na cabeça é de <span class="math inline">\(\frac{1}{10000}\)</span>, e a chance de ganhar cercando é de <span class="math inline">\(\frac{5}{10000}\)</span>, ou seja, não há diferença ao apostar cercando ou apenas na cabeça, já que as chances são proporcionais aos prêmios, já que a chance de ganhar cercando é igual a cinco vezes a chance de ganhar apostando na cabeça (<span class="math inline">\(\frac{5}{10000}=5*\frac{1}{10000}\)</span>).</p>
+</div>
+</div>
+<div id="conclusões" class="section level2">
+<h2>Conclusões:</h2>
+<p>Com o que foi visto neste artigo, é simples ver que o Jogo do Bicho é feito para não ser ganhado, com chances de vitórias muito baixas para os prêmios oferecidos. Mas você leitor pode se perguntar: “Mas as chances de ganhar na loteria são muito menores, e ainda assim as pessoas ganham.”. E é aí que mora a falácia.</p>
+<p>Digamos que você e nosso amigo Zé são ávidos apostadores, cada um em sua modalidade. Você aposta na loteria, com as mesmas dezenas, enquanto Zé sempre aposta no mesmo grupo do Bicho, sem cercar os números apostados.</p>
+<p>Suponhamos que você faça uma aposta por mês, enquanto o Zé faz uma por semana. Ambas as apostas a R$5,00. As chances de você acertar as 6 dezenas na loteria são de <span class="math inline">\(\frac{1}{50.063.760} ≃ 0,00000002\)</span>, ou seja, uma vez a cada 50 milhões de apostas é esperado que você ganhe. As chances do Zé ganhar apostando no grupo, sem cercar, já foi calculada, sendo igual a <span class="math inline">\(\frac{1}{25} = 0,04\)</span>, ou seja, em uma a cada 5 apostas o Zé irá ganhar.</p>
+<p>Levando em consideração os números anteriores, caso você comece a fazer uma aposta por mês, e considerando que um a cada 50.063.860 jogos você irá ganhar, você irá ganhar uma vez a cada 4.171.980 anos. Gastando R$5,00 por aposta, com o prêmio médio de R$150.000.000,00 , você terá gasto R$250.318.800,00 e receberá “apenas” 150 milhões de prêmio, dando um prejuízo de R$150.318.800,00 ao longo de 4.171.980 anos, ou seja, um prejuízo de aproximadamente R$36,03 por ano.</p>
+<p>Já o Zé irá ganhar muito mais frequentemente, uma vez a cada 25 jogos em média. Ou seja, caso o Zé faça 4 apostas por mês (uma por semana, aproximadamente), serão 48 apostas por ano, ou seja, em 25 anos ele irá ter feito 1.200 jogos e ganhado apenas um em cada 25, somando um total de 48 vitórias. Como cada vez que ele acerta ele ganha 18 vezes o apostado (R$90,00), ele terá embolsado um total de R$4.320,00. Como cada aposta custa R$5,00 , ele terá gasto R$6.000,00 , tendo um prejuízo de R$1.680,00 ao longo de 25 anos, ou seja, um prejuízo médio de R$67,20 por ano, quase o dobro do prejuízo da loteria.</p>
+<p>Como se pode ver, os jogos de azar são feitos para, ao longo prazo, fazerem os jogadores perderem dinheiro. Ainda que você tenha muita sorte, e ganhe na primeira vez que apostar no Bicho, a próxima você não irá. Nem a próxima. Nem a próxima. Nem a próxima. É assim que esses jogos fazem dinheiro.</p>
+<div id="e-se-ainda-assim-eu-quiser-jogar-no-bicho" class="section level3">
+<h3>E se ainda assim eu quiser jogar no Bicho?</h3>
+<p>E se mesmo assim, você leitor quiser ainda assim apostar no Galo, porque você sonhou com um motorista de ônibus e o site <a href="https://www.livrodosonho.com/significado-dos-sonhos-sonhar-com-bichos-1066.htm">Livro do Sonho</a> diz que sonhar com motorista de ônibus quer dizer que no Bicho vai dar o Galo, como proceder?</p>
+<p>Como mencionado anteriormente, de forma bastante ostensiva, jogar no Bicho é contravenção penal, e pode resultar em prisão de quatro meses a um ano. Certamente posso afirmar que você leitor não deseja ir para a cadeia, mas ainda assim deseja jogar no Bicho. Pensando nisso, apresento-lhes o “Jogo do Bicho em R do PET-Estatística UFPR”:</p>
+<pre class="r"><code>
+Bicho&lt;-function(Modal,Num,Aposta,Cercar){
+  valores&lt;-sample(0:9999,size = 5,replace = FALSE,prob = NULL)
+  valor1&lt;-as.character(valores[1])
+  valor2&lt;-as.character(valores[2])
+  valor3&lt;-as.character(valores[3])
+  valor4&lt;-as.character(valores[4])
+  valor5&lt;-as.character(valores[5])
+  
+  library(stringr)
+  
+  if(str_length(valor1)&lt;4){
+    valor1&lt;-str_pad(valor1,width = 4,side = &quot;left&quot;,pad = &quot;0&quot;)
+  }
+  if(str_length(valor2)&lt;4){
+    valor2&lt;-str_pad(valor2,width = 4,side = &quot;left&quot;,pad = &quot;0&quot;)
+  }
+  if(str_length(valor3)&lt;4){
+    valor3&lt;-str_pad(valor3,width = 4,side = &quot;left&quot;,pad = &quot;0&quot;)
+  }
+  if(str_length(valor4)&lt;4){
+    valor4&lt;-str_pad(valor4,width = 4,side = &quot;left&quot;,pad = &quot;0&quot;)
+  }
+  if(str_length(valor5)&lt;4){
+    valor5&lt;-str_pad(valor5,width = 4,side = &quot;left&quot;,pad = &quot;0&quot;)
+  }
+  
+  Num&lt;-as.character(Num)
+  
+  if(Cercar==TRUE){
+    if(Modal==&quot;Dezena&quot; | Modal==&quot;dezena&quot; | Modal==&quot;DEZENA&quot;){
+      if(str_sub(Num,start=3)==str_sub(valor1,start=3) | str_sub(Num,start=3)==str_sub(valor2,start=3) | str_sub(Num,start=3)==str_sub(valor3,start=3) | str_sub(Num,start=3)==str_sub(valor4,start=3) | str_sub(Num,start=3)==str_sub(valor5,start=3)){
+        prize&lt;-Aposta*12
+      } else{
+        prize&lt;-0
+      }
+    }
+    if(Modal==&quot;Centena&quot; | Modal==&quot;centena&quot; | Modal==&quot;CENTENA&quot;){
+      if(str_sub(Num,start=2)==str_sub(valor1,start=2) | str_sub(Num,start=2)==str_sub(valor2,start=2) | str_sub(Num,start=2)==str_sub(valor3,start=2) | str_sub(Num,start=2)==str_sub(valor4,start=2) | str_sub(Num,start=2)==str_sub(valor5,start=2)){
+        prize&lt;-Aposta*120
+      } else{
+        prize&lt;-0
+      }
+    }
+    if(Modal==&quot;Milhar&quot; | Modal==&quot;milhar&quot; | Modal==&quot;MILHAR&quot;){
+      if(Num==valor1 | Num==valor2 | Num==valor3 | Num==valor4 | Num==valor5){
+        prize&lt;-Aposta*800
+      } else{
+        prize&lt;-0
+      }
+    }
+  }
+  if(Cercar==FALSE){
+    if(Modal==&quot;Dezena&quot; | Modal==&quot;dezena&quot; | Modal==&quot;DEZENA&quot;){
+      if(str_sub(Num,start=3)==str_sub(valor1,start=3)){
+        prize&lt;-Aposta*60
+      } else{
+        prize&lt;-0
+      }
+    }
+    if(Modal==&quot;Centena&quot; | Modal==&quot;centena&quot; | Modal==&quot;CENTENA&quot;){
+      if(str_sub(Num,start=2)==str_sub(valor1,start=2)){
+        prize&lt;-Aposta*600
+      } else{
+        prize&lt;-0
+      }
+    }
+    if(Modal==&quot;Milhar&quot; | Modal==&quot;milhar&quot; | Modal==&quot;MILHAR&quot;){
+      if(Num==valor1){
+        prize&lt;-Aposta*4000
+      } else{
+        prize&lt;-0
+      }
+    }
+  }
+  
+  if(prize!=0){
+    return(prize)
+  } else{
+    return (-Aposta)
+  }
+}</code></pre>
+<p>Além disso, aqui está o “Jogo do Bicho do PET-Estatística versão Grupo”:</p>
+<pre class="r"><code>Bicho_Grupo&lt;-function(Grupo,Aposta){
+  valor1&lt;-as.character(sample(0:9999,size=1))
+  
+  library(stringr)
+  
+  if(str_length(valor1)&lt;4){
+    valor1&lt;-str_pad(valor1,width = 4,side = &quot;left&quot;,pad = &quot;0&quot;)
+  }
+  
+  
+  prize&lt;-0
+  Ultimo&lt;-str_sub(valor1,start=3)
+  
+  if(Grupo==&quot;Avestruz&quot;|Grupo==&quot;avestruz&quot;|Grupo==&quot;AVESTRUZ&quot;){
+    if(Ultimo==&quot;01&quot;|Ultimo==&quot;02&quot;|Ultimo==&quot;03&quot;|Ultimo==&quot;04&quot;){
+      prize&lt;-Aposta*18
+    }
+  }
+  if(Grupo==&quot;Aguia&quot;|Grupo==&quot;aguia&quot;|Grupo==&quot;AGUIA&quot;){
+    if(Ultimo==&quot;05&quot;|Ultimo==&quot;06&quot;|Ultimo==&quot;07&quot;|Ultimo==&quot;08&quot;){
+      prize&lt;-Aposta*18
+    }
+  }
+  if(Grupo==&quot;Burro&quot;|Grupo==&quot;burro&quot;|Grupo==&quot;BURRO&quot;){
+    if(Ultimo==&quot;09&quot;|Ultimo==&quot;10&quot;|Ultimo==&quot;11&quot;|Ultimo==&quot;12&quot;){
+      prize&lt;-Aposta*18
+    }
+  }
+  if(Grupo==&quot;Borboleta&quot;|Grupo==&quot;borboleta&quot;|Grupo==&quot;BORBOLETA&quot;){
+    if(Ultimo==&quot;13&quot;|Ultimo==&quot;14&quot;|Ultimo==&quot;15&quot;|Ultimo==&quot;16&quot;){
+      prize&lt;-Aposta*18
+    }
+  }
+  if(Grupo==&quot;Cachorro&quot;|Grupo==&quot;cachorro&quot;|Grupo==&quot;CACHORRO&quot;){
+    if(Ultimo==&quot;17&quot;|Ultimo==&quot;18&quot;|Ultimo==&quot;19&quot;|Ultimo==&quot;20&quot;){
+      prize&lt;-Aposta*18
+    }
+  }
+  if(Grupo==&quot;Cabra&quot;|Grupo==&quot;cabra&quot;|Grupo==&quot;CABRA&quot;){
+    if(Ultimo==&quot;21&quot;|Ultimo==&quot;22&quot;|Ultimo==&quot;23&quot;|Ultimo==&quot;24&quot;){
+      prize&lt;-Aposta*18
+    }
+  }
+  if(Grupo==&quot;Carneiro&quot;|Grupo==&quot;carneiro&quot;|Grupo==&quot;CARNEIRO&quot;){
+    if(Ultimo==&quot;25&quot;|Ultimo==&quot;26&quot;|Ultimo==&quot;27&quot;|Ultimo==&quot;28&quot;){
+      prize&lt;-Aposta*18
+    }
+  }
+  if(Grupo==&quot;Camelo&quot;|Grupo==&quot;camelo&quot;|Grupo==&quot;CAMELO&quot;){
+    if(Ultimo==&quot;29&quot;|Ultimo==&quot;30&quot;|Ultimo==&quot;31&quot;|Ultimo==&quot;32&quot;){
+      prize&lt;-Aposta*18
+    }
+  }
+  if(Grupo==&quot;Cobra&quot;|Grupo==&quot;cobra&quot;|Grupo==&quot;COBRA&quot;){
+    if(Ultimo==&quot;33&quot;|Ultimo==&quot;34&quot;|Ultimo==&quot;35&quot;|Ultimo==&quot;36&quot;){
+      prize&lt;-Aposta*18
+    }
+  }
+  if(Grupo==&quot;Coelho&quot;|Grupo==&quot;coelho&quot;|Grupo==&quot;COELHO&quot;){
+    if(Ultimo==&quot;37&quot;|Ultimo==&quot;38&quot;|Ultimo==&quot;39&quot;|Ultimo==&quot;40&quot;){
+      prize&lt;-Aposta*18
+    }
+  }
+  if(Grupo==&quot;Cavalo&quot;|Grupo==&quot;cavalo&quot;|Grupo==&quot;CAVALO&quot;){
+    if(Ultimo==&quot;41&quot;|Ultimo==&quot;42&quot;|Ultimo==&quot;43&quot;|Ultimo==&quot;44&quot;){
+      prize&lt;-Aposta*18
+    }
+  }
+  if(Grupo==&quot;Elefante&quot;|Grupo==&quot;elefante&quot;|Grupo==&quot;ELEFANTE&quot;){
+    if(Ultimo==&quot;45&quot;|Ultimo==&quot;46&quot;|Ultimo==&quot;47&quot;|Ultimo==&quot;48&quot;){
+      prize&lt;-Aposta*18
+    }
+  }
+  if(Grupo==&quot;Galo&quot;|Grupo==&quot;galo&quot;|Grupo==&quot;GALO&quot;){
+    if(Ultimo==&quot;49&quot;|Ultimo==&quot;50&quot;|Ultimo==&quot;51&quot;|Ultimo==&quot;52&quot;){
+      prize&lt;-Aposta*18
+    }
+  }
+  if(Grupo==&quot;Gato&quot;|Grupo==&quot;gato&quot;|Grupo==&quot;GATO&quot;){
+    if(Ultimo==&quot;53&quot;|Ultimo==&quot;54&quot;|Ultimo==&quot;55&quot;|Ultimo==&quot;56&quot;){
+      prize&lt;-Aposta*18
+    }
+  }
+  if(Grupo==&quot;Jacare&quot;|Grupo==&quot;jacare&quot;|Grupo==&quot;JACARE&quot;){
+    if(Ultimo==&quot;57&quot;|Ultimo==&quot;58&quot;|Ultimo==&quot;59&quot;|Ultimo==&quot;60&quot;){
+      prize&lt;-Aposta*18
+    }
+  }
+  if(Grupo==&quot;Leao&quot;|Grupo==&quot;leao&quot;|Grupo==&quot;LEAO&quot;){
+    if(Ultimo==&quot;61&quot;|Ultimo==&quot;62&quot;|Ultimo==&quot;63&quot;|Ultimo==&quot;64&quot;){
+      prize&lt;-Aposta*18
+    }
+  }
+  if(Grupo==&quot;Macaco&quot;|Grupo==&quot;macaco&quot;|Grupo==&quot;MACACO&quot;){
+    if(Ultimo==&quot;65&quot;|Ultimo==&quot;66&quot;|Ultimo==&quot;67&quot;|Ultimo==&quot;68&quot;){
+      prize&lt;-Aposta*18
+    }
+  }
+  if(Grupo==&quot;Porco&quot;|Grupo==&quot;porco&quot;|Grupo==&quot;PORCO&quot;){
+    if(Ultimo==&quot;69&quot;|Ultimo==&quot;70&quot;|Ultimo==&quot;71&quot;|Ultimo==&quot;72&quot;){
+      prize&lt;-Aposta*18
+    }
+  }
+  if(Grupo==&quot;Pavao&quot;|Grupo==&quot;pavao&quot;|Grupo==&quot;PAVAO&quot;){
+    if(Ultimo==&quot;73&quot;|Ultimo==&quot;74&quot;|Ultimo==&quot;75&quot;|Ultimo==&quot;76&quot;){
+      prize&lt;-Aposta*18
+    }
+  }
+  if(Grupo==&quot;Peru&quot;|Grupo==&quot;peru&quot;|Grupo==&quot;PERU&quot;){
+    if(Ultimo==&quot;77&quot;|Ultimo==&quot;78&quot;|Ultimo==&quot;79&quot;|Ultimo==&quot;80&quot;){
+      prize&lt;-Aposta*18
+    }
+  }
+  if(Grupo==&quot;Touro&quot;|Grupo==&quot;touro&quot;|Grupo==&quot;TOURO&quot;){
+    if(Ultimo==&quot;81&quot;|Ultimo==&quot;82&quot;|Ultimo==&quot;83&quot;|Ultimo==&quot;84&quot;){
+      prize&lt;-Aposta*18
+    }
+  }
+  if(Grupo==&quot;Tigre&quot;|Grupo==&quot;tigre&quot;|Grupo==&quot;TIGRE&quot;){
+    if(Ultimo==&quot;85&quot;|Ultimo==&quot;86&quot;|Ultimo==&quot;87&quot;|Ultimo==&quot;88&quot;){
+      prize&lt;-Aposta*18
+    }
+  }
+  if(Grupo==&quot;Urso&quot;|Grupo==&quot;urso&quot;|Grupo==&quot;URSO&quot;){
+    if(Ultimo==&quot;89&quot;|Ultimo==&quot;90&quot;|Ultimo==&quot;91&quot;|Ultimo==&quot;92&quot;){
+      prize&lt;-Aposta*18
+    }
+  }
+  if(Grupo==&quot;Veado&quot;|Grupo==&quot;veado&quot;|Grupo==&quot;VEADO&quot;){
+    if(Ultimo==&quot;93&quot;|Ultimo==&quot;94&quot;|Ultimo==&quot;95&quot;|Ultimo==&quot;96&quot;){
+      prize&lt;-Aposta*18
+    }
+  }
+  if(Grupo==&quot;Vaca&quot;|Grupo==&quot;vaca&quot;|Grupo==&quot;VACA&quot;){
+    if(Ultimo==&quot;97&quot;|Ultimo==&quot;98&quot;|Ultimo==&quot;99&quot;|Ultimo==&quot;00&quot;){
+      prize&lt;-Aposta*18
+    }
+  }
+  
+  if(prize!=0){
+    return(prize)
+  } else{
+    return(-Aposta)
+  }
+}
+</code></pre>
+<p>Não são esplendorosos? Vou lhes poupar os detalhes de o que cada coisa faz, e voou partir direto para a explicação de como funcionam e como fazer as suas apostas. Começando pelo primeiro, temos 4 argumentos, que são: Modal, Num, Aposta e Cercar. Modal é referente à modalidade de aposta: Dezena, Centena e Milhar. Aqui, o apostador deve escrever entre aspas a modalidade escolhida: “Dezena”, “Centena” ou “Milhar”. Note que esse argumento é sensível a alterações, mas ainda assim pode receber letras minúsculas.</p>
+<p>O segundo argumento é o Num, que se refere ao número escolhido para a aposta. Caso o apostador tenha escolhido a modalidade de dezena, deverá colocar um número entre 00 e 99. Caso escolha centena um número entre 000 e 999 e no caso do milhar um entre 0000 e 9999.</p>
+<p>O terceiro argumento é Aposta, e se refere ao valor a ser apostado. Por último, o argumento Cercar é do tipo Booleano, ou seja, deve ser colocado se o apostador irá ou não cercar os números sorteados usando TRUE caso deseje cercar ou FALSE se deseja apostar apenas na cabeça.</p>
+<p>Na segunda função, que é para jogos na modalidade de grupo, há apenas dois argumentos: Grupo e Aposta. O primeiro se refere a qual grupo o jogador deseja apostar, devendo escrever entre aspas o grupo escolhido (por exemplo: “Galo” ou “galo”). O segundo se refere ao valor da aposta.</p>
+<p>Vale ressaltar que ambas as funções retornam o valor do prêmio caso o jogador tenha ganhado ou o valor do prejuízo caso tenha perdido. Então, se por exemplo, um jogo seja feito na modalidade dezena, com o valor da aposta de R$20,00 , sem cercar, caso ganhe a função irá retornar o valor 1200, que é o valor da aposta vezes 60. Caso perca a função irá retornar -20, que é o valor do prejuízo (um jogo de 20 reais).</p>
+<p>Com isso em mente, vamos simular alguns jogos (Recomenda-se que se utilize o programa RStudio para rodar esse programa do Jogo do Bicho, além de ter que instalar o pacote <em>stringr</em>):</p>
+<pre class="r"><code>
+#Se quisermos fazer um jogo único, apenas chamamos a função e incluímos os argumentos.
+#Por exemplo, vamos fazer uma aposta de 20 reais, na modalidade dezena, no número 1025, cercando:
+
+Bicho(&quot;dezena&quot;,1025,20,FALSE)
+## [1] -20</code></pre>
+<p>Como o site cria uma nova aposta toda vez que é aberto, não é possível prever qual será o resultado. Se você, caro leitor, deu sorte de o número que apareceu em sua tela seja positivo, isso significa que um dos valores sorteados tinha a dezena 25. Caso o número que apareceu seja negativo, quer dizer que não houve nenhum número sorteado com o valor da dezena 25. Se quiser tentar a sorte novamente, é só recarregar a página. Eventualmente esse número será positivo.</p>
+<p>Mas qual a graça de fazer apenas uma aposta? Vamos fazer 200 dessa vez?</p>
+<pre class="r"><code>
+#Vamos criar uma estrutura de repetição condicional com a função while() para fazermos mais de um jogo de cada vez:
+#(É importante ressaltar que todos os jogos serão iguais, com os mesmos parâmetros: &quot;dezena&quot;,1025,20,TRUE, a única coisa que está sendo alterada de um jogo para o outro são os valores sorteados)
+
+i&lt;-0
+Lucro&lt;-0
+while(i&lt;=200){
+        aposta&lt;-Bicho(&quot;dezena&quot;,1025,20,TRUE)
+        Lucro&lt;-Lucro+aposta
+        i&lt;-i+1
+}
+Lucro
+## [1] -1940</code></pre>
+<p>O valor retornado Lucro é a quantidade total que você terá ganhado/perdido com esses 200 jogos. Como alguns foram vencidos, mas a maioria foi perdida, é provavel que esse valor retornado seja negativo. Se foi positivo, parabéns, a sorte está ao seu lado.</p>
+<p>Vamos aumentar o escopo e realizar mais jogos ainda, dessa vez não cercando a cabeça:</p>
+<pre class="r"><code>
+i&lt;-0
+Lucro2&lt;-0
+while(i&lt;=1000){
+        aposta&lt;-Bicho(&quot;dezena&quot;,1025,20,FALSE)
+        Lucro2&lt;-Lucro2+aposta
+        i&lt;-i+1
+}
+Lucro2
+## [1] -7820</code></pre>
+<p>Dessa vez eu tenho quase certeza que o valor retornado foi negativo. É possível calcular a probabilidade de o valor que aparece ser positivo, e deixaremos isso como tarefa de casa para o leitor ;). Agora, munido de todo esse novo conhecimento sobre probabilidades e com um programa para poder jogar no Bicho sem estar cometendo um crime federal, compartilhem este post para que mais pessoas possam aprender sobre o Jogo do Bicho.</p>
+</div>
+</div>
+</div>
