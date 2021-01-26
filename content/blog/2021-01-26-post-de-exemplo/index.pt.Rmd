@@ -1,0 +1,121 @@
+---
+title: Post de exemplo
+author: Caio Gomes Alves
+date: '2021-01-26'
+slug: []
+categories:
+  - tutoriais
+tags:
+  - blogdown
+  - rmarkdown
+description: ''
+images:
+  - ''
+---
+
+Primeira linha do Post.
+
+Segunda linha.
+
+# Título.
+
+## Subtítulo.
+
+### Subtítulo 2.
+
+## Tema 1:
+
+Blalal-saonfsfoifj.
+
+_itálico_
+
+__negrito__
+
+~~tachado~~
+
+- Item 1;
+- Item 2;
+- Item 3;
+    - Subitem;
+    
+1. Item 1;
+2. Item 2.
+
+$\frac{1}{2}+\frac{1}{3} = \frac{5}{6}$
+
+$\int_a^b e^x dx = e^b - e^a$
+
+$3+3=6$
+
+![Nome da imagem](https://avatars0.githubusercontent.com/u/16266276?s=280&v=4)
+
+![Logo do PET computador](/home/caio/Imagens/LogoPreta.png){width=256px}
+
+https://pet.leg.ufpr.br/
+
+[Site do PET](https://pet.leg.ufpr.br/)
+
+```{r echo=TRUE}
+
+aprov<-data.frame(presi=c(1:14),
+                  maior=c(83,87,77,83,79,66,70,74,71,89,73,90,67,49),
+                  menor=c(48,22,47,56,34,24,36,28,35,29,37,25,40,34),
+                  media=c(63,45.4,65,70.1,55.1,49.1,47.2,45.5,52.8,60.9,55.1,49.4,47.9,41))
+
+```
+
+
+```{r echo=FALSE}
+
+aprov<-data.frame(presi=c(1:14),
+                  maior=c(83,87,77,83,79,66,70,74,71,89,73,90,67,49),
+                  menor=c(48,22,47,56,34,24,36,28,35,29,37,25,40,34),
+                  media=c(63,45.4,65,70.1,55.1,49.1,47.2,45.5,52.8,60.9,55.1,49.4,47.9,41))
+
+```
+
+
+```{r echo=FALSE}
+
+nomes_presidentes<-c("Roosevelt","Truman","Eisenhower","Kennedy","Johnson","Nixon","Ford","Carter","Reagan","Bush1","Clinton","Bush2","Obama","Trump")
+
+plot(c(1:14),aprov$menor,type="b",ylim=c(0,100),main="Aprovação dos presidentes dos EUA de 1937 a 2020",xlab="Presidentes",ylab="Índice de Aprovação (%)",lwd=3,pch=6,axes=F,col="red")
+lines(1:14,aprov$media,col="black",lwd=3,pch=20,type="b")
+lines(1:14,aprov$maior,col="green",lwd=3,pch=2,type="b")
+axis(side = 1,at=c(1:14),labels = nomes_presidentes)
+axis(side = 2,at=seq(0,100,10))
+abline(h=seq(0,100,10),lwd=0.4,col="grey")
+text(aprov$maior,labels=aprov$maior,pos=3,cex=0.8)
+text(aprov$media,labels=aprov$media,pos=3,cex=0.8)
+text(aprov$menor,labels=aprov$menor,pos=1,cex=0.8)
+legend("bottomright",legend=c("Maior registro","Média","Menor registro"),col=c("green","black","red"),pch=c(2,20,6),cex=0.7)
+
+
+```
+
+```{python echo=TRUE}
+
+i=0
+while i<10:
+    print("Número",i)
+    i=i+1
+
+```
+
+
+```{r echo=TRUE,warning=FALSE,message=FALSE,collapse=TRUE}
+
+library(gapminder)
+library(dplyr)
+library(ggplot2)
+
+data <- gapminder %>% filter(year=="2007") %>% dplyr::select(-year)
+data %>%
+    arrange(desc(pop)) %>%
+    mutate(country = factor(country, country)) %>%
+    ggplot(aes(x=gdpPercap, y=lifeExp, size = pop,color=continent)) +
+    geom_point(alpha=0.5) +
+    scale_size(range = c(.1, 24), name="Population (M)")
+
+```
+
