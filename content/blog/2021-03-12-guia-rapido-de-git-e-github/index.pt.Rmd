@@ -112,7 +112,7 @@ Respectivamente, os códigos mostrados acima servem para:
 - Criar uma branch(geralmente o nome da branch se da com o nome da funcionalidade que vai fazer);
 - Volta para a master;
 - Deleta a branch;
-- Upa a branch com as alterações criadas no repositório remoto(Se foi seguido os passos anteriores GitHub).
+- Subir a branch com as alterações criadas no repositório remoto(Se foi seguido os passos anteriores GitHub).
 
 Com as alterações feitas e com tudo pronto, podemos fazer o merge(integrar o ramo criado e suas alterações com a master) do ramo para a master
 
