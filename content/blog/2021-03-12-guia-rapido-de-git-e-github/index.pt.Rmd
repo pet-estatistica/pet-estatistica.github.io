@@ -1,0 +1,125 @@
+---
+title: Guia Rápido de Git e GitHub
+author: Davi e Jayme
+date: '2021-03-12'
+slug: guia-rapido-de-git-e-github
+categories:
+  - tutoriais
+tags:
+  - blogdown
+  - estatistica
+description: ''
+images:
+  - 'img/git_post/octocat.jpg'
+---
+### O que é Git?
+
+ Git é um sistema de controle de versão que auxilia hoje a maioria das empresas que utilizam de desenvolvimento de software. Com ele é possivel entender todo o histórico de desenvolvimento dos projetos nele inseridos, analisar como foram feitos e se necessário voltar a eles a qualquer momento.
+ 
+ ![](blog/2021-03-12-guia-rapido-de-git-e-github_files/git.png)
+ 
+### O que é o GitHub?
+
+ O Github é um serviço online, hoje distribuido pela Microsoft que hospeda repositórios Git, através dele temos um local onde armazenar todos os nossos projetos e consequentemente, os commits e ramos advindos deste projeto.
+ 
+![](blog/2021-03-12-guia-rapido-de-git-e-github_files/github.png)
+ 
+### Configurando o Git na sua máquina pessoal
+
+Assim que instalado, (**[link para Download](https://git-scm.com/downloads)**) é necessário digitar alguns comandos no terminal do seu computador, para deixar o Git configurado.
+
+São eles:
+
+```{bash, eval=FALSE}
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
+```
+
+Esses comandos são necessários porque todo commit que você fizer, utilizará dessas informações.
+
+### Criando um novo repositório Git
+
+- No seu computador, crie uma pasta onde você deseja utilizar o git como controle de versão;
+- Navegue nessa pasta pelo seu terminal (ou pelo terminal do git no caso de Windows);
+- Execute o comando **git init**
+
+Exemplo:
+
+```{bash eval = FALSE}
+mkdir pasta_teste
+cd pasta_teste
+git init
+```
+
+### Passando o seu repositório local para o GitHub
+
+Após ter o repositório criado e ter o git inicializado nele, temos alguns simples processos para executar, são eles:
+
+- Ver se o git está funcionando no seu repositório local;
+- Adicionar os arquivos que queremos salvar no **[GitHub](https://github.com)** na pasta;
+- Adicionar as alterações do repositório ao Git;
+- Commitar as alterações para salvá-las no Git;
+- Passar o repositório local para o GitHub, tornando-o um repositório remoto;
+- E finalmente passar todos os arquivos para o GitHub.
+
+```{bash eval=FALSE}
+git status
+git add *
+git commit -m "Primeiro Commit"
+git remote add origin https://github.com/exemplo.git
+git push -u origin master
+```
+
+### Criando um repositório e clonando do GitHub para sua Máquina Local
+
+Esse processo faz com que você tenha um repositório remoto, hospedado no GitHub no seu computador, sendo também a maneira mais fácil de criar um repositório remoto que será hospedado no GitHub e gerenciado na sua máquina local.
+
+### Criando novo repositório
+
+![](blog/2021-03-12-guia-rapido-de-git-e-github_files/criar _novo_repo_1.png)
+
+### Definindo o nome do repositório
+
+![](blog/2021-03-12-guia-rapido-de-git-e-github_files/definir_nome_repo_2.png)
+
+### Copiando link do repositório
+
+![](blog/2021-03-12-guia-rapido-de-git-e-github_files/copiar_link_repo_3.png)
+
+### Criando um repositório e clonando do GitHub para sua Máquina Local
+
+Feito esses processos, basta entrar no terminal e clonar o repositório através do link copiado e começar a utilizar esse repositório
+
+```{bash eval=FALSE}
+mkdir repositorio_exemplo_clonado
+cd repositorio_exemplo_clonado
+git clone https://github.com/exemplo-clone.git
+```
+
+### Trabalhando com Branches(ramos)
+
+As branches assim que criadas são identicas ao ramo principal, que por sua vez nele contém todo o conteúdo funcional da aplicação. O intuito de usar branches é pelo fato de que nelas você pode alterar tudo que for necessário no código sem necessariamente alterar o produto principal, te dando tranquilidade para fazer as mudanças necessárias sem quebrar nada, então, assim que as mudanças forem concluidas e que forem revisadas para que esteja tudo certo, você pode unir essa branch criada ao ramo principal e definitivamente tudo que foi alterado estará funcionando em produção. 
+
+```{bash eval=FALSE}
+git checkout -b funcionalidade
+git checkout master
+git branch -d funcionalidade
+git push origin funcionalidade
+```
+
+Respectivamente, os códigos mostrados acima servem para:
+
+- Criar uma branch(geralmente o nome da branch se da com o nome da funcionalidade que vai fazer);
+- Volta para a master;
+- Deleta a branch;
+- Upa a branch com as alterações criadas no repositório remoto(Se foi seguido os passos anteriores GitHub).
+
+Com as alterações feitas e com tudo pronto, podemos fazer o merge(integrar o ramo criado e suas alterações com a master) do ramo para a master
+
+```{bash eval=FALSE}
+git checkout master
+git merge funcionalidade
+```
+
+- Ir para o ramo da master;
+- Mergiar a funcionalidade com a master.
