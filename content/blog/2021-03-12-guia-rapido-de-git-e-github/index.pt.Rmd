@@ -16,13 +16,13 @@ images:
 
  Git é um sistema de controle de versão que auxilia hoje a maioria das empresas que utilizam de desenvolvimento de software. Com ele é possivel entender todo o histórico de desenvolvimento dos projetos nele inseridos, analisar como foram feitos e se necessário voltar a eles a qualquer momento.
  
- ![](blog/2021-03-12-guia-rapido-de-git-e-github_files/git.png)
+ ![](/blog/2021-03-12-guia-rapido-de-git-e-github_files/git.png)
  
 ### O que é o GitHub?
 
  O Github é um serviço online, hoje distribuido pela Microsoft que hospeda repositórios Git, através dele temos um local onde armazenar todos os nossos projetos e consequentemente, os commits e ramos advindos deste projeto.
  
-![](blog/2021-03-12-guia-rapido-de-git-e-github_files/github.png)
+![](/blog/2021-03-12-guia-rapido-de-git-e-github_files/github.png)
  
 ### Configurando o Git na sua máquina pessoal
 
@@ -76,15 +76,15 @@ Esse processo faz com que você tenha um repositório remoto, hospedado no GitHu
 
 ### Criando novo repositório
 
-![](blog/2021-03-12-guia-rapido-de-git-e-github_files/criar _novo_repo_1.png)
+![](/blog/2021-03-12-guia-rapido-de-git-e-github_files/criar _novo_repo_1.png)
 
 ### Definindo o nome do repositório
 
-![](blog/2021-03-12-guia-rapido-de-git-e-github_files/definir_nome_repo_2.png)
+![](/blog/2021-03-12-guia-rapido-de-git-e-github_files/definir_nome_repo_2.png)
 
 ### Copiando link do repositório
 
-![](blog/2021-03-12-guia-rapido-de-git-e-github_files/copiar_link_repo_3.png)
+![](/blog/2021-03-12-guia-rapido-de-git-e-github_files/copiar_link_repo_3.png)
 
 ### Criando um repositório e clonando do GitHub para sua Máquina Local
 
