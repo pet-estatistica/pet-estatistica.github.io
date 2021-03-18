@@ -2,7 +2,7 @@
 title: Análise da COVID-19 em 3 cidades do estado do Paraná
 author: Marcelo e Davi
 date: '2020-11-18'
-slug: análise-da-covid-19-em-3-cidades-do-estado-do-paraná
+slug: analise-da-covid-19-em-3-cidades-do-estado-do-parana
 categories:
   - covid19
 tags:
