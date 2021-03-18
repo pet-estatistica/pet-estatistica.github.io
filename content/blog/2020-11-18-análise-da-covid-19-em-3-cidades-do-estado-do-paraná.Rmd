@@ -12,12 +12,16 @@ description: ''
 images:
   - 'img/covid/post_2.png'
 ---
+```{r echo=FALSE,message=FALSE,warning=FALSE}
+library(plotly)
+p <- plotly(username = "Marcelojr.jn", key = "vcsabe098")
+```
 
 ```{r echo=FALSE,message=FALSE,warning=FALSE}
 library(datacovidbr)
 library(dplyr)
 library(ggplot2)
-library(plotly)
+
 
 df <- brasilio()
 
@@ -87,7 +91,7 @@ graph.obitos <- df.cidades.analisadas %>%
 ggplotly(graph.obitos, tooltip = "text")
 ```
 
-  Curitiba se destaca atingindo a marca de 1388 óbitos, devendo ressaltar que o tamanho da população da cidade de Curitiba é superior aos demais municípios e, portanto o número de casos confirmados e consequentemente de óbitos será maior. Devido a isso podemos calcular até mesmo a taxa de mortalidade dessa doença, que tem como fórmula para esse cálculo $$\frac{\sum_{i=1}^{n}obitos}{\sum_{j=1}^{n} desfecho}$$ no qual a conotação "desfecho" é o número de recuperados + óbitos. Sendo assim tivemos uma baixa mortalidade para essa doença, no entanto o que preocupa as equipes da área da saúde principalmente é seu grande poder de proliferação, podendo deixar pessoas com grandes [sequelas no pós alta](http://saudedebate.com.br/noticias/sequelas-da-covid-19-a-vida-nao-voltou-ao-normal-apos-a-alta-hospitalar).
+  Curitiba se destaca atingindo a marca de 1388 óbitos, devendo ressaltar que o tamanho da população da cidade de Curitiba é superior aos demais municípios e, portanto o número de casos confirmados e consequentemente de óbitos será maior. Devido a isso podemos calcular até mesmo a taxa de mortalidade dessa doença, que tem como fórmula para esse cálculo $\frac{\sum_{i=1}^{n}obitos}{\sum_{j=1}^{n} desfecho}$ no qual a conotação "desfecho" é o número de recuperados + óbitos. Sendo assim tivemos uma baixa mortalidade para essa doença, no entanto o que preocupa as equipes da área da saúde principalmente é seu grande poder de proliferação, podendo deixar pessoas com grandes [sequelas no pós alta](http://saudedebate.com.br/noticias/sequelas-da-covid-19-a-vida-nao-voltou-ao-normal-apos-a-alta-hospitalar).
 
 ## Óbitos por 100 mil habitantes com casos confirmados
 
