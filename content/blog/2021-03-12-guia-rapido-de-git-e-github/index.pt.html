@@ -18,24 +18,25 @@ images:
 
 <div id="o-que-é-git" class="section level3">
 <h3>O que é Git?</h3>
-<p>Git é um sistema de controle de versão que auxilia hoje a maioria das empresas que utilizam de desenvolvimento de software. Com ele é possivel entender todo o histórico de desenvolvimento dos projetos nele inseridos, analisar como foram feitos e se necessário voltar a eles a qualquer momento.</p>
+<p>Git é um sistema de controle de versão que auxilia hoje a maioria das empresas que utilizam de desenvolvimento de software. Com ele é possivel entender todo o histórico de avanço dos projetos nele inseridos, analisar como foram feitos e se necessário voltar a eles a qualquer momento.</p>
 <p><img src="/blog/2021-03-12-guia-rapido-de-git-e-github_files/git.png" /></p>
 </div>
 <div id="o-que-é-o-github" class="section level3">
 <h3>O que é o GitHub?</h3>
-<p>O Github é um serviço online, hoje distribuido pela Microsoft que hospeda repositórios Git, através dele temos um local onde armazenar todos os nossos projetos e consequentemente, os commits e ramos advindos deste projeto.</p>
+<p>O Github é um serviço online, hoje distribuido pela Microsoft que hospeda repositórios Git, através dele temos um local onde armazenar todos os nossos projetos e consequentemente, os commits (comando que salva as alterações feitas) e ramos advindos deste projeto.</p>
 <p><img src="/blog/2021-03-12-guia-rapido-de-git-e-github_files/github.png" /></p>
 </div>
 <div id="configurando-o-git-na-sua-máquina-pessoal" class="section level3">
 <h3>Configurando o Git na sua máquina pessoal</h3>
 <p>Assim que instalado, (<strong><a href="https://git-scm.com/downloads">link para Download</a></strong>) é necessário digitar alguns comandos no terminal do seu computador, para deixar o Git configurado.</p>
 <p>São eles:</p>
-<pre class="bash"><code>git config --global user.name &quot;John Doe&quot;
-git config --global user.email johndoe@example.com</code></pre>
+<pre class="bash"><code>git config --global user.name &quot;João da Silva&quot;
+git config --global user.email joao.da.silva@example.com</code></pre>
 <p>Esses comandos são necessários porque todo commit que você fizer, utilizará dessas informações.</p>
 </div>
 <div id="criando-um-novo-repositório-git" class="section level3">
 <h3>Criando um novo repositório Git</h3>
+<p><em>Em caso de utilização de Windows, fazer o uso do Git Bash.</em></p>
 <ul>
 <li>No seu computador, crie uma pasta onde você deseja utilizar o git como controle de versão;</li>
 <li>Navegue nessa pasta pelo seu terminal (ou pelo terminal do git no caso de Windows);</li>
@@ -53,7 +54,7 @@ git init</code></pre>
 <li>Ver se o git está funcionando no seu repositório local;</li>
 <li>Adicionar os arquivos que queremos salvar no <strong><a href="https://github.com">GitHub</a></strong> na pasta;</li>
 <li>Adicionar as alterações do repositório ao Git;</li>
-<li>Commitar as alterações para salvá-las no Git;</li>
+<li>“Commitar” as alterações para salvá-las no Git;</li>
 <li>Passar o repositório local para o GitHub, tornando-o um repositório remoto;</li>
 <li>E finalmente passar todos os arquivos para o GitHub.</li>
 </ul>
@@ -65,7 +66,7 @@ git push -u origin master</code></pre>
 </div>
 <div id="criando-um-repositório-e-clonando-do-github-para-sua-máquina-local" class="section level3">
 <h3>Criando um repositório e clonando do GitHub para sua Máquina Local</h3>
-<p>Esse processo faz com que você tenha um repositório remoto, hospedado no GitHub no seu computador, sendo também a maneira mais fácil de criar um repositório remoto que será hospedado no GitHub e gerenciado na sua máquina local.</p>
+<p>Esse processo, faz com que você tenha um repositório remoto hospedado no GitHub, em seu computador, sendo também a maneira mais fácil de criar um repositório remoto que estará no GitHub e gerenciado na sua máquina local.</p>
 </div>
 <div id="criando-novo-repositório" class="section level3">
 <h3>Criando novo repositório</h3>
@@ -88,7 +89,7 @@ git clone https://github.com/exemplo-clone.git</code></pre>
 </div>
 <div id="trabalhando-com-branchesramos" class="section level3">
 <h3>Trabalhando com Branches(ramos)</h3>
-<p>As branches assim que criadas são identicas ao ramo principal, que por sua vez nele contém todo o conteúdo funcional da aplicação. O intuito de usar branches é pelo fato de que nelas você pode alterar tudo que for necessário no código sem necessariamente alterar o produto principal, te dando tranquilidade para fazer as mudanças necessárias sem quebrar nada, então, assim que as mudanças forem concluidas e que forem revisadas para que esteja tudo certo, você pode unir essa branch criada ao ramo principal e definitivamente tudo que foi alterado estará funcionando em produção.</p>
+<p>As branches assim que criadas são identicas ao ramo principal, que por sua vez nele contém todo o conteúdo funcional da aplicação. O intuito de usar branches é pelo fato de que nelas você pode alterar tudo que for necessário no código sem necessariamente alterar o produto principal, dando tranquilidade para fazer as mudanças necessárias sem estragar nada que já esteja em produção, então, assim que as mudanças forem concluidas e que forem revisadas para que esteja tudo certo, você pode unir essa branch criada ao ramo principal e definitivamente tudo que foi alterado estará funcionando em produção.</p>
 <pre class="bash"><code>git checkout -b funcionalidade
 git checkout master
 git branch -d funcionalidade
