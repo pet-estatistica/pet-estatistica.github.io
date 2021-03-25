@@ -62,7 +62,7 @@ git init</code></pre>
 git add *
 git commit -m &quot;Primeiro Commit&quot;
 git remote add origin https://github.com/exemplo.git
-git push -u origin master</code></pre>
+git push -u origin main</code></pre>
 </div>
 <div id="criando-um-repositório-e-clonando-do-github-para-sua-máquina-local" class="section level3">
 <h3>Criando um repositório e clonando do GitHub para sua Máquina Local</h3>
@@ -91,21 +91,21 @@ git clone https://github.com/exemplo-clone.git</code></pre>
 <h3>Trabalhando com Branches(ramos)</h3>
 <p>As branches assim que criadas são identicas ao ramo principal, que por sua vez nele contém todo o conteúdo funcional da aplicação. O intuito de usar branches é pelo fato de que nelas você pode alterar tudo que for necessário no código sem necessariamente alterar o produto principal, dando tranquilidade para fazer as mudanças necessárias sem estragar nada que já esteja em produção, então, assim que as mudanças forem concluidas e que forem revisadas para que esteja tudo certo, você pode unir essa branch criada ao ramo principal e definitivamente tudo que foi alterado estará funcionando em produção.</p>
 <pre class="bash"><code>git checkout -b funcionalidade
-git checkout master
+git checkout main
 git branch -d funcionalidade
 git push origin funcionalidade</code></pre>
 <p>Respectivamente, os códigos mostrados acima servem para:</p>
 <ul>
 <li>Criar uma branch(geralmente o nome da branch se da com o nome da funcionalidade que vai fazer);</li>
-<li>Volta para a master;</li>
+<li>Volta para a main;</li>
 <li>Deleta a branch;</li>
 <li>Subir a branch com as alterações criadas no repositório remoto(Se foi seguido os passos anteriores GitHub).</li>
 </ul>
-<p>Com as alterações feitas e com tudo pronto, podemos fazer o merge(integrar o ramo criado e suas alterações com a master) do ramo para a master</p>
-<pre class="bash"><code>git checkout master
+<p>Com as alterações feitas e com tudo pronto, podemos fazer o merge(integrar o ramo criado e suas alterações com a main) do ramo para a main</p>
+<pre class="bash"><code>git checkout main
 git merge funcionalidade</code></pre>
 <ul>
-<li>Ir para o ramo da master;</li>
-<li>Mergiar a funcionalidade com a master.</li>
+<li>Ir para o ramo da main;</li>
+<li>Mergiar a funcionalidade com a main.</li>
 </ul>
 </div>
