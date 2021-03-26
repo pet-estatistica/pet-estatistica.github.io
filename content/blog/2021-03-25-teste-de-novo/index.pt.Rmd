@@ -1,0 +1,28 @@
+---
+title: Teste de novo
+author: Fernando Mayer
+date: '2021-03-25'
+slug: teste-de-novo
+categories:
+  - tutoriais
+tags:
+  - azar
+description: ''
+images:
+  - ''
+---
+
+Alguma coisa aqui para fazer.
+
+```{r}
+set.seed(1)
+x <- rnorm(100)
+y <- runif(100)
+plot(x, y)
+```
+
+E mais algumas coisas.
+
+Uma imagem externa
+
+![](images/Screenshot from 2020-11-26 20-42-47.png)
