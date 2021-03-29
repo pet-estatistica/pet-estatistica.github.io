@@ -2,7 +2,7 @@
 title: 'A Probabilidade nos Jogos de Azar: O Jogo do Bicho'
 author: Caio Gomes Alves
 date: '2021-03-08'
-slug: []
+slug: a-probabilidade-nos-jogos-de-azar-o-jogo-do-bicho
 categories:
   - prob
   - probabilidade
@@ -12,12 +12,10 @@ tags:
   - estatistica
   - jogos
   - probabilidade
-description: ''
+description: 'Continuando a série de posts sobre jogos de azar, vamos dar uma olhada na probabilidade por trás de um dos jogos mais tradicionais das terras Tupiniquins: O Jogo do Bicho.'
 images:
-  - ''
+  - 'img/caio_post/jogo.jpg'
 ---
-
-Continuando a série de posts sobre jogos de azar, vamos dar uma olhada na probabilidade por trás de um dos jogos mais tradicionais das terras Tupiniquins: O Jogo do Bicho. 
 
 # Uma breve história do Jogo do Bicho:
 
