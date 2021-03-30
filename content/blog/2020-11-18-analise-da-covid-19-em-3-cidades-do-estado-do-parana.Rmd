@@ -12,7 +12,6 @@ description: ''
 images:
   - 'img/covid/post_2.png'
 ---
-
 ```{r echo=FALSE,message=FALSE,warning=FALSE}
 library(plotly)
 p <- plotly(username = "Marcelojr.jn", key = "vcsabe098")
