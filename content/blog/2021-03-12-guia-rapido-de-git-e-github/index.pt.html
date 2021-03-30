@@ -1,0 +1,111 @@
+---
+title: Guia Rápido de Git e GitHub
+author: Davi e Jayme
+date: '2021-03-12'
+slug: guia-rapido-de-git-e-github
+categories:
+  - tutoriais
+tags:
+  - blogdown
+  - estatistica
+description: ''
+images:
+  - 'img/git_post/octocat.jpg'
+---
+
+<script src="{{< blogdown/postref >}}index.pt_files/header-attrs/header-attrs.js"></script>
+
+
+<div id="o-que-é-git" class="section level3">
+<h3>O que é Git?</h3>
+<p>Git é um sistema de controle de versão que auxilia hoje a maioria das empresas que utilizam de desenvolvimento de software. Com ele é possivel entender todo o histórico de avanço dos projetos nele inseridos, analisar como foram feitos e se necessário voltar a eles a qualquer momento.</p>
+<p><img src="/blog/2021-03-12-guia-rapido-de-git-e-github_files/git.png" /></p>
+</div>
+<div id="o-que-é-o-github" class="section level3">
+<h3>O que é o GitHub?</h3>
+<p>O Github é um serviço online, hoje distribuido pela Microsoft que hospeda repositórios Git, através dele temos um local onde armazenar todos os nossos projetos e consequentemente, os commits (comando que salva as alterações feitas) e ramos advindos deste projeto.</p>
+<p><img src="/blog/2021-03-12-guia-rapido-de-git-e-github_files/github.png" /></p>
+</div>
+<div id="configurando-o-git-na-sua-máquina-pessoal" class="section level3">
+<h3>Configurando o Git na sua máquina pessoal</h3>
+<p>Assim que instalado, (<strong><a href="https://git-scm.com/downloads">link para Download</a></strong>) é necessário digitar alguns comandos no terminal do seu computador, para deixar o Git configurado.</p>
+<p>São eles:</p>
+<pre class="bash"><code>git config --global user.name &quot;João da Silva&quot;
+git config --global user.email joao.da.silva@example.com</code></pre>
+<p>Esses comandos são necessários porque todo commit que você fizer, utilizará dessas informações.</p>
+</div>
+<div id="criando-um-novo-repositório-git" class="section level3">
+<h3>Criando um novo repositório Git</h3>
+<p><em>Em caso de utilização de Windows, fazer o uso do Git Bash.</em></p>
+<ul>
+<li>No seu computador, crie uma pasta onde você deseja utilizar o git como controle de versão;</li>
+<li>Navegue nessa pasta pelo seu terminal (ou pelo terminal do git no caso de Windows);</li>
+<li>Execute o comando <strong>git init</strong></li>
+</ul>
+<p>Exemplo:</p>
+<pre class="bash"><code>mkdir pasta_teste
+cd pasta_teste
+git init</code></pre>
+</div>
+<div id="passando-o-seu-repositório-local-para-o-github" class="section level3">
+<h3>Passando o seu repositório local para o GitHub</h3>
+<p>Após ter o repositório criado e ter o git inicializado nele, temos alguns simples processos para executar, são eles:</p>
+<ul>
+<li>Ver se o git está funcionando no seu repositório local;</li>
+<li>Adicionar os arquivos que queremos salvar no <strong><a href="https://github.com">GitHub</a></strong> na pasta;</li>
+<li>Adicionar as alterações do repositório ao Git;</li>
+<li>“Commitar” as alterações para salvá-las no Git;</li>
+<li>Passar o repositório local para o GitHub, tornando-o um repositório remoto;</li>
+<li>E finalmente passar todos os arquivos para o GitHub.</li>
+</ul>
+<pre class="bash"><code>git status
+git add *
+git commit -m &quot;Primeiro Commit&quot;
+git remote add origin https://github.com/exemplo.git
+git push -u origin main</code></pre>
+</div>
+<div id="criando-um-repositório-e-clonando-do-github-para-sua-máquina-local" class="section level3">
+<h3>Criando um repositório e clonando do GitHub para sua Máquina Local</h3>
+<p>Esse processo, faz com que você tenha um repositório remoto hospedado no GitHub, em seu computador, sendo também a maneira mais fácil de criar um repositório remoto que estará no GitHub e gerenciado na sua máquina local.</p>
+</div>
+<div id="criando-novo-repositório" class="section level3">
+<h3>Criando novo repositório</h3>
+<p><img src="/blog/2021-03-12-guia-rapido-de-git-e-github_files/criar%20_novo_repo_1.png" /></p>
+</div>
+<div id="definindo-o-nome-do-repositório" class="section level3">
+<h3>Definindo o nome do repositório</h3>
+<p><img src="/blog/2021-03-12-guia-rapido-de-git-e-github_files/definir_nome_repo_2.png" /></p>
+</div>
+<div id="copiando-link-do-repositório" class="section level3">
+<h3>Copiando link do repositório</h3>
+<p><img src="/blog/2021-03-12-guia-rapido-de-git-e-github_files/copiar_link_repo_3.png" /></p>
+</div>
+<div id="criando-um-repositório-e-clonando-do-github-para-sua-máquina-local-1" class="section level3">
+<h3>Criando um repositório e clonando do GitHub para sua Máquina Local</h3>
+<p>Feito esses processos, basta entrar no terminal e clonar o repositório através do link copiado e começar a utilizar esse repositório</p>
+<pre class="bash"><code>mkdir repositorio_exemplo_clonado
+cd repositorio_exemplo_clonado
+git clone https://github.com/exemplo-clone.git</code></pre>
+</div>
+<div id="trabalhando-com-branchesramos" class="section level3">
+<h3>Trabalhando com Branches(ramos)</h3>
+<p>As branches assim que criadas são identicas ao ramo principal, que por sua vez nele contém todo o conteúdo funcional da aplicação. O intuito de usar branches é pelo fato de que nelas você pode alterar tudo que for necessário no código sem necessariamente alterar o produto principal, dando tranquilidade para fazer as mudanças necessárias sem estragar nada que já esteja em produção, então, assim que as mudanças forem concluidas e que forem revisadas para que esteja tudo certo, você pode unir essa branch criada ao ramo principal e definitivamente tudo que foi alterado estará funcionando em produção.</p>
+<pre class="bash"><code>git checkout -b funcionalidade
+git checkout main
+git branch -d funcionalidade
+git push origin funcionalidade</code></pre>
+<p>Respectivamente, os códigos mostrados acima servem para:</p>
+<ul>
+<li>Criar uma branch(geralmente o nome da branch se da com o nome da funcionalidade que vai fazer);</li>
+<li>Volta para a main;</li>
+<li>Deleta a branch;</li>
+<li>Subir a branch com as alterações criadas no repositório remoto(Se foi seguido os passos anteriores GitHub).</li>
+</ul>
+<p>Com as alterações feitas e com tudo pronto, podemos fazer o merge(integrar o ramo criado e suas alterações com a main) do ramo para a main</p>
+<pre class="bash"><code>git checkout main
+git merge funcionalidade</code></pre>
+<ul>
+<li>Ir para o ramo da main;</li>
+<li>Mergiar a funcionalidade com a main.</li>
+</ul>
+</div>
