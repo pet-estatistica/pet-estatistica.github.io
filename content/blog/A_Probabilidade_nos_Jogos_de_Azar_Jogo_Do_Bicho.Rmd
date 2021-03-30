@@ -486,6 +486,12 @@ Como o site cria uma nova aposta toda vez que é aberto, não é possível preve
 
 Mas qual a graça de fazer apenas uma aposta? Vamos fazer 200 dessa vez?
 
+
+```{r, echo=FALSE}
+set.seed(1)
+```
+
+
 ```{r echo=TRUE,warning=FALSE,message=FALSE,collapse=TRUE}
 
 #Vamos criar uma estrutura de repetição condicional com a função while() para fazermos mais de um jogo de cada vez:
