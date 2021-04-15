@@ -1,5 +1,5 @@
 ---
-title: Como obter a fronteira eficiente usando o R
+title: Como obter a fronteira eficiente usando R
 author: Geisyane Karina Gonzaga Kath
 date: '2021-04-08'
 slug: []
@@ -18,7 +18,7 @@ images:
 ---
 ### O QUE É FRONTEIRA EFICIENTE
 
-Uma carteira de ativos é dada por um conjunto de ativos (ou ainda por um único ativo) cuja soma da proporção a ser investida em cada ativo é 1. Assim, é possível compreender a definição de fronteira eficiente que foi utilizada por Markowitz: dado um conjunto de ativos, há inúmeras possibilidades de combinações dos mesmos formando carteiras, por isso, para representá-las em um diagrama de forma eficiente e de fácil visualização, basta considerar que se duas carteiras possuem o mesmo risco e uma delas tem o maior retorno, a de menor retorno é desprezada. Do mesmo modo, se duas carteiras possuem o mesmo retorno esperado e uma delas possui o menor risco, esta será a escolhida. Ou seja, a fronteira eficiente é formada apenas pelas carteiras que seriam de interesse de investidores.
+Uma carteira de investimentos é dada por um conjunto de ativos (ou ainda por um único ativo) cuja soma da proporção a ser investida em cada componente é 1. Assim, é possível compreender a definição de fronteira eficiente que foi utilizada por Markowitz: dado um conjunto de ativos, há inúmeras possibilidades de combinações dos mesmos formando carteiras, por isso, para representá-las em um diagrama de forma eficiente e de fácil visualização, basta considerar que se duas carteiras possuem o mesmo risco e uma delas tem o maior retorno, a de menor retorno é desprezada. Do mesmo modo, se duas carteiras possuem o mesmo retorno esperado e uma delas possui o menor risco, esta será a escolhida. Ou seja, a fronteira eficiente é formada apenas pelas carteiras que seriam de interesse de investidores.
 
 
 No livro Moderna Teoria de Carteiras e Análise de Investimentos (2012), capítulo 5, os autores utilizam a imagem a seguir para representar a infinidade de carteiras possíveis.
