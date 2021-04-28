@@ -11,7 +11,7 @@ tags:
   - Benford
 description: ''
 images:
-  - ''
+  - 'img/benford_post/imagem-principal-benford.jpeg'
 ---
 Imagine a sequência de potências de 2, agora visualize apenas o primeiro dígito de cada número, por exemplo: em 16, considere apenas o 1, em 32, apenas o 3 e assim por diante. Em qual proporção cada dígito aparece? É de se imaginar, intuitivamente, que siga uma distribuição uniforme discreta, com proporção 1/9, no entanto não é isso que ocorre.
 
@@ -20,8 +20,9 @@ d1 <- log10(1+(1/1))
 d6 <- log10(1+(1/6))
 ```
 
-
 Em 1881, o astrônomo e matemático, Simon Newcomb, fez um questionamento parecido com este, só que com logaritmos. O astrônomo percebeu que os livros de logaritmos, de uma biblioteca pública, tinham as primeiras páginas mais “gastas” que as últimas, o que indicava que eram mais utilizadas. Intrigado com o fato, decidiu investigar mais e descobriu que em amostras aleatórios de dados reais, os números de 1 a 9 não ocupam o primeiro dígito seguindo a proporção mais intuitiva, mas que a probabilidade de um número d ser o primeiro dígito é igual a $\log_{10} (1+\frac{1}{d})$. Assim sendo, a probabilidade do primeiro dígito ser o número 1 é de `r d1` e de ser o número 6 é de `r d6`. O que pode ser percebido no nosso exercício inicial:
+
+![](images/distribuicao-do-primeiro-digito-da-potencia-de-2.png)
 
 Neste gráfico as barras indicam a frequência que cada número ocupa o primeiro dígito e os pontos, ligados por linhas, a frequência esperada pela lei de Benford. Por se tratar de uma amostra pequena não temos a sobreposição perfeita, mas se aumentarmos a amostra a sobreposição ficará melhor.
 
@@ -32,6 +33,11 @@ Cinquenta e sete anos mais tarde, o físico Frank Benford, chegou às mesmas con
 A lei de Benford é utilizada principalmente para a detecção de possíveis fraudes, sua utilização em auditorias fiscais é muito famosa, mas não para por aí, outros exemplos são a utilização para verificar a autenticidade de imagens e vídeos e para descobrir possíveis bots nas redes sociais. Além disso, a lei também pode ser aplicada em músicas, esportes, tamanhos de populações, sequências numéricas (como a sequência de Fibonacci), estatísticas de crimes, taxas de câncer, tamanhos de vulcões, distâncias entre a Terra e todas as galáxias já medidas, entre muitas outras. 
   
 Para melhor ilustrar, vamos visualizar a distribuição da população por município na Região Sul do Brasil e no Brasil em 2007:
+
+![](images/distribuicao-do-primeiro-digito-no-numero-de-habitantes-por-municipio-na-regiao-sul.png)
+
+![](images/distribucao-do-primeiro-digito-do-numero-de-habitantes-por-municipio-no-brasil.png)
+
 Um bom tutorial para a criação de gráficos como os desse post, ultilizando a Lei de Benford, pode ser encontrado nesse [site](https://jtemporal.com/benford-law/), o que além de elucidativo é muito divertido. 
 
 ### Referências
