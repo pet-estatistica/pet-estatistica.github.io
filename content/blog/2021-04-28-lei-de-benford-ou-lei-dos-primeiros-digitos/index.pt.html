@@ -19,8 +19,8 @@ images:
 
 <p>Imagine a sequência de potências de 2, agora visualize apenas o primeiro dígito de cada número, por exemplo: em 16, considere apenas o 1, em 32, apenas o 3 e assim por diante. Em qual proporção cada dígito aparece? É de se imaginar, intuitivamente, que siga uma distribuição uniforme discreta, com proporção $, no entanto não é isso que ocorre.</p>
 <p>Em 1881, o astrônomo e matemático, Simon Newcomb, fez um questionamento parecido com este, só que com logaritmos. O astrônomo percebeu que os livros de logaritmos, de uma biblioteca pública, tinham as primeiras páginas mais “gastas” que as últimas, o que indicava que eram mais utilizadas. Intrigado com o fato, decidiu investigar mais e descobriu que em amostras aleatórios de dados reais, os números de 1 a 9 não ocupam o primeiro dígito seguindo a proporção mais intuitiva, mas que a probabilidade de um número d ser o primeiro dígito é igual a <span class="math inline">\(\log_{10} (1+\frac{1}{d})\)</span>. Assim sendo, a probabilidade do primeiro dígito ser o número 1 é de 0.30103 e de ser o número 6 é de 0.0669468. O que pode ser percebido no nosso exercício inicial:</p>
-<p><img src="images/distribuicao-do-primeiro-digito-da-potencia-de-2.png" />
-O gráfico acima foi gerado pelo seguinte código:</p>
+<p><img src="images/distribuicao-do-primeiro-digito-da-potencia-de-2.png" /></p>
+<p>Neste gráfico as barras indicam a frequência que cada número ocupa o primeiro dígito e os pontos, ligados por linhas, a frequência esperada pela lei de Benford. Por se tratar de uma amostra pequena não temos a sobreposição perfeita, mas se aumentarmos a amostra a sobreposição ficará melhor. O gráfico acima foi gerado pelo seguinte código:</p>
 <pre class="r"><code>#Carregando package
 library(&quot;openxlsx&quot;)
 library(readxl)
@@ -56,7 +56,6 @@ lines(x = x$bfd$benford.dist.freq,
       col = &quot;black&quot;,                     
       lwd=3,                        
       type=&quot;l&quot;) </code></pre>
-<p>Neste gráfico as barras indicam a frequência que cada número ocupa o primeiro dígito e os pontos, ligados por linhas, a frequência esperada pela lei de Benford. Por se tratar de uma amostra pequena não temos a sobreposição perfeita, mas se aumentarmos a amostra a sobreposição ficará melhor.</p>
 <p>Cinquenta e sete anos mais tarde, o físico Frank Benford, chegou às mesmas conclusões de Newcomb e aplicou a teoria a uma série de documentos, que abrangiam temas variados como: a área de superfícies de rios, constantes fiscais, pesos moleculares, números em um livro matemático, tamanho de populações dos Estados Unidos, taxas de natalidade, entre outros, o que provou a existência desse padrão.</p>
 <div id="aplicações" class="section level2">
 <h2>Aplicações</h2>
