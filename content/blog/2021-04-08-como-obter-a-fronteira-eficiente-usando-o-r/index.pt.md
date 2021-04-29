@@ -2,7 +2,7 @@
 title: Como obter a fronteira eficiente usando R
 author: Geisyane Karina Gonzaga Kath
 date: '2021-04-08'
-slug: []
+slug: [como-obter-a-fronteira-eficiente-usando-r]
 categories:
   - tutoriais
   - economia
@@ -12,7 +12,7 @@ tags:
   - carteira otima
   - fronteira eficiente
   - markowitz
-description: ''
+description: 'Aprenda a baixar os retornos de ativos de interesse, a otimizar a carteira de investimento e a plotar a fronteira eficiente utilizando R! '
 images:
   - 'img/fronteira_eficiente/calculator-1680905_1920.jpg'
 ---
