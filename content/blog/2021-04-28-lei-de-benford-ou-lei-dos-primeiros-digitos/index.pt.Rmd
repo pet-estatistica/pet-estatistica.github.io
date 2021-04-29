@@ -13,7 +13,7 @@ description: 'O mundo a nossa volta é completamente caótico ou pode ser facilm
 images:
   - 'img/alexandra_post/imagem-principal-benford.jpg'
 ---
-Imagine a sequência de potências de 2, agora visualize apenas o primeiro dígito de cada número, por exemplo: em 16, considere apenas o 1, em 32, apenas o 3 e assim por diante. Em qual proporção cada dígito aparece? É de se imaginar, intuitivamente, que siga uma distribuição uniforme discreta, com proporção $\frac{1}{9}, no entanto não é isso que ocorre.
+Imagine a sequência de potências de 2, agora visualize apenas o primeiro dígito de cada número, por exemplo: em 16, considere apenas o 1, em 32, apenas o 3 e assim por diante. Em qual proporção cada dígito aparece? É de se imaginar, intuitivamente, que siga uma distribuição uniforme discreta, com proporção $\frac{1}{9}$, no entanto não é isso que ocorre.
 
 ```{r echo=FALSE}
 d1 <- log10(1+(1/1))
