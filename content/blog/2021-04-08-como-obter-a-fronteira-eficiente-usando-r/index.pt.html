@@ -1,0 +1,272 @@
+---
+title: Como obter a fronteira eficiente usando R
+author: Geisyane Karina Gonzaga Kath
+date: '2021-04-08'
+slug: [como-obter-a-fronteira-eficiente-usando-r]
+categories:
+  - tutoriais
+  - economia
+  - finanças
+tags:
+  - investimentos
+  - carteira otima
+  - fronteira eficiente
+  - markowitz
+description: 'Aprenda a baixar os retornos de ativos de interesse, a otimizar a carteira de investimento e a plotar a fronteira eficiente utilizando R! '
+images:
+  - 'img/fronteira_eficiente/calculator-1680905_1920.jpg'
+---
+
+<script src="{{< blogdown/postref >}}index.pt_files/header-attrs/header-attrs.js"></script>
+
+
+<div id="o-que-é-fronteira-eficiente" class="section level3">
+<h3>O QUE É FRONTEIRA EFICIENTE</h3>
+<p>Uma carteira de investimentos é dada por um conjunto de ativos (ou ainda por um único ativo) cuja soma da proporção a ser investida em cada componente é 1. Assim, é possível compreender a definição de fronteira eficiente que foi utilizada por Markowitz: dado um conjunto de ativos, há inúmeras possibilidades de combinações dos mesmos formando carteiras, por isso, para representá-las em um diagrama de forma eficiente e de fácil visualização, basta considerar que se duas carteiras possuem o mesmo risco e uma delas tem o maior retorno, a de menor retorno é desprezada. Do mesmo modo, se duas carteiras possuem o mesmo retorno esperado e uma delas possui o menor risco, esta será a escolhida. Ou seja, a fronteira eficiente é formada apenas pelas carteiras que seriam de interesse de investidores.</p>
+<p>No livro Moderna Teoria de Carteiras e Análise de Investimentos (2012), capítulo 5, os autores utilizam a imagem a seguir para representar a infinidade de carteiras possíveis.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><img src="/blog/2021-04-08-como-obter-a-fronteira-eficiente-usando-r_files/FE.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><em>Fonte: Elton, et. al (2012)</em></td>
+</tr>
+</tbody>
+</table>
+<p>Perceba que, seguindo o conceito anteriormente apresentado de fronteira eficiente, a carteira B é preferível no lugar de A, visto que se trata de correr o mesmo risco e obter um possível retorno maior. Da mesma forma, a carteira E é preferível em relação a F, pois embora o retorno esperado seja o mesmo, o risco é menor. Assim, a fronteira eficiente é aquela que vai da carteira de menor risco até a que possui o maior retorno, observando as regras mencionadas: trata-se, no caso da figura, do segmento CEB.</p>
+</div>
+<div id="sem-vendas-a-descoberto-e-sem-retorno-à-taxa-livre-de-risco" class="section level3">
+<h3>SEM VENDAS A DESCOBERTO E SEM RETORNO À TAXA LIVRE DE RISCO</h3>
+<p>Para representar a fronteira eficiente no R, primeiramente é necessário instalar os seguintes pacotes:</p>
+<pre><code>install.packages(&#39;quadprog&#39;)
+install.packages(&#39;PerformanceAnalytics&#39;)
+install.packages(&quot;IntroCompFinR&quot;, repos=&quot;http://R-Forge.R-project.org&quot;)
+install.packages(&#39;BatchGetSymbols&#39;)
+</code></pre>
+<p>Depois, é preciso baixar os dados de interesse, que são os retornos dos ativos em determinado período. Para isso,</p>
+<pre><code>
+library(quadprog)
+library(PerformanceAnalytics)
+library(IntroCompFinR)
+library(BatchGetSymbols)
+
+# Selecione os ativos que deseja trabalhar
+
+papeis &lt;- c(&#39;MGLU3.SA&#39;, &#39;PETR4.SA&#39;, &#39;ITUB4.SA&#39;, &#39;WEGE3.SA&#39;)
+
+# Adicione uma data inicial e final para os retornos que quer consultar.
+# Lembre que a data deve ser colocada na ordem ano-mês-dia.
+
+data.inicial &lt;- as.Date(&#39;2019-06-17&#39;)
+data.final &lt;- as.Date(&#39;2020-07-31&#39;)
+
+# Especifique se deseja retornos diários(&quot;daily&quot;), semanais(&quot;weekly&quot;), mensais(&quot;monthly&quot;) ou anuais(&quot;yearly&quot;).
+
+frequencia &lt;- &#39;monthly&#39;
+
+Retornos &lt;- BatchGetSymbols(ticker = papeis, first.date = data.inicial,
+                            last.date = data.final, freq.data = frequencia)
+
+# Aqui é importante observar a ordem que os dados foram gerados, para isso:
+
+Retornos$df.tickers$ticker
+
+&gt; Retornos$df.tickers$ticker
+ [1] &quot;ITUB4.SA&quot; &quot;ITUB4.SA&quot; &quot;ITUB4.SA&quot; &quot;ITUB4.SA&quot; &quot;ITUB4.SA&quot; &quot;ITUB4.SA&quot; &quot;ITUB4.SA&quot;
+ [8] &quot;ITUB4.SA&quot; &quot;ITUB4.SA&quot; &quot;ITUB4.SA&quot; &quot;ITUB4.SA&quot; &quot;ITUB4.SA&quot; &quot;ITUB4.SA&quot; &quot;ITUB4.SA&quot;
+[15] &quot;MGLU3.SA&quot; &quot;MGLU3.SA&quot; &quot;MGLU3.SA&quot; &quot;MGLU3.SA&quot; &quot;MGLU3.SA&quot; &quot;MGLU3.SA&quot; &quot;MGLU3.SA&quot;
+[22] &quot;MGLU3.SA&quot; &quot;MGLU3.SA&quot; &quot;MGLU3.SA&quot; &quot;MGLU3.SA&quot; &quot;MGLU3.SA&quot; &quot;MGLU3.SA&quot; &quot;MGLU3.SA&quot;
+[29] &quot;PETR4.SA&quot; &quot;PETR4.SA&quot; &quot;PETR4.SA&quot; &quot;PETR4.SA&quot; &quot;PETR4.SA&quot; &quot;PETR4.SA&quot; &quot;PETR4.SA&quot;
+[36] &quot;PETR4.SA&quot; &quot;PETR4.SA&quot; &quot;PETR4.SA&quot; &quot;PETR4.SA&quot; &quot;PETR4.SA&quot; &quot;PETR4.SA&quot; &quot;PETR4.SA&quot;
+[43] &quot;WEGE3.SA&quot; &quot;WEGE3.SA&quot; &quot;WEGE3.SA&quot; &quot;WEGE3.SA&quot; &quot;WEGE3.SA&quot; &quot;WEGE3.SA&quot; &quot;WEGE3.SA&quot;
+[50] &quot;WEGE3.SA&quot; &quot;WEGE3.SA&quot; &quot;WEGE3.SA&quot; &quot;WEGE3.SA&quot; &quot;WEGE3.SA&quot; &quot;WEGE3.SA&quot; &quot;WEGE3.SA&quot;
+
+# Observe que a ordem não é a do vetor informado em &quot;papeis&quot;, mas sim ITUB4.SA, MGLU3.SA, PETR4.SA e WEGE3.SA
+
+Tabela_Retornos &lt;- as.data.frame(Retornos[2])
+Tabela_Retornos
+</code></pre>
+<p>Sendo de interesse apenas a coluna da tabela que contém os retornos ajustados pelo preço (df.tickers.ret.adjusted.prices), é importante extrair apenas os dados dessa coluna referente a cada um dos ativos.</p>
+<pre><code># Para obter apenas os dados da coluna de interesse
+
+dados&lt;-Tabela_Retornos$df.tickers.ret.adjusted.prices
+dados
+
+# Para colocar os dados em sequência e retirar os NA
+
+x &lt;- seq_along(dados[!is.na(dados)])
+x
+
+# Para separar os dados em termos de cada ativo (ceiling é x/13 porque são 13 meses).
+# Como são 4 ativos sendo analisados, serão 4 sep
+
+sep &lt;- split(dados[!is.na(dados)], ceiling(x/13))
+sep
+
+# Para que os retornos fiquem em porcentagem:
+
+# ITUB4.SA
+z1&lt;-sep$&#39;1&#39;*100
+# MGLU3.SA 
+z2&lt;-sep$&#39;2&#39;*100
+# PETR4.SA 
+z3&lt;-sep$&#39;3&#39;*100
+# WEGE3.SA
+z4&lt;-sep$&#39;4&#39;*100
+
+ativos&lt;-c(&#39;ITUB4.SA&#39;,&#39;MGLU3.SA&#39;,&#39;PETR4.SA&#39;,&#39;WEGE3.SA&#39;)
+retornos&lt;-cbind(z1,z2,z3,z4)
+</code></pre>
+<p>Para traçar a fronteira eficiente é preciso ter alguns insumos como o retorno médio de cada ativo e também a matriz de covariância dos mesmos, assim,</p>
+<pre><code># Para calcular a média dos retornos de cada ativo:
+
+retorno_medio&lt;- rbind(mean(retornos[,1]), mean(retornos[,2]), mean(retornos[,3]), mean(retornos[,4]))
+retorno_medio
+
+# Para calcular o desvio padrão dos retornos de cada ativo:
+
+desvio_padrao&lt;- rbind(sd(z1),sd(z2), sd(z3), sd(z4))
+
+# Para nomear as linhas
+
+rownames(desvio_padrao)&lt;-ativos
+rownames(retorno_medio) &lt;- ativos
+
+# Para obter a matriz de covariância dos ativos
+
+matriz_cov &lt;- cov(retornos)
+
+rownames(matriz_cov) &lt;- ativos
+colnames(matriz_cov) &lt;- ativos
+</code></pre>
+<p>Para obter a carteira de menor risco e os pontos da fronteira eficiente:</p>
+<pre><code>#Para que não haja vendas a descoberto:
+
+short&lt;-FALSE
+
+# Cálculo da carteira com a menor risco possível
+
+carteira_min_risco &lt;- globalMin.portfolio(retorno_medio, matriz_cov, shorts = short)
+
+# É possível visualizar o retorno esperado, o risco e a proporção a ser investida em cada ativo para a carteira de menor risco
+
+carteira_min_risco
+
+# Cálculo dos diferentes pontos da fronteira eficiente
+#nport é o número de pontos com diferentes pesos a serem calculados pela função
+
+fronteira_eficiente &lt;- efficient.frontier(retorno_medio, matriz_cov, nport = 1500, shorts = short)
+fronteira_eficiente
+</code></pre>
+<p>E para visualizar a fronteira eficiente:</p>
+<pre><code>
+# Visualização da Fronteira Eficiente
+# xlim e ylim é a escala do gráfico, xaxs=&#39;i&#39; e yaxs=&#39;i&#39; é para que o eixo horizontal e vertical se iniciem em zero
+#xlab e ylab é para renomear os eixos x e y respectivamente
+
+plot(fronteira_eficiente$sd,fronteira_eficiente$er, ylab= &quot;Retorno esperado&quot;, xlab=&quot;Risco da carteira&quot;,col=&quot;blue&quot;, pch=16, xlim=c(0,17),ylim=c(0,14),xaxs=&#39;i&#39;,yaxs=&#39;i&#39;)
+
+# Observe que o eixo horizontal apresenta o desvio padrão e o eixo vertical apresenta o retorno esperado
+
+# Para visualizar a carteira de menor risco
+
+points(carteira_min_risco$sd, carteira_min_risco$er, col=&quot;green&quot;, pch=10, cex=2)
+text(carteira_min_risco$sd, carteira_min_risco$er, labels=&quot;Risco Mínimo&quot;, pos=2)
+
+# Para visualizar os demais ativos (o desvio padrão e o retorno médio são respectivamente colocados)
+# pos=2 o nome do ativo fica ao lado esquerdo do ponto
+# pos=1 o nome do ativo fica logo abaixo do ponto
+# pos=3 o nome do ativo fica acima do ponto
+
+points(9.9538,-1.2182, col=&#39;purple&#39;,pch=10, cex=2)
+text(9.9538,-1.2182, &quot;ITUB4&quot;, pos = 2)
+
+points(15.3075,10.4740, col=&#39;Yellow&#39;,pch=10, cex=2)
+text(15.3075,10.4740, &quot;MGLU3&quot;, pos = 3)
+
+points(16.9875,0.4360, col=&#39;gray&#39;,pch=10, cex=2)
+text(16.9875,0.4360, &quot;PETR4&quot;, pos = 2)
+
+points(13.7182,10.3032, col=&#39;black&#39;,pch=10, cex=2)
+text(13.7182,10.3032, &quot;WEGE3&quot;, pos = 1)
+</code></pre>
+<p><img src="/blog/2021-04-08-como-obter-a-fronteira-eficiente-usando-r_files/Rplot02.png" /></p>
+</div>
+<div id="sem-vendas-a-descoberto-e-com-retorno-à-taxa-livre-de-risco" class="section level3">
+<h3>SEM VENDAS A DESCOBERTO E COM RETORNO À TAXA LIVRE DE RISCO</h3>
+<p>Aqui admite-se que o investidor tem a opção de investir em algum ativo com retorno livre de risco, para esse exemplo considere um retorno à taxa de juros de 0.11%. A forma de baixar os dados necessários é a mesma que no caso anterior e os mesmos dados foram utilizados para esse exemplo.</p>
+<pre><code># Para um retorno à taxa livre de risco igual a 0.11% e sem vendas a descoberto
+tx_livre_risco &lt;- 0.11
+short &lt;- FALSE
+
+# Carteira eficiente
+
+carteira_eficiente &lt;-IntroCompFinR::tangency.portfolio(retorno_medio, matriz_cov, tx_livre_risco, shorts = short)
+
+# É possível visualizar o retorno esperado, o risco da carteira e também a proporção que deve ser investida em cada ativo para obtê-la
+
+carteira_eficiente
+
+# Carteira de menor risco
+
+carteira_min_risco &lt;- globalMin.portfolio(retorno_medio, matriz_cov, shorts = short)
+
+</code></pre>
+<p>Para encontrar a fronteira eficiente:</p>
+<pre><code>
+# Pontos da Fronteira Eficiente
+
+fronteira_eficiente &lt;- efficient.frontier(retorno_medio, matriz_cov, nport = 1500, shorts = FALSE)
+
+# Visualização da Fronteira Eficiente
+
+plot(fronteira_eficiente$sd,fronteira_eficiente$er, col=&quot;blue&quot;,ylab= &quot;Retorno esperado&quot;, xlab=&quot;Risco da carteira&quot;, pch=16, xlim=c(0,18),ylim=c(0,15), xaxs=&#39;i&#39;,yaxs=&#39;i&#39;) 
+
+points(carteira_min_risco$sd, carteira_min_risco$er, col=&quot;green&quot;, pch=10, cex=2)
+text(carteira_min_risco$sd, carteira_min_risco$er, labels=&quot;Risco Mínimo&quot;, pos=2)
+
+points(carteira_eficiente$sd, carteira_eficiente$er, col=&quot;red&quot;, pch=10, cex=2)
+text(carteira_eficiente$sd, carteira_eficiente$er, labels=&quot;Carteira Eficiente&quot;, pos=2)
+
+points(9.9538,-1.2182, col=&#39;purple&#39;,pch=10, cex=2)
+text(9.9538,-1.2182, &quot;ITUB4&quot;, pos = 2)
+
+points(15.3075,10.4740, col=&#39;Yellow&#39;,pch=10, cex=2)
+text(15.3075,10.4740, &quot;MGLU3&quot;, pos = 3)
+
+points(16.9875,0.4360, col=&#39;gray&#39;,pch=10, cex=2)
+text(16.9875,0.4360, &quot;PETR4&quot;, pos = 2)
+
+points(13.7182,10.3032, col=&#39;black&#39;,pch=10, cex=2)
+text(13.7182,10.3032, &quot;WEGE3&quot;, pos = 1)
+</code></pre>
+<p>A linha que tangencia a carteira eficiente tem como coeficiente angular
+<span class="math display">\[
+\theta=\frac{\bar{R}_p-R_f}{\sigma_p}
+\]</span></p>
+<p>Em que</p>
+<p><span class="math inline">\(\bar{R}_p\)</span> é o retorno esperado da carteira ótima</p>
+<p><span class="math inline">\(R_f\)</span> é o retorno do ativo livre de risco</p>
+<p><span class="math inline">\(\sigma_p\)</span> é o risco da carteira ótima</p>
+<p>Então,</p>
+<pre><code>
+# Cálculo de theta
+
+theta &lt;- (carteira_eficiente$er - tx_livre_risco)/carteira_eficiente$sd
+theta
+
+# Adição da linha que tangencia a carteira eficiente e que tem como intercepto o retorno à taxa livre de risco
+
+abline(a = tx_livre_risco, b=theta, col=&quot;green&quot;)
+
+
+</code></pre>
+<p><img src="/blog/2021-04-08-como-obter-a-fronteira-eficiente-usando-r_files/Rplot03.png" /></p>
+</div>
+<div id="referência-bibliográfica" class="section level3">
+<h3>REFERÊNCIA BIBLIOGRÁFICA</h3>
+<p>ELTON, E. J.; GRUBER, M. J.; BROWN S. J.; GOETZMANN, W. N. Moderna Teoria de Carteiras e Análises de Investimentos. Tradução de Helga Hoffmann. Elsevier Editora Ltda, 2012. 747 p</p>
+</div>

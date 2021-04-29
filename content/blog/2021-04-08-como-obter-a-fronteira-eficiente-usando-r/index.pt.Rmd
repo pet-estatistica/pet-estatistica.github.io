@@ -23,7 +23,7 @@ Uma carteira de investimentos é dada por um conjunto de ativos (ou ainda por um
 
 No livro Moderna Teoria de Carteiras e Análise de Investimentos (2012), capítulo 5, os autores utilizam a imagem a seguir para representar a infinidade de carteiras possíveis.
 
-|![](/blog/2021-04-08-como-obter-a-fronteira-eficiente-usando-o-r_files/FE.png) | 
+|![](/blog/2021-04-08-como-obter-a-fronteira-eficiente-usando-r_files/FE.png) | 
 |:--:| 
 | *Fonte: Elton, et. al (2012)* |
 
@@ -213,7 +213,7 @@ text(13.7182,10.3032, "WEGE3", pos = 1)
 
 ```
 
-![](/blog/2021-04-08-como-obter-a-fronteira-eficiente-usando-o-r_files/Rplot02.png)
+![](/blog/2021-04-08-como-obter-a-fronteira-eficiente-usando-r_files/Rplot02.png)
 
 ### SEM VENDAS A DESCOBERTO E COM RETORNO À TAXA LIVRE DE RISCO
 
@@ -307,7 +307,7 @@ abline(a = tx_livre_risco, b=theta, col="green")
 ```
 
 
-![](/blog/2021-04-08-como-obter-a-fronteira-eficiente-usando-o-r_files/Rplot03.png)
+![](/blog/2021-04-08-como-obter-a-fronteira-eficiente-usando-r_files/Rplot03.png)
 
 ### REFERÊNCIA BIBLIOGRÁFICA
 
