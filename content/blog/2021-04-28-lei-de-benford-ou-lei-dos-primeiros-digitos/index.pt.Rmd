@@ -9,11 +9,11 @@ categories:
 tags:
   - leis
   - Benford
-description: ''
+description: 'O mundo a nossa volta é completamente caótico ou pode ser facilmente compreentido por regras simples? A Lei de Benford encontra uma certa ordem em meio a aleatoriedade dos dados.'
 images:
-  - 'static/img/alexandra_post/imagem-principal-benford.jpeg'
+  - 'img/alexandra_post/imagem-principal-benford.jpg'
 ---
-Imagine a sequência de potências de 2, agora visualize apenas o primeiro dígito de cada número, por exemplo: em 16, considere apenas o 1, em 32, apenas o 3 e assim por diante. Em qual proporção cada dígito aparece? É de se imaginar, intuitivamente, que siga uma distribuição uniforme discreta, com proporção 1/9, no entanto não é isso que ocorre.
+Imagine a sequência de potências de 2, agora visualize apenas o primeiro dígito de cada número, por exemplo: em 16, considere apenas o 1, em 32, apenas o 3 e assim por diante. Em qual proporção cada dígito aparece? É de se imaginar, intuitivamente, que siga uma distribuição uniforme discreta, com proporção $\frac{1}{9}, no entanto não é isso que ocorre.
 
 ```{r echo=FALSE}
 d1 <- log10(1+(1/1))
@@ -23,6 +23,46 @@ d6 <- log10(1+(1/6))
 Em 1881, o astrônomo e matemático, Simon Newcomb, fez um questionamento parecido com este, só que com logaritmos. O astrônomo percebeu que os livros de logaritmos, de uma biblioteca pública, tinham as primeiras páginas mais “gastas” que as últimas, o que indicava que eram mais utilizadas. Intrigado com o fato, decidiu investigar mais e descobriu que em amostras aleatórios de dados reais, os números de 1 a 9 não ocupam o primeiro dígito seguindo a proporção mais intuitiva, mas que a probabilidade de um número d ser o primeiro dígito é igual a $\log_{10} (1+\frac{1}{d})$. Assim sendo, a probabilidade do primeiro dígito ser o número 1 é de `r d1` e de ser o número 6 é de `r d6`. O que pode ser percebido no nosso exercício inicial:
 
 ![](images/distribuicao-do-primeiro-digito-da-potencia-de-2.png)
+O gráfico acima foi gerado pelo seguinte código:
+
+```{r eval=FALSE}
+#Carregando package
+library("openxlsx")
+library(readxl)
+library("benford.analysis")
+
+#Importando a tabela que será usada
+X2 <- read_excel("Pet/1 post/2 elevado a x.xlsx", 
+                 col_types = c("numeric", "numeric"))
+#Usaremos apenas a segunda coluna, aqui chamada de 2^x
+X2x <- X2$`2^x`
+
+#Validação segundo a lei de Benford (levará em consideração apenas os primeiros dígitos)
+x <- benford(X2x, number.of.digits = 1)
+
+#Gráfico baseado nos dados
+barplot(x$bfd$data.dist.freq,
+        names.arg = x$bfd$digits,
+        col = "#A1DCF0",                
+        main = "Distribuição dos Dígitos",
+        sub = "Primeiro dígito da potência de 2",
+        xlab = "Dígitos",                
+        ylab = "Frequência",                   
+        ylim = range(0:35),            
+        xlim = range(0:10),              
+        width = .8)
+
+#Comparação com o esperado pela Lei de Benford
+lines(x = x$bfd$benford.dist.freq,   
+      col = "black",                     
+      lwd=2,                        
+      type="p") 
+lines(x = x$bfd$benford.dist.freq,   
+      col = "black",                     
+      lwd=3,                        
+      type="l") 
+```
+
 
 Neste gráfico as barras indicam a frequência que cada número ocupa o primeiro dígito e os pontos, ligados por linhas, a frequência esperada pela lei de Benford. Por se tratar de uma amostra pequena não temos a sobreposição perfeita, mas se aumentarmos a amostra a sobreposição ficará melhor.
 
@@ -38,7 +78,7 @@ Para melhor ilustrar, vamos visualizar a distribuição da população por munic
 
 ![](images/distribucao-do-primeiro-digito-do-numero-de-habitantes-por-municipio-no-brasil.png)
 
-Um bom tutorial para a criação de gráficos como os desse post, ultilizando a Lei de Benford, pode ser encontrado nesse [site](https://jtemporal.com/benford-law/), o que além de elucidativo é muito divertido. 
+Esses gráficos foram gerados de forma análoga ao anterior, um bom tutorial para a criação de gráficos como os destes, ultilizando a Lei de Benford, pode ser encontrado nesse [site](https://jtemporal.com/benford-law/), que além de elucidativo é muito divertido. 
 
 ### Referências
 
