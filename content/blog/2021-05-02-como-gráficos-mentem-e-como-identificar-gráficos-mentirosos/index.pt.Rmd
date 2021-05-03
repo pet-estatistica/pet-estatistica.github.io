@@ -1,0 +1,218 @@
+---
+title: Como gráficos mentem (e como identificar gráficos mentirosos)
+author: Caio Gomes Alves
+date: '2021-05-02'
+slug: []
+categories:
+  - graficos
+tags:
+  - graficos
+  - rmarkdown
+  - estatistica
+description: ''
+images:
+  - '/img/graficos/exemplo_grafico.jpg'
+---
+
+Uma nova marca de pasta de dente clama que o seu mais novo produto é recomendado por 9 entre cada 10 dentistas. Um político, em ano de eleições, promete que o seu plano de governo irá criar mais empregos que os seus adversários. Uma reportagem de um site duvidoso afirma que uma nova erva encontrada na Amazônia reduz 40% da gordura localizada enquanto você dorme.
+
+Estamos tão acostumados com esse tipo de informações exageradas que é bem provável que nem nos abalemos com elas. Mas e se tudo isso vier acompanhado de um gráfico? Afinal, gráficos não expressam opiniões, apenas a verdade fria e objetiva dos números, portanto não há como refutá-los.
+
+No entanto, há muitas formas de se enganar usando gráficos, manipulando-os para o proveito de pessoas e organizações dispostas a usá-los como forma de propagar desinformação. Portanto, vamos entender como os gráficos podem mentir (e como encontrar um gráfico mentindo):
+
+# Escalas:
+
+Vamos dizer que você acaba de receber um panfleto da marca de carros Special Cars, que afirma: "A aprovação dos carros da Special é a maior entre os consumidores.". Juntamente com essa frase, há um gráfico, parecido com esse:
+
+```{r echo=FALSE,warning=FALSE,message=FALSE,collapse=TRUE}
+
+
+aprov<-c(98.8,97.5,96.2,95.1)
+marcas<-c("Special Cars","Genial Cars","Free Cars","Extra Cars")
+barplot(aprov,ylab = "Aprovação (em %)",names.arg=marcas,ylim = c(95,100),col=rgb(0.2,0.4,0.6,0.6),main="Aprovação dos carros da Special é a maior entre os consumidores")
+
+
+```
+
+Ao que parece, a aprovação dos carros da Special é mais do que o dobro da aprovação da Free Cars e quase o triplo da Extra Cars. Mas essa é uma insinação errada, causada propositalmente pelo gráfico. Para entender melhor o que há de errado, vamos olhar atentamente para a escala do gráfico.
+
+No eixo que representa a porcentagem da aprovação dos carros, o limite inferior dos dados é de 95%. Os valores precisos de aprovação para cada marca é de 98,8% para a Special Cars, 97,5% para a Genial Cars, 96,2% para a Free Cars e de 95,1% para a Extra Cars. A diferença de uma para a outra é de pouco mais de 1%.
+
+Mas o gráfico, a partir de sua escala, nos dá a impresssão de que a diferença é muito maior entre as taxas de aprovação. Se fossemos fazer um gráfico, com as escalas de 0 a 100%, ele ficaria assim:
+
+```{r echo=FALSE,warning=FALSE,message=FALSE,collapse=TRUE}
+
+aprov<-c(98.8,97.5,96.2,95.1)
+marcas<-c("Special Cars","Genial Cars","Free Cars","Extra Cars")
+barplot(aprov,ylab = "Aprovação (em %)",names.arg=marcas,col=rgb(0.2,0.4,0.6,0.6),main="Aprovação dos carros da Special é a maior entre os consumidores")
+
+```
+
+Notem a discrepância gritante entre o novo gráfico e o antigo. A diferença entre a aprovação das marcas é quase não notada no segundo, enquanto no primeiro ela é evidenciada. Vale ressaltar, não existe nenhuma inverdade apresentada pelo gráfico do folheto da Special Cars, ele apenas tenta enganar o cliente, manipulando as escalas para dar a impressão de que a sua marca é mais confiável do que as outras, quando na verdade, elas são muito parecidas.
+
+Esse fenômeno é mais evidenciado em graficos de barra, onde as pessoas assumem que o tamanho das barras é proporcional aos valores, quando elas podem não ser, como evidenciado anteriormente. Mas a distorção nas escalas não é uma exclusividade desse tipo de gráfico.
+
+Vamos dar uma olhada no seguinte gráfico, que mostra como se comportou a quantidade de empregos perdidos nos EUA no período de Setembro de 2008 até Junho de 2010:
+
+```{r echo=FALSE,warning=FALSE,message=FALSE,collapse=TRUE}
+
+desemprego_falso<-data.frame(Datas2=c(1,2,3,4),
+                             Valores2=c(0.433,4.238,5.773,6.078))
+datasfalsas<-c("Out 08","Mar 09","Jun 09","Jul 10")
+
+plot(desemprego_falso,type="b",ylim=c(0,7),xlab="Data",ylab="Empregos perdidos (em milhões)",main="Quantidade de empregos perdidos nos EUA de 2008 a 2010",pch=19,cex=2,col="red",bty="l",axes=F)
+abline(h=seq(0,7,0.5),col="grey",lwd=0.8)
+text(desemprego_falso,labels=desemprego_falso$Valores2,cex=0.6,pos=3)
+axis(side=2,at=seq(0,7,1),labels = seq(0,7,1),cex.axis=0.8)
+axis(side=1,at=c(1,2,3,4),labels=datasfalsas,cex.axis=0.8)
+
+```
+
+Muitos devem pensar: "Mas o que há de errado com esse gráfico? Ele parece perfeitamente normal.". Pois bem, notem que o eixo x, que representa as datas não está dividido de forma uniforme. De Outubro de 2008 a março de 2009 são 5 meses, de março de 2009 até junho de 2009 são 3 meses e de junho de 2009 até julho de 2010 são 11 meses. Se fossemos organizar o gráfico respeitando a escala de meses ele ficaria assim:
+
+```{r echo=FALSE,warning=FALSE,message=FALSE,collapse=TRUE}
+
+desemprego_falso<-data.frame(Datas2=c(as.Date("01/10/08",format="%d/%m/%y"),as.Date("01/03/09",format="%d/%m/%y"),as.Date("01/06/09",format="%d/%m/%y"),as.Date("01/07/10",format="%d/%m/%y")),
+                             Valores2=c(0.433,4.238,5.773,6.078))
+
+plot(desemprego_falso,type="b",xlab="Data",ylim=c(0,7),ylab="Empregos perdidos (em milhões)",main="Quantidade de empregos perdidos nos EUA de 2008 a 2010",pch=19,cex=2,col="red",bty="l")
+abline(h=seq(0,7,0.5),col="grey",lwd=0.8)
+text(desemprego_falso,labels=desemprego_falso$Valores2,cex=0.6,pos=3)
+
+```
+
+Menos errado, já que ainda é um gráfico mentiroso, pois ele não nos mostra todos os dados de todos os meses entre o final de 2008 e 2010. Se fossemos coletar todos os dados, e construir um gráfico que mostrásse a verdade, ele seria assim:
+
+```{r echo=FALSE,warning=FALSE,message=FALSE,collapse=TRUE}
+
+desemprego<-data.frame(Datas=seq(from=as.Date("01/10/08",format="%d/%m/%y"),to=as.Date("01/12/10",format="%d/%m/%y"),by="month"),
+                       Valores=c(0.433,1.236,1.897,2.715,3.439,4.236,4.930,5.291,5.773,6.112,6.334,6.533,6.735,6.671,6.780,6.820,6.855,6.666,6.427,5.911,6.078,6.136,6.187,6.214,5.994,5.873,5.753))
+
+plot(desemprego,type="b",xlab="Data",ylab="Empregos perdidos (em milhões)",main="Quantidade de empregos perdidos nos EUA de 2008 a 2010",ylim=c(0,7),pch=19,cex=2,col="red",bty="l")
+abline(h=seq(0,7,0.5),v=seq(from=as.Date("01/10/08",format="%d/%m/%y"),to=as.Date("01/12/10",format="%d/%m/%y"),by="month"),col="grey",lwd=0.8)
+text(desemprego,labels=c(0.433,1.236,1.897,2.715,3.439,4.236,4.930,5.291,5.773,6.112,6.334,6.533,6.735,6.671,6.780,6.820,6.855,6.666,6.427,5.911,6.078,6.136,6.187,6.214,5.994,5.873,5.753),cex=0.6,pos=3)
+
+```
+
+Como podemos ver. o gráfico inicial nos passava a ideia de que a quantidade de empregos perdidos havia atingido o topo em junho de 2010, quando na verdade, o topo foi em fevereiro de 2010, quando a quantidade de empregos perdidos nos EUA atingia  a marca de 6,855 milhões, e em junho eram "apenas" 6,078 milhões. Ou seja, os aproximadamente 777 mil empregos que haviam sido criados nesse período de tempo não estavam sendo levados em conta pelo gráfico.
+
+Além de nos atentarmos às escalas e ao eixos que podem ser destorcidos, uma outra razão faz um gráfico aparentemente simples se tornar uma forma de espalhar desinformação: o contexto.
+
+# Contexto:
+
+Vamos analisar novamente o gráfico anterior, mas dessa vez, vamos mudar os dados de quantidade de empregos perdidos para taxa de desemprego nos EUA:
+
+```{r echo=FALSE,warning=FALSE,message=FALSE,collapse=TRUE}
+
+taxa_desemprego1<-data.frame(Datas=seq(from=as.Date("01/10/08",format="%d/%m/%y"),to=as.Date("01/12/10",format="%d/%m/%y"),by="month"),
+                            Taxa=c(6.1,6.5,6.7,7.2,7.6,8.1,8.5,8.9,9.4,9.5,9.4,9.7,9.8,10.2,10,10,9.7,9.7,9.7,9.9,9.7,9.5,9.5,9.6,9.6,9.6,9.8))
+
+plot(taxa_desemprego1,type = "b",xlab = "Data",ylab = "Taxa de desemprego (em %)",main="Taxa de desemprego nos EUA (em %)",ylim=c(6,11),pch=19,cex=2,col="green",bty="l")
+abline(h=seq(6,11,0.5),col="grey",lwd=0.8)
+text(taxa_desemprego1,labels = taxa_desemprego1$Taxa,cex=0.6)
+
+```
+
+Agora, colocando os dois lado a lado podemos perceber a correlação entre eles, com uma leve diferença causada pelo crescimento populacional:
+
+```{r echo=FALSE,warning=FALSE,message=FALSE,collapse=TRUE}
+
+taxa_desemprego1<-data.frame(Datas=seq(from=as.Date("01/10/08",format="%d/%m/%y"),to=as.Date("01/12/10",format="%d/%m/%y"),by="month"),
+                            Taxa=c(6.1,6.5,6.7,7.2,7.6,8.1,8.5,8.9,9.4,9.5,9.4,9.7,9.8,10.2,10,10,9.7,9.7,9.7,9.9,9.7,9.5,9.5,9.6,9.6,9.6,9.8))
+desemprego<-data.frame(Datas=seq(from=as.Date("01/10/08",format="%d/%m/%y"),to=as.Date("01/12/10",format="%d/%m/%y"),by="month"),
+                       Valores=c(0.433,1.236,1.897,2.715,3.439,4.236,4.930,5.291,5.773,6.112,6.334,6.533,6.735,6.671,6.780,6.820,6.855,6.666,6.427,5.911,6.078,6.136,6.187,6.214,5.994,5.873,5.753))
+
+par(mfrow=c(1,2))
+plot(taxa_desemprego1,type = "b",xlab = "Data",ylab = "Taxa de desemprego (em %)",main="Taxa de desemprego nos EUA",ylim=c(6,11),pch=19,cex=2,col="green",bty="l")
+abline(h=seq(6,11,0.5),col="grey",lwd=0.8)
+text(taxa_desemprego1,labels = taxa_desemprego1$Taxa,cex=0.6)
+plot(desemprego$Valores ~desemprego$Data,type="b",xlab="Data",main="Empregos perdidos nos EUA",ylab="Empregos perdidos (em milhões)",pch=19,cex=2,col="red",bty="l")
+abline(h=seq(0,7,0.5),col="grey",lwd=0.8)
+text(desemprego,labels = desemprego$Valores,cex=0.6)
+
+```
+
+Agora vamos dar uma olhada na taxa de desemprego causada pela pandemia de COVID-19 nos EUA nos 6 primeiros meses de 2020:
+
+```{r echo=FALSE,warning=FALSE,message=FALSE,collapse=TRUE}
+
+taxa_desemprego2<-data.frame(Datas=seq(from=as.Date("01/01/20",format="%d/%m/%y"),to=as.Date("01/06/20",format="%d/%m/%y"),by="month"),
+                             Taxa=c(3.6,3.5,4.4,14.7,13.3,11.1))
+
+plot(taxa_desemprego2,type = "b",xlab = "Data",ylab = "Taxa de desemprego (em %)",main="Taxa de desemprego nos EUA (2020)",ylim=c(3,15),pch=19,cex=2,col="green",bty="l")
+abline(h=seq(0,15,1),col="grey",lwd=0.8)
+text(taxa_desemprego2,labels = taxa_desemprego2$Taxa,cex=0.6)
+
+```
+
+Como vemos, houve uma taxa de desemprego de mais de 14% em abril, mês do início do lockdown em diversas cidades dos EUA, que acarretou em diversas empresas mandando milhões de empregados embora. Cerca de 22 milhões de norte-americanos perderam seus empregos nos 4 primeiros meses da pandemia.
+
+Por causa disso, diversos veículos de comunicação ao redor do mundo, incluindo jornais, noticiários e sites de notícias, passaram a informar que a crise de desemprego do início de 2020 era a pior desde a Grande Depressão de 1929, e usavam o gráfico anterior como evidência.
+
+Mas há um problema por aí. Sim, a quantidade de empregos perdidos dos meses de março para abril foram alarmantes, mas não é correto afirmar que, somente olhando esses 6 meses, é possível predizer que essa seria a pior crise de desemprego desde 1929. Vamos comparar as taxas de desemprego de 2020 com as de 2009, vista anteriormente:
+
+```{r echo=FALSE,warning=FALSE,message=FALSE,collapse=TRUE}
+
+taxa_desemprego1_alt<-data.frame(Datas=seq(1,12,1),
+                                 Taxa=c(7.2,7.6,8.1,8.5,8.9,9.4,9.5,9.4,9.7,9.8,10.2,10))
+taxa_desemprego2_alt<-data.frame(Datas=seq(1,12,1),
+                                 Taxa=c(3.6,3.5,4.4,14.7,13.3,11.1,10.2,8.4,7.9,6.9,6.7,6.7))
+plot(taxa_desemprego1_alt,type="b",xlab = "Meses",ylab = "Taxa de desemprego (em %)",main="Taxa de desemprego nos EUA (em %)",ylim=c(3,15),pch=17,cex=2,col="red",bty="l")
+lines(taxa_desemprego2_alt,type = "b",col="green",lwd=3,pch=19,cex=2)
+abline(h=seq(3,15,1),col="grey",lwd=0.8)
+legend("topright",
+       legend = c("2009","2020"),
+       col=c("red","green"),
+       pch=c(17,19),
+       bty="o",
+       pt.cex = 2,
+       cex=0.8,
+       text.col = "black",
+       horiz = F,
+       title = "Anos",
+       xjust = 0.5,
+       yjust = 0.5)
+text(taxa_desemprego1_alt,labels = taxa_desemprego1_alt$Taxa,cex=0.6)
+text(taxa_desemprego2_alt,labels = taxa_desemprego2_alt$Taxa,cex=0.6)
+
+```
+
+Como esse gráfico nos mostra, a taxa de desemprego em 2020 cresceu muito rápido, porém diminuiu rapidamente, voltando para 6,7% em apenas alguns meses. Ainda que seja quase o dobro do registrado antes da pandemia, já é um resultado mais favorável do que os 14,7% apresentados em abril.
+
+Mas comparando com o ano de 2009, onde a taxa de desemprego cresceu continuamente durante o ano todo, vemos que 2020 não apresentou a pior crise de desemprego da história dos EUA (desde a Grande Depressão de 1929). A pior crise foi a de 2008, que causou a perda de emprego generalizada não só pelos EUA, mas também por diversos países ao redor do mundo. A taxa de desemprego voltou para valores semelhantes a antes da crise de 2008 apenas em 2016, oito anos após a crise.
+
+Por isso contexto é importante para a compreensão correta de um gráfico. Ele nos fornece capacidade de entender o porquê de os dados se comportarem de uma certa maneira e não de outra. Mas ainda há uma outra forma de gráficos enganarem até os olhos mais atentos: o tamanho da amostra.
+
+# Enviesamento da amostra:
+
+Digamos que seja ano de eleições municipais, e como sempre, em sua cidade aparecem folhetos e "santinhos" de políticos que ficam sumidos por 4 anos e surgem das cinzas para pedirem os seus votos. Desta vez, são três concorrentes para o cargo de prefeito: Sr. Honesto, Dona Justa e Coronel Confiança.
+
+Você acaba de receber um folheto do Sr. Honesto, três dias antes da eleição, com o gráfico que segue:
+
+```{r echo=FALSE,message=FALSE,warning=FALSE,collapse=TRUE}
+
+aprova<-c(60,20,16,4)
+candid<-c("Sr. Honesto","Dona Justa","Coronel Confiança","Brancos/Nulos")
+barplot(aprova,names.arg = candid,ylim=c(0,100),ylab = "Aprovação (em %)",xlab = "Candidatos",main="Sr. Honesto é primeiro lugar apontam pesquisas*",col="salmon")
+legend("right",legend="*Pesquisa feita com os 25 vizinhos do Sr. Honesto",pt.cex=0.1,cex=0.2)
+
+```
+
+Como você, caro leitor, já possui o olho treinado, já verificou as escalas para ver se estão todas de acordo com o esperado. E elas estão mesmo corretas, cada barra é proporcional ao valor apresentado, com o Sr. Honesto aparecendo com quase o triplo do segundo colocado, e com mais de 50% dos votos. Logo, ao que as pesquisas indicam, ele irá ganhar as eleições em 3 dias. Logo, não tem porque votar nos outros candidatos, já que eles irão perder de qualquer jeito.
+
+Mas espere, que pesquisa é essa utilizada para compor esse gráfico? Se dermos uma olhada mais atenta na legenda minúscula que está na direita do gráfico, veremos a verdade:
+
+```{r echo=FALSE,warning=FALSE,message=FALSE,collapse=TRUE}
+
+texto<-"Pesquisa feita com os 25 vizinhos do Sr. Honesto."
+print(texto)
+
+```
+
+Com a verdade exposta podemos ver que esse gráfico é enganoso, já que ele não representa a população do município, apenas uma pequena parte dele. O tamanho da amostra dessa pesquisa não é suficiente para inferir para toda a população, além de que esses dados são tendenciosos, porque foram coletados em uma região que favorece o candidato Sr. Honesto. E isso leva a uma informação que, ainda que tendenciosa e errônea, é influente nas eleições, podendo enganar milhares de eleitores, alterando o curso de uma eleição completamente.
+
+# Conclusão:
+
+Quando usados de maneira correta, gráficos nos auxiliam a entender e visualizar dados complexos de uma maneira intuitiva. Mas, com o advento de softwares visuais que permitiram um maior uso de gráficos em diversas situações, eles também facilitaram o uso errado ou desonesto dos dados apresentados.
+
+Portanto, na próxima vez que você encontrar um gráfico, não se deixe levar pelas linhas e curvas presentes nele. Olhe para as categorias, para os números, a escala e o contexto, e pergunte que história tudo isso está tentando lhe contar. Com isso, ajude a espalhar informação e a denunciar o mal uso dessa poderosa ferramenta. Os dados não mentem, mas quem os manipula pode estar.
