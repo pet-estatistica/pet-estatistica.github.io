@@ -135,6 +135,13 @@ ignoreFiles             = ["\\.R$", "\\.Rmd$", "\\.Rproj$", "\\.sh$", "\\.txt$",
   #  weight            = 7
 
   [[menu.main]]
+    name              = "Semana Acadêmica"
+    identifier        = "semana"
+    url               = "/semana/"
+    pre               = "<i class='fas fa-bullhorn'></i>"
+    weight            = 7
+
+  [[menu.main]]
     name              = "Categorias"
     identifier        = "categories"
     url               = "/categories/"
