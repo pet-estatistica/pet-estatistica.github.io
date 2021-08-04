@@ -6,7 +6,7 @@ date = "2020-07-13"
 aliases = ["semana"]
 author = "PET Estatística UFPR"
 +++
-
+ 
 
 <center>
 <img src="images/semana_banner.png" alt="" width="100%"/>
@@ -22,35 +22,71 @@ A Semana Acadêmica configura-se como uma atividade de extensão, conduzida majo
 
 ## Detalhamento das atividades
 
-<!--
-Eu tentei colocar uma tabela unica aqui mas fica muito largo.
-
-O ideal é criar uma tabela para cada dia, ou mesmo uma imagem para cada 
-dia com os detalhes.
-
-Mesmo que não tenham confirmações ainda, pode deixar "Workshop 1", 
-"Workshop 2", "Palestra 1", etc. Depois vamos colocando.
--->
-
-<!--
-<object data="crono.html" width="100%" height="500px"> 
+<object data="crono.html" width="100%" height="750px"> 
     Your browser doesn’t support the object tag. 
 </object>
--->
-
 
 # Submissão de trabalhos
 
-Detalhar e colocar o link do formulário.
+<center>
+<img src="images/submissao.jpeg" alt="" width="70%"/>
+</center>
+
+É aluno de graduação ou pós, e tem algum trabalho acadêmico relacionado à estatística sendo desenvolvido ou já finalizado? Venha apresentá-lo na nossa semana acadêmica!
+
+- As apresentações (*online*) serão de 15 minutos e **haverá emissão de certificado**!
+- Para submeter um trabalho basta preencher o formulário abaixo com título e um resumo de no máximo 200 palavras.
+- As apresentações poderão ser feitas "ao vivo" ou por meio de um vídeo enviado previamente.
+
+<center>
+
+[**FORMULÁRIO PARA SUBMISSÃO DE TRABALHO**](https://docs.google.com/forms/d/e/1FAIpQLSf1inxdn727ms6IojCYuaKKNFmf3iGfODlLwO8zHuF5PZpikw/viewform)
+
+</center>
 
 # Inscrições
 
 ## Inscrição no evento
 
-Disponibilizar o link e falar que terá certificado.
+Para se inscrever na Semana Acadêmica, preencha o formulário abaixo.
+
+<center>
+
+[**FORMULÁRIO DE INSCRIÇÃO NA SEMANA ACADÊMICA**](https://docs.google.com/forms/d/e/1FAIpQLSf1inxdn727ms6IojCYuaKKNFmf3iGfODlLwO8zHuF5PZpikw/viewform)
+
+</center>
+
+Faça parte do **grupo no WhatsApp** para receber avisos e atualizações sobre o evento (não é um grupo de discussão, as mensagens serão enviadas apenas pelos administradores). [Link para entrar no grupo](https://chat.whatsapp.com/HzOyA4DNPlwGtHnoADPHov).
 
 ## Inscrição nos workshops
 
-Em breve.
+As inscrições nos workshops são **gratuitas** e você pode se inscrever em quantos workshops quiser!
+
+Em breve serão disponibilizados os links para inscrição nos workshops.
+
+- Workshop: Introdução ao Python
+- Workshop: Pacote {torch}
+- Workshop: Introdução ao Github
+- Workshop: Introdução ao Pandas e visualização de dados
+- Workshop: Previsão de Séries Temporais com o {fable}
+- Workshop: Introdução ao {tidyverse}
+
+# Organização e contato
+
+A Semana Acadêmica do curso de Estatística da UFPR é um evento organizado pelo PET Estatística, com o apoio da [Coordenação do curso de Estatística](http://www.coordest.ufpr.br/) e do [Departamento de Estatística](http://est.ufpr.br/) da UFPR, e conta com a coordenação geral das petianas
+
+- Amábile Galdino Leandro
+- Letícia Gabriele de Oliveira
+
+### Dúvidas?
+
+Entre em contato
+
+- Pelo email: pet.estatistica.ufpr@gmail.com
+- Pelo Instagram: [@pet.est.ufpr](https://www.instagram.com/pet.est.ufpr/)
+
+
+
+
 
 

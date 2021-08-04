@@ -1,6 +1,14 @@
-Hora1;Segunda 13/09;Hora2;Terça 14/09;Hora3;Quarta 15/09;Hora4;Quinta 16/09;Hora5;Sexta 17/09
-18:30;Abertura;18:30;Mesa redonda DEST;18:30;Workshop 1;18:30;Workshop 3;18:30;Apresentação pós
-19:00;Palestra;19:30;Mesa redonda DEST;20:00;GitHub;20:00;Workshop 4;19:30;Apresentação pós
-20:00;Apresentação de trabalhos;20:30;Mesa redonda DEST;20:30;Workshop 2;20:30;Workshop 5;20:30;Palestra
-21:00;Apresentação de trabalhos;NA;NA;NA;NA;NA;NA;21:30;Encerramento
-22:00;Apresentação de trabalhos;NA;NA;NA;NA;NA;NA;NA;NA
+Dia;Hora;Atividade
+Segunda (13/09);18:30 – 19:00;Abertura e boas vindas
+Segunda (13/09);19:00 – 20:15;Palestra de abertura: Flaviane Peccin
+Segunda (13/09);20:15 – 21:30;Apresentação de trabalhos
+Terça (14/09);18:30 – 20:30;Mesa redonda
+Quarta (15/09);18:30 – 20:00;Workshop: Introdução ao Python
+Quarta (15/09);20:00 – 21:30;Workshop: Pacote {torch}
+Quarta (15/09);21:30 – 23:00;Workshop: Introdução ao Github
+Quinta (16/09);18:30 – 20:00;Workshop: Introdução ao Pandas e visualização de dados
+Quinta (16/09);20:00 – 21:30;Workshop: Previsão de Séries Temporais com o {fable}
+Quinta (16/09);21:30 – 23:00;Workshop: Introdução ao {tidyverse}
+Sexta (17/09);18:30 – 20:30;Pós-graduações para Estatísticos
+Sexta (17/09);20:30 – 21:45;Palestra de encerramento: Cesar Taconeli
+Sexta (17/09);21:45 – 22:00;Encerramento
