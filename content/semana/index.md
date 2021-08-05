@@ -6,7 +6,15 @@ date = "2020-07-13"
 aliases = ["semana"]
 author = "PET Estatística UFPR"
 +++
- 
+
+<center>
+<img src="images/semana_banner.png" alt="" width="100%"/>
+</center>
+
+<br>
+
+A Semana Acadêmica configura-se como uma atividade de extensão, conduzida majoritariamente por meio de palestras, minicursos e mesas redondas. Tais atividades estão centradas em criar uma atmosfera para a discussão sobre a formação profissional e científica, promovendo a integração dos alunos, trocas de experiências e atualização sobre novos temas e abordagens. Entende-se que o estímulo à reflexão e a compreensão do cenário atual, e de suas tendências, permitem a identificação de problemas e oportunidades, bem como o estabelecimento de estratégias que visem solucionar demandas atuais e do futuro. 
+
 - [Cronograma](#cronograma)
    - [Detalhamento das atividades](#detalhamento-das-atividades)
 - [Submissão de trabalhos](#submissão-de-trabalhos)
@@ -16,14 +24,6 @@ author = "PET Estatística UFPR"
 - [Datas importantes](#datas-importantes)
 - [Organização e contato](#organização-e-contato)
    - [Dúvidas?](#dúvidas)
-
-<br>
-
-<center>
-<img src="images/semana_banner.png" alt="" width="100%"/>
-</center>
-
-A Semana Acadêmica configura-se como uma atividade de extensão, conduzida majoritariamente por meio de palestras, minicursos e mesas redondas. Tais atividades estão centradas em criar uma atmosfera para a discussão sobre a formação profissional e científica, promovendo a integração dos alunos, trocas de experiências e atualização sobre novos temas e abordagens. Entende-se que o estímulo à reflexão e a compreensão do cenário atual, e de suas tendências, permitem a identificação de problemas e oportunidades, bem como o estabelecimento de estratégias que visem solucionar demandas atuais e do futuro. 
 
 # Cronograma
 
