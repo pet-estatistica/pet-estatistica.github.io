@@ -52,15 +52,17 @@ Para se inscrever na Semana Acadêmica, preencha o formulário abaixo.
 
 <center>
 
-[**FORMULÁRIO DE INSCRIÇÃO NA SEMANA ACADÊMICA**](https://docs.google.com/forms/d/e/1FAIpQLSf1inxdn727ms6IojCYuaKKNFmf3iGfODlLwO8zHuF5PZpikw/viewform)
+[**FORMULÁRIO DE INSCRIÇÃO NA SEMANA ACADÊMICA**](https://forms.gle/QtN681HPR9ecQfq5A)
 
 </center>
+
+O **certificado de participação** será emitido para quem tiver pelo menos 75% de participação no evento (haverá controle de participação *online*)
 
 Faça parte do **grupo no WhatsApp** para receber avisos e atualizações sobre o evento (não é um grupo de discussão, as mensagens serão enviadas apenas pelos administradores). [Link para entrar no grupo](https://chat.whatsapp.com/HzOyA4DNPlwGtHnoADPHov).
 
 ## Inscrição nos workshops
 
-As inscrições nos workshops são **gratuitas** e você pode se inscrever em quantos workshops quiser!
+As inscrições nos workshops são **gratuitas** e você pode se inscrever em quantos workshops quiser! Cada workshop terá seu prórpio **certificado de participação**.
 
 Em breve serão disponibilizados os links para inscrição nos workshops.
 
