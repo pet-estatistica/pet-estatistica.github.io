@@ -7,6 +7,17 @@ aliases = ["semana"]
 author = "PET Estatística UFPR"
 +++
  
+- [Cronograma](#cronograma)
+   - [Detalhamento das atividades](#detalhamento-das-atividades)
+- [Submissão de trabalhos](#submissão-de-trabalhos)
+- [Inscrições](#inscrições)
+   - [Inscrição no evento](#inscrição-no-evento)
+   - [Inscrição nos workshops](#inscrição-nos-workshops)
+- [Datas importantes](#datas-importantes)
+- [Organização e contato](#organização-e-contato)
+   - [Dúvidas?](#dúvidas)
+
+<br>
 
 <center>
 <img src="images/semana_banner.png" alt="" width="100%"/>
@@ -72,6 +83,12 @@ Em breve serão disponibilizados os links para inscrição nos workshops.
 - Workshop: Introdução ao Pandas e visualização de dados
 - Workshop: Previsão de Séries Temporais com o {fable}
 - Workshop: Introdução ao {tidyverse}
+
+# Datas importantes
+
+<object data="prazos.html" width="100%" height="140px"> 
+    Your browser doesn’t support the object tag. 
+</object>
 
 # Organização e contato
 

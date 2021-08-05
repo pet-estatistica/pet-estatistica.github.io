@@ -19,3 +19,15 @@ dd |>
     pack_rows("Sexta-feira (17/09)", 11, 13, color = "3f3f3f", background = "lightgrey") |>
     column_spec(1:2, color = "3f3f3f") |>
     save_kable("content/semana/crono.html")
+
+
+
+dp <- read.table("content/semana/prazos.csv", header = TRUE,
+                 sep = ";", check.names = FALSE)
+str(dp)
+
+dp |>
+    kable(col.names = NULL) |>
+    kable_styling(bootstrap_options = c("striped", "bordered", "responsive")) |>
+    column_spec(1:2, color = "3f3f3f") |>
+    save_kable("content/semana/prazos.html")
