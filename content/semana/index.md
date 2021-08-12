@@ -37,6 +37,11 @@ A Semana Acadêmica configura-se como uma atividade de extensão, conduzida majo
     Your browser doesn’t support the object tag. 
 </object>
 
+<center>
+<img src="images/timeline.png" alt="" width="70%"/>
+</center>
+
+
 # Submissão de trabalhos
 
 <center>
