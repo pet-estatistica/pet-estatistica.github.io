@@ -45,7 +45,7 @@ A Semana Acadêmica configura-se como uma atividade de extensão, conduzida majo
 # Submissão de trabalhos
 
 <center>
-<img src="images/submissao.jpeg" alt="" width="70%"/>
+<img src="images/submissao2.jpeg" alt="" width="70%"/>
 </center>
 
 É aluno de graduação ou pós, e tem algum trabalho acadêmico relacionado à estatística sendo desenvolvido ou já finalizado? Venha apresentá-lo na nossa semana acadêmica!
