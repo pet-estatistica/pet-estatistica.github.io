@@ -41,7 +41,7 @@ A Semana Acadêmica configura-se como uma atividade de extensão, conduzida majo
 <img src="images/timeline.png" alt="" width="70%"/>
 </center>
 
-
+ 
 # Submissão de trabalhos
 
 <center>
