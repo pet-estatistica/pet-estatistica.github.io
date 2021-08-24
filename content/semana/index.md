@@ -82,12 +82,12 @@ As inscrições nos workshops são **gratuitas** e você pode se inscrever em qu
 
 Em breve serão disponibilizados os links para inscrição nos workshops.
 
-- Workshop: Introdução ao Python
-- Workshop: Pacote {torch}
-- Workshop: Introdução ao Github
-- Workshop: Introdução ao Pandas e visualização de dados
-- Workshop: Previsão de Séries Temporais com o {fable}
-- Workshop: Introdução ao {tidyverse}
+- Workshop: Introdução ao Python. <a class="button-small-text" href="https://www.sympla.com.br/workshop-introducao-ao-python__1316740" target="_blank"> <img src="https://www.sympla.com.br/images/btn-register-widget.png"></img> </a>
+- Workshop: Pacote {torch}. <a class="button-small-text" href="https://www.sympla.com.br/workshop-pacote-torch__1316752" target="_blank"> <img src="https://www.sympla.com.br/images/btn-register-widget.png"></img> </a> 
+- Workshop: Introdução ao Github. <a class="button-small-text" href="https://www.sympla.com.br/workshop-introducao-ao-github__1316754" target="_blank"> <img src="https://www.sympla.com.br/images/btn-register-widget.png"></img> </a>
+- Workshop: Introdução ao Pandas e visualização de dados. <a class="button-small-text" href="https://www.sympla.com.br/workshop-introducao-ao-pandas-e-visualizacao-de-dados__1316756" target="_blank"> <img src="https://www.sympla.com.br/images/btn-register-widget.png"></img> </a>
+- Workshop: Previsão de Séries Temporais com o {fable}. <a class="button-small-text" href="https://www.sympla.com.br/workshop-previsao-de-series-temporais-com-o-fable__1316758" target="_blank"> <img src="https://www.sympla.com.br/images/btn-register-widget.png"></img> </a>
+- Workshop: Introdução ao {tidyverse}. <a class="button-small-text" href="https://www.sympla.com.br/workshop-introducao-ao-tidyverse__1316760" target="_blank"> <img src="https://www.sympla.com.br/images/btn-register-widget.png"></img> </a>
 
 # Datas importantes
 
