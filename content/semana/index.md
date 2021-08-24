@@ -33,7 +33,7 @@ A Semana Acadêmica configura-se como uma atividade de extensão, conduzida majo
 
 ## Detalhamento das atividades
 
-<object data="crono.html" width="100%" height="750px"> 
+<object data="crono.html" width="100%" height="780px"> 
     Your browser doesn’t support the object tag. 
 </object>
 
