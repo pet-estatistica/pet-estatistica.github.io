@@ -41,6 +41,15 @@ A Semana Acadêmica configura-se como uma atividade de extensão, conduzida majo
 <img src="images/timeline.png" alt="" width="70%"/>
 </center>
 
+<br>
+<br>
+
+### Apresentações de trabalhos
+
+<object data="apresentacoes.html" width="100%" height="1350px"> 
+    Your browser doesn’t support the object tag. 
+</object>
+
  
 # Submissão de trabalhos
 
@@ -56,7 +65,9 @@ A Semana Acadêmica configura-se como uma atividade de extensão, conduzida majo
 
 <center>
 
-[**FORMULÁRIO PARA SUBMISSÃO DE TRABALHO**](https://docs.google.com/forms/d/e/1FAIpQLSf1inxdn727ms6IojCYuaKKNFmf3iGfODlLwO8zHuF5PZpikw/viewform)
+~~[**FORMULÁRIO PARA SUBMISSÃO DE TRABALHO**](https://docs.google.com/forms/d/e/1FAIpQLSf1inxdn727ms6IojCYuaKKNFmf3iGfODlLwO8zHuF5PZpikw/viewform)~~
+
+**Submissões encerradas!**
 
 </center>
 

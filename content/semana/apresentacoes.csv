@@ -1,12 +1,12 @@
-Horário,Nome,Nível,Curso/Programa,Instituição:,Título
-,Lineu Alberto Cavazani de Freitas,Mestrado,Informática,UFPR,Testes de hipóteses em modelos multivariados de covariância linear generalizada
-,Gian de Lima Santos,Graduação,Estatística,UFPR,Assessment of Spatio-Temporal Patterns of Sugar Maple Bud Phenology across Quebec Based on three MODIS Time Series and Field Observations
-,Henrique Aparecido Laureano,Mestrado,Métodos Numéricos em Engenharia,UFPR,Modeling the cumulative incidence function of clustered competing risks data: a multinomial GLMM approach
-,Ricardo Rasmussen Petterle,Doutorado,Métodos Numéricos em Engenharia,UFPR,Unit-Weibull quantile mixed regression models for clustered continuous bounded outcomes
-,Guilherme Parreira da Silva,Mestrado,Métodos Numéricos em Engenharia,UFPR,Multivariate generalized linear mixed models for count data
-,Vinicius Ricardo Riffel,Graduação,Estatística,UFPR,Modelagem de dados de contagens em delineamentos por conjuntos ordenados
-,Angélica Maria Tortola Ribeiro,Doutorado,Métodos Numéricos em Engenharia,UFPR,Modelagem de dados espaciais multivariados
-,Lucas Belasque Froguel,Graduação,Física,UFPR,Computação Eficiente de Quantificadores de Análise de Recorrência por meio de Métodos Estatísticos
-,Rafael Morciani Alves da Silva,Graduação,Estatística,UFPR,Redução da pressão sanguínea sistólica e diastólica por meio da prática da ioga em pacientes com hipertensão: Uma meta análise
-,Geisyane Karina Gonzaga Kath,Graduação,Estatística,UFPR,Setores da B3: Análise comparativa de carteiras de ativos e suas correlações a partir da Teoria Moderna de Carteiras
-,Suellen Teixeira Zavadzki de Pauli,Doutorado,Métodos Numéricos em Engenharia,UFPR,Comparando diferentes arquiteturas de redes neurais artificiais para previsão do mercado de ações brasileiro
+Dia,Hora,Nome,Nível,Curso/Programa,Instituição,Título
+Segunda (13/09),20:15,Lineu Alberto Cavazani de Freitas,Mestrado,Informática,UFPR,Testes de hipóteses em modelos multivariados de covariância linear generalizada
+Segunda (13/09),20:30,Gian de Lima Santos,Graduação,Estatística,UFPR,Assessment of Spatio-Temporal Patterns of Sugar Maple Bud Phenology across Quebec Based on three MODIS Time Series and Field Observations
+Segunda (13/09),20:45,Henrique Aparecido Laureano,Mestrado,Métodos Numéricos em Engenharia,UFPR,Modeling the cumulative incidence function of clustered competing risks data: a multinomial GLMM approach
+Segunda (13/09),21:00,Ricardo Rasmussen Petterle,Doutorado,Métodos Numéricos em Engenharia,UFPR,Unit-Weibull quantile mixed regression models for clustered continuous bounded outcomes
+Segunda (13/09),21:15,Guilherme Parreira da Silva,Mestrado,Métodos Numéricos em Engenharia,UFPR,Multivariate generalized linear mixed models for count data
+Segunda (13/09),21:30,Vinicius Ricardo Riffel,Graduação,Estatística,UFPR,Modelagem de dados de contagens em delineamentos por conjuntos ordenados
+Terça (14/09),20:45,Angélica Maria Tortola Ribeiro,Doutorado,Métodos Numéricos em Engenharia,UFPR,Modelagem de dados espaciais multivariados
+Terça (14/09),21:00,Lucas Belasque Froguel,Graduação,Física,UFPR,Computação Eficiente de Quantificadores de Análise de Recorrência por meio de Métodos Estatísticos
+Terça (14/09),21:15,Rafael Morciani Alves da Silva,Graduação,Estatística,UFPR,Redução da pressão sanguínea sistólica e diastólica por meio da prática da ioga em pacientes com hipertensão: Uma meta análise
+Terça (14/09),21:30,Geisyane Karina Gonzaga Kath,Graduação,Estatística,UFPR,Setores da B3: Análise comparativa de carteiras de ativos e suas correlações a partir da Teoria Moderna de Carteiras
+Terça (14/09),21:45,Suellen Teixeira Zavadzki de Pauli,Doutorado,Métodos Numéricos em Engenharia,UFPR,Comparando diferentes arquiteturas de redes neurais artificiais para previsão do mercado de ações brasileiro
