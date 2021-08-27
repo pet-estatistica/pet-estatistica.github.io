@@ -35,7 +35,7 @@ A Semana Acadêmica configura-se como uma atividade de extensão, conduzida majo
 
 <object data="crono.html" width="100%" height="780px"> 
     Your browser doesn’t support the object tag. 
-</object>
+</object> 
 
 <center>
 <img src="images/timeline.png" alt="" width="70%"/>
@@ -46,9 +46,38 @@ A Semana Acadêmica configura-se como uma atividade de extensão, conduzida majo
 
 ### Apresentações de trabalhos
 
-<object data="apresentacoes.html" width="100%" height="1350px"> 
-    Your browser doesn’t support the object tag. 
-</object>
+#### Segunda-feira (13/09)
+
+- **20:15** - **Lineu Alberto Cavazani de Freitas** (*Mestrado em Informática - UFPR*)
+   - Testes de hipóteses em modelos multivariados de covariância linear generalizada
+- **20:30** - **Gian de Lima Santos** (*Graduação em Estatística - UFPR*)
+   - Assessment of Spatio-Temporal Patterns of Sugar Maple Bud Phenology across Quebec Based on three MODIS Time Series and Field Observations
+- **20:45** - **Henrique Aparecido Laureano** (*Mestrado em Métodos Numéricos em Engenharia - UFPR*)
+   - Modeling the cumulative incidence function of clustered competing risks data: a multinomial GLMM approach
+- **21:00** - **Ricardo Rasmussen Petterle** (*Doutorado em Métodos Numéricos em Engenharia - UFPR*)
+   - Unit-Weibull quantile mixed regression models for clustered continuous bounded outcomes
+- **21:15** - **Guilherme Parreira da Silva** (*Mestrado em Métodos Numéricos em Engenharia - UFPR*)
+   - Multivariate generalized linear mixed models for count data
+- **21:30** - **Vinicius Ricardo Riffel** (*Graduação em Estatística - UFPR*)
+   - Modelagem de dados de contagens em delineamentos por conjuntos ordenados
+
+#### Terça-feira (14/09)
+ 
+- **20:45** - **Angélica Maria Tortola Ribeiro** (*Doutorado em Métodos Numéricos em Engenharia - UFPR*)
+   - Modelagem de dados espaciais multivariados
+- **21:00** - **Lucas Belasque Froguel** (*Graduação em Física - UFPR*)
+   - Computação Eficiente de Quantificadores de Análise de Recorrência por meio de Métodos Estatísticos
+- **21:15** - **Rafael Morciani Alves da Silva** (*Graduação em Estatística - UFPR*)
+   - Redução da pressão sanguínea sistólica e diastólica por meio da prática da ioga em pacientes com hipertensão: Uma meta análise
+- **21:30** - **Geisyane Karina Gonzaga Kath** (*Graduação em Estatística - UFPR*)
+   - Setores da B3: Análise comparativa de carteiras de ativos e suas correlações a partir da Teoria Moderna de Carteiras
+- **21:45** - **Suellen Teixeira Zavadzki de Pauli** (*Doutorado em Métodos Numéricos em Engenharia - UFPR*)
+   - Comparando diferentes arquiteturas de redes neurais artificiais para previsão do mercado de ações brasileiro
+
+
+
+
+
 
  
 # Submissão de trabalhos
