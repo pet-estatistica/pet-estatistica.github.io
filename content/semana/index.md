@@ -13,7 +13,7 @@ author = "PET Estatística UFPR"
 
 <br>
 
-A Semana Acadêmica configura-se como uma atividade de extensão, conduzida majoritariamente por meio de palestras, minicursos e mesas redondas. Tais atividades estão centradas em criar uma atmosfera para a discussão sobre a formação profissional e científica, promovendo a integração dos alunos, trocas de experiências e atualização sobre novos temas e abordagens. Entende-se que o estímulo à reflexão e a compreensão do cenário atual, e de suas tendências, permitem a identificação de problemas e oportunidades, bem como o estabelecimento de estratégias que visem solucionar demandas atuais e do futuro. 
+A Semana Acadêmica configura-se como uma atividade de extensão, conduzida majoritariamente por meio de palestras, minicursos e mesas redondas. Tais atividades estão centradas em criar uma atmosfera para a discussão sobre a formação profissional e científica, promovendo a integração dos alunos, trocas de experiências e atualização sobre novos temas e abordagens. Entende-se que o estímulo à reflexão e a compreensão do cenário atual, e de suas tendências, permitem a identificação de problemas e oportunidades, bem como o estabelecimento de estratégias que visem solucionar demandas atuais e do futuro.
 
 - [Cronograma](#cronograma)
    - [Detalhamento das atividades](#detalhamento-das-atividades)
@@ -34,9 +34,9 @@ A Semana Acadêmica configura-se como uma atividade de extensão, conduzida majo
 
 ## Detalhamento das atividades
 
-<object data="crono.html" width="100%" height="1080px"> 
-    Your browser doesn’t support the object tag. 
-</object> 
+<object data="crono.html" width="100%" height="1080px">
+    Your browser doesn’t support the object tag.
+</object>
 
 <center>
 <img src="images/timeline.png" alt="" width="70%"/>
@@ -50,7 +50,9 @@ A Semana Acadêmica configura-se como uma atividade de extensão, conduzida majo
 #### Segunda-feira (13/09)
 
 - **20:15** - **Lineu Alberto Cavazani de Freitas** (*Mestrado em Informática - UFPR*)
-   - Testes de hipóteses em modelos multivariados de covariância linear generalizada
+   - Testes de hipóteses em modelos multivariados de covariância linear
+     generalizada
+   - *Apresentação gravada*. Acessar em https://youtu.be/KeV_3SZHRFg
 - **20:30** - **Gian de Lima Santos** (*Graduação em Estatística - UFPR*)
    - Assessment of Spatio-Temporal Patterns of Sugar Maple Bud Phenology across Quebec Based on three MODIS Time Series and Field Observations
 - **20:45** - **Henrique Aparecido Laureano** (*Mestrado em Métodos Numéricos em Engenharia - UFPR*)
@@ -63,7 +65,7 @@ A Semana Acadêmica configura-se como uma atividade de extensão, conduzida majo
    - Modelagem de dados de contagens em delineamentos por conjuntos ordenados
 
 #### Terça-feira (14/09)
- 
+
 - **20:45** - **Angélica Maria Tortola Ribeiro** (*Doutorado em Métodos Numéricos em Engenharia - UFPR*)
    - Modelagem de dados espaciais multivariados
 - **21:00** - **Lucas Belasque Froguel** (*Graduação em Física - UFPR*)
@@ -76,11 +78,6 @@ A Semana Acadêmica configura-se como uma atividade de extensão, conduzida majo
    - Comparando diferentes arquiteturas de redes neurais artificiais para previsão do mercado de ações brasileiro
 
 
-
-
-
-
- 
 # Submissão de trabalhos
 
 <center>
@@ -92,9 +89,9 @@ A Semana Acadêmica configura-se como uma atividade de extensão, conduzida majo
 - As apresentações (*online*) serão de 15 minutos e **haverá emissão de certificado**!
 - Para submeter um trabalho basta preencher o formulário abaixo com título e um resumo de no máximo 200 palavras.
 - As apresentações poderão ser feitas "ao vivo" ou por meio de um vídeo enviado previamente.
- 
+
 <center>
- 
+
 ~~[**FORMULÁRIO PARA SUBMISSÃO DE TRABALHO**](https://docs.google.com/forms/d/e/1FAIpQLSf1inxdn727ms6IojCYuaKKNFmf3iGfODlLwO8zHuF5PZpikw/viewform)~~
 
 **Submissões encerradas!**
@@ -124,7 +121,7 @@ As inscrições nos workshops são **gratuitas** e você pode se inscrever em qu
 Em breve serão disponibilizados os links para inscrição nos workshops.
 
 - Workshop: Introdução ao Python. <a class="button-small-text" href="https://www.sympla.com.br/workshop-introducao-ao-python__1316740" target="_blank"> <img src="https://www.sympla.com.br/images/btn-register-widget.png"></img> </a>
-- Workshop: Pacote {torch}. <a class="button-small-text" href="https://www.sympla.com.br/workshop-pacote-torch__1316752" target="_blank"> <img src="https://www.sympla.com.br/images/btn-register-widget.png"></img> </a> 
+- Workshop: Pacote {torch}. <a class="button-small-text" href="https://www.sympla.com.br/workshop-pacote-torch__1316752" target="_blank"> <img src="https://www.sympla.com.br/images/btn-register-widget.png"></img> </a>
 - Workshop: Introdução ao Github. <a class="button-small-text" href="https://www.sympla.com.br/workshop-introducao-ao-github__1316754" target="_blank"> <img src="https://www.sympla.com.br/images/btn-register-widget.png"></img> </a>
 - Workshop: Introdução ao Pandas e visualização de dados. <a class="button-small-text" href="https://www.sympla.com.br/workshop-introducao-ao-pandas-e-visualizacao-de-dados__1316756" target="_blank"> <img src="https://www.sympla.com.br/images/btn-register-widget.png"></img> </a>
 - Workshop: Previsão de Séries Temporais com o {fable}. <a class="button-small-text" href="https://www.sympla.com.br/workshop-previsao-de-series-temporais-com-o-fable__1316758" target="_blank"> <img src="https://www.sympla.com.br/images/btn-register-widget.png"></img> </a>
@@ -132,8 +129,8 @@ Em breve serão disponibilizados os links para inscrição nos workshops.
 
 # Datas importantes
 
-<object data="prazos.html" width="100%" height="140px"> 
-    Your browser doesn’t support the object tag. 
+<object data="prazos.html" width="100%" height="140px">
+    Your browser doesn’t support the object tag.
 </object>
 
 # Organização e contato
@@ -149,9 +146,3 @@ Entre em contato
 
 - Pelo email: pet.estatistica.ufpr@gmail.com
 - Pelo Instagram: [@pet.est.ufpr](https://www.instagram.com/pet.est.ufpr/)
-
-
-
-
-
-
