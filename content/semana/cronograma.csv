@@ -1,15 +1,15 @@
-Dia;Hora;Atividade
-Segunda (13/09);18:30 – 19:00;Abertura e boas vindas
-Segunda (13/09);19:00 – 20:15;Palestra de abertura: Flaviane Peccin
-Segunda (13/09);20:15 – 21:45;Apresentação de trabalhos (ver detalhes abaixo)
-Terça (14/09);18:30 – 20:45;Mesa redonda
-Terça (14/09);20:45 – 22:00;Apresentação de trabalhos (ver detalhes abaixo)
-Quarta (15/09);18:30 – 20:00;Workshop: Introdução ao Python
-Quarta (15/09);20:00 – 21:30;Workshop: Pacote {torch}
-Quarta (15/09);21:30 – 23:00;Workshop: Introdução ao Github
-Quinta (16/09);18:30 – 20:00;Workshop: Introdução ao Pandas e visualização de dados
-Quinta (16/09);20:00 – 21:30;Workshop: Previsão de Séries Temporais com o {fable}
-Quinta (16/09);21:30 – 23:00;Workshop: Introdução ao {tidyverse}
-Sexta (17/09);18:30 – 20:30;Pós-graduações para Estatísticos na UFPR
-Sexta (17/09);20:30 – 21:45;Palestra de encerramento: Cesar Taconeli
-Sexta (17/09);21:45 – 22:00;Encerramento
+Dia;Hora;Atividade;Link
+Segunda (13/09);18:30 – 19:00;Abertura e boas vindas;https://youtu.be/_psbW7lkF_4
+Segunda (13/09);19:00 – 20:15;Palestra de abertura: Flaviane Peccin;https://youtu.be/_psbW7lkF_4
+Segunda (13/09);20:15 – 21:45;Apresentação de trabalhos (ver detalhes abaixo);https://youtu.be/WV_hxUTAAOQ
+Terça (14/09);18:30 – 20:45;Mesa redonda;https://youtu.be/fMJeVjKs3sg
+Terça (14/09);20:45 – 22:00;Apresentação de trabalhos (ver detalhes abaixo);https://youtu.be/_O_Xl7Ey9Ok
+Quarta (15/09);18:30 – 20:00;Workshop: Introdução ao Python;Entrar pela sua conta no Sympla
+Quarta (15/09);20:00 – 21:30;Workshop: Pacote {torch};Entrar pela sua conta no Sympla
+Quarta (15/09);21:30 – 23:00;Workshop: Introdução ao Github;Entrar pela sua conta no Sympla
+Quinta (16/09);18:30 – 20:00;Workshop: Introdução ao Pandas e visualização de dados;Entrar pela sua conta no Sympla
+Quinta (16/09);20:00 – 21:30;Workshop: Previsão de Séries Temporais com o {fable};Entrar pela sua conta no Sympla
+Quinta (16/09);21:30 – 23:00;Workshop: Introdução ao {tidyverse};Entrar pela sua conta no Sympla
+Sexta (17/09);18:30 – 20:30;Pós-graduações para Estatísticos na UFPR;https://youtu.be/EYt6k0RMxDI
+Sexta (17/09);20:30 – 21:45;Palestra de encerramento: Cesar Taconeli;https://youtu.be/EYt6k0RMxDI
+Sexta (17/09);21:45 – 22:00;Encerramento;https://youtu.be/EYt6k0RMxDI

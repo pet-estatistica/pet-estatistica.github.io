@@ -10,10 +10,11 @@ dd <- read.table("content/semana/cronograma.csv", header = TRUE,
 str(dd)
 
 dd |>
-    dplyr::select(Hora, Atividade) |>
+    dplyr::select(Hora, Atividade, Link) |>
     kable(col.names = NULL) |>
     kable_styling(bootstrap_options = c("striped", "bordered", "responsive")) |>
     ## kable_material(c("striped", "hover")) |>
+    ## collapse_rows(columns = 3, valign = "middle") |>
     pack_rows("Segunda-feira (13/09)", 1, 3, color = "3f3f3f", background = "lightgrey") |>
     pack_rows("Terça-feira (14/09)", 4, 5, color = "3f3f3f", background = "lightgrey") |>
     pack_rows("Quarta-feira (15/09)", 6, 8, color = "3f3f3f", background = "lightgrey") |>

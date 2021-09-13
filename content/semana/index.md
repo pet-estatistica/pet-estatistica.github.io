@@ -92,9 +92,9 @@ A Semana Acadêmica configura-se como uma atividade de extensão, conduzida majo
 - As apresentações (*online*) serão de 15 minutos e **haverá emissão de certificado**!
 - Para submeter um trabalho basta preencher o formulário abaixo com título e um resumo de no máximo 200 palavras.
 - As apresentações poderão ser feitas "ao vivo" ou por meio de um vídeo enviado previamente.
-
+ 
 <center>
-
+ 
 ~~[**FORMULÁRIO PARA SUBMISSÃO DE TRABALHO**](https://docs.google.com/forms/d/e/1FAIpQLSf1inxdn727ms6IojCYuaKKNFmf3iGfODlLwO8zHuF5PZpikw/viewform)~~
 
 **Submissões encerradas!**
