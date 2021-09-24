@@ -31,5 +31,5 @@ Veja as principais informações abaixo, e leia atentamente o
 
 - Período de inscrições: de **27/09/2021 a 15/10/2021**
 - Realização do processo seletivo: entre **18/10/2021 e 28/10/2021**
-- [Edital de seleção](Edital_PS_PET_Estatistica_2020_v2.pdf)
+- [Edital de seleção](Edital_PS_PET_Estatistica_2021.pdf)
 - [Link para inscrição](https://forms.gle/osAeqDhiVdC6fTK17)
