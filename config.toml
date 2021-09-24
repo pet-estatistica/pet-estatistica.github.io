@@ -127,18 +127,18 @@ ignoreFiles             = ["\\.R$", "\\.Rmd$", "\\.Rproj$", "\\.sh$", "\\.txt$",
     pre               = "<i class='far fa-envelope'></i>"
     weight            = 6
 
-  #[[menu.main]]
-  #  name              = "Processo Seletivo"
-  #  identifier        = "selecao"
-  #  url               = "/selecao/"
-  #  pre               = "<i class='fas fa-bullhorn'></i>"
-  #  weight            = 7
+  [[menu.main]]
+    name              = "Processo Seletivo"
+    identifier        = "selecao"
+    url               = "/selecao/"
+    pre               = "<i class='fas fa-bullhorn'></i>"
+    weight            = 7
 
   [[menu.main]]
     name              = "Semana Acadêmica"
     identifier        = "semana"
     url               = "/semana/"
-    pre               = "<i class='fas fa-bullhorn'></i>"
+    pre               = "<i class='fas fa-graduation-cap'></i>"
     weight            = 7
 
   [[menu.main]]
