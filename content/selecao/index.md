@@ -36,4 +36,7 @@ Veja as principais informações abaixo, e leia atentamente o
 - [Link para inscrição](https://forms.gle/osAeqDhiVdC6fTK17)
 
 
+{{% alert warning %}}
+[Resultado final do Processo Seletivo 2021](Edital_2021_resultado.pdf)
+{{% /alert %}}
 
