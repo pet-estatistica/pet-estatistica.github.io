@@ -37,6 +37,6 @@ Veja as principais informações abaixo, e leia atentamente o
 
 
 {{% alert warning %}}
-[Resultado final do Processo Seletivo 2021](Edital_2021_resultado.pdf)
+[Resultado final do Processo Seletivo 2021](Edital_2021_resultado_assinado.pdf)
 {{% /alert %}}
 
