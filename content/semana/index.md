@@ -25,7 +25,7 @@ A Semana Acadêmica configura-se como uma atividade de extensão, conduzida majo
 - [Datas importantes](#datas-importantes)
 - [Organização e contato](#organização-e-contato)
    - [Dúvidas?](#dúvidas)
-
+ 
 # Cronograma
 
 <center>
