@@ -139,14 +139,14 @@ ignoreFiles             = ["\\.R$", "\\.Rmd$", "\\.Rproj$", "\\.sh$", "\\.txt$",
     identifier        = "semana"
     url               = "/semana/"
     pre               = "<i class='fas fa-graduation-cap'></i>"
-    weight            = 7
+    weight            = 8
 
   [[menu.main]]
     name              = "Categorias"
     identifier        = "categories"
     url               = "/categories/"
     pre               = "<i class='fas fa-sitemap'></i>"
-    weight            = 7
+    weight            = 9
 
 
 [social]
