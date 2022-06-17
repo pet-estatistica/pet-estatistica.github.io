@@ -1,0 +1,40 @@
+---
+title: Curso do git
+author: Fernando Mayer
+date: '2022-06-17'
+slug: []
+categories:
+  - tutoriais
+tags:
+  - rmarkdown
+  - blogdown
+description: 'Post feito no curso do git'
+images:
+  - 'img/main/git.png'
+---
+
+## Título 
+
+Um comando do R
+
+```{r}
+summary(cars)
+```
+
+Um gráfico
+
+```{r}
+plot(cars)
+```
+
+Adicinando uma figura externa.
+
+```{r, echo=FALSE, fig.align='center', out.width='50%'}
+knitr::include_graphics("gato.jpg")
+```
+
+
+
+
+
+
