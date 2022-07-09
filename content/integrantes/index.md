@@ -7,16 +7,13 @@ aliases = ["pessoas"]
 author = "PET Estatística UFPR"
 +++
 
-- Altamiro Antonio Basiewics
+- Alexandra Luiza Stabach
 - Amábile Galdino Leandro
 - Caio Gomes Alves
-- Davi Miguel Yokogawa
-- Eduardo Henrique Covatti Zambon
+- Cynthia dos Santos Vidal
+- Eduardo Lopes Cock
 - Felipe Cordeiro Melo
 - Fernando de Pol Mayer (tutor)
-- Gabriel José Cavassin Fabri
-- Geisyane Karina Gonzaga
-- Jayme Gomes Dos Santos Júnior
-- Jeová Junior Machado
+- Gabrielly Halas
 - Leticia Gabriele De Oliveira
-- Marcelo José Martins Júnior
+- Luiz Fernando Ancay
