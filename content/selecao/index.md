@@ -28,7 +28,7 @@ O período de inscrição é de **17/06/2022** até **17/07/2022**.
 Neste ano serão admitidos **até 4 estudantes bolsistas e até 5 estudantes não bolsistas**. 
 
 Veja as principais informações abaixo, e leia atentamente o 
-[edital de seleção](Edital_PS_2022.pdf):
+[edital de seleção](Edital_2022-Retificado.pdf):
 
 - Período de inscrições: de **17/06/2022 a 17/07/2022**
 - Realização do processo seletivo: entre (~~25/07/2022 e 29/07/2022~~) **01/08/2022 e 08/08/2022**.
