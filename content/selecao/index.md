@@ -10,11 +10,9 @@ author = "PET Estatística UFPR"
 ## Informações e links para o processo seletivo 2022
 
 {{% alert warning %}}
+   Atenção a retificação do edital!
 
-Atenção a retificação do edital!
-
-Houve alteração nas etapas do processo seletivo, por favor leia cuidadosamente.
-
+   Houve alteração nas etapas do processo seletivo, por favor leia cuidadosamente.
 {{% /alert %}}
 
 
