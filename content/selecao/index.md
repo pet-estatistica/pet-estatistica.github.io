@@ -11,7 +11,9 @@ author = "PET Estatística UFPR"
 
 {{% alert warning %}}
 
-Atenção a retificação do edital
+Atenção a retificação do edital!
+
+Houve alteração nas etapas do processo seletivo, por favor leia cuidadosamente.
 
 {{% /alert %}}
 
