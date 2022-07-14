@@ -24,7 +24,7 @@ author = "PET Estatística UFPR"
 O processo seletivo 2022 do PET Estatística será presencial e
 ocorrerá entre (~~25/07/2022 e 29/07/2022~~) **01/08/2022 e 08/08/2022** .
 
-O período de inscrição é de **17/06/2022** até **17/07/2022**.
+O período de inscrição é de **17/06/2022** até **24/07/2022**.
 Neste ano serão admitidos **até 4 estudantes bolsistas e até 5 estudantes não bolsistas**. 
 
 Veja as principais informações abaixo, e leia atentamente o 
