@@ -14,5 +14,5 @@ author = "PET Estatística UFPR"
 - Cynthia dos Santos Vidal
 - Eduardo Lopes Cock
 - Gabrielly Halas
-- Leticia Gabriele De Oliveira
+- Letícia Gabriele De Oliveira
 - Luiz Fernando Ancay
