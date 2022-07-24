@@ -16,3 +16,4 @@ author = "PET Estatística UFPR"
 - Gabrielly Halas
 - Letícia Gabriele De Oliveira
 - Luiz Fernando Ancay
+
