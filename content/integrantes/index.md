@@ -1,7 +1,7 @@
 +++
 title = "Tutor & Integrantes"
 layout = "about"
-description = "Quem são os integrantes do PET Estatística"
+description = "Quem faz parte do PET-Estatística da UFPR?"
 date = "2020-07-16"
 aliases = ["pessoas"]
 author = "PET Estatística UFPR"
