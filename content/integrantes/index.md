@@ -9,7 +9,7 @@ author = "PET Estatística UFPR"
 
 - Alexandra Luiza Stabach
 - Amábile Galdino Leandro
-- Anderson Luiz Ara Souza (tutor)
+- Anderson Luiz Ara Souza **(tutor)**
 - Caio Gomes Alves
 - Cynthia dos Santos Vidal
 - Eduardo Lopes Cock
