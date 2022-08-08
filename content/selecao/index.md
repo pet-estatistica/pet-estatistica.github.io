@@ -10,9 +10,11 @@ author = "PET Estatística UFPR"
 ## Informações e links para o processo seletivo 2022
 
 {{% alert warning %}}
-   Atenção a retificação do edital!
 
-   Por favor, leia atentamente as alterações no edital que estão destacadas em AZUL.
+**Atenção!**
+
+Resultado parcial liberado!
+
 {{% /alert %}}
 
 
@@ -33,7 +35,8 @@ Veja as principais informações abaixo, e leia atentamente o
 - Período de inscrições: de (~~17/06/2022 a 17/07/2022~~) **17/06/2022 a 24/07/2022**
 - Realização do processo seletivo: entre (~~25/07/2022 e 29/07/2022~~) **01/08/2022 e 08/08/2022**.
 - [Edital de seleção](Edital_2022_Retificado_3.pdf)
-- [Link para inscrição](https://docs.google.com/forms/u/3/d/1W6EeNmtbF6uuyahbLagEwB1qVFnDhii_d23W_iV2LA4/edit?ts=62a3c38f)
+- [Link para inscrição](https://docs.google.com/forms/u/3/d/1W6EeNmtbF6uuyahbLagEwB1qVFnDhii_d23W_iV2LA4/edit?ts=62a3c38f) 
+- [Resultado Parcial](Edital_2022_Resultado_Parcial)
 
 
 <!-- {{% alert warning %}} -->
