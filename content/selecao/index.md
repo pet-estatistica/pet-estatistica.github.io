@@ -37,7 +37,7 @@ Veja as principais informações abaixo, e leia atentamente o
 - [Edital de seleção](Edital_2022_Retificado_3.pdf)
 - [Link para inscrição](https://docs.google.com/forms/u/3/d/1W6EeNmtbF6uuyahbLagEwB1qVFnDhii_d23W_iV2LA4/edit?ts=62a3c38f) 
 - [Resultado Parcial](Edital_2022_Resultado_Parcial.pdf)
-
+- **[Resultado Final](Edital_2022_Resultado_Final.pdf)**
 
 <!-- {{% alert warning %}} -->
 <!-- [Resultado final do Processo Seletivo 2021](Edital_2021_resultado_assinado.pdf) -->
