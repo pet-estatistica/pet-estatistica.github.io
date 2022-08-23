@@ -13,9 +13,10 @@ author = "PET Estatística UFPR"
 
 **Atenção!**
 
-Resultado parcial liberado!
+Resultado Final liberado!
 
 {{% /alert %}}
+
 
 
 
