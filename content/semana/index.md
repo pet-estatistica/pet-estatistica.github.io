@@ -8,9 +8,9 @@ author = "PET Estatística UFPR"
 +++
 
 
-<!--<center>
-<img src="images/semana_banner.png" alt="" width="100%"/>
-</center><!-->
+<center>
+<img src="images/Semana_Academica_2022.jpeg" alt="" width="100%"/>
+</center><!
 
 <br>
 
