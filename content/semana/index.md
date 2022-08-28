@@ -1,21 +1,45 @@
 +++
-title = "Semana acadêmica"
+title = "Semana acadêmica "
 layout = "about"
-description = "Semana acadêmica do curso de Estatística 2021"
+description = "Semana acadêmica do curso de Estatística 2022"
 date = "2020-07-13"
 aliases = ["semana"]
 author = "PET Estatística UFPR"
 +++
 
-<center>
+
+<!--<center>
 <img src="images/semana_banner.png" alt="" width="100%"/>
-</center>
+</center><!-->
 
 <br>
 
-A Semana Acadêmica configura-se como uma atividade de extensão, conduzida majoritariamente por meio de palestras, minicursos e mesas redondas. Tais atividades estão centradas em criar uma atmosfera para a discussão sobre a formação profissional e científica, promovendo a integração dos alunos, trocas de experiências e atualização sobre novos temas e abordagens. Entende-se que o estímulo à reflexão e a compreensão do cenário atual, e de suas tendências, permitem a identificação de problemas e oportunidades, bem como o estabelecimento de estratégias que visem solucionar demandas atuais e do futuro.
 
-- [Cronograma](#cronograma)
+
+A Semana Acadêmica do Curso de Estatística é um evento organizado exclusivamente pelos integrantes do PET -Estátistica da UFPR e conta com o apoio da [Coordenação do curso de Estatística](http://www.coordest.ufpr.br/) e do [Departamento de Estatística](http://est.ufpr.br/) da UFPR. 
+
+A Semana Acadêmica configura-se como uma atividade de extensão, que tem como objetivo a divulgação do curso, da Estatística e do profissional da Estatística. Para atender tais objetivos, realizaremos palestras, minicursos/workshops, apresentação de trabalhos e mesas redondas. Tais atividades estão centradas em criar uma atmosfera para a discussão sobre a formação profissional e científica, promovendo a integração dos alunos, trocas de experiências e atualização sobre novos temas e abordagens. Entende-se que o estímulo à reflexão e a compreensão do cenário atual, e de suas tendências, permitem a identificação de problemas e oportunidades, bem como o estabelecimento de estratégias que visem solucionar demandas atuais e do futuro.
+
+Em 2022, a Semana Acadêmica ocorrerá de forma **HÍBRIDA**, entre os dias **17 a 21 de Outubro**! Todas as atividades serão abertas ao público geral, de forma gratuita e terá emissão de certificados. Entretanto, será necessário realizar a inscrição via formulário *online*, que em breve será disponibilizado!
+
+O **certificado de participação** será emitido para quem tiver pelo menos 75% de participação no evento (haverá controle da frequência de participação)
+
+
+As atividades presenciais acontecerão no Campus Politécnico da Universidade Federal do Paraná (UFPR), enquanto que as atividades remotas serão transmitidas no [Canal do PET no Youtube](https://www.youtube.com/petestatisticaufpr).
+
+
+
+Em breve divulgaremos o Cronograma!
+
+### Gostaria de ser nosso apoiador?
+
+Entre em contato pelos canais:
+
+- Pelo email: pet.estatistica.ufpr@gmail.com
+- Pelo Instagram: [@pet.est.ufpr](https://www.instagram.com/pet.est.ufpr/)
+
+
+<!-- [Cronograma](#cronograma)
    - [Detalhamento das atividades](#detalhamento-das-atividades)
       - [Apresentações de trabalhos](#apresentações-de-trabalhos)
 - [Submissão de trabalhos](#submissão-de-trabalhos)
@@ -28,9 +52,9 @@ A Semana Acadêmica configura-se como uma atividade de extensão, conduzida majo
  
 # Cronograma
 
-<center>
-<img src="images/semana_cronograma.png" alt="" width="70%"/>
-</center>
+#<center>
+#<img src="images/semana_cronograma.png" alt="" width="70%"/>
+#</center>
 
 ## Detalhamento das atividades
 
