@@ -30,10 +30,6 @@ O **certificado de participação** será emitido para quem tiver pelo menos 75%
 As atividades presenciais acontecerão no Campus Politécnico da Universidade Federal do Paraná (UFPR), enquanto que as atividades remotas serão transmitidas no **[Canal do PET no Youtube](https://www.youtube.com/petestatisticaufpr)**.
 
 
-Para não perder nenhuma novidade, siga-nos pelo [@pet.est.ufpr](https://www.instagram.com/pet.est.ufpr/)!
-
-
-
 
 # Submissão de trabalhos
 
@@ -41,15 +37,29 @@ Para não perder nenhuma novidade, siga-nos pelo [@pet.est.ufpr](https://www.ins
 <img src="images/apresente_trabalho.jpeg" alt="" width="70%"/>
 </center>
 
+
+
 É aluno de graduação ou pós, e tem algum trabalho acadêmico relacionado à estatística sendo desenvolvido ou já finalizado? Venha apresentá-lo na nossa semana acadêmica!
 
-- As apresentações (*online*) serão de 15 minutos e **haverá emissão de certificado**!
+- As apresentações (*presencial*) serão de 15 minutos e **haverá emissão de certificado**!
 - Para submeter um trabalho basta preencher o formulário abaixo com título e um resumo de no máximo 200 palavras.
-- As apresentações poderão ser feitas "ao vivo" ou por meio de um vídeo enviado previamente.
+- As apresentações ocorrerão nos dias 18 e 19 de outubro.
 
 <center>
 
 [**FORMULÁRIO PARA SUBMISSÃO DE TRABALHO**](https://docs.google.com/forms/d/e/1FAIpQLSch8q2XA_ynbi21hdH-9WAvOfJXUkxuM5AVrNYWnb7wAS7xtw/viewform)
+
+
+
+
+
+
+
+Para não perder nenhuma novidade, siga-nos pelo [@pet.est.ufpr](https://www.instagram.com/pet.est.ufpr/)!
+
+
+
+
 
 
 
