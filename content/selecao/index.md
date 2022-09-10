@@ -9,13 +9,13 @@ author = "PET Estatística UFPR"
 
 ## Informações e links para o processo seletivo 2022
 
-{{% alert warning %}}
+<!-- {{% alert warning %}}
 
-**Atenção!**
+<!-- **Atenção!**
 
-Resultado Final liberado!
+<!--Resultado Final liberado! 
 
-{{% /alert %}}
+<!-- {{% /alert %}} -->
 
 
 
