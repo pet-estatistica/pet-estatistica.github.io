@@ -58,14 +58,6 @@ _Áreas de interesse_: Teoria de Resposta ao Item; Estatística aplicada à educ
 
 
 
-**Letícia Gabriele De Oliveira**
-
-Graduanda em Estatística e PETiana desde 2019, descobriu o curso durante uma tentativa de graduação em Matemática. Louca por cachorros vira-latas, board games e ciências em geral.
-
-_Áreas de interesse_: Métodos de pesquisa; Visualização de dados; Educação, Métodos numéricos.
-
-
-
 **[Luiz Fernando Ancay](https://www.linkedin.com/in/luiz-fernando-an%C3%A7ay-b8286b182/)**
 
 Graduando em Estatística na UFPR desde 2018.
