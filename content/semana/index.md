@@ -15,7 +15,6 @@ author = "PET Estatística UFPR"
 <br>
 
 
-
 A Semana Acadêmica do Curso de Estatística é um evento organizado exclusivamente pelos integrantes do PET - Estátistica da UFPR e conta com o apoio da [Coordenação do curso de Estatística](http://www.coordest.ufpr.br/) e do [Departamento de Estatística](http://est.ufpr.br/) da Universidade. 
 
 A Semana Acadêmica configura-se como uma atividade de extensão e tem como objetivo a divulgação do curso, da Estatística e do profissional da Estatística. Para atender esses objetivos realizaremos palestras, minicursos/workshops, apresentação de trabalhos e mesas redondas. 
