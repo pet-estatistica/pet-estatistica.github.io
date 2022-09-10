@@ -29,7 +29,7 @@ O **certificado de participação** será emitido para quem tiver pelo menos 75%
 As atividades presenciais acontecerão no Campus Politécnico da Universidade Federal do Paraná (UFPR), enquanto que as atividades remotas serão transmitidas no **[Canal do PET no Youtube](https://www.youtube.com/petestatisticaufpr)**.
 
 
-<<<<<<< HEAD
+
 
 # Submissão de trabalhos
 
@@ -56,9 +56,10 @@ As atividades presenciais acontecerão no Campus Politécnico da Universidade Fe
 
 
 Para não perder nenhuma novidade, siga-nos pelo [@pet.est.ufpr](https://www.instagram.com/pet.est.ufpr/)!
-=======
+
+
 Para não perder nenhuma novidade, siga-nos pelo **[Instagram](https://www.instagram.com/pet.est.ufpr/)**!
->>>>>>> 9408e87644cf8290adcf146a3fafe965d870fedb
+
 
 
 
