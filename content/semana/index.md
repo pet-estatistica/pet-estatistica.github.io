@@ -58,7 +58,7 @@ As atividades presenciais acontecerão no Campus Politécnico da Universidade Fe
 Para não perder nenhuma novidade, siga-nos pelo [@pet.est.ufpr](https://www.instagram.com/pet.est.ufpr/)!
 
 
-Para não perder nenhuma novidade, siga-nos pelo **[Instagram](https://www.instagram.com/pet.est.ufpr/)**!
+
 
 
 
@@ -85,6 +85,9 @@ Entre em contato pelos canais:
 - [Datas importantes](#datas-importantes)
 - [Organização e contato](#organização-e-contato)
    - [Dúvidas?](#dúvidas)
+   
+   
+   Para não perder nenhuma novidade, siga-nos pelo **[Instagram](https://www.instagram.com/pet.est.ufpr/)**!
  
 # Cronograma
 
