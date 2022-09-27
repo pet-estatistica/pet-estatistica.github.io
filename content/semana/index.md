@@ -34,7 +34,7 @@ As atividades presenciais acontecerão no Campus Politécnico da Universidade Fe
 # Submissão de trabalhos
 
 <center>
-<img src="images/trabalho_2022_prorrogacao.png" alt="" width="70%"/>
+<img src="images/trabalhos_2022.jpg" alt="" width="70%"/>
 </center>
 
 
