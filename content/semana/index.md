@@ -60,13 +60,6 @@ Para não perder nenhuma novidade, siga-nos pelo [@pet.est.ufpr](https://www.ins
 
 
 
-
-
-
-
-
-
-
 ### Gostaria de ser nosso apoiador?
 
 Entre em contato pelos canais:
