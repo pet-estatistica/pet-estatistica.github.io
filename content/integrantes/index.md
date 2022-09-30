@@ -57,6 +57,12 @@ Graduando em Estatística desde 2018, atualmente o projeto individual em desenvo
 _Áreas de interesse_: Teoria de Resposta ao Item; Estatística aplicada à educação; Análise de Cluster; Cadeias de Markov.
 
 
+**[Felipe Araújo de Lima](https://www.linkedin.com/in/felipe-ara%C3%BAjo-de-lima-9867021b4/)**
+
+Graduando em Estatística na UFPR desde 2019, e atualmente estagiando na área de ciência de dados focado em prevenção a fraude.
+
+_Áreas de interesse_: Prevenção a fraude; Modelagem de dados com classes desbalanceadas; Probabilidade; Ciência de dados num geral.
+
 
 **[Luiz Fernando Ancay](https://www.linkedin.com/in/luiz-fernando-an%C3%A7ay-b8286b182/)**
 
