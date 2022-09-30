@@ -91,7 +91,7 @@ Para não perder nenhuma novidade, siga-nos pelo [@pet.est.ufpr](https://www.ins
 
 [**FORMULÁRIO PARA SUBMISSÃO DE TRABALHO**](https://docs.google.com/forms/d/e/1FAIpQLSch8q2XA_ynbi21hdH-9WAvOfJXUkxuM5AVrNYWnb7wAS7xtw/viewform)
 
-
+<center>
 
 
 # Inscrições
@@ -180,6 +180,7 @@ Em breve serão disponibilizados os links para inscrição nos workshops.
     Your browser doesn’t support the object tag.
 </object>
 -->
+
 # Organização e contato
 
 A Semana Acadêmica do curso de Estatística da UFPR é um evento organizado pelo PET Estatística, com o apoio da [Coordenação do curso de Estatística](http://www.coordest.ufpr.br/) e do [Departamento de Estatística](http://est.ufpr.br/) da UFPR, e conta com a coordenação geral das petianas
