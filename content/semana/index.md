@@ -59,7 +59,7 @@ Para não perder nenhuma novidade, siga-nos pelo [@pet.est.ufpr](https://www.ins
 <img src="images/semana_academica_2022.jpg" alt="" width="70%"/>
 </center>
 
-<!--
+
 ## Detalhamento das atividades
 
 <object data="crono.html" width="100%" height="1080px">
@@ -70,7 +70,7 @@ Para não perder nenhuma novidade, siga-nos pelo [@pet.est.ufpr](https://www.ins
 
 <br>
 <br>
--->
+
 
 
 # Submissão de trabalhos
@@ -98,8 +98,7 @@ Para não perder nenhuma novidade, siga-nos pelo [@pet.est.ufpr](https://www.ins
 
 ## Inscrição no evento
 
-Em breve formulário para inscrição
-
+**Em breve formulário para inscrição**
 
 
 ## Inscrição nos workshops
@@ -107,21 +106,21 @@ Em breve formulário para inscrição
 
 Em breve serão disponibilizados os links para inscrição nos workshops.
 
-- Workshop:  R - Relatórios Dinâmicos / QUARTO.
+- **Workshop:  R - Relatórios Dinâmicos / QUARTO**
 
   Ministrante: Ariane Hayana
 
 <!--<a class="button-small-text" href="https://www.sympla.com.br/workshop-introducao-ao-python__1316740" target="_blank"> <img src="https://www.sympla.com.br/images/btn-register-widget.png"></img> </a> -->
 
-- Workshop: Análise exploratória em Python. 
+- **Workshop: Análise exploratória em Python** 
 
   Ministrante: Jodavid Ferreira
 
 <!--<a class="button-small-text" href="https://www.sympla.com.br/workshop-pacote-torch__1316752" target="_blank"> <img src="https://www.sympla.com.br/images/btn-register-widget.png"></img> </a> -->
 
-- Workshop: PySpark 
+- **Workshop: PySpark** 
 
-  Ministrante: Jonatas
+  Ministrante: Jonatas Silva do Espiríto Sant
 
 <!--<a class="button-small-text" href="https://www.sympla.com.br/workshop-introducao-ao-github__1316754" target="_blank"> <img src="https://www.sympla.com.br/images/btn-register-widget.png"></img> </a> -->
 
@@ -189,7 +188,7 @@ Em breve serão disponibilizados os links para inscrição nos workshops.
 
 # Organização e contato
 
-A Semana Acadêmica do curso de Estatística da UFPR é um evento organizado pelo PET Estatística, com o apoio da [Coordenação do curso de Estatística](http://www.coordest.ufpr.br/) e do [Departamento de Estatística](http://est.ufpr.br/) da UFPR, e conta com a coordenação geral das petianas
+A Semana Acadêmica do curso de Estatística da UFPR é um evento organizado pelo PET Estatística, com o apoio da [Coordenação do curso de Estatística](http://www.coordest.ufpr.br/), da [Especialização de Data Science e Big Data](http://dsbd.leg.ufpr.br/) e do [Departamento de Estatística](http://est.ufpr.br/) da UFPR.
 
 
 
