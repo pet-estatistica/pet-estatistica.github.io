@@ -31,6 +31,48 @@ As atividades presenciais acontecerão no Campus Politécnico da Universidade Fe
 
 
 
+
+
+
+Para não perder nenhuma novidade, siga-nos pelo [@pet.est.ufpr](https://www.instagram.com/pet.est.ufpr/)!
+
+
+
+
+
+- [Cronograma](#cronograma)
+   - [Detalhamento das atividades](#detalhamento-das-atividades)
+      - [Apresentações de trabalhos](#apresentações-de-trabalhos)
+- [Submissão de trabalhos](#submissão-de-trabalhos)
+- [Inscrições](#inscrições)
+   - [Inscrição no evento](#inscrição-no-evento)
+   - [Inscrição nos workshops](#inscrição-nos-workshops)
+- [Datas importantes](#datas-importantes)
+- [Organização e contato](#organização-e-contato)
+   - [Dúvidas?](#dúvidas)
+   
+
+ 
+# Cronograma
+
+<center>
+<img src="images/semana_academica_2022.jpg" alt="" width="70%"/>
+</center>
+
+
+## Detalhamento das atividades
+
+<object data="crono.html" width="100%" height="1080px">
+    Your browser doesn’t support the object tag.
+</object>
+
+
+
+<br>
+<br>
+
+
+
 # Submissão de trabalhos
 
 <center>
@@ -49,95 +91,66 @@ As atividades presenciais acontecerão no Campus Politécnico da Universidade Fe
 
 [**FORMULÁRIO PARA SUBMISSÃO DE TRABALHO**](https://docs.google.com/forms/d/e/1FAIpQLSch8q2XA_ynbi21hdH-9WAvOfJXUkxuM5AVrNYWnb7wAS7xtw/viewform)
 
-
-
-
-
-
-
-Para não perder nenhuma novidade, siga-nos pelo [@pet.est.ufpr](https://www.instagram.com/pet.est.ufpr/)!
-
-
-
-
-### Gostaria de ser nosso apoiador?
-
-Entre em contato pelos canais:
-
-- Pelo email: pet.estatistica.ufpr@gmail.com
-- Pelo Instagram: [@pet.est.ufpr](https://www.instagram.com/pet.est.ufpr/)
-
-
-<!-- [Cronograma](#cronograma)
-   - [Detalhamento das atividades](#detalhamento-das-atividades)
-      - [Apresentações de trabalhos](#apresentações-de-trabalhos)
-- [Submissão de trabalhos](#submissão-de-trabalhos)
-- [Inscrições](#inscrições)
-   - [Inscrição no evento](#inscrição-no-evento)
-   - [Inscrição nos workshops](#inscrição-nos-workshops)
-- [Datas importantes](#datas-importantes)
-- [Organização e contato](#organização-e-contato)
-   - [Dúvidas?](#dúvidas)
-   
-   
-   Para não perder nenhuma novidade, siga-nos pelo **[Instagram](https://www.instagram.com/pet.est.ufpr/)**!
- 
-# Cronograma
-
-#<center>
-#<img src="images/semana_cronograma.png" alt="" width="70%"/>
-#</center>
-
-## Detalhamento das atividades
-
-<object data="crono.html" width="100%" height="1080px">
-    Your browser doesn’t support the object tag.
-</object>
-
 <center>
-<img src="images/timeline.png" alt="" width="70%"/>
-</center>
 
-<br>
-<br>
+
+# Inscrições
+
+## Inscrição no evento
+
+**Em breve formulário para inscrição**
+
+
+## Inscrição nos workshops
+
+
+Em breve serão disponibilizados os links para inscrição nos workshops.
+
+- **Workshop:  R - Relatórios Dinâmicos / QUARTO**
+
+  Ministrante: Ariane Hayana
+
+<!--<a class="button-small-text" href="https://www.sympla.com.br/workshop-introducao-ao-python__1316740" target="_blank"> <img src="https://www.sympla.com.br/images/btn-register-widget.png"></img> </a> -->
+
+- **Workshop: Análise exploratória em Python** 
+
+  Ministrante: Jodavid Ferreira
+
+<!--<a class="button-small-text" href="https://www.sympla.com.br/workshop-pacote-torch__1316752" target="_blank"> <img src="https://www.sympla.com.br/images/btn-register-widget.png"></img> </a> -->
+
+- **Workshop: PySpark** 
+
+  Ministrante: Jonatas Silva do Espiríto Sant
+
+<!--<a class="button-small-text" href="https://www.sympla.com.br/workshop-introducao-ao-github__1316754" target="_blank"> <img src="https://www.sympla.com.br/images/btn-register-widget.png"></img> </a> -->
+
+
+
 
 ### Apresentações de trabalhos
 
+
+
+Em breve mais informações.
+
+<!--
 #### Segunda-feira (13/09)
 
 - **20:15** - **Lineu Alberto Cavazani de Freitas** (*Mestrado em Informática - UFPR*)
    - Testes de hipóteses em modelos multivariados de covariância linear
      generalizada
-   - *Apresentação gravada*. Acessar em https://youtu.be/KeV_3SZHRFg
-- **20:30** - **Gian de Lima Santos** (*Graduação em Estatística - UFPR*)
-   - Assessment of Spatio-Temporal Patterns of Sugar Maple Bud Phenology across Quebec Based on three MODIS Time Series and Field Observations
-- **20:45** - **Henrique Aparecido Laureano** (*Mestrado em Métodos Numéricos em Engenharia - UFPR*)
-   - Modeling the cumulative incidence function of clustered competing risks data: a multinomial GLMM approach
-- **21:00** - **Ricardo Rasmussen Petterle** (*Doutorado em Métodos Numéricos em Engenharia - UFPR*)
-   - Unit-Weibull quantile mixed regression models for clustered continuous bounded outcomes
-- **21:15** - **Guilherme Parreira da Silva** (*Mestrado em Métodos Numéricos em Engenharia - UFPR*)
-   - Multivariate generalized linear mixed models for count data
-- **21:30** - **Vinicius Ricardo Riffel** (*Graduação em Estatística - UFPR*)
-   - Modelagem de dados de contagens em delineamentos por conjuntos ordenados
 
 #### Terça-feira (14/09)
 
 - **20:45** - **Angélica Maria Tortola Ribeiro** (*Doutorado em Métodos Numéricos em Engenharia - UFPR*)
    - Modelagem de dados espaciais multivariados
-- **21:00** - **Lucas Belasque Froguel** (*Graduação em Física - UFPR*)
-   - Computação Eficiente de Quantificadores de Análise de Recorrência por meio de Métodos Estatísticos
-- **21:15** - **Rafael Morciani Alves da Silva** (*Graduação em Estatística - UFPR*)
-   - Redução da pressão sanguínea sistólica e diastólica por meio da prática da ioga em pacientes com hipertensão: Uma meta análise
-- **21:30** - **Geisyane Karina Gonzaga Kath** (*Graduação em Estatística - UFPR*)
-   - Setores da B3: Análise comparativa de carteiras de ativos e suas correlações a partir da Teoria Moderna de Carteiras
-- **21:45** - **Suellen Teixeira Zavadzki de Pauli** (*Doutorado em Métodos Numéricos em Engenharia - UFPR*)
-   - Comparando diferentes arquiteturas de redes neurais artificiais para previsão do mercado de ações brasileiro
 
 
 
-**Submissões encerradas!**
 
-</center>
+
+
+
 
 # Inscrições
 
@@ -145,7 +158,7 @@ Entre em contato pelos canais:
 
 Para se inscrever na Semana Acadêmica, preencha o formulário abaixo.
 
-<center>
+ <center>
 
 [**FORMULÁRIO DE INSCRIÇÃO NA SEMANA ACADÊMICA**](https://forms.gle/QtN681HPR9ecQfq5A)
 
@@ -164,26 +177,25 @@ Em breve serão disponibilizados os links para inscrição nos workshops.
 - Workshop: Introdução ao Python. <a class="button-small-text" href="https://www.sympla.com.br/workshop-introducao-ao-python__1316740" target="_blank"> <img src="https://www.sympla.com.br/images/btn-register-widget.png"></img> </a>
 - Workshop: Pacote {torch}. <a class="button-small-text" href="https://www.sympla.com.br/workshop-pacote-torch__1316752" target="_blank"> <img src="https://www.sympla.com.br/images/btn-register-widget.png"></img> </a>
 - Workshop: Introdução ao Github. <a class="button-small-text" href="https://www.sympla.com.br/workshop-introducao-ao-github__1316754" target="_blank"> <img src="https://www.sympla.com.br/images/btn-register-widget.png"></img> </a>
-- Workshop: Introdução ao Pandas e visualização de dados. <a class="button-small-text" href="https://www.sympla.com.br/workshop-introducao-ao-pandas-e-visualizacao-de-dados__1316756" target="_blank"> <img src="https://www.sympla.com.br/images/btn-register-widget.png"></img> </a>
-- Workshop: Previsão de Séries Temporais com o {fable}. <a class="button-small-text" href="https://www.sympla.com.br/workshop-previsao-de-series-temporais-com-o-fable__1316758" target="_blank"> <img src="https://www.sympla.com.br/images/btn-register-widget.png"></img> </a>
-- Workshop: Introdução ao {tidyverse}. <a class="button-small-text" href="https://www.sympla.com.br/workshop-introducao-ao-tidyverse__1316760" target="_blank"> <img src="https://www.sympla.com.br/images/btn-register-widget.png"></img> </a>
+
 
 # Datas importantes
 
 <object data="prazos.html" width="100%" height="140px">
     Your browser doesn’t support the object tag.
 </object>
+-->
 
 # Organização e contato
 
-A Semana Acadêmica do curso de Estatística da UFPR é um evento organizado pelo PET Estatística, com o apoio da [Coordenação do curso de Estatística](http://www.coordest.ufpr.br/) e do [Departamento de Estatística](http://est.ufpr.br/) da UFPR, e conta com a coordenação geral das petianas
+A Semana Acadêmica do curso de Estatística da UFPR é um evento organizado pelo PET Estatística, com o apoio da [Coordenação do curso de Estatística](http://www.coordest.ufpr.br/), da [Especialização de Data Science e Big Data](http://dsbd.leg.ufpr.br/) e do [Departamento de Estatística](http://est.ufpr.br/) da UFPR.
 
-- Amábile Galdino Leandro
-- Letícia Gabriele de Oliveira
 
-### Dúvidas?
 
-Entre em contato
+### Gostaria de ser nosso apoiador?
+
+Entre em contato pelos canais:
 
 - Pelo email: pet.estatistica.ufpr@gmail.com
 - Pelo Instagram: [@pet.est.ufpr](https://www.instagram.com/pet.est.ufpr/)
+
