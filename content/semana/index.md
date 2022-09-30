@@ -107,15 +107,21 @@ Em breve formulário para inscrição
 
 Em breve serão disponibilizados os links para inscrição nos workshops.
 
-- Workshop:  R - Relatórios Dinâmicos / QUARTO. 
+- Workshop:  R - Relatórios Dinâmicos / QUARTO.
+
+  Ministrante: Ariane Hayana
 
 <!--<a class="button-small-text" href="https://www.sympla.com.br/workshop-introducao-ao-python__1316740" target="_blank"> <img src="https://www.sympla.com.br/images/btn-register-widget.png"></img> </a> -->
 
-- Workshop: Análise exploratória em python. 
+- Workshop: Análise exploratória em Python. 
+
+  Ministrante: Jodavid Ferreira
 
 <!--<a class="button-small-text" href="https://www.sympla.com.br/workshop-pacote-torch__1316752" target="_blank"> <img src="https://www.sympla.com.br/images/btn-register-widget.png"></img> </a> -->
 
 - Workshop: PySpark 
+
+  Ministrante: Jonatas
 
 <!--<a class="button-small-text" href="https://www.sympla.com.br/workshop-introducao-ao-github__1316754" target="_blank"> <img src="https://www.sympla.com.br/images/btn-register-widget.png"></img> </a> -->
 
