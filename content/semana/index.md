@@ -31,35 +31,13 @@ As atividades presenciais acontecerão no Campus Politécnico da Universidade Fe
 
 
 
-# Submissão de trabalhos
 
-<center>
-<img src="images/trabalhos_2022.jpg" alt="" width="70%"/>
-</center>
-
-
-
-É aluno de graduação ou pós, e tem algum trabalho acadêmico relacionado à estatística sendo desenvolvido ou já finalizado? Venha apresentá-lo na nossa semana acadêmica!
-
-- As apresentações (*presencial*) serão de 15 minutos e **haverá emissão de certificado**!
-- Para submeter um trabalho basta preencher o formulário abaixo com título e um resumo de no máximo 200 palavras.
-- As apresentações ocorrerão nos dias 18 e 19 de outubro.
-
-<center>
-
-[**FORMULÁRIO PARA SUBMISSÃO DE TRABALHO**](https://docs.google.com/forms/d/e/1FAIpQLSch8q2XA_ynbi21hdH-9WAvOfJXUkxuM5AVrNYWnb7wAS7xtw/viewform)
 
 
 Para não perder nenhuma novidade, siga-nos pelo [@pet.est.ufpr](https://www.instagram.com/pet.est.ufpr/)!
 
 
 
-### Gostaria de ser nosso apoiador?
-
-Entre em contato pelos canais:
-
-- Pelo email: pet.estatistica.ufpr@gmail.com
-- Pelo Instagram: [@pet.est.ufpr](https://www.instagram.com/pet.est.ufpr/)
 
 
 - [Cronograma](#cronograma)
@@ -94,6 +72,28 @@ Entre em contato pelos canais:
 <br>
 -->
 
+
+# Submissão de trabalhos
+
+<center>
+<img src="images/trabalhos_2022.jpg" alt="" width="70%"/>
+</center>
+
+
+
+É aluno de graduação ou pós, e tem algum trabalho acadêmico relacionado à estatística sendo desenvolvido ou já finalizado? Venha apresentá-lo na nossa semana acadêmica!
+
+- As apresentações (*presencial*) serão de 15 minutos e **haverá emissão de certificado**!
+- Para submeter um trabalho basta preencher o formulário abaixo com título e um resumo de no máximo 200 palavras.
+- As apresentações ocorrerão nos dias 18 e 19 de outubro.
+
+<center>
+
+[**FORMULÁRIO PARA SUBMISSÃO DE TRABALHO**](https://docs.google.com/forms/d/e/1FAIpQLSch8q2XA_ynbi21hdH-9WAvOfJXUkxuM5AVrNYWnb7wAS7xtw/viewform)
+
+
+
+
 # Inscrições
 
 ## Inscrição no evento
@@ -120,7 +120,11 @@ Em breve serão disponibilizados os links para inscrição nos workshops.
 <!--<a class="button-small-text" href="https://www.sympla.com.br/workshop-introducao-ao-github__1316754" target="_blank"> <img src="https://www.sympla.com.br/images/btn-register-widget.png"></img> </a> -->
 
 
+
+
 ### Apresentações de trabalhos
+
+
 
 Em breve mais informações.
 
@@ -182,4 +186,10 @@ A Semana Acadêmica do curso de Estatística da UFPR é um evento organizado pel
 
 
 
+### Gostaria de ser nosso apoiador?
+
+Entre em contato pelos canais:
+
+- Pelo email: pet.estatistica.ufpr@gmail.com
+- Pelo Instagram: [@pet.est.ufpr](https://www.instagram.com/pet.est.ufpr/)
 
