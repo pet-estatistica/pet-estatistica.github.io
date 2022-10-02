@@ -91,7 +91,11 @@ Para não perder nenhuma novidade, siga-nos pelo [@pet.est.ufpr](https://www.ins
 
 [**FORMULÁRIO PARA SUBMISSÃO DE TRABALHO**](https://docs.google.com/forms/d/e/1FAIpQLSch8q2XA_ynbi21hdH-9WAvOfJXUkxuM5AVrNYWnb7wAS7xtw/viewform)
 
+<<<<<<< HEAD
 
+=======
+</center>
+>>>>>>> e89b174633e2e6ae6e509bcfbdc84defa5dbbd26
 
 <br>
 <br>
@@ -104,26 +108,31 @@ Para não perder nenhuma novidade, siga-nos pelo [@pet.est.ufpr](https://www.ins
 **Em breve formulário para inscrição**
 
 
+
 ## Inscrição nos workshops
 
 
 Em breve serão disponibilizados os links para inscrição nos workshops.
 
-- **Workshop:  R - Relatórios Dinâmicos / QUARTO**
+**Workshop:  R - Relatórios Dinâmicos / QUARTO**
 
-  Ministrante: Ariane Hayana
+Ministrante: Ariane Hayana
 
 <!--<a class="button-small-text" href="https://www.sympla.com.br/workshop-introducao-ao-python__1316740" target="_blank"> <img src="https://www.sympla.com.br/images/btn-register-widget.png"></img> </a> -->
 
-- **Workshop: Análise exploratória em Python** 
+**Workshop: Análise exploratória em Python** 
 
-  Ministrante: Jodavid Ferreira
+Ministrante: Jodavid Ferreira
 
 <!--<a class="button-small-text" href="https://www.sympla.com.br/workshop-pacote-torch__1316752" target="_blank"> <img src="https://www.sympla.com.br/images/btn-register-widget.png"></img> </a> -->
 
-- **Workshop: PySpark** 
+**Workshop: PySpark** 
 
+<<<<<<< HEAD
   Ministrante: Jonatas Silva do Espiríto Santos
+=======
+Ministrante: Jonatas Silva do Espiríto Santos
+>>>>>>> e89b174633e2e6ae6e509bcfbdc84defa5dbbd26
 
 <!--<a class="button-small-text" href="https://www.sympla.com.br/workshop-introducao-ao-github__1316754" target="_blank"> <img src="https://www.sympla.com.br/images/btn-register-widget.png"></img> </a> -->
 
