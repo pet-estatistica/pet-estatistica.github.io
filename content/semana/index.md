@@ -91,8 +91,10 @@ Para não perder nenhuma novidade, siga-nos pelo [@pet.est.ufpr](https://www.ins
 
 [**FORMULÁRIO PARA SUBMISSÃO DE TRABALHO**](https://docs.google.com/forms/d/e/1FAIpQLSch8q2XA_ynbi21hdH-9WAvOfJXUkxuM5AVrNYWnb7wAS7xtw/viewform)
 
-<center>
 
+
+<br>
+<br>
 
 
 # Inscrições
@@ -121,7 +123,7 @@ Em breve serão disponibilizados os links para inscrição nos workshops.
 
 - **Workshop: PySpark** 
 
-  Ministrante: Jonatas Silva do Espiríto Sant
+  Ministrante: Jonatas Silva do Espiríto Santos
 
 <!--<a class="button-small-text" href="https://www.sympla.com.br/workshop-introducao-ao-github__1316754" target="_blank"> <img src="https://www.sympla.com.br/images/btn-register-widget.png"></img> </a> -->
 
