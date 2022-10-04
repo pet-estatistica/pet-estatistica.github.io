@@ -26,7 +26,7 @@ Em 2022, a Semana Acadêmica ocorrerá no formato **HÍBRIDO**, entre os dias **
 O **certificado de participação** será emitido para quem tiver pelo menos 75% de participação no evento (haverá controle da frequência de participação).
 
 
-As atividades presenciais acontecerão no Campus Politécnico da Universidade Federal do Paraná (UFPR), enquanto que as atividades remotas serão transmitidas no **[Canal do PET no Youtube](https://www.youtube.com/petestatisticaufpr)**.
+As atividades presenciais acontecerão no **Auditório do Departamento de Química – Centro Politécnico, Rua Francisco H. dos Santos, s/n, Jardim das Américas, Curitiba-PR**, enquanto que as atividades remotas serão realizadas pelo [Sympla](#inscrição-nos-workshops).
 
 
 
@@ -81,7 +81,7 @@ Para não perder nenhuma novidade, siga-nos pelo [@pet.est.ufpr](https://www.ins
 
 
 
-É aluno de graduação ou pós, e tem algum trabalho acadêmico relacionado à estatística sendo desenvolvido ou já finalizado? Venha apresentá-lo na nossa semana acadêmica!
+É aluno de graduação ou pós-graduação, e tem algum trabalho acadêmico relacionado à estatística sendo desenvolvido ou já finalizado? Venha apresentá-lo na nossa semana acadêmica!
 
 - As apresentações (*presencial*) serão de 15 minutos e **haverá emissão de certificado**!
 - Para submeter um trabalho basta preencher o formulário abaixo com título e um resumo de no máximo 200 palavras.
