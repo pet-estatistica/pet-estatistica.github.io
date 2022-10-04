@@ -89,13 +89,33 @@ Para não perder nenhuma novidade, siga-nos pelo [@pet.est.ufpr](https://www.ins
 
 <center>
 
-[**FORMULÁRIO PARA SUBMISSÃO DE TRABALHO**](https://docs.google.com/forms/d/e/1FAIpQLSch8q2XA_ynbi21hdH-9WAvOfJXUkxuM5AVrNYWnb7wAS7xtw/viewform)
+**PRAZO DE SUBMISSÃO ENCERRADO**
 
 </center>
 
 
+<!--<center>
+
+[**FORMULÁRIO PARA SUBMISSÃO DE TRABALHO**](https://docs.google.com/forms/d/e/1FAIpQLSch8q2XA_ynbi21hdH-9WAvOfJXUkxuM5AVrNYWnb7wAS7xtw/viewform)
+
+</center>
+-->
+
 <br>
 <br>
+
+
+
+### Apresentações de trabalhos
+
+<br>
+
+<object data="apresentacoes.html" width="100%" height="600px">
+    Your browser doesn’t support the object tag.
+</object>
+
+
+
 
 
 # Inscrições
@@ -128,14 +148,6 @@ Ministrante: Jonatas Silva do Espiríto Santos
 
 
 
-
-### Apresentações de trabalhos
-
-<br>
-
-<object data="apresentacoes.html" width="100%" height="600px">
-    Your browser doesn’t support the object tag.
-</object>
 
 
 
