@@ -115,20 +115,20 @@ Em breve serão disponibilizados os links para inscrição nos workshops.
 
 Ministrante: Ariane Hayana
 
-<!--<a class="button-small-text" href="https://www.sympla.com.br/workshop-introducao-ao-python__1316740" target="_blank"> <img src="https://www.sympla.com.br/images/btn-register-widget.png"></img> </a> -->
+<a class="button-small-text" href="https://www.sympla.com.br/evento-online/minicurso-01-r-relatorios-dinamicos-quarto/1742543" target="_blank"> <img src="https://www.sympla.com.br/images/btn-register-widget.png"></img> </a> 
 
 **Workshop: Análise exploratória em Python** 
 
 Ministrante: Jodavid Ferreira
 
-<!--<a class="button-small-text" href="https://www.sympla.com.br/workshop-pacote-torch__1316752" target="_blank"> <img src="https://www.sympla.com.br/images/btn-register-widget.png"></img> </a> -->
+<a class="button-small-text" href="https://www.sympla.com.br/evento-online/minicurso-02-analise-exploratoria/1742546" target="_blank"> <img src="https://www.sympla.com.br/images/btn-register-widget.png"></img> </a> 
 
 **Workshop: PySpark** 
 
 Ministrante: Jonatas Silva do Espiríto Santos
 
 
-<!--<a class="button-small-text" href="https://www.sympla.com.br/workshop-introducao-ao-github__1316754" target="_blank"> <img src="https://www.sympla.com.br/images/btn-register-widget.png"></img> </a> -->
+<a class="button-small-text" href="https://www.sympla.com.br/evento-online/minicurso-03-pyspark/1742550" target="_blank"> <img src="https://www.sympla.com.br/images/btn-register-widget.png"></img> </a> 
 
 
 
