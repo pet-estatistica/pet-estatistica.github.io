@@ -108,9 +108,6 @@ Para não perder nenhuma novidade, siga-nos pelo [@pet.est.ufpr](https://www.ins
 
 ## Inscrição nos workshops
 
-
-Em breve serão disponibilizados os links para inscrição nos workshops.
-
 **Workshop:  R - Relatórios Dinâmicos / QUARTO**
 
 Ministrante: Ariane Hayana
@@ -135,9 +132,12 @@ Ministrante: Jonatas Silva do Espiríto Santos
 
 ### Apresentações de trabalhos
 
+<object data="apresentacoes.html" width="100%" height="1080px">
+    Your browser doesn’t support the object tag.
+</object>
 
 
-Em breve mais informações.
+<a class="button-small-text" href="https://www.sympla.com.br/evento/palestras---mesas-redondas---apresentacao-de-trabalhos/1742461" target="_blank"> <img src="https://www.sympla.com.br/images/btn-register-widget.png"></img> </a> 
 
 <!--
 #### Segunda-feira (13/09)
