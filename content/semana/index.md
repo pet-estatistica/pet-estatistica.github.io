@@ -94,6 +94,10 @@ Para não perder nenhuma novidade, siga-nos pelo [@pet.est.ufpr](https://www.ins
 </center>
 
 
+<br>
+<br>
+
+
 # Inscrições
 
 ## Inscrição no evento
@@ -122,6 +126,7 @@ Ministrante: Jodavid Ferreira
 **Workshop: PySpark** 
 
 Ministrante: Jonatas Silva do Espiríto Santos
+
 
 <!--<a class="button-small-text" href="https://www.sympla.com.br/workshop-introducao-ao-github__1316754" target="_blank"> <img src="https://www.sympla.com.br/images/btn-register-widget.png"></img> </a> -->
 
