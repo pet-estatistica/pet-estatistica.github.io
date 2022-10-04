@@ -102,9 +102,8 @@ Para não perder nenhuma novidade, siga-nos pelo [@pet.est.ufpr](https://www.ins
 
 ## Inscrição no evento
 
-**Em breve formulário para inscrição**
 
-
+<a class="button-small-text" href="https://www.sympla.com.br/evento/palestras---mesas-redondas---apresentacao-de-trabalhos/1742461" target="_blank"> <img src="https://www.sympla.com.br/images/btn-register-widget.png"></img> </a> 
 
 ## Inscrição nos workshops
 
@@ -139,7 +138,6 @@ Ministrante: Jonatas Silva do Espiríto Santos
 </object>
 
 
-<a class="button-small-text" href="https://www.sympla.com.br/evento/palestras---mesas-redondas---apresentacao-de-trabalhos/1742461" target="_blank"> <img src="https://www.sympla.com.br/images/btn-register-widget.png"></img> </a> 
 
 <!--
 #### Segunda-feira (13/09)
