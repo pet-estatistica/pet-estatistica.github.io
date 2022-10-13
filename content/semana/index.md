@@ -113,7 +113,7 @@ Ministrante: Ariane Hayana
 
 <a class="button-small-text" href="https://www.sympla.com.br/evento-online/minicurso-01-r-relatorios-dinamicos-quarto/1742543" target="_blank"> <img src="https://www.sympla.com.br/images/btn-register-widget.png"></img> </a> 
 
-**Workshop: Análise exploratória em Python** 
+**Workshop: Análise exploratória com Python** 
 
 Ministrante: Jodavid Ferreira
 
