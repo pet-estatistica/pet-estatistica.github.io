@@ -26,7 +26,7 @@ Em 2022, a Semana Acadêmica ocorrerá no formato **HÍBRIDO**, entre os dias **
 O **certificado de participação** será emitido para quem tiver pelo menos 75% de participação no evento (haverá controle da frequência de participação).
 
 
-As atividades presenciais acontecerão no Campus Politécnico da Universidade Federal do Paraná (UFPR), enquanto que as atividades remotas serão transmitidas no **[Canal do PET no Youtube](https://www.youtube.com/petestatisticaufpr)**.
+As atividades presenciais acontecerão no *Auditório do Departamento de Química – Centro Politécnico, Rua Francisco H. dos Santos, s/n, Jardim das Américas, Curitiba-PR*, enquanto que as atividades remotas serão transmitidas no **[Canal do PET no Youtube](https://www.youtube.com/petestatisticaufpr)**.
 
 
 
