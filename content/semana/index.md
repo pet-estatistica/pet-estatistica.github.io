@@ -21,7 +21,7 @@ A Semana Acadêmica configura-se como uma atividade de extensão e tem como obje
 
 As atividades estarão centradas em criar uma atmosfera para a discussão sobre a formação profissional e científica, promovendo a integração dos alunos, trocas de experiências e atualização sobre novos temas e abordagens. Entende-se que o estímulo à reflexão e a compreensão do cenário atual, e de suas tendências, permitem a identificação de problemas e oportunidades, bem como o estabelecimento de estratégias que visem solucionar demandas atuais e do futuro.
 
-Em 2022, a Semana Acadêmica ocorrerá no formato **HÍBRIDO**, entre os dias **17 a 21 de Outubro**! Todas as atividades serão abertas ao público em geral, de forma gratuita e terá emissão de certificados. Entretanto, será necessário realizar a inscrição via formulário *online*, que em breve será disponibilizado!
+Em 2022, a Semana Acadêmica ocorrerá no formato **HÍBRIDO**, entre os dias **17 a 21 de Outubro**! Todas as atividades serão abertas ao público em geral, de forma gratuita e terá emissão de certificados. Entretanto, será necessário realizar a inscrição via formulário *online*.
 
 O **certificado de participação** será emitido para quem tiver pelo menos 75% de participação no evento (haverá controle da frequência de participação).
 
