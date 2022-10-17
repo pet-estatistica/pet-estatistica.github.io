@@ -52,7 +52,7 @@ _Áreas de interesse_: Processos Estocásticos; Planejamento de Experimentos; An
 
 **[Eduardo Lopes Cock](https://www.linkedin.com/in/eduardo-lopes-72b198151)**
 
-Graduando em Estatística desde 2018, atualmente o projeto individual em desenvolvimento possui como título "O Desempenho de Estudantes com Diferentes Perfis no ENEM", cujo objetivo é fazer uma análise histórica dos anos em que o exame passou a considerar a TRI para avaliação do desempenho dos candidatos.
+Graduando em Estatística desde 2018, atualmente o projeto individual em desenvolvimento possui como título "Fatores associados à proficiência no Enem: uma análise histórica", cujo objetivo é fazer uma análise referente a aplicação do Enem desde os anos em que o exame passou a considerar a TRI para avaliação do desempenho dos estudantes.
 
 _Áreas de interesse_: Teoria de Resposta ao Item; Estatística aplicada à educação; Análise de Cluster; Cadeias de Markov.
 
