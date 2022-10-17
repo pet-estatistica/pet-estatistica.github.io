@@ -98,6 +98,18 @@ Para não perder nenhuma novidade, siga-nos pelo [@pet.est.ufpr](https://www.ins
 <br>
 
 
+### Apresentações de trabalhos
+
+<br>
+
+<object data="apresentacoes.html" width="100%" height="600px">
+    Your browser doesn’t support the object tag.
+</object>
+
+
+
+
+
 # Inscrições
 
 ## Inscrição no evento
@@ -129,13 +141,6 @@ Ministrante: Jonatas Silva do Espiríto Santos
 
 
 
-### Apresentações de trabalhos
-
-<br>
-
-<object data="apresentacoes.html" width="100%" height="600px">
-    Your browser doesn’t support the object tag.
-</object>
 
 
 
