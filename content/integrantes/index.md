@@ -50,6 +50,16 @@ _Áreas de interesse_: Processos Estocásticos; Planejamento de Experimentos; An
 
 
 
+**[Denny Andrew da Silval](https://www.linkedin.com/in/denny-andrew-137598160/)**
+
+Graduando em Estatística desde 2020, anteriormente cursei 2 anos de Química pela
+federal, mas não me encontrei tanto. Meu maior hobby é sempre estar aprendendo
+algo diferente e tenho extremo apreço por relacionar conhecimentos distintos.
+
+_Áreas de interesse_: Séries Temporais; Análise Exploratória; Estatística Computacional; Desenvolvimente de Dashboards.
+
+
+
 **[Eduardo Lopes Cock](https://www.linkedin.com/in/eduardo-lopes-72b198151)**
 
 Graduando em Estatística desde 2018, atualmente o projeto individual em desenvolvimento possui como título "Fatores associados à proficiência no Enem: uma análise histórica", cujo objetivo é fazer uma análise referente a aplicação do Enem desde os anos em que o exame passou a considerar a TRI para avaliação do desempenho dos estudantes.
