@@ -50,7 +50,7 @@ _Áreas de interesse_: Processos Estocásticos; Planejamento de Experimentos; An
 
 
 
-**[Denny Andrew da Silval](https://www.linkedin.com/in/denny-andrew-137598160/)**
+**[Denny Andrew da Silva](https://www.linkedin.com/in/denny-andrew-137598160/)**
 
 Graduando em Estatística desde 2020, anteriormente cursei 2 anos de Química pela
 federal, mas não me encontrei tanto. Meu maior hobby é sempre estar aprendendo
