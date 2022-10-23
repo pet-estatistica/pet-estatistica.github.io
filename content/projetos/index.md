@@ -34,3 +34,15 @@ As transmissões são realizadas ao vivo às 18:00 hrs de sextas-feiras no canal
 
 Também é possível ver todas as edições pela playlist: 
 [PET Convida](https://youtube.com/playlist?list=PLyQM-JPBi0xygjVNBLb-6DYMlG9s1bPwt).
+
+## Feira de Cursos e Profissões
+
+<center>
+<img src="Feira.jpg" alt="" width="40%"/>
+</center>
+
+A Feira de Cursos e Profissões da UFPR ocorre anualmente, onde todos os cursos têm a oportunidade de serem apresentados para os alunos do Ensino Médio de diversas escolas do Paraná. O principal objetivo da Feira de Cursos e Profissões é apresentar a dinâmica do curso de Estatística da UFPR para os alunos do Ensino Médio que participam da Feira.
+
+São apresentadas informações sobre o curso de Estatística aos participantes por meio de conversa com os PETianos que fazem parte do curso e que já passaram pela experiência de ter que decidir qual caminho seguir, além do uso de jogos envolvendo estatística, apresentação de painéis com exemplos de aplicações da Estatística nos mais diversos meios (esportes, pesquisas de satisfação de produtos e serviços, previsões, análises, entre outros) e a elaboração de atividades extras para serem apresentadas nos dias previstos para a Feira.
+
+O principal resultado esperado é um aumento no número de candidatos do Vestibular da UFPR que desejem ingressar no curso de Estatística devido à Feira de Cursos e Profissões.
