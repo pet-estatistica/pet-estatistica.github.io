@@ -46,3 +46,4 @@ A Feira de Cursos e Profissões da UFPR ocorre anualmente, onde todos os cursos 
 São apresentadas informações sobre o curso de Estatística aos participantes por meio de conversa com os PETianos que fazem parte do curso e que já passaram pela experiência de ter que decidir qual caminho seguir, além do uso de jogos envolvendo estatística, apresentação de painéis com exemplos de aplicações da Estatística nos mais diversos meios (esportes, pesquisas de satisfação de produtos e serviços, previsões, análises, entre outros) e a elaboração de atividades extras para serem apresentadas nos dias previstos para a Feira.
 
 O principal resultado esperado é um aumento no número de candidatos do Vestibular da UFPR que desejem ingressar no curso de Estatística devido à Feira de Cursos e Profissões.
+
