@@ -31,7 +31,7 @@ _Áreas de interesse_: Visualização de dados; Estatística computacional.
 
 Graduanda em Estatística na UFPR desde 2018, e  atualmente estagiando na área de análise de dados. Gosto de trabalhar com ferramentas de dashboard, visualização de dados e programação. No tempo livre costumo assistir filmes e séries.
 
-_Áreas de interesse_: Visualização de dados; Data Science; Estatística Computacional; Análise de Sobrevivência; Regressão Linear; Análise de dados categóricos.
+_Áreas de interesse_: Visualização de dados; Data Science; Estatística Computacional; Análise de Sobrevivência; Regressão Linear; Análise de dados categóricos; Séries Temporais.
 
 
 
@@ -80,7 +80,10 @@ Graduando em Estatística na UFPR desde 2018.
 
 _Áreas de interesse_: Data Science; Storytelling com dados; Python; SQL.
 
+**[Paulo Justiniano Ribeiro Neto](https://www.linkedin.com/in/paulo-justiniano-a0297a210/)**
 
+Ingressei no curso de Estatística em 2022 e já no primeiro semestre entrei para o PET. Sou escoteiro desde 2014 e meus hobbies envolvem games e basquete. Adoro conversar com as pessoas e aprender sempre o máximo possível com essas trocas.
 
+_Áreas de interesse_: Análise de risco; Modelagem estatística; Otimização de processos; Séries temporais.
 
 
