@@ -43,6 +43,14 @@ _Áreas de interesse_: Matemática Pura e Aplicada; Probabilidade; Métodos Num�
 
 
 
+**[Camilla Virginia Rodrigues da Silva] (https://www.linkedin.com/in/camilla-silva-205a02204/)**
+
+Graduanda em Estatística, iniciei o curso em 2022, optei por fazer Estatística pela indicação de um supervisor de estágio de ensino médio, depois que ele viu um quadro informativo que eu fiz, até então não conhecia o curso e depois ao pesquisar adorei. Gosto muito da visulização de dados e da estatística voltada a gestão de qualidade. Ingressei no PET com o projeto de pesquisa intitulado como "A Importância do PDCA para Empresas Eireli: Um Estudo de Caso no Ramo da Construção Civil" e pretendo seguir adiante com ele.
+
+_Áreas de interesse_: Visualização de Dados; Controle Estatístico de Processos; Controle Estatístico de Qualidade.
+
+
+
 **[Cynthia dos Santos Vidal](https://www.linkedin.com/in/cynthia-vidal-b55126148/)**
 
 Licenciada em Matemática e graduanda em Estatística que gosta de investigar o comportamento do consumidor online e tenta aplicar os conhecimentos de Estatística em Web Analytics.
