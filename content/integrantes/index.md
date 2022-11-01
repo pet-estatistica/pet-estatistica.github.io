@@ -94,4 +94,10 @@ Ingressei no curso de Estatística em 2022 e já no primeiro semestre entrei par
 
 _Áreas de interesse_: Análise de risco; Modelagem estatística; Otimização de processos; Séries temporais.
 
+**[Stefany Pinheiro]**
+
+Iniciou o curso em 2022 e ingressou no PET no primeiro período do mesmo ano. Gosta de jogos online, livros de ficção científica e faz alguns trabalhos nas redes sociais.
+
+_Áreas de interesse_:Visualização de dados; Estatística computacional.
+
 
