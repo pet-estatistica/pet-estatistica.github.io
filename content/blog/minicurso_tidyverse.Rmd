@@ -1,0 +1,88 @@
+---
+title: 'Introdução ao TidyVerse'
+author: Caio Gomes Alves
+date: '`r Sys.Date()`'
+slug: introducao-ao-tidyverse
+categories:
+  - r
+  - dados
+tags:
+  - r
+  - blogdown
+  - analise
+  - dados
+description: 'Um minicurso introdutório ao congregado de pacotes mais utilizado para a análise de dados no R : o {tidyverse}'
+images:
+  - 'img/caio_post/tidyverse.png'
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(nycflights13)
+library(gapminder)
+```
+
+## O Pacote Tidyverse
+
+Uma parte extremamente importante na análise de dados envolve a organização e a estruturação dos mesmos, para que possam ser analisados computacionalmente. Mas muitas vezes, os dados que dispomos não estão exatamente do jeito que precisamos, e muito tempo é gasto na retabulação/reestruturação de planilhas e de tabelas (muitas vezes direto no Excel/Libre Office).
+
+Tendo isso em mente, o objetivo deste minicurso é introduzir o pacote TidyVerse, um compilado de 8 diferentes pacotes (ggplot2, tibble, tidyr, readr, purrr, dplyr, stringr e forcats), cada um tratando de um particular aspecto da criação de dados *tidy*.
+
+Grande parte deste minicurso se baseia no livro *R for Data Science*, escrito por Hadley Wickham e Garret Grolemund, disponível gratuitamente (em inglês) no site https://r4ds.had.co.nz/ , ou em versão física (traduzida) para compra em diversos sites. Caso queira verificar algum tópico deste curso de maneira mais profunda, recomendo fortemente dar uma olhada no livro, que com certeza terá mais substância.
+
+### Instalando o TidyVerse
+
+```{r, eval=FALSE}
+install.packages("tidyverse")
+library(tidyverse)
+# ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──
+# ✔ ggplot2 3.3.6     ✔ purrr   0.3.4
+# ✔ tibble  3.1.8     ✔ dplyr   1.0.9
+# ✔ tidyr   1.2.0     ✔ stringr 1.4.1
+# ✔ readr   2.1.2     ✔ forcats 0.5.1
+# ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+# ✖ dplyr::filter() masks stats::filter()
+# ✖ dplyr::lag()    masks stats::lag()
+# 
+```
+
+Os conflitos que aparecem são devido às funções filter() e lag() estarem disponíveis tanto no pacote dplyr quanto no pacote stats, que faz parte do R base. Nesse caso, as funções pertencentes ao R base são substituídas (mascaradas) pelas suas contrapartes do dplyr, e caso seja necessário utilizá-las, será necessário chamar `r "stats::filter()"` ou `r "stats::lag()"`.
+
+### Bases de Dados Utilizadas
+
+Utilizaremos três bases de dados durante este curso, que serão manipuladas pelas diversas funções do tidyverse. Duas delas (flights e gapminder) fazem parte de pacotes específicos, que devem ser instalados e chamados, e a terceira (diamonds) faz parte da biblioteca básica do R.
+
+```{r, eval = FALSE}
+# Instalando os pacotes nycflights e gapminder
+install.packages("nycflights13")
+install.packages("gapminder")
+
+```
+
+```{r}
+# Carregando os respectivos pacotes
+library(nycflights13)
+library(gapminder)
+
+# Carregaremos os dados para objetos, que serão utilizados durante o minicurso
+voos <- nycflights13::flights
+paises <- gapminder::gapminder
+diamantes <- diamonds
+```
+
+Caso queira verificar a documentação por trás de cada uma dessas bases de dados, utilize ?flights , ?gapminder e ?diamonds.
+
+## Organizando dados com tibbles e DplyR
+
+### A Base nycflights13
+
+Os dados carregados pelo pacote nycflights13::flights são referentes a todos os voos que passaram pelo aeroporto de Nova York no ano de 2013, com diversas informações, como data (dividida em ano, mês e ano), horários de saída e chegada, atraso, destino/origem do voo, dentre outros. Vamos dar uma olhada nas primeiras dez linhas dessa base, com a função head():
+
+```{r}
+head(voos)
+```
+
+É possível perceber uma diferença notável na estrutura desses dados: eles não estão organizados em um data frame, mas em um objeto da classe tibble. O tibble é um data frame, porém com algumas diferenças fundamentais:
+
+#### Tibbles x Data Frames
+

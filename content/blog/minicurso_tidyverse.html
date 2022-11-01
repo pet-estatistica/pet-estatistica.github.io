@@ -1,0 +1,81 @@
+---
+title: 'Introdução ao TidyVerse'
+author: Caio Gomes Alves
+date: '2022-11-01'
+slug: introducao-ao-tidyverse
+categories:
+  - r
+  - dados
+tags:
+  - r
+  - blogdown
+  - analise
+  - dados
+description: 'Um minicurso introdutório ao congregado de pacotes mais utilizado para a análise de dados no R : o {tidyverse}'
+images:
+  - 'img/caio_post/tidyverse.png'
+---
+
+
+
+<div id="o-pacote-tidyverse" class="section level2">
+<h2>O Pacote Tidyverse</h2>
+<p>Uma parte extremamente importante na análise de dados envolve a organização e a estruturação dos mesmos, para que possam ser analisados computacionalmente. Mas muitas vezes, os dados que dispomos não estão exatamente do jeito que precisamos, e muito tempo é gasto na retabulação/reestruturação de planilhas e de tabelas (muitas vezes direto no Excel/Libre Office).</p>
+<p>Tendo isso em mente, o objetivo deste minicurso é introduzir o pacote TidyVerse, um compilado de 8 diferentes pacotes (ggplot2, tibble, tidyr, readr, purrr, dplyr, stringr e forcats), cada um tratando de um particular aspecto da criação de dados <em>tidy</em>.</p>
+<p>Grande parte deste minicurso se baseia no livro <em>R for Data Science</em>, escrito por Hadley Wickham e Garret Grolemund, disponível gratuitamente (em inglês) no site <a href="https://r4ds.had.co.nz/" class="uri">https://r4ds.had.co.nz/</a> , ou em versão física (traduzida) para compra em diversos sites. Caso queira verificar algum tópico deste curso de maneira mais profunda, recomendo fortemente dar uma olhada no livro, que com certeza terá mais substância.</p>
+<div id="instalando-o-tidyverse" class="section level3">
+<h3>Instalando o TidyVerse</h3>
+<pre class="r"><code>install.packages(&quot;tidyverse&quot;)
+library(tidyverse)
+# ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──
+# ✔ ggplot2 3.3.6     ✔ purrr   0.3.4
+# ✔ tibble  3.1.8     ✔ dplyr   1.0.9
+# ✔ tidyr   1.2.0     ✔ stringr 1.4.1
+# ✔ readr   2.1.2     ✔ forcats 0.5.1
+# ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+# ✖ dplyr::filter() masks stats::filter()
+# ✖ dplyr::lag()    masks stats::lag()
+# </code></pre>
+<p>Os conflitos que aparecem são devido às funções filter() e lag() estarem disponíveis tanto no pacote dplyr quanto no pacote stats, que faz parte do R base. Nesse caso, as funções pertencentes ao R base são substituídas (mascaradas) pelas suas contrapartes do dplyr, e caso seja necessário utilizá-las, será necessário chamar stats::filter() ou stats::lag().</p>
+</div>
+<div id="bases-de-dados-utilizadas" class="section level3">
+<h3>Bases de Dados Utilizadas</h3>
+<p>Utilizaremos três bases de dados durante este curso, que serão manipuladas pelas diversas funções do tidyverse. Duas delas (flights e gapminder) fazem parte de pacotes específicos, que devem ser instalados e chamados, e a terceira (diamonds) faz parte da biblioteca básica do R.</p>
+<pre class="r"><code># Instalando os pacotes nycflights e gapminder
+install.packages(&quot;nycflights13&quot;)
+install.packages(&quot;gapminder&quot;)</code></pre>
+<pre class="r"><code># Carregando os respectivos pacotes
+library(nycflights13)
+library(gapminder)
+
+# Carregaremos os dados para objetos, que serão utilizados durante o minicurso
+voos &lt;- nycflights13::flights
+paises &lt;- gapminder::gapminder
+diamantes &lt;- diamonds</code></pre>
+<p>Caso queira verificar a documentação por trás de cada uma dessas bases de dados, utilize ?flights , ?gapminder e ?diamonds.</p>
+</div>
+</div>
+<div id="organizando-dados-com-tibbles-e-dplyr" class="section level2">
+<h2>Organizando dados com tibbles e DplyR</h2>
+<div id="a-base-nycflights13" class="section level3">
+<h3>A Base nycflights13</h3>
+<p>Os dados carregados pelo pacote nycflights13::flights são referentes a todos os voos que passaram pelo aeroporto de Nova York no ano de 2013, com diversas informações, como data (dividida em ano, mês e ano), horários de saída e chegada, atraso, destino/origem do voo, dentre outros. Vamos dar uma olhada nas primeiras dez linhas dessa base, com a função head():</p>
+<pre class="r"><code>head(voos)</code></pre>
+<pre><code>## # A tibble: 6 x 19
+##    year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
+##   &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;
+## 1  2013     1     1      517            515         2      830            819
+## 2  2013     1     1      533            529         4      850            830
+## 3  2013     1     1      542            540         2      923            850
+## 4  2013     1     1      544            545        -1     1004           1022
+## 5  2013     1     1      554            600        -6      812            837
+## 6  2013     1     1      554            558        -4      740            728
+## # … with 11 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;,
+## #   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;,
+## #   hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;</code></pre>
+<p>É possível perceber uma diferença notável na estrutura desses dados: eles não estão organizados em um data frame, mas em um objeto da classe tibble. O tibble é um data frame, porém com algumas diferenças fundamentais:</p>
+<div id="tibbles-x-data-frames" class="section level4">
+<h4>Tibbles x Data Frames</h4>
+</div>
+</div>
+</div>
