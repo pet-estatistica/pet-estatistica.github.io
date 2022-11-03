@@ -1,7 +1,7 @@
 ---
 title: 'Introdução ao TidyVerse'
 author: Caio Gomes Alves
-date: '2022-11-02'
+date: '2022-11-03'
 slug: introducao-ao-tidyverse
 categories:
   - r
@@ -245,7 +245,15 @@ x &lt; y</code></pre>
 <pre class="r"><code># João tem a mesma idade que Maria?
 x == y</code></pre>
 <pre><code>## [1] NA</code></pre>
-<pre class="r"><code># Em todos os casos, a resposta é a mesma: NÃO SEI</code></pre>
+<pre class="r"><code># Em todos os casos, a resposta é a mesma: NÃO SEI
+# Para lidarmos com NAs, podemos usar a função is.na()
+# Que retorna TRUE caso seja NA, e FALSE caso contrário
+is.na(x)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code># Muitas funções tem embutidos argumentos específicos para lidar com NAs
+# Na função mean(), por exemplo, é usado na.rm = TRUE
+mean(c(1,2,3,NA,4), na.rm = TRUE)</code></pre>
+<pre><code>## [1] 2.5</code></pre>
 <p>A função filter() por padrão só mantém as linhas em que as comparações retornam TRUE, excluindo quem retornar FALSE ou NA. Para contornar isso, podemos utilizar a função is.na(), que retorna TRUE caso o valor seja NA. Por exemplo, há voos que tem tempo no ar (air_time) vazio, ou seja, voos que foram cancelados. Para selecionar somente eles, usaremos:</p>
 <pre class="r"><code>(cancelados &lt;- filter(voos, is.na(air_time)))</code></pre>
 <pre><code>## # A tibble: 9,430 × 19
@@ -523,6 +531,86 @@ mutate(select(voos, distance, air_time),velocidade_media = distance/air_time)</c
 <h3>O pipe</h3>
 <p>O pipe, denotado pelo caractere %&gt;% serve como uma operação especial que “pega” o que está antes dele, e passa como primeiro argumento para a função após ele. Vejamos de maneira prática:</p>
 <pre class="r"><code>x &lt;- c(1,2,3,4,5,6)
-# Digamos que </code></pre>
+# Digamos que queremos calcular a média desses valores
+
+# &quot;Normalmente&quot;, usamos a seguinte notação:
+mean(x)</code></pre>
+<pre><code>## [1] 3.5</code></pre>
+<pre class="r"><code># Usando o pipe, teríamos:
+x %&gt;% mean()</code></pre>
+<pre><code>## [1] 3.5</code></pre>
+<p>Vendo o exemplo acima, não aparenta haver motivo para usar o pipe. Mas, o seu verdadeiro potencial reside no encadeamento de funções:</p>
+<pre class="r"><code># Digamos que queremos filtrar os voos que aconteceram no mês de Maio
+# Depois queremos selecionar somente as colunas origin, dest, air_time e distance
+# Por último, vamos criar uma nova coluna com a velocidade média
+
+# Vamos começar criando variáveis intermediárias:
+voos2 &lt;- filter(voos, month == 5)
+voos3 &lt;- select(voos2, origin, dest, air_time, distance)
+voos4 &lt;- mutate(voos3, velocidade_media = distance/air_time)
+
+voos4</code></pre>
+<pre><code>## # A tibble: 28,796 × 5
+##    origin dest  air_time distance velocidade_media
+##    &lt;chr&gt;  &lt;chr&gt;    &lt;dbl&gt;    &lt;dbl&gt;            &lt;dbl&gt;
+##  1 JFK    LAX        341     2475             7.26
+##  2 EWR    CLT         94      529             5.63
+##  3 JFK    MIA        144     1089             7.56
+##  4 LGA    IAH        190     1416             7.45
+##  5 LGA    FLL        140     1076             7.69
+##  6 LGA    ATL        113      762             6.74
+##  7 LGA    IAD         48      229             4.77
+##  8 LGA    BOS         35      184             5.26
+##  9 LGA    DTW         74      502             6.78
+## 10 LGA    ORD        112      733             6.54
+## # … with 28,786 more rows
+## # ℹ Use `print(n = ...)` to see more rows</code></pre>
+<pre class="r"><code># Vejam quantas variáveis desnecessárias foram criadas
+# Podemos fazer como antes, e compor funções:
+voos2 &lt;- mutate(select(filter(voos,month == 5),origin, dest, air_time, distance), velocidade_media = distance/air_time)
+
+voos2</code></pre>
+<pre><code>## # A tibble: 28,796 × 5
+##    origin dest  air_time distance velocidade_media
+##    &lt;chr&gt;  &lt;chr&gt;    &lt;dbl&gt;    &lt;dbl&gt;            &lt;dbl&gt;
+##  1 JFK    LAX        341     2475             7.26
+##  2 EWR    CLT         94      529             5.63
+##  3 JFK    MIA        144     1089             7.56
+##  4 LGA    IAH        190     1416             7.45
+##  5 LGA    FLL        140     1076             7.69
+##  6 LGA    ATL        113      762             6.74
+##  7 LGA    IAD         48      229             4.77
+##  8 LGA    BOS         35      184             5.26
+##  9 LGA    DTW         74      502             6.78
+## 10 LGA    ORD        112      733             6.54
+## # … with 28,786 more rows
+## # ℹ Use `print(n = ...)` to see more rows</code></pre>
+<pre class="r"><code># O resultado é o mesmo, porém a função criada é muito complexa para ser lida
+# Pois as operações ocorrem de dentro para fora. Isso complica o debugging
+# Caso ocorram erros. Vejamos como seria com o pipe:
+voos2 &lt;- voos %&gt;% 
+    filter(month == 5) %&gt;% 
+    select(origin, dest, air_time, distance) %&gt;% 
+    mutate(velocidade_media = distance/air_time)
+
+voos2</code></pre>
+<pre><code>## # A tibble: 28,796 × 5
+##    origin dest  air_time distance velocidade_media
+##    &lt;chr&gt;  &lt;chr&gt;    &lt;dbl&gt;    &lt;dbl&gt;            &lt;dbl&gt;
+##  1 JFK    LAX        341     2475             7.26
+##  2 EWR    CLT         94      529             5.63
+##  3 JFK    MIA        144     1089             7.56
+##  4 LGA    IAH        190     1416             7.45
+##  5 LGA    FLL        140     1076             7.69
+##  6 LGA    ATL        113      762             6.74
+##  7 LGA    IAD         48      229             4.77
+##  8 LGA    BOS         35      184             5.26
+##  9 LGA    DTW         74      502             6.78
+## 10 LGA    ORD        112      733             6.54
+## # … with 28,786 more rows
+## # ℹ Use `print(n = ...)` to see more rows</code></pre>
+<pre class="r"><code># Percebam que as operações foram realizadas na ordem em que foram aparecendo.</code></pre>
+<p>Como visto, o pipe auxilia no encadeamento de transformações sucessivas de funções, sem que seja necessário criar objetos intermediários desnecessários. E ele funciona especialmente bem com as funções do dplyr, pois todas elas tem como entrada um data frame e como saída outro data frame. Com isso, podemos fazer diversas transformações seguidas, seguindo a ordem conforme formos colocando elas.</p>
+<p>A partir daqui, todos os exemplos serão utilizando pipe, então caso ainda encontre alguma dificuldade, recomendo ler a documentação do pacote magrittr, disponível em <a href="https://magrittr.tidyverse.org/" class="uri">https://magrittr.tidyverse.org/</a> , além do capítulo 18 do livro <em>R for Data Science</em>, disponível em <a href="https://r4ds.had.co.nz/pipes.html" class="uri">https://r4ds.had.co.nz/pipes.html</a> .</p>
 </div>
 </div>

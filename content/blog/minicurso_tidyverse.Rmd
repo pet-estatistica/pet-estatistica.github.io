@@ -199,6 +199,13 @@ x < y
 x == y
 
 # Em todos os casos, a resposta é a mesma: NÃO SEI
+# Para lidarmos com NAs, podemos usar a função is.na()
+# Que retorna TRUE caso seja NA, e FALSE caso contrário
+is.na(x)
+
+# Muitas funções tem embutidos argumentos específicos para lidar com NAs
+# Na função mean(), por exemplo, é usado na.rm = TRUE
+mean(c(1,2,3,NA,4), na.rm = TRUE)
 ```
 
 A função filter() por padrão só mantém as linhas em que as comparações retornam TRUE, excluindo quem retornar FALSE ou NA. Para contornar isso, podemos utilizar a função is.na(), que retorna TRUE caso o valor seja NA. Por exemplo, há voos que tem tempo no ar (air_time) vazio, ou seja, voos que foram cancelados. Para selecionar somente eles, usaremos:
@@ -296,6 +303,55 @@ O pipe, denotado pelo caractere %>% serve como uma operação especial que "pega
 
 ```{r}
 x <- c(1,2,3,4,5,6)
-# Digamos que 
+# Digamos que queremos calcular a média desses valores
+
+# "Normalmente", usamos a seguinte notação:
+mean(x)
+
+# Usando o pipe, teríamos:
+x %>% mean()
 ```
 
+Vendo o exemplo acima, não aparenta haver motivo para usar o pipe. Mas, o seu verdadeiro potencial reside no encadeamento de funções:
+
+```{r}
+# Digamos que queremos filtrar os voos que aconteceram no mês de Maio
+# Depois queremos selecionar somente as colunas origin, dest, air_time e distance
+# Por último, vamos criar uma nova coluna com a velocidade média
+
+# Vamos começar criando variáveis intermediárias:
+voos2 <- filter(voos, month == 5)
+voos3 <- select(voos2, origin, dest, air_time, distance)
+voos4 <- mutate(voos3, velocidade_media = distance/air_time)
+
+voos4
+
+# Vejam quantas variáveis desnecessárias foram criadas
+# Podemos fazer como antes, e compor funções:
+voos2 <- mutate(select(filter(voos,month == 5),origin, dest, air_time, distance), velocidade_media = distance/air_time)
+
+voos2
+
+# O resultado é o mesmo, porém a função criada é muito complexa para ser lida
+# Pois as operações ocorrem de dentro para fora. Isso complica o debugging
+# Caso ocorram erros. Vejamos como seria com o pipe:
+voos2 <- voos %>% 
+    filter(month == 5) %>% 
+    select(origin, dest, air_time, distance) %>% 
+    mutate(velocidade_media = distance/air_time)
+
+voos2
+
+# Percebam que as operações foram realizadas na ordem em que foram aparecendo.
+```
+
+Como visto, o pipe auxilia no encadeamento de transformações sucessivas de funções, sem que seja necessário criar objetos intermediários desnecessários. E ele funciona especialmente bem com as funções do dplyr, pois todas elas tem como entrada um data frame e como saída outro data frame. Com isso, podemos fazer diversas transformações seguidas, seguindo a ordem conforme formos colocando elas.
+
+A partir daqui, todos os exemplos serão utilizando pipe, então caso ainda encontre alguma dificuldade, recomendo ler a documentação do pacote magrittr, disponível em https://magrittr.tidyverse.org/ , além do capítulo 18 do livro *R for Data Science*, disponível em https://r4ds.had.co.nz/pipes.html .
+
+### Funções úteis com o mutate()
+
+Muitas funções podem ser utilizada em conjunto com a função mutate(), para extrair informação de suas variáveis. Alguns dos exemplos mais comuns são:
+
+* **Operações aritméticas (+,-,*,/,^)** - Podemos somar, subtrair, multiplicar ou dividir linhas, umas pelas outras, ou realizar essas operações com números (constantes) ou vetores (seguindo a regra da reciclagem do R);
+*
