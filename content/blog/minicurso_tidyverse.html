@@ -1,11 +1,12 @@
 ---
 title: 'Introdução ao TidyVerse'
 author: Caio Gomes Alves
-date: '2022-11-01'
+date: '2022-11-02'
 slug: introducao-ao-tidyverse
 categories:
   - r
   - dados
+  - tidyverse
 tags:
   - r
   - blogdown
@@ -59,23 +60,469 @@ diamantes &lt;- diamonds</code></pre>
 <h2>Organizando dados com tibbles e DplyR</h2>
 <div id="a-base-nycflights13" class="section level3">
 <h3>A Base nycflights13</h3>
-<p>Os dados carregados pelo pacote nycflights13::flights são referentes a todos os voos que passaram pelo aeroporto de Nova York no ano de 2013, com diversas informações, como data (dividida em ano, mês e ano), horários de saída e chegada, atraso, destino/origem do voo, dentre outros. Vamos dar uma olhada nas primeiras dez linhas dessa base, com a função head():</p>
-<pre class="r"><code>head(voos)</code></pre>
-<pre><code>## # A tibble: 6 x 19
-##    year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
-##   &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;
-## 1  2013     1     1      517            515         2      830            819
-## 2  2013     1     1      533            529         4      850            830
-## 3  2013     1     1      542            540         2      923            850
-## 4  2013     1     1      544            545        -1     1004           1022
-## 5  2013     1     1      554            600        -6      812            837
-## 6  2013     1     1      554            558        -4      740            728
-## # … with 11 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;,
-## #   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;,
-## #   hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;</code></pre>
-<p>É possível perceber uma diferença notável na estrutura desses dados: eles não estão organizados em um data frame, mas em um objeto da classe tibble. O tibble é um data frame, porém com algumas diferenças fundamentais:</p>
-<div id="tibbles-x-data-frames" class="section level4">
-<h4>Tibbles x Data Frames</h4>
+<p>Os dados carregados pelo pacote nycflights13::flights são referentes a todos os voos que passaram pelo aeroporto de Nova York no ano de 2013, com diversas informações, como data (dividida em ano, mês e ano), horários de saída e chegada, atraso, destino/origem do voo, dentre outros. Vamos dar uma olhada nessa base:</p>
+<pre class="r"><code>voos</code></pre>
+<pre><code>## # A tibble: 336,776 × 19
+##     year month   day dep_time sched_de…¹ dep_d…² arr_t…³ sched…⁴ arr_d…⁵ carrier
+##    &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;      &lt;int&gt;   &lt;dbl&gt;   &lt;int&gt;   &lt;int&gt;   &lt;dbl&gt; &lt;chr&gt;  
+##  1  2013     1     1      517        515       2     830     819      11 UA     
+##  2  2013     1     1      533        529       4     850     830      20 UA     
+##  3  2013     1     1      542        540       2     923     850      33 AA     
+##  4  2013     1     1      544        545      -1    1004    1022     -18 B6     
+##  5  2013     1     1      554        600      -6     812     837     -25 DL     
+##  6  2013     1     1      554        558      -4     740     728      12 UA     
+##  7  2013     1     1      555        600      -5     913     854      19 B6     
+##  8  2013     1     1      557        600      -3     709     723     -14 EV     
+##  9  2013     1     1      557        600      -3     838     846      -8 B6     
+## 10  2013     1     1      558        600      -2     753     745       8 AA     
+## # … with 336,766 more rows, 9 more variables: flight &lt;int&gt;, tailnum &lt;chr&gt;,
+## #   origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;, hour &lt;dbl&gt;,
+## #   minute &lt;dbl&gt;, time_hour &lt;dttm&gt;, and abbreviated variable names
+## #   ¹​sched_dep_time, ²​dep_delay, ³​arr_time, ⁴​sched_arr_time, ⁵​arr_delay
+## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names</code></pre>
+<p>É possível perceber uma diferença notável na estrutura desses dados: eles não estão organizados em um data frame, mas em um objeto da classe tibble. O tibble é um data frame, porém com algumas diferenças fundamentais: ele não converte strings em fatores e o seu método de impressão por padrão mostra apenas as dez primeiras linhas, e apenas as colunas que cabem na tela. Além disso, é possível verificar o tipo dos dados de cada uma das colunas a partir das letras que aparecem ao lado de cada nome:</p>
+<ul>
+<li><strong>int</strong> é para inteiros;</li>
+<li><strong>dbl</strong> é para <em>doubles</em>, ou números reais;</li>
+<li><strong>chr</strong> é para caracteres, ou <em>strings</em>;</li>
+<li><strong>dttm</strong> é para caracteres de data-tempo (data + horário);</li>
+<li><strong>lgl</strong> é para vetores lógicos (que só possuem TRUE ou FALSE);</li>
+<li><strong>fctr</strong> é para fatores (variáveis categóricas com valores fixos);</li>
+<li><strong>date</strong> para datas (sem horário).</li>
+</ul>
 </div>
+</div>
+<div id="o-básico-do-dplyr" class="section level2">
+<h2>O Básico do Dplyr</h2>
+<p>O dplyr permite que a maioria dos problemas de manipulação de dados sejam resolvidos de maneira simples, utilizando cinco funções principais e uma função auxiliar:</p>
+<ul>
+<li><strong>filter()</strong> para filtrar somente as linhas necessárias para uma análise;</li>
+<li><strong>arrange()</strong> para reorganizar a ordem das linhas;</li>
+<li><strong>select()</strong> para selecionar as variáveis por meio dos nomes;</li>
+<li><strong>mutate()</strong> para criar novas variáveis a partir das já existentes;</li>
+<li><strong>summarise()</strong> para criar resumos de variáveis;</li>
+<li><strong>group_by()</strong> para agrupar os dados e mudar a forma estrutural da análise.</li>
+</ul>
+<p>Essas seis funções são o “feijão-com-arroz” da manipulação de dados com o dplyr, e fornecem uma poderosa ferramenta que é utilizada em um <em>workflow</em> dinâmico e simples de entender:</p>
+<ol style="list-style-type: decimal">
+<li>O primeiro argumento de todas essas funções deve ser um data frame;</li>
+<li>Os argumentos subsequentes definem o que deve ser feito com esse data frame;</li>
+<li>O resultado da função é um data frame.</li>
+</ol>
+<p>Com isso, a composição das funções fica fácil e intuitiva de se fazer.</p>
+</div>
+<div id="filtrando-linhas-com-filter" class="section level2">
+<h2>Filtrando Linhas com filter()</h2>
+<p>A função filter() é utilizada para filtrar somente as linhas de um data frame em que seus valores obedeçam uma expressão. Por exemplo, digamos que queremos todos os dados de voos que ocorreram no dia 05 de maio da base flights. Podemos utilizar o filter() para tal:</p>
+<pre class="r"><code>filter(voos, day == 5, month == 5)</code></pre>
+<pre><code>## # A tibble: 912 × 19
+##     year month   day dep_time sched_de…¹ dep_d…² arr_t…³ sched…⁴ arr_d…⁵ carrier
+##    &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;      &lt;int&gt;   &lt;dbl&gt;   &lt;int&gt;   &lt;int&gt;   &lt;dbl&gt; &lt;chr&gt;  
+##  1  2013     5     5      446        500     -14     636     640      -4 US     
+##  2  2013     5     5      524        515       9     745     800     -15 UA     
+##  3  2013     5     5      539        540      -1     837     840      -3 AA     
+##  4  2013     5     5      552        600      -8     828     835      -7 B6     
+##  5  2013     5     5      552        600      -8     854     854       0 B6     
+##  6  2013     5     5      552        603     -11     926     934      -8 UA     
+##  7  2013     5     5      554        600      -6     759     815     -16 FL     
+##  8  2013     5     5      555        600      -5     727     755     -28 EV     
+##  9  2013     5     5      555        600      -5     814     850     -36 AA     
+## 10  2013     5     5      555        600      -5     649     657      -8 US     
+## # … with 902 more rows, 9 more variables: flight &lt;int&gt;, tailnum &lt;chr&gt;,
+## #   origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;, hour &lt;dbl&gt;,
+## #   minute &lt;dbl&gt;, time_hour &lt;dttm&gt;, and abbreviated variable names
+## #   ¹​sched_dep_time, ²​dep_delay, ³​arr_time, ⁴​sched_arr_time, ⁵​arr_delay
+## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names</code></pre>
+<p>Perceba que somente retornaram as linhas em que o dia = 5 e que o mês = 5, ou seja, 912 linhas ao todo. Note também que o dplyr retornou um data frame, mas que os dados originais não foram alterados. Caso queiramos salvar esse novo conjunto de dados, devemos atribuir ele para um objeto:</p>
+<pre class="r"><code>mai5 &lt;- filter(voos, day == 5, month == 5)
+
+# O dplyr só imprime os dados ou os atribui a um objeto.
+# Caso queira fazer ambos, é só envolver a atribuição entre parenteses:
+
+(dez25 &lt;- filter(voos, day == 25, month == 12))</code></pre>
+<pre><code>## # A tibble: 719 × 19
+##     year month   day dep_time sched_de…¹ dep_d…² arr_t…³ sched…⁴ arr_d…⁵ carrier
+##    &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;      &lt;int&gt;   &lt;dbl&gt;   &lt;int&gt;   &lt;int&gt;   &lt;dbl&gt; &lt;chr&gt;  
+##  1  2013    12    25      456        500      -4     649     651      -2 US     
+##  2  2013    12    25      524        515       9     805     814      -9 UA     
+##  3  2013    12    25      542        540       2     832     850     -18 AA     
+##  4  2013    12    25      546        550      -4    1022    1027      -5 B6     
+##  5  2013    12    25      556        600      -4     730     745     -15 AA     
+##  6  2013    12    25      557        600      -3     743     752      -9 DL     
+##  7  2013    12    25      557        600      -3     818     831     -13 DL     
+##  8  2013    12    25      559        600      -1     855     856      -1 B6     
+##  9  2013    12    25      559        600      -1     849     855      -6 B6     
+## 10  2013    12    25      600        600       0     850     846       4 B6     
+## # … with 709 more rows, 9 more variables: flight &lt;int&gt;, tailnum &lt;chr&gt;,
+## #   origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;, hour &lt;dbl&gt;,
+## #   minute &lt;dbl&gt;, time_hour &lt;dttm&gt;, and abbreviated variable names
+## #   ¹​sched_dep_time, ²​dep_delay, ³​arr_time, ⁴​sched_arr_time, ⁵​arr_delay
+## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names</code></pre>
+<p>Em todos os casos, o primeiro argumento da função foi a nossa base de dados (voos), e os argumentos seguintes são os filtros que queremos aplicar, utilizando comparações com os nomes das colunas. Podemos atribuir quantos filtros quisermos, cada um separado por vírgula.</p>
+<div id="operações-lógicas-e-de-comparação" class="section level3">
+<h3>Operações lógicas e de comparação</h3>
+<p>Para que possamos utilizar o filter() de maneira eficiente, é necessário saber como selecionar as observações com operadores de comparação com auxílio de operadores lógicos. Para isso, usamos dois caracteres especiais, reservados para operadores booleanos: | e &amp;:</p>
+<p>A expressão &amp; é equivalente ao <em>and</em>, e retorna TRUE caso todos os valores sejam verdadeiros, e FALSE caso contrário. A expressão | é equivalente ao <em>or</em>, e retorna TRUE caso algum dos valores seja verdadeiro. Por exemplo, vamos selecionar todos os voos nos meses de novembro e dezembro:</p>
+<pre class="r"><code>filter(voos, month == 11 | month == 12)</code></pre>
+<pre><code>## # A tibble: 55,403 × 19
+##     year month   day dep_time sched_de…¹ dep_d…² arr_t…³ sched…⁴ arr_d…⁵ carrier
+##    &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;      &lt;int&gt;   &lt;dbl&gt;   &lt;int&gt;   &lt;int&gt;   &lt;dbl&gt; &lt;chr&gt;  
+##  1  2013    11     1        5       2359       6     352     345       7 B6     
+##  2  2013    11     1       35       2250     105     123    2356      87 B6     
+##  3  2013    11     1      455        500      -5     641     651     -10 US     
+##  4  2013    11     1      539        545      -6     856     827      29 UA     
+##  5  2013    11     1      542        545      -3     831     855     -24 AA     
+##  6  2013    11     1      549        600     -11     912     923     -11 UA     
+##  7  2013    11     1      550        600     -10     705     659       6 US     
+##  8  2013    11     1      554        600      -6     659     701      -2 US     
+##  9  2013    11     1      554        600      -6     826     827      -1 DL     
+## 10  2013    11     1      554        600      -6     749     751      -2 DL     
+## # … with 55,393 more rows, 9 more variables: flight &lt;int&gt;, tailnum &lt;chr&gt;,
+## #   origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;, hour &lt;dbl&gt;,
+## #   minute &lt;dbl&gt;, time_hour &lt;dttm&gt;, and abbreviated variable names
+## #   ¹​sched_dep_time, ²​dep_delay, ³​arr_time, ⁴​sched_arr_time, ⁵​arr_delay
+## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names</code></pre>
+<p>Aqui, estamos filtrando as linhas em que <strong>month == 11</strong> ou <strong>month == 12</strong>. Ao invés de utilizar essa notação, poderíamos utilizar a função %in%, que compara os valores com um vetor de possibilidades, um a um. A expressão seria simplificada para:</p>
+<pre class="r"><code>filter(voos, month %in% c(11,12))</code></pre>
+<pre><code>## # A tibble: 55,403 × 19
+##     year month   day dep_time sched_de…¹ dep_d…² arr_t…³ sched…⁴ arr_d…⁵ carrier
+##    &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;      &lt;int&gt;   &lt;dbl&gt;   &lt;int&gt;   &lt;int&gt;   &lt;dbl&gt; &lt;chr&gt;  
+##  1  2013    11     1        5       2359       6     352     345       7 B6     
+##  2  2013    11     1       35       2250     105     123    2356      87 B6     
+##  3  2013    11     1      455        500      -5     641     651     -10 US     
+##  4  2013    11     1      539        545      -6     856     827      29 UA     
+##  5  2013    11     1      542        545      -3     831     855     -24 AA     
+##  6  2013    11     1      549        600     -11     912     923     -11 UA     
+##  7  2013    11     1      550        600     -10     705     659       6 US     
+##  8  2013    11     1      554        600      -6     659     701      -2 US     
+##  9  2013    11     1      554        600      -6     826     827      -1 DL     
+## 10  2013    11     1      554        600      -6     749     751      -2 DL     
+## # … with 55,393 more rows, 9 more variables: flight &lt;int&gt;, tailnum &lt;chr&gt;,
+## #   origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;, hour &lt;dbl&gt;,
+## #   minute &lt;dbl&gt;, time_hour &lt;dttm&gt;, and abbreviated variable names
+## #   ¹​sched_dep_time, ²​dep_delay, ³​arr_time, ⁴​sched_arr_time, ⁵​arr_delay
+## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names</code></pre>
+<p>Podemos também operar com a negação de um opereador lógico, invertendo o mesmo com !, que é equivalente ao <em>not</em>. Lembremos da Lei de Morgan: !(x &amp; y) é o mesmo que !x | !y, e !(x | y) é o mesmo que !x &amp; !y. Digamos que queremos encontrar todos os voos que não são dos meses de janeiro e fevereiro. Podemos fazer da seguinte maneira:</p>
+<pre class="r"><code># Podemos filtrar mês a mês:
+nao_jan_fev1 &lt;- filter(voos, month == 3|month == 4|month == 5|month == 6|month == 7|month == 8|month == 9|month == 10|month == 11|month == 12)
+
+# Podemos filtrar com %in%:
+nao_jan_fev2 &lt;- filter(voos, month %in% c(3:12))
+
+# Podemos filtrar com a negação:
+nao_jan_fev3 &lt;- filter(voos, !(month %in% c(1,2)))</code></pre>
+<p>Um problema que pode ocorrer são dados faltantes (NAs no R). Há um problema muito sério na análise de dados com os NAs: eles são infectantes. Isso ocorre porque a maioria das operações quando aplicadas a NA retornam NA:</p>
+<pre class="r"><code># Operadores algébricos:
+3 + NA</code></pre>
+<pre><code>## [1] NA</code></pre>
+<pre class="r"><code>5 - NA</code></pre>
+<pre><code>## [1] NA</code></pre>
+<pre class="r"><code>3 * NA</code></pre>
+<pre><code>## [1] NA</code></pre>
+<pre class="r"><code># Operadores de comparação:
+NA == 1</code></pre>
+<pre><code>## [1] NA</code></pre>
+<pre class="r"><code>NA &gt; 1</code></pre>
+<pre><code>## [1] NA</code></pre>
+<pre class="r"><code>NA &lt; 1</code></pre>
+<pre><code>## [1] NA</code></pre>
+<pre class="r"><code># Talvez o mais confuso seja o seguinte:
+NA == NA</code></pre>
+<pre><code>## [1] NA</code></pre>
+<p>Em seu livro, Hadley usa uma boa analogia para entender as operações com NAs:</p>
+<pre class="r"><code># x é a idade de João. Não sabemos a sua idade:
+x &lt;- NA
+
+# y é a idade de Maria. Também não sabemos a idade dela:
+y &lt;- NA
+
+# João é mais velho que Maria?
+x &gt; y</code></pre>
+<pre><code>## [1] NA</code></pre>
+<pre class="r"><code># João é mais novo que Maria?
+x &lt; y</code></pre>
+<pre><code>## [1] NA</code></pre>
+<pre class="r"><code># João tem a mesma idade que Maria?
+x == y</code></pre>
+<pre><code>## [1] NA</code></pre>
+<pre class="r"><code># Em todos os casos, a resposta é a mesma: NÃO SEI</code></pre>
+<p>A função filter() por padrão só mantém as linhas em que as comparações retornam TRUE, excluindo quem retornar FALSE ou NA. Para contornar isso, podemos utilizar a função is.na(), que retorna TRUE caso o valor seja NA. Por exemplo, há voos que tem tempo no ar (air_time) vazio, ou seja, voos que foram cancelados. Para selecionar somente eles, usaremos:</p>
+<pre class="r"><code>(cancelados &lt;- filter(voos, is.na(air_time)))</code></pre>
+<pre><code>## # A tibble: 9,430 × 19
+##     year month   day dep_time sched_de…¹ dep_d…² arr_t…³ sched…⁴ arr_d…⁵ carrier
+##    &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;      &lt;int&gt;   &lt;dbl&gt;   &lt;int&gt;   &lt;int&gt;   &lt;dbl&gt; &lt;chr&gt;  
+##  1  2013     1     1     1525       1530      -5    1934    1805      NA MQ     
+##  2  2013     1     1     1528       1459      29    2002    1647      NA EV     
+##  3  2013     1     1     1740       1745      -5    2158    2020      NA MQ     
+##  4  2013     1     1     1807       1738      29    2251    2103      NA UA     
+##  5  2013     1     1     1939       1840      59      29    2151      NA 9E     
+##  6  2013     1     1     1952       1930      22    2358    2207      NA EV     
+##  7  2013     1     1     2016       1930      46      NA    2220      NA EV     
+##  8  2013     1     1       NA       1630      NA      NA    1815      NA EV     
+##  9  2013     1     1       NA       1935      NA      NA    2240      NA AA     
+## 10  2013     1     1       NA       1500      NA      NA    1825      NA AA     
+## # … with 9,420 more rows, 9 more variables: flight &lt;int&gt;, tailnum &lt;chr&gt;,
+## #   origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;, hour &lt;dbl&gt;,
+## #   minute &lt;dbl&gt;, time_hour &lt;dttm&gt;, and abbreviated variable names
+## #   ¹​sched_dep_time, ²​dep_delay, ³​arr_time, ⁴​sched_arr_time, ⁵​arr_delay
+## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names</code></pre>
+</div>
+</div>
+<div id="ordenando-linhas-com-arrange" class="section level2">
+<h2>Ordenando linhas com arrange()</h2>
+<p>A função arrange() funciona de maneira similar ao filter(), mas reorganiza as linhas mudando a ordem delas, ao invés de selecioná-las. Ela recebe um data frame como primeiro argumento e os nomes das colunas que devem ser ordenadas. Se mais de um nome for passado, cada coluna a mais sevirá como fator de desempate para as colunas anteriores:</p>
+<pre class="r"><code># Vamos organizar a base em ordem cronológica
+arrange(voos, year, month, day)</code></pre>
+<pre><code>## # A tibble: 336,776 × 19
+##     year month   day dep_time sched_de…¹ dep_d…² arr_t…³ sched…⁴ arr_d…⁵ carrier
+##    &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;      &lt;int&gt;   &lt;dbl&gt;   &lt;int&gt;   &lt;int&gt;   &lt;dbl&gt; &lt;chr&gt;  
+##  1  2013     1     1      517        515       2     830     819      11 UA     
+##  2  2013     1     1      533        529       4     850     830      20 UA     
+##  3  2013     1     1      542        540       2     923     850      33 AA     
+##  4  2013     1     1      544        545      -1    1004    1022     -18 B6     
+##  5  2013     1     1      554        600      -6     812     837     -25 DL     
+##  6  2013     1     1      554        558      -4     740     728      12 UA     
+##  7  2013     1     1      555        600      -5     913     854      19 B6     
+##  8  2013     1     1      557        600      -3     709     723     -14 EV     
+##  9  2013     1     1      557        600      -3     838     846      -8 B6     
+## 10  2013     1     1      558        600      -2     753     745       8 AA     
+## # … with 336,766 more rows, 9 more variables: flight &lt;int&gt;, tailnum &lt;chr&gt;,
+## #   origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;, hour &lt;dbl&gt;,
+## #   minute &lt;dbl&gt;, time_hour &lt;dttm&gt;, and abbreviated variable names
+## #   ¹​sched_dep_time, ²​dep_delay, ³​arr_time, ⁴​sched_arr_time, ⁵​arr_delay
+## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names</code></pre>
+<p>Aqui, foram reordenadas as linhas de modo que o ano seja colocado em ordem crescente. Após isso, foram reorganizados para que o mês seja colocado em ordem crescente. Ao final, foram reorganizados de forma a deixar os dias em ordem crescente. Com isso, a base foi reordenada por ordem cronológica (1/1/2013 -&gt; 2/1/2013 -&gt; 3/1/2013 -&gt; …). Caso queira deixar em ordem decrescente, use desc():</p>
+<pre class="r"><code># Vamos organizar por atraso de saída (dep_delay) decrescente
+# Assim, vemos os voos que mais atrasaram:
+arrange(voos, desc(dep_delay))</code></pre>
+<pre><code>## # A tibble: 336,776 × 19
+##     year month   day dep_time sched_de…¹ dep_d…² arr_t…³ sched…⁴ arr_d…⁵ carrier
+##    &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;      &lt;int&gt;   &lt;dbl&gt;   &lt;int&gt;   &lt;int&gt;   &lt;dbl&gt; &lt;chr&gt;  
+##  1  2013     1     9      641        900    1301    1242    1530    1272 HA     
+##  2  2013     6    15     1432       1935    1137    1607    2120    1127 MQ     
+##  3  2013     1    10     1121       1635    1126    1239    1810    1109 MQ     
+##  4  2013     9    20     1139       1845    1014    1457    2210    1007 AA     
+##  5  2013     7    22      845       1600    1005    1044    1815     989 MQ     
+##  6  2013     4    10     1100       1900     960    1342    2211     931 DL     
+##  7  2013     3    17     2321        810     911     135    1020     915 DL     
+##  8  2013     6    27      959       1900     899    1236    2226     850 DL     
+##  9  2013     7    22     2257        759     898     121    1026     895 DL     
+## 10  2013    12     5      756       1700     896    1058    2020     878 AA     
+## # … with 336,766 more rows, 9 more variables: flight &lt;int&gt;, tailnum &lt;chr&gt;,
+## #   origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;, hour &lt;dbl&gt;,
+## #   minute &lt;dbl&gt;, time_hour &lt;dttm&gt;, and abbreviated variable names
+## #   ¹​sched_dep_time, ²​dep_delay, ³​arr_time, ⁴​sched_arr_time, ⁵​arr_delay
+## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names</code></pre>
+</div>
+<div id="selecionando-colunas-com-select" class="section level2">
+<h2>Selecionando colunas com select()</h2>
+<p>Normalmente as bases de dados são conjunto com dezenas até centenas de variáveis. E muitas vezes, apenas algumas dessas variáveis é de nosso interesse, de forma que é desnecessário utilizar todas elas em nossa análise. Para isso, vamos utilizar a função select(), que seleciona somente um subconjunto de colunas da base:</p>
+<pre class="r"><code># Vamos selecionar somente as colunas com datas:
+select(voos, year, month, day)</code></pre>
+<pre><code>## # A tibble: 336,776 × 3
+##     year month   day
+##    &lt;int&gt; &lt;int&gt; &lt;int&gt;
+##  1  2013     1     1
+##  2  2013     1     1
+##  3  2013     1     1
+##  4  2013     1     1
+##  5  2013     1     1
+##  6  2013     1     1
+##  7  2013     1     1
+##  8  2013     1     1
+##  9  2013     1     1
+## 10  2013     1     1
+## # … with 336,766 more rows
+## # ℹ Use `print(n = ...)` to see more rows</code></pre>
+<pre class="r"><code># Podemos selecionar também com a posição das colunas:
+select(voos, c(1:3))</code></pre>
+<pre><code>## # A tibble: 336,776 × 3
+##     year month   day
+##    &lt;int&gt; &lt;int&gt; &lt;int&gt;
+##  1  2013     1     1
+##  2  2013     1     1
+##  3  2013     1     1
+##  4  2013     1     1
+##  5  2013     1     1
+##  6  2013     1     1
+##  7  2013     1     1
+##  8  2013     1     1
+##  9  2013     1     1
+## 10  2013     1     1
+## # … with 336,766 more rows
+## # ℹ Use `print(n = ...)` to see more rows</code></pre>
+<pre class="r"><code># Além disso, podemos trabalhar com conjuntos:
+select(voos, dep_time:arr_time)</code></pre>
+<pre><code>## # A tibble: 336,776 × 4
+##    dep_time sched_dep_time dep_delay arr_time
+##       &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;
+##  1      517            515         2      830
+##  2      533            529         4      850
+##  3      542            540         2      923
+##  4      544            545        -1     1004
+##  5      554            600        -6      812
+##  6      554            558        -4      740
+##  7      555            600        -5      913
+##  8      557            600        -3      709
+##  9      557            600        -3      838
+## 10      558            600        -2      753
+## # … with 336,766 more rows
+## # ℹ Use `print(n = ...)` to see more rows</code></pre>
+<pre class="r"><code># Podemos excluir colunas com -(nome_coluna)
+select(voos,-(year:day))</code></pre>
+<pre><code>## # A tibble: 336,776 × 16
+##    dep_t…¹ sched…² dep_d…³ arr_t…⁴ sched…⁵ arr_d…⁶ carrier flight tailnum origin
+##      &lt;int&gt;   &lt;int&gt;   &lt;dbl&gt;   &lt;int&gt;   &lt;int&gt;   &lt;dbl&gt; &lt;chr&gt;    &lt;int&gt; &lt;chr&gt;   &lt;chr&gt; 
+##  1     517     515       2     830     819      11 UA        1545 N14228  EWR   
+##  2     533     529       4     850     830      20 UA        1714 N24211  LGA   
+##  3     542     540       2     923     850      33 AA        1141 N619AA  JFK   
+##  4     544     545      -1    1004    1022     -18 B6         725 N804JB  JFK   
+##  5     554     600      -6     812     837     -25 DL         461 N668DN  LGA   
+##  6     554     558      -4     740     728      12 UA        1696 N39463  EWR   
+##  7     555     600      -5     913     854      19 B6         507 N516JB  EWR   
+##  8     557     600      -3     709     723     -14 EV        5708 N829AS  LGA   
+##  9     557     600      -3     838     846      -8 B6          79 N593JB  JFK   
+## 10     558     600      -2     753     745       8 AA         301 N3ALAA  LGA   
+## # … with 336,766 more rows, 6 more variables: dest &lt;chr&gt;, air_time &lt;dbl&gt;,
+## #   distance &lt;dbl&gt;, hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;, and abbreviated
+## #   variable names ¹​dep_time, ²​sched_dep_time, ³​dep_delay, ⁴​arr_time,
+## #   ⁵​sched_arr_time, ⁶​arr_delay
+## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names</code></pre>
+<p>Há várias funções que podemos utilizar com o select(), dentre elas as mais utilizadas são:</p>
+<ul>
+<li><strong>starts_with(“abc”)</strong> combina nomes que começam com “abc”;</li>
+<li><strong>ends_with(“abc”)</strong> combina nomes que terminam com “abc”;</li>
+<li><strong>contains(“abc”)</strong> combina nomes que contém “abc”;</li>
+<li><strong>matches(“(.)\1”)</strong> combina nomes que contenham uma expressão regular (expressões regulares serão abordadas mais para frente);</li>
+<li><strong>everything()</strong> seleciona todas as colunas restantes de uma base.</li>
+</ul>
+<pre class="r"><code># Por exemplo, vamos selecionar todas as colunas que começam com dep
+# Essas colunas se referem à saída dos voos:
+select(voos, starts_with(&quot;dep&quot;))</code></pre>
+<pre><code>## # A tibble: 336,776 × 2
+##    dep_time dep_delay
+##       &lt;int&gt;     &lt;dbl&gt;
+##  1      517         2
+##  2      533         4
+##  3      542         2
+##  4      544        -1
+##  5      554        -6
+##  6      554        -4
+##  7      555        -5
+##  8      557        -3
+##  9      557        -3
+## 10      558        -2
+## # … with 336,766 more rows
+## # ℹ Use `print(n = ...)` to see more rows</code></pre>
+<pre class="r"><code># Podemos reorganizar a ordem das variáveis com everything():
+select(voos, time_hour, distance, everything())</code></pre>
+<pre><code>## # A tibble: 336,776 × 19
+##    time_hour           dista…¹  year month   day dep_t…² sched…³ dep_d…⁴ arr_t…⁵
+##    &lt;dttm&gt;                &lt;dbl&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt;   &lt;int&gt;   &lt;int&gt;   &lt;dbl&gt;   &lt;int&gt;
+##  1 2013-01-01 05:00:00    1400  2013     1     1     517     515       2     830
+##  2 2013-01-01 05:00:00    1416  2013     1     1     533     529       4     850
+##  3 2013-01-01 05:00:00    1089  2013     1     1     542     540       2     923
+##  4 2013-01-01 05:00:00    1576  2013     1     1     544     545      -1    1004
+##  5 2013-01-01 06:00:00     762  2013     1     1     554     600      -6     812
+##  6 2013-01-01 05:00:00     719  2013     1     1     554     558      -4     740
+##  7 2013-01-01 06:00:00    1065  2013     1     1     555     600      -5     913
+##  8 2013-01-01 06:00:00     229  2013     1     1     557     600      -3     709
+##  9 2013-01-01 06:00:00     944  2013     1     1     557     600      -3     838
+## 10 2013-01-01 06:00:00     733  2013     1     1     558     600      -2     753
+## # … with 336,766 more rows, 10 more variables: sched_arr_time &lt;int&gt;,
+## #   arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;, tailnum &lt;chr&gt;, origin &lt;chr&gt;,
+## #   dest &lt;chr&gt;, air_time &lt;dbl&gt;, hour &lt;dbl&gt;, minute &lt;dbl&gt;, and abbreviated
+## #   variable names ¹​distance, ²​dep_time, ³​sched_dep_time, ⁴​dep_delay, ⁵​arr_time
+## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names</code></pre>
+<pre class="r"><code># Podemos renomear uma coluna com a função select(), mas não é recomendado
+# Para isso, é melhor usar a função rename()
+rename(voos, ano = year, mes = month, dia = day)</code></pre>
+<pre><code>## # A tibble: 336,776 × 19
+##      ano   mes   dia dep_time sched_de…¹ dep_d…² arr_t…³ sched…⁴ arr_d…⁵ carrier
+##    &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;      &lt;int&gt;   &lt;dbl&gt;   &lt;int&gt;   &lt;int&gt;   &lt;dbl&gt; &lt;chr&gt;  
+##  1  2013     1     1      517        515       2     830     819      11 UA     
+##  2  2013     1     1      533        529       4     850     830      20 UA     
+##  3  2013     1     1      542        540       2     923     850      33 AA     
+##  4  2013     1     1      544        545      -1    1004    1022     -18 B6     
+##  5  2013     1     1      554        600      -6     812     837     -25 DL     
+##  6  2013     1     1      554        558      -4     740     728      12 UA     
+##  7  2013     1     1      555        600      -5     913     854      19 B6     
+##  8  2013     1     1      557        600      -3     709     723     -14 EV     
+##  9  2013     1     1      557        600      -3     838     846      -8 B6     
+## 10  2013     1     1      558        600      -2     753     745       8 AA     
+## # … with 336,766 more rows, 9 more variables: flight &lt;int&gt;, tailnum &lt;chr&gt;,
+## #   origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;, hour &lt;dbl&gt;,
+## #   minute &lt;dbl&gt;, time_hour &lt;dttm&gt;, and abbreviated variable names
+## #   ¹​sched_dep_time, ²​dep_delay, ³​arr_time, ⁴​sched_arr_time, ⁵​arr_delay
+## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names</code></pre>
+</div>
+<div id="criando-novas-variáveis-com-mutate" class="section level2">
+<h2>Criando novas variáveis com mutate()</h2>
+<p>Além de selecionarmos colunas, muitas vezes precisamos adicionar colunas com funções de outras variáveis existentes. Para isso, temos a função mutate(), que cria colunas no final da base de dados, usando os valores de colunas já existentes:</p>
+<pre class="r"><code># Vamos criar uma coluna com a velocidade media do voo
+# Dividindo a coluna de distancia pelo tempo de voo:
+mutate(voos, velocidade_media = distance/air_time)</code></pre>
+<pre><code>## # A tibble: 336,776 × 20
+##     year month   day dep_time sched_de…¹ dep_d…² arr_t…³ sched…⁴ arr_d…⁵ carrier
+##    &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;      &lt;int&gt;   &lt;dbl&gt;   &lt;int&gt;   &lt;int&gt;   &lt;dbl&gt; &lt;chr&gt;  
+##  1  2013     1     1      517        515       2     830     819      11 UA     
+##  2  2013     1     1      533        529       4     850     830      20 UA     
+##  3  2013     1     1      542        540       2     923     850      33 AA     
+##  4  2013     1     1      544        545      -1    1004    1022     -18 B6     
+##  5  2013     1     1      554        600      -6     812     837     -25 DL     
+##  6  2013     1     1      554        558      -4     740     728      12 UA     
+##  7  2013     1     1      555        600      -5     913     854      19 B6     
+##  8  2013     1     1      557        600      -3     709     723     -14 EV     
+##  9  2013     1     1      557        600      -3     838     846      -8 B6     
+## 10  2013     1     1      558        600      -2     753     745       8 AA     
+## # … with 336,766 more rows, 10 more variables: flight &lt;int&gt;, tailnum &lt;chr&gt;,
+## #   origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;, hour &lt;dbl&gt;,
+## #   minute &lt;dbl&gt;, time_hour &lt;dttm&gt;, velocidade_media &lt;dbl&gt;, and abbreviated
+## #   variable names ¹​sched_dep_time, ²​dep_delay, ³​arr_time, ⁴​sched_arr_time,
+## #   ⁵​arr_delay
+## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names</code></pre>
+<p>Como a função mutate() coloca a nova coluna no final, não conseguimos ver a mesma, já que temos muitas colunas. Para isso, vamos usar a função select() e depois usar a mutate():</p>
+<pre class="r"><code>voos2 &lt;- select(voos, distance, air_time)
+
+mutate(voos2, velocidade_media = distance/air_time)</code></pre>
+<pre><code>## # A tibble: 336,776 × 3
+##    distance air_time velocidade_media
+##       &lt;dbl&gt;    &lt;dbl&gt;            &lt;dbl&gt;
+##  1     1400      227             6.17
+##  2     1416      227             6.24
+##  3     1089      160             6.81
+##  4     1576      183             8.61
+##  5      762      116             6.57
+##  6      719      150             4.79
+##  7     1065      158             6.74
+##  8      229       53             4.32
+##  9      944      140             6.74
+## 10      733      138             5.31
+## # … with 336,766 more rows
+## # ℹ Use `print(n = ...)` to see more rows</code></pre>
+<p>Para fazer a transformação anterior, foi necessário criar um objeto intermediário (voos2) para ser usado depois. Essa prática não é recomendada, uma vez que utiliza muita memória de forma desnecessária. Ao invés disso, podemos fazer uma composição de funções. Como a saída de todas as funções do dplyr são data frames, podemos compor as funções:</p>
+<pre class="r"><code># Mesma transformação de antes:
+mutate(select(voos, distance, air_time),velocidade_media = distance/air_time)</code></pre>
+<pre><code>## # A tibble: 336,776 × 3
+##    distance air_time velocidade_media
+##       &lt;dbl&gt;    &lt;dbl&gt;            &lt;dbl&gt;
+##  1     1400      227             6.17
+##  2     1416      227             6.24
+##  3     1089      160             6.81
+##  4     1576      183             8.61
+##  5      762      116             6.57
+##  6      719      150             4.79
+##  7     1065      158             6.74
+##  8      229       53             4.32
+##  9      944      140             6.74
+## 10      733      138             5.31
+## # … with 336,766 more rows
+## # ℹ Use `print(n = ...)` to see more rows</code></pre>
+<p>O problema agora é que as funções são avaliadas de dentro para fora, de maneira contraintuitiva. Caso diversas operações fossem necessárias, seria fácil se perder no meio de um sem-fim de parenteses. Para resolver isso, o tidyverse é todo integrado em uma função especial do pacote magrittr: o pipe.</p>
+<div id="o-pipe" class="section level3">
+<h3>O pipe</h3>
+<p>O pipe, denotado pelo caractere %&gt;% serve como uma operação especial que “pega” o que está antes dele, e passa como primeiro argumento para a função após ele. Vejamos de maneira prática:</p>
+<pre class="r"><code>x &lt;- c(1,2,3,4,5,6)
+# Digamos que </code></pre>
 </div>
 </div>
