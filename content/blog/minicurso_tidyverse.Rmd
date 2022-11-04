@@ -354,4 +354,4 @@ A partir daqui, todos os exemplos serão utilizando pipe, então caso ainda enco
 Muitas funções podem ser utilizada em conjunto com a função mutate(), para extrair informação de suas variáveis. Alguns dos exemplos mais comuns são:
 
 * **Operações aritméticas (+,-,*,/,^)** - Podemos somar, subtrair, multiplicar ou dividir linhas, umas pelas outras, ou realizar essas operações com números (constantes) ou vetores (seguindo a regra da reciclagem do R);
-*
+* **Aritmética modular** - As operações resto (%%) e divisão inteira (%/%)
