@@ -101,4 +101,8 @@ Iniciou o curso em 2022 e ingressou no PET no primeiro período do mesmo ano. Go
 _Áreas de interesse_: Visualização de dados; Estatística computacional.
 
 
+**Vitor Yuji Kiemo**
 
+Graduando em Estatística desde 2019, decidi entrar para o PET para obter uma maior imersão dentro do curso, por meio do contato com os outros integrantes e atividades propostas pelo programa. Gosto muito de praticar dança, ouvir música, assistir vídeos e séries.
+
+_Áreas de interesse_: Visualização de Dados; Data Science; Análise de Dados Longitudinais.
