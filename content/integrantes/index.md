@@ -31,7 +31,7 @@ _Áreas de interesse_: Visualização de dados; Estatística computacional.
 
 Graduanda em Estatística na UFPR desde 2018, e  atualmente estagiando na área de análise de dados. Gosto de trabalhar com ferramentas de dashboard, visualização de dados e programação. No tempo livre costumo assistir filmes e séries.
 
-_Áreas de interesse_: Visualização de dados; Data Science; Estatística Computacional; Análise de Sobrevivência; Regressão Linear; Análise de dados categóricos; Séries Temporais.
+_Áreas de interesse_: Visualização de dados; Data Science; Estatística Computacional; Regressão Linear; Análise de dados categóricos; Séries Temporais.
 
 
 
