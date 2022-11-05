@@ -51,7 +51,7 @@ _Áreas de interesse_: Visualização de Dados; Controle Estatístico de Process
 
 
 
-**[Cynthia](https://www.linkedin.com/in/cynthia-vidal-b55126148/)**
+**[Cynthia Vidal](https://www.linkedin.com/in/cynthia-vidal-b55126148/)**
 
 Licenciada em Matemática e graduanda em Estatística que gosta de investigar o comportamento do consumidor online e tenta aplicar os conhecimentos de Estatística em Web Analytics.
 _Áreas de interesse_: Processos Estocásticos; Planejamento de Experimentos; Análise de Dados Categóricos; Análise de Sobrevivência.
