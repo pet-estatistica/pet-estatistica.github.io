@@ -72,7 +72,7 @@ Para não perder nenhuma novidade, siga-nos pelo [@pet.est.ufpr](https://www.ins
 <br>
 
 
-
+<!--
 # Submissão de trabalhos
 
 <center>
@@ -96,8 +96,8 @@ Para não perder nenhuma novidade, siga-nos pelo [@pet.est.ufpr](https://www.ins
 
 <br>
 <br>
-
-
+-->
+<!--
 ### Apresentações de trabalhos
 
 <br>
@@ -105,11 +105,14 @@ Para não perder nenhuma novidade, siga-nos pelo [@pet.est.ufpr](https://www.ins
 <object data="apresentacoes.html" width="100%" height="600px">
     Your browser doesn’t support the object tag.
 </object>
+-->
 
+## Vídeo aulas disponíveis
 
+Caso tenha perdido algum dos nossos workshops, acesse a playlist disponível no
+[Canal do Youtube do PET](https://www.youtube.com/watch?v=WbrbIUwe2-4&list=PLyQM-JPBi0xzvsJCCSdK-Zitx-ddP_ufF).
 
-
-
+<!--
 # Inscrições
 
 ## Inscrição no evento
@@ -137,7 +140,7 @@ Ministrante: Jonatas Silva do Espiríto Santos
 
 
 <a class="button-small-text" href="https://www.sympla.com.br/evento-online/minicurso-03-pyspark/1742550" target="_blank"> <img src="https://www.sympla.com.br/images/btn-register-widget.png"></img> </a> 
-
+-->
 
 
 
