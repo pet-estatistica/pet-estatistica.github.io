@@ -28,6 +28,13 @@ Graduanda em Estatística na UFPR desde 2018, e  atualmente estagiando na área 
 
 _Áreas de interesse_: Visualização de dados; Data Science; Estatística Computacional; Regressão Linear; Análise de dados categóricos; Séries Temporais.
 
+
+**[Amanda de Melo Vizzu](https://www.linkedin.com/in/amanda-vizzu-5b0530222)**
+
+Entrei na UFPR para cursar Estatística em 2020 logo depois do Ensino Médio por indicação de um professor de matemática. Aceitei o desafio e hoje encaro esse curso como um meio de conquistar oportunidades no mercado de trabalho. Resolvi entrar no PET para me envolver mais na graduação e trocar experiências com colegas.
+
+_Áreas de interesse_: Regressão linear; Estatística e indicadores sociais
+
 **Caio Gomes Alves**
 
 Graduando em Estatística desde 2019, entrei para o PET no primeiro ano do curso. Sou Escoteiro há mais de dez anos e tenho pesquisa voltada à área de Cálculo de Probabilidades. Gosto muito de ler, principalmente os clássicos e grandes obras da literatura mundial.
