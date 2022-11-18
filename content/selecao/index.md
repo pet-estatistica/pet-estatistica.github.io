@@ -7,7 +7,7 @@ aliases = ["selecao"]
 author = "PET Estatística UFPR"
 +++
 
-## Informações e links para o processo seletivo 2022
+## Informações e links para o processo seletivo 2022/2023
 
 <!-- {{% alert warning %}}
 
@@ -21,25 +21,26 @@ author = "PET Estatística UFPR"
 
 
 <center>
-<img src="processo-seletivo-pet-2022.png" alt="" width="90%"/>
+<img src="processo-seletivo-pet-2022-2.png" alt="" width="90%"/>
 </center>
 
-O processo seletivo 2022 do PET Estatística será presencial e
-ocorrerá entre (~~25/07/2022 e 29/07/2022~~) **01/08/2022 e 08/08/2022** .
 
-O período de inscrição é de **17/06/2022** até **24/07/2022**.
-Neste ano serão admitidos **até 6 estudantes bolsistas e até 6 estudantes não bolsistas**. 
+O processo seletivo do segundo semestre de 2022 do PET Estatística será presencial e ocorrerá entre **18/11/2022 e 13/02/2023** .
+
+O período de inscrição é de **18/11/2022** até **02/12/2022**.
+Neste ano serão admitidos **5 integrantes não bolsistas** e haverá uma lista de espera para aqueles que atingirem notas superiores a 60 pontos. 
 
 Veja as principais informações abaixo, e leia atentamente o 
-[edital de seleção](Edital_2022_Retificado_3.pdf):
+[edital de seleção](Edital_2022_2s_2.pdf):
 
-- Período de inscrições: de (~~17/06/2022 a 17/07/2022~~) **17/06/2022 a 24/07/2022**
-- Realização do processo seletivo: entre (~~25/07/2022 e 29/07/2022~~) **01/08/2022 e 08/08/2022**.
-- [Edital de seleção](Edital_2022_Retificado_3.pdf)
-- [Link para inscrição](https://docs.google.com/forms/u/3/d/1W6EeNmtbF6uuyahbLagEwB1qVFnDhii_d23W_iV2LA4/edit?ts=62a3c38f) 
+- Período de inscrições: de **18/11/2022 a 02/12/2022**
+- Realização do processo seletivo: entre **18/11/2022 e 13/02/2023**.
+- [Edital de seleção](Edital_2022_2s_2.pdf)
+- [Link para inscrição](https://docs.google.com/forms/d/e/1FAIpQLSexZx4n4MlLCYyZaJQn1NmahJhnhU-ONpp75efHLX6zmbCkOg/viewform) 
+<!--
 - [Resultado Parcial](Edital_2022_Resultado_Parcial.pdf)
 - **[Resultado Final](Edital_2022_Resultado_Final.pdf)**
-
+-->
 <!-- {{% alert warning %}} -->
 <!-- [Resultado final do Processo Seletivo 2021](Edital_2021_resultado_assinado.pdf) -->
 <!-- {{% /alert %}} -->
