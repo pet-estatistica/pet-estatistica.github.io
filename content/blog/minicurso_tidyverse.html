@@ -1,7 +1,7 @@
 ---
 title: 'Introdução ao TidyVerse'
 author: Caio Gomes Alves
-date: '2022-11-03'
+date: '2022-11-18'
 slug: introducao-ao-tidyverse
 categories:
   - r
@@ -78,8 +78,7 @@ diamantes &lt;- diamonds</code></pre>
 ## # … with 336,766 more rows, 9 more variables: flight &lt;int&gt;, tailnum &lt;chr&gt;,
 ## #   origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;, hour &lt;dbl&gt;,
 ## #   minute &lt;dbl&gt;, time_hour &lt;dttm&gt;, and abbreviated variable names
-## #   ¹​sched_dep_time, ²​dep_delay, ³​arr_time, ⁴​sched_arr_time, ⁵​arr_delay
-## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names</code></pre>
+## #   ¹​sched_dep_time, ²​dep_delay, ³​arr_time, ⁴​sched_arr_time, ⁵​arr_delay</code></pre>
 <p>É possível perceber uma diferença notável na estrutura desses dados: eles não estão organizados em um data frame, mas em um objeto da classe tibble. O tibble é um data frame, porém com algumas diferenças fundamentais: ele não converte strings em fatores e o seu método de impressão por padrão mostra apenas as dez primeiras linhas, e apenas as colunas que cabem na tela. Além disso, é possível verificar o tipo dos dados de cada uma das colunas a partir das letras que aparecem ao lado de cada nome:</p>
 <ul>
 <li><strong>int</strong> é para inteiros;</li>
@@ -131,8 +130,7 @@ diamantes &lt;- diamonds</code></pre>
 ## # … with 902 more rows, 9 more variables: flight &lt;int&gt;, tailnum &lt;chr&gt;,
 ## #   origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;, hour &lt;dbl&gt;,
 ## #   minute &lt;dbl&gt;, time_hour &lt;dttm&gt;, and abbreviated variable names
-## #   ¹​sched_dep_time, ²​dep_delay, ³​arr_time, ⁴​sched_arr_time, ⁵​arr_delay
-## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names</code></pre>
+## #   ¹​sched_dep_time, ²​dep_delay, ³​arr_time, ⁴​sched_arr_time, ⁵​arr_delay</code></pre>
 <p>Perceba que somente retornaram as linhas em que o dia = 5 e que o mês = 5, ou seja, 912 linhas ao todo. Note também que o dplyr retornou um data frame, mas que os dados originais não foram alterados. Caso queiramos salvar esse novo conjunto de dados, devemos atribuir ele para um objeto:</p>
 <pre class="r"><code>mai5 &lt;- filter(voos, day == 5, month == 5)
 
@@ -156,8 +154,7 @@ diamantes &lt;- diamonds</code></pre>
 ## # … with 709 more rows, 9 more variables: flight &lt;int&gt;, tailnum &lt;chr&gt;,
 ## #   origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;, hour &lt;dbl&gt;,
 ## #   minute &lt;dbl&gt;, time_hour &lt;dttm&gt;, and abbreviated variable names
-## #   ¹​sched_dep_time, ²​dep_delay, ³​arr_time, ⁴​sched_arr_time, ⁵​arr_delay
-## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names</code></pre>
+## #   ¹​sched_dep_time, ²​dep_delay, ³​arr_time, ⁴​sched_arr_time, ⁵​arr_delay</code></pre>
 <p>Em todos os casos, o primeiro argumento da função foi a nossa base de dados (voos), e os argumentos seguintes são os filtros que queremos aplicar, utilizando comparações com os nomes das colunas. Podemos atribuir quantos filtros quisermos, cada um separado por vírgula.</p>
 <div id="operações-lógicas-e-de-comparação" class="section level3">
 <h3>Operações lógicas e de comparação</h3>
@@ -180,8 +177,7 @@ diamantes &lt;- diamonds</code></pre>
 ## # … with 55,393 more rows, 9 more variables: flight &lt;int&gt;, tailnum &lt;chr&gt;,
 ## #   origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;, hour &lt;dbl&gt;,
 ## #   minute &lt;dbl&gt;, time_hour &lt;dttm&gt;, and abbreviated variable names
-## #   ¹​sched_dep_time, ²​dep_delay, ³​arr_time, ⁴​sched_arr_time, ⁵​arr_delay
-## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names</code></pre>
+## #   ¹​sched_dep_time, ²​dep_delay, ³​arr_time, ⁴​sched_arr_time, ⁵​arr_delay</code></pre>
 <p>Aqui, estamos filtrando as linhas em que <strong>month == 11</strong> ou <strong>month == 12</strong>. Ao invés de utilizar essa notação, poderíamos utilizar a função %in%, que compara os valores com um vetor de possibilidades, um a um. A expressão seria simplificada para:</p>
 <pre class="r"><code>filter(voos, month %in% c(11,12))</code></pre>
 <pre><code>## # A tibble: 55,403 × 19
@@ -200,8 +196,7 @@ diamantes &lt;- diamonds</code></pre>
 ## # … with 55,393 more rows, 9 more variables: flight &lt;int&gt;, tailnum &lt;chr&gt;,
 ## #   origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;, hour &lt;dbl&gt;,
 ## #   minute &lt;dbl&gt;, time_hour &lt;dttm&gt;, and abbreviated variable names
-## #   ¹​sched_dep_time, ²​dep_delay, ³​arr_time, ⁴​sched_arr_time, ⁵​arr_delay
-## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names</code></pre>
+## #   ¹​sched_dep_time, ²​dep_delay, ³​arr_time, ⁴​sched_arr_time, ⁵​arr_delay</code></pre>
 <p>Podemos também operar com a negação de um opereador lógico, invertendo o mesmo com !, que é equivalente ao <em>not</em>. Lembremos da Lei de Morgan: !(x &amp; y) é o mesmo que !x | !y, e !(x | y) é o mesmo que !x &amp; !y. Digamos que queremos encontrar todos os voos que não são dos meses de janeiro e fevereiro. Podemos fazer da seguinte maneira:</p>
 <pre class="r"><code># Podemos filtrar mês a mês:
 nao_jan_fev1 &lt;- filter(voos, month == 3|month == 4|month == 5|month == 6|month == 7|month == 8|month == 9|month == 10|month == 11|month == 12)
@@ -272,8 +267,7 @@ mean(c(1,2,3,NA,4), na.rm = TRUE)</code></pre>
 ## # … with 9,420 more rows, 9 more variables: flight &lt;int&gt;, tailnum &lt;chr&gt;,
 ## #   origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;, hour &lt;dbl&gt;,
 ## #   minute &lt;dbl&gt;, time_hour &lt;dttm&gt;, and abbreviated variable names
-## #   ¹​sched_dep_time, ²​dep_delay, ³​arr_time, ⁴​sched_arr_time, ⁵​arr_delay
-## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names</code></pre>
+## #   ¹​sched_dep_time, ²​dep_delay, ³​arr_time, ⁴​sched_arr_time, ⁵​arr_delay</code></pre>
 </div>
 </div>
 <div id="ordenando-linhas-com-arrange" class="section level2">
@@ -297,8 +291,7 @@ arrange(voos, year, month, day)</code></pre>
 ## # … with 336,766 more rows, 9 more variables: flight &lt;int&gt;, tailnum &lt;chr&gt;,
 ## #   origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;, hour &lt;dbl&gt;,
 ## #   minute &lt;dbl&gt;, time_hour &lt;dttm&gt;, and abbreviated variable names
-## #   ¹​sched_dep_time, ²​dep_delay, ³​arr_time, ⁴​sched_arr_time, ⁵​arr_delay
-## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names</code></pre>
+## #   ¹​sched_dep_time, ²​dep_delay, ³​arr_time, ⁴​sched_arr_time, ⁵​arr_delay</code></pre>
 <p>Aqui, foram reordenadas as linhas de modo que o ano seja colocado em ordem crescente. Após isso, foram reorganizados para que o mês seja colocado em ordem crescente. Ao final, foram reorganizados de forma a deixar os dias em ordem crescente. Com isso, a base foi reordenada por ordem cronológica (1/1/2013 -&gt; 2/1/2013 -&gt; 3/1/2013 -&gt; …). Caso queira deixar em ordem decrescente, use desc():</p>
 <pre class="r"><code># Vamos organizar por atraso de saída (dep_delay) decrescente
 # Assim, vemos os voos que mais atrasaram:
@@ -319,8 +312,7 @@ arrange(voos, desc(dep_delay))</code></pre>
 ## # … with 336,766 more rows, 9 more variables: flight &lt;int&gt;, tailnum &lt;chr&gt;,
 ## #   origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;, hour &lt;dbl&gt;,
 ## #   minute &lt;dbl&gt;, time_hour &lt;dttm&gt;, and abbreviated variable names
-## #   ¹​sched_dep_time, ²​dep_delay, ³​arr_time, ⁴​sched_arr_time, ⁵​arr_delay
-## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names</code></pre>
+## #   ¹​sched_dep_time, ²​dep_delay, ³​arr_time, ⁴​sched_arr_time, ⁵​arr_delay</code></pre>
 </div>
 <div id="selecionando-colunas-com-select" class="section level2">
 <h2>Selecionando colunas com select()</h2>
@@ -340,8 +332,7 @@ select(voos, year, month, day)</code></pre>
 ##  8  2013     1     1
 ##  9  2013     1     1
 ## 10  2013     1     1
-## # … with 336,766 more rows
-## # ℹ Use `print(n = ...)` to see more rows</code></pre>
+## # … with 336,766 more rows</code></pre>
 <pre class="r"><code># Podemos selecionar também com a posição das colunas:
 select(voos, c(1:3))</code></pre>
 <pre><code>## # A tibble: 336,776 × 3
@@ -357,8 +348,7 @@ select(voos, c(1:3))</code></pre>
 ##  8  2013     1     1
 ##  9  2013     1     1
 ## 10  2013     1     1
-## # … with 336,766 more rows
-## # ℹ Use `print(n = ...)` to see more rows</code></pre>
+## # … with 336,766 more rows</code></pre>
 <pre class="r"><code># Além disso, podemos trabalhar com conjuntos:
 select(voos, dep_time:arr_time)</code></pre>
 <pre><code>## # A tibble: 336,776 × 4
@@ -374,8 +364,7 @@ select(voos, dep_time:arr_time)</code></pre>
 ##  8      557            600        -3      709
 ##  9      557            600        -3      838
 ## 10      558            600        -2      753
-## # … with 336,766 more rows
-## # ℹ Use `print(n = ...)` to see more rows</code></pre>
+## # … with 336,766 more rows</code></pre>
 <pre class="r"><code># Podemos excluir colunas com -(nome_coluna)
 select(voos,-(year:day))</code></pre>
 <pre><code>## # A tibble: 336,776 × 16
@@ -394,8 +383,7 @@ select(voos,-(year:day))</code></pre>
 ## # … with 336,766 more rows, 6 more variables: dest &lt;chr&gt;, air_time &lt;dbl&gt;,
 ## #   distance &lt;dbl&gt;, hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;, and abbreviated
 ## #   variable names ¹​dep_time, ²​sched_dep_time, ³​dep_delay, ⁴​arr_time,
-## #   ⁵​sched_arr_time, ⁶​arr_delay
-## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names</code></pre>
+## #   ⁵​sched_arr_time, ⁶​arr_delay</code></pre>
 <p>Há várias funções que podemos utilizar com o select(), dentre elas as mais utilizadas são:</p>
 <ul>
 <li><strong>starts_with(“abc”)</strong> combina nomes que começam com “abc”;</li>
@@ -420,8 +408,7 @@ select(voos, starts_with(&quot;dep&quot;))</code></pre>
 ##  8      557        -3
 ##  9      557        -3
 ## 10      558        -2
-## # … with 336,766 more rows
-## # ℹ Use `print(n = ...)` to see more rows</code></pre>
+## # … with 336,766 more rows</code></pre>
 <pre class="r"><code># Podemos reorganizar a ordem das variáveis com everything():
 select(voos, time_hour, distance, everything())</code></pre>
 <pre><code>## # A tibble: 336,776 × 19
@@ -440,8 +427,7 @@ select(voos, time_hour, distance, everything())</code></pre>
 ## # … with 336,766 more rows, 10 more variables: sched_arr_time &lt;int&gt;,
 ## #   arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;, tailnum &lt;chr&gt;, origin &lt;chr&gt;,
 ## #   dest &lt;chr&gt;, air_time &lt;dbl&gt;, hour &lt;dbl&gt;, minute &lt;dbl&gt;, and abbreviated
-## #   variable names ¹​distance, ²​dep_time, ³​sched_dep_time, ⁴​dep_delay, ⁵​arr_time
-## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names</code></pre>
+## #   variable names ¹​distance, ²​dep_time, ³​sched_dep_time, ⁴​dep_delay, ⁵​arr_time</code></pre>
 <pre class="r"><code># Podemos renomear uma coluna com a função select(), mas não é recomendado
 # Para isso, é melhor usar a função rename()
 rename(voos, ano = year, mes = month, dia = day)</code></pre>
@@ -461,8 +447,7 @@ rename(voos, ano = year, mes = month, dia = day)</code></pre>
 ## # … with 336,766 more rows, 9 more variables: flight &lt;int&gt;, tailnum &lt;chr&gt;,
 ## #   origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;, hour &lt;dbl&gt;,
 ## #   minute &lt;dbl&gt;, time_hour &lt;dttm&gt;, and abbreviated variable names
-## #   ¹​sched_dep_time, ²​dep_delay, ³​arr_time, ⁴​sched_arr_time, ⁵​arr_delay
-## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names</code></pre>
+## #   ¹​sched_dep_time, ²​dep_delay, ³​arr_time, ⁴​sched_arr_time, ⁵​arr_delay</code></pre>
 </div>
 <div id="criando-novas-variáveis-com-mutate" class="section level2">
 <h2>Criando novas variáveis com mutate()</h2>
@@ -487,8 +472,7 @@ mutate(voos, velocidade_media = distance/air_time)</code></pre>
 ## #   origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;, hour &lt;dbl&gt;,
 ## #   minute &lt;dbl&gt;, time_hour &lt;dttm&gt;, velocidade_media &lt;dbl&gt;, and abbreviated
 ## #   variable names ¹​sched_dep_time, ²​dep_delay, ³​arr_time, ⁴​sched_arr_time,
-## #   ⁵​arr_delay
-## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names</code></pre>
+## #   ⁵​arr_delay</code></pre>
 <p>Como a função mutate() coloca a nova coluna no final, não conseguimos ver a mesma, já que temos muitas colunas. Para isso, vamos usar a função select() e depois usar a mutate():</p>
 <pre class="r"><code>voos2 &lt;- select(voos, distance, air_time)
 
@@ -506,8 +490,7 @@ mutate(voos2, velocidade_media = distance/air_time)</code></pre>
 ##  8      229       53             4.32
 ##  9      944      140             6.74
 ## 10      733      138             5.31
-## # … with 336,766 more rows
-## # ℹ Use `print(n = ...)` to see more rows</code></pre>
+## # … with 336,766 more rows</code></pre>
 <p>Para fazer a transformação anterior, foi necessário criar um objeto intermediário (voos2) para ser usado depois. Essa prática não é recomendada, uma vez que utiliza muita memória de forma desnecessária. Ao invés disso, podemos fazer uma composição de funções. Como a saída de todas as funções do dplyr são data frames, podemos compor as funções:</p>
 <pre class="r"><code># Mesma transformação de antes:
 mutate(select(voos, distance, air_time),velocidade_media = distance/air_time)</code></pre>
@@ -524,8 +507,7 @@ mutate(select(voos, distance, air_time),velocidade_media = distance/air_time)</c
 ##  8      229       53             4.32
 ##  9      944      140             6.74
 ## 10      733      138             5.31
-## # … with 336,766 more rows
-## # ℹ Use `print(n = ...)` to see more rows</code></pre>
+## # … with 336,766 more rows</code></pre>
 <p>O problema agora é que as funções são avaliadas de dentro para fora, de maneira contraintuitiva. Caso diversas operações fossem necessárias, seria fácil se perder no meio de um sem-fim de parenteses. Para resolver isso, o tidyverse é todo integrado em uma função especial do pacote magrittr: o pipe.</p>
 <div id="o-pipe" class="section level3">
 <h3>O pipe</h3>
@@ -563,8 +545,7 @@ voos4</code></pre>
 ##  8 LGA    BOS         35      184             5.26
 ##  9 LGA    DTW         74      502             6.78
 ## 10 LGA    ORD        112      733             6.54
-## # … with 28,786 more rows
-## # ℹ Use `print(n = ...)` to see more rows</code></pre>
+## # … with 28,786 more rows</code></pre>
 <pre class="r"><code># Vejam quantas variáveis desnecessárias foram criadas
 # Podemos fazer como antes, e compor funções:
 voos2 &lt;- mutate(select(filter(voos,month == 5),origin, dest, air_time, distance), velocidade_media = distance/air_time)
@@ -583,8 +564,7 @@ voos2</code></pre>
 ##  8 LGA    BOS         35      184             5.26
 ##  9 LGA    DTW         74      502             6.78
 ## 10 LGA    ORD        112      733             6.54
-## # … with 28,786 more rows
-## # ℹ Use `print(n = ...)` to see more rows</code></pre>
+## # … with 28,786 more rows</code></pre>
 <pre class="r"><code># O resultado é o mesmo, porém a função criada é muito complexa para ser lida
 # Pois as operações ocorrem de dentro para fora. Isso complica o debugging
 # Caso ocorram erros. Vejamos como seria com o pipe:
@@ -607,10 +587,39 @@ voos2</code></pre>
 ##  8 LGA    BOS         35      184             5.26
 ##  9 LGA    DTW         74      502             6.78
 ## 10 LGA    ORD        112      733             6.54
-## # … with 28,786 more rows
-## # ℹ Use `print(n = ...)` to see more rows</code></pre>
+## # … with 28,786 more rows</code></pre>
 <pre class="r"><code># Percebam que as operações foram realizadas na ordem em que foram aparecendo.</code></pre>
 <p>Como visto, o pipe auxilia no encadeamento de transformações sucessivas de funções, sem que seja necessário criar objetos intermediários desnecessários. E ele funciona especialmente bem com as funções do dplyr, pois todas elas tem como entrada um data frame e como saída outro data frame. Com isso, podemos fazer diversas transformações seguidas, seguindo a ordem conforme formos colocando elas.</p>
 <p>A partir daqui, todos os exemplos serão utilizando pipe, então caso ainda encontre alguma dificuldade, recomendo ler a documentação do pacote magrittr, disponível em <a href="https://magrittr.tidyverse.org/" class="uri">https://magrittr.tidyverse.org/</a> , além do capítulo 18 do livro <em>R for Data Science</em>, disponível em <a href="https://r4ds.had.co.nz/pipes.html" class="uri">https://r4ds.had.co.nz/pipes.html</a> .</p>
+</div>
+<div id="funções-úteis-com-o-mutate" class="section level3">
+<h3>Funções úteis com o mutate()</h3>
+<p>Muitas funções podem ser utilizada em conjunto com a função mutate(), para extrair informação de suas variáveis. Alguns dos exemplos mais comuns são:</p>
+<ul>
+<li><strong>Operações aritméticas (+,-,*,/,^)</strong> - Podemos somar, subtrair, multiplicar ou dividir linhas, umas pelas outras, ou realizar essas operações com números (constantes) ou vetores (seguindo a regra da reciclagem do R);</li>
+<li><strong>Aritmética modular</strong> - As operações resto (%%) e divisão inteira (%/%) funcionam da mesma maneira que as operações aritméticas;</li>
+<li><strong>Operações de desvio (lag e lead)</strong> - Essas operações alteram a ordem da posição dos elementos dos vetores: a função lead() faz o primeiro valor receber o segundo, o segundo receber o terceiro, e assim por diante, até o último valor, que será eliminado (retorna NA). De forma similar, lag() irá atribuir o penúltimo valor para o último, o ante-penúltimo para o penúltimo, e assim por diante, até o primeiro valor, que será eliminado. Veja o exemplo:</li>
+</ul>
+<pre class="r"><code>x &lt;- c(1,2,3,4,5,6)
+
+lead(x)</code></pre>
+<pre><code>## [1]  2  3  4  5  6 NA</code></pre>
+<pre class="r"><code>lag(x)</code></pre>
+<pre><code>## [1] NA  1  2  3  4  5</code></pre>
+<ul>
+<li><strong>Valores Acumulados e Agregados Sequênciais</strong> - As funções cumsum, cumprod, cummin e cummax proporcionam uma soma e produto cumulativas, mínimo e máximo sequênciais, e a função cummean fornece a média móvel dos dados. Veja o exemplo:</li>
+</ul>
+<pre class="r"><code>y &lt;- c(1,2,0,4,2,8,-1)
+
+cumsum(y)</code></pre>
+<pre><code>## [1]  1  3  3  7  9 17 16</code></pre>
+<pre class="r"><code>cumprod(y)</code></pre>
+<pre><code>## [1] 1 2 0 0 0 0 0</code></pre>
+<pre class="r"><code>cummin(y)</code></pre>
+<pre><code>## [1]  1  1  0  0  0  0 -1</code></pre>
+<pre class="r"><code>cummax(y)</code></pre>
+<pre><code>## [1] 1 2 2 4 4 8 8</code></pre>
+<pre class="r"><code>cummean(y)</code></pre>
+<pre><code>## [1] 1.000000 1.500000 1.000000 1.750000 1.800000 2.833333 2.285714</code></pre>
 </div>
 </div>

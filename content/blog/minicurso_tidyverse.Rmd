@@ -353,5 +353,31 @@ A partir daqui, todos os exemplos serão utilizando pipe, então caso ainda enco
 
 Muitas funções podem ser utilizada em conjunto com a função mutate(), para extrair informação de suas variáveis. Alguns dos exemplos mais comuns são:
 
-* **Operações aritméticas (+,-,*,/,^)** - Podemos somar, subtrair, multiplicar ou dividir linhas, umas pelas outras, ou realizar essas operações com números (constantes) ou vetores (seguindo a regra da reciclagem do R);
-* **Aritmética modular** - As operações resto (%%) e divisão inteira (%/%)
+* **Operações aritméticas (+,-,\*,/,^)** - Podemos somar, subtrair, multiplicar ou dividir linhas, umas pelas outras, ou realizar essas operações com números (constantes) ou vetores (seguindo a regra da reciclagem do R);
+* **Aritmética modular** - As operações resto (%%) e divisão inteira (%/%) funcionam da mesma maneira que as operações aritméticas;
+* **Operações de desvio (lag e lead)** - Essas operações alteram a ordem da posição dos elementos dos vetores: a função lead() faz o primeiro valor receber o segundo, o segundo receber o terceiro, e assim por diante, até o último valor, que será eliminado (retorna NA). De forma similar, lag() irá atribuir o penúltimo valor para o último, o ante-penúltimo para o penúltimo, e assim por diante, até o primeiro valor, que será eliminado. Veja o exemplo:
+
+```{r}
+x <- c(1,2,3,4,5,6)
+
+lead(x)
+
+lag(x)
+```
+
+* **Valores Acumulados e Agregados Sequênciais** - As funções cumsum, cumprod, cummin e cummax proporcionam uma soma e produto cumulativas, mínimo e máximo sequênciais, e a função cummean fornece a média móvel dos dados. Veja o exemplo:
+
+```{r}
+y <- c(1,2,0,4,2,8,-1)
+
+cumsum(y)
+
+cumprod(y)
+
+cummin(y)
+
+cummax(y)
+
+cummean(y)
+```
+
