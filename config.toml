@@ -158,7 +158,7 @@ ignoreFiles             = ["\\.R$", "\\.Rmd$", "\\.Rproj$", "\\.sh$", "\\.txt$",
     name              = "Teste"
     identifier        = "teste"
     url               = "/Teste/"
-    pre               = "<i class='fa-thin fa-image'></i>"
+    pre               = "<i class='fas fa-image'></i>"
     weight            = 10
 
 [social]
