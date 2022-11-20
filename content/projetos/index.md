@@ -30,10 +30,10 @@ O PET utilizou a versão gratuita do serviço de streaming StreamYard para reali
 
 #### Onde acessar
 
-As transmissões são realizadas ao vivo às 18:00 hrs de sextas-feiras no canal do PET Estatística no [YouTube](https://www.youtube.com/petestatisticaufpr) e são divulgadas pelas nossas redes sociais.
+As transmissões são realizadas ao vivo às 18:00 hrs de sextas-feiras no canal do PET Estatística no [**YouTube**](https://www.youtube.com/petestatisticaufpr) e são divulgadas pelas nossas redes sociais.
 
 Também é possível ver todas as edições pela playlist: 
-[PET Convida](https://youtube.com/playlist?list=PLyQM-JPBi0xygjVNBLb-6DYMlG9s1bPwt).
+[**PET Convida**](https://youtube.com/playlist?list=PLyQM-JPBi0xygjVNBLb-6DYMlG9s1bPwt).
 
 ## Feira de Cursos e Profissões
 
