@@ -51,7 +51,7 @@ O principal resultado esperado é um aumento no número de candidatos do Vestibu
 
 Visando o compartilhamento de conhecimento e a maior conexão, em 2021 o PET Estatística se propôs uma participação mais ativa nas redes social, em especial no [**Instagram**](https://www.instagram.com/pet.est.ufpr/) e [**LinkedIn**](https://www.linkedin.com/company/pet-estatistica-ufpr/).  
 
-Assim, pudemos ampliar o alcance do PET Estatísticas e estimular o interesse da comunidade. 
+Assim, pudemos ampliar o alcance do PET Estatística e estimular o interesse da comunidade. 
 
 Os posts podem ser agrupados em 10 categorias, de acordo com a temática, sendo elas “Site”, “Semana Acadêmica”, “Datas relevantes”, “Processo Seletivo”, “PET Convida”, “PET Ensina”, “PET Indica”, “PET Curiosidades”, “Agenda da Semana” e “PETianos".
 
