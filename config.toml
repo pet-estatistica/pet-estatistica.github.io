@@ -119,7 +119,7 @@ ignoreFiles             = ["\\.R$", "\\.Rmd$", "\\.Rproj$", "\\.sh$", "\\.txt$",
     identifier        = "semana"
     url               = "/semana/"
     pre               = "<i class='fas fa-graduation-cap'></i>"
-    weight            = 5
+    weight            = 7
 
   [[menu.main]]
     name              = "Blog"
@@ -135,7 +135,7 @@ ignoreFiles             = ["\\.R$", "\\.Rmd$", "\\.Rproj$", "\\.sh$", "\\.txt$",
     identifier        = "projetos"
     url               = "/projetos/"
     pre               = "<i class='fas fa-terminal'></i>"
-    weight            = 7
+    weight            = 5
 
 
   [[menu.main]]
