@@ -156,9 +156,9 @@ ignoreFiles             = ["\\.R$", "\\.Rmd$", "\\.Rproj$", "\\.sh$", "\\.txt$",
 
   [[menu.main]]
     name              = "Teste"
-    identifier        = "categories"
-    url               = "/categories/"
-    pre               = "<i class='fas fa-sitemap'></i>"
+    identifier        = "teste"
+    url               = "/Teste/"
+    pre               = "<i class='fa-thin fa-image'></i>"
     weight            = 10
 
 [social]
