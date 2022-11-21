@@ -33,7 +33,7 @@ Neste ano serão admitidos **5 integrantes não bolsistas** e haverá uma lista 
 Veja as principais informações abaixo, e leia atentamente o 
 [**edital de seleção**](Edital_2022_2s_2.pdf):
 
-- Período de inscrições: de **18/11/2022 a 02/12/2022**
+- Período de inscrições: de **18/11/2022 à 02/12/2022**
 - Realização do processo seletivo: **18/11/2022 à 13/02/2023**.
 - [**Edital de seleção**](Edital_2022_2s_2.pdf)
 - [**Link para inscrição**](https://docs.google.com/forms/d/e/1FAIpQLSexZx4n4MlLCYyZaJQn1NmahJhnhU-ONpp75efHLX6zmbCkOg/viewform) 
