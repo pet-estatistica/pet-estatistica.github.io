@@ -77,7 +77,7 @@ Os Workshops da edições anteriores da Semana Acadêmica estão disponíveis no
     - [*Pacote {torch}*](https://www.youtube.com/watch?v=r4NCs0d1i1Q&list=PLyQM-JPBi0xwDDmt_E34SCSamzEfi02qk&index=2&ab_channel=PET-Estat%C3%ADsticaUFPR)
     - [*Introdução ao Pandas e Visualização de Dados*](https://www.youtube.com/watch?v=yaMMcVDqd_c&list=PLyQM-JPBi0xwDDmt_E34SCSamzEfi02qk&index=3&ab_channel=PET-Estat%C3%ADsticaUFPR)
     - [*Previsão de Séries Temporais com {fable}*](https://www.youtube.com/watch?v=VxLkkYm65XM&list=PLyQM-JPBi0xwDDmt_E34SCSamzEfi02qk&index=4&ab_channel=PET-Estat%C3%ADsticaUFPR)
-- [**Workshops / Semana Acadêmica 2022**](https://www.youtube.com/watch?v=WbrbIUwe2-4&list=PLyQM-JPBi0xzvsJCCSdK-Zitx-ddP_ufF&ab_channel=PET-Estat%C3%ADsticaUFPR)
+- [**Workshops / Semana Acadêmica 2022**:](https://www.youtube.com/watch?v=WbrbIUwe2-4&list=PLyQM-JPBi0xzvsJCCSdK-Zitx-ddP_ufF&ab_channel=PET-Estat%C3%ADsticaUFPR)
     - [*Relatórios dinâmicos: primeiros passos com Quarto*](https://www.youtube.com/watch?v=WbrbIUwe2-4&list=PLyQM-JPBi0xzvsJCCSdK-Zitx-ddP_ufF&ab_channel=PET-Estat%C3%ADsticaUFPR)
     - [*Análise exploratória com Python*](https://www.youtube.com/watch?v=GK-7lGI9Sqk&list=PLyQM-JPBi0xzvsJCCSdK-Zitx-ddP_ufF&index=2&ab_channel=PET-Estat%C3%ADsticaUFPR)
     - [*PySpark*](https://www.youtube.com/watch?v=1-DZKTFK1EE&list=PLyQM-JPBi0xzvsJCCSdK-Zitx-ddP_ufF&index=3&ab_channel=PET-Estat%C3%ADsticaUFPR)
