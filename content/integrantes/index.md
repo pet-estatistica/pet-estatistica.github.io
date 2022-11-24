@@ -54,6 +54,12 @@ algo diferente e tenho extremo apreço por relacionar conhecimentos distintos.
 
 _Áreas de interesse_: Séries Temporais; Análise Exploratória; Estatística Computacional; Desenvolvimente de Dashboards.
 
+**[Kamila de Lazari Macedo](https://www.linkedin.com/in/kamila-macedo-8138b0253)**
+
+Graduanda em estatística,  sempre me interessei por matemática e computação e percebi que poderia trabalhar com os dois em áreas variadas nesse curso. Amo música, livros, podcasts e documentários.
+
+_Áreas de interesse_: Bancos de dados; Métodos numéricos; Estatística Computacional; Visualização de dados.
+
 **[Luiz Fernando Ancay](https://www.linkedin.com/in/luiz-fernando-an%C3%A7ay-b8286b182/)**
 
 Graduando em Estatística na UFPR desde 2018.
