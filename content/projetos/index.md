@@ -70,7 +70,7 @@ A Semana Acadêmica configura-se como uma atividade de extensão, conduzida majo
 Um dos principais objetivos da semana acadêmica é complementar a formação profissional e científica com a exposição de temas contemporâneos e relevantes, contribuindo para a elevação da qualidade da formação acadêmica e profissional dos alunos de graduação. Além disso, visa compreender o atual cenário da profissão e traçar estratégias para o atendimento dos requisitos para os próximos anos da atividade. O evento também estimula a interação de profissionais e docentes de elevada qualificação técnica, científica, tecnológica e acadêmica com os alunos em formação. Ainda acarretará no aumento da visibilidade do Curso de Estatística, do Departamento de Estatística e da
 Universidade na sociedade acadêmica e no meio profissional.
 
-Os Workshops da edições anteriores da Semana Acadêmica estão disponíveis no [**Canal do Youtube do PET.**](https://www.youtube.com/@PETEstatisticaUFPR/featured)
+Os Workshops da edições anteriores da Semana Acadêmica estão disponíveis no [**Canal do Youtube do PET**:](https://www.youtube.com/@PETEstatisticaUFPR/featured)
     
 - [**Workshops / Semana Acadêmica 2021**:](https://www.youtube.com/watch?v=s_SH6oIWnRg&list=PLyQM-JPBi0xwDDmt_E34SCSamzEfi02qk&ab_channel=PET-Estat%C3%ADsticaUFPR)
     - [*Introdução ao Python*](https://www.youtube.com/watch?v=s_SH6oIWnRg&list=PLyQM-JPBi0xwDDmt_E34SCSamzEfi02qk&ab_channel=PET-Estat%C3%ADsticaUFPR)
