@@ -59,3 +59,14 @@ Os posts podem ser agrupados em 10 categorias, de acordo com a temática, sendo 
 <img src="Insta_PET.jpeg" alt="" width="40%"/>
 </center>
 
+## Semana Acadêmica de Estatistíca
+
+<center>
+<img src="Semana_academica2.jpeg" alt="" width="40%"/>
+</center>
+
+A Semana Acadêmica configura-se como uma atividade de extensão, conduzida majoritariamente por meio de palestras, minicursos e mesas redondas. Tais atividades estão centradas em criar uma atmosfera para a discussão sobre a formação profissional e científica, promovendo a integração dos alunos, trocas de experiências e atualização sobre novos temas e abordagens. Entende-se que o estímulo à reflexão e a compreensão do cenário atual, e de suas tendências, permitem a identificação de problemas e oportunidades, bem como o estabelecimento de estratégias que visem solucionar demandas atuais e do futuro.
+
+Um dos principais objetivos da semana acadêmica é complementar a formação profissional e científica com a exposição de temas contemporâneos e relevantes, contribuindo para a elevação da qualidade da formação acadêmica e profissional dos alunos de graduação. Além disso, visa compreender o atual cenário da profissão e traçar estratégias para o atendimento dos requisitos para os próximos anos da atividade. O evento também estimula a interação de profissionais e docentes de elevada qualificação técnica, científica, tecnológica e acadêmica com os alunos em formação. Ainda acarretará no aumento da visibilidade do Curso de Estatística, do Departamento de Estatística e da
+Universidade na sociedade acadêmica e no meio profissional.
+
