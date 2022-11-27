@@ -28,6 +28,10 @@ Entrei na UFPR para cursar Estatística em 2020 logo depois do Ensino Médio por
 
 _Áreas de interesse_: Regressão linear; Estatística e indicadores sociais
 
+**[Anderson Amorim](https://www.linkedin.com/mwlite/in/anderson-amorim-5328771a2)**
+
+_Áreas de interesse_: Lógica; Probabilidade; Visualização de Dados.
+
 **Caio Gomes Alves**
 
 Graduando em Estatística desde 2019, entrei para o PET no primeiro ano do curso. Sou Escoteiro há mais de dez anos e tenho pesquisa voltada à área de Cálculo de Probabilidades. Gosto muito de ler, principalmente os clássicos e grandes obras da literatura mundial.
@@ -77,6 +81,12 @@ _Áreas de interesse_: Análise de risco; Modelagem estatística; Otimização d
 Iniciou o curso em 2022 e ingressou no PET no primeiro período do mesmo ano. Gosta de jogos online, livros de ficção científica e faz alguns trabalhos nas redes sociais.
 
 _Áreas de interesse_: Visualização de dados; Estatística computacional.
+
+[**Vitor Alberti Lima**](https://www.linkedin.com/in/vitor-alberti-lima-899832252/)
+
+Possuo técnico em petróleo e gás, apesar de não trabalhar na área. Esta é a minha primeira graduação e entrei no curso de estatística no ano de 2022. Sou bastante calmo, comunicativo e pontual, jogar é algo que eu gosto de fazer durante meu tempo livre.
+
+_Áreas de interesse_: Machine Leraning; Inteligência Artificial; Algoritmos; Matemática pura aplicada na Estatistíca.
 
 **Vitor Yuji Kiemo**
 
