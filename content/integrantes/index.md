@@ -86,7 +86,7 @@ _Áreas de interesse_: Visualização de dados; Estatística computacional.
 
 Possuo técnico em petróleo e gás, apesar de não trabalhar na área. Esta é a minha primeira graduação e entrei no curso de estatística no ano de 2022. Sou bastante calmo, comunicativo e pontual, jogar é algo que eu gosto de fazer durante meu tempo livre.
 
-_Áreas de interesse_: Machine Leraning; Inteligência Artificial; Algoritmos; Matemática pura aplicada na Estatistíca.
+_Áreas de interesse_: Machine Learning; Inteligência Artificial; Algoritmos; Matemática pura aplicada na Estatistíca.
 
 **Vitor Yuji Kiemo**
 
