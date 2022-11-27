@@ -82,7 +82,7 @@ Iniciou o curso em 2022 e ingressou no PET no primeiro período do mesmo ano. Go
 
 _Áreas de interesse_: Visualização de dados; Estatística computacional.
 
-[**Vitor Alberti Lima**](https://www.linkedin.com/in/vitor-alberti-lima-899832252/)
+**[Vitor Alberti Lima](https://www.linkedin.com/in/vitor-alberti-lima-899832252/)**
 
 Possuo técnico em petróleo e gás, apesar de não trabalhar na área. Esta é a minha primeira graduação e entrei no curso de estatística no ano de 2022. Sou bastante calmo, comunicativo e pontual, jogar é algo que eu gosto de fazer durante meu tempo livre.
 
