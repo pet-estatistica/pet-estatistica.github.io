@@ -6,9 +6,9 @@ date = "2020-07-16"
 aliases = ["selecao"]
 author = "PET Estatística UFPR"
 +++
-
+<!--
 ## Processo Seletivo PET - Estatística 2022/2023
-
+-->
 <!-- {{% alert warning %}}
 
 <!-- **Atenção!**
@@ -39,7 +39,7 @@ Veja as principais informações abaixo, e leia atentamente o
 - [**Link para inscrição**](https://docs.google.com/forms/d/e/1FAIpQLSexZx4n4MlLCYyZaJQn1NmahJhnhU-ONpp75efHLX6zmbCkOg/viewform)
 
 
-# Etapas do Processo seletivo:
+### Etapas do Processo seletivo:
 
 - ~~**Entrevistas: 09/12/2022 e 12/12/2022**~~
 - **Dinâmica em grupo: 16/12/2022**
