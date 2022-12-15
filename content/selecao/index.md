@@ -7,7 +7,7 @@ aliases = ["selecao"]
 author = "PET Estatística UFPR"
 +++
 
-## Informações e links para o processo seletivo 2022/2023 - Período de Inscrição prorrogado 
+## Processo Seletivo PET - Estatística 2022/2023
 
 <!-- {{% alert warning %}}
 
@@ -21,7 +21,7 @@ author = "PET Estatística UFPR"
 
 
 <center>
-<img src="Site Processo Seletivo 20222023.png" alt="" width="90%"/>
+<img src="Processo_Seletivo_base.png" alt="" width="90%"/>
 </center>
 
 
