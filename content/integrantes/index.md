@@ -64,12 +64,6 @@ Graduanda em estatística,  sempre me interessei por matemática e computação 
 
 _Áreas de interesse_: Bancos de dados; Métodos numéricos; Estatística Computacional; Visualização de dados.
 
-**[Luiz Fernando Ancay](https://www.linkedin.com/in/luiz-fernando-an%C3%A7ay-b8286b182/)**
-
-Graduando em Estatística na UFPR desde 2018.
-
-_Áreas de interesse_: Data Science; Storytelling com dados; Python; SQL.
-
 **[Paulo Justiniano Ribeiro Neto](https://www.linkedin.com/in/paulo-justiniano-a0297a210/)**
 
 Ingressei no curso de Estatística em 2022 e já no primeiro semestre entrei para o PET. Sou escoteiro desde 2014 e meus hobbies envolvem games e basquete. Adoro conversar com as pessoas e aprender sempre o máximo possível com essas trocas.
