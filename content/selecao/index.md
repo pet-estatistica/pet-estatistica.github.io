@@ -9,18 +9,9 @@ author = "PET Estatística UFPR"
 
 ## Processo seletivo PET Estatística 2022/2023 - Resultado parcial disponível
 
-<!--
-{{% alert warning %}}
-
-**Atenção!**
-
-Resultado Parcial liberado! 
--->
-
 <center>
 <img src="Processo_Seletivo_base.png" alt="" width="90%"/>
 </center>
-
 
 O processo seletivo do segundo semestre de 2022 do PET Estatística será presencial e ocorrerá entre **18/11/2022 e 13/02/2023** .
 
