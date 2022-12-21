@@ -37,8 +37,9 @@ Veja as principais informações abaixo, e leia atentamente o
 - Realização do processo seletivo: **18/11/2022 à 13/02/2023**.
 - [**Edital de seleção**](Edital_2022_2-retificado.pdf)
 - [**Link para inscrição**](https://docs.google.com/forms/d/e/1FAIpQLSexZx4n4MlLCYyZaJQn1NmahJhnhU-ONpp75efHLX6zmbCkOg/viewform) 
+- [Resultado Parcial](Edital_2022-Resultado_Parcial.pdf)
+
 <!--
-- [Resultado Parcial](Edital_2022_Resultado_Parcial.pdf)
 - **[Resultado Final](Edital_2022_Resultado_Final.pdf)**
 -->
 <!-- {{% alert warning %}} -->
