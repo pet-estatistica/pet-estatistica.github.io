@@ -17,10 +17,6 @@ author = "PET Estatística UFPR"
 Resultado Parcial liberado! 
 -->
 
-
-
-
-
 <center>
 <img src="Processo_Seletivo_base.png" alt="" width="90%"/>
 </center>
