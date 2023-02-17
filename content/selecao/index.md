@@ -7,12 +7,12 @@ aliases = ["selecao"]
 author = "PET Estatística UFPR"
 +++
 
-## Processo seletivo PET Estatística 2022/2023 - Resultado parcial disponível
+## Processo seletivo PET Estatística 2022/2023 - Resultado final disponível
 
 <center>
 <img src="Processo_Seletivo_base.png" alt="" width="90%"/>
 </center>
-
+<!--
 O processo seletivo do segundo semestre de 2022 do PET Estatística será presencial e ocorrerá entre **18/11/2022 e 13/02/2023** .
 
 O período de inscrição é de (~~**18/11/2022** até **02/12/2022**~~) **18/11/2022** até **04/12/2022**.
@@ -26,7 +26,7 @@ Veja as principais informações abaixo, e leia atentamente o
 - [**Edital de seleção**](Edital_2022_reitificado.pdf)
 - [**Link para inscrição**](https://docs.google.com/forms/d/e/1FAIpQLSexZx4n4MlLCYyZaJQn1NmahJhnhU-ONpp75efHLX6zmbCkOg/viewform)
 - [**Resultado Parcial**](Resultado_Parcial_2022.2.pdf)
-
+-->
 
 ### Etapas do Processo seletivo:
 
