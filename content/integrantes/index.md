@@ -25,7 +25,7 @@ _Áreas de interesse_: Regressão linear; Estatística e indicadores sociais
 
 _Áreas de interesse_: Lógica; Probabilidade; Visualização de Dados.
 
-**[Bruno Wavrzenczak]**
+**Bruno Wavrzenczak**
 
 Sempre gostei muito de matemática, e fui introduzido à estatística pelo meu irmão que já é formado no curso. Entrei no PET com o objetivo de melhorar meu desenvolvimento acadêmico. Gosto de música e jogos competitivos.
 
