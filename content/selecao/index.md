@@ -20,11 +20,11 @@ O período de inscrição é de **12/07/2023** até **09/08/2023**.
 Neste processo serão admitidos até **3 integrantes não bolsistas** e haverá uma lista de espera para aqueles que atingirem nota superior a 60 pontos. 
 
 Veja as principais informações abaixo, e leia atentamente o
-[**edital de seleção**](Edital_2022_reitificado.pdf):
+[**edital de seleção**](Edital_PS_PET_Estatistica_2023_2.pdf.pdf):
 
 - Período de inscrições: de ~~12/07/2023 à 02/08/2023~~ 12/07/2023 à 09/08/2023**
 - Realização do processo seletivo: **~~12/07/2023 à 06/09/2023~~ 12/07/2023 à 12/09/2023**.
-- [**Edital de seleção**](Edital_PS_PET_Estatistica_2023_2.pdf)
+- [**Edital de seleção**](Edital_PS_PET_Estatistica_2023_2.pdf.pdf)
 - [**Link para inscrição**](https://docs.google.com/forms/d/e/1FAIpQLSeemJxedzv9K_gBJdqno5F4NS_tQ11jkCu56gnA5nI_Hf1A1w/viewform?pli=1)
 
 ### Cronograma do Processo seletivo:
