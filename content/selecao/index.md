@@ -10,7 +10,7 @@ author = "PET Estatística UFPR"
 ## Processo seletivo PET Estatística 2023
 
 <center>
-<img src="processo_seletivo_pet_2023.jpeg" alt="" width="90%"/>
+<img src="site_processo_seletivo_2023_2.png" alt="" width="90%"/>
 </center>
 
 
