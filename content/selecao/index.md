@@ -14,27 +14,27 @@ author = "PET Estatística UFPR"
 </center>
 
 
-O processo seletivo do segundo semestre de 2023 do PET Estatística será presencial e ocorrerá entre **12/07/2023 e 12/09/2023** .
+O processo seletivo do segundo semestre de 2023 do PET Estatística será presencial e ocorrerá entre **12/07/2023 e 19/09/2023** .
 
 O período de inscrição é de **12/07/2023** até **09/08/2023**.
-Neste processo serão admitidos até **3 integrantes não bolsistas** e haverá uma lista de espera para aqueles que atingirem nota superior a 60 pontos. 
+Neste processo serão admitidos até **7 integrantes, sendo 2 bolsistas e 5 não bolsistas** e haverá uma lista de espera para aqueles que atingirem nota superior a 60 pontos. 
 
 Veja as principais informações abaixo, e leia atentamente o
-[**edital de seleção**](Edital_PS_PET_Estatistica_2023_2.pdf.pdf):
+[**edital de seleção**](Edital_PS_PET_2023_reitificado.pdf):
 
 - Período de inscrições: de ~~12/07/2023 à 02/08/2023~~ 12/07/2023 à 09/08/2023**
-- Realização do processo seletivo: **~~12/07/2023 à 06/09/2023~~ 12/07/2023 à 12/09/2023**.
+- Realização do processo seletivo: **~~12/07/2023 à 06/09/2023~~ 12/07/2023 à 19/09/2023**.
 - [**Edital de seleção**](Edital_PS_PET_Estatistica_2023_2.pdf.pdf)
 - [**Link para inscrição**](https://docs.google.com/forms/d/e/1FAIpQLSeemJxedzv9K_gBJdqno5F4NS_tQ11jkCu56gnA5nI_Hf1A1w/viewform?pli=1)
 
 ### Cronograma do Processo seletivo:
 
 - **Inscrições: ~~12/07/2023 à 02/08/2023~~ 12/07/2023 à 09/08/2023**
-- **Primeira Etapa: ~~07/08/2023 à 11/08/2023~~ 10/08/2023 à 11/08/2023**
-- **Segunda Etapa: ~~14/08/2023 à 18/08/2023~~ 15/08/2023 à 17/08/2023**
-- **Resultado Parcial: 21/08/2023**
-- **Estágio Probatório: ~~24/08/2023 à 01/09/2023~~ 23/08/2023 à 05/09/2023**
-- **Resultado Final: ~~06/09/2023~~ 12/09/2023**
+- **Primeira Etapa: ~~07/08/2023 à 11/08/2023~~ 15/08/2023 à 18/08/2023**
+- **Segunda Etapa: ~~14/08/2023 à 18/08/2023~~ 22/08/2023**
+- **Resultado Parcial: 25/08/2023**
+- **Estágio Probatório: ~~24/08/2023 à 01/09/2023~~ 29/08/2023 à 12/09/2023**
+- **Resultado Final: ~~06/09/2023~~ 19/09/2023**
 
 <!--
 =======
