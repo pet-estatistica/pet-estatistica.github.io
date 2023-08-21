@@ -26,7 +26,7 @@ Veja as principais informações abaixo, e leia atentamente o
 - Realização do processo seletivo: **~~12/07/2023 à 06/09/2023~~ 12/07/2023 à 19/09/2023**.
 - **~~[**Edital de seleção**](Edital_PS_PET_2023_reitificado_2.pdf)~~**
 - **~~[**Link para inscrição**](https://docs.google.com/forms/d/e/1FAIpQLSeemJxedzv9K_gBJdqno5F4NS_tQ11jkCu56gnA5nI_Hf1A1w/viewform?pli=1)~~**
-- **~~[**Resultado da Primeira Etapa**](Edital_2023_Resultado_Entrevistas.pdf)~~**
+- **[**Resultado da Primeira Etapa**](Edital_2023_Resultado_Entrevistas.pdf)**
 
 ### Cronograma do Processo seletivo:
 
