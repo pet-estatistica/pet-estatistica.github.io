@@ -10,7 +10,7 @@ author = "PET Estatística UFPR"
 ## Processo seletivo PET Estatística 2023
 
 <center>
-<img src="Site_PS_2023_Resultado_Primeira_Etapa.png" alt="" width="90%"/>
+<img src="Site_Resultado_Parcial.png" alt="" width="90%"/>
 </center>
 
 
@@ -26,14 +26,14 @@ Veja as principais informações abaixo, e leia atentamente o
 - Realização do processo seletivo: **~~12/07/2023 à 06/09/2023~~ 12/07/2023 à 19/09/2023**.
 - **~~[**Edital de seleção**](Edital_PS_PET_2023_reitificado_2.pdf)~~**
 - **~~[**Link para inscrição**](https://docs.google.com/forms/d/e/1FAIpQLSeemJxedzv9K_gBJdqno5F4NS_tQ11jkCu56gnA5nI_Hf1A1w/viewform?pli=1)~~**
-- **[**Resultado da Primeira Etapa**](Edital_2023_Resultado_Entrevistas.pdf)**
+- **[**Resultado Parcial**](Resultado_Parcial.pdf)**
 
 ### Cronograma do Processo seletivo:
 
 - **~~Inscrições: 12/07/2023 à 09/08/2023~~**
 - **~~Primeira Etapa: 15/08/2023 à 18/08/2023~~**
-- **Segunda Etapa: ~~14/08/2023 à 18/08/2023~~ 22/08/2023**
-- **Resultado Parcial: 25/08/2023**
+- **~~Segunda Etapa: 22/08/2023~~**
+- **~~Resultado Parcial: 25/08/2023~~**
 - **Estágio Probatório: ~~24/08/2023 à 01/09/2023~~ 29/08/2023 à 12/09/2023**
 - **Resultado Final: ~~06/09/2023~~ 19/09/2023**
 
