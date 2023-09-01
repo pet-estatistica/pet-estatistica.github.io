@@ -10,10 +10,13 @@ author = "PET Estatística UFPR"
 ## Processo seletivo PET Estatística 2023
 
 <center>
-<img src="Site_Resultado_Parcial.png" alt="" width="90%"/>
+<img src="Site_Comunicado_2023.png" alt="" width="90%"/>
 </center>
 
+Segue abaixo Comunicado Oficial sobre o  Processo Seletivo 2023 do Programa de Educação Tutorial - Estatística:
 
+- [**Comunicado Oficial**](ComunicadoPET_RANK1.pdf)
+<!--
 O processo seletivo do segundo semestre de 2023 do PET Estatística será presencial e ocorrerá entre **12/07/2023 e 19/09/2023** .
 
 O período de inscrição é de **12/07/2023** até **09/08/2023**.
@@ -36,7 +39,7 @@ Veja as principais informações abaixo, e leia atentamente o
 - **~~Resultado Parcial: 25/08/2023~~**
 - **Estágio Probatório: ~~24/08/2023 à 01/09/2023~~ 29/08/2023 à 12/09/2023**
 - **Resultado Final: ~~06/09/2023~~ 19/09/2023**
-
+-->
 <!--
 =======
 [**edital de seleção**](Edital_2022_2-retificado.pdf):
