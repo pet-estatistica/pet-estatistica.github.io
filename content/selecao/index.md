@@ -15,31 +15,32 @@ author = "PET Estatística UFPR"
 
 Segue abaixo Comunicado Oficial sobre o  Processo Seletivo 2023 do Programa de Educação Tutorial - Estatística:
 
-- [**Comunicado Oficial**](ComunicadoPET_RANK1.pdf)
-<!--
-O processo seletivo do segundo semestre de 2023 do PET Estatística será presencial e ocorrerá entre **12/07/2023 e 19/09/2023** .
+
+
+O processo seletivo do segundo semestre de 2023 do PET Estatística será presencial e ocorrerá entre **12/07/2023 e 15/10/2023** .
 
 O período de inscrição é de **12/07/2023** até **09/08/2023**.
 Neste processo serão admitidos até **7 integrantes, sendo 2 bolsistas e 5 não bolsistas** e haverá uma lista de espera para aqueles que atingirem nota superior a 60 pontos. 
 
 Veja as principais informações abaixo, e leia atentamente o
-[**edital de seleção**](Edital_PS_PET_2023_reitificado_2.pdf):
+[**edital de seleção**](Edital_PET_2023_final.pdf):
 
 - Período de inscrições: de ~~12/07/2023 à 02/08/2023~~ 12/07/2023 à 09/08/2023**
-- Realização do processo seletivo: **~~12/07/2023 à 06/09/2023~~ 12/07/2023 à 19/09/2023**.
-- **~~[**Edital de seleção**](Edital_PS_PET_2023_reitificado_2.pdf)~~**
+- Realização do processo seletivo: **~~12/07/2023 à 19/09/2023~~ 12/07/2023 à 15/10/2023**.
+- **~~[**Edital de seleção**](Edital_PET_2023_final.pdf)~~**
 - **~~[**Link para inscrição**](https://docs.google.com/forms/d/e/1FAIpQLSeemJxedzv9K_gBJdqno5F4NS_tQ11jkCu56gnA5nI_Hf1A1w/viewform?pli=1)~~**
-- **[**Resultado Parcial**](Resultado_Parcial.pdf)**
 
 ### Cronograma do Processo seletivo:
 
+- **~~Lançamento do edital: 12/07/2023**
 - **~~Inscrições: 12/07/2023 à 09/08/2023~~**
-- **~~Primeira Etapa: 15/08/2023 à 18/08/2023~~**
-- **~~Segunda Etapa: 22/08/2023~~**
-- **~~Resultado Parcial: 25/08/2023~~**
-- **Estágio Probatório: ~~24/08/2023 à 01/09/2023~~ 29/08/2023 à 12/09/2023**
-- **Resultado Final: ~~06/09/2023~~ 19/09/2023**
--->
+- **~~Entrevistas com os Petianos: 15/08/2023 à 18/08/2023~~**
+- **~~Dinâmica de trabalho em equipe: 22/08/2023~~**
+- **Entrevistas com os docentes: 13/09/2023**
+- **Resultado parcial: 17/09/2023**
+- **Estágio probatório: 19/09/2023 à 10/10/2023**
+- **Resultado final: 15/10/2023**
+
 <!--
 =======
 [**edital de seleção**](Edital_2022_2-retificado.pdf):
