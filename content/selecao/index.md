@@ -32,7 +32,7 @@ Veja as principais informações abaixo, e leia atentamente o
 
 ### Cronograma do Processo seletivo:
 
-- **~~Lançamento do edital: 12/07/2023**
+- **~~Lançamento do edital: 12/07/2023~~**
 - **~~Inscrições: 12/07/2023 à 09/08/2023~~**
 - **~~Entrevistas com os Petianos: 15/08/2023 à 18/08/2023~~**
 - **~~Dinâmica de trabalho em equipe: 22/08/2023~~**
