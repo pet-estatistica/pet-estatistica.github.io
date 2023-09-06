@@ -10,7 +10,7 @@ author = "PET Estatística UFPR"
 ## Processo seletivo PET Estatística 2023
 
 <center>
-<img src="Site_Comunicado_2023.png" alt="" width="90%"/>
+<img src="Site_PS_2023_new.png" alt="" width="90%"/>
 </center>
 
 Segue abaixo Comunicado Oficial sobre o  Processo Seletivo 2023 do Programa de Educação Tutorial - Estatística:
