@@ -10,7 +10,7 @@ author = "PET Estatística UFPR"
 ## Processo seletivo PET Estatística 2023
 
 <center>
-<img src="Site_PS_2023_new.png" alt="" width="90%"/>
+<img src="Site_PS_RP_2023.png" alt="" width="90%"/>
 </center>
 
 Segue abaixo Comunicado Oficial sobre o  Processo Seletivo 2023 do Programa de Educação Tutorial - Estatística:
@@ -38,7 +38,7 @@ Veja as principais informações abaixo, e leia atentamente o
 - **~~Dinâmica de trabalho em equipe: 22/08/2023~~**
 - **~~Entrevistas com os docentes: 13/09/2023~~**
 - **~~Resultado parcial: 17/09/2023~~**
-    - Confira o [**Resultado Parcial**](RESULTADO_E2023)
+    - Confira o [**Resultado Parcial**](RESULTADO_E2023.pdf)!!!
 - **Estágio probatório: 19/09/2023 à 10/10/2023**
 - **Resultado final: 15/10/2023**
 
