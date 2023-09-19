@@ -36,6 +36,7 @@ Veja as principais informações abaixo, e leia atentamente o
 - **~~Inscrições: 12/07/2023 à 09/08/2023~~**
 - **~~Entrevistas com os Petianos: 15/08/2023 à 18/08/2023~~**
 - **~~Dinâmica de trabalho em equipe: 22/08/2023~~**
+- **[Comunicado oficial](ComunicadoPET_RANK1.pdf)**
 - **~~Entrevistas com os docentes: 13/09/2023~~**
 - **~~Resultado parcial: 17/09/2023~~**
     - Confira o [**Resultado Parcial**](RESULTADO_E2023.pdf)!!!
