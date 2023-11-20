@@ -15,11 +15,11 @@ author = "PET Estatística UFPR"
 
 ### Integrantes
 
-**[Amanda de Melo Vizzu](https://www.linkedin.com/in/amanda-vizzu-5b0530222)**
+**Alan Vitor Lima Silva**
 
-Entrei na UFPR para cursar Estatística em 2020 logo depois do Ensino Médio por indicação de um professor de matemática. Aceitei o desafio e hoje encaro esse curso como um meio de conquistar oportunidades no mercado de trabalho. Resolvi entrar no PET para me envolver mais na graduação e trocar experiências com colegas.
+Ingressei na graduação de estatística em 2023, após pesquisar sobre as mais diversas áreas encontrei a estatística e gostei muito da grade curricular e das oportunidades depois da graduação. Sou apaixonado nas 4 ligas major americana (NFL, NHL, MLB, NBA), tennis , eSports , música e cultura pop jp/kr.
 
-_Áreas de interesse_: Regressão linear; Estatística e indicadores sociais
+_Áreas de interesse_: Probabilidade; Aprendizado de máquina.
 
 **[Anderson Amorim](https://www.linkedin.com/mwlite/in/anderson-amorim-5328771a2)**
 
@@ -49,12 +49,6 @@ Sou técnico em desenvolvimento de sistemas, atuei 1 ano na área e resolvi vir 
 
 _Áreas de interesse_: Ciência de Dados em Cloud; Automação e Otimização; Inteligência Artificial; MLOps.
 
-**[Daniel Krugel](https://www.linkedin.com/in/dkrugel)**
-
-Graduanda em Estatística desde 2019, entrei no PET com o objetivo de dividir meus conhecimentos e conquistar novos. Gosto de ler livros, jogar jogos competitivos e se manter em aprendizado constante.
-
-_Áreas de interesse_: Banco de dados; Regressão; Visualizações.
-
 **[Denny Andrew da Silva](https://www.linkedin.com/in/denny-andrew-137598160/)**
 
 Graduando em Estatística desde 2020, anteriormente cursei 2 anos de Química pela
@@ -62,6 +56,29 @@ federal, mas não me encontrei tanto. Meu maior hobby é sempre estar aprendendo
 algo diferente e tenho extremo apreço por relacionar conhecimentos distintos.
 
 _Áreas de interesse_: Séries Temporais; Análise Exploratória; Estatística Computacional; Desenvolvimente de Dashboards.
+
+**Ellen Jieyi Zhou**
+
+Ingressei no curso de Estatística em 2023, após 2 anos cursando Engenharia Civil, e entrei no PET com o objetivo de adquirir novas experiências e conhecimentos. Sou apaixonada por vôlei, futebol, livros e Friends.
+
+_Áreas de interesse_: Estatística Computacional; Análise Exploratória; Estatística aplicada ao esporte.
+
+**Gabriel Muller Bittencourt**
+
+_Áreas de interesse_: Visualização de dados; Machine Learning; Otimização
+
+**Isabella Muller Souza**
+
+Estou sempre em busca de identificar padrões e encontrar a razão da existência deles.
+Por esse motivo acredito que a Graduação de Estatística é um ótimo norte para minha vida profissional. Ler, praticar exercícios fisícos, assistir séries e aprender coisas novas com frequência são atividades fundamentais na minha rotina.
+
+_Áreas de interesse_: Estatística aplicada a Negócios e Marketing; Webscraping e Estatística aplicada à Psicologia.
+
+**João Otávio do Lago**
+
+Tenho 18 anos e entrei pelo ENEM em 2023, me interessei no curso por sempre me dar bem em matemática e ter um interesse em computação. Meus hobbies são: Jogar, ler mangás e assistir séries e animes, principalmente One Piece.
+
+_Áreas de interesse_: Estatística computacional; probabilidades e análise exploratória.
 
 **[Kamila de Lazari Macedo](https://www.linkedin.com/in/kamila-macedo-8138b0253)**
 
@@ -74,6 +91,12 @@ _Áreas de interesse_: Bancos de dados; Métodos numéricos; Estatística Comput
 Graduanda em estatística desde 2021, ingressei no PET com o intuito de aprimorar minhas habilidades acadêmicas e sociais. Escolhi a Estatística pela grande afinidade com a matemática e programação. No tempo livre, gosto de ler e assistir seriados.
 
 _Áreas de interesse_: Data Science; Visualização de dados; Estatística Computacional.
+
+**Mário Henrique Santos De Sena**
+
+Tenho 19 anos e posteriormente fiz tecnico de informatica na TECPUC, incressei no curso pelo vestibular em 2023, abri meus olhos para o curso de estatistica após a recomendação de meus professores. Entre meus hobbies estão: Ler, escrever, jogos de tabuleiro e principalmente procurar novos desafios para me testar.
+
+_Áreas de interesse_: Análise Exploratória; Estatística Computacional; Desenvolvimente de Dashboards; Estudo de Probabilidades. 
 
 **[Paulo Justiniano Ribeiro Neto](https://www.linkedin.com/in/paulo-justiniano-a0297a210/)**
 
@@ -93,12 +116,6 @@ Tenho 22 anos, me formei como técnico em Eletrônica na UTFPR, onde notei que c
 Gosto bastante de cantar e no meu tempo livre aproveito para jogar.
 
 _Áreas de interesse_: Séries temporais; Teoria de Resposta ao Item; Regressão Linear.
-
-**[Vitor Alberti Lima](https://www.linkedin.com/in/vitor-alberti-lima-899832252/)**
-
-Possuo técnico em petróleo e gás, apesar de não trabalhar na área. Esta é a minha primeira graduação e entrei no curso de estatística no ano de 2022. Sou bastante calmo, comunicativo e pontual, jogar é algo que eu gosto de fazer durante meu tempo livre.
-
-_Áreas de interesse_: Machine Learning; Inteligência Artificial; Algoritmos; Matemática pura aplicada na Estatistíca.
 
 **Vitor Yuji Kiemo**
 
