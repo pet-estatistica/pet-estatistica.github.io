@@ -211,8 +211,6 @@ Veja também https://bookdown.org/yihui/blogdown/templates.html.
 - [How to build a website with Blogdown in R][]
 - [How Not To Knit All Rmd Files With Blogdown][]
 
-- Teste 2024
-
 [How Not To Knit All Rmd Files With Blogdown]: https://yutani.rbind.io/post/2017-10-25-blogdown-custom/
 [How to build a website with Blogdown in R]: https://www.storybench.org/how-to-build-a-website-with-blogdown-in-r/
 [Blogdown Tutorial (in Portuguese)]: https://diegopftrindade.netlify.app/post/blogdown-tutorial-in-portuguese/
