@@ -8,41 +8,40 @@ author = "PET Estatística UFPR"
 +++
 
 ## Processo seletivo PET Estatística 2023
-
+<!--
 <center>
 <img src="SITE_PET_PS_RESFINAL_2023.png" alt="" width="90%"/>
 </center>
+-->
+Segue abaixo Comunicado Oficial sobre o  Processo Seletivo 2024 do Programa de Educação Tutorial - Estatística:
 
-Segue abaixo Comunicado Oficial sobre o  Processo Seletivo 2023 do Programa de Educação Tutorial - Estatística:
 
 
+O processo seletivo do segundo semestre de 2024 do PET Estatística será presencial e ocorrerá entre **04/11/2024 e 10/12/2024** .
 
-O processo seletivo do segundo semestre de 2023 do PET Estatística será presencial e ocorrerá entre **12/07/2023 e 15/10/2023** .
-
-O período de inscrição é de **12/07/2023** até **09/08/2023**.
-Neste processo serão admitidos até **7 integrantes, sendo 2 bolsistas e 5 não bolsistas** e haverá uma lista de espera para aqueles que atingirem nota superior a 60 pontos. 
+O período de inscrição é de **04/11/2024** até **25/11/2024**.
+Neste processo serão admitidos até **4 integrantes não bolsistas** e haverá uma lista de espera para aqueles que atingirem nota superior a 60 pontos. 
 
 Veja as principais informações abaixo, e leia atentamente o
-[**edital de seleção**](Edital_PET_2023_final.pdf):
+<!--[**edital de seleção**](Edital_PET_2023_final.pdf):-->
 
-- Período de inscrições: de ~~12/07/2023 à 02/08/2023~~ 12/07/2023 à 09/08/2023**
-- Realização do processo seletivo: **~~12/07/2023 à 19/09/2023~~ 12/07/2023 à 15/10/2023**.
+- Período de inscrições: de **04/11/2024 à 25/11/2024**
+- Realização do processo seletivo: **27/11/2024 à 29/11/2023**.
+<!--
 - **~~[**Edital de seleção**](Edital_PET_2023_final.pdf)~~**
-- **~~[**Link para inscrição**](https://docs.google.com/forms/d/e/1FAIpQLSeemJxedzv9K_gBJdqno5F4NS_tQ11jkCu56gnA5nI_Hf1A1w/viewform?pli=1)~~**
+- **~~[**Link para inscrição**](https://docs.google.com/forms/d/e/1FAIpQLSeemJxedzv9K_gBJdqno5F4NS_tQ11jkCu56gnA5nI_Hf1A1w/viewform?pli=1)~~**-->
 
 ### Cronograma do Processo seletivo:
 
-- **~~Lançamento do edital: 12/07/2023~~**
-- **~~Inscrições: 12/07/2023 à 09/08/2023~~**
-- **~~Entrevistas com os Petianos: 15/08/2023 à 18/08/2023~~**
-- **~~Dinâmica de trabalho em equipe: 22/08/2023~~**
-- **[Comunicado oficial](ComunicadoPET_RANK1.pdf)**
-- **~~Entrevistas com os docentes: 13/09/2023~~**
-- **~~Resultado parcial: 17/09/2023~~**
-    - ~~Confira o [**Resultado Parcial**](RESULTADO_E2023.pdf)!!!~~
-- **~~Estágio probatório: 19/09/2023 à 10/10/2023~~**
-- **~~[Resultado final](PET_PS_RESULTADOFINAL_2023.pdf): 15/10/2023~~**
-    - Confira o [**Resultado Final**](PET_PS_RESULTADOFINAL_2023.pdf)!!!
+- **Lançamento do edital: 04/11/2024**
+- **Inscrições: 04/11/2024 à 25/11/2024**
+- **Resultado parcial: 26/11/2024**
+- **Entrevistas: 27/11/2024 à 28/11/2024 - 19h00 às 21h00**
+- **Dinâmica de trabalho em equipe: 29/11/2024 - 19h00 às 20h00**
+<!-- - Confira o [**Resultado Parcial**](RESULTADO_E2023.pdf)!!!-->
+<!-- - **Estágio probatório: 19/09/2023 à 10/10/2023**-->
+<!-- - **[Resultado final](PET_PS_RESULTADOFINAL_2023.pdf): 15/10/2023**-->
+- **Resultado Final: 10/12/2024**
 
 <!--
 =======
