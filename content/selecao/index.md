@@ -8,11 +8,11 @@ author = "PET Estatística UFPR"
 +++
 
 ## Processo seletivo PET Estatística 2024
-<!--
+
 <center>
-<img src="SITE_PET_PS_RESFINAL_2023.png" alt="" width="90%"/>
+<img src="POST_PROC_SELETIVO_2024.png" alt="Post Processo Seletivo 2024" width="90%"/>
 </center>
--->
+
 Segue abaixo Comunicado Oficial sobre o  Processo Seletivo 2024 do Programa de Educação Tutorial - Estatística:
 
 
@@ -26,10 +26,10 @@ Veja as principais informações abaixo, e leia atentamente o
 <!--[**edital de seleção**](Edital_PET_2023_final.pdf):-->
 
 - Período de inscrições: de **04/11/2024 à 25/11/2024**
-- Realização do processo seletivo: **27/11/2024 à 29/11/2023**.
+- Realização do processo seletivo: **27/11/2024 à 29/11/2024**.
 <!--
-- **~~[**Edital de seleção**](Edital_PET_2023_final.pdf)~~**
-- **~~[**Link para inscrição**](https://docs.google.com/forms/d/e/1FAIpQLSeemJxedzv9K_gBJdqno5F4NS_tQ11jkCu56gnA5nI_Hf1A1w/viewform?pli=1)~~**-->
+- **~~[**Edital de seleção**](Edital_PET_2023_final.pdf)~~**-->
+- **[**Link para inscrição**](https://forms.gle/niHaxxmeTHHieQuW8)**
 
 ### Cronograma do Processo seletivo:
 
