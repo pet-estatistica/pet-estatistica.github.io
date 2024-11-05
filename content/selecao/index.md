@@ -27,8 +27,7 @@ Veja as principais informações abaixo, e leia atentamente o
 
 - Período de inscrições: de **04/11/2024 à 25/11/2024**
 - Realização do processo seletivo: **27/11/2024 à 29/11/2024**.
-<!--
-- **~~[**Edital de seleção**](Edital_PET_2023_final.pdf)~~**-->
+- [**Edital de seleção**](Edital_2024_PET_Estatistica_UFPR.pdf)
 - <a href="https://forms.gle/niHaxxmeTHHieQuW8" target="_blank"><b>Link para Inscrição</b></a>
 ### Cronograma do Processo seletivo:
 
