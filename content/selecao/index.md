@@ -29,7 +29,7 @@ Veja as principais informações abaixo, e leia atentamente o
 - Realização do processo seletivo: **27/11/2024 à 29/11/2024**.
 <!--
 - **~~[**Edital de seleção**](Edital_PET_2023_final.pdf)~~**-->
-- **[**Link para inscrição**](https://forms.gle/niHaxxmeTHHieQuW8){:target="_blank"}**
+- [**Link para inscrição**](https://forms.gle/niHaxxmeTHHieQuW8){:target="_blank"}
 
 ### Cronograma do Processo seletivo:
 
