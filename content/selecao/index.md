@@ -34,6 +34,7 @@ Veja as principais informações abaixo, e leia atentamente o
 - **Lançamento do edital: 04/11/2024**
 - **Inscrições: 04/11/2024 à 25/11/2024**
 - **Resultado parcial: 26/11/2024**
+    - **Confira o** <a href="resultado_pesquisa_2024.pdf" target="_blank"><b>Edital de seleção</b></a>
 - **Entrevistas: 27/11/2024 à 28/11/2024 - 19h00 às 21h00**
 - **Dinâmica de trabalho em equipe: 29/11/2024 - 19h00 às 20h00**
 - **Resultado Final: 10/12/2024**
