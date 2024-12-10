@@ -38,6 +38,7 @@ Veja as principais informações abaixo, e leia atentamente o
 - **Entrevistas: 27/11/2024 à 28/11/2024 - 19h00 às 21h00**
 - **Dinâmica de trabalho em equipe: 29/11/2024 - 19h00 às 20h00**
 - **Resultado Final: 10/12/2024**
+    - **Confira o** <a href="ResultadoFinal2024.pdf" target="_blank"><b>resultado final</b></a>
 <!-- - Confira o [**Resultado Parcial**](RESULTADO_E2023.pdf)!!!-->
 <!-- - **Estágio probatório: 19/09/2023 à 10/10/2023**-->
 <!-- - **[Resultado final](PET_PS_RESULTADOFINAL_2023.pdf): 15/10/2023**-->
