@@ -1,4 +1,5 @@
-baseURL       = "https://pet-estatistica.netlify.app/"
+#baseURL       = "https://pet-estatistica.netlify.app/"
+baseURL       = "https://pet.leg.ufpr.br/"
 languageCode  = "pt-br"
 DefaultContentLanguage = "pt"
 title         = "PET ESTATÍSTICA UFPR"
