@@ -2,59 +2,59 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Nossos Projetos on PET ESTATÍSTICA UFPR</title>
-    <link>https://pet-estatistica.netlify.app/projetos/</link>
+    <link>https://pet.leg.ufpr.br/projetos/</link>
     <description>Recent content in Nossos Projetos on PET ESTATÍSTICA UFPR</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
     <lastBuildDate>Thu, 08 May 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://pet-estatistica.netlify.app/projetos/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://pet.leg.ufpr.br/projetos/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Confecção de Material PET</title>
-      <link>https://pet-estatistica.netlify.app/projetos/confeccao-material/</link>
+      <link>https://pet.leg.ufpr.br/projetos/confeccao-material/</link>
       <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://pet-estatistica.netlify.app/projetos/confeccao-material/</guid>
+      <guid>https://pet.leg.ufpr.br/projetos/confeccao-material/</guid>
       <description>Descrição e Justificativa O website e as redes sociais do PET são vitais para a divulgação científica. Esta atividade garante:&#xA;Produção contínua de materiais originais Padronização visual da comunicação Integração com iniciativas acadêmicas (como o TidyTuesday) Justificativa:</description>
     </item>
     <item>
       <title>Seminários Científicos PET</title>
-      <link>https://pet-estatistica.netlify.app/projetos/seminarios-cientificos/</link>
+      <link>https://pet.leg.ufpr.br/projetos/seminarios-cientificos/</link>
       <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://pet-estatistica.netlify.app/projetos/seminarios-cientificos/</guid>
+      <guid>https://pet.leg.ufpr.br/projetos/seminarios-cientificos/</guid>
       <description>Descrição e Justificativa A exposição oral de pesquisas científicas é uma habilidade fundamental na formação acadêmica. Este projeto organiza um ciclo contínuo de seminários onde:</description>
     </item>
     <item>
       <title></title>
-      <link>https://pet-estatistica.netlify.app/projetos/organizacao-eventos-cientificos/</link>
+      <link>https://pet.leg.ufpr.br/projetos/organizacao-eventos-cientificos/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://pet-estatistica.netlify.app/projetos/organizacao-eventos-cientificos/</guid>
+      <guid>https://pet.leg.ufpr.br/projetos/organizacao-eventos-cientificos/</guid>
       <description></description>
     </item>
     <item>
       <title>Aulas de Revisão PET Estatística</title>
-      <link>https://pet-estatistica.netlify.app/projetos/aulas-revisao/</link>
+      <link>https://pet.leg.ufpr.br/projetos/aulas-revisao/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://pet-estatistica.netlify.app/projetos/aulas-revisao/</guid>
+      <guid>https://pet.leg.ufpr.br/projetos/aulas-revisao/</guid>
       <description>Descrição e Justificativa Iniciativa que oferece reforço acadêmico estruturado para:&#xA;Disciplinas críticas do ciclo básico Alunos com dificuldades em estatística básica Cursos de outras áreas com componentes estatísticos Contexto:</description>
     </item>
     <item>
       <title>Consultoria Estatística PET</title>
-      <link>https://pet-estatistica.netlify.app/projetos/consultoria-estatistica/</link>
+      <link>https://pet.leg.ufpr.br/projetos/consultoria-estatistica/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://pet-estatistica.netlify.app/projetos/consultoria-estatistica/</guid>
+      <guid>https://pet.leg.ufpr.br/projetos/consultoria-estatistica/</guid>
       <description>Descrição e Justificativa Atividade que conecta o PET-Estatística com outros grupos de pesquisa da UFPR através de:&#xA;Assessoria metodológica em projetos interdisciplinares Desenvolvimento conjunto de análises estatísticas Capacitação em ferramentas de análise de dados Justificativa:</description>
     </item>
     <item>
       <title>Feira de Cursos e Profissões</title>
-      <link>https://pet-estatistica.netlify.app/projetos/feira-cursos/</link>
+      <link>https://pet.leg.ufpr.br/projetos/feira-cursos/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://pet-estatistica.netlify.app/projetos/feira-cursos/</guid>
+      <guid>https://pet.leg.ufpr.br/projetos/feira-cursos/</guid>
       <description>Descrição e Justificativa Atividade anual que posiciona o PET como embaixador do curso de Estatística:&#xA;Apresentação do curso para futuros universitários Demonstrações práticas com jogos estatísticos Painéis com aplicações reais da profissão Relevância:</description>
     </item>
     <item>
       <title>Sistema de Acompanhamento PET</title>
-      <link>https://pet-estatistica.netlify.app/projetos/acompanhamento/</link>
+      <link>https://pet.leg.ufpr.br/projetos/acompanhamento/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://pet-estatistica.netlify.app/projetos/acompanhamento/</guid>
+      <guid>https://pet.leg.ufpr.br/projetos/acompanhamento/</guid>
       <description>Descrição e Justificativa Solução para organização e monitoramento contínuo de todas as atividades do PET Estatística:&#xA;Quadro Kanban virtual centralizado Visualização do status de cada iniciativa Integração com as reuniões semanais Por que é necessário?</description>
     </item>
   </channel>

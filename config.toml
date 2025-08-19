@@ -63,7 +63,12 @@ summarylength = 25
 
 [services]
   [services.googleAnalytics]
-    id = 'G-ZPWNNN29C7'
+    id = "G-ZPWNNN29C7"
+
+[privacy]
+  [privacy.googleAnalytics]
+    disable = false
+    respectDoNotTrack = true
 
 # Site Params
 [params]

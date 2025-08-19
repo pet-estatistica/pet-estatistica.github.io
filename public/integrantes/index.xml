@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Integrantes do PET on PET ESTATÍSTICA UFPR</title>
-    <link>https://pet-estatistica.netlify.app/integrantes/</link>
+    <link>https://pet.leg.ufpr.br/integrantes/</link>
     <description>Recent content in Integrantes do PET on PET ESTATÍSTICA UFPR</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
     <lastBuildDate>Mon, 23 Dec 2019 16:48:28 +0600</lastBuildDate>
-    <atom:link href="https://pet-estatistica.netlify.app/integrantes/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://pet.leg.ufpr.br/integrantes/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

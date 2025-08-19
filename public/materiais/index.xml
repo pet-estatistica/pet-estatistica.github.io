@@ -2,44 +2,44 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Biblioteca de Materiais on PET ESTATÍSTICA UFPR</title>
-    <link>https://pet-estatistica.netlify.app/materiais/</link>
+    <link>https://pet.leg.ufpr.br/materiais/</link>
     <description>Recent content in Biblioteca de Materiais on PET ESTATÍSTICA UFPR</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <atom:link href="https://pet-estatistica.netlify.app/materiais/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://pet.leg.ufpr.br/materiais/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Artigos Científicos</title>
-      <link>https://pet-estatistica.netlify.app/materiais/artigos/</link>
+      <link>https://pet.leg.ufpr.br/materiais/artigos/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://pet-estatistica.netlify.app/materiais/artigos/</guid>
+      <guid>https://pet.leg.ufpr.br/materiais/artigos/</guid>
       <description>Acesso aos Artigos: em produção</description>
     </item>
     <item>
       <title>Materiais das Disciplinas</title>
-      <link>https://pet-estatistica.netlify.app/materiais/auloes/</link>
+      <link>https://pet.leg.ufpr.br/materiais/auloes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://pet-estatistica.netlify.app/materiais/auloes/</guid>
+      <guid>https://pet.leg.ufpr.br/materiais/auloes/</guid>
       <description>Materiais dos Aulões ministrados pelo Pet: em produção&#xA;Voltar para Materiais</description>
     </item>
     <item>
       <title>Materiais das Disciplinas</title>
-      <link>https://pet-estatistica.netlify.app/materiais/disciplinas/</link>
+      <link>https://pet.leg.ufpr.br/materiais/disciplinas/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://pet-estatistica.netlify.app/materiais/disciplinas/</guid>
+      <guid>https://pet.leg.ufpr.br/materiais/disciplinas/</guid>
       <description>📚 Materiais Acadêmicos por Disciplina 📊 CE301 - Estatística Básica 2024 | Dra. Sílvia Emiko Shimakura, Me. Lineu Alberto Cavazani de Freitas&#xA;📚 Listas de exercícios: Todas as lista ZIP 🎲 CE330 - Fundamentos Matemáticos Para Probabilidade (Pré-Prob) 2024 | Dra.</description>
     </item>
     <item>
       <title>Materiais das Disciplinas</title>
-      <link>https://pet-estatistica.netlify.app/materiais/links_uteis/</link>
+      <link>https://pet.leg.ufpr.br/materiais/links_uteis/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://pet-estatistica.netlify.app/materiais/links_uteis/</guid>
+      <guid>https://pet.leg.ufpr.br/materiais/links_uteis/</guid>
       <description>📚 Links Úteis 🎓 UFPR Siga UFPR - Sistema Integrado de Gestão Acadêmica UFPR Virtual - Moodle oficial da UFPR utilizado para educação a distância, aulas híbridas e auxílio para ensino presencial Dest - Departamento de Estatística.</description>
     </item>
     <item>
       <title>Materiais das Disciplinas</title>
-      <link>https://pet-estatistica.netlify.app/materiais/tutoriais/</link>
+      <link>https://pet.leg.ufpr.br/materiais/tutoriais/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://pet-estatistica.netlify.app/materiais/tutoriais/</guid>
+      <guid>https://pet.leg.ufpr.br/materiais/tutoriais/</guid>
       <description>Tutoriais do Pet: em desenvolvimento.&#xA;Voltar para Materiais</description>
     </item>
   </channel>

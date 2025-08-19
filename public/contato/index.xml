@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Contact on PET ESTATÍSTICA UFPR</title>
-    <link>https://pet-estatistica.netlify.app/contato/</link>
+    <link>https://pet.leg.ufpr.br/contato/</link>
     <description>Recent content in Contact on PET ESTATÍSTICA UFPR</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
     <lastBuildDate>Mon, 23 Dec 2019 20:17:01 +0600</lastBuildDate>
-    <atom:link href="https://pet-estatistica.netlify.app/contato/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://pet.leg.ufpr.br/contato/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
