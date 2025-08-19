@@ -1,184 +1,160 @@
-# For a description of these parameters, please visit the theme wiki.
-# https://github.com/pacollins/hugo-future-imperfect-slim/wiki/config.toml
-baseurl                 = "http://pet.leg.ufpr.br/"
-DefaultContentLanguage  = "pt"
-publishDir              = "docs"
-# canonifyURLs            = "true"
-# relativeURLs            = "true"
-title                   = "PET Estatística UFPR"
-theme                   = "hugo-future-imperfect-slim"
-paginate                = 3
-disqusShortname         = ""
-googleAnalytics         = "UA-174760536-1"
-pluralizeListTitles     = false
-disableLanguages        = ["en", "fr", "pl", "de", "es", "zh-CN", "zh-TW", "ja"]
-ignoreFiles             = ["\\.R$", "\\.Rmd$", "\\.Rproj$", "\\.sh$", "\\.txt$", "\\.Rmarkdown$", "\\.knit\\.md$", "\\.utf8\\.md$", "_cache$"]
+baseURL       = "https://pet-estatistica.netlify.app/"
+languageCode  = "pt-br"
+DefaultContentLanguage = "pt"
+title         = "PET ESTATÍSTICA UFPR"
+theme = "roxo-hugo"
+summarylength = 25
 
-[markup.goldmark.renderer]
-  unsafe                = true
-
-[outputs]
-  home                  = ["html", "json"]
-
-[params]
-  enableCDN             = false
-  cssFiles              = ["default"]
-  jsFiles               = ["default"]
-  highlightjs           = true
-  highlightjsTheme      = "github"
-  highlightjsLang       = ["html", "css", "js", "toml"]
-  viewMorePostsLink     = "/blog/"
-  readingTime           = true
-  socialShare           = ["twitter", "facebook", "linkedin", "email"]
-
-  [params.meta]
-    description         = "Site oficial do PET Estatística UFPR"
-    author              = "Membros do PET Estatística UFPR"
-    favicon             = true
-    svg                 = true
-    faviconVersion      = "1"
-    msColor             = "#ffffff"
-    iOSColor            = "#ffffff"
-
-  [params.header]
-    navbarTitle         = "PET Estatística UFPR"
-    dynamicTitles       = true
-    searchMenu          = true
-    shareMenu           = true
-    languageMenu        = false
-
-  [params.intro]
-    header                = "PET Estatística UFPR"
-    paragraph             = "Programa de Educação Tutorial (PET) do curso de Estatística da UFPR"
-    rssIntro              = true
-    socialIntro           = true
-    hideWhenSingleColumn  = false
-    alwaysOnHomepage      = false
-
-    [params.intro.pic]
-      src                 = "img/main/logo-pet-azul-logo.png"
-      shape               = "circle"
-      width               = ""
-      alt                 = "PET Estatística UFPR"
-
-  [params.sidebar]
-    about               = "O PET Estatística foi fundado com o intuito de oferecer aos alunos da graduação, a possibilidade de ampliar o conhecimento e a interação com os professores do departamento."
-    postAmount          = 5
-    categories          = true
-    categoriesByCount   = true
-
-  [params.footer]
-    rssFooter           = true
-    socialFooter        = true
-
-  [params.staticman]
-    enabled             = false
-    api                 = ""  # No Trailing Slash
-    gitProvider         = ""
-    username            = ""
-    repo                = ""
-    branch              = ""
-
-    [params.staticman.recaptcha]
-      siteKey           = ""
-      encryptedKey      = ""
-
+# Site Menus
 [menu]
+  # Navbar Menus
+  [[menu.nav]]
+    name    = "INÍCIO"
+    url     = ""
+    weight  = 1
+  [[menu.nav]]
+    name    = "SOBRE"
+    url     = "sobre"
+    weight  = 2
+  [[menu.nav]]
+    name    = "INTEGRANTES"
+    url     = "integrantes"
+    weight  = 3
+  [[menu.nav]]
+    name    = "REDES SOCIAIS"
+    url     = "redessociais"
+    weight  = 4
+  [[menu.nav]]
+    name    = "PROJETOS"
+    url     = "projetos"
+    weight  = 5
+  [[menu.nav]]
+    name    = "MATERIAIS"
+    url     = "materiais"
+    weight  = 6
+  [[menu.nav]]
+    name    = "CONTATO"
+    url     = "contato"
+    weight  = 7
 
-  [[menu.main]]
-    name              = "Home"
-    identifier        = "home"
-    url               = "/"
-    pre               = "<i class='fa fa-home'></i>"
-    weight            = 1
+[params.contact]
+  email = "pet.estatistica.ufpr@gmail.com"
+  phone = "+55 (41) 3361-3141"
+  address = "Rua Cel. Francisco Heráclito dos Santos, 100<br>Centro Politécnico - Jardim das Américas<br>Edifício do Setor de Ciências Exatas<br>Sala PET Estatística - 2º andar "
+  map_link = "https://maps.app.goo.gl/5MecemxyFy8d6bnn9"
+  map_embed = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.6452716283666!2d-49.23361262286281!3d-25.450120377548988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce510e045c49b%3A0x90820299a35dbf7f!2sDepartamento%20de%20Estat%C3%ADstica%20-%20UFPR!5e0!3m2!1spt-BR!2sbr!4v1745109360582!5m2!1spt-BR!2sbr" width="1200" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
+  
+[[params.contact.social]]
+  icon = "fa fa-github"
+  link = "https://github.com/pet-estatistica"
+  
+[[params.contact.social]]
+  icon = "fa fa-linkedin"
+  link = "https://www.linkedin.com/company/pet-estat%C3%ADstica-ufpr"
 
-  [[menu.main]]
-    name              = "Sobre"
-    identifier        = "about"
-    url               = "/sobre/"
-    pre               = "<i class='far fa-id-card'></i>"
-    weight            = 2
+[[params.contact.social]]
+  icon = "fa fa-youtube"
+  link = "https://www.youtube.com/c/PETEstat%C3%ADsticaUFPR"
 
-  [[menu.main]]
-    name              = "Integrantes"
-    identifier        = "integrantes"
-    url               = "/integrantes/"
-    pre               = "<i class='fas fa-users'></i>"
-    weight            = 3
+[[params.contact.social]]
+  icon = "fa fa-instagram"
+  link = "https://www.instagram.com/pet.est.ufpr"
 
-  [[menu.main]]
-    name              = "Processo Seletivo"
-    identifier        = "selecao"
-    url               = "/selecao/"
-    pre               = "<i class='fas fa-bullhorn'></i>"
-    weight            = 4
+[services]
+  [services.googleAnalytics]
+    id = 'G-4QGDQVC922'
 
+# Site Params
+[params]
 
-  [[menu.main]]
-    name              = "Semana Acadêmica"
-    identifier        = "semana"
-    url               = "/semana/"
-    pre               = "<i class='fas fa-graduation-cap'></i>"
-    weight            = 7
+  logo = "images/logo-pet.png"
+  logo_footer = "images/logo-pet-tbg.png"
+  favicon_icon = "images/favicon.ico"
+  favicon_shortcut_icon = "images/favicon-pet.png"
+  custom_stylesheets = []   # [ "scss/my_1.scss", "scss/my_2.scss" ]
+  dateFormat = "26 FEB 1994"
+  # Meta data
+  description = "Roxo Hugo themes | Design Agency Template by StaticMania"
+  author = "StaticMania"
+  # Google Analitycs
+  # googleAnalitycsID = "G-4QGDQVC922"
+  # We're using formspree.io for form handling, paste your formspree url below
+  fabform  = "https://fabform.io/f/USAg2Jl"
+  tokenInstagram = "IGAANtnh5nLCdBZAE1GVWVYdkUzS1RjZAERsODA3WlRuaGFRdmNWU0lTendsZATRmVFVXWW9PTjJWSGtSRWlqNUs0b3BEWTR2ZAzdRVVZABaGx3bG5idHluY3dQMk16NTdLMmRweHhHVnNZAN3ZADZAVlwTmhWNFpGdUxUYzdKX3cwT2tDTQZDZD"
+  
+  # Banner Section
+  [params.banner]
+    enable                = true
+    #background_image      = "images/backgrounds/dark-blue-bg.png"
+    background_image      = "images/backgrounds/2025_04.png"
+    heading               = "PET ESTATÍSTICA UFPR"
+    tagline               = ""
+    primary_button        = "Veja nossos Projetos"
+    primary_button_url    = "projetos"
+    secondary_button      = "Entre em contato"
+    secondary_button_url  = "contato"
 
-  [[menu.main]]
-    name              = "Blog"
-    identifier        = "blog"
-    url               = "/blog/"
-    pre               = "<i class='far fa-newspaper'></i>"
-    weight            = 6
+  [params.blog]
+    read_more             = "read more"
 
+  [params.portfolio]
+    enable    = true
+    title     = "OUR RECENT WORKS"
+    subtitle  = "Crafting experiences and seeking to make the complex clear & beautiful."
+    view_project = "view project"
+    more_works = "MORE WORKS"
+    scroll_down = "scroll down"
 
-
-  [[menu.main]]
-    name              = "Projetos"
-    identifier        = "projetos"
-    url               = "/projetos/"
-    pre               = "<i class='fas fa-terminal'></i>"
-    weight            = 5
-
-
-  [[menu.main]]
-    name              = "Contato"
-    identifier        = "contact"
-    url               = "/contato/"
-    pre               = "<i class='far fa-envelope'></i>"
-    weight            = 8
-
-
-
-  [[menu.main]]
-    name              = "Categorias"
-    identifier        = "categories"
-    url               = "/categories/"
-    pre               = "<i class='fas fa-sitemap'></i>"
-    weight            = 9
-
-
-#  [[menu.main]]
-#    name              = "Teste"
-#    identifier        = "teste"
-#    url               = "/Teste/"
-#    pre               = "<i class='fas fa-image'></i>"
-#    weight            = 10
-
-[social]
-  # Coding Communities
-  github                = "pet-estatistica"
-  # Visual Art Communities
-  # flickr                = "example"
-  # Publishing Communities
-  # medium                = ""
-  # Professional/Business Oriented Communities
-  # linkedin              = "example"
-  linkedin_company      = "pet-estatistica-ufpr"
-  # slideshare            = ""
-  # Social Networks
-  facebook              = "PET.Estatistica.UFPR"
-  youtube               = "channel/UCPFo2Z9zZeB-Xgg8sm9sBKg"
-  # whatsapp              = "" # WhatsApp Number
-  instagram             = "pet.est.ufpr"
-  # twitter               = "example"
-  # telegram              = "example"
-  # Email
-  email                 = "pet.estatistica.ufpr@gmail.com"
+  [params.call_to_action]
+    enable              = true
+    background_image    = "images/backgrounds/cta-background.jpg"
+    title               = "PROCESSO SELETIVO ABERTO"
+    primary_button      = "Inscreva-se"
+    primary_button_url  = "https://forms.gle/niHaxxmeTHHieQuW8"
+    secondary_button    = "Mais Informações"
+    secondary_button_url = "processos"
+    
+  [params.footer]
+    params.footer.qr_print = true
+    # Footer Contact Info
+    [params.footer.contactInfo]
+      title   = "Informações de contato"
+      address = "Rua Cel. Francisco Heráclito dos Santos, 100<br>Centro Politécnico - Jardim das Américas<br>Edifício do Setor de Ciências Exatas<br>Sala PET Estatística - 2º andar "
+      phone   = "409-896-1444"
+      email   = "info@roxo.co"
+      # Footer Sitemap
+      [params.footer.sitemap]
+        title   = "Sitemap"
+        [[params.footer.sitemap.link]]
+          name = "About Company"
+          url  = "about"
+        [[params.footer.sitemap.link]]
+          name = "Projects"
+          url  = "portfolio"
+        [[params.footer.sitemap.link]]
+          name = "Blog"
+          url  = "blog"
+        [[params.footer.sitemap.link]]
+          name = "Contact"
+          url  = "contact"
+      # Footer Social Media
+      [params.footer.social]
+        title   = "Redes Sociais"
+        [[params.footer.social.link]]
+          name = "Github"
+          url  = "https://github.com/pet-estatistica"
+        [[params.footer.social.link]]
+          name = "Linkedin"
+          url  = "https://www.linkedin.com/company/pet-estatistica-ufpr"
+        [[params.footer.social.link]]
+          name = "Youtube"
+          url  = "https://www.youtube.com/c/PETEstat%C3%ADsticaUFPR"
+        [[params.footer.social.link]]
+          name = "Instagram"
+          url  = "https://www.instagram.com/pet.est.ufpr"
+      # Footer Service
+      [params.footer.service]
+        title       = "PET ESTATÍSTICA"
+        description = "PROGRAMA DE EDUCAÇÃO TUTORIAL (PET) DO CURSO DE ESTATÍSTICA DA UFPR"
+      [params.footer.back_to_top]
+        description = ""

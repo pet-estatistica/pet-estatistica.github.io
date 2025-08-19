@@ -1,0 +1,219 @@
+// Variáveis para cores e espaçamento
+$gray: #f5f7fa;
+$primary-color: #3a86ff;
+$secondary-color: #8338ec;
+$dark-gray: #6c757d;
+$text-color: #2d3748;
+$border-color: #e2e8f0;
+
+// Mixins para responsividade
+@mixin mobile {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 768px) and (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+.processos-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem; // Reduzi o gap proporcionalmente
+  padding: 6rem 10%; // Aumentei o padding lateral para 10% (era 1.5rem)
+  background: $gray;
+  min-height: 100vh;
+  
+  @include mobile {
+    padding: 5rem 5%; // 5% nas laterais em mobile
+    gap: 1rem;
+  }
+
+  &-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    
+    @include tablet {
+      margin-bottom: 4rem;
+    }
+  }
+
+  &-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: $text-color;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    
+    span {
+      color: $primary-color;
+    }
+    
+    @include tablet {
+      font-size: 2.2rem;
+    }
+    
+    @include mobile {
+      font-size: 1.8rem;
+    }
+  }
+
+  &-subtitle {
+    font-size: 1.1rem;
+    color: $dark-gray;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 2rem;
+    
+    @include desktop {
+      margin-bottom: 3rem;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.processo-card {
+  background: white;
+  border: 1px solid $border-color;
+  border-radius: 12px;
+  padding: 1.5rem; // Reduzi o padding (era 2rem)
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  width: 100%; // Garante que ocupa 100% do container
+  max-width: 100%; // Evita que ultrapasse o container
+  
+  // Tamanho reduzido em 25%
+  transform: scale(0.95);
+  transform-origin: center top;
+  
+  &:hover {
+    transform: scale(0.97) translateY(-3px); // Ajuste proporcional do hover
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border-color: $primary-color;
+  }
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  &-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: $text-color;
+    margin: 0;
+    
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s;
+      
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+
+  &-prazo {
+    background: lighten($primary-color, 35%);
+    color: darken($primary-color, 15%);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  &-resumo {
+    color: $dark-gray;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  &-meta {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.9rem;
+    color: $dark-gray;
+    
+    span {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      
+      svg {
+        width: 16px;
+        height: 16px;
+        fill: currentColor;
+      }
+    }
+  }
+}
+.processo-detalhes {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
+  @include mobile {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  &-header {
+    h1 {
+      font-size: 2rem;
+      color: $text-color;
+      
+      @include mobile {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  &-imagem {
+    img {
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+      display: block;
+    }
+  }
+
+  &-content {
+    h2 {
+      color: $text-color;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+    
+    p, ul, ol {
+      line-height: 1.7;
+      color: $dark-gray;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &-back {
+    color: $primary-color;
+    font-weight: 500;
+    transition: all 0.2s ease;
+
+    &:hover {
+      color: darken($primary-color, 15%);
+      text-decoration: underline;
+    }
+  }
+}

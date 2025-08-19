@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>About Us on PET ESTATÍSTICA UFPR</title>
+    <link>https://pet-estatistica.netlify.app/sobre/</link>
+    <description>Recent content in About Us on PET ESTATÍSTICA UFPR</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Thu, 12 Jul 2018 18:19:33 +0600</lastBuildDate>
+    <atom:link href="https://pet-estatistica.netlify.app/sobre/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

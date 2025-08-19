@@ -1,0 +1,102 @@
+{{ define "main" }}
+<section class="site-projects py-5">
+  <div class="container">
+    <!-- Cabeçalho -->
+    <div class="row justify-content-center">
+      <div class="col-lg-10 text-center mb-5">
+        <h1 class="mb-4 display-4 fw-bold">{{ .Title }}</h1>
+        <p class="lead text-muted">{{ .Description }}</p>
+        
+        <!-- Filtros por Tags -->
+        {{ if .Params.projects }}
+        <div class="mt-4">
+          <div class="btn-group flex-wrap" role="group">
+            <button type="button" class="btn btn-outline-primary filter-btn active" data-filter="all">Todos</button>
+            {{ $tags := slice }}
+            {{ range .Params.projects }}
+              {{ if .tags }}
+                {{ $tags = $tags | append .tags }}
+              {{ end }}
+            {{ end }}
+            {{ range ($tags | uniq | sort) }}
+            <button type="button" class="btn btn-outline-primary filter-btn" data-filter="tag-{{ . | urlize }}">{{ . }}</button>
+            {{ end }}
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+
+    <!-- Lista de Projetos -->
+    <div class="row justify-content-center">
+      <div class="col-lg-11">
+        <div class="row projects-container">
+          {{ range .Params.projects }}
+          <div class="col-md-6 col-lg-4 mb-4 project-item" 
+               data-year="year-{{ dateFormat "2006" .date }}" 
+               data-tags="{{ range .tags }}tag-{{ . | urlize }} {{ end }}">
+            <div class="card h-100 shadow-sm border-0 overflow-hidden">
+              {{ if .image }}
+              <img src="{{ .image }}" class="card-img-top" alt="{{ .title }}" style="height: 200px; object-fit: cover;">
+              {{ else }}
+              <div class="card-img-top bg-light text-center py-4 position-relative" style="height: 200px; display: flex; align-items: center; justify-content: center;">
+                <i class="{{ .icon | default "fa fa-project-diagram" }} fa-3x text-primary"></i>
+              </div>
+              {{ end }}
+              {{ if .featured }}
+                <span class="position-absolute top-0 start-0 bg-warning text-dark px-2 py-1 small rounded-br">Destaque</span>
+              {{ end }}
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <span class="badge badge-primary">{{ .category }}</span>
+                  <span class="small text-muted">{{ dateFormat "02/01/2006" .date }}</span>
+                </div>
+                <h5 class="card-title">{{ .title }}</h5>
+                <p class="card-text text-muted">{{ .description }}</p>
+                {{ if .technologies }}
+                <div class="mb-3">
+                  {{ range .technologies }}
+                  <span class="badge bg-light text-light me-1 mb-1">{{ . }}</span>
+                  {{ end }}
+                </div>
+                {{ end }}
+                <!-- Exibir tags do projeto -->
+                {{ if .tags }}
+                <div class="mb-3">
+                  {{ range .tags }}
+                  <span class="badge bg-secondary text-light me-1 mb-1">{{ . }}</span>
+                  {{ end }}
+                </div>
+                {{ end }}
+              </div>
+              <div class="card-footer bg-transparent border-0 pt-0 pb-3">
+                {{ if .link }}
+                <a href="{{ .link }}" class="btn btn-primary stretched-link">
+                  Ver Projeto <i class="fa fa-external-link ms-1 small"></i>
+                </a>
+                {{ else }}
+                <button class="btn btn-outline-primary" disabled>
+                  Detalhes em breve
+                </button>
+                {{ end }}
+              </div>
+            </div>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+
+    <!-- Mensagem quando não há projetos -->
+    {{ if not .Params.projects }}
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center py-5">
+        <div class="alert alert-info">
+          <i class="fa fa-info-circle me-2"></i> Nenhum projeto disponível no momento.
+        </div>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

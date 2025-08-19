@@ -1,0 +1,44 @@
+<!-- PORTUGUÊS --> 
+{{ if eq .Site.Language.Lang "pt" }}
+  {{ with .Site.Data.team }}
+    {{ if .enable }}
+    <section class="site-team">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-title">
+              <h2>
+                {{ .title }}
+              </h2>
+            </div>
+          </div>
+          {{ range .members }}
+          <div class="col-lg-6 col-md-6">
+            <div class="site-team-member">
+              <div class="site-team-member-image">
+                <img src="{{ .image | absURL }}" alt="team-member">
+              </div>
+              <div class="site-team-member-content">
+                <h3>{{ .name }}</h3>
+                <p>{{ .designation }}</p>
+                {{ if .company_position }}<p><strong>{{ if ne .company_position "Professor Tutor PET" }}Time:{{ end }}</strong> {{ .company_position }}</p>{{ end }}
+                <p class="site-team-item-body">
+                  {{ if .quote }}<blockquote>{{ .quote }}</blockquote>{{ end }}
+                </p>
+                {{ if .interesse }}<p><strong>Áreas de interesse:</strong> {{ .interesse }}</p>{{ end }}
+                <ul class="site-team-member-social">
+                  {{ if .github }}<li><a href="{{ .github | absURL }}"><i class="fa fa-github"></i></a></li>{{ end }}
+                  {{ if .linkedin }}<li><a href="{{ .linkedin | absURL }}"><i class="fa fa-linkedin"></i></a></li>{{ end }}
+                  {{ if .instagram }}<li><a href="{{ .instagram | absURL }}"><i class="fa fa-instagram" style="font-size:15px"></i></a></li>{{ end }}
+                  {{ if .site }}<li><a href="{{ .site | absURL }}"><i class="fa fa-globe" style="font-size:15px"></i></a></li>{{ end }}
+                </ul>
+              </div>
+            </div>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+    {{ end }}
+  {{ end }}
+{{ end }}

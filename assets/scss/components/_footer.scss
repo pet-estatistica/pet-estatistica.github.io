@@ -1,0 +1,93 @@
+.site-footer{
+  background: $secondary-color;
+  padding: 100px 0;
+  &-logo{
+    margin-bottom: 50px;
+    @include mobile{
+      text-align: center;
+    }
+    img{
+      max-width: 13%;
+      height: auto;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  &-widget{
+    text-align: center;
+    @include desktop{
+      margin-bottom: 40px;
+    }
+    @include mobile{
+      text-align: center;
+    }
+    &-title{
+      color: $black;
+      margin-bottom: 30px;
+      @include desktop{
+        margin-bottom: 20px;
+      }
+    }
+    &-icons{
+      color: $black;
+      font-size: 30px;
+    }
+    &-description{
+      color: $black;
+      line-height: 30px;
+      a{
+        color: $black;
+      }
+    }
+    &-links{
+      margin: 0;
+      padding: 0;
+      li{
+        list-style: none;
+        a{
+          color: $black;
+          transition: all 0.3s $site-ease;
+          display: block;
+        }
+        &:not(:last-child){
+          a{
+            padding-bottom: 9px;
+          }
+        }
+      }
+    }
+    &-top{
+      @include mobile{
+        text-align: center;
+        display: block;
+      }
+      img{
+        margin-bottom: 20px;
+      }
+      p{
+        color: $black;
+      }
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+  &-copyright{
+    p{
+      color: $black;
+      margin: 50px auto 0;
+      text-align: center;
+    }
+    a{
+      color: $text-color-dark;
+      transition: all .3s ease;
+      @include tablet{
+        font-size: 20px;
+      }
+      @include desktop{
+        margin-bottom: 70px;
+      }
+    }
+  }
+}

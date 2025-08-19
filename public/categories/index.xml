@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on PET ESTATÍSTICA UFPR</title>
+    <link>https://pet-estatistica.netlify.app/categories/</link>
+    <description>Recent content in Categories on PET ESTATÍSTICA UFPR</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Sun, 17 Aug 2025 10:00:00 -0300</lastBuildDate>
+    <atom:link href="https://pet-estatistica.netlify.app/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Editais</title>
+      <link>https://pet-estatistica.netlify.app/categories/editais/</link>
+      <pubDate>Sun, 17 Aug 2025 10:00:00 -0300</pubDate>
+      <guid>https://pet-estatistica.netlify.app/categories/editais/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Aulas Complementares</title>
+      <link>https://pet-estatistica.netlify.app/categories/aulas-complementares/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://pet-estatistica.netlify.app/categories/aulas-complementares/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Disciplinas Acadêmicas</title>
+      <link>https://pet-estatistica.netlify.app/categories/disciplinas-acad%C3%AAmicas/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://pet-estatistica.netlify.app/categories/disciplinas-acad%C3%AAmicas/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ferramentas Digitais</title>
+      <link>https://pet-estatistica.netlify.app/categories/ferramentas-digitais/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://pet-estatistica.netlify.app/categories/ferramentas-digitais/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Multimídia</title>
+      <link>https://pet-estatistica.netlify.app/categories/multim%C3%ADdia/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://pet-estatistica.netlify.app/categories/multim%C3%ADdia/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Referências Técnicas</title>
+      <link>https://pet-estatistica.netlify.app/categories/refer%C3%AAncias-t%C3%A9cnicas/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://pet-estatistica.netlify.app/categories/refer%C3%AAncias-t%C3%A9cnicas/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
