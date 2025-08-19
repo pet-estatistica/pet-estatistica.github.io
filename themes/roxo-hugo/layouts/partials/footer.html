@@ -1,0 +1,68 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="site-footer-logo">
+          <div class="center-block">
+            <a href="{{ .Site.BaseURL }}"><img src="{{ .Site.Params.logo_footer | absURL }}" alt="logo-footer" class="center-block"></a>
+          </div>
+        </div>
+      </div>
+      {{ with .Site.Params.footer.service }}
+      <div class="col-12">
+        <div class="site-footer-widget">
+          <h5 class="site-footer-widget-title">{{ .title }}</h5>
+          <div class="site-footer-widget-icons">
+            <i class="fa fa-github" aria-hidden="true"></i>
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+            <i class="fa fa-youtube-play" aria-hidden="true"></i>
+            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+      <div class="col-12">
+        <div class="site-footer-copyright">
+          <p>© Copyright {{ dateFormat "2006" now }} - Adaptado de <a href="https://staticmania.com/" target="_blank">StaticMania</a> </p>
+        </div>
+      </div>
+    </div>
+    {{ if .Site.Params.footer.qr_print }}
+    <div class="row d-none d-print-block">
+      <div class="col col-lg-2">
+        {{ $qrcode := resources.Get "js/qrcode.js" | minify }}
+        <script src="{{ $qrcode.Permalink }}"></script>
+
+        <div id="qrcode">
+          <script type="text/javascript">
+           new QRCode(document.getElementById("qrcode"), {
+             text: "{{ .Page.RelPermalink | absURL }}",
+             width: 128,
+             height: 128,
+           });
+          </script>
+        </div>
+      </div>
+      <div class="col col-md-auto">
+        {{ .Page.RelPermalink | absURL }}
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</footer>
+
+<!-- {{ $formhandler := resources.Get "js/formhandler.js" | minify }}
+<script src="{{ $formhandler.Permalink }}"></script> -->
+{{ $vendor := resources.Get "js/vendor.js" | minify }}
+<script src="{{ $vendor.Permalink }}"></script>
+{{ $script := resources.Get "js/script.js" | minify }}
+<script src="{{ $script.Permalink }}"></script>
+    <script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    if(!this.checkValidity()) {
+        e.preventDefault();
+        alert('Por favor, preencha todos os campos obrigatórios.');
+    }
+});
+</script>

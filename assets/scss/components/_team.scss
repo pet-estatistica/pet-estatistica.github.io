@@ -1,0 +1,86 @@
+.site-team {
+  padding: 100px 0;
+  
+  &-member {
+    background: $gray;
+    padding: 65px 30px 30px;
+    margin: 50px 0 30px;
+    position: relative;
+    
+    @include tablet {
+      text-align: center;
+    }
+
+    &-image {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      overflow: hidden;
+      left: 30px;
+      top: 0;
+      transform: translateY(-50%);
+      border: 3px solid white; /* Added border for better visibility */
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1); /* Added subtle shadow */
+      
+      @include tablet {
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensures images maintain aspect ratio */
+        display: block; /* Removes extra space below image */
+      }
+    }
+
+    &-content {
+      h3 {
+        font-size: 20px;
+        color: $primary-color;
+        margin-bottom: 10px;
+        font-weight: 500;
+      }
+      
+      p {
+        font-size: 18px;
+        color: $text-color-dark;
+        margin-bottom: 20px;
+        font-weight: 300;
+      }
+      
+      blockquote {
+        font-style: italic;
+        color: lighten($text-color-dark, 15%);
+        padding: 10px 20px;
+        margin: 15px 0;
+        border-left: 3px solid $primary-color;
+        background-color: lighten($gray, 3%);
+      }
+    }
+
+    &-social {
+      margin: 0;
+      padding: 0;
+      
+      li {
+        display: inline-block;
+        
+        a {
+          color: $text-color-dark;
+          transition: color 0.3s ease;
+          
+          &:hover {
+            color: $primary-color;
+          }
+        }
+        
+        &:not(:last-child) {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,87 @@
+enable  : true
+title   : ""
+subtitle: ""
+testimonial_item :
+  - thumb : "images/testimonial/user-thumb-two.jpg"
+    name  : "Anderson José de Souza Inácio"
+    company_position: "Comunicação"
+    quote : > 
+            "Graduando em Estatística e Ciência de Dados, sou um profissional formado em Bacharelado de Sistemas de Informação e amante de ferramentas Linux." 
+    interesse: "Lógica; Probabilidade; Visualização de Dados."
+
+  - thumb : "https://instagram.fpoa10-1.fna.fbcdn.net/v/t51.29350-15/244419308_397665378619259_1967670536794614678_n.webp?stp=dst-jpg_e35_tt6&_nc_ht=instagram.fpoa10-1.fna.fbcdn.net&_nc_cat=111&_nc_oc=Q6cZ2QGRdO7snEhQUsRmns8XBu9ZIxO5Ec5SI3VBBTndPhdepGwh8P7T6hm6uLmh2obnHi4&_nc_ohc=ugsfEakiGGkQ7kNvwFtJP-j&_nc_gid=Df9LKagxNEUnFIMJGstU1w&edm=AGenrX8BAAAA&ccb=7-5&oh=00_AfEFK6qC4Ut0Ly1UwxQt-uTZuh4bXCMsnHp25Y85s7EqBg&oe=68075080&_nc_sid=ed990e"
+    name  : "Bruno Wavrzenczak"
+    company_position: "Pesquisa"
+    quote : > 
+            "Sempre gostei muito de matemática, e fui introduzido à estatística pelo meu irmão que já é formado no curso. Entrei no PET com o objetivo de melhorar meu desenvolvimento acadêmico. Gosto de música e jogos competitivos." 
+    interesse: "Visualização de Dados; Dashboards; Machine Learning."
+    
+  - thumb : "images/testimonial/user-thumb-five.jpg"
+    name  : "Camilla Virginia Rodrigues da Silva"
+    company_position: "Eventos"
+    quote : > 
+            "Graduanda em Estatística, iniciei o curso em 2022, optei por fazer Estatística pela indicação de um supervisor de estágio de ensino médio, depois que ele viu um quadro informativo que eu fiz, até então não conhecia o curso e depois ao pesquisar adorei. Gosto muito da visulização de dados e da estatística voltada a gestão de qualidade. Ingressei no PET com o projeto de pesquisa intitulado como “A Importância do PDCA para Empresas Eireli: Um Estudo de Caso no Ramo da Construção Civil” e pretendo seguir adiante com ele." 
+    interesse: "Visualização de Dados; Controle Estatístico de Processos; Controle Estatístico de Qualidade."
+    
+  - thumb : "images/testimonial/user-thumb-six.jpg"
+    name  : "Cristian Pessatti dos Anjos"
+    company_position: "Ensino"
+    quote : > 
+            "Sou técnico em desenvolvimento de sistemas, atuei 1 ano na área e resolvi vir para estatística após me apaixonar por ciência de dados. Entrei no PET por me interessar pelo desenvolvimento acadêmico que o PET pode proporcionar. Meus hobbies favoritos são jogos, xadrez e esportes de combate." 
+    interesse: "Ciência de Dados em Cloud; Automação e Otimização; Inteligência Artificial; MLOps."
+                       
+  - thumb : "images/testimonial/user-thumb-six.jpg"
+    name  : "Gabriel Muller Bittencourt"
+    company_position: "Adm"
+    quote : > 
+            "" 
+    interesse: "Visualização de dados; Machine Learning; Otimização"
+               
+  - thumb : "images/testimonial/julia_zorzo.jpg"
+    name  : "Júlia Zorzo"
+    company_position: "Ensino"
+    quote : > 
+            "Sempre gostei muito de matemática, e fui introduzido à estatística pelo meu irmão que já é formado no curso. Entrei no PET com o objetivo de melhorar meu desenvolvimento acadêmico. Gosto de música e jogos competitivos." 
+    interesse: "Visualização de Dados; Dashboards; Machine Learning."               
+               
+  - thumb : "images/testimonial/user-thumb-six.jpg"
+    name  : "João Otávio do Lago"
+    company_position: "Comunicação"
+    quote : > 
+            "Tenho 18 anos e entrei pelo ENEM em 2023, me interessei no curso por sempre me dar bem em matemática e ter um interesse em computação. Meus hobbies são: Jogar, ler mangás e assistir séries e animes, principalmente One Piece." 
+    interesse: "Estatística computacional; probabilidades e análise exploratória."
+            
+  - thumb : "images/testimonial/user-thumb-six.jpg"
+    name  : "Kamila de Lazari Macedo"
+    company_position: "Ensino"
+    quote : > 
+            "Graduanda em estatística, sempre me interessei por matemática e computação e percebi que poderia trabalhar com os dois em áreas variadas nesse curso. Amo música, livros, podcasts e documentários." 
+    interesse: "Bancos de dados; Métodos numéricos; Estatística Computacional; Visualização de dados."
+            
+  - thumb : "images/testimonial/user-thumb-six.jpg"
+    name  : "Maria Eduarda Moreira"
+    company_position: "Eventos"
+    quote : > 
+            "Graduanda em estatística desde 2021, ingressei no PET com o intuito de aprimorar minhas habilidades acadêmicas e sociais. Escolhi a Estatística pela grande afinidade com a matemática e programação. No tempo livre, gosto de ler e assistir seriados." 
+    interesse: "Data Science; Visualização de dados; Estatística Computacional."
+       
+  - thumb : "images/testimonial/user-thumb-six.jpg"
+    name  : "Paulo Justiniano Ribeiro Neto"
+    company_position: "Pesquisa"
+    quote : > 
+            "Ingressei no curso de Estatística em 2022 e já no primeiro semestre entrei para o PET. Sou escoteiro desde 2014 e meus hobbies envolvem games e basquete. Adoro conversar com as pessoas e aprender sempre o máximo possível com essas trocas." 
+    interesse: "Análise de risco; Modelagem estatística; Otimização de processos; Séries temporais."
+                
+  - thumb : "images/testimonial/user-thumb-six.jpg"
+    name  : "Thiago José"
+    company_position: "Adm"
+    quote : > 
+            "Tenho 22 anos, me formei como técnico em Eletrônica na UTFPR, onde notei que combino mais com as ciências puras, por esse motivo resolvi fazer estatística. Gosto bastante de cantar e no meu tempo livre aproveito para jogar." 
+    interesse: "Séries temporais; Teoria de Resposta ao Item; Regressão Linear."
+            
+  - thumb : "images/testimonial/user-thumb-six.jpg"
+    name  : "Vitor Yuji Kiemo"
+    company_position: "Eventos"
+    quote : > 
+            "Graduando em Estatística desde 2019, decidi entrar para o PET para obter uma maior imersão dentro do curso, por meio do contato com os outros integrantes e atividades propostas pelo programa. Gosto muito de praticar dança, ouvir música, assistir vídeos e séries." 
+    interesse: "Visualização de Dados; Data Science; Análise de Dados Longitudinais."

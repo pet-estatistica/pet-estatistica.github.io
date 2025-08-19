@@ -1,0 +1,44 @@
+{{ define "main" }}
+
+<section class="site-projetos-header">
+  <div class="container">
+    <div class="row">
+      <div class="site-projetos-espaco"></div>
+      <div class="col-12">
+        <div class="site-projetos-wrapper">
+          <div class="site-projetos-company">
+            <h1>
+              {{ .Params.heading }}
+            </h1>
+          </div>
+          <div class="site-projetos-description">
+            <h3>
+              {{ .Description }}
+            </h3>
+          </div>
+          <div class="site-projetos-titulo">
+            <h3>
+              {{ .Params.pet_convida_title }}
+            </h3>
+          </div>
+          {{ range .Params.pet_convida_parags }}
+          <div class="site-projetos-texto">
+            <p>
+              {{ . }}
+            </p>
+          </div>
+          {{ end }}        
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="site-projetos-espaco"></div>
+</section>
+
+<!--{{ partial "clients.html" . }}
+
+{{ partial "team.html" . }}
+
+{{ partial "call-to-action.html" . }}
+-->
+{{ end }}

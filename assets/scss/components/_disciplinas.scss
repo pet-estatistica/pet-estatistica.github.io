@@ -1,0 +1,82 @@
+.discipline-materials {
+  margin: 0 0 2rem 1.5rem;
+  padding: 1rem 1.5rem;
+  background-color: #f8f9fa;
+  border-left: 4px solid #6c757d;
+  border-radius: 0 4px 4px 0;
+  transition: all 0.3s ease;
+}
+
+.discipline-materials:hover {
+  background-color: #f1f3f5;
+  border-left-color: #495057;
+}
+
+.discipline-materials ul {
+  padding-left: 1.25rem;
+  margin: 0.5rem 0;
+}
+
+.discipline-materials li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+  position: relative;
+  list-style-type: none;
+}
+
+.discipline-materials li:before {
+  content: "→";
+  color: #6c757d;
+  position: absolute;
+  left: -1.25rem;
+}
+
+.discipline-materials a {
+  color: #0d6efd;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.1rem 0.25rem;
+  border-radius: 3px;
+}
+
+.discipline-materials a:hover {
+  color: #0a58ca;
+  background-color: #e7f1ff;
+  text-decoration: underline;
+}
+
+.discipline-materials .badge {
+  display: inline-block;
+  padding: 0.25em 0.6em;
+  font-size: 0.75em;
+  font-weight: 600;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem;
+  background-color: #6c757d;
+  margin-left: 0.5rem;
+}
+
+/* Specific badge colors by file type */
+.discipline-materials .badge[title="PDF"] {
+  background-color: #d32f2f;
+}
+
+.discipline-materials .badge[title="ZIP"] {
+  background-color: #1976d2;
+}
+
+.discipline-materials .badge[title="JPEG"] {
+  background-color: #388e3c;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .discipline-materials {
+    margin-left: 0.5rem;
+    padding: 0.75rem;
+  }
+}

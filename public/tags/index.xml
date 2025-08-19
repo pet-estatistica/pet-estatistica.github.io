@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on PET ESTATÍSTICA UFPR</title>
+    <link>https://pet-estatistica.netlify.app/tags/</link>
+    <description>Recent content in Tags on PET ESTATÍSTICA UFPR</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Sun, 17 Aug 2025 10:00:00 -0300</lastBuildDate>
+    <atom:link href="https://pet-estatistica.netlify.app/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Estatística</title>
+      <link>https://pet-estatistica.netlify.app/tags/estat%C3%ADstica/</link>
+      <pubDate>Sun, 17 Aug 2025 10:00:00 -0300</pubDate>
+      <guid>https://pet-estatistica.netlify.app/tags/estat%C3%ADstica/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>PET</title>
+      <link>https://pet-estatistica.netlify.app/tags/pet/</link>
+      <pubDate>Sun, 17 Aug 2025 10:00:00 -0300</pubDate>
+      <guid>https://pet-estatistica.netlify.app/tags/pet/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Seleção</title>
+      <link>https://pet-estatistica.netlify.app/tags/sele%C3%A7%C3%A3o/</link>
+      <pubDate>Sun, 17 Aug 2025 10:00:00 -0300</pubDate>
+      <guid>https://pet-estatistica.netlify.app/tags/sele%C3%A7%C3%A3o/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>UFPR</title>
+      <link>https://pet-estatistica.netlify.app/tags/ufpr/</link>
+      <pubDate>Sun, 17 Aug 2025 10:00:00 -0300</pubDate>
+      <guid>https://pet-estatistica.netlify.app/tags/ufpr/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

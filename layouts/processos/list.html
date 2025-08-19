@@ -1,0 +1,146 @@
+{{ define "main" }}
+<section class="processos-section py-5">
+  <div class="container">
+    <h1 class="text-center mb-5">{{ .Title }}</h1>
+    
+    <!-- Filtros -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="filter-container">
+          <!-- Filtro por Ano -->
+          <div class="filter-group">
+            <label for="year-filter" class="filter-label">Filtrar por Ano:</label>
+            <select id="year-filter" class="form-select filter-select">
+              <option value="all">Todos os Anos</option>
+              {{ $years := slice }}
+              {{ range .Pages }}
+                {{ $dateParts := split .Params.prazo "/" }}
+                {{ $year := index $dateParts 2 }}
+                {{ $years = $years | append $year }}
+              {{ end }}
+              {{ range ($years | uniq | sort) }}
+                {{ $currentYear := . }}
+                <option value="year-{{ $currentYear }}">{{ $currentYear }}</option>
+              {{ end }}
+            </select>
+          </div>
+          
+          <!-- Filtro por Status -->
+          <div class="filter-group">
+            <label for="tag-filter" class="filter-label">Filtrar por Status:</label>
+            <select id="tag-filter" class="form-select filter-select">
+              <option value="all">Todos os Status</option>
+              <option value="encerrado">Encerrados</option>
+              <option value="ativo">Ativos</option>
+            </select>
+          </div>
+          
+          <button id="reset-filters" class="btn btn-outline-secondary">Limpar Filtros</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Lista de Processos -->
+    <div class="processos-list">
+      {{ range .Pages }}
+        {{ $dateParts := split .Params.prazo "/" }}
+        {{ $year := index $dateParts 2 }}
+        {{ $month := index $dateParts 1 }}
+        {{ $day := index $dateParts 0 }}
+        
+        <div class="processo-item mb-12" 
+             data-year="year-{{ $year }}" 
+             data-status="{{ if in .Title "Encerrado" }}encerrado{{ else }}ativo{{ end }}">
+          <article class="processo-card">
+            <div class="card shadow-sm w-100">
+              <div class="row g-0">
+                {{ if .Params.imagem }}
+                <div class="col-md-4">
+                  <img src="{{ .Params.imagem }}" class="img-fluid rounded-start h-100" alt="{{ .Title }}" style="object-fit: cover; min-height: 400px;">
+                </div>
+                {{ end }}
+                <div class="{{ if .Params.imagem }}col-md-8{{ else }}col-12{{ end }}">
+                  <div class="card-body">
+                    <h2 class="card-title"><a href="{{ .RelPermalink }}" class="text-decoration-none">{{ .Title }}</a></h2>
+                    <p class="card-text"><strong>Prazo:</strong> {{ .Params.prazo }}</p>
+                    <p class="card-text">{{ .Summary | truncate 200 }}</p>
+                    <div class="mt-3">
+                      <a href="{{ .RelPermalink }}" class="btn btn-primary">Ver Detalhes</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      {{ end }}
+    </div>
+    
+    <!-- Mensagem quando não há resultados -->
+    <div id="no-results" class="text-center py-5" style="display: none;">
+      <div class="alert alert-info">
+        Nenhum processo seletivo encontrado com os filtros selecionados.
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .filter-container {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-items: flex-end;
+  }
+  
+  .filter-group {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .filter-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;pet-est-ps-2025.png
+  }
+  
+  .filter-select {
+    width: 100%;
+  }
+  
+  .processo-card {
+    transition: all 0.3s ease;
+  }
+  
+  .processo-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  .card-title a {
+    color: inherit;
+    transition: color 0.2s;
+  }
+  
+  .card-title a:hover {
+    color: var(--bs-primary);
+  }
+  
+  @media (max-width: 768px) {
+    .filter-container {
+      flex-direction: column;
+    }
+    
+    .filter-group {
+      width: 100%;
+    }
+    
+    .card img {
+      border-bottom-left-radius: 0 !important;
+      border-bottom-right-radius: 0 !important;
+      border-top-right-radius: var(--bs-border-radius) !important;
+    }
+  }
+</style>
+
+{{ end }}

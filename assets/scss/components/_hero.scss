@@ -1,0 +1,97 @@
+.site-hero{
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  background-position: center center; // Alterado para centralizar em ambos os eixos
+  background-attachment: fixed; // Opcional: para efeito parallax
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  
+  // Adicionado para garantir que o conteúdo fique acima do background
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3); // Opcional: overlay para melhor legibilidade
+    z-index: 0;
+  }
+
+  // Garante que o conteúdo fique acima do pseudo-elemento
+  &-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  @include desktop{
+    height: auto;
+    padding: 250px 0; // Aumentado para compensar o menu
+    min-height: auto;
+  }
+  
+  @include mobile{
+    padding: 250px 0; // Aumentado para compensar o menu
+    min-height: auto;
+    background-attachment: scroll; // Remove o fixed em mobile para melhor performance
+  }
+
+  // Restante do seu CSS existente...
+  &-content{
+    h1{
+      color: $white !important;
+      margin-bottom: 95px;
+      @include desktop-lg{
+        font-size: 50px;
+        margin-bottom: 50px;
+      }
+      @include mobile{
+        font-size: 40px;
+        margin-bottom: 50px;
+      }
+    }
+    h6 {
+      color: $white !important;
+    }
+    &-buttons{
+      margin: 0;
+      padding: 0;
+      li{
+        display: inline-block;
+        @include mobile{
+          display: block;
+        }
+        &:not(:last-child){
+          margin-right: 30px;
+          @include mobile{
+            margin-right: 0;
+            margin-bottom: 20px;
+          }
+        }
+        .btn{
+          font-weight: 600;
+          @include mobile{
+            width: 90%;
+            margin: 0 auto;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  
+  &-scroll{
+    position: absolute;
+    left: 50%; 
+    bottom: 70px;
+    transform: translateX(-50%);
+    z-index: 1; // Garante que fique acima do background
+  }
+}

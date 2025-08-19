@@ -1,0 +1,167 @@
+<div class="container">
+  <div id="instagram-feed" class="row"></div>
+</div>
+
+<style>
+
+.site-blog-post-thumb {
+    position: relative;
+    z-index: 1;
+}
+
+.site-blog-post-content {
+    position: static; /* Remove o texto da sobreposição */
+    margin-top: 1px; /* Espaço entre a imagem e o texto */
+    color: #000; /* Garanta que o texto esteja visível */
+    text-align: center; /* Centraliza o texto */
+    font-size: 14px;
+}
+  .instagram-view-link {
+    padding: 16px;
+    font-size: 14px;
+    color: #3897f0;
+    font-weight: 550;
+    text-align: center;
+  }
+.site-blog-post-thumb img,
+.site-blog-post-thumb video {
+    width: 100%; /* O vídeo e as imagens ocupam toda a largura do contêiner */
+    height: 100%; /* Define a altura para ser 100% do contêiner */
+    border-radius: 8px; /* Mantém bordas arredondadas */
+    object-fit: cover; /* Mantém o conteúdo proporcionalmente preenchido */
+    object-position: 0px 30%; /* Garante que a parte superior seja priorizada */
+    display: block; /* Remove margens ou espaços extras */
+}
+
+
+.site-blog-post-thumb {
+    width: 100%; /* Largura do contêiner */
+    height: auto; /* Altura é ajustada de acordo com o conteúdo */
+    aspect-ratio: 1 / 1; /* Garante um formato quadrado */
+    overflow: hidden; /* Evita que vídeos ou imagens "vazem" do contêiner */
+    position: relative; /* Necessário para posicionamento absoluto de elementos internos */
+}
+
+.site-blog-post-thumb video {
+    opacity: 0.9; /* Vídeo com leve opacidade padrão */
+    transition: opacity 0.3s ease; /* Suaviza a transição */
+}
+
+.site-blog-post-thumb video:hover {
+    opacity: 1; /* Mostra claramente o vídeo no hover */
+}
+
+/* Adiciona o ícone do Instagram */
+.site-blog-post-thumb .instagram-icon {
+    position: absolute;
+    top: 8px; /* Distância da borda superior */
+    right: 8px; /* Distância da borda direita */
+    /*background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+    border-radius: 50%; /* Forma circular */
+    padding: 6px; /* Tamanho do círculo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.site-blog-post-thumb .instagram-icon img {
+    width: 30px; /* Tamanho do ícone */
+    height: 30px;
+}
+</style>
+
+<script>
+  // Replace with your Instagram Access Token
+const accessToken = '{{ .Site.Params.tokenInstagram }}';
+
+  // Function to fetch and display Instagram feed
+function getInstagramFeed() {
+    fetch(`https://graph.instagram.com/v12.0/me/media?fields=id,caption,media_type,media_url,permalink,timestamp&limit=12&access_token=${accessToken}`)
+        .then(response => response.json())
+        .then(data => {
+            const feedContainer = document.getElementById('instagram-feed');
+
+            data.data.forEach(post => {
+                const postElement = document.createElement('div');
+                postElement.classList.add('col-lg-4');
+
+                const articleElement = document.createElement('article');
+                articleElement.classList.add('site-blog-post');
+
+                const mediaElement = document.createElement('div');
+                mediaElement.classList.add('site-blog-post-thumb');
+                
+                // Verifica se a mídia é uma imagem ou um vídeo
+                if (post.media_type === "IMAGE" || post.media_type === "CAROUSEL_ALBUM") {
+                    // Cria o elemento de imagem
+                    const imgElement = document.createElement('img');
+                    imgElement.src = post.media_url;
+                    imgElement.alt = post.caption || 'Instagram post';
+                    mediaElement.appendChild(imgElement);
+                } else if (post.media_type === "VIDEO") {
+                    // Cria o elemento de vídeo
+                    const videoElement = document.createElement('video');
+                    videoElement.src = post.media_url;
+                    videoElement.alt = post.caption || 'Instagram post';
+                    videoElement.style.maxWidth = "100%"; // Ajusta a largura
+                    videoElement.controls = false; // Inicialmente oculta os controles
+                
+                    // Evento para exibir controles ao passar o mouse
+                    videoElement.addEventListener('mouseenter', () => {
+                        videoElement.controls = true; // Exibe os controles
+                    });
+                
+                    // Evento para ocultar controles ao sair com o mouse
+                    videoElement.addEventListener('mouseleave', () => {
+                        videoElement.controls = false; // Oculta os controles
+                    });
+                
+                    mediaElement.appendChild(videoElement);
+                    
+                  //adiciona icone do instagram na imagem/video
+                    const iconeInstagramElement = document.createElement('div');
+                    iconeInstagramElement.classList.add("instagram-icon");
+                    const imgIconeInstagramElement = document.createElement('img');
+                    imgIconeInstagramElement.src = "/images/camera.svg";
+                    iconeInstagramElement.appendChild(imgIconeInstagramElement)
+                    mediaElement.appendChild(iconeInstagramElement)
+                
+                }
+                
+                // Cria o link que envolverá a postagem inteira
+                const viewLink = document.createElement('a');
+                viewLink.classList.add('instagram-view-link');
+                viewLink.href = post.permalink;
+                viewLink.target = '_blank';
+                
+                
+                const captionElement = document.createElement('div');
+                captionElement.classList.add('site-blog-post-content');
+                const captionText = document.createElement('p');
+                //captionText.textContent = post.caption || '';
+                const maxCharacters = 100; // Limite de caracteres
+                captionText.textContent = post.caption
+                ? post.caption.substring(0, maxCharacters) + (post.caption.length > maxCharacters ? '...' : '') : '';
+
+                captionElement.appendChild(captionText);
+
+                // Adiciona a imagem e o conteúdo dentro do link
+                articleElement.appendChild(mediaElement);
+                viewLink.appendChild(captionElement);
+
+                // Adiciona o link ao artigo
+                articleElement.appendChild(viewLink);
+
+                // Adiciona o artigo à div col-lg-6
+                postElement.appendChild(articleElement);
+
+                // Finalmente, adiciona o postElement ao feedContainer
+                feedContainer.appendChild(postElement);
+            });
+        })
+        .catch(error => console.error(error));
+}
+
+  // Call the function to fetch and display the Instagram feed
+  getInstagramFeed();
+</script>

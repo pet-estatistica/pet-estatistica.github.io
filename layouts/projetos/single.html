@@ -1,0 +1,41 @@
+{{ define "main" }}
+      <div class="site-about-espaco"></div>
+<article class="project-single">
+<!-- Cabeçalho com imagem destacada -->
+<header class="project-header">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10 text-center">
+        <h1 class="project-title display-4 fw-bold mb-3">{{ .Title }}</h1>
+        
+        <div class="project-meta mb-4">
+          <span class="badge badge-primary">{{ .Params.category }}</span>
+          <span class="text-muted me-3"><i class="fa fa-calendar me-1"></i> {{ .Date.Format "02/01/2006" }}</span>
+          <span class="text-muted"><i class="fa fa-tag me-1"></i> {{ .Params.status }}</span>
+        </div>
+        <img src="{{ .Params.image }}" alt="{{ .Title }}" class="img-fluid rounded shadow-lg mb-4" style="max-height: 400px; object-fit: cover;">
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Conteúdo do projeto -->
+<section class="project-content py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="project-description lead mb-5">
+        {{ .Description | markdownify }}
+        </div>
+        
+        <div class="project-body">
+        {{ .Content }}
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+  </article>
+  {{ end }}

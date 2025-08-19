@@ -1,0 +1,116 @@
+.site-contact{
+  padding: 150px 0 100px;
+  background: $gray;
+  @include mobile{
+    padding: 120px 0 100px;
+  }
+  h4 {
+    color: black;
+    margin-top: 50px;
+  }
+  &-title{
+    font-weight: 700;
+    @include tablet{
+      font-size: 40px;
+    }
+    span{
+      color: $primary-color;
+    }
+  }
+  &-form{
+    margin-top: 20px;
+    h4{
+      font-weight: 300;
+      text-transform: uppercase;
+      margin-bottom: 50px;
+      letter-spacing: 3px;
+      @include tablet{
+        font-size: 20px;
+      }
+      @include desktop{
+        margin-bottom: 70px;
+      }
+    }
+  }
+}
+.contact-form-generator {
+  margin-top: 20px;
+    a{
+    color: $text-color-dark;
+    font-size: 13px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    letter-spacing: 3px;
+    &:hover{
+      text-decoration: none;
+    }
+    @include tablet{
+      font-size: 20px;
+    }
+    @include desktop{
+      margin-bottom: 70px;
+    }
+  }
+}
+.site-contact {
+  .contact-info-card, .contact-form {
+    background: white;
+    height: 100%;
+  }
+  
+  .contact-icon {
+    width: 40px;
+    text-align: center;
+  }
+  
+  .social-links a {
+    transition: all 0.3s ease;
+    
+    &:hover {
+      color: $primary-color !important;
+      transform: translateY(-3px);
+    }
+  }
+}
+/* Feedback visual para campos inválidos */
+.form-control:invalid {
+    border-color: #dc3545;
+}
+.form-control:valid {
+    border-color: #28a745;
+}
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 15px;
+  border-radius: 4px;
+  border: 1px solid #c3e6cb;
+  margin-top: 20px;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 15px;
+  border-radius: 4px;
+  border: 1px solid #f5c6cb;
+  margin-top: 20px;
+}
+
+/* layouts/partials/css.html ou seu arquivo CSS principal */
+.page-obrigado .alert-success {
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.page-obrigado .fa-check-circle {
+  color: #28a745;
+  animation: bounce 1s;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+  40% {transform: translateY(-20px);}
+  60% {transform: translateY(-10px);}
+}

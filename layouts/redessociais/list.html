@@ -1,0 +1,28 @@
+{{ define "main" }}
+
+<section class="site-blog-header">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center">
+        <h1>{{ .Title }}</h1>
+        <p>
+          {{ .Params.description }}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="site-blog">
+  {{ partial "instafeed.html" . }}
+  <div class="container">
+    <div class="row"></div>
+    
+      <h5 class="justify-content-md-center">Mais novidades acesse nosso perfil <a href="https://www.instagram.com/pet.est.ufpr/" target="_blank">@pet.est.ufpr</a></h5>
+    </div>
+  </div>
+</section>
+
+<!-- {{ partial "call-to-action.html" . }} -->
+
+{{ end }}

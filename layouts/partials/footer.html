@@ -1,0 +1,164 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="site-footer-logo">
+          <div class="center-block">
+            <a href="{{ .Site.BaseURL }}"><img src="{{ .Site.Params.logo_footer | absURL }}" alt="logo-footer" class="center-block"></a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Seção de Redes Sociais -->
+      {{ with .Site.Params.footer.social }}
+      <div class="col-12">
+        <div class="site-footer-widget">
+          <h5 class="site-footer-widget-title">{{ .title }}</h5>
+          <div class="site-footer-widget-icons">
+            {{ range .link }}
+              <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" title="{{ .name }}">
+                {{ if eq .name "Medium" }}<i class="fa fa-medium" aria-hidden="true"></i>
+                {{ else if eq .name "Youtube" }}<i class="fa fa-youtube" aria-hidden="true"></i>
+                {{ else if eq .name "Github" }}<i class="fa fa-github" aria-hidden="true"></i>
+                {{ else if eq .name "Linkedin" }}<i class="fa fa-linkedin" aria-hidden="true"></i>
+                {{ else if eq .name "Instagram" }}<i class="fa fa-instagram" aria-hidden="true"></i>
+                {{ end }}
+              </a>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+
+      {{ end }}
+      <br><br>
+      <!-- Seção de Serviço -->
+      {{ with .Site.Params.footer.service }}
+      <div class="col-12">
+        <div class="site-footer-widget">
+          <h5 class="site-footer-widget-title">{{ .title }}</h5>
+          <p class="site-footer-widget-description">{{ .description | safeHTML }}</p>
+        </div>
+      </div>
+      {{ end }}
+      
+      <div class="col-12">
+        <div class="site-footer-copyright">
+          <p>© Copyright {{ dateFormat "2006" now }} - Adaptado de <a href="https://staticmania.com/" target="_blank">StaticMania</a></p>
+        </div>
+      </div>
+    </div>
+    
+    {{ if .Site.Params.footer.qr_print }}
+    <div class="row d-none d-print-block">
+      <div class="col col-lg-2">
+        {{ $qrcode := resources.Get "js/qrcode.js" | minify }}
+        <script src="{{ $qrcode.Permalink }}"></script>
+
+        <div id="qrcode">
+          <script type="text/javascript">
+           new QRCode(document.getElementById("qrcode"), {
+             text: "{{ .Page.RelPermalink | absURL }}",
+             width: 128,
+             height: 128,
+           });
+          </script>
+        </div>
+      </div>
+      <div class="col col-md-auto">
+        {{ .Page.RelPermalink | absURL }}
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</footer>
+
+
+<!-- Adicione isso no início do footer, antes dos outros scripts -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- 2025-06-04 AJSI - JavaScript para filtragem por tags na pagina de projetos-->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+      // Ativa o botão clicado
+      filterBtns.forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      
+      const filterValue = this.getAttribute('data-filter');
+      const items = document.querySelectorAll('.project-item');
+      
+      items.forEach(item => {
+        if (filterValue === 'all') {
+          item.style.display = 'block';
+        } else {
+          const itemTags = item.getAttribute('data-tags');
+          if (itemTags && itemTags.includes(filterValue)) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        }
+      });
+    });
+  });
+});
+</script>
+
+<!-- 2025-06-04 AJSI - JavaScript para filtragem por tags na pagina de processos-->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Ordenar os cards por data (do mais recente para o mais antigo)
+  const container = document.querySelector('.processos-list');
+  const items = Array.from(document.querySelectorAll('.processo-item'));
+  
+  items.sort((a, b) => {
+    const dateA = a.getAttribute('data-year').replace('year-', '');
+    const dateB = b.getAttribute('data-year').replace('year-', '');
+    return dateB - dateA;
+  });
+  
+  items.forEach(item => container.appendChild(item));
+  
+  // Filtros
+  const yearFilter = document.getElementById('year-filter');
+  const tagFilter = document.getElementById('tag-filter');
+  const resetBtn = document.getElementById('reset-filters');
+  const noResults = document.getElementById('no-results');
+  
+  function filterProcessos() {
+    const selectedYear = yearFilter.value;
+    const selectedTag = tagFilter.value;
+    let visibleCount = 0;
+    
+    items.forEach(item => {
+      const yearMatch = selectedYear === 'all' || item.getAttribute('data-year') === selectedYear;
+      const tagMatch = selectedTag === 'all' || item.getAttribute('data-status') === selectedTag;
+      
+      if (yearMatch && tagMatch) {
+        item.style.display = 'block';
+        visibleCount++;
+      } else {
+        item.style.display = 'none';
+      }
+    });
+    
+    noResults.style.display = visibleCount > 0 ? 'none' : 'block';
+  }
+  
+  yearFilter.addEventListener('change', filterProcessos);
+  tagFilter.addEventListener('change', filterProcessos);
+  
+  resetBtn.addEventListener('click', function() {
+    yearFilter.value = 'all';
+    tagFilter.value = 'all';
+    filterProcessos();
+  });
+  
+  // Filtro inicial
+  filterProcessos();
+});
+</script>
