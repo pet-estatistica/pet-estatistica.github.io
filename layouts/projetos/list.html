@@ -12,6 +12,7 @@
         <div class="mt-4">
           <div class="row justify-content-center">
             <div class="col-md-6 col-lg-4">
+              <label for="category-filter" class="form-label visually-hidden">Filtrar por categoria</label>
               <select class="form-select filter-select" id="tagFilter">
                 <option value="all" selected>Todos os projetos</option>
                 {{ $tags := slice }}
@@ -152,7 +153,7 @@ document.addEventListener('DOMContentLoaded', function() {
   appearance: none;
 }
 
-.form-select:focus {
+.form-select:focus { Disciplinas Acadêmicas 
   border-color: #86b7fe;
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
