@@ -7,20 +7,24 @@
         <h1 class="mb-4 display-4 fw-bold">{{ .Title }}</h1>
         <p class="lead text-muted">{{ .Description }}</p>
         
-        <!-- Filtros por Tags -->
+        <!-- Filtros por Tags - Agora como form-select -->
         {{ if .Params.projects }}
         <div class="mt-4">
-          <div class="btn-group flex-wrap" role="group">
-            <button type="button" class="btn btn-outline-primary filter-btn active" data-filter="all">Todos</button>
-            {{ $tags := slice }}
-            {{ range .Params.projects }}
-              {{ if .tags }}
-                {{ $tags = $tags | append .tags }}
-              {{ end }}
-            {{ end }}
-            {{ range ($tags | uniq | sort) }}
-            <button type="button" class="btn btn-outline-primary filter-btn" data-filter="tag-{{ . | urlize }}">{{ . }}</button>
-            {{ end }}
+          <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4">
+              <select class="form-select filter-select" id="tagFilter">
+                <option value="all" selected>Todos os projetos</option>
+                {{ $tags := slice }}
+                {{ range .Params.projects }}
+                  {{ if .tags }}
+                    {{ $tags = $tags | append .tags }}
+                  {{ end }}
+                {{ end }}
+                {{ range ($tags | uniq | sort) }}
+                <option value="tag-{{ . | urlize }}">{{ . }}</option>
+                {{ end }}
+              </select>
+            </div>
           </div>
         </div>
         {{ end }}
@@ -99,4 +103,104 @@
     {{ end }}
   </div>
 </section>
+
+<!-- Adicionando script JavaScript para funcionalidade do select -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const filterSelect = document.getElementById('tagFilter');
+  const projectItems = document.querySelectorAll('.project-item');
+  
+  filterSelect.addEventListener('change', function() {
+    const selectedTag = this.value;
+    
+    projectItems.forEach(item => {
+      if (selectedTag === 'all') {
+        item.style.display = 'block';
+      } else {
+        const itemTags = item.getAttribute('data-tags');
+        if (itemTags && itemTags.includes(selectedTag)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      }
+    });
+  });
+});
+</script>
+
+<style>
+.project-item {
+  transition: all 0.3s ease;
+}
+.form-select {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 2.25rem 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 16px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 0.375rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  appearance: none;
+}
+
+.form-select:focus {
+  border-color: #86b7fe;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.form-select:disabled {
+  background-color: #e9ecef;
+  opacity: 1;
+}
+
+/* Tamanhos diferentes como no Bootstrap */
+.form-select-sm {
+  padding: 0.25rem 2rem 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  border-radius: 0.25rem;
+}
+
+.form-select-lg {
+  padding: 0.5rem 2.5rem 0.5rem 1rem;
+  font-size: 1.25rem;
+  border-radius: 0.5rem;
+}
+
+/* Estados de validação */
+.form-select.is-valid {
+  border-color: #198754;
+}
+
+.form-select.is-valid:focus {
+  border-color: #198754;
+  box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
+}
+
+.form-select.is-invalid {
+  border-color: #dc3545;
+}
+
+.form-select.is-invalid:focus {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
+}
+
+/* Para navegadores que não suportam appearance: none */
+@supports (-webkit-appearance: none) or (-moz-appearance: none) {
+  .form-select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+}
+</style>
 {{ end }}
