@@ -92,7 +92,7 @@ summarylength = 25
   [params.banner]
     enable                = true
     #background_image      = "images/backgrounds/dark-blue-bg.png"
-    background_image      = "images/backgrounds/2025_04.png"
+    background_image      = "images/backgrounds/2025-2.png"
     heading               = "PET ESTATÍSTICA UFPR"
     tagline               = ""
     primary_button        = "Veja nossos Projetos"
