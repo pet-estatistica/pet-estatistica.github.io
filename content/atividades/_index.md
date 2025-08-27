@@ -18,12 +18,12 @@ projects:
     date: "2025-01-01"
     category: "Divulgação Científica"
     tags: ["Design Gráfico", "Redação Científica"]
-    image: "/images/atividades/2.png"
+    image: "/images/atividades/confeccao-material-pet.png"
     icon: "fas fa-pencil-alt"
     featured: true
     link: "/atividades/confeccao-material"
     status: "Planejado"
-    badge_color: "warning"  # amarelo para projetos futuros
+    badge_color: "warning"
 
   - title: "Consultoria Estatística"
     description: "Assessoria em análise de dados para projetos de pesquisa interdisciplinares da UFPR via edital público"
