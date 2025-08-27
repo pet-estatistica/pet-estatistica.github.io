@@ -1,13 +1,7 @@
 ---
 title: "Confecção de Material PET"
-description: "Produção de conteúdos digitais para divulgação científica nas plataformas do grupo"
-date: 2025-01-01
-status: "Planejado"
-featured: true
 image: "/images/atividades/confeccao-material-pet.png"
 tags: ["Design Gráfico", "Desenvolvimento de Sites", "Mídias Sociais", "Divulgação Científica"]
-carga_horaria: 60
-periodo: "01/01/2025 - 31/12/2025"
 ---
   
 ### **Descrição e Justificativa**

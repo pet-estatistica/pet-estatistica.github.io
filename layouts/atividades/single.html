@@ -13,10 +13,6 @@
           {{ range .Params.tags }}
             <span class="badge badge-primary">{{ . }}</span>
           {{ end }}
-<!--
-          <span class="text-muted me-3"><i class="fa fa-calendar me-1"></i> {{ .Date.Format "02/01/2006" }}</span>
-          <span class="text-muted"><i class="fa fa-tag me-1"></i> {{ .Params.status }}</span>
--->
         </div>
         <img src="{{ .Params.image }}" alt="{{ .Title }}" class="img-fluid rounded shadow-lg mb-4" style="max-height: 400px; object-fit: cover;">
       </div>
@@ -29,11 +25,7 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-8">
-<!--        
-        <div class="project-description lead mb-5">
-        {{ .Description | markdownify }}
-        </div>
--->
+
         <div class="project-body">
         {{ .Content }}
         </div>

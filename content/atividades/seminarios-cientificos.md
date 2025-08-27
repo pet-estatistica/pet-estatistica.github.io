@@ -1,10 +1,6 @@
 ---
 title: "Seminários Científicos"
-description: ""
-date: 2025-01-01
 tags: ["Comunicação Científica", "Palestras", "Consultorias", "Pesquisa Científica"]
-status: "Em andamento"
-featured: true
 image: "/images/atividades/seminarios-cientificos.jpeg"
 ---
   
