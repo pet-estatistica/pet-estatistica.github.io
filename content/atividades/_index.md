@@ -19,20 +19,15 @@ projects:
     icon: "fas fa-pencil-alt"
     featured: true
     link: "/atividades/confeccao-material"
-    status: "Planejado"
-    badge_color: "warning"
-
+    
   - title: "Consultoria Estatística"
-    description: "Assessoria em análise de dados para projetos de pesquisa interdisciplinares da UFPR via edital público"
+    description: "Assessoria em análise de dados para projetos de pesquisa interdisciplinares da UFPR"
     category: "Pesquisa Aplicada"
-    tags: ["Análise de Dados", "Orientação Científica"]
+    tags: ["Análise de Dados", "Modelos Estatísticos", "Orientação Científica", "Atividade Interdiciplinar", "Desenvolver Projetos"]
     image: "/images/atividades/2.png"
     icon: "fas fa-chart-line"
     featured: true
-    status: "Planejado"
-    badge_style: "border: 2px solid #ffc107; color: #ffc107;"  # Amarelo para planejado
     link: "/atividades/consultoria-estatistica"
-    meta: "Seleção via edital | 80h | 2025"
 
   - title: "Sistema de Acompanhamento"
     description: "Plataforma Kanban para gestão integrada das atividades do grupo"
@@ -40,10 +35,8 @@ projects:
     tags: ["Metodologia Ágil", "Trello", "Gestão de Tarefas"]
     image: "/images/atividades/2.png"
     icon: "fas fa-tasks"
-    status: "Planejado"
-    badge_color: "bg-warning text-dark"  # Amarelo para planejado
+    featured: true
     link: "/atividades/acompanhamento"
-    quick_info: "🔄 Fluxo contínuo | 📊 4 estágios | 🛠 15h"
 
   - title: "Aulas de Revisão PET"
     description: "Programa de reforço acadêmico para disciplinas básicas de estatística ministrado por Petianos veteranos"
@@ -51,10 +44,7 @@ projects:
     tags: ["Probabilidade", "Inferência", "Cálculo"]
     image: "/images/atividades/2.png"
     icon: "fas fa-chalkboard-teacher"
-    status: "Planejado"
-    badge_style: "background-color: #17a2b8; color: white;"  # Azul para projetos de ensino
     link: "/atividades/aulas-revisao"
-    quick_info: "📚 4 disciplinas | 👥 1º/2º anos | 🕒 70h"
 
   - title: "Eventos Científicos PET"
     description: "Organização do Encontro de Data Science e Dia do Estatístico em parceria com o Departamento"
@@ -62,21 +52,15 @@ projects:
     tags: ["Gestão de Eventos", "Divulgação Científica"]
     image: "/images/atividades/2.png"
     icon: "fas fa-calendar-check"
-    status: "Planejado"
-    badge_style: "background-color: #6f42c1; color: white;"  # Roxo para eventos
     link: "/atividades/eventos-cientificos"
-    quick_info: "🎤 2 eventos principais | 🤝 Co-organização | 📅 Abr-Jun 2025"
-    
+
   - title: "Feira de Cursos UFPR"
     description: "Divulgação do curso de Estatística com estande interativo para estudantes do Ensino Médio"
     category: "Divulgação"
     tags: ["Orientação Vocacional", "Captação de Alunos"]
     image: "/images/atividades/2.png"
     icon: "fas fa-users"
-    status: "Planejado"
-    badge_style: "background-color: #20c997; color: white;"  # Verde para divulgação
     link: "/atividades/feira-cursos"
-    quick_info: "🏫 Feira anual | 🎲 Jogos educativos | 📈 Métricas de impacto"
     
   - title: "Processo Seletivo"
     description: "Processo seletivo PET"
@@ -84,10 +68,7 @@ projects:
     tags: ["Orientação Vocacional", "Captação de Alunos"]
     image: "/images/atividades/2.png"
     icon: "fas fa-users"
-    status: "Planejado"
-    badge_style: "background-color: #20c997; color: white;"  # Verde para divulgação
     link: "/atividades/feira-cursos"
-    quick_info: "🏫 Feira anual | 🎲 Jogos educativos | 📈 Métricas de impacto"
 
   - title: "PET Branding"
     description: "Processo seletivo PET"
@@ -95,10 +76,7 @@ projects:
     tags: ["Orientação Vocacional", "Captação de Alunos"]
     image: "/images/atividades/2.png"
     icon: "fas fa-users"
-    status: "Planejado"
-    badge_style: "background-color: #20c997; color: white;"  # Verde para divulgação
     link: "/atividades/feira-cursos"
-    quick_info: "🏫 Feira anual | 🎲 Jogos educativos | 📈 Métricas de impacto"
     
   - title: "Avaliação Interna"
     description: "Processo seletivo PET"
@@ -106,10 +84,7 @@ projects:
     tags: ["Orientação Vocacional", "Captação de Alunos"]
     image: "/images/atividades/2.png"
     icon: "fas fa-users"
-    status: "Planejado"
-    badge_style: "background-color: #20c997; color: white;"  # Verde para divulgação
     link: "/atividades/feira-cursos"
-    quick_info: "🏫 Feira anual | 🎲 Jogos educativos | 📈 Métricas de impacto"
     
   - title: "Coorganização de eventos científicos"
     description: "Processo seletivo PET"
@@ -117,10 +92,7 @@ projects:
     tags: ["Orientação Vocacional", "Captação de Alunos"]
     image: "/images/atividades/2.png"
     icon: "fas fa-users"
-    status: "Planejado"
-    badge_style: "background-color: #20c997; color: white;"  # Verde para divulgação
     link: "/atividades/feira-cursos"
-    quick_info: "🏫 Feira anual | 🎲 Jogos educativos | 📈 Métricas de impacto"
     
   - title: "Leitura de Artigos"
     description: "Processo seletivo PET"
@@ -128,10 +100,7 @@ projects:
     tags: ["Orientação Vocacional", "Captação de Alunos"]
     image: "/images/atividades/2.png"
     icon: "fas fa-users"
-    status: "Planejado"
-    badge_style: "background-color: #20c997; color: white;"  # Verde para divulgação
     link: "/atividades/feira-cursos"
-    quick_info: "🏫 Feira anual | 🎲 Jogos educativos | 📈 Métricas de impacto"
     
   - title: "Acompanhamento"
     description: "Processo seletivo PET"
@@ -139,10 +108,7 @@ projects:
     tags: ["Orientação Vocacional", "Captação de Alunos"]
     image: "/images/atividades/2.png"
     icon: "fas fa-users"
-    status: "Planejado"
-    badge_style: "background-color: #20c997; color: white;"  # Verde para divulgação
     link: "/atividades/feira-cursos"
-    quick_info: "🏫 Feira anual | 🎲 Jogos educativos | 📈 Métricas de impacto"
     
   - title: "PET Estatística na Web"
     description: "Processo seletivo PET"
@@ -150,10 +116,7 @@ projects:
     tags: ["Orientação Vocacional", "Captação de Alunos"]
     image: "/images/atividades/2.png"
     icon: "fas fa-users"
-    status: "Planejado"
-    badge_style: "background-color: #20c997; color: white;"  # Verde para divulgação
     link: "/atividades/feira-cursos"
-    quick_info: "🏫 Feira anual | 🎲 Jogos educativos | 📈 Métricas de impacto"
     
   - title: "Aula Inaugural"
     description: "Processo seletivo PET"
@@ -161,10 +124,7 @@ projects:
     tags: ["Orientação Vocacional", "Captação de Alunos"]
     image: "/images/atividades/2.png"
     icon: "fas fa-users"
-    status: "Planejado"
-    badge_style: "background-color: #20c997; color: white;"  # Verde para divulgação
     link: "/atividades/feira-cursos"
-    quick_info: "🏫 Feira anual | 🎲 Jogos educativos | 📈 Métricas de impacto"
     
   - title: "Minicursos"
     description: "Processo seletivo PET"
@@ -172,10 +132,7 @@ projects:
     tags: ["Orientação Vocacional", "Captação de Alunos"]
     image: "/images/atividades/2.png"
     icon: "fas fa-users"
-    status: "Planejado"
-    badge_style: "background-color: #20c997; color: white;"  # Verde para divulgação
     link: "/atividades/feira-cursos"
-    quick_info: "🏫 Feira anual | 🎲 Jogos educativos | 📈 Métricas de impacto"
     
   - title: "Pesquisa Científica Individual"
     description: "Processo seletivo PET"
@@ -183,10 +140,7 @@ projects:
     tags: ["Orientação Vocacional", "Captação de Alunos"]
     image: "/images/atividades/2.png"
     icon: "fas fa-users"
-    status: "Planejado"
-    badge_style: "background-color: #20c997; color: white;"  # Verde para divulgação
     link: "/atividades/feira-cursos"
-    quick_info: "🏫 Feira anual | 🎲 Jogos educativos | 📈 Métricas de impacto"
     
   - title: "Aprendizado Estatístico Expresso"
     description: "Processo seletivo PET"
@@ -194,8 +148,5 @@ projects:
     tags: ["Orientação Vocacional", "Captação de Alunos"]
     image: "/images/atividades/2.png"
     icon: "fas fa-users"
-    status: "Planejado"
-    badge_style: "background-color: #20c997; color: white;"  # Verde para divulgação
     link: "/atividades/feira-cursos"
-    quick_info: "🏫 Feira anual | 🎲 Jogos educativos | 📈 Métricas de impacto"
 ---

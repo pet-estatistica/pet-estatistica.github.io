@@ -14,7 +14,7 @@
             <div class="col-md-6 col-lg-4">
               <label for="category-filter" class="form-label visually-hidden">Filtrar por tags</label>
               <select class="form-select filter-select" id="tagFilter">
-                <option value="all" selected>Todos os projetos</option>
+                <option value="all" selected>Todos as atividades</option>
                 {{ $tags := slice }}
                 {{ range .Params.projects }}
                   {{ if .tags }}
