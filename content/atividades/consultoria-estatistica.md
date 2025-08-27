@@ -5,7 +5,7 @@ date: 2025-01-01
 status: "Planejado"
 featured: true
 image: "/images/projetos/consultoria-estatistica.jpg"
-category: ["Análise de Dados", "Modelos Estatísticos", "Orientação Científica"]
+tags: ["Análise de Dados", "Modelos Estatísticos", "Orientação Científica"]
 carga_horaria: 80
 periodo: "01/01/2025 - 31/10/2025"
 edital: "/editais/consultoria-2025.pdf"

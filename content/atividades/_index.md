@@ -7,7 +7,7 @@ projects:
     description: "Série de apresentações mensais onde PETianos e convidados compartilham pesquisas e conhecimentos com a comunidade acadêmica."
     date: "2025-03-15"
     category: "Formação Acadêmica"
-    tags: ["Comunicação Científica", "Metodologia de Pesquisa"]
+    tags: ["Comunicação Científica", "Palestras", "Consultorias", "Pesquisa Científica"]
     image: "/images/atividades/seminarios-cientificos.jpeg"
     icon: "fa fa-chalkboard-teacher"
     featured: true

@@ -5,7 +5,7 @@ date: 2025-06-05
 status: "Planejado"
 featured: true
 image: "/images/projetos/feira-cursos.jpg"
-category: ["Orientação Profissional", "Jogos Estatísticos", "Painéis Interativos"]
+tags: ["Orientação Profissional", "Jogos Estatísticos", "Painéis Interativos"]
 carga_horaria: 60
 periodo: "05/06/2025 - 08/06/2025"
 publico_alvo: "Estudantes do Ensino Médio"

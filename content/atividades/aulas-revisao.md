@@ -2,11 +2,10 @@
   title: "Aulas de Revisão PET Estatística"
 description: "Programa de reforço acadêmico para disciplinas introdutórias de estatística"
 date: 2025-03-10
-category: "Ensino"
 status: "Planejado"
 featured: true
 image: "/images/projetos/aulas-revisao.jpg"
-technologies: ["Didática", "Monitoria", "Estatística Básica"]
+tags: ["Didática", "Monitoria", "Estatística Básica"]
 carga_horaria: 70
 periodo: "10/03/2025 - 06/12/2025"
 disciplinas: ["Probabilidade", "Inferência", "Cálculo", "Algebra Linear"]

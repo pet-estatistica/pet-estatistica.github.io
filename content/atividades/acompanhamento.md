@@ -5,7 +5,7 @@ date: 2025-01-01
 status: "Planejado"
 featured: false
 image: "/images/projetos/acompanhamento-kanban.jpg"
-category: ["Gestão de Projetos", "Metodologia Ágil", "Ferramentas Colaborativas"]
+tags: ["Gestão de Projetos", "Metodologia Ágil", "Ferramentas Colaborativas"]
 carga_horaria: 15
 periodo: "01/01/2025 - 15/12/2025"
 plataforma: "Trello" # ou outra ferramenta definida
