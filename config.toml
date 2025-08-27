@@ -26,8 +26,8 @@ summarylength = 25
     url     = "redessociais"
     weight  = 4
   [[menu.nav]]
-    name    = "PROJETOS"
-    url     = "projetos"
+    name    = "ATIVIDADES"
+    url     = "atividades"
     weight  = 5
   [[menu.nav]]
     name    = "MATERIAIS"

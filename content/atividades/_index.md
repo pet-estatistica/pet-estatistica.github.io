@@ -1,6 +1,6 @@
 ---
-title: "Nossos Projetos"
-description: "Conheça nossos principais projetos e iniciativas desenvolvidas ao longo dos anos."
+title: "Nossas Atividades"
+description: "Conheça as nossas principais atividades e iniciativas desenvolvidas ao longo dos anos."
 date: 2025-05-08 
 projects:
   - title: "Seminários Científicos"
