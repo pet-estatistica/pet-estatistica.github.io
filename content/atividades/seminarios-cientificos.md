@@ -2,7 +2,7 @@
 title: "Seminários Científicos PET"
 description: ""
 date: 2025-01-01
-category: "Extensão"
+category: ["Design Gráfico", "Redação Científica", "Mídias Sociais"]
 status: "Em andamento"
 featured: true
 image: "/images/atividades/seminarios-cientificos.jpeg"

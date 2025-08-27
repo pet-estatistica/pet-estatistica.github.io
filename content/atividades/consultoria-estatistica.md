@@ -2,11 +2,10 @@
   title: "Consultoria Estatística PET"
 description: "Serviço de assessoria em análise de dados para projetos interdisciplinares da UFPR"
 date: 2025-01-01
-category: "Pesquisa Aplicada"
 status: "Planejado"
 featured: true
 image: "/images/projetos/consultoria-estatistica.jpg"
-technologies: ["Análise de Dados", "Modelos Estatísticos", "Orientação Científica"]
+category: ["Análise de Dados", "Modelos Estatísticos", "Orientação Científica"]
 carga_horaria: 80
 periodo: "01/01/2025 - 31/10/2025"
 edital: "/editais/consultoria-2025.pdf"

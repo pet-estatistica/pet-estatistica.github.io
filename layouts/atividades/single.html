@@ -9,7 +9,10 @@
         <h1 class="project-title display-4 fw-bold mb-3">{{ .Title }}</h1>
         
         <div class="project-meta mb-4">
-          <span class="badge badge-primary">{{ .Params.category }}</span>
+
+          {{ range .Params.category }}
+            <span class="badge badge-primary">{{ . }}</span>
+          {{ end }}
 <!--
           <span class="text-muted me-3"><i class="fa fa-calendar me-1"></i> {{ .Date.Format "02/01/2006" }}</span>
           <span class="text-muted"><i class="fa fa-tag me-1"></i> {{ .Params.status }}</span>

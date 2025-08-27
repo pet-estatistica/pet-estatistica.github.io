@@ -2,11 +2,10 @@
   title: "Feira de Cursos e Profissões"
 description: "Divulgação do curso de Estatística para estudantes do Ensino Médio na feira anual da UFPR"
 date: 2025-06-05
-category: "Divulgação"
 status: "Planejado"
 featured: true
 image: "/images/projetos/feira-cursos.jpg"
-technologies: ["Orientação Profissional", "Jogos Estatísticos", "Painéis Interativos"]
+category: ["Orientação Profissional", "Jogos Estatísticos", "Painéis Interativos"]
 carga_horaria: 60
 periodo: "05/06/2025 - 08/06/2025"
 publico_alvo: "Estudantes do Ensino Médio"

@@ -2,11 +2,10 @@
   title: "Sistema de Acompanhamento PET"
 description: "Gestão integrada das atividades do grupo através de metodologia Kanban digital"
 date: 2025-01-01
-category: "Gestão Interna"
 status: "Planejado"
 featured: false
 image: "/images/projetos/acompanhamento-kanban.jpg"
-technologies: ["Gestão de Projetos", "Metodologia Ágil", "Ferramentas Colaborativas"]
+category: ["Gestão de Projetos", "Metodologia Ágil", "Ferramentas Colaborativas"]
 carga_horaria: 15
 periodo: "01/01/2025 - 15/12/2025"
 plataforma: "Trello" # ou outra ferramenta definida
