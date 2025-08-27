@@ -5,7 +5,7 @@ date: 2025-01-01
 status: "Planejado"
 featured: true
 image: "/images/atividades/confeccao-material-pet.png"
-tags: ["Design Gráfico", "Redação Científica", "Mídias Sociais"]
+tags: ["Design Gráfico", "Desenvolvimento de Sites", "Mídias Sociais", "Divulgação Científica"]
 carga_horaria: 60
 periodo: "01/01/2025 - 31/12/2025"
 ---
