@@ -14,7 +14,7 @@
           <div class="row justify-content-center">
             <div class="col-md-6 col-lg-5">
               <label for="category-filter" class="form-label visually-hidden">Filtrar por categoria</label>
-              <select class="form-select form-select-lg" id="category-filter">
+              <select class="form-select form-select" id="category-filter">
                 <option value="all" selected>Todas as categorias</option>
                 {{ range .Params.categories }}
                 <option value="{{ . | urlize }}">{{ . }}</option>
