@@ -11,9 +11,60 @@
                 {{ .title }}
               </h2>
             </div>
+            
+            <!-- Filtro por interesses -->
+            <div class="interest-filter mb-4">
+              <label for="interest-select" class="form-label">Filtrar por área de interesse:</label>
+              <select id="interest-select" class="form-select">
+                <option value="all">Todas as áreas</option>
+                {{ $allInterests := slice }}
+                {{ range .members }}
+                  {{ if .interesse }}
+                    {{ if reflect.IsSlice .interesse }}
+                      {{ $allInterests = $allInterests | append .interesse }}
+                    {{ else }}
+                      <!-- Se for string, converte para slice -->
+                      {{ $allInterests = $allInterests | append (slice .interesse) }}
+                    {{ end }}
+                  {{ end }}
+                {{ end }}
+                
+                {{ $uniqueInterests := slice }}
+                {{ $interestCounts := dict }}
+                {{ range $allInterests }}
+                  {{ if reflect.IsSlice . }}
+                    {{ range . }}
+                      {{ $interest := . | string }}
+                      {{ if not (in $uniqueInterests $interest) }}
+                        {{ $uniqueInterests = $uniqueInterests | append $interest }}
+                        {{ $interestCounts = merge $interestCounts (dict $interest 1) }}
+                      {{ else }}
+                        {{ $currentCount := index $interestCounts $interest | default 0 }}
+                        {{ $interestCounts = merge $interestCounts (dict $interest (add $currentCount 1)) }}
+                      {{ end }}
+                    {{ end }}
+                  {{ else }}
+                    {{ $interest := . | string }}
+                    {{ if not (in $uniqueInterests $interest) }}
+                      {{ $uniqueInterests = $uniqueInterests | append $interest }}
+                      {{ $interestCounts = merge $interestCounts (dict $interest 1) }}
+                    {{ else }}
+                      {{ $currentCount := index $interestCounts $interest | default 0 }}
+                      {{ $interestCounts = merge $interestCounts (dict $interest (add $currentCount 1)) }}
+                    {{ end }}
+                  {{ end }}
+                {{ end }}
+                
+                {{ range sort $uniqueInterests }}
+                <option value="{{ . | urlize }}">{{ . }} ({{ index $interestCounts . }})</option>
+                {{ end }}
+              </select>
+            </div>
           </div>
+          
           {{ range .members }}
-          <div class="col-lg-6 col-md-6">
+          <div class="col-lg-6 col-md-6 team-member" 
+               data-interests="{{ if .interesse }}{{ if reflect.IsSlice .interesse }}{{ range .interesse }}{{ . | urlize }} {{ end }}{{ else }}{{ .interesse | urlize }}{{ end }}{{ end }}">
             <div class="site-team-member">
               <div class="site-team-member-image">
                 <img src="{{ .image | absURL }}" alt="team-member">
@@ -25,7 +76,15 @@
                 <p class="site-team-item-body">
                   {{ if .quote }}<blockquote>{{ .quote }}</blockquote>{{ end }}
                 </p>
-                {{ if .interesse }}<p><strong>Áreas de interesse:</strong> {{ .interesse }}</p>{{ end }}
+                {{ if .interesse }}
+                  <p><strong>Áreas de interesse:</strong> 
+                    {{ if reflect.IsSlice .interesse }}
+                      {{ delimit .interesse ", " }}
+                    {{ else }}
+                      {{ .interesse }}
+                    {{ end }}
+                  </p>
+                {{ end }}
                 <ul class="site-team-member-social">
                   {{ if .github }}<li><a href="{{ .github | absURL }}"><i class="fa fa-github"></i></a></li>{{ end }}
                   {{ if .linkedin }}<li><a href="{{ .linkedin | absURL }}"><i class="fa fa-linkedin"></i></a></li>{{ end }}
@@ -39,6 +98,120 @@
         </div>
       </div>
     </section>
+
+    <!-- Script para o filtro -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const interestSelect = document.getElementById('interest-select');
+      const teamMembers = document.querySelectorAll('.team-member');
+      
+      interestSelect.addEventListener('change', function() {
+        const selectedInterest = this.value;
+        
+        teamMembers.forEach(member => {
+          if (selectedInterest === 'all') {
+            member.style.display = 'block';
+          } else {
+            const memberInterests = member.getAttribute('data-interests').split(' ');
+            if (memberInterests.includes(selectedInterest)) {
+              member.style.display = 'block';
+            } else {
+              member.style.display = 'none';
+            }
+          }
+        });
+      });
+    });
+    </script>
+    
+    <style>
+  .form-select {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 2.25rem 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 0.375rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    appearance: none;
+  }
+
+  .form-select:focus {
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  }
+
+  .form-select:disabled {
+    background-color: #e9ecef;
+    opacity: 1;
+  }
+
+  /* Tamanhos diferentes como no Bootstrap */
+  .form-select-sm {
+    padding: 0.25rem 2rem 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    border-radius: 0.25rem;
+  }
+
+  .form-select-lg {
+    padding: 0.5rem 2.5rem 0.5rem 1rem;
+    font-size: 1.25rem;
+    border-radius: 0.5rem;
+  }
+
+  /* Estados de validação */
+  .form-select.is-valid {
+    border-color: #198754;
+  }
+
+  .form-select.is-valid:focus {
+    border-color: #198754;
+    box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
+  }
+
+  .form-select.is-invalid {
+    border-color: #dc3545;
+  }
+
+  .form-select.is-invalid:focus {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
+  }
+
+  /* Para navegadores que não suportam appearance: none */
+  @supports (-webkit-appearance: none) or (-moz-appearance: none) {
+    .form-select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+    }
+  }
+    
+    .interest-filter {
+      max-width: 400px;
+      margin: 0 auto 2rem;
+    }
+    
+    .team-member {
+      transition: all 0.3s ease;
+    }
+    
+    .team-member[style*="display: none"] {
+      opacity: 0;
+      height: 0;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+    }
+    </style>
     {{ end }}
   {{ end }}
 {{ end }}
