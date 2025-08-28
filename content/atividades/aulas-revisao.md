@@ -1,82 +1,16 @@
 ---
-  title: "Aulas de Revisão PET Estatística"
-description: "Programa de reforço acadêmico para disciplinas introdutórias de estatística"
-date: 2025-03-10
-status: "Planejado"
-featured: true
-image: "/images/projetos/aulas-revisao.jpg"
-tags: ["Didática", "Monitoria", "Estatística Básica"]
-carga_horaria: 70
-periodo: "10/03/2025 - 06/12/2025"
-disciplinas: ["Probabilidade", "Inferência", "Cálculo", "Algebra Linear"]
-publico_alvo: "Alunos do 1º/2º ano de Estatística e cursos afins"
+title: "Aulas de Revisão PET Estatística"
+image: "/images/atividades/2.png"
+tags: ["Didática", "Monitoria", "Estatística Básica", "Aulas de Revisão"]
 ---
   
-  ## **Descrição e Justificativa**
-  
-  Iniciativa que oferece reforço acadêmico estruturado para:
-  
-  - Disciplinas críticas do ciclo básico  
-- Alunos com dificuldades em estatística básica  
-- Cursos de outras áreas com componentes estatísticos  
+### **Descrição e Justificativa**
 
-**Contexto:**  
-  A carência de monitorias específicas e altas taxas de reprovação nas disciplinas introdutórias motivam esta ação extensionista.
+Os cursos básicos de estatística são desafiadores para muitos estudantes e muitas vezes a oferta de monitoria para disciplinas específicas, especialmente para a Graduação em Estatística, são baixas. Neste sentido, o PET pode disponibilizar atendimentos de monitorias e plantão de dúvidas com seus membros veteranos, que já realizaram as disciplinas introdutórias de estatística.
 
-## **Objetivos**
+### **Objetivos**
 
-✔ Reduzir índices de reprovação  
-✔ Oferecer suporte pedagógico complementar  
-✔ Fortalecer vínculos com a comunidade acadêmica  
-
-## **Metodologia**
-
-**Estrutura das Aulas:**  
-  - Aulões pré-prova (2h cada)  
-- Conteúdos alinhados com professores titulares  
-- Material didático específico  
-
-**Processo:**  
-  1. Diagnóstico das necessidades com coordenação  
-2. Planejamento semestral de aulas  
-3. Ministério por petianos veteranos  
-4. Avaliação contínua dos resultados  
-
-**Disciplinas Atendidas:**  
-  sjkaakhjkh
-
-## **Resultados Esperados**
-
-- **Impacto Acadêmico:**  
-  - Aumento de 15-20% nas taxas de aprovação  
-- Redução da evasão no ciclo básico  
-
-- **Para o PET:**  
-  - Desenvolvimento de habilidades docentes  
-- Reconhecimento institucional  
-
-**Entregas:**  
-  📚 Banco de materiais didáticos  
-📊 Relatórios de acompanhamento  
-🎓 Certificados para participantes  
-
-## **Avaliação**
-
-**Indicadores:**  
-  ✅ Comparativo histórico de aprovações  
-✅ Nível de participação nas aulas  
-✅ Feedback dos alunos/professores  
-
-**Métricas:**  
-  - Número de aulas ministradas/semestre  
-- Média de participantes por aula  
-- Evolução do desempenho acadêmico  
+Planejar e ministrar, durante todo o ano letivo, aulas de revisão para disciplinas chaves do Bach. de Estatística e Ciência de Dados - em especial aos alunos do primeiro e segundo ano - bem como para os alunos de cursos de estatística básica ofertados para outras áreas. Bem como aproximar, ainda mais, o PET da comunidade acadêmica local.
 
 ---
-  
-  > **Dados Operacionais:**  
-  > 👩‍🏫 **Ministrantes:** PETianos veteranos  
-> 🎯 **Público:** 
-> 📅 **Cronograma:** Março-Dezembro/2025  
-
-> **Contato:** pet.estatistica@ufpr.br | @petestatistica_ufpr
+[Voltar para Atividades](/atividades/)

@@ -6,8 +6,7 @@ tags: ["Design Gráfico", "Desenvolvimento de Sites", "Mídias Sociais", "Divulg
   
 ### **Descrição e Justificativa**
   
-O website e as redes sociais do PET são uma das formas de divulgação de material. Por meio desses meios é possível compartilhar reportagens, conteúdos, apostilas, instruções. Desta forma, é essencial que o PET crie
-seus materiais.
+O website e as redes sociais do PET são uma das formas de divulgação de material. Por meio desses meios é possível compartilhar reportagens, conteúdos, apostilas, instruções. Desta forma, é essencial que o PET crie seus materiais.
 
 ### **Objetivos**
 

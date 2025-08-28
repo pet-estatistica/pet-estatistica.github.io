@@ -30,123 +30,123 @@ projects:
     link: "/atividades/consultoria-estatistica"
 
   - title: "Sistema de Acompanhamento"
-    description: "Plataforma Kanban para gestão integrada das atividades do grupo"
+    description: "Plataforma interna para gestão integrada das atividades do grupo"
     category: "Gestão Interna"
-    tags: ["Metodologia Ágil", "Trello", "Gestão de Tarefas"]
+    tags: ["Gestão de Tarefas", "Ferramentas Colaborativas"]
     image: "/images/atividades/2.png"
     icon: "fas fa-tasks"
-    featured: true
     link: "/atividades/acompanhamento"
 
   - title: "Aulas de Revisão PET"
     description: "Programa de reforço acadêmico para disciplinas básicas de estatística ministrado por Petianos veteranos"
     category: "Ensino"
-    tags: ["Probabilidade", "Inferência", "Cálculo"]
+    tags: ["Didática", "Monitoria", "Estatística Básica", "Aulas de Revisão"]
     image: "/images/atividades/2.png"
     icon: "fas fa-chalkboard-teacher"
     link: "/atividades/aulas-revisao"
 
-  - title: "Eventos Científicos PET"
+  - title: "Organização e Co-Organização de Eventos Científicos"
     description: "Organização do Encontro de Data Science e Dia do Estatístico em parceria com o Departamento"
     category: "Extensão"
     tags: ["Gestão de Eventos", "Divulgação Científica"]
-    image: "/images/atividades/2.png"
+    image: "/images/atividades/eventos-cientificos.jpeg"
     icon: "fas fa-calendar-check"
     link: "/atividades/eventos-cientificos"
 
   - title: "Feira de Cursos UFPR"
     description: "Divulgação do curso de Estatística com estande interativo para estudantes do Ensino Médio"
-    category: "Divulgação"
-    tags: ["Orientação Vocacional", "Captação de Alunos"]
+    category: "Extensão"
+    tags: ["Apresentação Curso", "Recrutamento", "Calouros", "Feira de Cursos e Profissões"]
     image: "/images/atividades/2.png"
     icon: "fas fa-users"
-    link: "/atividades/feira-cursos"
+    link: "/atividades/feira-de-cursos-e-profissoes"
+
+  - title: "Pesquisa Científica Individual"
+    description: "Desenvolvimento de pesquisa acadêmica pelo Petiano, para estimular e expandir conhecimentos em pesquisa científica e senso crítico do aluno"
+    category: "Pesquisa"
+    tags: ["Pesquisa Científica", "Senso Crítico Acadêmico", "Atividades Acadêmicas", "Interdiciplinar"]
+    image: "/images/atividades/2.png"
+    icon: "fas fa-users"
+    link: "/atividades/pesquisa-cientifica-individual"    
+
+  - title: "Participação de Congressos Científicos"
+    description: "Os Petianos ao desenvolverem pesquisas acadêmicas, podem apresentá-las em congressos acadêmicos."
+    category: "Extensão"
+    tags: ["Pesquisa Científica", "Atividades Acadêmicas", "Congresso Científico", "Desenvolvimento Acadêmico e Profissional"]
+    image: "/images/atividades/2.png"
+    icon: "fas fa-users"
+    link: "/atividades/participacao-congressos-cientificos"      
+
+  - title: "Minicursos"
+    description: "Alunos do PET oferecem minicursos sobre a utilização de ferramentas para análise de dados, e desenvolvimento voltados para a área da Estatística e Ciência de Dados"
+    category: "Ensino"
+    tags: ["Desenvolvimento", "Ferramentas de Desenvolvimento", "Minicursos", "Gratuítos", "Análise de Dados"]
+    image: "/images/atividades/2.png"
+    icon: "fas fa-users"
+    link: "/atividades/minicursos"
+    
+  - title: "Semana Acadêmica"
+    description: "A Semana Acadêmica configura-se como uma atividade de extensão, conduzida majoritariamente por meio
+de palestras, minicursos e mesas redondas"
+    category: "Extensão"
+    tags: ["Extensão", "Palestras", "Minicursos", "Mesa Redonda", "Formação Profissional Científica"]
+    image: "/images/atividades/2.png"
+    icon: "fas fa-users"
+    link: "/atividades/semana-academica"
+        
+  - title: "PET Branding"
+    description: "Gerenciar e melhorar a marca PET Estatística UFPR em redes sociais e com o público acadêmico"
+    category: "Divulgação"
+    tags: ["Gestão de Marca", "Marketing Digital", "Identidade Visual", "Branding"]
+    image: "/images/atividades/2.png"
+    icon: "fas fa-users"
+    link: "/atividades/pet-branding"    
     
   - title: "Processo Seletivo"
     description: "Processo seletivo PET"
     category: "Divulgação"
-    tags: ["Orientação Vocacional", "Captação de Alunos"]
+    tags: ["Processo Seletivo", "Captação de Alunos", "Divulgação"]
     image: "/images/atividades/2.png"
     icon: "fas fa-users"
-    link: "/atividades/feira-cursos"
+    link: "/atividades/processo-seletivo"
 
-  - title: "PET Branding"
-    description: "Processo seletivo PET"
-    category: "Divulgação"
-    tags: ["Orientação Vocacional", "Captação de Alunos"]
-    image: "/images/atividades/2.png"
-    icon: "fas fa-users"
-    link: "/atividades/feira-cursos"
-    
   - title: "Avaliação Interna"
-    description: "Processo seletivo PET"
-    category: "Divulgação"
-    tags: ["Orientação Vocacional", "Captação de Alunos"]
+    description: "Feedback realizado para cada petiano, sobre coisas boas e que podem melhorar, na visão da equipe do PET"
+    category: "Crescimento Pessoal"
+    tags: ["Avaliação Interna", "Avaliação 360", "Crescimento Pessoal", "Feedback", "Melhora no Trabalho em Equipe"]
     image: "/images/atividades/2.png"
     icon: "fas fa-users"
-    link: "/atividades/feira-cursos"
-    
-  - title: "Coorganização de eventos científicos"
-    description: "Processo seletivo PET"
-    category: "Divulgação"
-    tags: ["Orientação Vocacional", "Captação de Alunos"]
-    image: "/images/atividades/2.png"
-    icon: "fas fa-users"
-    link: "/atividades/feira-cursos"
-    
-  - title: "Leitura de Artigos"
-    description: "Processo seletivo PET"
-    category: "Divulgação"
-    tags: ["Orientação Vocacional", "Captação de Alunos"]
-    image: "/images/atividades/2.png"
-    icon: "fas fa-users"
-    link: "/atividades/feira-cursos"
-    
-  - title: "Acompanhamento"
-    description: "Processo seletivo PET"
-    category: "Divulgação"
-    tags: ["Orientação Vocacional", "Captação de Alunos"]
-    image: "/images/atividades/2.png"
-    icon: "fas fa-users"
-    link: "/atividades/feira-cursos"
-    
-  - title: "PET Estatística na Web"
-    description: "Processo seletivo PET"
-    category: "Divulgação"
-    tags: ["Orientação Vocacional", "Captação de Alunos"]
-    image: "/images/atividades/2.png"
-    icon: "fas fa-users"
-    link: "/atividades/feira-cursos"
+    link: "/atividades/avaliacao-interna"
     
   - title: "Aula Inaugural"
-    description: "Processo seletivo PET"
+    description: "Primeira aula do ano aos calouros do curso, proomovendo informações de como funciona o curso e a Universidade, além de dicas de estudo e materiais"
     category: "Divulgação"
-    tags: ["Orientação Vocacional", "Captação de Alunos"]
+    tags: ["Orientação", "Informações sobre o Curso", "Calouros", "Apresentação da Universidade", "Dicas de Estudo", "Divulgação"]
     image: "/images/atividades/2.png"
     icon: "fas fa-users"
-    link: "/atividades/feira-cursos"
+    link: "/atividades/aula-inaugural"
     
-  - title: "Minicursos"
-    description: "Processo seletivo PET"
+  - title: "PET Estatística na Web"
+    description: "Atualização e aprimoramento do site e das redes sociais do PET Estatística, com a finalidade de dar maior visibilidade aos projetos, cursos e eventos promovidos pelo grupo"
     category: "Divulgação"
-    tags: ["Orientação Vocacional", "Captação de Alunos"]
+    tags: ["Redes Sociais", "Vídeos", "Divulgação", "Público Externo", "Visibilidade"]
     image: "/images/atividades/2.png"
     icon: "fas fa-users"
-    link: "/atividades/feira-cursos"
+    link: "/atividades/pet-estatistica-na-web"    
     
-  - title: "Pesquisa Científica Individual"
-    description: "Processo seletivo PET"
-    category: "Divulgação"
-    tags: ["Orientação Vocacional", "Captação de Alunos"]
+  - title: "Sistema de Avaliação do curso de Estatística UFPR"
+    description: "Desenvolvimento de um sistema de Avaliação do curso de Estatística da UFPR, que venha ser usado pelo colegiado para avaliar o curso continuamente"
+    category: "Pesquisa"
+    tags: ["Sistema Online", "Desenvolvimento", "Avaliação", "Público Interno", "Pesquisa"]
     image: "/images/atividades/2.png"
     icon: "fas fa-users"
-    link: "/atividades/feira-cursos"
+    link: "/atividades/sistema-avaliacao-curso-estatistica-ufpr"  
     
-  - title: "Aprendizado Estatístico Expresso"
-    description: "Processo seletivo PET"
+  - title: "Organização e Participação nas reuniões do InterPET"
+    description: "A organização e participação nas reuniões do InterPET representam uma oportunidade única para fortalecer a interação entre grupos PET de diferentes áreas do conhecimento, promovendo o intercâmbio de experiências e boas práticas."
     category: "Divulgação"
-    tags: ["Orientação Vocacional", "Captação de Alunos"]
+    tags: ["Divulgação", "Interpet", "Evento Acadêmico", "Pesquisa"]
     image: "/images/atividades/2.png"
     icon: "fas fa-users"
-    link: "/atividades/feira-cursos"
+    link: "/atividades/organizacao-participacao-interpet"  
 ---
