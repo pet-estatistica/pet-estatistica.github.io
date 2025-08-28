@@ -21,8 +21,20 @@
                     {{ $tags = $tags | append .tags }}
                   {{ end }}
                 {{ end }}
-                {{ range ($tags | uniq | sort) }}
-                <option value="tag-{{ . | urlize }}">{{ . }}</option>
+                
+                {{ $tagCount := dict }}
+                {{ range $tags }}
+                  {{ $tag := . }}
+                  {{ if isset $tagCount $tag }}
+                    {{ $count := add (index $tagCount $tag) 1 }}
+                    {{ $tagCount = merge $tagCount (dict $tag $count) }}
+                  {{ else }}
+                    {{ $tagCount = merge $tagCount (dict $tag 1) }}
+                  {{ end }}
+                {{ end }}
+                
+                {{ range $tag, $count := $tagCount }}
+                <option value="tag-{{ $tag | urlize }}">{{ $tag }} ({{ $count }})</option>
                 {{ end }}
               </select>
             </div>
@@ -151,7 +163,7 @@ document.addEventListener('DOMContentLoaded', function() {
   appearance: none;
 }
 
-.form-select:focus { Disciplinas Acadêmicas 
+.form-select:focus {
   border-color: #86b7fe;
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);

@@ -28,9 +28,9 @@
           <div class="processo-prazo badge {{ if $encerrado }}bg-danger{{ else }}bg-primary{{ end }} text-white mb-4">
             <i class="bi bi-calendar-event me-2"></i>
             {{ if $encerrado }}
-              Prazo encerrado ({{ .Params.prazo }})
+              Processo encerrado ({{ .Params.prazo }})
             {{ else }}
-              Encerra em: {{ .Params.prazo }}
+              Finaliza em: {{ .Params.prazo }}
             {{ end }}
           </div>
         </div>
