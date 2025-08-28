@@ -1,6 +1,6 @@
 ---
 title: "PET Estatística na Web"
-image: "/images/atividades/2.png"
+image: "/images/atividades/pet-estatistica-na-web.png"
 tags: ["Redes Sociais", "Vídeos", "Divulgação", "Público Externo", "Visibilidade"]
 ---
   

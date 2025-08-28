@@ -1,6 +1,6 @@
 ---
 title: "Aulas de Revisão PET Estatística"
-image: "/images/atividades/2.png"
+image: "/images/atividades/aulas-revisao.jpeg"
 tags: ["Didática", "Monitoria", "Estatística Básica", "Aulas de Revisão"]
 ---
   

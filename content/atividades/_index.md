@@ -41,7 +41,7 @@ projects:
     description: "Programa de reforço acadêmico para disciplinas básicas de estatística ministrado por Petianos veteranos"
     category: "Ensino"
     tags: ["Didática", "Monitoria", "Estatística Básica", "Aulas de Revisão"]
-    image: "/images/atividades/2.png"
+    image: "/images/atividades/aulas-revisao.jpeg"
     icon: "fas fa-chalkboard-teacher"
     link: "/atividades/aulas-revisao"
 
@@ -57,7 +57,7 @@ projects:
     description: "Divulgação do curso de Estatística com estande interativo para estudantes do Ensino Médio"
     category: "Extensão"
     tags: ["Apresentação Curso", "Recrutamento", "Calouros", "Feira de Cursos e Profissões"]
-    image: "/images/atividades/2.png"
+    image: "/images/atividades/feira-de-cursos-e-profissoes.jpeg"
     icon: "fas fa-users"
     link: "/atividades/feira-de-cursos-e-profissoes"
 
@@ -90,7 +90,7 @@ projects:
 de palestras, minicursos e mesas redondas"
     category: "Extensão"
     tags: ["Extensão", "Palestras", "Minicursos", "Mesa Redonda", "Formação Profissional Científica"]
-    image: "/images/atividades/2.png"
+    image: "/images/atividades/semana-academica.jpeg"
     icon: "fas fa-users"
     link: "/atividades/semana-academica"
         
@@ -122,7 +122,7 @@ de palestras, minicursos e mesas redondas"
     description: "Primeira aula do ano aos calouros do curso, proomovendo informações de como funciona o curso e a Universidade, além de dicas de estudo e materiais"
     category: "Divulgação"
     tags: ["Orientação", "Informações sobre o Curso", "Calouros", "Apresentação da Universidade", "Dicas de Estudo", "Divulgação"]
-    image: "/images/atividades/2.png"
+    image: "/images/atividades/aula-inaugural.jpeg"
     icon: "fas fa-users"
     link: "/atividades/aula-inaugural"
     
@@ -130,7 +130,7 @@ de palestras, minicursos e mesas redondas"
     description: "Atualização e aprimoramento do site e das redes sociais do PET Estatística, com a finalidade de dar maior visibilidade aos projetos, cursos e eventos promovidos pelo grupo"
     category: "Divulgação"
     tags: ["Redes Sociais", "Vídeos", "Divulgação", "Público Externo", "Visibilidade"]
-    image: "/images/atividades/2.png"
+    image: "/images/atividades/pet-estatistica-na-web.png"
     icon: "fas fa-users"
     link: "/atividades/pet-estatistica-na-web"    
     
@@ -146,7 +146,7 @@ de palestras, minicursos e mesas redondas"
     description: "A organização e participação nas reuniões do InterPET representam uma oportunidade única para fortalecer a interação entre grupos PET de diferentes áreas do conhecimento, promovendo o intercâmbio de experiências e boas práticas."
     category: "Divulgação"
     tags: ["Divulgação", "Interpet", "Evento Acadêmico", "Pesquisa"]
-    image: "/images/atividades/2.png"
+    image: "/images/atividades/organizacao-participacao-interpet.jpeg"
     icon: "fas fa-users"
     link: "/atividades/organizacao-participacao-interpet"  
 ---

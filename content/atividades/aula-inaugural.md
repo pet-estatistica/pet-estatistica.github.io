@@ -1,6 +1,6 @@
 ---
 title: "Aula Inaugural"
-image: "/images/atividades/2.png"
+image: "/images/atividades/aula-inaugural.jpeg"
 tags: ["Orientação", "Informações sobre o Curso", "Calouros", "Apresentação da Universidade", "Dicas de Estudo", "Divulgação"]
 ---
   

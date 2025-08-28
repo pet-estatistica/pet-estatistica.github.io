@@ -1,6 +1,6 @@
 ---
 title: "Organização e Participação nas reuniões do InterPET"
-image: "/images/atividades/2.png"
+image: "/images/atividades/organizacao-participacao-interpet.jpegorganizacao-participacao-interpet"
 tags: ["Divulgação", "Interpet", "Evento Acadêmico", "Pesquisa"]
 ---
   

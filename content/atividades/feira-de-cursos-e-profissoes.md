@@ -1,6 +1,6 @@
 ---
 title: "Feira de Cursos e Profissões"
-image: "/images/atividades/2.png"
+image: "/images/atividades/feira-de-cursos-e-profissoes.jpeg"
 tags: ["Apresentação Curso", "Recrutamento", "Calouros", "Feira de Cursos e Profissões"]
 ---
   
