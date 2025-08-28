@@ -6,7 +6,7 @@ members  :
     company_position: "Professor Tutor PET"
     quote : > 
             "Doutor em Estatística (2016) pelos Programas de Pós-Graduação em Estatística (PPGEst-UFSCar) e Pós-Graduação em Ciência da Computação (PPGCC-UFSCar). Desde agosto de 2021, Professor Adjunto do Departamento de Estatística da Universidade Federal do Paraná (DEST-UFPR), Curitiba-PR, Brasil. Professor Adjunto do Departamento de Estatística da Universidade Federal da Bahia, Salvador-BA, Brasil (2017-2021). Docente da Faculdade de Tecnologia SENAI-SP, São Carlos-SP, Brasil (2009-2015). Docente na Especialização em Data Science & Big Data (DSBD-UFPR), no MBA em Financial Analytics (DAAGE-UTFPR) e na Especialização em Data Science e Big Data (ECD-UFBA). Coordenador do Laboratório de Estatística e Data science (LED-UFBA) (2017-2019). Coordenador do DataSci Labs - UFPR. Pesquisador do Laboratório de Estatística e Geoinformação (LEG-UFPR), do Centro de Integração de Dados e Conhecimento para a Saúde (Cidacs/Fiocruz) e do Centro de Ciências Matemáticas Aplicadas à Indústria (CeMEAI-USP). Pesquisador do Programa de Pós-Graduação em Informática (PPGInf-UFPR), Programa de Pós-Graduação em Métodos Numéricos (PPGMNE-UFPR) e do Programa de Pós-Graduação em Matemática (PGMAT-UFBA). Desde julho de 2022, Tutor do Programa de Educação Tutorial (PET) do curso de Graduação em Estatística (DEST-UFPR)." 
-    interesse: ["Teoria do Aprendizado Estatístico", "Inferência Estatística","Métodos Computacionais"]
+    interesse: ["Teoria do Aprendizado Estatístico", "Inferência Estatística", "Métodos Computacionais"]
     #github      : https://www.github.com/
     #linkedin    : https://www.linkedin.com/
     #instagram   : https://www.instagram.com/brunowzk/
@@ -16,7 +16,7 @@ members  :
     company_position: "Administração"
     quote : > 
             "Entrei na gruduação em 2022 por interesse muito grande em matemática, programação e análise de dados. Gosto muito de esportes em geral, principalmente basquete e futebol americano. Tenho como objeto ser um analista esportivo." 
-    interesse: ["Estatística Aplicada ao Esporte"," Séries Temporais"," Dashboards"," Análise Preditiva"]
+    interesse: ["Estatística Aplicada ao Esporte", "Séries Temporais", "Dashboards", "Análise Preditiva"]
     #github      : https://www.github.com/
     #linkedin    : https://www.linkedin.com/
     instagram   : https://www.instagram.com/@alexsgkobus2903
@@ -26,7 +26,7 @@ members  :
     company_position: "Comunicação"
     quote : > 
             "Descobri na Estatística a perfeita união entre minha paixão por números e o desejo de resolver problemas reais. No curso, me encantei especialmente pela Análise Multivariada e Modelagem Preditiva, onde dados ganham significado e se transformam em insights poderosos. Como membro ativo do PET, tenho explorado aplicações práticas no Mercado Financeiro, desenvolvendo tanto habilidades técnicas em R quanto a capacidade de comunicar resultados complexos de forma acessível. Fora da universidade, levo esse pensamento analítico para estratégias em jogos competitivos, porque acredito que a estatística está em tudo - basta saber olhar." 
-    interesse: ["Visualização de Dados"," Dashboards"," Machine Learning"]
+    interesse: ["Visualização de Dados", "Dashboards", "Machine Learning"]
     #github      : https://www.github.com/
     #linkedin    : https://www.linkedin.com/
     #instagram   : https://www.instagram.com/brunowzk/
@@ -36,7 +36,7 @@ members  :
     company_position: "Comunicação"
     quote : > 
             "Sou um profissional formado em Bacharelado de Sistemas de Informação, também estudante de Estatística e amante de ferramentas Linux." 
-    interesse: ["Visualização de Dados"," Dashboards"," Machine Learning"," Linux","  Arch Linux"," DWM Window Manager"]
+    interesse: ["Visualização de Dados", "Dashboards", "Machine Learning", "Linux", " Arch Linux", "DWM Window Manager"]
     github      : https://github.com/nosrednawall
     linkedin    : https://www.linkedin.com/in/anderson-jose-de-souza-inacio
     instagram   : https://www.instagram.com/nosrednawall
@@ -47,7 +47,7 @@ members  :
     company_position: "Ensino"
     quote : > 
             "Eu me chamo Arthur, tenho 21 anos, sou de Curitiba e ingressei na Estatística devido a meu gosto por matemática."
-    interesse: ["Aprendizado de máquina"," probabilidade"," finanças e Big Data"]
+    interesse: ["Aprendizado de Máquina", "Probabilidade", "Finanças", "Big Data"]
     #github      : https://www.github.com/
     linkedin    : https://www.linkedin.com/in/arthur-hideio-noguti-0904a8199
     #instagram   : https://www.instagram.com/brunowzk/
@@ -57,7 +57,7 @@ members  :
     company_position: "Ensino"
     quote : > 
             "Sempre gostei muito de matemática, e fui introduzido à estatística pelo meu irmão que já é formado no curso. Entrei no PET com o objetivo de melhorar meu desenvolvimento acadêmico. Gosto de música e jogos competitivos." 
-    interesse: ["Visualização de Dados"," Dashboards"," Machine Learning"]
+    interesse: ["Visualização de Dados", "Dashboards", "Machine Learning"]
     #github      : https://www.github.com/
     #linkedin    : https://www.linkedin.com/
     #instagram   : https://www.instagram.com/brunowzk/
@@ -67,7 +67,7 @@ members  :
     company_position: "Eventos"
     quote : > 
             "Graduanda em Estatística, iniciei o curso em 2022, optei por fazer Estatística pela indicação de um supervisor de estágio de ensino médio, depois que ele viu um quadro informativo que eu fiz, até então não conhecia o curso e depois ao pesquisar adorei. Gosto muito da visulização de dados e da estatística voltada a gestão de qualidade. Ingressei no PET com o projeto de pesquisa intitulado como “A Importância do PDCA para Empresas Eireli: Um Estudo de Caso no Ramo da Construção Civil” e pretendo seguir adiante com ele." 
-    interesse: ["Visualização de Dados"," Controle Estatístico de Processos"," Controle Estatístico de Qualidade"]
+    interesse: ["Visualização de Dados", "Controle Estatístico de Processos", "Controle Estatístico de Qualidade"]
     #github      : https://www.github.com/
     #linkedin    : https://www.linkedin.com/
     #instagram   : https://www.instagram.com/_camilla.rodrigues_/
@@ -77,7 +77,7 @@ members  :
     company_position: "Ensino"
     quote : > 
             "Sou técnico em desenvolvimento de sistemas, atuei 1 ano na área e resolvi vir para estatística após me apaixonar por ciência de dados. Entrei no PET por me interessar pelo desenvolvimento acadêmico que o PET pode proporcionar. Meus hobbies favoritos são jogos, xadrez e esportes de combate." 
-    interesse: ["Ciência de Dados em Cloud"," Automação e Otimização"," Inteligência Artificial"," MLOps"]
+    interesse: ["Ciência de Dados em Cloud", "Automação e Otimização", "Inteligência Artificial", "MLOps"]
     #github      : https://www.github.com/
     #linkedin    : https://www.linkedin.com/
     #instagram   : https://www.instagram.com/
@@ -87,7 +87,7 @@ members  :
     company_position: "Administração"
     quote : > 
             "Descobri na Estatística a perfeita união entre minha paixão por números e o desejo de resolver problemas reais. No curso, me encantei especialmente pela Análise Multivariada e Modelagem Preditiva, onde dados ganham significado e se transformam em insights poderosos. Como membro ativo do PET, tenho explorado aplicações práticas no Mercado Financeiro, desenvolvendo tanto habilidades técnicas em R quanto a capacidade de comunicar resultados complexos de forma acessível. Fora da universidade, levo esse pensamento analítico para estratégias em jogos competitivos, porque acredito que a estatística está em tudo - basta saber olhar." 
-    interesse: ["Visualização de dados"," Machine Learning"," Otimização"]
+    interesse: ["Visualização de Dados", "Machine Learning", "Otimização"]
     #github      : https://www.github.com/
     #linkedin    : https://www.linkedin.com/
     #instagram   : https://www.instagram.com/
@@ -97,7 +97,7 @@ members  :
     company_position: "Ensino"
     quote : > 
             "Comecei a cursar Estatística pelo interesse em estudar matemática e tecnologia aplicadas em múltiplas áreas. Me juntei ao PET para um maior envolvimento, aprendizado e desenvolvimento no curso. Sou apaixonada por voleibol e esporte, música, teatro, confeitaria, diferentes culturas e viagens." 
-    interesse: ["Inferência"," Modelagem"," Visualização de Dados"," Aprendizado de Máquina"]
+    interesse: ["Inferência", "Modelagem", "Visualização de Dados", "Aprendizado de Máquina"]
     github      : https://github.com/zorzojulia
     linkedin    : https://www.linkedin.com/in/zorzojulia
     instagram   : https://www.instagram.com/zorzojulia
@@ -107,7 +107,7 @@ members  :
     company_position: "Comunicação"
     quote : > 
             "Entrei no curso pelo ENEM em 2023 aos 17 anos, me interessei por ter afinidade com matemática e sempre gostar de computação. Meus principais hobbies são: Jogar, ler e assistir animes" 
-    interesse: ["Análises temporais"," Estatística na Educação"," Análise exploratória"]
+    interesse: ["Análises temporais", "Estatística na Educação", "Análise exploratória"]
     #github      : https://www.github.com/
     #linkedin    : https://www.linkedin.com/
     instagram   : https://www.instagram.com/jotaveokkkk
@@ -117,7 +117,7 @@ members  :
     company_position: "Ensino"
     quote : > 
             "Graduanda em Estatística, tenho grande interesse pela integração entre dados, matemática e computação. Gosto de explorar técnicas de modelagem e machine learning aplicadas a diferentes contextos, como recuperação de crédito. Busco sempre unir teoria e prática para extrair valor a partir dos dados e apoiar a tomada de decisão." 
-    interesse: ["Modelagem estatística"," Machine Learning"," Inteligência Artificial"," Estatística Computacional"]
+    interesse: ["Modelagem estatística", "Machine Learning", "Inteligência Artificial", "Estatística Computacional"]
     #github      : https://www.github.com/
     #linkedin    : https://www.linkedin.com/
     #instagram   : https://www.instagram.com/
@@ -127,7 +127,7 @@ members  :
     company_position: "Eventos"
     quote : > 
             "Graduanda em estatística desde 2021, ingressei no PET com o intuito de aprimorar minhas habilidades acadêmicas e sociais. Escolhi a Estatística pela grande afinidade com a matemática e programação. No tempo livre, gosto de ler e assistir seriados." 
-    interesse: ["Data Science"," Visualização de dados"," Estatística Computacional"]
+    interesse: ["Data Science", "Visualização de Dados", "Estatística Computacional"]
     #github      : https://www.github.com/
     #linkedin    : https://www.linkedin.com/
     #instagram   : https://www.instagram.com/
@@ -137,7 +137,7 @@ members  :
     company_position: "Administração"
     quote : > 
             "Tenho 22 anos, me formei como técnico em Eletrônica na UTFPR, onde notei que combino mais com as ciências puras, por esse motivo resolvi fazer estatística. Gosto bastante de cantar e no meu tempo livre aproveito para jogar." 
-    interesse: ["Séries temporais"," Teoria de Resposta ao Item"," Regressão Linear"]
+    interesse: ["Séries Temporais","Teoria de Resposta ao Item","Regressão Linear"]
     #github      : https://www.github.com/
     #linkedin    : https://www.linkedin.com/
     #instagram   : https://www.instagram.com/
@@ -147,7 +147,7 @@ members  :
     company_position: "Eventos"
     quote : > 
             "Graduando em Estatística desde 2019, decidi entrar para o PET para obter uma maior imersão dentro do curso, por meio do contato com os outros integrantes e atividades propostas pelo programa. Gosto muito de praticar dança, ouvir música, assistir vídeos e séries." 
-    interesse: ["Visualização de Dados"," Data Science"," Análise de Dados Longitudinais"]
+    interesse: ["Visualização de Dados","Data Science","Análise de Dados Longitudinais"]
     #github      : https://www.github.com/
     #linkedin    : https://www.linkedin.com/
     #instagram   : https://www.instagram.com/    

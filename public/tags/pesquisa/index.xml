@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pesquisa on PET ESTATÍSTICA UFPR</title>
+    <link>https://pet.leg.ufpr.br/tags/pesquisa/</link>
+    <description>Recent content in Pesquisa on PET ESTATÍSTICA UFPR</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <atom:link href="https://pet.leg.ufpr.br/tags/pesquisa/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Organização e Participação nas reuniões do InterPET</title>
+      <link>https://pet.leg.ufpr.br/atividades/organizacao-participacao-interpet/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://pet.leg.ufpr.br/atividades/organizacao-participacao-interpet/</guid>
+      <description>Descrição e Justificativa A organização e participação nas reuniões do InterPET representam uma oportunidade única para fortalecer a interação entre grupos PET de diferentes áreas do conhecimento, promovendo o intercâmbio de experiências e boas práticas.</description>
+    </item>
+    <item>
+      <title>Sistema de Avaliação do curso de Estatística UFPR</title>
+      <link>https://pet.leg.ufpr.br/atividades/sistema-avaliacao-curso-estatistica-ufpr/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://pet.leg.ufpr.br/atividades/sistema-avaliacao-curso-estatistica-ufpr/</guid>
+      <description>Descrição e Justificativa Hoje em dia são comuns sistemas gratuitos que podem coletar dados online e realizar uma análise de dados simples. Porém, esses sistemas carecem de formas robustas de inserção de dados exclusivos por respondente, bem como carecem de metodologia apropriada de análise automática dos dados armazenados.</description>
+    </item>
+  </channel>
+</rss>
