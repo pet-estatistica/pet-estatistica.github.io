@@ -22,19 +22,24 @@
                   {{ end }}
                 {{ end }}
                 
-                {{ $tagCount := dict }}
+                {{ $uniqueTags := slice }}
                 {{ range $tags }}
-                  {{ $tag := . }}
-                  {{ if isset $tagCount $tag }}
-                    {{ $count := add (index $tagCount $tag) 1 }}
-                    {{ $tagCount = merge $tagCount (dict $tag $count) }}
-                  {{ else }}
-                    {{ $tagCount = merge $tagCount (dict $tag 1) }}
+                  {{ if not (in $uniqueTags .) }}
+                    {{ $uniqueTags = $uniqueTags | append . }}
                   {{ end }}
                 {{ end }}
                 
-                {{ range $tag, $count := $tagCount }}
-                <option value="tag-{{ $tag | urlize }}">{{ $tag }} ({{ $count }})</option>
+                {{ $sortedTags := sort $uniqueTags }}
+                
+                {{ range $sortedTags }}
+                  {{ $tag := . }}
+                  {{ $count := 0 }}
+                  {{ range $.Params.projects }}
+                    {{ if and .tags (in .tags $tag) }}
+                      {{ $count = add $count 1 }}
+                    {{ end }}
+                  {{ end }}
+                  <option value="{{ $tag | urlize }}">{{ $tag }} ({{ $count }})</option>
                 {{ end }}
               </select>
             </div>
@@ -50,7 +55,7 @@
         <div class="row projects-container">
           {{ range .Params.projects }}
           <div class="col-md-6 col-lg-4 mb-4 project-item" 
-               data-tags="{{ range .tags }}tag-{{ . | urlize }} {{ end }}">
+               data-tags="{{ range .tags }}{{ . | urlize }} {{ end }}">
             <div class="card h-100 shadow-sm border-0 overflow-hidden">
               {{ if .image }}
               <img src="{{ .image }}" class="card-img-top" alt="{{ .title }}" style="height: 200px; object-fit: cover;">
@@ -128,8 +133,9 @@ document.addEventListener('DOMContentLoaded', function() {
       if (selectedTag === 'all') {
         item.style.display = 'block';
       } else {
-        const itemTags = item.getAttribute('data-tags');
-        if (itemTags && itemTags.includes(selectedTag)) {
+        const itemTags = item.getAttribute('data-tags').trim().split(' ');
+        // Verifica se a tag selecionada está exatamente na lista de tags do item
+        if (itemTags.includes(selectedTag)) {
           item.style.display = 'block';
         } else {
           item.style.display = 'none';

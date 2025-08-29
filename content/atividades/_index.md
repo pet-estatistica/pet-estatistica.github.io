@@ -63,7 +63,7 @@ projects:
 
   - title: "Pesquisa Científica Individual"
     description: "Desenvolvimento de pesquisa acadêmica pelo Petiano, para estimular e expandir conhecimentos em pesquisa científica e senso crítico do aluno"
-    category: "Pesquisa"
+    category: "Pesquisa Científica"
     tags: ["Pesquisa Científica", "Senso Crítico Acadêmico", "Atividades Acadêmicas", "Interdiciplinar"]
     image: "/images/atividades/2.png"
     icon: "fas fa-users"
@@ -80,7 +80,7 @@ projects:
   - title: "Minicursos"
     description: "Alunos do PET oferecem minicursos sobre a utilização de ferramentas para análise de dados, e desenvolvimento voltados para a área da Estatística e Ciência de Dados"
     category: "Ensino"
-    tags: ["Desenvolvimento", "Ferramentas de Desenvolvimento", "Minicursos", "Gratuítos", "Análise de Dados"]
+    tags: ["Desenvolvimento Software", "Ferramentas de Desenvolvimento", "Minicursos", "Gratuítos", "Análise de Dados"]
     image: "/images/atividades/2.png"
     icon: "fas fa-users"
     link: "/atividades/minicursos"
@@ -136,8 +136,8 @@ de palestras, minicursos e mesas redondas"
     
   - title: "Sistema de Avaliação do curso de Estatística UFPR"
     description: "Desenvolvimento de um sistema de Avaliação do curso de Estatística da UFPR, que venha ser usado pelo colegiado para avaliar o curso continuamente"
-    category: "Pesquisa"
-    tags: ["Sistema Online", "Desenvolvimento", "Avaliação", "Público Interno", "Pesquisa"]
+    category: "Pesquisa Científica"
+    tags: ["Sistema Online", "Desenvolvimento Software", "Avaliação Interna", "Público Interno", "Pesquisa Científica"]
     image: "/images/atividades/2.png"
     icon: "fas fa-users"
     link: "/atividades/sistema-avaliacao-curso-estatistica-ufpr"  
@@ -145,7 +145,7 @@ de palestras, minicursos e mesas redondas"
   - title: "Organização e Participação nas reuniões do InterPET"
     description: "A organização e participação nas reuniões do InterPET representam uma oportunidade única para fortalecer a interação entre grupos PET de diferentes áreas do conhecimento, promovendo o intercâmbio de experiências e boas práticas."
     category: "Divulgação"
-    tags: ["Divulgação", "Interpet", "Evento Acadêmico", "Pesquisa"]
+    tags: ["Divulgação", "Interpet", "Evento Acadêmico", "Pesquisa Científica"]
     image: "/images/atividades/organizacao-participacao-interpet.jpeg"
     icon: "fas fa-users"
     link: "/atividades/organizacao-participacao-interpet"  
