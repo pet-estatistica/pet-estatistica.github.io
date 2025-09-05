@@ -13,6 +13,19 @@
       <div class="col-lg-10 col-xl-8">
         <div class="processo-detalhes-header text-center mb-4">
           <div class="site-about-espaco"></div>
+          
+          <!-- Banner de retificação -->
+          {{ if .Params.retificado }}
+            <div class="alert alert-warning alert-dismissible fade show mb-4" role="alert">
+              <i class="bi bi-exclamation-triangle-fill me-2"></i>
+              <strong>ATENÇÃO:</strong> Este edital foi retificado e sofreu alterações. Verifique os detalhes atualizados no arquivo do edital.
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+              </button>
+
+            </div>
+          {{ end }}
+          
           <h1 class="mb-3">{{ .Title }}</h1>
           
           {{ if .Params.imagem }}
