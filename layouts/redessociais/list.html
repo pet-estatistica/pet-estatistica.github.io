@@ -24,5 +24,30 @@
 </section>
 
 <!-- {{ partial "call-to-action.html" . }} -->
+<style>
+  /* Para telas menores que 575px */
+@media (max-width: 574px) {
+  .site-blog-header {
+    padding-top: 150px !important;
+    min-height: auto !important;
+  }
+  
+  .site-blog-header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+  
+  .site-blog-header p {
+    font-size: 0.9rem;
+  }
+}
 
+/* Para telas entre 575px e 840px */
+@media (min-width: 575px) and (max-width: 840px) {
+  .site-blog-header {
+    padding-top: 60px !important;
+  }
+}
+</style>
 {{ end }}
+
