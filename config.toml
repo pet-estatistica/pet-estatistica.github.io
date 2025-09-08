@@ -86,7 +86,7 @@ summarylength = 25
   # googleAnalitycsID = "G-4QGDQVC922"
   # We're using formspree.io for form handling, paste your formspree url below
   fabform  = "https://fabform.io/f/USAg2Jl"
-  tokenInstagram = "IGAANtnh5nLCdBZAE1GVWVYdkUzS1RjZAERsODA3WlRuaGFRdmNWU0lTendsZATRmVFVXWW9PTjJWSGtSRWlqNUs0b3BEWTR2ZAzdRVVZABaGx3bG5idHluY3dQMk16NTdLMmRweHhHVnNZAN3ZADZAVlwTmhWNFpGdUxUYzdKX3cwT2tDTQZDZD"
+  tokenInstagram = "IGAANtnh5nLCdBZAFB3TmszZAXZAGelUzTXJVQ0g3V1M4SHJVQUFUc0tBYngxZA3c0eEtqUlRfRENYYW1CVzdjbVk2b0tTT0pOaWpnYkJTc3E3NDhlUGk1MkZAPdTF5YUl4M1VGTVB2NjZAnRWw1RUhSTjJ3TW9iekZAhMFJWQml2QjNYWQZDZD"
   
   # Banner Section
   [params.banner]
