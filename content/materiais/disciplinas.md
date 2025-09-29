@@ -9,7 +9,7 @@ layout: "disciplinas"
 **2024** | *Dra. Sílvia Emiko Shimakura, Me. Lineu Alberto Cavazani de Freitas*
 
 - **📚 Listas de exercícios:**
-  - [Todas as lista](/pdfs/CE301/2024/listas.zip) ZIP
+  - [Todas as listas](/pdfs/CE301/2024/listas.zip) ZIP
 
 ---
 
@@ -36,7 +36,7 @@ layout: "disciplinas"
 **2024** | *Dra. Fernanda Buhrer Rizzato*
 
 - **📚 Listas de exercícios:**
-  - [Todas as listas](/pdfs/CE330/2024/Listas.zip) ZIP
+  - [Todas as listass](/pdfs/CE330/2024/Listas.zip) ZIP
 
 **2023** | *Me. Benito Olivares Aguilero*
 
@@ -73,7 +73,7 @@ layout: "disciplinas"
 **2024** | *Dra. Evelin H. M. Krulikovski*
 
 - **📚 Listas de exercícios:**
-  - [Todas as Listas](/pdfs/CM310/2024/Listas.zip) ZIP
+  - [Todas as listass](/pdfs/CM310/2024/Listas.zip) ZIP
 
 ---
 
@@ -82,7 +82,7 @@ layout: "disciplinas"
 **2024** | *Willian Thomas Rocha*
 
 - **📚 Listas de exercícios:**
-  - [Todas as Listas](/pdfs/CM311/2024/Listas_2024.zip) ZIP
+  - [Todas as listass](/pdfs/CM311/2024/Listas_2024.zip) ZIP
 
 ---
 
