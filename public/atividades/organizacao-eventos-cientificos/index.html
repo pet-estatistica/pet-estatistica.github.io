@@ -252,59 +252,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  
-  const container = document.querySelector('.processos-list');
-  const items = Array.from(document.querySelectorAll('.processo-item'));
-  
-  items.sort((a, b) => {
-    const dateA = a.getAttribute('data-year').replace('year-', '');
-    const dateB = b.getAttribute('data-year').replace('year-', '');
-    return dateB - dateA;
-  });
-  
-  items.forEach(item => container.appendChild(item));
-  
-  
-  const yearFilter = document.getElementById('year-filter');
-  const tagFilter = document.getElementById('tag-filter');
-  const resetBtn = document.getElementById('reset-filters');
-  const noResults = document.getElementById('no-results');
-  
-  function filterProcessos() {
-    const selectedYear = yearFilter.value;
-    const selectedTag = tagFilter.value;
-    let visibleCount = 0;
-    
-    items.forEach(item => {
-      const yearMatch = selectedYear === 'all' || item.getAttribute('data-year') === selectedYear;
-      const tagMatch = selectedTag === 'all' || item.getAttribute('data-status') === selectedTag;
-      
-      if (yearMatch && tagMatch) {
-        item.style.display = 'block';
-        visibleCount++;
-      } else {
-        item.style.display = 'none';
-      }
-    });
-    
-    noResults.style.display = visibleCount > 0 ? 'none' : 'block';
-  }
-  
-  yearFilter.addEventListener('change', filterProcessos);
-  tagFilter.addEventListener('change', filterProcessos);
-  
-  resetBtn.addEventListener('click', function() {
-    yearFilter.value = 'all';
-    tagFilter.value = 'all';
-    filterProcessos();
-  });
-  
-  
-  filterProcessos();
-});
-</script></body>
+</body>
 </html>
     

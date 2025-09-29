@@ -165,3 +165,8 @@ summarylength = 25
       [params.footer.back_to_top]
         description = ""
 
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
