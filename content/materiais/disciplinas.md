@@ -84,7 +84,7 @@ layout: "disciplinas"
 
 ---
 
-##### ∫ CM312 - Cálculo 2s
+##### ∫ CM312 - Cálculo 2
 
 **2025** | *Me. Matheus Moraes Santos*
 
