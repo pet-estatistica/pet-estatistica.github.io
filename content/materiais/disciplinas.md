@@ -18,9 +18,20 @@ layout: "disciplinas"
 **2025** | *Dra. Fernanda Buhrer Rizzato*
 
 - **📚 Listas de exercícios:**
-  - [Lista 3 - Indução Matemática](/pdfs/CE330/2025/pré-prob_lista_3.pdf) PDF
-  - [Respostas Lista 3 - Indução Matemática](/pdfs/CE330/2025/respostas_pré-prob_lista_3.pdf) 
+
+  - [Lista 1 - Lógica](/pdfs/CE330/2025/Logica-Lista-1.pdf) PDF
+  - [Respostas Lista 1 - Lógica](/pdfs/CE330/2025/Logica-Lista-1-respostas.pdf) 
   PDF *Por: [Arthur Noguti](/integrantes/#arthur-hideio-noguti)*
+
+  - [Lista 2 - Lógica](/pdfs/CE330/2025/Logica-Lista-2.pdf) PDF
+  - [Respostas Lista 2 - Lógica](/pdfs/CE330/2025/Logica-Lista-2-Respostas.pdf) 
+  PDF *Por: [Arthur Noguti](/integrantes/#arthur-hideio-noguti)*
+
+  - [Lista 3 - Indução Matemática](/pdfs/CE330/2025/inducao-lista-1.pdf) PDF
+  - [Respostas Lista 3 - Indução Matemática](/pdfs/CE330/2025/inducao-lista-1-respostas.pdf) 
+  PDF *Por: [Arthur Noguti](/integrantes/#arthur-hideio-noguti)*
+
+  - [Lista 4 - Teoria de Conjuntos](/pdfs/CE330/2025/Teoria_de_Conjuntos-Lista-1.pdf) PDF
 
 **2024** | *Dra. Fernanda Buhrer Rizzato*
 
@@ -37,8 +48,8 @@ layout: "disciplinas"
 
 ---
 
-##### 🎲 CE304 - Teoria da Probabilidade 1
-**Apostila** | Desenvolvido pelos petianos: *Bruno Wavrzenczak - Cristian Pessatti dos Anjos - Caio Gomes Alves - Anderson Amorim*
+##### 🎲 CE304 - Teoria da Probabilidade 1 (Prob A)
+**Apostila** | Desenvolvido pelos petianos: *[Bruno Wavrzenczak](/integrantes/#bruno-wavrzenczak) - [Cristian Pessatti dos Anjos](/integrantes/#cristian-pessatti-dos-anjos) - Caio Gomes Alves - Anderson Amorim*
 
 - **📘 [Teoria da Probabilidade](/apostilas/teoria_probabilidade/)** HTML
 
