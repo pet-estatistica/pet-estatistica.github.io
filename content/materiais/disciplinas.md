@@ -38,7 +38,7 @@ layout: "disciplinas"
 - **📚 Listas de exercícios:**
   - [Todas as listass](/pdfs/CE330/2024/Listas.zip) ZIP
 
-**2023** | *Me. Benito Olivares Aguilero*
+**2023** | *Benito Orlando Olivares Aguilera*
 
 - **📚 Listas de exercícios:**
   - [Lista 1](/pdfs/CE330/2023/Lista1-CE330-FMP-2023-2.pdf) PDF
@@ -53,13 +53,13 @@ layout: "disciplinas"
 
 - **📘 [Teoria da Probabilidade](/apostilas/teoria_probabilidade/)** HTML
 
-**2025** | *Me. Benito Olivares Aguilero*
+**2025** | *Benito Orlando Olivares Aguilera*
 
 - **📚 Listas de exercícios:**
   - [Lista 1](/pdfs/CE304/2025/Lista1-CE304_TP1-2025-1.pdf) PDF
   - [Lista 2](/pdfs/CE304/2025/Lista2-CE304_TP1-2025-1.pdf) PDF
 
-**2024** | *Me. Benito Olivares Aguilero*
+**2024** | *Benito Orlando Olivares Aguilera*
 
 - **📚 Listas de exercícios:**
   - [Lista 1 - P1](/pdfs/CE304/2024/listas_P1/Lista1-CE304_TP1-2024-1.pdf) PDF
