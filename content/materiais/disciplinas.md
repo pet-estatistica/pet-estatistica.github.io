@@ -21,7 +21,7 @@ layout: "disciplinas"
 
 - **📚 Listas de exercícios:**
   - [Lista 3 - Indução Matemática](/pdfs/CE330/2025/pré-prob_lista_3.pdf) <span class="badge">PDF</span>
-  - [Respostas Lista 3 - Indução Matemática](/pdfs/CE330/2025/respostas_ré-prob_lista_3.pdf) <span class="badge">PDF</span> Feito por: [Arthur Noguti](/integrantes/#arthur-hideio-noguti)
+  - [Respostas Lista 3 - Indução Matemática](/pdfs/CE330/2025/respostas_pré-prob_lista_3.pdf) <span class="badge">PDF</span> Feito por: [Arthur Noguti](/integrantes/#arthur-hideio-noguti) 
 
 </div>
 
