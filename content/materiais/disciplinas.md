@@ -15,6 +15,16 @@ layout: "disciplinas"
 
 ##### 🎲 CE330 - Fundamentos Matemáticos Para Probabilidade (Pré-Prob)
 
+**2025** | *Dra. Fernanda Buhrer Rizzato*
+
+<div class="discipline-materials">
+
+- **📚 Listas de exercícios:**
+  - [Lista 3 - Indução Matemática](/pdfs/CE330/2025/pré-prob_lista_3.pdf) <span class="badge">PDF</span>
+  - [Respostas Lista 3 - Indução Matemática](/pdfs/CE330/2025/respostas_ré-prob_lista_3.pdf) <span class="badge">PDF</span> Feito por: [Arthur Noguti](/integrantes/#arthur-hideio-noguti)
+
+</div>
+
 **2024** | *Dra. Fernanda Buhrer Rizzato*
 
 <div class="discipline-materials">

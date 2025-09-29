@@ -67,9 +67,9 @@
                data-interests="{{ if .interesse }}{{ if reflect.IsSlice .interesse }}{{ range .interesse }}{{ . | urlize }} {{ end }}{{ else }}{{ .interesse | urlize }}{{ end }}{{ end }}">
             <div class="site-team-member">
               <div class="site-team-member-image">
-                <img src="{{ .image | absURL }}" alt="team-member">
+                <img src="{{ .image | absURL }}" alt="team-member" id="{{ .name | urlize }}">
               </div>
-              <div class="site-team-member-content">
+              <div class="site-team-member-content" id="{{ .name | urlize }}">
                 <h3>{{ .name }}</h3>
                 <p>{{ .designation }}</p>
                 {{ if .company_position }}<p><strong>{{ if ne .company_position "Professor Tutor PET" }}Time:{{ end }}</strong> {{ .company_position }}</p>{{ end }}
