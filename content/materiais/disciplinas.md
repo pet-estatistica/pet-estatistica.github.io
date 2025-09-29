@@ -18,25 +18,18 @@ layout: "disciplinas"
 **2025** | *Dra. Fernanda Buhrer Rizzato*
 
 - **📚 Listas de exercícios:**
-
   - [Lista 1 - Lógica](/pdfs/CE330/2025/Logica-Lista-1.pdf) PDF
-  - [Respostas Lista 1 - Lógica](/pdfs/CE330/2025/Logica-Lista-1-respostas.pdf) 
-  PDF *Por: [Arthur Noguti](/integrantes/#arthur-hideio-noguti)*
-
+  - [Respostas Lista 1 - Lógica](/pdfs/CE330/2025/Logica-Lista-1-respostas.pdf) PDF *Por: [Arthur Noguti](/integrantes/#arthur-hideio-noguti)*
   - [Lista 2 - Lógica](/pdfs/CE330/2025/Logica-Lista-2.pdf) PDF
-  - [Respostas Lista 2 - Lógica](/pdfs/CE330/2025/Logica-Lista-2-Respostas.pdf) 
-  PDF *Por: [Arthur Noguti](/integrantes/#arthur-hideio-noguti)*
-
+  - [Respostas Lista 2 - Lógica](/pdfs/CE330/2025/Logica-Lista-2-Respostas.pdf) PDF *Por: [Arthur Noguti](/integrantes/#arthur-hideio-noguti)*
   - [Lista 3 - Indução Matemática](/pdfs/CE330/2025/inducao-lista-1.pdf) PDF
-  - [Respostas Lista 3 - Indução Matemática](/pdfs/CE330/2025/inducao-lista-1-respostas.pdf) 
-  PDF *Por: [Arthur Noguti](/integrantes/#arthur-hideio-noguti)*
-
+  - [Respostas Lista 3 - Indução Matemática](/pdfs/CE330/2025/inducao-lista-1-respostas.pdf) PDF *Por: [Arthur Noguti](/integrantes/#arthur-hideio-noguti)*
   - [Lista 4 - Teoria de Conjuntos](/pdfs/CE330/2025/Teoria_de_Conjuntos-Lista-1.pdf) PDF
 
 **2024** | *Dra. Fernanda Buhrer Rizzato*
 
 - **📚 Listas de exercícios:**
-  - [Todas as listass](/pdfs/CE330/2024/Listas.zip) ZIP
+  - [Todas as listas](/pdfs/CE330/2024/Listas.zip) ZIP
 
 **2023** | *Benito Orlando Olivares Aguilera*
 
@@ -70,11 +63,16 @@ layout: "disciplinas"
 
 ---
 ##### ∫ CM310 - Pré-Cálculo
+
 **2024** | *Dra. Evelin H. M. Krulikovski*
-
 - **📚 Listas de exercícios:**
-  - [Todas as listass](/pdfs/CM310/2024/Listas.zip) ZIP
+  - [Todas as listas](/pdfs/CM310/2024/Listas.zip) ZIP
 
+**2025** | *Dr. Pedro Danizete Damázio*
+- **📝 Provas:**
+  - [Avaliação 01](/pdfs/CM310/2025/avaliacao-01.pdf) PDF
+- **📚 Listas de exercícios:**
+  - [Lista 1 - Módulo 1](/pdfs/CM310/2025/lista-1-modulo-1.pdf) PDF
 ---
 
 ##### ∫ CM311 - Cálculo 1
@@ -82,11 +80,11 @@ layout: "disciplinas"
 **2024** | *Willian Thomas Rocha*
 
 - **📚 Listas de exercícios:**
-  - [Todas as listass](/pdfs/CM311/2024/Listas_2024.zip) ZIP
+  - [Todas as listas](/pdfs/CM311/2024/Listas_2024.zip) ZIP
 
 ---
 
-##### ∫ CM312 - Cálculo 2
+##### ∫ CM312 - Cálculo 2s
 
 **2025** | *Me. Matheus Moraes Santos*
 
