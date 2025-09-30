@@ -4,7 +4,7 @@
     <title>Biblioteca de Materiais on PET ESTATÍSTICA UFPR</title>
     <link>https://pet.leg.ufpr.br/materiais/</link>
     <description>Recent content in Biblioteca de Materiais on PET ESTATÍSTICA UFPR</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
     <atom:link href="https://pet.leg.ufpr.br/materiais/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -12,35 +12,35 @@
       <link>https://pet.leg.ufpr.br/materiais/artigos/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://pet.leg.ufpr.br/materiais/artigos/</guid>
-      <description>&lt;h2 id=&#34;acesso-aos-artigos&#34;&gt;Acesso aos Artigos:&lt;/h2&gt;&#xA;&lt;p&gt;em produção&lt;/p&gt;</description>
+      <description>Acesso aos Artigos: em produção</description>
     </item>
     <item>
       <title>Materiais das Disciplinas</title>
       <link>https://pet.leg.ufpr.br/materiais/auloes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://pet.leg.ufpr.br/materiais/auloes/</guid>
-      <description>&lt;h3 id=&#34;materiais-dos-aulões-ministrados-pelo-pet&#34;&gt;Materiais dos Aulões ministrados pelo Pet:&lt;/h3&gt;&#xA;&lt;p&gt;em produção&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://pet.leg.ufpr.br/materiais/&#34;&gt;Voltar para Materiais&lt;/a&gt;&lt;/p&gt;</description>
+      <description>Materiais dos Aulões ministrados pelo Pet: em produção&#xA;Voltar para Materiais</description>
     </item>
     <item>
       <title>Materiais das Disciplinas</title>
       <link>https://pet.leg.ufpr.br/materiais/disciplinas/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://pet.leg.ufpr.br/materiais/disciplinas/</guid>
-      <description>&lt;h3 id=&#34;-materiais-acadêmicos-por-disciplina&#34;&gt;📚 Materiais Acadêmicos por Disciplina&lt;/h3&gt;&#xA;&lt;h5 id=&#34;-ce301---estatística-básica&#34;&gt;📊 CE301 - Estatística Básica&lt;/h5&gt;&#xA;&lt;p&gt;&lt;strong&gt;2024&lt;/strong&gt; | &lt;em&gt;Dra. Sílvia Emiko Shimakura, Me. Lineu Alberto Cavazani de Freitas&lt;/em&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;📚 Listas de exercícios:&lt;/strong&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://pet.leg.ufpr.br/pdfs/CE301/2024/listas.zip&#34;&gt;Todas as listas&lt;/a&gt; ZIP&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h5 id=&#34;-ce330---fundamentos-matemáticos-para-probabilidade-pré-prob&#34;&gt;🎲 CE330 - Fundamentos Matemáticos Para Probabilidade (Pré-Prob)&lt;/h5&gt;&#xA;&lt;p&gt;&lt;strong&gt;2025&lt;/strong&gt; | &lt;em&gt;Dra. Fernanda Buhrer Rizzato&lt;/em&gt;&lt;/p&gt;</description>
+      <description>📚 Materiais Acadêmicos por Disciplina 📊 CE301 - Estatística Básica 2024 | Dra. Sílvia Emiko Shimakura, Me. Lineu Alberto Cavazani de Freitas&#xA;📚 Listas de exercícios: Todas as listas ZIP 🎲 CE330 - Fundamentos Matemáticos Para Probabilidade (Pré-Prob) 2025 | Dra.</description>
     </item>
     <item>
       <title>Materiais das Disciplinas</title>
       <link>https://pet.leg.ufpr.br/materiais/links_uteis/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://pet.leg.ufpr.br/materiais/links_uteis/</guid>
-      <description>&lt;h3 id=&#34;-links-úteis&#34;&gt;📚 Links Úteis&lt;/h3&gt;&#xA;&lt;h4 id=&#34;-ufpr&#34;&gt;🎓 &lt;strong&gt;UFPR&lt;/strong&gt;&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://siga.ufpr.br/siga/visitante/login.jsp&#34;&gt;Siga UFPR&lt;/a&gt; - Sistema Integrado de Gestão Acadêmica&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://ufprvirtual.ufpr.br/&#34;&gt;UFPR Virtual&lt;/a&gt; - Moodle oficial da UFPR utilizado para educação a distância, aulas híbridas e auxílio para ensino presencial&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://est.ufpr.br/&#34;&gt;Dest&lt;/a&gt; - Departamento de Estatística.&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://coordest.ufpr.br/&#34;&gt;Coordest&lt;/a&gt; - Coordenação do Curso de Estatística e Ciência de Dados.&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://leg.ufpr.br/doku.php&#34;&gt;Leg&lt;/a&gt; - Laboratório de Estatística e Geoinformação&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://datascilabs.leg.ufpr.br/&#34;&gt;DataSciLabs&lt;/a&gt; - Projeto de extensão alunos de Estatística.&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://pra.ufpr.br/ru/ru-centro-politecnico/&#34;&gt;Cardápio RU&lt;/a&gt; - Cardápio RU Politécnico&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h4 id=&#34;-recursos-globais&#34;&gt;🌎 &lt;strong&gt;Recursos Globais&lt;/strong&gt;&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.amstat.org/&#34;&gt;American Statistical Association (ASA)&lt;/a&gt; - Principal associação internacional de estatística&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://rss.org.uk/&#34;&gt;Royal Statistical Society (RSS)&lt;/a&gt; - Sociedade Real de Estatística do Reino Unido&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.jstatsoft.org/&#34;&gt;Journal of Statistical Software&lt;/a&gt; - Periódico de software estatístico&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://arxiv.org/archive/stat&#34;&gt;arXiv Stats&lt;/a&gt; - Artigos estatísticos pré-print&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.r-bloggers.com/&#34;&gt;R-bloggers&lt;/a&gt; - Blog sobre R em inglês&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h4 id=&#34;-recursos-brasileiros&#34;&gt;🇧🇷 &lt;strong&gt;Recursos Brasileiros&lt;/strong&gt;&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://abe.org.br/&#34;&gt;Associação Brasileira de Estatística (ABE)&lt;/a&gt; - Principal associação de estatística do Brasil&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.conre4.org.br/&#34;&gt;CONRE-4&lt;/a&gt; - Conselho Regional de Estatística da 4ª Região (PR, SC e RS)&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.rbras.org.br/&#34;&gt;RBRAS - Região Brasileira da Sociedade Internacional de Biometria&lt;/a&gt; - Organização dedicada aos pesquisadores brasileiros que trabalham com os aspectos matemáticos e estatísticos das Ciências Agrárias, Biologia e áreas afins.&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.ibge.gov.br/&#34;&gt;IBGE - Instituto Brasileiro de Geografia e Estatística&lt;/a&gt; - Dados oficiais do Brasil&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://rbes.ibge.gov.br/&#34;&gt;RBEs - Revista Brasileira de Estatística&lt;/a&gt; - Periódico da ABE&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h4 id=&#34;-ferramentas-e-software&#34;&gt;📊 &lt;strong&gt;Ferramentas e Software&lt;/strong&gt;&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.r-project.org/&#34;&gt;R Project&lt;/a&gt; - Ambiente estatístico livre&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.rstudio.com/&#34;&gt;RStudio&lt;/a&gt; - IDE para R&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://pandas.pydata.org/&#34;&gt;Python for Data Science&lt;/a&gt; - Biblioteca pandas para análise de dados&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://pt.overleaf.com/&#34;&gt;LaTeX Online Com Overleaf&lt;/a&gt; - Editor de LaTeX Online&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h4 id=&#34;-bancos-de-dados-públicos&#34;&gt;📈 &lt;strong&gt;Bancos de Dados Públicos&lt;/strong&gt;&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://dados.gov.br/&#34;&gt;Dados.gov.br&lt;/a&gt; - Portal brasileiro de dados abertos&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://data.worldbank.org/&#34;&gt;World Bank Open Data&lt;/a&gt; - Dados mundiais do Banco Mundial&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.gapminder.org/data/&#34;&gt;Gapminder&lt;/a&gt; - Dados globais de desenvolvimento&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://data.fivethirtyeight.com/&#34;&gt;FiveThirtyEight&lt;/a&gt; - Dados de pesquisas e estatísticas esportivas&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://datasetsearch.research.google.com/&#34;&gt;Google Dataset Search&lt;/a&gt; - Buscador de conjuntos de dados&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.kaggle.com/&#34;&gt;Kaggle&lt;/a&gt; - Plataforma para competições de ciência de dados&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://pet.leg.ufpr.br/materiais/&#34;&gt;Voltar para Materiais&lt;/a&gt;&lt;/p&gt;</description>
+      <description>📚 Links Úteis 🎓 UFPR Siga UFPR - Sistema Integrado de Gestão Acadêmica UFPR Virtual - Moodle oficial da UFPR utilizado para educação a distância, aulas híbridas e auxílio para ensino presencial Dest - Departamento de Estatística.</description>
     </item>
     <item>
       <title>Materiais das Disciplinas</title>
       <link>https://pet.leg.ufpr.br/materiais/tutoriais/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://pet.leg.ufpr.br/materiais/tutoriais/</guid>
-      <description>&lt;h3 id=&#34;tutoriais-do-pet&#34;&gt;Tutoriais do Pet:&lt;/h3&gt;&#xA;&lt;p&gt;em desenvolvimento.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://pet.leg.ufpr.br/materiais/&#34;&gt;Voltar para Materiais&lt;/a&gt;&lt;/p&gt;</description>
+      <description>Tutoriais do Pet: em desenvolvimento.&#xA;Voltar para Materiais</description>
     </item>
   </channel>
 </rss>

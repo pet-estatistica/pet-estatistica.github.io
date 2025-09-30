@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Aulas De Revisão on PET ESTATÍSTICA UFPR</title>
+    <title>Aulas de Revisão on PET ESTATÍSTICA UFPR</title>
     <link>https://pet.leg.ufpr.br/tags/aulas-de-revis%C3%A3o/</link>
-    <description>Recent content in Aulas De Revisão on PET ESTATÍSTICA UFPR</description>
-    <generator>Hugo</generator>
+    <description>Recent content in Aulas de Revisão on PET ESTATÍSTICA UFPR</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
     <atom:link href="https://pet.leg.ufpr.br/tags/aulas-de-revis%C3%A3o/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -12,14 +12,14 @@
       <link>https://pet.leg.ufpr.br/atividades/aulas-revisao/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://pet.leg.ufpr.br/atividades/aulas-revisao/</guid>
-      <description>&lt;h3 id=&#34;descrição-e-justificativa&#34;&gt;&lt;strong&gt;Descrição e Justificativa&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;p&gt;Os cursos básicos de estatística são desafiadores para muitos estudantes e muitas vezes a oferta de monitoria para disciplinas específicas, especialmente para a Graduação em Estatística, são baixas. Neste sentido, o PET pode disponibilizar atendimentos de monitorias e plantão de dúvidas com seus membros veteranos, que já realizaram as disciplinas introdutórias de estatística.&lt;/p&gt;</description>
+      <description>Descrição e Justificativa Os cursos básicos de estatística são desafiadores para muitos estudantes e muitas vezes a oferta de monitoria para disciplinas específicas, especialmente para a Graduação em Estatística, são baixas.</description>
     </item>
     <item>
       <title>Organização e Co-Organização de eventos científicos</title>
       <link>https://pet.leg.ufpr.br/atividades/eventos-cientificos/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://pet.leg.ufpr.br/atividades/eventos-cientificos/</guid>
-      <description>&lt;h3 id=&#34;descrição-e-justificativa&#34;&gt;&lt;strong&gt;Descrição e Justificativa&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;p&gt;O Departamento de Estatística periodicamente organiza eventos científicos tais como o Encontro de Data Science &amp;amp; Big Data, sendo o PET co-organizador deste evento. Esta é uma oportunidade para os alunos do PET se envolverem na organização de eventos de maior porte, bem como interagir com palestrantes e participar das palestras. Além da co-organização, o PET Estatística também realiza a organização de eventos, como o Dia do Estatístico, evento que tem por objetivo celebrar o dia 29 de maio com os estudantes, proporcionando palestras e rodas de conversa com estatísticos do mercado de trabalho e da academia.&lt;/p&gt;</description>
+      <description>Descrição e Justificativa O Departamento de Estatística periodicamente organiza eventos científicos tais como o Encontro de Data Science &amp;amp; Big Data, sendo o PET co-organizador deste evento.</description>
     </item>
   </channel>
 </rss>

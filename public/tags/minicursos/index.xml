@@ -4,7 +4,7 @@
     <title>Minicursos on PET ESTATÍSTICA UFPR</title>
     <link>https://pet.leg.ufpr.br/tags/minicursos/</link>
     <description>Recent content in Minicursos on PET ESTATÍSTICA UFPR</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
     <atom:link href="https://pet.leg.ufpr.br/tags/minicursos/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -12,14 +12,14 @@
       <link>https://pet.leg.ufpr.br/atividades/minicursos/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://pet.leg.ufpr.br/atividades/minicursos/</guid>
-      <description>&lt;h3 id=&#34;descrição-e-justificativa&#34;&gt;&lt;strong&gt;Descrição e Justificativa&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;p&gt;Os avanços tecnológicos para área de análise de dados têm se dado de forma muito rápida. Existem diversas ferramentas recentes que vêm sendo utilizadas nas mais diversas empresas. Assim, é importante essa aproximação dos alunos com profissionais do mercado que possam ensinar, de forma introdutória, o uso de tais ferramentas. Alguns exemplos de ferramentas gratuitas são: serviços para bases de dados (MySQL, MariaDB); ferramentas para Big Data (Haddop, Apache Spark); sistemas para visualização de dados (R-Shiny; Python Bokeh, Power BI); entre outras. Desta forma, os membros do PET podem oferecer minicursos gratuitos sobre ferramentas e assuntos recentes pode aumentar significativamente os conhecimentos dos alunos para o trabalho em análise de dados de uma forma geral.&lt;/p&gt;</description>
+      <description>Descrição e Justificativa Os avanços tecnológicos para área de análise de dados têm se dado de forma muito rápida. Existem diversas ferramentas recentes que vêm sendo utilizadas nas mais diversas empresas.</description>
     </item>
     <item>
       <title>Semana Acadêmica</title>
       <link>https://pet.leg.ufpr.br/atividades/semana-academica/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://pet.leg.ufpr.br/atividades/semana-academica/</guid>
-      <description>&lt;h3 id=&#34;descrição-e-justificativa&#34;&gt;&lt;strong&gt;Descrição e Justificativa&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;p&gt;A Semana Acadêmica configura-se como uma atividade de extensão, conduzida majoritariamente por meio de palestras, minicursos e mesas redondas. Tais atividades estão centradas em criar uma atmosfera para a discussão sobre a formação profissional e científica, promovendo a integração dos alunos, trocas de experiências e atualização sobre novos temas e abordagens. Entende-se que o estímulo à reflexão e a compreensão do cenário atual, e de suas tendências, permitem a identificação de problemas e oportunidades, bem como o estabelecimento de estratégias que visem solucionar demandas atuais e futuras.&lt;/p&gt;</description>
+      <description>Descrição e Justificativa A Semana Acadêmica configura-se como uma atividade de extensão, conduzida majoritariamente por meio de palestras, minicursos e mesas redondas. Tais atividades estão centradas em criar uma atmosfera para a discussão sobre a formação profissional e científica, promovendo a integração dos alunos, trocas de experiências e atualização sobre novos temas e abordagens.</description>
     </item>
   </channel>
 </rss>
