@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Dicas de Estudo on PET ESTATÍSTICA UFPR</title>
+    <title>Dicas De Estudo on PET ESTATÍSTICA UFPR</title>
     <link>https://pet.leg.ufpr.br/tags/dicas-de-estudo/</link>
-    <description>Recent content in Dicas de Estudo on PET ESTATÍSTICA UFPR</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Dicas De Estudo on PET ESTATÍSTICA UFPR</description>
+    <generator>Hugo</generator>
     <language>pt-br</language>
     <atom:link href="https://pet.leg.ufpr.br/tags/dicas-de-estudo/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -12,7 +12,7 @@
       <link>https://pet.leg.ufpr.br/atividades/aula-inaugural/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://pet.leg.ufpr.br/atividades/aula-inaugural/</guid>
-      <description>Descrição e Justificativa assar no vestibular e adentrar a Universidade é uma grande conquista e uma fase com muitas mudanças. Para um aluno ter êxito, é necessário haver uma mudança de postura com relação aos estudos, bem como ter conhecimento sobre o funcionamento do Curso e da Universidade.</description>
+      <description>&lt;h3 id=&#34;descrição-e-justificativa&#34;&gt;&lt;strong&gt;Descrição e Justificativa&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;p&gt;assar no vestibular e adentrar a Universidade é uma grande conquista e uma fase com muitas mudanças. Para um aluno ter êxito, é necessário haver uma mudança de postura com relação aos estudos, bem como ter conhecimento sobre o funcionamento do Curso e da Universidade. A aula inaugural é realizada pelo PET Estatística todos os anos para orientar os alunos calouros sobre o curso e a Universidade.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

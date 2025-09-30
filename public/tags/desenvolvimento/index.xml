@@ -4,7 +4,7 @@
     <title>Desenvolvimento on PET ESTATÍSTICA UFPR</title>
     <link>https://pet.leg.ufpr.br/tags/desenvolvimento/</link>
     <description>Recent content in Desenvolvimento on PET ESTATÍSTICA UFPR</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>pt-br</language>
     <atom:link href="https://pet.leg.ufpr.br/tags/desenvolvimento/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -12,14 +12,14 @@
       <link>https://pet.leg.ufpr.br/atividades/minicursos/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://pet.leg.ufpr.br/atividades/minicursos/</guid>
-      <description>Descrição e Justificativa Os avanços tecnológicos para área de análise de dados têm se dado de forma muito rápida. Existem diversas ferramentas recentes que vêm sendo utilizadas nas mais diversas empresas.</description>
+      <description>&lt;h3 id=&#34;descrição-e-justificativa&#34;&gt;&lt;strong&gt;Descrição e Justificativa&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;p&gt;Os avanços tecnológicos para área de análise de dados têm se dado de forma muito rápida. Existem diversas ferramentas recentes que vêm sendo utilizadas nas mais diversas empresas. Assim, é importante essa aproximação dos alunos com profissionais do mercado que possam ensinar, de forma introdutória, o uso de tais ferramentas. Alguns exemplos de ferramentas gratuitas são: serviços para bases de dados (MySQL, MariaDB); ferramentas para Big Data (Haddop, Apache Spark); sistemas para visualização de dados (R-Shiny; Python Bokeh, Power BI); entre outras. Desta forma, os membros do PET podem oferecer minicursos gratuitos sobre ferramentas e assuntos recentes pode aumentar significativamente os conhecimentos dos alunos para o trabalho em análise de dados de uma forma geral.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Sistema de Avaliação do curso de Estatística UFPR</title>
       <link>https://pet.leg.ufpr.br/atividades/sistema-avaliacao-curso-estatistica-ufpr/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://pet.leg.ufpr.br/atividades/sistema-avaliacao-curso-estatistica-ufpr/</guid>
-      <description>Descrição e Justificativa Hoje em dia são comuns sistemas gratuitos que podem coletar dados online e realizar uma análise de dados simples. Porém, esses sistemas carecem de formas robustas de inserção de dados exclusivos por respondente, bem como carecem de metodologia apropriada de análise automática dos dados armazenados.</description>
+      <description>&lt;h3 id=&#34;descrição-e-justificativa&#34;&gt;&lt;strong&gt;Descrição e Justificativa&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;p&gt;Hoje em dia são comuns sistemas gratuitos que podem coletar dados online e realizar uma análise de dados simples. Porém, esses sistemas carecem de formas robustas de inserção de dados exclusivos por respondente, bem como carecem de metodologia apropriada de análise automática dos dados armazenados. O sistema de avaliação tem o intuito de ser uma metodologia piloto para pesquisas de opinião através da Internet com os alunos do Bacharelado em Estatística para avaliação do curso, proporcionando aos gestores uma visualização, ainda maior, dos resultados da autoavaliação direcionada a tomada de decisões que almejam a melhoria do curso.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

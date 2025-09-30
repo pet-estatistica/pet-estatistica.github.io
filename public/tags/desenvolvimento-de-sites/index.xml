@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Desenvolvimento de Sites on PET ESTATÍSTICA UFPR</title>
+    <title>Desenvolvimento De Sites on PET ESTATÍSTICA UFPR</title>
     <link>https://pet.leg.ufpr.br/tags/desenvolvimento-de-sites/</link>
-    <description>Recent content in Desenvolvimento de Sites on PET ESTATÍSTICA UFPR</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Desenvolvimento De Sites on PET ESTATÍSTICA UFPR</description>
+    <generator>Hugo</generator>
     <language>pt-br</language>
     <atom:link href="https://pet.leg.ufpr.br/tags/desenvolvimento-de-sites/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -12,7 +12,7 @@
       <link>https://pet.leg.ufpr.br/atividades/confeccao-material/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://pet.leg.ufpr.br/atividades/confeccao-material/</guid>
-      <description>Descrição e Justificativa O website e as redes sociais do PET são uma das formas de divulgação de material. Por meio desses meios é possível compartilhar reportagens, conteúdos, apostilas, instruções.</description>
+      <description>&lt;h3 id=&#34;descrição-e-justificativa&#34;&gt;&lt;strong&gt;Descrição e Justificativa&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;p&gt;O website e as redes sociais do PET são uma das formas de divulgação de material. Por meio desses meios é possível compartilhar reportagens, conteúdos, apostilas, instruções. Desta forma, é essencial que o PET crie seus materiais.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
