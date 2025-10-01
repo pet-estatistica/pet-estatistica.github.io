@@ -1,9 +1,3 @@
----
-editor_options: 
-  markdown: 
-    wrap: 72
----
-
 # pet-estatistica.github.io
 
 [![Netlify
@@ -79,7 +73,9 @@ voltar antes da alteração.
 
 ### Estrutura do Site
 
-O site utiliza a estrutura padrão do hugo, com excessão que não temos o diretório `content/blog` e ou `content/postagens`, ao invés possuímos uma estrutura que atende as demandas atuais do PET.
+O site utiliza a estrutura padrão do hugo, com excessão que não temos o
+diretório `content/blog` e ou `content/postagens`, ao invés possuímos
+uma estrutura que atende as demandas atuais do PET.
 
 Abaixo estão as pastas no diretório raiz do site:
 
@@ -103,19 +99,23 @@ tree -L 1
 Breve explicação dos diretórios:
 
 -   *`antigo`*: é onde está o site antigo do PET
--   *`config.toml`*: é o arquivo de configuração do Hugo, mais informações em [All settings](https://gohugo.io/configuration/all/)
+-   *`config.toml`*: é o arquivo de configuração do Hugo, mais
+    informações em [All settings](https://gohugo.io/configuration/all/)
 -   *`content`*: é onde fica os arquivos de conteúdo do site.
 -   *`data`*: é onde fica os arquivos com informações dos petianos
 -   *`deploy.sh`*: é o arquivo de deploy para o Netlify.
 -   *`layouts`*: é onde ficam os templates de layouts das páginas.
 -   *`netlify.toml`*: é o arquivo de configuração do Netlify.
--   *`public`*: é o diretório onde o site estático é gerado e salvo por padrão.
--   *`static`*: é o diretório onde estão todos os arquivos PDF e Imagens do site, sempre que precisar salvar algum arquivo estático, salve nele.
+-   *`public`*: é o diretório onde o site estático é gerado e salvo por
+    padrão.
+-   *`static`*: é o diretório onde estão todos os arquivos PDF e Imagens
+    do site, sempre que precisar salvar algum arquivo estático, salve
+    nele.
 -   *`themes`*: é o diretório onde está o tema que estamos usando.
 
-
 Abaixo estão as pastas do diretório `content`
-```bash
+
+``` bash
 .
 ├── 404.md
 ├── atividades\
@@ -135,8 +135,10 @@ Para criar um novo post no blog siga estes passos (supondo que está no
 RStudio):
 
 1.  Crie um novo branch
-2.  Nevegue até a pasta correspondente com a página que deseja alterar dentro de *`content`*
-3.  Abra o arquivo correspondente, ou crie um novo arquivo *`.md`* no caso de processos
+2.  Nevegue até a pasta correspondente com a página que deseja alterar
+    dentro de *`content`*
+3.  Abra o arquivo correspondente, ou crie um novo arquivo *`.md`* no
+    caso de processos
 4.  Edite o arquivo e salve
 5.  Faça um commit e push para o GitHub
 6.  No GitHub, crie um *pull request* e marque alguém para revisar o
