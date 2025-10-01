@@ -37,15 +37,17 @@
     <span class="nav-btn next-btn" onclick="changeImage('{{ $galleryID }}', 1)">&#10095;</span>
     
     <div class="lightbox-content" onclick="handleLightboxClick('{{ $galleryID }}', event)">
-      <img id="{{ $galleryID }}-lightbox-img" src="" alt="" 
-           oncontextmenu="return false;"
-           ondragstart="return false;"
-           onclick="handleImageClick('{{ $galleryID }}', event)">
+      <div class="image-container">
+        <img id="{{ $galleryID }}-lightbox-img" src="" alt="" 
+             oncontextmenu="return false;"
+             ondragstart="return false;"
+             onclick="handleImageClick('{{ $galleryID }}', event)">
+      </div>
       <div class="image-counter">
         <span id="{{ $galleryID }}-current-index">1</span> / <span id="{{ $galleryID }}-total-images">{{ len $images }}</span>
       </div>
       <div class="zoom-hint" id="{{ $galleryID }}-zoom-hint">
-        <span>🔍 Clique para zoom</span>
+        <span>🔍 Clique para zoom • Arraste para mover</span>
       </div>
     </div>
   </div>
@@ -69,7 +71,15 @@
       isZoomed: false,
       scale: 1,
       lastScale: 1,
-      initialDistance: null
+      initialDistance: null,
+      // Novas variáveis para arrastar
+      isDragging: false,
+      startX: 0,
+      startY: 0,
+      translateX: 0,
+      translateY: 0,
+      lastTranslateX: 0,
+      lastTranslateY: 0
     };
 
     function openLightbox(galleryId, index) {
@@ -77,9 +87,13 @@
       gallery.currentIndex = index;
       gallery.isZoomed = false;
       gallery.scale = 1;
+      gallery.translateX = 0;
+      gallery.translateY = 0;
+      gallery.lastTranslateX = 0;
+      gallery.lastTranslateY = 0;
       
       const lightboxImg = document.getElementById(galleryId + '-lightbox-img');
-      lightboxImg.style.transform = 'scale(1)';
+      lightboxImg.style.transform = 'scale(1) translate(0px, 0px)';
       lightboxImg.style.cursor = 'zoom-in';
       
       document.getElementById(galleryId + '-lightbox-img').src = gallery.images[index];
@@ -90,20 +104,26 @@
       // Adicionar event listeners
       setupTouchEvents(galleryId);
       setupZoomEvents(galleryId);
+      setupDragEvents(galleryId);
     }
 
     function closeLightbox(galleryId) {
       document.getElementById(galleryId + '-lightbox').style.display = 'none';
       document.body.style.overflow = 'auto';
       
-      // Resetar zoom
+      // Resetar zoom e posição
       const gallery = window.galleryData[galleryId];
       gallery.isZoomed = false;
       gallery.scale = 1;
+      gallery.translateX = 0;
+      gallery.translateY = 0;
+      gallery.lastTranslateX = 0;
+      gallery.lastTranslateY = 0;
       
       // Remover event listeners
       removeTouchEvents(galleryId);
       removeZoomEvents(galleryId);
+      removeDragEvents(galleryId);
     }
 
     function handleLightboxClick(galleryId, event) {
@@ -123,11 +143,16 @@
       event.stopPropagation();
       const gallery = window.galleryData[galleryId];
       
-      // Resetar zoom ao mudar de imagem
+      // Resetar zoom e posição ao mudar de imagem
       gallery.isZoomed = false;
       gallery.scale = 1;
+      gallery.translateX = 0;
+      gallery.translateY = 0;
+      gallery.lastTranslateX = 0;
+      gallery.lastTranslateY = 0;
+      
       const lightboxImg = document.getElementById(galleryId + '-lightbox-img');
-      lightboxImg.style.transform = 'scale(1)';
+      lightboxImg.style.transform = 'scale(1) translate(0px, 0px)';
       lightboxImg.style.cursor = 'zoom-in';
       
       gallery.currentIndex += direction;
@@ -150,15 +175,62 @@
       if (!gallery.isZoomed) {
         // Aplicar zoom
         gallery.scale = 2;
-        lightboxImg.style.transform = `scale(${gallery.scale})`;
-        lightboxImg.style.cursor = 'zoom-out';
+        gallery.translateX = 0;
+        gallery.translateY = 0;
+        gallery.lastTranslateX = 0;
+        gallery.lastTranslateY = 0;
+        lightboxImg.style.transform = `scale(${gallery.scale}) translate(0px, 0px)`;
+        lightboxImg.style.cursor = 'grab';
         gallery.isZoomed = true;
       } else {
         // Remover zoom
         gallery.scale = 1;
-        lightboxImg.style.transform = `scale(${gallery.scale})`;
+        gallery.translateX = 0;
+        gallery.translateY = 0;
+        gallery.lastTranslateX = 0;
+        gallery.lastTranslateY = 0;
+        lightboxImg.style.transform = `scale(${gallery.scale}) translate(0px, 0px)`;
         lightboxImg.style.cursor = 'zoom-in';
         gallery.isZoomed = false;
+      }
+    }
+
+    // Funções de Arrastar
+    function startDrag(galleryId, clientX, clientY) {
+      const gallery = window.galleryData[galleryId];
+      if (gallery.isZoomed) {
+        gallery.isDragging = true;
+        gallery.startX = clientX - gallery.translateX;
+        gallery.startY = clientY - gallery.translateY;
+        const lightboxImg = document.getElementById(galleryId + '-lightbox-img');
+        lightboxImg.style.cursor = 'grabbing';
+      }
+    }
+
+    function duringDrag(galleryId, clientX, clientY) {
+      const gallery = window.galleryData[galleryId];
+      if (gallery.isDragging && gallery.isZoomed) {
+        gallery.translateX = clientX - gallery.startX;
+        gallery.translateY = clientY - gallery.startY;
+        
+        // Limitar o arraste para não sair muito da imagem
+        const maxTranslate = 200; // Ajuste conforme necessário
+        gallery.translateX = Math.max(-maxTranslate, Math.min(maxTranslate, gallery.translateX));
+        gallery.translateY = Math.max(-maxTranslate, Math.min(maxTranslate, gallery.translateY));
+        
+        const lightboxImg = document.getElementById(galleryId + '-lightbox-img');
+        lightboxImg.style.transform = `scale(${gallery.scale}) translate(${gallery.translateX}px, ${gallery.translateY}px)`;
+      }
+    }
+
+    function endDrag(galleryId) {
+      const gallery = window.galleryData[galleryId];
+      if (gallery.isDragging) {
+        gallery.isDragging = false;
+        gallery.lastTranslateX = gallery.translateX;
+        gallery.lastTranslateY = gallery.translateY;
+        const lightboxImg = document.getElementById(galleryId + '-lightbox-img');
+        lightboxImg.style.cursor = 'grab';
       }
     }
 
@@ -186,8 +258,8 @@
         const scaleFactor = currentDistance / gallery.initialDistance;
         gallery.scale = Math.max(0.5, Math.min(3, gallery.lastScale * scaleFactor));
         
-        lightboxImg.style.transform = `scale(${gallery.scale})`;
-        lightboxImg.style.cursor = gallery.scale > 1 ? 'zoom-out' : 'zoom-in';
+        lightboxImg.style.transform = `scale(${gallery.scale}) translate(${gallery.translateX}px, ${gallery.translateY}px)`;
+        lightboxImg.style.cursor = gallery.scale > 1 ? 'grab' : 'zoom-in';
         gallery.isZoomed = gallery.scale > 1;
       }
     }
@@ -195,6 +267,84 @@
     function resetPinch(galleryId) {
       const gallery = window.galleryData[galleryId];
       gallery.initialDistance = null;
+    }
+
+    // Configurar eventos de arrastar
+    function setupDragEvents(galleryId) {
+      const lightboxImg = document.getElementById(galleryId + '-lightbox-img');
+      const gallery = window.galleryData[galleryId];
+      
+      // Eventos para mouse
+      function handleMouseDown(e) {
+        e.preventDefault();
+        startDrag(galleryId, e.clientX, e.clientY);
+      }
+      
+      function handleMouseMove(e) {
+        duringDrag(galleryId, e.clientX, e.clientY);
+      }
+      
+      function handleMouseUp() {
+        endDrag(galleryId);
+      }
+      
+      // Eventos para touch
+      function handleTouchStart(e) {
+        if (e.touches.length === 1 && gallery.isZoomed) {
+          startDrag(galleryId, e.touches[0].clientX, e.touches[0].clientY);
+        }
+      }
+      
+      function handleTouchMove(e) {
+        if (e.touches.length === 1 && gallery.isZoomed) {
+          duringDrag(galleryId, e.touches[0].clientX, e.touches[0].clientY);
+        }
+      }
+      
+      function handleTouchEnd() {
+        endDrag(galleryId);
+      }
+      
+      // Armazenar as funções
+      gallery.mouseDownHandler = handleMouseDown;
+      gallery.mouseMoveHandler = handleMouseMove;
+      gallery.mouseUpHandler = handleMouseUp;
+      gallery.dragTouchStartHandler = handleTouchStart;
+      gallery.dragTouchMoveHandler = handleTouchMove;
+      gallery.dragTouchEndHandler = handleTouchEnd;
+      
+      // Adicionar event listeners
+      lightboxImg.addEventListener('mousedown', gallery.mouseDownHandler);
+      document.addEventListener('mousemove', gallery.mouseMoveHandler);
+      document.addEventListener('mouseup', gallery.mouseUpHandler);
+      
+      lightboxImg.addEventListener('touchstart', gallery.dragTouchStartHandler, { passive: true });
+      lightboxImg.addEventListener('touchmove', gallery.dragTouchMoveHandler, { passive: false });
+      lightboxImg.addEventListener('touchend', gallery.dragTouchEndHandler);
+    }
+
+    function removeDragEvents(galleryId) {
+      const gallery = window.galleryData[galleryId];
+      const lightboxImg = document.getElementById(galleryId + '-lightbox-img');
+      
+      if (gallery.mouseDownHandler) {
+        lightboxImg.removeEventListener('mousedown', gallery.mouseDownHandler);
+      }
+      if (gallery.mouseMoveHandler) {
+        document.removeEventListener('mousemove', gallery.mouseMoveHandler);
+      }
+      if (gallery.mouseUpHandler) {
+        document.removeEventListener('mouseup', gallery.mouseUpHandler);
+      }
+      if (gallery.dragTouchStartHandler) {
+        lightboxImg.removeEventListener('touchstart', gallery.dragTouchStartHandler);
+      }
+      if (gallery.dragTouchMoveHandler) {
+        lightboxImg.removeEventListener('touchmove', gallery.dragTouchMoveHandler);
+      }
+      if (gallery.dragTouchEndHandler) {
+        lightboxImg.removeEventListener('touchend', gallery.dragTouchEndHandler);
+      }
     }
 
     // Configurar eventos de zoom
@@ -214,7 +364,7 @@
       // Clique único para mobile (touch)
       function handleTouchStart(e) {
         // Só aplica zoom se for um toque único (não pinch)
-        if (e.touches.length === 1) {
+        if (e.touches.length === 1 && !gallery.isZoomed) {
           // Pequeno delay para distinguir entre clique e swipe
           setTimeout(() => {
             if (!gallery.isZoomed && e.touches.length === 0) {
@@ -426,6 +576,13 @@
   cursor: default;
 }
 
+.image-container {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  max-height: 80vh;
+}
+
 .lightbox-content img {
   max-width: 100%;
   max-height: 80vh;
@@ -441,7 +598,11 @@
 }
 
 .lightbox-content img.zoomed {
-  cursor: zoom-out;
+  cursor: grab;
+}
+
+.lightbox-content img.dragging {
+  cursor: grabbing;
 }
 
 .close-btn {
