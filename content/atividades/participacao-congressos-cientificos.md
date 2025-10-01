@@ -12,5 +12,16 @@ A participação de alunos de graduação em congressos científicos desempenha 
 
 Estimular a participação dos alunos do PET Estatística em congressos científicos.
 
+### Últimos eventos:
+
+#### 2º Encontro Sul Brasileiro de Estatística e Ciência de Dados e 5º RDAY
+
+{{< gallery folder="images/atividades/eventos-cientificos/2025/2southstat-meeting/" >}}
+{{< gallery folder="images/atividades/participacao-comgressos-cientificos/2025/2ss/" >}}
+
+#### 69ª Reunião Anual da Região Brasileira da Sociedade Internacional de Biometria (RBras) e do 21º Simpósio de Estatística Aplicada à Experimentação Agronômica (SEAGRO) 
+
+Fotos em breve
+
 ---
 [Voltar para Atividades](/atividades/)

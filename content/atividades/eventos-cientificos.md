@@ -29,5 +29,12 @@ Site: https://sites.google.com/view/2southstatmeeting/
 
 Site: https://sites.google.com/view/semana-de-estatstica-2025/home?authuser=0
 
+
+#### Dia do Estatístico 2025
+
+{{< gallery folder="images/atividades/dia-do-estatistico/2025/" >}}
+
+Site: https://sites.google.com/view/dia-do-estatistico/home
+
 ---
 [Voltar para Atividades](/atividades/)

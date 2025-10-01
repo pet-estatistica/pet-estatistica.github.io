@@ -12,5 +12,11 @@ A organização e participação nas reuniões do InterPET representam uma oport
 
 Garantir a participação ativa dos bolsistas do PET Estatística em todas as reuniões do InterPET ao longo do ano, desenvolver competências de organização e planejamento por meio da coordenação de uma reunião. Além de promover a troca de experiências e boas práticas entre grupos PET, contribuindo para a melhoria da formação dos bolsistas e fortalecer a visibilidade e a integração do PET Estatística com os demais grupos da instituição.
 
+### Últimos eventos:
+
+#### 2025
+
+{{< gallery folder="images/atividades/organizacao-participacao-interpet/2025/" >}}
+
 ---
 [Voltar para Atividades](/atividades/)

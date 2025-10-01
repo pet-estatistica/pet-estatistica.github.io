@@ -2,6 +2,14 @@
 title: "Nossas Atividades"
 description: "Conheça as nossas principais atividades e iniciativas desenvolvidas ao longo dos anos."
 projects:
+  - title: "Atividades de Extensão"
+    description: "Diversas atividades promovidas pela UFPR, as quais o PET Estatística participa ao longo do ano"
+    category: "Divulgação"
+    tags: ["Atividades", "Extensão", "Comunidade", "Gratuítos", "Crianças e Adolecentes"]
+    image: "/images/atividades/atividades-de-extensao.jpg"
+    icon: "fas fa-users"
+    link: "/atividades/atividades-de-extensao"
+    
   - title: "Aula Inaugural"
     description: "Primeira aula do ano aos calouros do curso, proomovendo informações de como funciona o curso e a Universidade, além de dicas de estudo e materiais"
     category: "Divulgação"

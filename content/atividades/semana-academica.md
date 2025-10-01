@@ -1,6 +1,6 @@
 ---
 title: "Semana Acadêmica"
-image: "/images/atividades/2.png"
+image: "/images/atividades/semana-academica.jpeg"
 tags: ["Extensão", "Palestras", "Minicursos", "Mesa Redonda", "Formação Profissional Científica"]
 ---
   
@@ -11,6 +11,14 @@ A Semana Acadêmica configura-se como uma atividade de extensão, conduzida majo
 ### **Objetivos**
 
 Um dos principais objetivos da semana acadêmica é complementar a formação profissional e científica com a exposição de temas contemporâneos e relevantes, contribuindo para a elevação da qualidade da formação acadêmica e profissional dos alunos de graduação. Além disso, visa compreender o atual cenário da profissão e traçar estratégias para o atendimento dos requisitos para os próximos anos da atividade. O evento também estimula a interação de profissionais e docentes de elevada qualificação técnica, científica, tecnológica e acadêmica com os alunos em formação. Ainda acarretará no aumento da visibilidade do Curso de Estatística, do Departamento de Estatística e da Universidade na sociedade acadêmica e no meio profissional.
+
+### Últimos eventos:
+
+#### 2025
+
+{{< gallery folder="images/atividades/eventos-cientificos/2025/semana-academica-2025/" >}}
+
+Site: https://sites.google.com/view/semana-de-estatstica-2025/home?authuser=0
 
 ---
 [Voltar para Atividades](/atividades/)

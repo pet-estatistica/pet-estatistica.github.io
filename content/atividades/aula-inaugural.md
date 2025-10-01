@@ -12,5 +12,11 @@ assar no vestibular e adentrar a Universidade é uma grande conquista e uma fase
 
 Organizar uma aula que apresente a Universidade e o Curso para o calouro, dando ênfase nas oportunidades de bolsa (iniciação científica, PET, monitoria, etc.) e em dicas de estudo. Bem como apresentar, brevemente, a carreira do profissional de Estatística.
 
+### Últimos eventos:
+
+#### 2025
+
+{{< gallery folder="images/atividades/aula-inaugural/2025/" >}}
+
 ---
 [Voltar para Atividades](/atividades/)

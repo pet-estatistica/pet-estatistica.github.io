@@ -12,5 +12,12 @@ Os cursos básicos de estatística são desafiadores para muitos estudantes e mu
 
 Planejar e ministrar, durante todo o ano letivo, aulas de revisão para disciplinas chaves do Bach. de Estatística e Ciência de Dados - em especial aos alunos do primeiro e segundo ano - bem como para os alunos de cursos de estatística básica ofertados para outras áreas. Bem como aproximar, ainda mais, o PET da comunidade acadêmica local.
 
+
+### Últimos eventos:
+
+#### 2025
+
+{{< gallery folder="images/atividades/aulas-revisao/2025/" >}}
+
 ---
 [Voltar para Atividades](/atividades/)

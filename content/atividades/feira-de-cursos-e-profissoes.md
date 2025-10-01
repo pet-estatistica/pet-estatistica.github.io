@@ -12,5 +12,12 @@ A Feira de Cursos e Profissões da UFPR ocorre anualmente, onde todos os cursos 
 
 O principal objetivo da Feira de Cursos e Profissões é apresentar a dinâmica do curso de Estatística da UFPR para os alunos do Ensino Médio que participam da Feira, por meio de conversas com os alunos que já fazem parte do curso e que já passaram pela experiência de ter que decidir qual caminho seguir.
 
+
+### Últimas feiras:
+
+#### 2025
+
+{{< gallery folder="images/atividades/feira-de-cursos-e-profissoes/2025/" >}}
+
 ---
 [Voltar para Atividades](/atividades/)
