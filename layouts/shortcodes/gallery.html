@@ -1,5 +1,6 @@
 {{ $folder := .Get "folder" }}
 {{ $path := printf "static/%s" $folder }}
+{{ $galleryID := printf "gallery-%s" (replace $folder "/" "-") }}
 
 {{ if fileExists $path }}
   {{ $files := readDir $path }}
@@ -17,9 +18,9 @@
   {{ $images = sort $images "Size" "desc" }}
 
   <div class="gallery-container">
-    <div class="masonry-gallery">
+    <div class="masonry-gallery" id="{{ $galleryID }}-container">
       {{ range $index, $image := $images }}
-        <div class="gallery-item" onclick="openLightbox({{ $index }})">
+        <div class="gallery-item" onclick="openLightbox('{{ $galleryID }}', {{ $index }})">
           <img src="/{{ $folder }}/{{ $image.Name }}" 
                alt="{{ $image.Name }}" 
                loading="lazy"
@@ -30,70 +31,80 @@
   </div>
 
   <!-- Lightbox -->
-  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-    <span class="close-btn" onclick="closeLightbox()">&times;</span>
-    <span class="nav-btn prev-btn" onclick="changeImage(-1)">&#10094;</span>
-    <span class="nav-btn next-btn" onclick="changeImage(1)">&#10095;</span>
+  <div id="{{ $galleryID }}-lightbox" class="lightbox" onclick="closeLightbox('{{ $galleryID }}')">
+    <span class="close-btn" onclick="closeLightbox('{{ $galleryID }}')">&times;</span>
+    <span class="nav-btn prev-btn" onclick="changeImage('{{ $galleryID }}', -1)">&#10094;</span>
+    <span class="nav-btn next-btn" onclick="changeImage('{{ $galleryID }}', 1)">&#10095;</span>
     
     <div class="lightbox-content">
-      <img id="lightbox-img" src="" alt="">
+      <img id="{{ $galleryID }}-lightbox-img" src="" alt="">
       <div class="image-counter">
-        <span id="current-index">1</span> / <span id="total-images">{{ len $images }}</span>
+        <span id="{{ $galleryID }}-current-index">1</span> / <span id="{{ $galleryID }}-total-images">{{ len $images }}</span>
       </div>
     </div>
   </div>
 
   <!-- Dados das imagens para o JavaScript -->
   <script>
-    const galleryImages = [
-      {{ range $images }}
-        "/{{ $folder }}/{{ .Name }}",
-      {{ end }}
-    ];
+    // Inicializar apenas se não existir
+    if (typeof window.galleryData === 'undefined') {
+      window.galleryData = {};
+    }
     
-    let currentImageIndex = 0;
+    window.galleryData['{{ $galleryID }}'] = {
+      images: [
+        {{ range $images }}
+          "/{{ $folder }}/{{ .Name }}",
+        {{ end }}
+      ],
+      currentIndex: 0
+    };
 
-    function openLightbox(index) {
-      currentImageIndex = index;
-      document.getElementById('lightbox-img').src = galleryImages[index];
-      document.getElementById('current-index').textContent = index + 1;
-      document.getElementById('lightbox').style.display = 'block';
+    function openLightbox(galleryId, index) {
+      const gallery = window.galleryData[galleryId];
+      gallery.currentIndex = index;
+      
+      document.getElementById(galleryId + '-lightbox-img').src = gallery.images[index];
+      document.getElementById(galleryId + '-current-index').textContent = index + 1;
+      document.getElementById(galleryId + '-lightbox').style.display = 'block';
       document.body.style.overflow = 'hidden';
     }
 
-    function closeLightbox() {
-      document.getElementById('lightbox').style.display = 'none';
+    function closeLightbox(galleryId) {
+      document.getElementById(galleryId + '-lightbox').style.display = 'none';
       document.body.style.overflow = 'auto';
     }
 
-    function changeImage(direction) {
+    function changeImage(galleryId, direction) {
       event.stopPropagation();
-      currentImageIndex += direction;
+      const gallery = window.galleryData[galleryId];
       
-      if (currentImageIndex >= galleryImages.length) {
-        currentImageIndex = 0;
-      } else if (currentImageIndex < 0) {
-        currentImageIndex = galleryImages.length - 1;
+      gallery.currentIndex += direction;
+      
+      if (gallery.currentIndex >= gallery.images.length) {
+        gallery.currentIndex = 0;
+      } else if (gallery.currentIndex < 0) {
+        gallery.currentIndex = gallery.images.length - 1;
       }
       
-      document.getElementById('lightbox-img').src = galleryImages[currentImageIndex];
-      document.getElementById('current-index').textContent = currentImageIndex + 1;
+      document.getElementById(galleryId + '-lightbox-img').src = gallery.images[gallery.currentIndex];
+      document.getElementById(galleryId + '-current-index').textContent = gallery.currentIndex + 1;
     }
 
-    // Navegação com teclado
+    // Navegação com teclado (global, mas fecha qualquer lightbox aberta)
     document.addEventListener('keydown', function(event) {
-      const lightbox = document.getElementById('lightbox');
-      if (lightbox.style.display === 'block') {
-        if (event.key === 'Escape') closeLightbox();
-        if (event.key === 'ArrowLeft') changeImage(-1);
-        if (event.key === 'ArrowRight') changeImage(1);
+      // Encontrar qual lightbox está aberta
+      const openLightboxes = document.querySelectorAll('.lightbox[style*="display: block"]');
+      if (openLightboxes.length > 0) {
+        const lightboxId = openLightboxes[0].id.replace('-lightbox', '');
+        
+        if (event.key === 'Escape') closeLightbox(lightboxId);
+        if (event.key === 'ArrowLeft') changeImage(lightboxId, -1);
+        if (event.key === 'ArrowRight') changeImage(lightboxId, 1);
       }
     });
 
-    // Fechar ao clicar fora da imagem
-    document.getElementById('lightbox').addEventListener('click', function(event) {
-      if (event.target === this) closeLightbox();
-    });
+    // Fechar ao clicar fora da imagem (configurado individualmente no HTML)
   </script>
 
 {{ else }}
@@ -154,7 +165,7 @@
   text-align: center;
 }
 
-#lightbox-img {
+.lightbox-content img {
   max-width: 100%;
   max-height: 80vh;
   object-fit: contain;
