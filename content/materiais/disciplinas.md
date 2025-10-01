@@ -9,8 +9,8 @@ layout: "disciplinas"
 **2025** | *Dra. Amanda Merian Freitas Mendes, Dra. Sílvia Emiko Shimakura, Dr. Paulo Justiniano Ribeiro Junior*
 
 - **🌐 Atividades Online:**
-  - [Respostas Atividade online 1](/pdfs/CE301/2025/Respostas-Atividade-Online-1.pdf) Pdf *Por: [Júlia Zorzo Ferreira](/integrantes/#j%C3%BAlia-zorzo-ferreira)*
-  - [Respostas Atividade online 2](/pdfs/CE301/2025/Respostas-Atividade-Online-2.pdf) Pdf *Por: [Júlia Zorzo Ferreira](/integrantes/#j%C3%BAlia-zorzo-ferreira)*
+  - [Respostas Atividade online 1](/pdfs/CE301/2025/Respostas-Atividade-Online-1.pdf) PDF *Por: [Júlia Zorzo Ferreira](/integrantes/#j%C3%BAlia-zorzo-ferreira)*
+  - [Respostas Atividade online 2](/pdfs/CE301/2025/Respostas-Atividade-Online-2.pdf) PDF *Por: [Júlia Zorzo Ferreira](/integrantes/#j%C3%BAlia-zorzo-ferreira)*
 
 
 **2024** | *Dra. Sílvia Emiko Shimakura, Me. Lineu Alberto Cavazani de Freitas*
