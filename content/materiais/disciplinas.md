@@ -25,7 +25,6 @@ layout: "disciplinas"
   - [Lista 3 - Indução Matemática](/pdfs/CE330/2025/inducao-lista-1.pdf) PDF
   - [Respostas Lista 3 - Indução Matemática](/pdfs/CE330/2025/inducao-lista-1-respostas.pdf) PDF *Por: [Arthur Noguti](/integrantes/#arthur-hideio-noguti)*
   - [Lista 4 - Teoria de Conjuntos](/pdfs/CE330/2025/Teoria_de_Conjuntos-Lista-1.pdf) PDF
-  - [Respostas Lista 4 - Teoria de Conjuntos](/pdfs/CE330/2025/Teoria_de_Conjuntos-Lista-1-respostas.pdf) PDF *Por: [Júlia Zorzo Ferreira](/integrantes/#j%C3%BAlia-zorzo-ferreira)*
 
 **2024** | *Dra. Fernanda Buhrer Rizzato*
 
