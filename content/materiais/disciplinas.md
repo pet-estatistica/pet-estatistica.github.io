@@ -34,7 +34,7 @@ layout: "disciplinas"
 
 **2023** | *Benito Orlando Olivares Aguilera*
 
-- **📚 Listas de exercícios:**
+- **📚 Listas de exercícios:*
   - [Lista 1](/pdfs/CE330/2023/Lista1-CE330-FMP-2023-2.pdf) PDF
   - [Lista 2](/pdfs/CE330/2023/Lista2-CE330-FMP-2023-2.pdf) PDF
   - [Lista 3](/pdfs/CE330/2023/Lista3-CE330-FMP-2023-2.pdf) PDF
