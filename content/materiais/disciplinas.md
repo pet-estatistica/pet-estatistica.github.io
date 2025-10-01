@@ -6,7 +6,7 @@ layout: "disciplinas"
 ### 📚 Materiais Acadêmicos por Disciplina
 
 ##### 📊 CE301 - Estatística Básica
-**2024** | *Dra. Amanda Merian Freitas Mendes, Dra. Sílvia Emiko Shimakura, Dr. Paulo Justiniano Ribeiro Junior*
+**2025** | *Dra. Amanda Merian Freitas Mendes, Dra. Sílvia Emiko Shimakura, Dr. Paulo Justiniano Ribeiro Junior*
 
 - **🌐 Atividades Online:**
   - [Respostas Atividade online 1](/pdfs/CE301/2025/Respostas-Atividade-Online-1.pdf) Pdf *Por: [Júlia Zorzo Ferreira](/integrantes/#j%C3%BAlia-zorzo-ferreira)*
