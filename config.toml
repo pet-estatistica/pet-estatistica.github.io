@@ -95,8 +95,8 @@ summarylength = 25
     background_image      = "images/backgrounds/2025-2.png"
     heading               = "PET ESTATÍSTICA UFPR"
     tagline               = ""
-    primary_button        = "Veja nossos Projetos"
-    primary_button_url    = "projetos"
+    primary_button        = "Veja nossas Atividades"
+    primary_button_url    = "atividades"
     secondary_button      = "Entre em contato"
     secondary_button_url  = "contato"
 
