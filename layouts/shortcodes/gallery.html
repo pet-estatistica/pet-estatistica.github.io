@@ -57,7 +57,9 @@
           "/{{ $folder }}/{{ .Name }}",
         {{ end }}
       ],
-      currentIndex: 0
+      currentIndex: 0,
+      touchStartX: 0,
+      touchEndX: 0
     };
 
     function openLightbox(galleryId, index) {
@@ -68,11 +70,17 @@
       document.getElementById(galleryId + '-current-index').textContent = index + 1;
       document.getElementById(galleryId + '-lightbox').style.display = 'block';
       document.body.style.overflow = 'hidden';
+      
+      // Adicionar event listeners de touch
+      setupTouchEvents(galleryId);
     }
 
     function closeLightbox(galleryId) {
       document.getElementById(galleryId + '-lightbox').style.display = 'none';
       document.body.style.overflow = 'auto';
+      
+      // Remover event listeners de touch
+      removeTouchEvents(galleryId);
     }
 
     function changeImage(galleryId, direction) {
@@ -91,20 +99,112 @@
       document.getElementById(galleryId + '-current-index').textContent = gallery.currentIndex + 1;
     }
 
-    // Navegação com teclado (global, mas fecha qualquer lightbox aberta)
+    // Configurar eventos de touch para swipe
+    function setupTouchEvents(galleryId) {
+      const lightbox = document.getElementById(galleryId + '-lightbox');
+      const lightboxImg = document.getElementById(galleryId + '-lightbox-img');
+      const gallery = window.galleryData[galleryId];
+      
+      function handleTouchStart(e) {
+        gallery.touchStartX = e.changedTouches[0].screenX;
+        gallery.touchStartY = e.changedTouches[0].screenY;
+      }
+      
+      function handleTouchEnd(e) {
+        gallery.touchEndX = e.changedTouches[0].screenX;
+        gallery.touchEndY = e.changedTouches[0].screenY;
+        handleSwipe(galleryId);
+      }
+      
+      function handleSwipe(currentGalleryId) {
+        const diffX = gallery.touchStartX - gallery.touchEndX;
+        const diffY = gallery.touchStartY - gallery.touchEndY;
+        
+        // Verificar se é um swipe horizontal (não vertical)
+        if (Math.abs(diffX) > Math.abs(diffY)) {
+          // Limiar mínimo para considerar como swipe
+          if (Math.abs(diffX) > 50) {
+            if (diffX > 0) {
+              // Swipe para esquerda - próxima imagem
+              changeImage(currentGalleryId, 1);
+            } else {
+              // Swipe para direita - imagem anterior
+              changeImage(currentGalleryId, -1);
+            }
+          }
+        }
+      }
+      
+      // Armazenar as funções para poder remover depois
+      gallery.touchStartHandler = handleTouchStart;
+      gallery.touchEndHandler = handleTouchEnd;
+      
+      lightbox.addEventListener('touchstart', gallery.touchStartHandler, { passive: true });
+      lightbox.addEventListener('touchend', gallery.touchEndHandler, { passive: true });
+      lightboxImg.addEventListener('touchstart', gallery.touchStartHandler, { passive: true });
+      lightboxImg.addEventListener('touchend', gallery.touchEndHandler, { passive: true });
+    }
+
+    function removeTouchEvents(galleryId) {
+      const gallery = window.galleryData[galleryId];
+      const lightbox = document.getElementById(galleryId + '-lightbox');
+      const lightboxImg = document.getElementById(galleryId + '-lightbox-img');
+      
+      if (gallery.touchStartHandler) {
+        lightbox.removeEventListener('touchstart', gallery.touchStartHandler);
+        lightboxImg.removeEventListener('touchstart', gallery.touchStartHandler);
+      }
+      if (gallery.touchEndHandler) {
+        lightbox.removeEventListener('touchend', gallery.touchEndHandler);
+        lightboxImg.removeEventListener('touchend', gallery.touchEndHandler);
+      }
+    }
+
+    // Navegação com teclado
     document.addEventListener('keydown', function(event) {
       // Encontrar qual lightbox está aberta
       const openLightboxes = document.querySelectorAll('.lightbox[style*="display: block"]');
       if (openLightboxes.length > 0) {
         const lightboxId = openLightboxes[0].id.replace('-lightbox', '');
         
-        if (event.key === 'Escape') closeLightbox(lightboxId);
-        if (event.key === 'ArrowLeft') changeImage(lightboxId, -1);
-        if (event.key === 'ArrowRight') changeImage(lightboxId, 1);
+        switch(event.key) {
+          case 'Escape':
+            closeLightbox(lightboxId);
+            break;
+          case 'ArrowLeft':
+          case 'ArrowUp':
+          case 'PageUp':
+            changeImage(lightboxId, -1);
+            event.preventDefault();
+            break;
+          case 'ArrowRight':
+          case 'ArrowDown':
+          case 'PageDown':
+            changeImage(lightboxId, 1);
+            event.preventDefault();
+            break;
+        }
       }
     });
 
-    // Fechar ao clicar fora da imagem (configurado individualmente no HTML)
+    // Fechar ao clicar fora da imagem
+    document.addEventListener('click', function(event) {
+      const openLightboxes = document.querySelectorAll('.lightbox[style*="display: block"]');
+      openLightboxes.forEach(lightbox => {
+        const lightboxId = lightbox.id.replace('-lightbox', '');
+        if (event.target === lightbox) {
+          closeLightbox(lightboxId);
+        }
+      });
+    });
+
+    // Prevenir que cliques na imagem fechem o lightbox
+    document.addEventListener('click', function(event) {
+      if (event.target.classList.contains('lightbox-content') || 
+          event.target.id.includes('lightbox-img')) {
+        event.stopPropagation();
+      }
+    });
   </script>
 
 {{ else }}
@@ -152,6 +252,7 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.9);
   backdrop-filter: blur(5px);
+  touch-action: pan-y; /* Permitir scroll vertical quando necessário */
 }
 
 .lightbox-content {
@@ -163,6 +264,7 @@
   top: 50%;
   transform: translateY(-50%);
   text-align: center;
+  touch-action: none; /* Desabilitar comportamentos de touch padrão na imagem */
 }
 
 .lightbox-content img {
@@ -171,6 +273,9 @@
   object-fit: contain;
   border-radius: 8px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
 }
 
 .close-btn {
@@ -183,6 +288,7 @@
   cursor: pointer;
   z-index: 1001;
   transition: color 0.3s ease;
+  touch-action: manipulation;
 }
 
 .close-btn:hover {
@@ -202,6 +308,7 @@
   border-radius: 50%;
   user-select: none;
   transition: background-color 0.3s ease;
+  touch-action: manipulation;
 }
 
 .nav-btn:hover {
@@ -221,6 +328,34 @@
   font-size: 16px;
   margin-top: 15px;
   text-align: center;
+  user-select: none;
+}
+
+/* Efeito de transição suave para troca de imagens */
+.lightbox-content img {
+  transition: opacity 0.3s ease;
+}
+
+.lightbox-content img.fading {
+  opacity: 0.7;
+}
+
+/* Indicador de swipe para mobile */
+.swipe-hint {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255,255,255,0.7);
+  font-size: 14px;
+  text-align: center;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .swipe-hint {
+    display: block;
+  }
 }
 
 /* Responsividade */
@@ -250,11 +385,22 @@
     font-size: 24px;
     padding: 12px;
   }
+  
+  /* Botões menores em mobile */
+  .nav-btn {
+    padding: 10px;
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 480px) {
   .masonry-gallery {
     column-count: 1;
+  }
+  
+  .nav-btn {
+    padding: 8px;
+    font-size: 18px;
   }
 }
 
