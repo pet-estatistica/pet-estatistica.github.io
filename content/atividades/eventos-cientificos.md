@@ -12,5 +12,22 @@ O Departamento de Estatística periodicamente organiza eventos científicos tais
 
 Apoiar o Departamento de Estatística com a co-organização de eventos científicos e realizar eventos para a comunidade estatística da UFPR.
 
+### Últimos eventos:
+
+Abaixo teremos uma galeria de fotos contendo os últimos eventos aos quais o PET Estatística UFPR esteve organizando e ou auxiliando.
+
+#### 2º Encontro Sul Brasileiro de Estatística e Ciência de Dados e 5º RDAY
+
+{{< gallery folder="images/atividades/eventos-cientificos/2025/2southstat-meeting/" >}}
+
+Site: https://sites.google.com/view/2southstatmeeting/
+
+
+#### Semana Acadêmica 2025
+
+{{< gallery folder="images/atividades/eventos-cientificos/2025/semana-academica-2025/" >}}
+
+Site: https://sites.google.com/view/semana-de-estatstica-2025/home?authuser=0
+
 ---
 [Voltar para Atividades](/atividades/)
