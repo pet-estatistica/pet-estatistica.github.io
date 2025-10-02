@@ -9,9 +9,18 @@ layout: "disciplinas"
 **2025** | *Dra. Amanda Merian Freitas Mendes, Dra. Sílvia Emiko Shimakura, Dr. Paulo Justiniano Ribeiro Junior*
 
 - **🌐 Atividades Online:**
-  - [Respostas Atividade online 1](/pdfs/CE301/2025/Respostas-Atividade-Online-1.pdf) PDF *Por: [Júlia Zorzo Ferreira](/integrantes/#j%C3%BAlia-zorzo-ferreira)*
-  - [Respostas Atividade online 2](/pdfs/CE301/2025/Respostas-Atividade-Online-2.pdf) PDF *Por: [Júlia Zorzo Ferreira](/integrantes/#j%C3%BAlia-zorzo-ferreira)*
-
+  - [Respostas Atividade online 1](/pdfs/CE301/2025/Respostas-Atividade-Online-1.pdf) PDF *Por: 
+    {{< hoverlink 
+        url="/integrantes/#j%C3%BAlia-zorzo-ferreira" 
+        text="Júlia Zorzo Ferreira" 
+        user="júlia-zorzo-ferreira" 
+    >}}*
+  - [Respostas Atividade online 2](/pdfs/CE301/2025/Respostas-Atividade-Online-2.pdf) PDF *Por: 
+  {{< hoverlink 
+        url="/integrantes/#j%C3%BAlia-zorzo-ferreira" 
+        text="Júlia Zorzo Ferreira" 
+        user="júlia-zorzo-ferreira" 
+    >}}*
 
 **2024** | *Dra. Sílvia Emiko Shimakura, Me. Lineu Alberto Cavazani de Freitas*
 
@@ -26,13 +35,31 @@ layout: "disciplinas"
 
 - **📚 Listas de exercícios:**
   - [Lista 1 - Lógica](/pdfs/CE330/2025/Logica-Lista-1.pdf) PDF
-  - [Respostas Lista 1 - Lógica](/pdfs/CE330/2025/Logica-Lista-1-respostas.pdf) PDF *Por: [Arthur Noguti](/integrantes/#arthur-hideio-noguti)*
+  - [Respostas Lista 1 - Lógica](/pdfs/CE330/2025/Logica-Lista-1-respostas.pdf) PDF *Por: 
+    {{< hoverlink 
+        url="/integrantes/#arthur-hideio-noguti" 
+        text="Arthur Noguti" 
+        user="arthur-hideio-noguti" 
+    >}}*
   - [Lista 2 - Lógica](/pdfs/CE330/2025/Logica-Lista-2.pdf) PDF
-  - [Respostas Lista 2 - Lógica](/pdfs/CE330/2025/Logica-Lista-2-Respostas.pdf) PDF *Por: [Arthur Noguti](/integrantes/#arthur-hideio-noguti)*
+  - [Respostas Lista 2 - Lógica](/pdfs/CE330/2025/Logica-Lista-2-Respostas.pdf) PDF *Por: 
+    {{< hoverlink 
+        url="/integrantes/#arthur-hideio-noguti" 
+        text="Arthur Noguti" 
+        user="arthur-hideio-noguti" 
+    >}}*
   - [Lista 3 - Indução Matemática](/pdfs/CE330/2025/inducao-lista-1.pdf) PDF
-  - [Respostas Lista 3 - Indução Matemática](/pdfs/CE330/2025/inducao-lista-1-respostas.pdf) PDF *Por: [Arthur Noguti](/integrantes/#arthur-hideio-noguti)*
+  - [Respostas Lista 3 - Indução Matemática](/pdfs/CE330/2025/inducao-lista-1-respostas.pdf) PDF *Por: {{< hoverlink 
+        url="/integrantes/#arthur-hideio-noguti" 
+        text="Arthur Noguti" 
+        user="arthur-hideio-noguti" 
+    >}}*
   - [Lista 4 - Teoria de Conjuntos](/pdfs/CE330/2025/Teoria_de_Conjuntos-Lista-1.pdf) PDF
-  - [Respostas Lista 4 - Teoria de Conjuntos](/pdfs/CE330/2025/Teoria_de_Conjuntos-Lista-1-respostas.pdf) PDF *Por: [Júlia Zorzo Ferreira](/integrantes/#j%C3%BAlia-zorzo-ferreira)*
+  - [Respostas Lista 4 - Teoria de Conjuntos](/pdfs/CE330/2025/Teoria_de_Conjuntos-Lista-1-respostas.pdf) PDF *Por: {{< hoverlink 
+        url="/integrantes/#j%C3%BAlia-zorzo-ferreira" 
+        text="Júlia Zorzo Ferreira" 
+        user="júlia-zorzo-ferreira" 
+    >}}*
 
 **2024** | *Dra. Fernanda Buhrer Rizzato*
 
