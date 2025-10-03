@@ -1,6 +1,6 @@
 ---
 title: "Materiais das Disciplinas"
-layout: "disciplinas"
+layout: "materiais"
 ---
 
 ### 📚 Links Úteis

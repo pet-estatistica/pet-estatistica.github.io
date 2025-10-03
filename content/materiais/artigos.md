@@ -1,6 +1,6 @@
 ---
 title: "Artigos Científicos"
-layout: "disciplinas"
+layout: "materiais"
 ---
 
 ## Acesso aos Artigos:

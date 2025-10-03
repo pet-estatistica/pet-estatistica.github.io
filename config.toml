@@ -5,6 +5,7 @@ DefaultContentLanguage = "pt"
 title         = "PET ESTATÍSTICA UFPR"
 theme = "roxo-hugo"
 summarylength = 25
+removePathAccents = true
 
 # Site Menus
 [menu]

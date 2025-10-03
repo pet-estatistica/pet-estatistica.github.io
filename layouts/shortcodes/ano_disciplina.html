@@ -1,0 +1,15 @@
+{{ $ano := .Get "ano" }}
+{{ $professores := .Get "professores" }}
+
+<div class="ano-disciplina mb-4">
+  <div class="ano-header">
+    <h4 class="ano-titulo">{{ $ano }}</h4>
+    {{ with $professores }}
+    <small class="professores">Professores: {{ . }}</small>
+    {{ end }}
+  </div>
+  
+  <div class="materiais-lista">
+    {{ .Inner }}
+  </div>
+</div>

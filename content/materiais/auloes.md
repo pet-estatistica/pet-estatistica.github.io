@@ -1,6 +1,6 @@
 ---
 title: "Materiais das Disciplinas"
-layout: "disciplinas"
+layout: "materiais"
 ---
 ### Materiais dos Aulões ministrados pelo Pet:
 

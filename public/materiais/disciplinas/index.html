@@ -118,275 +118,1291 @@
 <div class="container py-5">
   <div class="row">
     <div class="col-12">
-      <h1>Materiais das Disciplinas</h1>
-      <div class="content-page mt-4">
-        <h3 id="-materiais-acadêmicos-por-disciplina">📚 Materiais Acadêmicos por Disciplina</h3>
-<h5 id="-ce301---estatística-básica">📊 CE301 - Estatística Básica</h5>
-<p><strong>2025</strong> | <em>Dra. Amanda Merian Freitas Mendes, Dra. Sílvia Emiko Shimakura, Dr. Paulo Justiniano Ribeiro Junior</em></p>
-<ul>
-<li><strong>🌐 Atividades Online:</strong>
-<ul>
-<li><a href="/pdfs/CE301/2025/Respostas-Atividade-Online-1.pdf">Respostas Atividade online 1</a> PDF <em>Por: <a href="/integrantes/#j%C3%BAlia-zorzo-ferreira">Júlia Zorzo Ferreira</a></em></li>
-<li><a href="/pdfs/CE301/2025/Respostas-Atividade-Online-2.pdf">Respostas Atividade online 2</a> PDF <em>Por: <a href="/integrantes/#j%C3%BAlia-zorzo-ferreira">Júlia Zorzo Ferreira</a></em></li>
-<li><a href="/pdfs/CE301/2025/Respostas-Atividade-Online-2.pdf">Respostas Atividade online 2</a> PDF <em>Por:
+      
+      <div class="text-center mb-5">
+        <h1 class="display-5 fw-bold text-primary mb-3">Materiais das Disciplinas</h1>
+        <p class="lead text-muted">Materiais organizados por disciplina, ano e semestre</p>
+      </div>
 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
+<div class="filtros-container mb-5">
+  <div class="row g-3 align-items-end">
     
     
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-    
-    
-      
-    
-  
-  
-  <span class="hover-link-simple">
-    <a href="/integrantes/#j%C3%BAlia-zorzo-ferreira">Júlia Zorzo Ferreira</a>
-    <div class="hover-image">
-      <img src="/images/team/placeholder.jpg" alt="júlia-zorzo-ferreira" 
-           onerror="this.src='/images/team/placeholder.jpg'">
-      <span>júlia-zorzo-ferreira</span>
+    <div class="col-md-3 col-sm-6">
+      <div class="filter-group">
+        <label class="form-label fw-semibold">📅 Ano</label>
+        <select id="filtro-ano" class="form-select">
+          <option value="todos">Todos os anos</option>
+          
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              
+            
+          
+          
+            <option value="2025">2025</option>
+          
+            <option value="2024">2024</option>
+          
+            <option value="2023">2023</option>
+          
+        </select>
+      </div>
     </div>
-  </span>
-  
-  <style>
-    .hover-link-simple {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .hover-link-simple .hover-image {
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    z-index: 1000;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s, visibility 0.3s;
-    min-width: 150px;
-    text-align: center;
-  }
-  
-  .hover-link-simple:hover .hover-image {
-    opacity: 1;
-    visibility: visible;
-  }
-  
-  .hover-link-simple .hover-image img {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 5px;
-  }
-  
-  .hover-link-simple .hover-image span {
-    font-size: 0.8em;
-    color: #666;
-    display: block;
-  }
-  </style>
-  
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-    const hoverContainers = document.querySelectorAll('.hover-link-simple');
     
-    const extensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.bmp', '.tiff'];
     
-    hoverContainers.forEach(container => {
-      const img = container.querySelector('img');
-      const basePath = img.getAttribute('data-base-path');
-      
-      if (basePath) {
-        
-        let imageLoaded = false;
-        
-        extensions.forEach(ext => {
-          if (!imageLoaded) {
-            const testImage = new Image();
-            testImage.src = basePath + ext;
-            testImage.onload = function() {
-              if (!imageLoaded) {
-                img.src = basePath + ext;
-                imageLoaded = true;
-              }
-            };
-          }
-        });
-        
-        
-        setTimeout(() => {
-          if (!imageLoaded) {
-            img.src = '/images/team/placeholder.jpg';
-          }
-        }, 100);
-      }
-    });
-  });
-  </script></em></li>
-</ul>
-</li>
-</ul>
-<p><strong>2024</strong> | <em>Dra. Sílvia Emiko Shimakura, Me. Lineu Alberto Cavazani de Freitas</em></p>
-<ul>
-<li><strong>📚 Listas de exercícios:</strong>
-<ul>
-<li><a href="/pdfs/CE301/2024/listas.zip">Todas as listas</a> ZIP</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h5 id="-ce330---fundamentos-matemáticos-para-probabilidade-pré-prob">🎲 CE330 - Fundamentos Matemáticos Para Probabilidade (Pré-Prob)</h5>
-<p><strong>2025</strong> | <em>Dra. Fernanda Buhrer Rizzato</em></p>
-<ul>
-<li><strong>📚 Listas de exercícios:</strong>
-<ul>
-<li><a href="/pdfs/CE330/2025/Logica-Lista-1.pdf">Lista 1 - Lógica</a> PDF</li>
-<li><a href="/pdfs/CE330/2025/Logica-Lista-1-respostas.pdf">Respostas Lista 1 - Lógica</a> PDF <em>Por: <a href="/integrantes/#arthur-hideio-noguti">Arthur Noguti</a></em></li>
-<li><a href="/pdfs/CE330/2025/Logica-Lista-2.pdf">Lista 2 - Lógica</a> PDF</li>
-<li><a href="/pdfs/CE330/2025/Logica-Lista-2-Respostas.pdf">Respostas Lista 2 - Lógica</a> PDF <em>Por: <a href="/integrantes/#arthur-hideio-noguti">Arthur Noguti</a></em></li>
-<li><a href="/pdfs/CE330/2025/inducao-lista-1.pdf">Lista 3 - Indução Matemática</a> PDF</li>
-<li><a href="/pdfs/CE330/2025/inducao-lista-1-respostas.pdf">Respostas Lista 3 - Indução Matemática</a> PDF <em>Por: <a href="/integrantes/#arthur-hideio-noguti">Arthur Noguti</a></em></li>
-<li><a href="/pdfs/CE330/2025/Teoria_de_Conjuntos-Lista-1.pdf">Lista 4 - Teoria de Conjuntos</a> PDF</li>
-<li><a href="/pdfs/CE330/2025/Teoria_de_Conjuntos-Lista-1-respostas.pdf">Respostas Lista 4 - Teoria de Conjuntos</a> PDF <em>Por: <a href="/integrantes/#j%C3%BAlia-zorzo-ferreira">Júlia Zorzo Ferreira</a></em></li>
-</ul>
-</li>
-</ul>
-<p><strong>2024</strong> | <em>Dra. Fernanda Buhrer Rizzato</em></p>
-<ul>
-<li><strong>📚 Listas de exercícios:</strong>
-<ul>
-<li><a href="/pdfs/CE330/2024/Listas.zip">Todas as listas</a> ZIP</li>
-</ul>
-</li>
-</ul>
-<p><strong>2023</strong> | <em>Benito Orlando Olivares Aguilera</em></p>
-<ul>
-<li><strong>📚 Listas de exercícios:</strong>
-<ul>
-<li><a href="/pdfs/CE330/2023/Lista1-CE330-FMP-2023-2.pdf">Lista 1</a> PDF</li>
-<li><a href="/pdfs/CE330/2023/Lista2-CE330-FMP-2023-2.pdf">Lista 2</a> PDF</li>
-<li><a href="/pdfs/CE330/2023/Lista3-CE330-FMP-2023-2.pdf">Lista 3</a> PDF</li>
-<li><a href="/pdfs/CE330/2023/Lista4-CE330-FMP-2023-2.pdf">Lista 4</a> PDF</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h5 id="-ce304---teoria-da-probabilidade-1-prob-a">🎲 CE304 - Teoria da Probabilidade 1 (Prob A)</h5>
-<p><strong>Apostila</strong> | Desenvolvido pelos petianos: <em><a href="/integrantes/#bruno-wavrzenczak">Bruno Wavrzenczak</a> - <a href="/integrantes/#cristian-pessatti-dos-anjos">Cristian Pessatti dos Anjos</a> - Caio Gomes Alves - Anderson Amorim</em></p>
-<ul>
-<li><strong>📘 <a href="/apostilas/teoria_probabilidade/">Teoria da Probabilidade</a></strong> HTML</li>
-</ul>
-<p><strong>2025</strong> | <em>Benito Orlando Olivares Aguilera</em></p>
-<ul>
-<li><strong>📚 Listas de exercícios:</strong>
-<ul>
-<li><a href="/pdfs/CE304/2025/Lista1-CE304_TP1-2025-1.pdf">Lista 1</a> PDF</li>
-<li><a href="/pdfs/CE304/2025/Lista2-CE304_TP1-2025-1.pdf">Lista 2</a> PDF</li>
-</ul>
-</li>
-</ul>
-<p><strong>2024</strong> | <em>Benito Orlando Olivares Aguilera</em></p>
-<ul>
-<li><strong>📚 Listas de exercícios:</strong>
-<ul>
-<li><a href="/pdfs/CE304/2024/listas_P1/Lista1-CE304_TP1-2024-1.pdf">Lista 1 - P1</a> PDF</li>
-<li><a href="/pdfs/CE304/2024/listas_P1/Lista2-CE304_TP1-2024-1.pdf">Lista 2 - P1</a> PDF</li>
-<li><a href="/pdfs/CE304/2024/listas_P2/Lista-2-CE304-TP1-2024-1s.pdf">Lista 2 - P2</a> PDF</li>
-<li><a href="/pdfs/CE304/2024/listas_P2/Lista-3-CE304-TP1-2024-1s.pdf">Lista 3 - P2</a> PDF</li>
-<li><a href="/pdfs/CE304/2024/listas_P3/Lista-4-TP1-2024-1.pdf">Lista 4 - P3</a> PDF</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h5 id="-cm310---pré-cálculo">∫ CM310 - Pré-Cálculo</h5>
-<p><strong>2024</strong> | <em>Dra. Evelin H. M. Krulikovski</em></p>
-<ul>
-<li><strong>📚 Listas de exercícios:</strong>
-<ul>
-<li><a href="/pdfs/CM310/2024/Listas.zip">Todas as listas</a> ZIP</li>
-</ul>
-</li>
-</ul>
-<p><strong>2025</strong> | <em>Dr. Pedro Danizete Damázio</em></p>
-<ul>
-<li><strong>📝 Provas:</strong>
-<ul>
-<li><a href="/pdfs/CM310/2025/avaliacao-01.pdf">Avaliação 01</a> PDF</li>
-</ul>
-</li>
-<li><strong>📚 Listas de exercícios:</strong>
-<ul>
-<li><a href="/pdfs/CM310/2025/lista-1-modulo-1.pdf">Lista 1 - Módulo 1</a> PDF</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h5 id="-cm311---cálculo-1">∫ CM311 - Cálculo 1</h5>
-<p><strong>2024</strong> | <em>Willian Thomas Rocha</em></p>
-<ul>
-<li><strong>📚 Listas de exercícios:</strong>
-<ul>
-<li><a href="/pdfs/CM311/2024/Listas_2024.zip">Todas as listas</a> ZIP</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h5 id="-cm312---cálculo-2">∫ CM312 - Cálculo 2</h5>
-<p><strong>2025</strong> | <em>Me. Matheus Moraes Santos</em></p>
-<ul>
-<li><strong>📚 Listas de exercícios:</strong>
-<ul>
-<li><a href="/pdfs/CM312/2025/Lista1.pdf">Lista 1 (P1)</a> PDF</li>
-<li><a href="/pdfs/CM312/2025/Lista2.pdf">Lista 2 (P1)</a> PDF</li>
-<li><a href="/pdfs/CM312/2025/Lista3.pdf">Lista 3 (P2)</a> PDF</li>
-<li><a href="/pdfs/CM312/2025/Lista4.pdf">Lista 4 (P2)</a> PDF</li>
-</ul>
-</li>
-</ul>
-<hr>
-<p>← <a href="/materiais/">Voltar para Materiais</a></p>
+    <div class="col-md-3 col-sm-6">
+      <div class="filter-group">
+        <label class="form-label fw-semibold">🎯 Semestre</label>
+        <select id="filtro-semestre" class="form-select">
+          <option value="todos">Todos os semestres</option>
+          <option value="1">1º Semestre</option>
+          <option value="2">2º Semestre</option>
+        </select>
+      </div>
+    </div>
+    
+    
+    <div class="col-md-6 col-sm-12">
+      <div class="filter-group">
+        <label class="form-label fw-semibold">📚 Disciplina</label>
+        <select id="filtro-disciplina" class="form-select disciplina-select">
+          <option value="todos">Todas as disciplinas</option>
+          
+            <option value="CE301">
+              <span class="disciplina-codigo-option">CE301</span>
+              <span class="disciplina-nome-option">Estatística Básica</span>
+            </option>
+          
+            <option value="CE330">
+              <span class="disciplina-codigo-option">CE330</span>
+              <span class="disciplina-nome-option">Fundamentos Matemáticos Para Probabilidade (Pré-Prob)</span>
+            </option>
+          
+            <option value="CE304">
+              <span class="disciplina-codigo-option">CE304</span>
+              <span class="disciplina-nome-option">Teoria da Probabilidade 1 (Prob A)</span>
+            </option>
+          
+        </select>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row mt-3">
+    <div class="col-12">
+      <button id="limpar-filtros" class="btn btn-outline-secondary btn-sm">
+        🗑️ Limpar Filtros
+      </button>
+      <span id="resultados-info" class="ms-3 text-muted small"></span>
+    </div>
+  </div>
+</div>
 
+      
+      <div id="disciplinas-container" class="disciplinas-container">
+        
+        <div class="disciplina-card" data-codigo="CE301" data-anos=".ano,.ano">
+          <div class="disciplina-header">
+            <div class="disciplina-codigo">CE301</div>
+            <h2 class="disciplina-nome">
+              <span class="disciplina-emoji">📊</span>
+              Estatística Básica
+            </h2>
+          </div>
+          
+          <div class="disciplina-body">
+            
+            
+
+            
+            
+            <div class="ano-card" data-ano="2025" data-semestre="1">
+              <div class="ano-header">
+                <h3 class="ano-titulo">
+                  2025 • 1º Semestre
+                </h3>
+                
+                <div class="professores">Dra. Amanda Merian Freitas Mendes, Dra. Sílvia Emiko Shimakura, Dr. Paulo Justiniano Ribeiro Junior</div>
+                
+              </div>
+              
+              <div class="ano-content">
+                
+                <div class="categoria-section">
+                  <h4 class="categoria-titulo">🌐 Atividades Online</h4>
+                  <div class="materiais-grid">
+                    
+                    <div class="material-item">
+                      <div class="material-icon">
+                        📄
+                        
+                      </div>
+                      
+                      <div class="material-content">
+                        <a href="/pdfs/CE301/2025/Respostas-Atividade-Online-1.pdf" class="material-link" target="_blank">
+                          Respostas Atividade online 1
+                        </a>
+                        <span class="material-tipo">PDF</span>
+                        
+
+<div class="material-autor">
+  Por: 
+  
+    
+    
+    <span class="hover-author">
+      <a href="/integrantes/#julia-zorzo-ferreira" class="autor-link">Julia Zorzo Ferreira</a>
+      <div class="author-image">
+        <img src="/images/team/julia-zorzo-ferreira.jpg" 
+             alt="Julia Zorzo Ferreira"
+             onerror="this.src='/images/team/julia-zorzo-ferreira.png'; this.onerror=function(){this.src='/images/team/placeholder.png';}">
+        <span>Julia Zorzo Ferreira</span>
+      </div>
+    </span>
+  
+</div>
+
+
+                      </div>
+                    </div>
+                    
+                    <div class="material-item">
+                      <div class="material-icon">
+                        📄
+                        
+                      </div>
+                      
+                      <div class="material-content">
+                        <a href="/pdfs/CE301/2025/Respostas-Atividade-Online-2.pdf" class="material-link" target="_blank">
+                          Respostas Atividade online 2
+                        </a>
+                        <span class="material-tipo">PDF</span>
+                        
+
+<div class="material-autor">
+  Por: 
+  
+    
+    
+    <span class="hover-author">
+      <a href="/integrantes/#julia-zorzo-ferreira" class="autor-link">Júlia Zorzo Ferreira</a>
+      <div class="author-image">
+        <img src="/images/team/julia-zorzo-ferreira.jpg" 
+             alt="Júlia Zorzo Ferreira"
+             onerror="this.src='/images/team/julia-zorzo-ferreira.png'; this.onerror=function(){this.src='/images/team/placeholder.png';}">
+        <span>Júlia Zorzo Ferreira</span>
+      </div>
+    </span>
+  
+</div>
+
+
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            
+            <div class="ano-card" data-ano="2024" data-semestre="1">
+              <div class="ano-header">
+                <h3 class="ano-titulo">
+                  2024 • 1º Semestre
+                </h3>
+                
+                <div class="professores">Dra. Sílvia Emiko Shimakura, Me. Lineu Alberto Cavazani de Freitas</div>
+                
+              </div>
+              
+              <div class="ano-content">
+                
+                <div class="categoria-section">
+                  <h4 class="categoria-titulo">📚 Listas de exercícios</h4>
+                  <div class="materiais-grid">
+                    
+                    <div class="material-item">
+                      <div class="material-icon">
+                        📦
+                        
+                      </div>
+                      
+                      <div class="material-content">
+                        <a href="/pdfs/CE301/2024/listas.zip" class="material-link" target="_blank">
+                          Todas as listas
+                        </a>
+                        <span class="material-tipo">ZIP</span>
+                        
+
+
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        
+        <div class="disciplina-card" data-codigo="CE330" data-anos=".ano,.ano,.ano">
+          <div class="disciplina-header">
+            <div class="disciplina-codigo">CE330</div>
+            <h2 class="disciplina-nome">
+              <span class="disciplina-emoji">🎲</span>
+              Fundamentos Matemáticos Para Probabilidade (Pré-Prob)
+            </h2>
+          </div>
+          
+          <div class="disciplina-body">
+            
+            
+
+            
+            
+            <div class="ano-card" data-ano="2025" data-semestre="1">
+              <div class="ano-header">
+                <h3 class="ano-titulo">
+                  2025 • 1º Semestre
+                </h3>
+                
+                <div class="professores">Dra. Fernanda Buhrer Rizzato</div>
+                
+              </div>
+              
+              <div class="ano-content">
+                
+                <div class="categoria-section">
+                  <h4 class="categoria-titulo">📚 Listas de exercícios</h4>
+                  <div class="materiais-grid">
+                    
+                    <div class="material-item">
+                      <div class="material-icon">
+                        📄
+                        
+                      </div>
+                      
+                      <div class="material-content">
+                        <a href="/pdfs/CE330/2025/Logica-Lista-1.pdf" class="material-link" target="_blank">
+                          Lista 1 - Lógica
+                        </a>
+                        <span class="material-tipo">PDF</span>
+                        
+
+
+                      </div>
+                    </div>
+                    
+                    <div class="material-item">
+                      <div class="material-icon">
+                        📄
+                        
+                      </div>
+                      
+                      <div class="material-content">
+                        <a href="/pdfs/CE330/2025/Logica-Lista-1-respostas.pdf" class="material-link" target="_blank">
+                          Respostas Lista 1 - Lógica
+                        </a>
+                        <span class="material-tipo">PDF</span>
+                        
+
+<div class="material-autor">
+  Por: 
+  
+    
+    
+    <span class="hover-author">
+      <a href="/integrantes/#arthur-hideio-noguti" class="autor-link">Arthur Hideio Noguti</a>
+      <div class="author-image">
+        <img src="/images/team/arthur-hideio-noguti.jpg" 
+             alt="Arthur Hideio Noguti"
+             onerror="this.src='/images/team/arthur-hideio-noguti.png'; this.onerror=function(){this.src='/images/team/placeholder.png';}">
+        <span>Arthur Hideio Noguti</span>
+      </div>
+    </span>
+  
+</div>
+
+
+                      </div>
+                    </div>
+                    
+                    <div class="material-item">
+                      <div class="material-icon">
+                        📄
+                        
+                      </div>
+                      
+                      <div class="material-content">
+                        <a href="/pdfs/CE330/2025/Logica-Lista-2.pdf" class="material-link" target="_blank">
+                          Lista 2 - Lógica
+                        </a>
+                        <span class="material-tipo">PDF</span>
+                        
+
+
+                      </div>
+                    </div>
+                    
+                    <div class="material-item">
+                      <div class="material-icon">
+                        📄
+                        
+                      </div>
+                      
+                      <div class="material-content">
+                        <a href="/pdfs/CE330/2025/Logica-Lista-2-Respostas.pdf" class="material-link" target="_blank">
+                          Respostas Lista 2 - Lógica
+                        </a>
+                        <span class="material-tipo">PDF</span>
+                        
+
+<div class="material-autor">
+  Por: 
+  
+    
+    
+    <span class="hover-author">
+      <a href="/integrantes/#arthur-hideio-noguti" class="autor-link">Arthur Hideio Noguti</a>
+      <div class="author-image">
+        <img src="/images/team/arthur-hideio-noguti.jpg" 
+             alt="Arthur Hideio Noguti"
+             onerror="this.src='/images/team/arthur-hideio-noguti.png'; this.onerror=function(){this.src='/images/team/placeholder.png';}">
+        <span>Arthur Hideio Noguti</span>
+      </div>
+    </span>
+  
+</div>
+
+
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            
+            <div class="ano-card" data-ano="2024" data-semestre="1">
+              <div class="ano-header">
+                <h3 class="ano-titulo">
+                  2024 • 1º Semestre
+                </h3>
+                
+                <div class="professores">Dra. Fernanda Buhrer Rizzato</div>
+                
+              </div>
+              
+              <div class="ano-content">
+                
+                <div class="categoria-section">
+                  <h4 class="categoria-titulo">📚 Listas de exercícios</h4>
+                  <div class="materiais-grid">
+                    
+                    <div class="material-item">
+                      <div class="material-icon">
+                        📦
+                        
+                      </div>
+                      
+                      <div class="material-content">
+                        <a href="/pdfs/CE330/2024/Listas.zip" class="material-link" target="_blank">
+                          Todas as listas
+                        </a>
+                        <span class="material-tipo">ZIP</span>
+                        
+
+
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            
+            <div class="ano-card" data-ano="2023" data-semestre="2">
+              <div class="ano-header">
+                <h3 class="ano-titulo">
+                  2023 • 2º Semestre
+                </h3>
+                
+                <div class="professores">Benito Orlando Olivares Aguilera</div>
+                
+              </div>
+              
+              <div class="ano-content">
+                
+                <div class="categoria-section">
+                  <h4 class="categoria-titulo">📚 Listas de exercícios</h4>
+                  <div class="materiais-grid">
+                    
+                    <div class="material-item">
+                      <div class="material-icon">
+                        📄
+                        
+                      </div>
+                      
+                      <div class="material-content">
+                        <a href="/pdfs/CE330/2023/Lista1-CE330-FMP-2023-2.pdf" class="material-link" target="_blank">
+                          Lista 1
+                        </a>
+                        <span class="material-tipo">PDF</span>
+                        
+
+
+                      </div>
+                    </div>
+                    
+                    <div class="material-item">
+                      <div class="material-icon">
+                        📄
+                        
+                      </div>
+                      
+                      <div class="material-content">
+                        <a href="/pdfs/CE330/2023/Lista2-CE330-FMP-2023-2.pdf" class="material-link" target="_blank">
+                          Lista 2
+                        </a>
+                        <span class="material-tipo">PDF</span>
+                        
+
+
+                      </div>
+                    </div>
+                    
+                    <div class="material-item">
+                      <div class="material-icon">
+                        📄
+                        
+                      </div>
+                      
+                      <div class="material-content">
+                        <a href="/pdfs/CE330/2023/Lista3-CE330-FMP-2023-2.pdf" class="material-link" target="_blank">
+                          Lista 3
+                        </a>
+                        <span class="material-tipo">PDF</span>
+                        
+
+
+                      </div>
+                    </div>
+                    
+                    <div class="material-item">
+                      <div class="material-icon">
+                        📄
+                        
+                      </div>
+                      
+                      <div class="material-content">
+                        <a href="/pdfs/CE330/2023/Lista4-CE330-FMP-2023-2.pdf" class="material-link" target="_blank">
+                          Lista 4
+                        </a>
+                        <span class="material-tipo">PDF</span>
+                        
+
+
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        
+        <div class="disciplina-card" data-codigo="CE304" data-anos=".ano,.ano">
+          <div class="disciplina-header">
+            <div class="disciplina-codigo">CE304</div>
+            <h2 class="disciplina-nome">
+              <span class="disciplina-emoji">🎲</span>
+              Teoria da Probabilidade 1 (Prob A)
+            </h2>
+          </div>
+          
+          <div class="disciplina-body">
+            
+            
+            <div class="apostila-section mb-4">
+              <div class="apostila-card">
+                <h4 class="apostila-titulo">📘 Apostila da Disciplina</h4>
+                <a href="/apostilas/teoria_probabilidade/" class="apostila-link" target="_blank">
+                  Teoria da Probabilidade (HTML)
+                </a>
+                <div class="apostila-autores">
+                  Desenvolvido por: Bruno Wavrzenczak, Cristian Pessatti dos Anjos, Caio Gomes Alves, Anderson Amorim
+                </div>
+              </div>
+            </div>
+            
+
+            
+            
+            <div class="ano-card" data-ano="2025" data-semestre="1">
+              <div class="ano-header">
+                <h3 class="ano-titulo">
+                  2025 • 1º Semestre
+                </h3>
+                
+                <div class="professores">Benito Orlando Olivares Aguilera</div>
+                
+              </div>
+              
+              <div class="ano-content">
+                
+                <div class="categoria-section">
+                  <h4 class="categoria-titulo">📚 Listas de exercícios</h4>
+                  <div class="materiais-grid">
+                    
+                    <div class="material-item">
+                      <div class="material-icon">
+                        📄
+                        
+                      </div>
+                      
+                      <div class="material-content">
+                        <a href="/pdfs/CE304/2025/Lista1-CE304_TP1-2025-1.pdf" class="material-link" target="_blank">
+                          Lista 1
+                        </a>
+                        <span class="material-tipo">PDF</span>
+                        
+
+
+                      </div>
+                    </div>
+                    
+                    <div class="material-item">
+                      <div class="material-icon">
+                        📄
+                        
+                      </div>
+                      
+                      <div class="material-content">
+                        <a href="/pdfs/CE304/2025/Lista2-CE304_TP1-2025-1.pdf" class="material-link" target="_blank">
+                          Lista 2
+                        </a>
+                        <span class="material-tipo">PDF</span>
+                        
+
+
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            
+            <div class="ano-card" data-ano="2024" data-semestre="1">
+              <div class="ano-header">
+                <h3 class="ano-titulo">
+                  2024 • 1º Semestre
+                </h3>
+                
+                <div class="professores">Benito Orlando Olivares Aguilera</div>
+                
+              </div>
+              
+              <div class="ano-content">
+                
+                <div class="categoria-section">
+                  <h4 class="categoria-titulo">📚 Listas de exercícios</h4>
+                  <div class="materiais-grid">
+                    
+                    <div class="material-item">
+                      <div class="material-icon">
+                        📄
+                        
+                      </div>
+                      
+                      <div class="material-content">
+                        <a href="/pdfs/CE304/2024/listas_P1/Lista1-CE304_TP1-2024-1.pdf" class="material-link" target="_blank">
+                          Lista 1 - P1
+                        </a>
+                        <span class="material-tipo">PDF</span>
+                        
+
+
+                      </div>
+                    </div>
+                    
+                    <div class="material-item">
+                      <div class="material-icon">
+                        📄
+                        
+                      </div>
+                      
+                      <div class="material-content">
+                        <a href="/pdfs/CE304/2024/listas_P1/Lista2-CE304_TP1-2024-1.pdf" class="material-link" target="_blank">
+                          Lista 2 - P1
+                        </a>
+                        <span class="material-tipo">PDF</span>
+                        
+
+
+                      </div>
+                    </div>
+                    
+                    <div class="material-item">
+                      <div class="material-icon">
+                        📄
+                        
+                      </div>
+                      
+                      <div class="material-content">
+                        <a href="/pdfs/CE304/2024/listas_P2/Lista-2-CE304-TP1-2024-1s.pdf" class="material-link" target="_blank">
+                          Lista 2 - P2
+                        </a>
+                        <span class="material-tipo">PDF</span>
+                        
+
+
+                      </div>
+                    </div>
+                    
+                    <div class="material-item">
+                      <div class="material-icon">
+                        📄
+                        
+                      </div>
+                      
+                      <div class="material-content">
+                        <a href="/pdfs/CE304/2024/listas_P2/Lista-3-CE304-TP1-2024-1s.pdf" class="material-link" target="_blank">
+                          Lista 3 - P2
+                        </a>
+                        <span class="material-tipo">PDF</span>
+                        
+
+
+                      </div>
+                    </div>
+                    
+                    <div class="material-item">
+                      <div class="material-icon">
+                        📄
+                        
+                      </div>
+                      
+                      <div class="material-content">
+                        <a href="/pdfs/CE304/2024/listas_P3/Lista-4-TP1-2024-1.pdf" class="material-link" target="_blank">
+                          Lista 4 - P3
+                        </a>
+                        <span class="material-tipo">PDF</span>
+                        
+
+
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        
+      </div>
+
+      
+      <div id="sem-resultados" class="text-center py-5" style="display: none;">
+        <div class="empty-state">
+          <h3>📭 Nenhum material encontrado</h3>
+          <p class="text-muted">Tente ajustar os filtros para ver mais resultados.</p>
+        </div>
+      </div>
+
+      
+      <div class="text-center mt-5">
+        <a href="/materiais/" class="btn btn-outline-primary btn-lg">
+          ← Voltar para Materiais
+        </a>
       </div>
     </div>
   </div>
 </div>
+
+<style>
+ 
+
+ 
+.hover-author {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.hover-author .author-image {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  min-width: 140px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.hover-author:hover .author-image {
+  opacity: 1;
+  visibility: visible;
+}
+
+.hover-author .author-image img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 8px;
+  border: 2px solid #74b9ff;
+}
+
+.hover-author .author-image span {
+  font-size: 0.8em;
+  color: #2d3436;
+  display: block;
+  font-weight: 500;
+}
+
+.hover-author .author-image::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 8px solid transparent;
+  border-top-color: white;
+}
+
+.autor-link {
+  color: #00b894;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px dashed #00b894;
+  transition: all 0.2s ease;
+}
+
+.autor-link:hover {
+  text-decoration: none;
+  border-bottom-style: solid;
+  color: #00a085;
+}
+
+ 
+.hidden {
+  display: none !important;
+}
+
+.disciplina-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  margin-bottom: 2.5rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+   
+  opacity: 1;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.disciplina-card.hidden {
+  opacity: 0;
+  transform: translateY(-10px);
+  height: 0;
+  margin-bottom: 0;
+  overflow: hidden;
+}
+
+.ano-card {
+  background: white;
+  margin: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #e9ecef;
+  transition: all 0.2s ease;
+   
+  opacity: 1;
+  transform: scaleY(1);
+  transform-origin: top;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.ano-card.hidden {
+  opacity: 0;
+  transform: scaleY(0);
+  height: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+ 
+.disciplinas-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+.disciplinas-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+ 
+.filtros-container {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+  border: 1px solid #e9ecef;
+}
+
+ 
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.filter-group .form-label {
+  color: #495057;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+ 
+.filter-group .form-select {
+  flex: 1;
+  min-height: 46px;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.filter-group .form-select:focus {
+  border-color: #74b9ff;
+  box-shadow: 0 0 0 0.2rem rgba(116, 185, 255, 0.25);
+}
+
+ 
+.disciplina-select option {
+  padding: 8px 12px;
+  border-bottom: 1px solid #f1f2f6;
+  white-space: normal;
+  line-height: 1.4;
+}
+
+.disciplina-codigo-option {
+  font-weight: 600;
+  color: #2d3436;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.disciplina-nome-option {
+  color: #636e72;
+  font-size: 0.9em;
+  display: block;
+  line-height: 1.3;
+}
+
+ 
+.btn-outline-secondary {
+  border-color: #6c757d;
+  color: #6c757d;
+  transition: all 0.2s ease;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  color: white;
+}
+
+ 
+#resultados-info {
+  font-size: 0.875rem;
+}
+
+ 
+@media (max-width: 768px) {
+  .filtros-container {
+    padding: 1rem;
+  }
+  
+  .filter-group .form-select {
+    font-size: 16px;  
+  }
+  
+  .align-items-end {
+    align-items: stretch !important;
+  }
+  
+  .filter-group {
+    margin-bottom: 1rem;
+  }
+}
+
+ 
+.btn-outline-secondary {
+  border-color: #6c757d;
+  color: #6c757d;
+  transition: all 0.2s ease;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  color: white;
+}
+
+ 
+#resultados-info {
+  font-size: 0.875rem;
+}
+ 
+.apostila-card {
+  background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+  border: 1px solid #ffeaa7;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1rem 1.5rem;
+}
+
+.apostila-titulo {
+  color: #856404;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.apostila-link {
+  color: #0056b3;
+  font-weight: 500;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.apostila-link:hover {
+  text-decoration: underline;
+}
+
+.apostila-autores {
+  color: #666;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+ 
+.ano-card {
+  background: white;
+  margin: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #e9ecef;
+  transition: all 0.2s ease;
+}
+
+.ano-card:hover {
+  border-color: #dee2e6;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+}
+
+.ano-header {
+  background: #f8f9fa;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 2px solid #74b9ff;
+  border-radius: 12px 12px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.ano-titulo {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #2d3436;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ano-titulo::before {
+  content: '📅';
+  font-size: 1.1rem;
+}
+
+.professores {
+  color: #6c757d;
+  font-size: 0.95rem;
+  font-style: italic;
+  background: #e9ecef;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+}
+
+ 
+.categoria-section {
+  padding: 1.5rem;
+  border-bottom: 1px solid #f1f2f6;
+}
+
+.categoria-section:last-child {
+  border-bottom: none;
+}
+
+.categoria-titulo {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #495057;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+ 
+.materiais-grid {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.material-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
+}
+
+.material-item:hover {
+  background: #e9ecef;
+  border-left-color: #74b9ff;
+  transform: translateX(5px);
+}
+
+.material-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #74b9ff;
+  color: white;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.material-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.material-link {
+  color: #2d3436;
+  text-decoration: none;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 0.25rem;
+  transition: color 0.2s ease;
+}
+
+.material-link:hover {
+  color: #0984e3;
+}
+
+.material-tipo {
+  color: #6c757d;
+  font-size: 0.85rem;
+  background: #e9ecef;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.material-autor {
+  color: #6c757d;
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+.autor-link {
+  color: #00b894;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.autor-link:hover {
+  text-decoration: underline;
+  color: #00a085;
+}
+
+ 
+.empty-state {
+  color: #6c757d;
+}
+
+.empty-state h3 {
+  color: #495057;
+  margin-bottom: 1rem;
+}
+
+
+
+ 
+@media (max-width: 768px) {
+  .disciplina-header {
+    padding: 1.25rem 1.5rem;
+  }
+  
+  .ano-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .material-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .material-icon {
+    align-self: flex-start;
+  }
+  
+  .professores {
+    font-size: 0.85rem;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const filtroAno = document.getElementById('filtro-ano');
+  const filtroDisciplina = document.getElementById('filtro-disciplina');
+  const filtroSemestre = document.getElementById('filtro-semestre');
+  const limparFiltros = document.getElementById('limpar-filtros');
+  const resultadosInfo = document.getElementById('resultados-info');
+  const semResultados = document.getElementById('sem-resultados');
+  
+  function aplicarFiltros() {
+    const anoSelecionado = filtroAno.value;
+    const disciplinaSelecionada = filtroDisciplina.value;
+    const semestreSelecionado = filtroSemestre.value;
+    
+    let disciplinasVisiveis = 0;
+    let anosVisiveis = 0;
+    
+    
+    document.querySelectorAll('.disciplina-card').forEach(disciplina => {
+      const codigoDisciplina = disciplina.dataset.codigo;
+      const anosDisciplina = disciplina.dataset.anos.split(',');
+      
+      let disciplinaTemAnoVisivel = false;
+      
+      
+      disciplina.querySelectorAll('.ano-card').forEach(anoCard => {
+        const ano = anoCard.dataset.ano;
+        const semestre = anoCard.dataset.semestre;
+        
+        const anoMatch = anoSelecionado === 'todos' || ano === anoSelecionado;
+        const disciplinaMatch = disciplinaSelecionada === 'todos' || disciplinaSelecionada === codigoDisciplina;
+        const semestreMatch = semestreSelecionado === 'todos' || semestre === semestreSelecionado;
+        
+        if (anoMatch && disciplinaMatch && semestreMatch) {
+          anoCard.classList.remove('hidden');
+          disciplinaTemAnoVisivel = true;
+          anosVisiveis++;
+        } else {
+          anoCard.classList.add('hidden');
+        }
+      });
+      
+      
+      if (disciplinaTemAnoVisivel && (disciplinaSelecionada === 'todos' || disciplinaSelecionada === codigoDisciplina)) {
+        disciplina.classList.remove('hidden');
+        disciplinasVisiveis++;
+      } else {
+        disciplina.classList.add('hidden');
+      }
+    });
+    
+    
+    if (disciplinasVisiveis === 0) {
+      semResultados.style.display = 'block';
+      document.getElementById('disciplinas-container').style.display = 'none';
+    } else {
+      semResultados.style.display = 'none';
+      document.getElementById('disciplinas-container').style.display = 'block';
+    }
+    
+    
+    resultadosInfo.textContent = `${disciplinasVisiveis} disciplina(s) com ${anosVisiveis} oferta(s) encontrada(s)`;
+  }
+  
+  
+  filtroAno.addEventListener('change', aplicarFiltros);
+  filtroDisciplina.addEventListener('change', aplicarFiltros);
+  filtroSemestre.addEventListener('change', aplicarFiltros);
+  
+  limparFiltros.addEventListener('click', function() {
+    filtroAno.value = 'todos';
+    filtroDisciplina.value = 'todos';
+    filtroSemestre.value = 'todos';
+    aplicarFiltros();
+  });
+  
+  
+  aplicarFiltros();
+});
+</script>
 
       </main><footer class="site-footer">
   <div class="container">

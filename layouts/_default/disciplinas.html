@@ -1,0 +1,739 @@
+{{ define "main" }}
+<div class="container py-5">
+  <div class="row">
+    <div class="col-12">
+      <!-- Cabeçalho -->
+      <div class="text-center mb-5">
+        <h1 class="display-5 fw-bold text-primary mb-3">{{ .Title }}</h1>
+        <p class="lead text-muted">Materiais organizados por disciplina, ano e semestre</p>
+      </div>
+
+<!-- Filtros -->
+<div class="filtros-container mb-5">
+  <div class="row g-3 align-items-end">
+    
+    <!-- Ano -->
+    <div class="col-md-3 col-sm-6">
+      <div class="filter-group">
+        <label class="form-label fw-semibold">📅 Ano</label>
+        <select id="filtro-ano" class="form-select">
+          <option value="todos">Todos os anos</option>
+          {{ $anos := slice }}
+          {{ range .Site.Data.disciplinas.disciplinas }}
+            {{ range .anos }}
+              {{ $anos = $anos | append .ano }}
+            {{ end }}
+          {{ end }}
+          {{ range sort (uniq $anos) "value" "desc" }}
+            <option value="{{ . }}">{{ . }}</option>
+          {{ end }}
+        </select>
+      </div>
+    </div>
+    
+    <!-- Semestre -->
+    <div class="col-md-3 col-sm-6">
+      <div class="filter-group">
+        <label class="form-label fw-semibold">🎯 Semestre</label>
+        <select id="filtro-semestre" class="form-select">
+          <option value="todos">Todos os semestres</option>
+          <option value="1">1º Semestre</option>
+          <option value="2">2º Semestre</option>
+        </select>
+      </div>
+    </div>
+    
+    <!-- Disciplina -->
+    <div class="col-md-6 col-sm-12">
+      <div class="filter-group">
+        <label class="form-label fw-semibold">📚 Disciplina</label>
+        <select id="filtro-disciplina" class="form-select disciplina-select">
+          <option value="todos">Todas as disciplinas</option>
+          {{ range .Site.Data.disciplinas.disciplinas }}
+            <option value="{{ .codigo }}">
+              <span class="disciplina-codigo-option">{{ .codigo }}</span>
+              <span class="disciplina-nome-option">{{ .nome }}</span>
+            </option>
+          {{ end }}
+        </select>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row mt-3">
+    <div class="col-12">
+      <button id="limpar-filtros" class="btn btn-outline-secondary btn-sm">
+        🗑️ Limpar Filtros
+      </button>
+      <span id="resultados-info" class="ms-3 text-muted small"></span>
+    </div>
+  </div>
+</div>
+
+      <!-- Container das disciplinas -->
+      <div id="disciplinas-container" class="disciplinas-container">
+        {{ range $index, $disciplina := .Site.Data.disciplinas.disciplinas }}
+        <div class="disciplina-card" data-codigo="{{ $disciplina.codigo }}" data-anos="{{ delimit (apply $disciplina.anos "string" ".ano") "," }}">
+          <div class="disciplina-header">
+            <div class="disciplina-codigo">{{ $disciplina.codigo }}</div>
+            <h2 class="disciplina-nome">
+              <span class="disciplina-emoji">{{ $disciplina.emoji }}</span>
+              {{ $disciplina.nome }}
+            </h2>
+          </div>
+          
+          <div class="disciplina-body">
+            <!-- Apostila se existir -->
+            {{ with $disciplina.apostila }}
+            <div class="apostila-section mb-4">
+              <div class="apostila-card">
+                <h4 class="apostila-titulo">📘 Apostila da Disciplina</h4>
+                <a href="{{ .link }}" class="apostila-link" target="_blank">
+                  {{ .descricao }} ({{ .tipo }})
+                </a>
+                <div class="apostila-autores">
+                  Desenvolvido por: {{ .autores }}
+                </div>
+              </div>
+            </div>
+            {{ end }}
+
+            <!-- Anos da disciplina -->
+            {{ range $anoIndex, $ano := $disciplina.anos }}
+            <div class="ano-card" data-ano="{{ $ano.ano }}" data-semestre="{{ $ano.semestre }}">
+              <div class="ano-header">
+                <h3 class="ano-titulo">
+                  {{ $ano.ano }} • {{ if eq $ano.semestre "1" }}1º Semestre{{ else }}2º Semestre{{ end }}
+                </h3>
+                {{ with $ano.professores }}
+                <div class="professores">{{ . }}</div>
+                {{ end }}
+              </div>
+              
+              <div class="ano-content">
+                {{ range $categoriaIndex, $categoria := $ano.materiais }}
+                <div class="categoria-section">
+                  <h4 class="categoria-titulo">{{ $categoria.categoria }}</h4>
+                  <div class="materiais-grid">
+                    {{ range $materialIndex, $material := $categoria.itens }}
+                    <div class="material-item">
+                      <div class="material-icon">
+                        {{ if eq $material.tipo "PDF" }}📄
+                        {{ else if eq $material.tipo "ZIP" }}📦
+                        {{ else if eq $material.tipo "HTML" }}🌐
+                        {{ else }}📁{{ end }}
+                      </div>
+                      
+                      <div class="material-content">
+                        <a href="{{ $material.arquivo }}" class="material-link" target="_blank">
+                          {{ $material.descricao }}
+                        </a>
+                        <span class="material-tipo">{{ $material.tipo }}</span>
+                        
+{{ with $material.autor }}
+<div class="material-autor">
+  Por: 
+  {{ with $material.url_autor }}
+    {{ $user_id := $material.autor | urlize }}
+    
+    <span class="hover-author">
+      <a href="{{ $material.url_autor }}" class="autor-link">{{ $material.autor }}</a>
+      <div class="author-image">
+        <img src="/images/team/{{ $user_id }}.jpg" 
+             alt="{{ $material.autor }}"
+             onerror="this.src='/images/team/{{ $user_id }}.png'; this.onerror=function(){this.src='/images/team/placeholder.png';}">
+        <span>{{ $material.autor }}</span>
+      </div>
+    </span>
+  {{ else }}
+    {{ $material.autor }}
+  {{ end }}
+</div>
+{{ end }}
+
+                      </div>
+                    </div>
+                    {{ end }}
+                  </div>
+                </div>
+                {{ end }}
+              </div>
+            </div>
+            {{ end }}
+          </div>
+        </div>
+        {{ end }}
+      </div>
+
+      <!-- Mensagem quando não há resultados -->
+      <div id="sem-resultados" class="text-center py-5" style="display: none;">
+        <div class="empty-state">
+          <h3>📭 Nenhum material encontrado</h3>
+          <p class="text-muted">Tente ajustar os filtros para ver mais resultados.</p>
+        </div>
+      </div>
+
+      <!-- Botão voltar -->
+      <div class="text-center mt-5">
+        <a href="/materiais/" class="btn btn-outline-primary btn-lg">
+          ← Voltar para Materiais
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+/* Adicione estas linhas no seu CSS, na seção apropriada */
+
+/* Hover para imagens dos autores */
+.hover-author {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.hover-author .author-image {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  min-width: 140px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.hover-author:hover .author-image {
+  opacity: 1;
+  visibility: visible;
+}
+
+.hover-author .author-image img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 8px;
+  border: 2px solid #74b9ff;
+}
+
+.hover-author .author-image span {
+  font-size: 0.8em;
+  color: #2d3436;
+  display: block;
+  font-weight: 500;
+}
+
+.hover-author .author-image::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 8px solid transparent;
+  border-top-color: white;
+}
+
+.autor-link {
+  color: #00b894;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px dashed #00b894;
+  transition: all 0.2s ease;
+}
+
+.autor-link:hover {
+  text-decoration: none;
+  border-bottom-style: solid;
+  color: #00a085;
+}
+
+/* Classes para mostrar/ocultar elementos */
+.hidden {
+  display: none !important;
+}
+
+.disciplina-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  margin-bottom: 2.5rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  /* Adicione esta linha para garantir transição suave */
+  opacity: 1;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.disciplina-card.hidden {
+  opacity: 0;
+  transform: translateY(-10px);
+  height: 0;
+  margin-bottom: 0;
+  overflow: hidden;
+}
+
+.ano-card {
+  background: white;
+  margin: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #e9ecef;
+  transition: all 0.2s ease;
+  /* Adicione para transição suave */
+  opacity: 1;
+  transform: scaleY(1);
+  transform-origin: top;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.ano-card.hidden {
+  opacity: 0;
+  transform: scaleY(0);
+  height: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+/* Para garantir que o container das disciplinas se ajuste */
+.disciplinas-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+.disciplinas-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Container principal dos filtros */
+.filtros-container {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+  border: 1px solid #e9ecef;
+}
+
+/* Grupo de filtro individual */
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.filter-group .form-label {
+  color: #495057;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Garantir que todos os selects tenham a mesma altura */
+.filter-group .form-select {
+  flex: 1;
+  min-height: 46px;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.filter-group .form-select:focus {
+  border-color: #74b9ff;
+  box-shadow: 0 0 0 0.2rem rgba(116, 185, 255, 0.25);
+}
+
+/* Estilo específico para o select de disciplinas */
+.disciplina-select option {
+  padding: 8px 12px;
+  border-bottom: 1px solid #f1f2f6;
+  white-space: normal;
+  line-height: 1.4;
+}
+
+.disciplina-codigo-option {
+  font-weight: 600;
+  color: #2d3436;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.disciplina-nome-option {
+  color: #636e72;
+  font-size: 0.9em;
+  display: block;
+  line-height: 1.3;
+}
+
+/* Botão limpar filtros */
+.btn-outline-secondary {
+  border-color: #6c757d;
+  color: #6c757d;
+  transition: all 0.2s ease;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  color: white;
+}
+
+/* Informação de resultados */
+#resultados-info {
+  font-size: 0.875rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .filtros-container {
+    padding: 1rem;
+  }
+  
+  .filter-group .form-select {
+    font-size: 16px; /* Prevenir zoom no iOS */
+  }
+  
+  .align-items-end {
+    align-items: stretch !important;
+  }
+  
+  .filter-group {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Estilo para o botão limpar filtros */
+.btn-outline-secondary {
+  border-color: #6c757d;
+  color: #6c757d;
+  transition: all 0.2s ease;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  color: white;
+}
+
+/* Informação de resultados */
+#resultados-info {
+  font-size: 0.875rem;
+}
+/* Apostila */
+.apostila-card {
+  background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+  border: 1px solid #ffeaa7;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1rem 1.5rem;
+}
+
+.apostila-titulo {
+  color: #856404;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.apostila-link {
+  color: #0056b3;
+  font-weight: 500;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.apostila-link:hover {
+  text-decoration: underline;
+}
+
+.apostila-autores {
+  color: #666;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+/* Ano card */
+.ano-card {
+  background: white;
+  margin: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #e9ecef;
+  transition: all 0.2s ease;
+}
+
+.ano-card:hover {
+  border-color: #dee2e6;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+}
+
+.ano-header {
+  background: #f8f9fa;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 2px solid #74b9ff;
+  border-radius: 12px 12px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.ano-titulo {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #2d3436;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ano-titulo::before {
+  content: '📅';
+  font-size: 1.1rem;
+}
+
+.professores {
+  color: #6c757d;
+  font-size: 0.95rem;
+  font-style: italic;
+  background: #e9ecef;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+}
+
+/* Categorias de materiais */
+.categoria-section {
+  padding: 1.5rem;
+  border-bottom: 1px solid #f1f2f6;
+}
+
+.categoria-section:last-child {
+  border-bottom: none;
+}
+
+.categoria-titulo {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #495057;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Lista de materiais */
+.materiais-grid {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.material-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
+}
+
+.material-item:hover {
+  background: #e9ecef;
+  border-left-color: #74b9ff;
+  transform: translateX(5px);
+}
+
+.material-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #74b9ff;
+  color: white;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.material-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.material-link {
+  color: #2d3436;
+  text-decoration: none;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 0.25rem;
+  transition: color 0.2s ease;
+}
+
+.material-link:hover {
+  color: #0984e3;
+}
+
+.material-tipo {
+  color: #6c757d;
+  font-size: 0.85rem;
+  background: #e9ecef;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.material-autor {
+  color: #6c757d;
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+.autor-link {
+  color: #00b894;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.autor-link:hover {
+  text-decoration: underline;
+  color: #00a085;
+}
+
+/* Empty state */
+.empty-state {
+  color: #6c757d;
+}
+
+.empty-state h3 {
+  color: #495057;
+  margin-bottom: 1rem;
+}
+
+
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .disciplina-header {
+    padding: 1.25rem 1.5rem;
+  }
+  
+  .ano-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .material-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .material-icon {
+    align-self: flex-start;
+  }
+  
+  .professores {
+    font-size: 0.85rem;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const filtroAno = document.getElementById('filtro-ano');
+  const filtroDisciplina = document.getElementById('filtro-disciplina');
+  const filtroSemestre = document.getElementById('filtro-semestre');
+  const limparFiltros = document.getElementById('limpar-filtros');
+  const resultadosInfo = document.getElementById('resultados-info');
+  const semResultados = document.getElementById('sem-resultados');
+  
+  function aplicarFiltros() {
+    const anoSelecionado = filtroAno.value;
+    const disciplinaSelecionada = filtroDisciplina.value;
+    const semestreSelecionado = filtroSemestre.value;
+    
+    let disciplinasVisiveis = 0;
+    let anosVisiveis = 0;
+    
+    // Percorre todas as disciplinas
+    document.querySelectorAll('.disciplina-card').forEach(disciplina => {
+      const codigoDisciplina = disciplina.dataset.codigo;
+      const anosDisciplina = disciplina.dataset.anos.split(',');
+      
+      let disciplinaTemAnoVisivel = false;
+      
+      // Percorre anos dentro da disciplina
+      disciplina.querySelectorAll('.ano-card').forEach(anoCard => {
+        const ano = anoCard.dataset.ano;
+        const semestre = anoCard.dataset.semestre;
+        
+        const anoMatch = anoSelecionado === 'todos' || ano === anoSelecionado;
+        const disciplinaMatch = disciplinaSelecionada === 'todos' || disciplinaSelecionada === codigoDisciplina;
+        const semestreMatch = semestreSelecionado === 'todos' || semestre === semestreSelecionado;
+        
+        if (anoMatch && disciplinaMatch && semestreMatch) {
+          anoCard.classList.remove('hidden');
+          disciplinaTemAnoVisivel = true;
+          anosVisiveis++;
+        } else {
+          anoCard.classList.add('hidden');
+        }
+      });
+      
+      // Mostra/oculta disciplina baseado nos anos visíveis
+      if (disciplinaTemAnoVisivel && (disciplinaSelecionada === 'todos' || disciplinaSelecionada === codigoDisciplina)) {
+        disciplina.classList.remove('hidden');
+        disciplinasVisiveis++;
+      } else {
+        disciplina.classList.add('hidden');
+      }
+    });
+    
+    // Mostra/oculta mensagem de sem resultados
+    if (disciplinasVisiveis === 0) {
+      semResultados.style.display = 'block';
+      document.getElementById('disciplinas-container').style.display = 'none';
+    } else {
+      semResultados.style.display = 'none';
+      document.getElementById('disciplinas-container').style.display = 'block';
+    }
+    
+    // Atualiza info de resultados
+    resultadosInfo.textContent = `${disciplinasVisiveis} disciplina(s) com ${anosVisiveis} oferta(s) encontrada(s)`;
+  }
+  
+  // Event listeners
+  filtroAno.addEventListener('change', aplicarFiltros);
+  filtroDisciplina.addEventListener('change', aplicarFiltros);
+  filtroSemestre.addEventListener('change', aplicarFiltros);
+  
+  limparFiltros.addEventListener('click', function() {
+    filtroAno.value = 'todos';
+    filtroDisciplina.value = 'todos';
+    filtroSemestre.value = 'todos';
+    aplicarFiltros();
+  });
+  
+  // Aplicar filtros inicialmente
+  aplicarFiltros();
+});
+</script>
+{{ end }}
