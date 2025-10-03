@@ -35,7 +35,7 @@ disciplinas:
     anos:
       - ano: 2025
         professores: "Dra. Fernanda Buhrer Rizzato"
-        semestre: "1"
+        semestre: "2"
         materiais:
           - categoria: "📚 Listas de exercícios"
             itens:
@@ -55,9 +55,25 @@ disciplinas:
                 tipo: "PDF"
                 autor: "Arthur Hideio Noguti"
                 url_autor: "/integrantes/#arthur-hideio-noguti"
+              - descricao: "Lista 3 - Indução Matemática"
+                arquivo: "/pdfs/CE330/2025/inducao-lista-1.pdf"
+                tipo: "PDF"
+              - descricao: "Respostas Lista 3 - Indução Matemática"
+                arquivo: "/pdfs/CE330/2025/inducao-lista-1-respostas.pdf"
+                tipo: "PDF"
+                autor: "Arthur Hideio Noguti"
+                url_autor: "/integrantes/#arthur-hideio-noguti"                
+              - descricao: "Lista 4 - Teoria de Conjuntos"
+                arquivo: "/pdfs/CE330/2025/Teoria_de_Conjuntos-Lista-1.pdf"
+                tipo: "PDF"
+              - descricao: "Respostas Lista 4 - Teoria de Conjuntos"
+                arquivo: "/pdfs/CE330/2025/Teoria_de_Conjuntos-Lista-1-respostas.pdf"
+                tipo: "PDF"
+                autor: "Júlia Zorzo Ferreira"
+                url_autor: "/integrantes/#julia-zorzo-ferreira"                   
       - ano: 2024
         professores: "Dra. Fernanda Buhrer Rizzato"
-        semestre: "1"
+        semestre: "2"
         materiais:
           - categoria: "📚 Listas de exercícios"
             itens:
@@ -125,3 +141,45 @@ disciplinas:
               - descricao: "Lista 4 - P3"
                 arquivo: "/pdfs/CE304/2024/listas_P3/Lista-4-TP1-2024-1.pdf"
                 tipo: "PDF"
+                
+  - codigo: "CM310"
+    nome: "Pré-Cálculo"
+    emoji: "∫"
+    anos:
+      - ano: 2025
+        professores: "Dr. Pedro Danizete Damázio"
+        semestre: "1"
+        materiais:
+          - categoria: "📚 Listas de exercícios"
+            itens:
+              - descricao: "Lista 1 - Módulo 1"
+                arquivo: "/pdfs/CM310/2025/lista-1-modulo-1.pdf"
+                tipo: "PDF"
+          - categoria: "📝 Provas"
+            itens:
+              - descricao: "Avaliação 01"
+                arquivo: "/pdfs/CM310/2025/avaliacao-01.pdf"
+                tipo: "PDF"                
+      - ano: 2024
+        professores: "Dra. Evelin H. M. Krulikovski"
+        semestre: "1"
+        materiais:
+          - categoria: "📚 Listas de exercícios"
+            itens:
+              - descricao: "Lista 1 - P1"
+                arquivo: "/pdfs/CM310/2024/Listas.zip"
+                tipo: "ZIP"
+                
+  - codigo: "CM311"
+    nome: "Cálculo 1"
+    emoji: "∫"
+    anos:
+      - ano: 2024
+        professores: "Willian Thomas Rocha"
+        semestre: "2"
+        materiais:
+          - categoria: "📚 Listas de exercícios"
+            itens:
+              - descricao: "Todas Listas"
+                arquivo: "/pdfs/CM311/2024/Listas_2024.zip"
+                tipo: "ZIP"
