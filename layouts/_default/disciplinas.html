@@ -1,10 +1,11 @@
 {{ define "main" }}
+<div class="site-about-espaco"></div>
 <div class="container py-5">
   <div class="row">
     <div class="col-12">
       <!-- Cabeçalho -->
       <div class="text-center mb-5">
-        <h1 class="display-5 fw-bold text-primary mb-3">{{ .Title }}</h1>
+       <!--  <h1 class="display-5 fw-bold text-primary mb-3">{{ .Title }}</h1> -->
         <p class="lead text-muted">Materiais organizados por disciplina, ano e semestre</p>
       </div>
 
@@ -97,6 +98,63 @@
               </div>
             </div>
             {{ end }}
+
+            <!-- Secção do material de Apoio -->
+            {{ with $disciplina.material_apoio }}
+            <div class="material-apoio-section mb-4">
+              <div class="material-apoio-card">
+                <h3 class="material-apoio-titulo">🎯 Material de Apoio da Disciplina</h3>
+                <p class="material-apoio-descricao">Materiais gerais que não são específicos de um ano letivo</p>
+                
+                {{ range $categoriaIndex, $categoria := . }}
+                <div class="categoria-section">
+                  <h4 class="categoria-titulo">{{ $categoria.categoria }}</h4>
+                  <div class="materiais-grid">
+                    {{ range $materialIndex, $material := $categoria.itens }}
+                    <div class="material-item">
+                      <div class="material-icon">
+                        {{ if eq $material.tipo "PDF" }}📄
+                        {{ else if eq $material.tipo "LINK" }}🔗
+                        {{ else if eq $material.tipo "ZIP" }}📦
+                        {{ else if eq $material.tipo "HTML" }}🌐
+                        {{ else }}📁{{ end }}
+                      </div>
+                      
+                      <div class="material-content">
+                        <a href="{{ $material.arquivo }}" class="material-link" target="_blank">
+                          {{ $material.descricao }}
+                        </a>
+                        <span class="material-tipo">{{ $material.tipo }}</span>
+                        
+                        {{ with $material.autor }}
+                        <div class="material-autor">
+                          Por: 
+                          {{ with $material.url_autor }}
+                            {{ $user_id := $material.autor | urlize }}
+                            <span class="hover-author">
+                              <a href="{{ $material.url_autor }}" class="autor-link">{{ $material.autor }}</a>
+                              <div class="author-image">
+                                <img src="/images/team/{{ $user_id }}.jpg" 
+                                     alt="{{ $material.autor }}"
+                                     onerror="this.src='/images/team/{{ $user_id }}.png'; this.onerror=function(){this.src='/images/team/placeholder.png';}">
+                                <span>{{ $material.autor }}</span>
+                              </div>
+                            </span>
+                          {{ else }}
+                            {{ $material.autor }}
+                          {{ end }}
+                        </div>
+                        {{ end }}
+                      </div>
+                    </div>
+                    {{ end }}
+                  </div>
+                </div>
+                {{ end }}
+              </div>
+            </div>
+            {{ end }}
+
 
             <!-- Anos da disciplina -->
             {{ range $anoIndex, $ano := $disciplina.anos }}

@@ -7,8 +7,8 @@ Status](https://api.netlify.com/api/v1/badges/02ea8d59-deed-4afb-943e-fc1c475f9f
 
 -   Git
 -   R
--   Hugo versão 0.121.2
--   Pacote RBlogdown
+-   Pacote RBlogdown     `install.packages("blogdown")`
+-   Hugo versão 0.121.2  `blogdown::install_hugo(version="0.121.2")`
 
 ## Contexto
 

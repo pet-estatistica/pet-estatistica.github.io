@@ -157,6 +157,31 @@ disciplinas:
   - codigo: "CE308"
     nome: "Teoria da Probabilidade 2 (Prob B)"
     emoji: "🎲"
+    material_apoio:
+      - categoria: "📊 Tabelas Úteis"
+        itens:
+          - descricao: "Tabela de Distribuições de Probabilidade"
+            arquivo: "/pdfs/CE308/Tabela-Modelos-de-Probabilidade.pdf"
+            tipo: "PDF"
+          - descricao: "Tabela Z - Distribuição Normal"
+            arquivo: "/pdfs/CE308/tabela-z.pdf"
+            tipo: "PDF"
+          - descricao: "Tabela T - Distribuição Normal"
+            arquivo: "/pdfs/CE308/tabela-t.pdf"
+            tipo: "PDF"            
+#      - categoria: "🔗 Links Importantes"
+#        itens:
+#          - descricao: "Calculadora Estatística Online"
+#            arquivo: "https://www.calculadora-estatistica.com"
+#            tipo: "LINK"
+#          - descricao: "Repositório de Exercícios Resolvidos"
+#            arquivo: "https://github.com/probabilidade/exercicios"
+#            tipo: "LINK"
+#      - categoria: "📖 Bibliografia Recomendada"
+#        itens:
+#          - descricao: "Livro: Probabilidade - Um Curso Moderno"
+#            arquivo: "/pdfs/CE308/livro-referencia.pdf"
+#            tipo: "PDF"
     anos:
       - ano: 2025
         professores: "Me. Benito Orlando Olivares Aguilera"
