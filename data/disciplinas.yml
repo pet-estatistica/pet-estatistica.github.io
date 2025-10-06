@@ -195,11 +195,6 @@ disciplinas:
               - descricao: "Lista 2"
                 arquivo: "/pdfs/CE308/2025/Lista2-CE308-TP2-2025-2.pdf"
                 tipo: "PDF"  
-          - categoria: "📚 Material de Apoio"
-            itens:
-              - descricao: "Tabela de Modelos de Probabilidade"
-                arquivo: "/pdfs/CE308/2025/Tabela-Modelos-de-Probabilidade.pdf"
-                tipo: "PDF"
       - ano: 2024
         professores: "Me. Benito Orlando Olivares Aguilera"
         semestre: "2"
