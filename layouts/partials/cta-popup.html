@@ -1,0 +1,110 @@
+{{ if site.Params.call_to_action.houve_alteracoes_no_processo_seletivo }}
+<div id="cta-popup" class="cta-popup" style="display: none;">
+  <div class="cta-popup-overlay"></div>
+  <div class="cta-popup-content">
+    <button class="cta-popup-close" onclick="closePopup()">&times;</button>
+    <h3>Atenção!</h3>
+    <p>Houve alterações no processo seletivo. Verifique as novas informações.</p>
+    <div class="cta-popup-buttons">
+      <button class="cta-btn-primary" onclick="closePopup()">Entendi</button>
+      <a href="/processos" class="cta-btn-secondary">Ver Detalhes</a>
+    </div>
+  </div>
+</div>
+
+<style>
+.cta-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+
+.cta-popup-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.cta-popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 90%;
+}
+
+.cta-popup-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #666;
+}
+
+.cta-popup h3 {
+  margin-top: 0;
+  color: #e74c3c;
+}
+
+.cta-popup-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  justify-content: flex-end;
+}
+
+.cta-btn-primary, .cta-btn-secondary {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.cta-btn-primary {
+  background: #3498db;
+  color: white;
+}
+
+.cta-btn-secondary {
+  background: #ecf0f1;
+  color: #2c3e50;
+  border: 1px solid #bdc3c7;
+}
+</style>
+
+<script>
+function showPopup() {
+  document.getElementById('cta-popup').style.display = 'block';
+}
+
+function closePopup() {
+  document.getElementById('cta-popup').style.display = 'none';
+}
+
+// Mostrar pop-up após o carregamento da página
+document.addEventListener('DOMContentLoaded', function() {
+  setTimeout(showPopup, 1000);
+});
+
+// Fechar pop-up ao clicar fora do conteúdo
+document.addEventListener('click', function(e) {
+  if (e.target.classList.contains('cta-popup-overlay')) {
+    closePopup();
+  }
+});
+</script>
+{{ end }}

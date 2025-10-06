@@ -1,0 +1,162 @@
+<div id="audio-player" class="audio-player">
+  <div class="audio-player-content">
+    <button id="play-btn" class="audio-btn">▶️ Reproduzir</button>
+    <button id="pause-btn" class="audio-btn" style="display: none;">⏸️ Pausar</button>
+    <button id="stop-btn" class="audio-btn">⏹️ Parar</button>
+    <div class="volume-control">
+      <label for="volume">Volume:</label>
+      <input type="range" id="volume" min="0" max="100" value="50">
+    </div>
+  </div>
+</div>
+
+<style>
+.audio-player {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 1rem;
+  border-radius: 10px;
+  color: white;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+.audio-player-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.audio-btn {
+  background: #ff4444;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s;
+}
+
+.audio-btn:hover {
+  background: #cc0000;
+}
+
+.volume-control {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+}
+
+#volume {
+  width: 80px;
+}
+</style>
+
+<script>
+// ID do vídeo do YouTube (extraído do link)
+const videoId = 'dQw4w9WgXcQ';
+
+// Variáveis globais
+let player;
+let isPlaying = false;
+
+// Função para carregar a API do YouTube
+function loadYouTubeAPI() {
+  const tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/iframe_api";
+  const firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+}
+
+// Callback quando a API está pronta
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('youtube-player', {
+    height: '0',
+    width: '0',
+    videoId: videoId,
+    playerVars: {
+      'autoplay': 0,
+      'controls': 0,
+      'disablekb': 1,
+      'fs': 0,
+      'modestbranding': 1,
+      'rel': 0
+    },
+    events: {
+      'onReady': onPlayerReady,
+      'onStateChange': onPlayerStateChange
+    }
+  });
+}
+
+function onPlayerReady(event) {
+  console.log('Player pronto');
+  updateVolume();
+}
+
+function onPlayerStateChange(event) {
+  if (event.data === YT.PlayerState.PLAYING) {
+    isPlaying = true;
+    document.getElementById('play-btn').style.display = 'none';
+    document.getElementById('pause-btn').style.display = 'inline-block';
+  } else if (event.data === YT.PlayerState.PAUSED) {
+    isPlaying = false;
+    document.getElementById('play-btn').style.display = 'inline-block';
+    document.getElementById('pause-btn').style.display = 'none';
+  } else if (event.data === YT.PlayerState.ENDED) {
+    isPlaying = false;
+    document.getElementById('play-btn').style.display = 'inline-block';
+    document.getElementById('pause-btn').style.display = 'none';
+  }
+}
+
+// Controles do player
+function playAudio() {
+  if (player && player.playVideo) {
+    player.playVideo();
+  }
+}
+
+function pauseAudio() {
+  if (player && player.pauseVideo) {
+    player.pauseVideo();
+  }
+}
+
+function stopAudio() {
+  if (player && player.stopVideo) {
+    player.stopVideo();
+    isPlaying = false;
+    document.getElementById('play-btn').style.display = 'inline-block';
+    document.getElementById('pause-btn').style.display = 'none';
+  }
+}
+
+function updateVolume() {
+  if (player && player.setVolume) {
+    const volume = document.getElementById('volume').value;
+    player.setVolume(volume);
+  }
+}
+
+// Event listeners
+document.addEventListener('DOMContentLoaded', function() {
+  loadYouTubeAPI();
+
+  document.getElementById('play-btn').addEventListener('click', playAudio);
+  document.getElementById('pause-btn').addEventListener('click', pauseAudio);
+  document.getElementById('stop-btn').addEventListener('click', stopAudio);
+  document.getElementById('volume').addEventListener('input', updateVolume);
+});
+
+// Player invisível
+const youtubePlayer = document.createElement('div');
+youtubePlayer.id = 'youtube-player';
+youtubePlayer.style.display = 'none';
+document.body.appendChild(youtubePlayer);
+</script>
