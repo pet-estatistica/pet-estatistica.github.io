@@ -154,6 +154,93 @@ As informações podem ser alteradas dentro do arquivo *`data/team.yml`*
 Se as alterações forem grandes, crie um *branch* e faça um *pull
 request* (similar ao processo de criação de posts).
 
+### Adicionando materiais da página materiais/disciplinas/
+
+As informações devem ser alteradas dentro do arquivo *`data/disciplinas.yml`*
+
+No arquivo elas estão sendo escritas utilizando a sintaxe [yaml](https://yaml.org/spec/1.2.2/), começando sempre pelo curso, conforme abaixo:
+```yml
+disciplinas:
+  - codigo: "CE301"
+    nome: "Estatística Básica"
+    emoji: "📊"
+```
+
+Em seguida temos a separação por Anos, e em cada ano temos a estrutura que salva os arquivos:
+```yml
+disciplinas:
+  - codigo: "CE301"
+    nome: "Estatística Básica"
+    emoji: "📊"
+    anos:
+      - ano: 2025
+        professores: "Dra. Amanda Merian Freitas Mendes, Dra. Sílvia Emiko Shimakura, Dr. Paulo Justiniano Ribeiro Junior"
+        semestre: "1"
+        materiais:
+          - categoria: "🌐 Atividades Online"
+            itens:
+              - descricao: "Respostas Atividade online 1"
+                arquivo: "/pdfs/CE301/2025/Respostas-Atividade-Online-1.pdf"
+                tipo: "PDF"
+                autor: "Júlia Zorzo Ferreira"
+                url_autor: "/integrantes/#julia-zorzo-ferreira"
+              - descricao: "Respostas Atividade online 2"
+                arquivo: "/pdfs/CE301/2025/Respostas-Atividade-Online-2.pdf"
+                tipo: "PDF"
+                autor: "Júlia Zorzo Ferreira"
+                url_autor: "/integrantes/#julia-zorzo-ferreira"
+```
+
+Sempre se atentar a escrever corretamente o nome dos professores, o semestre e principalmente o caminho dos arquivos, senão eles mão irão funcionar, abaixo está a configuração atual da matéria CE301 Estatística Básica
+
+```yml
+disciplinas:
+  - codigo: "CE301"
+    nome: "Estatística Básica"
+    emoji: "📊"
+    anos:
+      - ano: 2025
+        professores: "Dra. Amanda Merian Freitas Mendes, Dra. Sílvia Emiko Shimakura, Dr. Paulo Justiniano Ribeiro Junior"
+        semestre: "1"
+        materiais:
+          - categoria: "🌐 Atividades Online"
+            itens:
+              - descricao: "Respostas Atividade online 1"
+                arquivo: "/pdfs/CE301/2025/Respostas-Atividade-Online-1.pdf"
+                tipo: "PDF"
+                autor: "Júlia Zorzo Ferreira"
+                url_autor: "/integrantes/#julia-zorzo-ferreira"
+              - descricao: "Respostas Atividade online 2"
+                arquivo: "/pdfs/CE301/2025/Respostas-Atividade-Online-2.pdf"
+                tipo: "PDF"
+                autor: "Júlia Zorzo Ferreira"
+                url_autor: "/integrantes/#julia-zorzo-ferreira"
+      - ano: 2024
+        professores: "Dra. Sílvia Emiko Shimakura, Me. Lineu Alberto Cavazani de Freitas"
+        semestre: "1"
+        materiais:
+          - categoria: "📚 Listas de exercícios"
+            itens:
+              - descricao: "Todas as listas"
+                arquivo: "/pdfs/CE301/2024/listas.zip"
+                tipo: "ZIP"
+          - categoria: "📋️ Resumos"
+            itens:
+              - descricao: "Resumo P1"
+                arquivo: "/pdfs/CE301/2024/resumo_P1.jpg"
+                tipo: "JPG"
+                autor: "Júlia Zorzo Ferreira"
+                url_autor: "/integrantes/#julia-zorzo-ferreira"
+              - descricao: "Resumo P2"
+                arquivo: "/pdfs/CE301/2024/resumo_p2.jpg"
+                tipo: "JPG"                   
+                autor: "Júlia Zorzo Ferreira"
+                url_autor: "/integrantes/#julia-zorzo-ferreira"
+```
+
+Se as alterações forem grandes, crie um *branch* e faça um *pull
+request* (similar ao processo de criação de posts).
+
 ## Publicando o site
 
 O site está configurado para ser publicado automaticamente quando
