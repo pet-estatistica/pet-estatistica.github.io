@@ -264,7 +264,20 @@ disciplinas:
             itens:
               - descricao: "Avaliação 01"
                 arquivo: "/pdfs/CM311/2025/avaliacao-01.pdf"
-                tipo: "PDF"          
+                tipo: "PDF"
+          - categoria: "📚 Listas de exercícios"
+            itens:
+              - descricao: "Lista 1 - Módulo 2"
+                arquivo: "/pdfs/CM311/2025/Lista-1-modulo-2.pdf"
+                tipo: "PDF" 
+              - descricao: "Lista 2 - Módulo 2"
+                arquivo: "/pdfs/CM311/2025/Lista-2-Modulo-2.pdf"
+                tipo: "PDF"
+              - descricao: "Respostas Lista 2 - Módulo 2"
+                arquivo: "/pdfs/CM311/2025/respostas-Lista-2-Modulo-2.pdf"
+                tipo: "PDF"
+                autor: "Júlia Zorzo Ferreira"
+                url_autor: "/integrantes/#julia-zorzo-ferreira"
       - ano: 2024
         professores: "Me. Willian Thomas Rocha"
         semestre: "2"
