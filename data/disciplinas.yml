@@ -82,7 +82,10 @@ disciplinas:
                 arquivo: "/pdfs/CE330/2025/Teoria_de_Conjuntos-Lista-1-respostas.pdf"
                 tipo: "PDF"
                 autor: "Júlia Zorzo Ferreira"
-                url_autor: "/integrantes/#julia-zorzo-ferreira"                   
+                url_autor: "/integrantes/#julia-zorzo-ferreira"
+              - descricao: "Lista 5 - Análise Combinatória"
+                arquivo: "/pdfs/CE330/2025/Analise-combinatoria-lista-1.pdf"
+                tipo: "PDF"
       - ano: 2024
         professores: "Dra. Fernanda Buhrer Rizzato"
         semestre: "2"
