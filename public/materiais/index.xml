@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Biblioteca de Materiais on PET ESTATÍSTICA UFPR</title>
+    <link>https://pet.leg.ufpr.br/materiais/</link>
+    <description>Recent content in Biblioteca de Materiais on PET ESTATÍSTICA UFPR</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <atom:link href="https://pet.leg.ufpr.br/materiais/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Artigos Científicos</title>
+      <link>https://pet.leg.ufpr.br/materiais/artigos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://pet.leg.ufpr.br/materiais/artigos/</guid>
+      <description>Acesso aos Artigos: em produção</description>
+    </item>
+    <item>
+      <title>Materiais das Disciplinas</title>
+      <link>https://pet.leg.ufpr.br/materiais/auloes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://pet.leg.ufpr.br/materiais/auloes/</guid>
+      <description>Materiais dos Aulões ministrados pelo Pet: em produção&#xA;Voltar para Materiais</description>
+    </item>
+    <item>
+      <title>Materiais das Disciplinas</title>
+      <link>https://pet.leg.ufpr.br/materiais/disciplinas/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://pet.leg.ufpr.br/materiais/disciplinas/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Materiais das Disciplinas</title>
+      <link>https://pet.leg.ufpr.br/materiais/links_uteis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://pet.leg.ufpr.br/materiais/links_uteis/</guid>
+      <description>📚 Links Úteis 🎓 UFPR Siga UFPR - Sistema Integrado de Gestão Acadêmica UFPR Virtual - Moodle oficial da UFPR utilizado para educação a distância, aulas híbridas e auxílio para ensino presencial Dest - Departamento de Estatística.</description>
+    </item>
+    <item>
+      <title>Materiais das Disciplinas</title>
+      <link>https://pet.leg.ufpr.br/materiais/tutoriais/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://pet.leg.ufpr.br/materiais/tutoriais/</guid>
+      <description>Tutoriais do Pet: em desenvolvimento.&#xA;Voltar para Materiais</description>
+    </item>
+  </channel>
+</rss>

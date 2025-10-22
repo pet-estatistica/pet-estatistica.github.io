@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 4 EXPERIMENTOS E EVENTOS PROBABILÍSTICOS | Teoria da Probabilidade</title>
+  <meta name="description" content="A porra toda de prob 1 e 2" />
+  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 4 EXPERIMENTOS E EVENTOS PROBABILÍSTICOS | Teoria da Probabilidade" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="A porra toda de prob 1 e 2" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 4 EXPERIMENTOS E EVENTOS PROBABILÍSTICOS | Teoria da Probabilidade" />
+  
+  <meta name="twitter:description" content="A porra toda de prob 1 e 2" />
+  
+
+<meta name="author" content="Bruno Wavrzenczak - Cristian Pessatti dos Anjos - Caio Gomes Alves - Anderson Amorim" />
+
+
+<meta name="date" content="2024-02-24" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="revisão---teoria-dos-conjuntos.html"/>
+<link rel="next" href="probabilidade.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> INTRODUÇÃO</a></li>
+<li class="chapter" data-level="2" data-path="revisão---operadores-lógicos.html"><a href="revisão---operadores-lógicos.html"><i class="fa fa-check"></i><b>2</b> REVISÃO - OPERADORES LÓGICOS</a></li>
+<li class="chapter" data-level="3" data-path="revisão---teoria-dos-conjuntos.html"><a href="revisão---teoria-dos-conjuntos.html"><i class="fa fa-check"></i><b>3</b> REVISÃO - TEORIA DOS CONJUNTOS</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="revisão---teoria-dos-conjuntos.html"><a href="revisão---teoria-dos-conjuntos.html#conjuntos"><i class="fa fa-check"></i><b>3.1</b> Conjuntos</a></li>
+<li class="chapter" data-level="3.2" data-path="revisão---teoria-dos-conjuntos.html"><a href="revisão---teoria-dos-conjuntos.html#intervalos"><i class="fa fa-check"></i><b>3.2</b> Intervalos</a></li>
+<li class="chapter" data-level="3.3" data-path="revisão---teoria-dos-conjuntos.html"><a href="revisão---teoria-dos-conjuntos.html#operações-com-conjuntos"><i class="fa fa-check"></i><b>3.3</b> Operações com Conjuntos</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="revisão---teoria-dos-conjuntos.html"><a href="revisão---teoria-dos-conjuntos.html#união-ou-conjunção"><i class="fa fa-check"></i><b>3.3.1</b> União (ou Conjunção):</a></li>
+<li class="chapter" data-level="3.3.2" data-path="revisão---teoria-dos-conjuntos.html"><a href="revisão---teoria-dos-conjuntos.html#interseção-ou-disjunção"><i class="fa fa-check"></i><b>3.3.2</b> Interseção (ou Disjunção):</a></li>
+<li class="chapter" data-level="3.3.3" data-path="revisão---teoria-dos-conjuntos.html"><a href="revisão---teoria-dos-conjuntos.html#complementar-ou-negação"><i class="fa fa-check"></i><b>3.3.3</b> Complementar (ou Negação):</a></li>
+<li class="chapter" data-level="3.3.4" data-path="revisão---teoria-dos-conjuntos.html"><a href="revisão---teoria-dos-conjuntos.html#cardinal-de-um-conjunto"><i class="fa fa-check"></i><b>3.3.4</b> Cardinal de um conjunto:</a></li>
+<li class="chapter" data-level="3.3.5" data-path="revisão---teoria-dos-conjuntos.html"><a href="revisão---teoria-dos-conjuntos.html#leis-de-morgan"><i class="fa fa-check"></i><b>3.3.5</b> Leis de Morgan:</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="revisão---teoria-dos-conjuntos.html"><a href="revisão---teoria-dos-conjuntos.html#exercícios-resolvidos"><i class="fa fa-check"></i><b>3.4</b> Exercícios Resolvidos</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="experimentos-e-eventos-probabilísticos.html"><a href="experimentos-e-eventos-probabilísticos.html"><i class="fa fa-check"></i><b>4</b> EXPERIMENTOS E EVENTOS PROBABILÍSTICOS</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="experimentos-e-eventos-probabilísticos.html"><a href="experimentos-e-eventos-probabilísticos.html#experimento-aleatório"><i class="fa fa-check"></i><b>4.1</b> Experimento Aleatório</a></li>
+<li class="chapter" data-level="4.2" data-path="experimentos-e-eventos-probabilísticos.html"><a href="experimentos-e-eventos-probabilísticos.html#eventos"><i class="fa fa-check"></i><b>4.2</b> Eventos</a></li>
+<li class="chapter" data-level="4.3" data-path="experimentos-e-eventos-probabilísticos.html"><a href="experimentos-e-eventos-probabilísticos.html#sigma-álgebra"><i class="fa fa-check"></i><b>4.3</b> <span class="math inline">\(\sigma\)</span>-álgebra</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="probabilidade.html"><a href="probabilidade.html"><i class="fa fa-check"></i><b>5</b> PROBABILIDADE</a></li>
+<li class="chapter" data-level="6" data-path="probabilidade-condicional.html"><a href="probabilidade-condicional.html"><i class="fa fa-check"></i><b>6</b> PROBABILIDADE CONDICIONAL</a></li>
+<li class="chapter" data-level="7" data-path="variáveis-aleatórias.html"><a href="variáveis-aleatórias.html"><i class="fa fa-check"></i><b>7</b> VARIÁVEIS ALEATÓRIAS</a></li>
+<li class="chapter" data-level="8" data-path="esperança-e-variância.html"><a href="esperança-e-variância.html"><i class="fa fa-check"></i><b>8</b> ESPERANÇA E VARIÂNCIA</a></li>
+<li class="chapter" data-level="9" data-path="função-geradora-de-momentos-e-função-característica.html"><a href="função-geradora-de-momentos-e-função-característica.html"><i class="fa fa-check"></i><b>9</b> FUNÇÃO GERADORA DE MOMENTOS E FUNÇÃO CARACTERÍSTICA</a></li>
+<li class="chapter" data-level="10" data-path="modelos-de-probabilidade.html"><a href="modelos-de-probabilidade.html"><i class="fa fa-check"></i><b>10</b> MODELOS DE PROBABILIDADE</a></li>
+<li class="chapter" data-level="11" data-path="funções-de-variáveis-aleatórias.html"><a href="funções-de-variáveis-aleatórias.html"><i class="fa fa-check"></i><b>11</b> FUNÇÕES DE VARIÁVEIS ALEATÓRIAS</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Teoria da Probabilidade</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="experimentos-e-eventos-probabilísticos" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">Chapter 4</span> EXPERIMENTOS E EVENTOS PROBABILÍSTICOS<a href="experimentos-e-eventos-probabilísticos.html#experimentos-e-eventos-probabilísticos" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="experimento-aleatório" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Experimento Aleatório<a href="experimentos-e-eventos-probabilísticos.html#experimento-aleatório" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Iremos denominar pela letra grega <span class="math inline">\(\varepsilon\)</span> qualquer experimento aleatório realizado sob condições fixas. Vamos também chamar de <strong>espaço amostral</strong> (<span class="math inline">\(\Omega\)</span>) o conjunto que contém todos os resultados possíveis de <span class="math inline">\(\varepsilon\)</span>.</p>
+<p>Aqui, “resultado possível” significa um resultado elementar e indivisível do experimento <span class="math inline">\(\varepsilon\)</span>.</p>
+<p>Exemplos:</p>
+<p><strong>(i)</strong> seja <span class="math inline">\(\varepsilon_1\)</span>: lançar um dado honesto e observar o resultado (face voltada para cima)</p>
+<p><span class="math display">\[
+\begin{align*}
+&amp;\Omega_1=\{1,2,3,4,5,6\}\\
+\end{align*}
+\]</span>
+<strong>(ii)</strong> seja <span class="math inline">\(\varepsilon_2\)</span>: medir a tensão de uma rede de alta tensão a cada minuto por uma hora.</p>
+<p><span class="math display">\[
+\begin{align*}
+&amp;\Omega_2=[0,+\infty)\\
+\end{align*}
+\]</span>
+<strong>(iii)</strong> seja <span class="math inline">\(\varepsilon_3\)</span>: escolher um ponto do círculo unitário.</p>
+<p><span class="math display">\[
+\begin{align*}
+&amp;\Omega_3=\{(x,y)\in\mathbb{R}\;|\;x^2+y^2\le1\}\\
+\end{align*}
+\]</span></p>
+</div>
+<div id="eventos" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Eventos<a href="experimentos-e-eventos-probabilísticos.html#eventos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Eventos nada mais são do que conjuntos contendo elementos do espaço amostral que satisfazem dada condição. Em outras palavras, um evento é um subconjunto do espaço amostral.</p>
+<p>Exemplo:</p>
+<p>Para <span class="math inline">\(\varepsilon_1\)</span>, podemos ter, por exemplo, os seguintes eventos:</p>
+<p><span class="math display">\[
+\begin{align*}
+&amp;A=\text{&quot;oberva-se um número par&quot;} = \{2,4,6\}\\
+&amp;B=\text{&quot;oberva-se o número 2&quot;} = \{2\}\\
+&amp;C=\text{&quot;oberva-se um número maior ou igual a 4&quot;} = \{4,5,6\}\\
+&amp;C=\text{&quot;oberva-se um ímpar&quot;} = \{1,3,5\}\\
+\end{align*}
+\]</span></p>
+<p>Vamos denominar o conjunto <span class="math inline">\(\phi\)</span> a um evento impossível, e <span class="math inline">\(\Omega\)</span> a um evento certo.</p>
+<p>Exemplo:</p>
+<p>Para <span class="math inline">\(\varepsilon_1\)</span>:</p>
+<p><span class="math inline">\(A\cap D = \phi\rightarrow\)</span> evento impossível.</p>
+<p><span class="math inline">\(A\cup D = \Omega\rightarrow\)</span> evento certo.</p>
+<p><strong>DEFINIÇÃO: </strong> seja <span class="math inline">\(\Omega\)</span> o espaço amostral para o experimento <span class="math inline">\(\varepsilon\)</span>, todo subconjunto <span class="math inline">\(A\subset\Omega\)</span> será chamado evento, como já mencionado, <span class="math inline">\(\phi\)</span> é o evento impossível e <span class="math inline">\(\Omega\)</span> é o evento certo. Se <span class="math inline">\(\omega\in\Omega\)</span>, o evento <span class="math inline">\(\{\omega\}\)</span> é dito <strong>elementar</strong>.</p>
+</div>
+<div id="sigma-álgebra" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> <span class="math inline">\(\sigma\)</span>-álgebra<a href="experimentos-e-eventos-probabilísticos.html#sigma-álgebra" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Para conseguirmos definir uma probabilidade precisaremos de uma classe especial de eventos chamada <span class="math inline">\(\sigma\)</span>-álgebra, que representaremos pelo símbolo <span class="math inline">\(\mathbb{A}\)</span>.</p>
+<p><strong>DEFINIÇÃO: </strong>seja <span class="math inline">\(\mathbb{A}\)</span> uma família de subconjuntos de <span class="math inline">\(\Omega\)</span> tal que:</p>
+<p><strong>(i)</strong>: <span class="math inline">\(\Omega\in\mathbb{A}\)</span>.</p>
+<p><strong>(ii)</strong>: Se <span class="math inline">\(A\in\mathbb{A}\)</span>, então <span class="math inline">\(A^c\in\mathbb{A}\)</span>.</p>
+<p><strong>(iii)</strong>: Se <span class="math inline">\(A_1,A_2,...\;\in\mathbb{A}\)</span>, então <span class="math inline">\(\overset{\infty}{\underset{i=1}{\cup}}A_i\in\mathbb{A}\)</span>.</p>
+<p>Nesse caso diremos que <span class="math inline">\(\mathbb{A}\)</span> é uma <strong><span class="math inline">\(\sigma\)</span>-álgebra</strong> sobre <span class="math inline">\(\Omega\)</span>.</p>
+<p>obs: Baseado em (i) e (ii), também podemos afirmar que <span class="math inline">\(\phi\in\mathbb{A}\)</span>, já que <span class="math inline">\(\phi\)</span> é o complementar de <span class="math inline">\(\Omega\)</span>.</p>
+<p>Exemplos:</p>
+<p>Para <span class="math inline">\(\varepsilon_1\)</span>, <span class="math inline">\(\Omega=\{1,2,3,4,5,6\}\)</span>.</p>
+<p>Seja <span class="math inline">\(\mathbb{A}_1=\{\{1\},\{1,2\},\{4,5,6\},\Omega,\phi\}\)</span>.</p>
+<p>A condição (i) está satisfeita pois <span class="math inline">\(\Omega\in\mathbb{A}_1\)</span></p>
+<p>A condição (ii) não está satisfeita pois os complementares de vários conjuntos não estão em <span class="math inline">\(\mathbb{A}\)</span></p>
+<p>A condição (iii) não está satisfeita porque nem toda união de conjuntos dentro de <span class="math inline">\(\mathbb{A}\)</span> está dentro de <span class="math inline">\(\mathbb{A}\)</span>.</p>
+<p>Agora, seja <span class="math inline">\(\mathbb{A}_2=\{\{1,2\},\{3,4,5,6\},\Omega,\phi\}\)</span></p>
+<p>Em <span class="math inline">\(\mathbb{A}_2\)</span> podemos facilmente verificar que as três condições foram satisfeitas.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="revisão---teoria-dos-conjuntos.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="probabilidade.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/03-exp_probabilisticos.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 10 MODELOS DE PROBABILIDADE | Teoria da Probabilidade</title>
+  <meta name="description" content="A porra toda de prob 1 e 2" />
+  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 10 MODELOS DE PROBABILIDADE | Teoria da Probabilidade" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="A porra toda de prob 1 e 2" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 10 MODELOS DE PROBABILIDADE | Teoria da Probabilidade" />
+  
+  <meta name="twitter:description" content="A porra toda de prob 1 e 2" />
+  
+
+<meta name="author" content="Bruno Wavrzenczak - Cristian Pessatti dos Anjos - Caio Gomes Alves - Anderson Amorim" />
+
+
+<meta name="date" content="2024-02-25" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="função-geradora-de-momentos-e-função-característica.html"/>
+<link rel="next" href="funções-de-variáveis-aleatórias.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> INTRODUÇÃO</a></li>
+<li class="chapter" data-level="2" data-path="revisão---operadores-lógicos.html"><a href="revisão---operadores-lógicos.html"><i class="fa fa-check"></i><b>2</b> REVISÃO - OPERADORES LÓGICOS</a></li>
+<li class="chapter" data-level="3" data-path="revisão---teoria-dos-conjuntos.html"><a href="revisão---teoria-dos-conjuntos.html"><i class="fa fa-check"></i><b>3</b> REVISÃO - TEORIA DOS CONJUNTOS</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="revisão---teoria-dos-conjuntos.html"><a href="revisão---teoria-dos-conjuntos.html#conjuntos"><i class="fa fa-check"></i><b>3.1</b> Conjuntos</a></li>
+<li class="chapter" data-level="3.2" data-path="revisão---teoria-dos-conjuntos.html"><a href="revisão---teoria-dos-conjuntos.html#intervalos"><i class="fa fa-check"></i><b>3.2</b> Intervalos</a></li>
+<li class="chapter" data-level="3.3" data-path="revisão---teoria-dos-conjuntos.html"><a href="revisão---teoria-dos-conjuntos.html#operações-com-conjuntos"><i class="fa fa-check"></i><b>3.3</b> Operações com Conjuntos</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="revisão---teoria-dos-conjuntos.html"><a href="revisão---teoria-dos-conjuntos.html#união-ou-conjunção"><i class="fa fa-check"></i><b>3.3.1</b> União (ou Conjunção):</a></li>
+<li class="chapter" data-level="3.3.2" data-path="revisão---teoria-dos-conjuntos.html"><a href="revisão---teoria-dos-conjuntos.html#interseção-ou-disjunção"><i class="fa fa-check"></i><b>3.3.2</b> Interseção (ou Disjunção):</a></li>
+<li class="chapter" data-level="3.3.3" data-path="revisão---teoria-dos-conjuntos.html"><a href="revisão---teoria-dos-conjuntos.html#complementar-ou-negação"><i class="fa fa-check"></i><b>3.3.3</b> Complementar (ou Negação):</a></li>
+<li class="chapter" data-level="3.3.4" data-path="revisão---teoria-dos-conjuntos.html"><a href="revisão---teoria-dos-conjuntos.html#cardinal-de-um-conjunto"><i class="fa fa-check"></i><b>3.3.4</b> Cardinal de um conjunto:</a></li>
+<li class="chapter" data-level="3.3.5" data-path="revisão---teoria-dos-conjuntos.html"><a href="revisão---teoria-dos-conjuntos.html#leis-de-morgan"><i class="fa fa-check"></i><b>3.3.5</b> Leis de Morgan:</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="revisão---teoria-dos-conjuntos.html"><a href="revisão---teoria-dos-conjuntos.html#exercícios-resolvidos"><i class="fa fa-check"></i><b>3.4</b> Exercícios Resolvidos</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="experimentos-e-eventos-probabilísticos.html"><a href="experimentos-e-eventos-probabilísticos.html"><i class="fa fa-check"></i><b>4</b> EXPERIMENTOS E EVENTOS PROBABILÍSTICOS</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="experimentos-e-eventos-probabilísticos.html"><a href="experimentos-e-eventos-probabilísticos.html#experimento-aleatório"><i class="fa fa-check"></i><b>4.1</b> Experimento Aleatório</a></li>
+<li class="chapter" data-level="4.2" data-path="experimentos-e-eventos-probabilísticos.html"><a href="experimentos-e-eventos-probabilísticos.html#eventos"><i class="fa fa-check"></i><b>4.2</b> Eventos</a></li>
+<li class="chapter" data-level="4.3" data-path="experimentos-e-eventos-probabilísticos.html"><a href="experimentos-e-eventos-probabilísticos.html#sigma-álgebra"><i class="fa fa-check"></i><b>4.3</b> <span class="math inline">\(\sigma\)</span>-álgebra</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="probabilidade.html"><a href="probabilidade.html"><i class="fa fa-check"></i><b>5</b> PROBABILIDADE</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="probabilidade.html"><a href="probabilidade.html#definição-de-uma-probabilidade"><i class="fa fa-check"></i><b>5.1</b> Definição de uma Probabilidade</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="probabilidade.html"><a href="probabilidade.html#definição-clássica-de-probabilidade"><i class="fa fa-check"></i><b>5.1.1</b> Definição Clássica de Probabilidade</a></li>
+<li class="chapter" data-level="5.1.2" data-path="probabilidade.html"><a href="probabilidade.html#definição-geométrica-de-probabilidade"><i class="fa fa-check"></i><b>5.1.2</b> Definição Geométrica de Probabilidade</a></li>
+<li class="chapter" data-level="5.1.3" data-path="probabilidade.html"><a href="probabilidade.html#definição-frequentista-de-probabilidade"><i class="fa fa-check"></i><b>5.1.3</b> Definição Frequentista de Probabilidade</a></li>
+<li class="chapter" data-level="5.1.4" data-path="probabilidade.html"><a href="probabilidade.html#definição-axiomática-de-probabilidade"><i class="fa fa-check"></i><b>5.1.4</b> Definição Axiomática de Probabilidade</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="probabilidade.html"><a href="probabilidade.html#espaço-de-probabilidade"><i class="fa fa-check"></i><b>5.2</b> Espaço de Probabilidade</a></li>
+<li class="chapter" data-level="5.3" data-path="probabilidade.html"><a href="probabilidade.html#propriedades-de-uma-probabilidade"><i class="fa fa-check"></i><b>5.3</b> Propriedades de uma Probabilidade</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="probabilidade-condicional.html"><a href="probabilidade-condicional.html"><i class="fa fa-check"></i><b>6</b> PROBABILIDADE CONDICIONAL</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="probabilidade-condicional.html"><a href="probabilidade-condicional.html#definição-de-probabilidade-condicional"><i class="fa fa-check"></i><b>6.1</b> Definição de Probabilidade Condicional</a></li>
+<li class="chapter" data-level="6.2" data-path="probabilidade-condicional.html"><a href="probabilidade-condicional.html#teorema-da-multiplicação"><i class="fa fa-check"></i><b>6.2</b> Teorema da Multiplicação</a></li>
+<li class="chapter" data-level="6.3" data-path="probabilidade-condicional.html"><a href="probabilidade-condicional.html#partição-de-omega"><i class="fa fa-check"></i><b>6.3</b> Partição de Omega</a></li>
+<li class="chapter" data-level="6.4" data-path="probabilidade-condicional.html"><a href="probabilidade-condicional.html#teorema-da-probabilidade-total"><i class="fa fa-check"></i><b>6.4</b> Teorema da Probabilidade Total</a></li>
+<li class="chapter" data-level="6.5" data-path="probabilidade-condicional.html"><a href="probabilidade-condicional.html#teorema-de-bayes"><i class="fa fa-check"></i><b>6.5</b> Teorema de Bayes</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="variáveis-aleatórias.html"><a href="variáveis-aleatórias.html"><i class="fa fa-check"></i><b>7</b> VARIÁVEIS ALEATÓRIAS</a></li>
+<li class="chapter" data-level="8" data-path="esperança-e-variância.html"><a href="esperança-e-variância.html"><i class="fa fa-check"></i><b>8</b> ESPERANÇA E VARIÂNCIA</a></li>
+<li class="chapter" data-level="9" data-path="função-geradora-de-momentos-e-função-característica.html"><a href="função-geradora-de-momentos-e-função-característica.html"><i class="fa fa-check"></i><b>9</b> FUNÇÃO GERADORA DE MOMENTOS E FUNÇÃO CARACTERÍSTICA</a></li>
+<li class="chapter" data-level="10" data-path="modelos-de-probabilidade.html"><a href="modelos-de-probabilidade.html"><i class="fa fa-check"></i><b>10</b> MODELOS DE PROBABILIDADE</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="modelos-de-probabilidade.html"><a href="modelos-de-probabilidade.html#modelos-discretos"><i class="fa fa-check"></i><b>10.1</b> Modelos Discretos</a>
+<ul>
+<li class="chapter" data-level="10.1.1" data-path="modelos-de-probabilidade.html"><a href="modelos-de-probabilidade.html#modelo-uniforme-discreto"><i class="fa fa-check"></i><b>10.1.1</b> Modelo Uniforme Discreto</a></li>
+<li class="chapter" data-level="10.1.2" data-path="modelos-de-probabilidade.html"><a href="modelos-de-probabilidade.html#modelo-de-bernoulli"><i class="fa fa-check"></i><b>10.1.2</b> Modelo de Bernoulli</a></li>
+<li class="chapter" data-level="10.1.3" data-path="modelos-de-probabilidade.html"><a href="modelos-de-probabilidade.html#modelo-binomial"><i class="fa fa-check"></i><b>10.1.3</b> Modelo Binomial</a></li>
+<li class="chapter" data-level="10.1.4" data-path="modelos-de-probabilidade.html"><a href="modelos-de-probabilidade.html#modelo-geométrico"><i class="fa fa-check"></i><b>10.1.4</b> Modelo Geométrico</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="funções-de-variáveis-aleatórias.html"><a href="funções-de-variáveis-aleatórias.html"><i class="fa fa-check"></i><b>11</b> FUNÇÕES DE VARIÁVEIS ALEATÓRIAS</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Teoria da Probabilidade</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="modelos-de-probabilidade" class="section level1 hasAnchor" number="10">
+<h1><span class="header-section-number">Chapter 10</span> MODELOS DE PROBABILIDADE<a href="modelos-de-probabilidade.html#modelos-de-probabilidade" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Como visto no capítulo 6, descreve-se uma variável aleatória pela sua Função de Distribuição ou pela sua Função de Densidade/Probabilidade.</p>
+<p>Aqui, estudaremos alguns tipos de variáveis aleatórias conhecidas e suas aplicações.</p>
+<div id="modelos-discretos" class="section level2 hasAnchor" number="10.1">
+<h2><span class="header-section-number">10.1</span> Modelos Discretos<a href="modelos-de-probabilidade.html#modelos-discretos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="modelo-uniforme-discreto" class="section level3 hasAnchor" number="10.1.1">
+<h3><span class="header-section-number">10.1.1</span> Modelo Uniforme Discreto<a href="modelos-de-probabilidade.html#modelo-uniforme-discreto" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Esse modelo é utilizado quando temos um número finito de possibilidades, no qual todas elas são equiprováveis.</p>
+<p>Seja X uma variável aletória que segue o modelo uniforme discreto, então escreveremos: <span class="math inline">\(X\sim U_d(A)\)</span>, onde <span class="math inline">\(A\)</span> é o conjunto de valores possíveis para a variável: <span class="math inline">\(A=\{x_1,x_2,\;...\;,x_n\}\)</span>.</p>
+<p>Função de Probabilidade: <span class="math inline">\(p(x_i)=\frac{1}{n}\;,\;i=1,2,...,n\)</span></p>
+<p>Exemplo: Vamos lançar um dado honesto e a variável aletória X será a face observada. É fácil observar que <span class="math inline">\(X\sim U_d(\{1,2,3,4,5,6\})\)</span>:</p>
+<p><span class="math inline">\(p(x_i)=\frac{1}{6}\)</span></p>
+</div>
+<div id="modelo-de-bernoulli" class="section level3 hasAnchor" number="10.1.2">
+<h3><span class="header-section-number">10.1.2</span> Modelo de Bernoulli<a href="modelos-de-probabilidade.html#modelo-de-bernoulli" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Esse modelo é utilizado quando temos apenas duas opções, que chamaremos de fracasso e sucesso, ou 0 e 1.</p>
+<p>Notação: <span class="math inline">\(X\sim Bernoulli(p)\)</span> onde <span class="math inline">\(p\)</span> é a probabilidade de sucesso.</p>
+<p>Função de Probabilidade:</p>
+<p><span class="math inline">\(p(1)=P(X=1)=p\)</span></p>
+<p><span class="math inline">\(p(0)=P(X=0)=1-p\)</span></p>
+<p>Exemplo: Lançar uma moeda equilibrada e observar o lado virado para cima.</p>
+<p><span class="math display">\[
+\begin{align*}
+&amp;X =
+  \begin{cases}
+    1 &amp; \text{, se cara}\\
+    0 &amp; \text{, se coroa}
+  \end{cases}
+\end{align*}
+\]</span></p>
+<p>Como a probabilidade de sair cara é <span class="math inline">\(\frac{1}{2}\)</span>, então <span class="math inline">\(X\sim Bernoulli(\frac{1}{2})\)</span>.</p>
+</div>
+<div id="modelo-binomial" class="section level3 hasAnchor" number="10.1.3">
+<h3><span class="header-section-number">10.1.3</span> Modelo Binomial<a href="modelos-de-probabilidade.html#modelo-binomial" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Suponha que vamos realizar <span class="math inline">\(n\)</span> ensaios de Bernoulli independentes e de probabilidade <span class="math inline">\(p\)</span> e X será a quantidade de sucessos obtidas nos <span class="math inline">\(n\)</span> ensaios. Então diremos que X segue uma Binomial de parâmetros <span class="math inline">\(n\)</span> e <span class="math inline">\(p\)</span>: <span class="math inline">\(X\sim Bin(n,p)\)</span></p>
+<p>Função de Probabilidade: <span class="math inline">\(p(x)={n\choose x}\cdot p^x\cdot(1-p)^{n-x}\)</span></p>
+<p>Exemplo: Suponha que vamos lançar 100 moedas equilibradas e X será a quantidade de caras observadas. <span class="math inline">\(X\sim Bin(100, \frac{1}{2})\)</span></p>
+<p>Qual a probabilidade de sair exatamente 60 caras?</p>
+<p><span class="math display">\[
+\begin{align*}
+p(60)={100\choose 60}\cdot\Big(\frac{1}{2}\Big)^{60}\cdot\Big(\frac{1}{2}\Big)^{40} =
+\end{align*}
+\]</span></p>
+</div>
+<div id="modelo-geométrico" class="section level3 hasAnchor" number="10.1.4">
+<h3><span class="header-section-number">10.1.4</span> Modelo Geométrico<a href="modelos-de-probabilidade.html#modelo-geométrico" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Suponha que vamos realizar uma sequência de ensaios de Bernoulli até acontecer o primeiro sucesso, e seja X a quantidade de fracassos antes do primeiro sucesso. Então X segue uma geométrica de parâmetro <span class="math inline">\(p\)</span>, onde <span class="math inline">\(p\)</span> é a probabilidade de sucesso: <span class="math inline">\(X\sim Geo(p)\)</span></p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="função-geradora-de-momentos-e-função-característica.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="funções-de-variáveis-aleatórias.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/09-modelos.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
