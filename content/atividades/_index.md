@@ -88,7 +88,7 @@ projects:
     description: "Os Petianos ao desenvolverem pesquisas acadêmicas, podem apresentá-las em congressos acadêmicos."
     category: "Extensão"
     tags: ["Pesquisa Científica", "Atividades Acadêmicas", "Congresso Científico", "Desenvolvimento Acadêmico e Profissional"]
-    image: "/images/atividades/2.png"
+	image: "/images/atividades/participacao-congressos-cientificos.png"
     icon: "fas fa-users"
     link: "/atividades/participacao-congressos-cientificos"
 
