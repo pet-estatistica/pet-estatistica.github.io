@@ -1,6 +1,6 @@
 ---
 title: "Participação de Congressos Científicos"
-image: "/images/atividades/2.png"
+image: "/images/atividades/participacao-congressos-cientificos.png"
 tags: ["Pesquisa Científica", "Atividades Acadêmicas", "Congresso Científico", "Desenvolvimento Acadêmico e Profissional"]
 ---
   
