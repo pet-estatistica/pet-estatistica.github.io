@@ -1,0 +1,124 @@
+---
+title: Análise da COVID-19 em 3 cidades do estado do Paraná
+author: Marcelo e Davi
+date: '2020-11-18'
+slug: analise-da-covid-19-em-3-cidades-do-estado-do-parana
+categories:
+  - covid19
+tags:
+  - covid
+  - analises
+description: ''
+images:
+  - 'img/covid/post_2.png'
+---
+```{r echo=FALSE,message=FALSE,warning=FALSE}
+library(plotly)
+p <- plotly(username = "Marcelojr.jn", key = "vcsabe098")
+```
+
+```{r echo=FALSE,message=FALSE,warning=FALSE}
+library(datacovidbr)
+library(dplyr)
+library(ggplot2)
+
+
+df <- brasilio()
+
+df.cidades <- df%>%filter(df$state =="PR")
+df.cidades.analisadas <- df.cidades %>% filter(df.cidades$city =="Curitiba" |
+                                             df.cidades$city == "Londrina" |
+                                             df.cidades$city == "Cascavel")
+df.cidades.analisadas["deaths_per_100k_inhabitants"] <- (df.cidades.analisadas$deaths/df.cidades.analisadas$estimated_population_2019)*100000
+
+```
+
+# Criação de bandeiras da COVID-19 no estado do Paraná
+
+ O estado do Paraná adotou no mês de junho bandeiras com as cores amarelo, laranja e vermelho tendo como significado respectivamente alerta, risco médio e alto risco. Para protocolar essas cores o estado deve levar em consideração alguns requisitos dividido em dois critérios, propagação da doença e capacidade de atendimento.
+
+# Casos confirmados em Cascavel, Curitiba e Londrina
+
+```{r echo=FALSE,message=FALSE,warning=FALSE}
+# GRAFICO CONFIRMADOS
+graph.confirmados <- df.cidades.analisadas %>% 
+  ggplot(mapping = aes(fill = city,x = date, y = confirmed, color = city,
+                       text = paste0(city, "\n",
+                                     date, "\n", 
+                                     "Confirmados: ", confirmed))) +
+  xlab("Dias/Meses") +
+  ylab("Confirmados") +
+  geom_point(aes(y = confirmed), size = 0.4)
+ggplotly(graph.confirmados, tooltip = "text")
+```
+
+  Como podemos visualizar no gráfico acima, Curitiba ultrapassa a marca de 30 mil casos confirmados de COVID-19 no ínicio do mês de setembro e chegando próximo a 40 mil no mês seguinte. Devemos ressaltar que as bandeiras protocoladas pelo governo do estado do Paraná, em consonância com a Secretaria de saúde, foram flexibilizadas dando a população livre circulação em bares/restaurantes, shoppings entre outros estabelecimentos de cunho aglomerativo. 
+  Analisando duas das cidades do interior do Paraná que mais obtiveram confirmações de casos para o Sars-Cov2, temos como destaque Londrina na qual supera Cascavel no ínicio do mês de Setembro em número de casos, no entanto as medidas de restrições dessas cidades seguem suas próprias políticas, desconsiderando o decreto estadual.
+  
+## Casos confirmados por 100 mil habitantes  
+  
+  Para melhor entendimento da proliferação do vírus, analisamos a mesma incidência por 100 mil habitantes. 
+
+```{r echo=FALSE,message=FALSE,warning=FALSE}
+#CONFIRMADOS POR 100 MIL
+graph.confirmados.p.100k <- df.cidades.analisadas %>% 
+  ggplot(mapping = aes(fill = city,x = date, y = confirmed_per_100k_inhabitants, color = city,
+                       text = paste0(city, "\n",
+                                     date, "\n", 
+                                     "Confirmados p/ 100k habitantes: ", confirmed_per_100k_inhabitants))) +
+  xlab("Dias/Meses") +
+  ylab("Confirmados") +
+  geom_point(aes(y = confirmed_per_100k_inhabitants), size = 0.4)
+ggplotly(graph.confirmados.p.100k, tooltip = "text")
+```
+
+  Esse controle por 100 mil habitantes tem como objetivo permitir a comparação entre locais com diferentes tamanhos de população e neutralizando o crescimento populacional, nos concedendo a comparação da proliferação do vírus a médio e longo prazo. Assim sendo, notamos a diferença entre as mesmas cidades da figura anterior, na qual Cascavel recebe sua notoriedade chegando próximo aos 2620 casos (por 100k/habitantes).
+
+
+# Óbitos para casos confirmados
+
+```{r echo=FALSE,message=FALSE,warning=FALSE}
+#ÓBITOS GERAL
+
+graph.obitos <- df.cidades.analisadas %>% 
+  ggplot(mapping = aes(fill = city,x = date, y = deaths, color = city,
+                       text = paste0(city, "\n",
+                                     date, "\n", 
+                                     "Óbitos: ", deaths))) +
+  xlab("Dias/Meses") +
+  ylab("Óbitos") +
+  geom_point(aes(y = deaths), size = 0.4)
+ggplotly(graph.obitos, tooltip = "text")
+```
+
+  Curitiba se destaca atingindo a marca de 1388 óbitos, devendo ressaltar que o tamanho da população da cidade de Curitiba é superior aos demais municípios e, portanto o número de casos confirmados e consequentemente de óbitos será maior. Devido a isso podemos calcular até mesmo a taxa de mortalidade dessa doença, que tem como fórmula para esse cálculo $\frac{\sum_{i=1}^{n}obitos}{\sum_{j=1}^{n} desfecho}$ no qual a conotação "desfecho" é o número de recuperados + óbitos. Sendo assim tivemos uma baixa mortalidade para essa doença, no entanto o que preocupa as equipes da área da saúde principalmente é seu grande poder de proliferação, podendo deixar pessoas com grandes [sequelas no pós alta](http://saudedebate.com.br/noticias/sequelas-da-covid-19-a-vida-nao-voltou-ao-normal-apos-a-alta-hospitalar).
+
+## Óbitos por 100 mil habitantes com casos confirmados
+
+```{r echo=FALSE,message=FALSE,warning=FALSE}
+graph.obitos.p.100k <- df.cidades.analisadas %>% 
+  ggplot(mapping = aes(fill = city,x = date, y = deaths_per_100k_inhabitants, color = city,
+                       text = paste0(city, "\n",
+                                     date, "\n", 
+                                     "Óbitos p/ 100k habitantes: ", deaths_per_100k_inhabitants))) +
+  xlab("Dias/Meses") +
+  ylab("Óbitos por 100 mil habitantes") +
+  geom_point(aes(y = deaths_per_100k_inhabitants), size = 0.4)
+ggplotly(graph.obitos.p.100k, tooltip = "text")
+```  
+
+  Diferentemente dos comparativos de casos confirmados com a relação pelos 100 mil habitantes confirmados apresentados na segunda sessão desse material, não tivemos uma mudança abrupta nos posicionamentos das cidades, mas chama a atenção o distanciamento da capital do estado dos dois municípios de análise. 
+
+
+
+# Referências
+
+1- [Implementação de bandeiras em Curitiba](https://g1.globo.com/pr/parana/noticia/2020/06/09/coronavirus-curitiba-implanta-sistema-de-bandeiras-para-definir-restricoes-durante-pandemia.ghtml)
+
+2- [Londrina autoriza eventos](https://g1.globo.com/pr/norte-noroeste/noticia/2020/10/14/coronavirus-prefeitura-de-londrina-autoriza-eventos-com-ate-50-pessoas.ghtml)
+
+3- [sequelas no pós alta](http://saudedebate.com.br/noticias/sequelas-da-covid-19-a-vida-nao-voltou-ao-normal-apos-a-alta-hospitalar)
+
+4- [Análise de São Paulo com relação ao número de óbitos por 100 mil habitantes](https://www.seade.gov.br/sp-tem-taxas-de-casos-e-mortes-por-covid-19-a-cada-100-mil-habitantes-maiores-que-as-da-espanha-quando-iniciou-lockdown/)
+
+5- [Entendimento do uso da relação de 100 mil habitantes pela Secretária de Segurança Pública - SSP](https://www.ssp.sp.gov.br/fale/estatisticas/answers.aspx?t=6)
