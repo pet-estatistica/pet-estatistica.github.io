@@ -281,6 +281,12 @@ disciplinas:
                 tipo: "PDF"
                 autor: "Júlia Zorzo Ferreira"
                 url_autor: "/integrantes/#julia-zorzo-ferreira"
+              - descricao: "Respostas Exercícios Completmentares - Módulo 2"
+                arquivo: "/pdfs/CM311/2025/Resposta-Exercicio-Complementar-Calculo-modulo02-2025.pdf"
+                tipo: "PDF"
+                autor: "Júlia Zorzo Ferreira"
+                url_autor: "/integrantes/#julia-zorzo-ferreira"
+                
       - ano: 2024
         professores: "Me. Willian Thomas Rocha"
         semestre: "2"
