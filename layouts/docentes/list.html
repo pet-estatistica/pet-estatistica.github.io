@@ -113,38 +113,15 @@
           {{ end }}
           
 <div class="site-docente-member-image">
-  {{ $nomeArquivo := $docente.nome | lower | replaceRE "[áàâãä]" "a" | replaceRE "[éèêë]" "e" | replaceRE "[íìîï]" "i" | replaceRE "[óòôõö]" "o" | replaceRE "[úùûü]" "u" | replaceRE "[ç]" "c" | replaceRE "[^a-z0-9]" "" }}
-  
-  <!-- Tentar diferentes variações do nome de arquivo -->
-  {{ $possiveisArquivos := slice 
-    (printf "images/docentes/%s.jpg" $nomeArquivo)
-    (printf "images/docentes/%s.jpeg" $nomeArquivo)
-    (printf "images/docentes/%s.png" $nomeArquivo)
-    (printf "images/docentes/%s.webp" $nomeArquivo)
-  }}
-  
-  {{ $imagemEncontrada := false }}
-  {{ $imagemSrc := "" }}
-  
-  {{ range $possiveisArquivos }}
-    {{ if not $imagemEncontrada }}
-      {{ $img := resources.Get . }}
-      {{ if $img }}
-        {{ $imagemEncontrada = true }}
-        {{ $imagemSrc = $img.RelPermalink }}
-      {{ end }}
-    {{ end }}
-  {{ end }}
-  
-  {{ if $imagemEncontrada }}
-    <img src="{{ $imagemSrc }}" alt="{{ $docente.nome }}" class="docente-photo">
-  {{ else }}
-    <!-- Fallback para imagem do YAML ou placeholder -->
-    <img src="{{ $docente.imagem | default "/images/team/placeholder.png" }}" 
-         alt="{{ $docente.nome }}" 
-         class="docente-photo"
-         onerror="this.src='/images/team/placeholder.png'">
-  {{ end }}
+  <img src="/images/docentes/{{ $key }}.jpeg" alt="{{ $docente.nome }}" class="docente-photo"
+       onerror="
+         if (this.src.includes('.jpeg')) {
+           this.src = this.src.replace('.jpeg', '.jpg');
+         } else if (this.src.includes('.jpg')) {
+           this.src = this.src.replace('.jpg', '.png');
+         } else {
+           this.src = '/images/team/placeholder.png';
+         }">
 </div>
           <div class="site-docente-member-content">
             <h3>{{ $docente.nome }}</h3>
