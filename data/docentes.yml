@@ -1,14 +1,13 @@
 # Arquivo YAML gerado automaticamente a partir do CSV de docentes
 # Data de geração: 
-# 2025-10-27 00:05:13.007124
-
-# Para atualizar utilize esse repositório https://github.com/pet-estatistica/raspagem-informacoes-professores
+# 2025-10-27 01:12:12.171101
 
 docentes:
   amandamerianfreitasmendes:
     nome: Amanda Merian Freitas Mendes
     email: amandamerian@ufpr.br
     telefone: 3361-3141
+    tipo_docente: Corpo Docente do Departamento de Estatística
     homepage: "http://leg.ufpr.br/~amanda"
     url_perfil: "http://www.est.ufpr.br/professores/00-amanda.html"
     imagem: "http://www.est.ufpr.br/professores/amanda.jpeg"
@@ -21,10 +20,12 @@ docentes:
       nome_original: Amanda Merian Freitas Mendes
       email_original: amandamerian
       link_perfil: Amanda Merian Freitas Mendes
+      tipo_docente_original: Corpo Docente do Departamento de Estatística
   andersonluizarasouza:
     nome: Anderson Luiz Ara Souza
     email: ara@ufpr.br
     telefone: 3361-3141
+    tipo_docente: Corpo Docente do Departamento de Estatística
     homepage: "http://leg.ufpr.br/~ara"
     url_perfil: "http://www.est.ufpr.br/professores/01-anderson.html"
     imagem: "http://www.est.ufpr.br/professores/anderson.jpg"
@@ -37,10 +38,12 @@ docentes:
       nome_original: Anderson Luiz Ara Souza
       email_original: ara
       link_perfil: Anderson Luiz Ara Souza
+      tipo_docente_original: Corpo Docente do Departamento de Estatística
   aryeliassabbagjunior:
     nome: Ary Elias Sabbag Junior
     email: sabbag@ufpr.br
     telefone: 3361-3141
+    tipo_docente: Corpo Docente do Departamento de Estatística
     url_perfil: "http://www.est.ufpr.br/professores/02-sabbag.html"
     imagem: "http://www.est.ufpr.br/professores/ary.jpg"
     formacao:
@@ -51,10 +54,12 @@ docentes:
       nome_original: Ary Elias Sabbag Junior
       email_original: sabbag
       link_perfil: Ary Elias Sabbag Junior
+      tipo_docente_original: Corpo Docente do Departamento de Estatística
   benitoorlandoolivaresaguilera:
     nome: Benito Orlando Olivares Aguilera
     email: benitoag@ufpr.br
     telefone: 3208-6317
+    tipo_docente: Corpo Docente do Departamento de Estatística
     url_perfil: "http://www.est.ufpr.br/professores/03-benito.html"
     imagem: "http://www.est.ufpr.br/professores/benito.jpg"
     formacao:
@@ -65,10 +70,12 @@ docentes:
       nome_original: Benito Orlando Olivares Aguilera
       email_original: benitoag
       link_perfil: Benito Orlando Olivares Aguilera
+      tipo_docente_original: Corpo Docente do Departamento de Estatística
   brunogrimaldomartinhochurata:
     nome: Bruno Grimaldo Martinho Churata
     email: churata@ufpr.br
     telefone: 3361-3654
+    tipo_docente: Corpo Docente do Departamento de Estatística
     homepage: "http://people.ufpr.br/~churata"
     url_perfil: "http://www.est.ufpr.br/professores/04-bruno.html"
     imagem: "http://www.est.ufpr.br/professores/bruno.jpg"
@@ -81,10 +88,12 @@ docentes:
       nome_original: Bruno Grimaldo Martinho Churata
       email_original: churata
       link_perfil: Bruno Grimaldo Martinho Churata
+      tipo_docente_original: Corpo Docente do Departamento de Estatística
   cesaraugustotaconeli:
     nome: Cesar Augusto Taconeli
     email: taconeli@ufpr.br
     telefone: 3361-3573
+    tipo_docente: Corpo Docente do Departamento de Estatística
     homepage: "http://people.ufpr.br/~taconeli"
     url_perfil: "http://www.est.ufpr.br/professores/05-taconeli.html"
     imagem: "http://www.est.ufpr.br/professores/cesar.jpg"
@@ -97,24 +106,28 @@ docentes:
       nome_original: Cesar Augusto Taconeli
       email_original: taconeli
       link_perfil: Cesar Augusto Taconeli
+      tipo_docente_original: Corpo Docente do Departamento de Estatística
   deisymorselligysi:
     nome: Deisy Morselli Gysi
     email: deisy.gysi@ufpr.br
     telefone: 3361-3141
+    tipo_docente: Corpo Docente do Departamento de Estatística
     homepage: "https://deisygysi.github.io/"
     url_perfil: "http://www.est.ufpr.br/professores/24-deisy.html"
     imagem: "http://www.est.ufpr.br/professores/deisy.jpg"
     formacao:
-      graduacao: [Biotecnologia - PUCPR - Pontifícia Universidade Católica do Paraná (2011), Estatística - UFPR - Universidade Federal do Paraná (2013)]
+      graduacao: [Biotecnologia - PUCPR - Pontifícia Universidade Católica do Paraná, PR. (2011), Estatística - UFPR - Universidade Federal do Paraná, PR. (2013)]
     areas_pesquisa: [Medicina de Precisão, Métodos Estatísticos em Genética Quantitativa e Genômica, Medicina de Redes, Biologia de Sistemas, Bioinformática.]
     informacoes_adicionais:
       nome_original: Deisy Morselli Gysi
       email_original: deisy.gysi
       link_perfil: Deisy Morselli Gysi
+      tipo_docente_original: Corpo Docente do Departamento de Estatística
   eduardovargasferreira:
     nome: Eduardo Vargas Ferreira
     email: e.ferreira@ufpr.br
     telefone: 3208-3141
+    tipo_docente: Corpo Docente do Departamento de Estatística
     homepage: "http://leg.ufpr.br/~eferreira"
     url_perfil: "http://www.est.ufpr.br/professores/06-eduardo.html"
     imagem: "http://www.est.ufpr.br/professores/eduardo.jpg"
@@ -127,10 +140,12 @@ docentes:
       nome_original: Eduardo Vargas Ferreira
       email_original: e.ferreira
       link_perfil: Eduardo Vargas Ferreira
+      tipo_docente_original: Corpo Docente do Departamento de Estatística
   elianemariawilbertwinter:
     nome: Eliane Maria Wilbert Winter
     email: elianew@ufpr.br
     telefone: 3361-3264
+    tipo_docente: Corpo Docente do Departamento de Estatística
     url_perfil: "http://www.est.ufpr.br/professores/07-eliane.html"
     imagem: "http://www.est.ufpr.br/professores/elianew.jpg"
     formacao:
@@ -141,10 +156,12 @@ docentes:
       nome_original: Eliane Maria Wilbert Winter
       email_original: elianew
       link_perfil: Eliane Maria Wilbert Winter
+      tipo_docente_original: Corpo Docente do Departamento de Estatística
   fernandabuhrerrizzato:
     nome: Fernanda Buhrer Rizzato
     email: fernandab@ufpr.br
     telefone: 3361-3120
+    tipo_docente: Corpo Docente do Departamento de Estatística
     url_perfil: "http://www.est.ufpr.br/professores/09-fernanda.html"
     imagem: "http://www.est.ufpr.br/professores/fernanda.jpg"
     formacao:
@@ -156,10 +173,12 @@ docentes:
       nome_original: Fernanda Buhrer Rizzato
       email_original: fernandab
       link_perfil: Fernanda Buhrer Rizzato
+      tipo_docente_original: Corpo Docente do Departamento de Estatística
   fernandolucambioprez:
     nome: Fernando Lucambio Pérez
     email: lucambio@ufpr.br
     telefone: 3208-6324
+    tipo_docente: Corpo Docente do Departamento de Estatística
     homepage: "http://docs.ufpr.br/~lucambio/"
     url_perfil: "http://www.est.ufpr.br/professores/10-lucambio.html"
     imagem: "http://www.est.ufpr.br/professores/lucambio.jpg"
@@ -167,14 +186,16 @@ docentes:
       graduacao: Matemática - Universidad de Oriente, Santiago de Cuba, CUBA, 1990.
       mestrado: Estatística - UNICAMP - Universidade Estadual de Campinas, Campinas, SP, 1998.
       doutorado: Estatística - USP - Universidade de São Paulo, São Paulo, SP, 2004.
-    areas_pesquisa: [Estatística Teórica, Modelos de Regressão, Análise de Dados Longitudinais]
+    areas_pesquisa: [Estatística Teórica, Modelos de Regressão, Análise de Dados Longitudinais.]
     informacoes_adicionais:
       nome_original: Fernando Lucambio Pérez
       email_original: lucambio
       link_perfil: Fernando Lucambio Pérez
+      tipo_docente_original: Corpo Docente do Departamento de Estatística
   fernandodepolmayer:
     nome: Fernando de Pol Mayer
     email: fernando.mayer@ufpr.br
+    tipo_docente: Corpo Docente do Departamento de Estatística
     homepage: "http://www.leg.ufpr.br/~fernandomayer"
     url_perfil: "http://www.est.ufpr.br/professores/11-mayer.html"
     imagem: "http://www.est.ufpr.br/professores/fmayer.jpg"
@@ -187,10 +208,12 @@ docentes:
       nome_original: Fernando de Pol Mayer
       email_original: fernando.mayer
       link_perfil: Fernando de Pol Mayer
+      tipo_docente_original: Corpo Docente do Departamento de Estatística
   jomarantoniocamarinhafilho:
     nome: Jomar Antonio Camarinha Filho
     email: jomarc@ufpr.br
     telefone: 3361-3414
+    tipo_docente: Corpo Docente do Departamento de Estatística
     homepage: "http://docs.ufpr.br/~jomarc/"
     url_perfil: "http://www.est.ufpr.br/professores/12-jomar.html"
     imagem: "http://www.est.ufpr.br/professores/jomar.jpg"
@@ -203,10 +226,12 @@ docentes:
       nome_original: Jomar Antonio Camarinha Filho
       email_original: jomarc
       link_perfil: Jomar Antonio Camarinha Filho
+      tipo_docente_original: Corpo Docente do Departamento de Estatística
   jorgefesta:
     nome: Jorge Festa
     email: festa@ufpr.br
     telefone: 3361-3415
+    tipo_docente: Corpo Docente do Departamento de Estatística
     url_perfil: "http://www.est.ufpr.br/professores/13-festa.html"
     imagem: "http://www.est.ufpr.br/professores/festa.jpg"
     formacao:
@@ -217,10 +242,12 @@ docentes:
       nome_original: Jorge Festa
       email_original: festa
       link_perfil: Jorge Festa
+      tipo_docente_original: Corpo Docente do Departamento de Estatística
   josluizpadilhadasilva:
     nome: José Luiz Padilha da Silva
     email: jlpadilha@ufpr.br
     telefone: 3208-6315
+    tipo_docente: Corpo Docente do Departamento de Estatística
     homepage: "https://docs.ufpr.br/~jlpadilha"
     url_perfil: "http://www.est.ufpr.br/professores/14-joseluiz.html"
     imagem: "http://www.est.ufpr.br/professores/padilha.jpg"
@@ -233,10 +260,12 @@ docentes:
       nome_original: José Luiz Padilha da Silva
       email_original: jlpadilha
       link_perfil: José Luiz Padilha da Silva
+      tipo_docente_original: Corpo Docente do Departamento de Estatística
   mrioluizferreiradasilva:
     nome: Mário Luiz Ferreira da Silva
     email: marioluiz@ufpr.br
     telefone: 3361-3651
+    tipo_docente: Corpo Docente do Departamento de Estatística
     homepage: "https://docs.ufpr.br/~marioluiz/"
     url_perfil: "http://www.est.ufpr.br/professores/15-mario.html"
     imagem: "http://www.est.ufpr.br/professores/user.jpg"
@@ -247,10 +276,12 @@ docentes:
       nome_original: Mário Luiz Ferreira da Silva
       email_original: marioluiz
       link_perfil: Mário Luiz Ferreira da Silva
+      tipo_docente_original: Corpo Docente do Departamento de Estatística
   niveadasilvamatudamachado:
     nome: Nivea da Silva Matuda Machado
     email: niveam@ufpr.br
     telefone: 3361-3471
+    tipo_docente: Corpo Docente do Departamento de Estatística
     url_perfil: "http://www.est.ufpr.br/professores/16-nivea.html"
     imagem: "http://www.est.ufpr.br/professores/nivea.jpg"
     formacao:
@@ -262,10 +293,12 @@ docentes:
       nome_original: Nivea da Silva Matuda Machado
       email_original: niveam
       link_perfil: Nivea da Silva Matuda Machado
+      tipo_docente_original: Corpo Docente do Departamento de Estatística
   paulojustinianoribeirojunior:
     nome: Paulo Justiniano Ribeiro Junior
     email: paulojus@ufpr.br
     telefone: 3361-3573
+    tipo_docente: Corpo Docente do Departamento de Estatística
     homepage: "http://leg.ufpr.br/~paulojus"
     url_perfil: "http://www.est.ufpr.br/professores/17-paulojus.html"
     imagem: "http://www.est.ufpr.br/professores/paulojus.jpg"
@@ -278,10 +311,12 @@ docentes:
       nome_original: Paulo Justiniano Ribeiro Junior
       email_original: paulojus
       link_perfil: Paulo Justiniano Ribeiro Junior
+      tipo_docente_original: Corpo Docente do Departamento de Estatística
   pauloricardobittencourtguimares:
     nome: Paulo Ricardo Bittencourt Guimarães
     email: prbg@ufpr.br
     telefone: 3208-6318
+    tipo_docente: Corpo Docente do Departamento de Estatística
     homepage: "https://docs.ufpr.br/~prbg/prbg.htm"
     url_perfil: "http://www.est.ufpr.br/professores/18-prbg.html"
     imagem: "http://www.est.ufpr.br/professores/prbg.jpg"
@@ -294,10 +329,12 @@ docentes:
       nome_original: Paulo Ricardo Bittencourt Guimarães
       email_original: prbg
       link_perfil: Paulo Ricardo Bittencourt Guimarães
+      tipo_docente_original: Corpo Docente do Departamento de Estatística
   pedrohenriquetoledodeoliveirasousa:
     nome: Pedro Henrique Toledo de Oliveira Sousa
     email: pedro.henrique3@ufpr.br
     telefone: 3361-3573
+    tipo_docente: Corpo Docente do Departamento de Estatística
     url_perfil: "http://www.est.ufpr.br/professores/25-pedro.html"
     imagem: "http://www.est.ufpr.br/professores/pedro.jpeg"
     formacao:
@@ -309,10 +346,12 @@ docentes:
       nome_original: Pedro Henrique Toledo de Oliveira Sousa
       email_original: pedro.henrique3
       link_perfil: Pedro Henrique Toledo de Oliveira Sousa
+      tipo_docente_original: Corpo Docente do Departamento de Estatística
   silviaemikoshimakura:
     nome: Silvia Emiko Shimakura
     email: silvia.shimakura@ufpr.br
     telefone: 3361-3254
+    tipo_docente: Corpo Docente do Departamento de Estatística
     homepage: "http://leg.ufpr.br/~silvia"
     url_perfil: "http://www.est.ufpr.br/professores/19-silvia.html"
     imagem: "http://www.est.ufpr.br/professores/silvia.jpg"
@@ -325,10 +364,12 @@ docentes:
       nome_original: Silvia Emiko Shimakura
       email_original: silvia.shimakura
       link_perfil: Silvia Emiko Shimakura
+      tipo_docente_original: Corpo Docente do Departamento de Estatística
   stelaadamivayego:
     nome: Stela Adami Vayego
     email: vayego@ufpr.br
     telefone: 3361-3264
+    tipo_docente: Corpo Docente do Departamento de Estatística
     homepage: "https://docs.ufpr.br/~vayego/"
     url_perfil: "http://www.est.ufpr.br/professores/20-stela.html"
     imagem: "http://www.est.ufpr.br/professores/stela.jpg"
@@ -341,10 +382,12 @@ docentes:
       nome_original: Stela Adami Vayego
       email_original: vayego
       link_perfil: Stela Adami Vayego
+      tipo_docente_original: Corpo Docente do Departamento de Estatística
   wagnerhugobonat:
     nome: Wagner Hugo Bonat
     email: wbonat@ufpr.br
     telefone: 3361-3573
+    tipo_docente: Corpo Docente do Departamento de Estatística
     homepage: "http://www.leg.ufpr.br/doku.php/pessoais:wbonat"
     url_perfil: "http://www.est.ufpr.br/professores/21-wagner.html"
     imagem: "http://www.est.ufpr.br/professores/wagner.jpg"
@@ -357,10 +400,12 @@ docentes:
       nome_original: Wagner Hugo Bonat
       email_original: wbonat
       link_perfil: Wagner Hugo Bonat
+      tipo_docente_original: Corpo Docente do Departamento de Estatística
   josjairodesantanaesilva:
     nome: José Jairo de Santana e Silva
     email: jose.jairo@ufpr.br
     telefone: 3361-3573
+    tipo_docente: Docentes Substitutos
     url_perfil: "http://www.est.ufpr.br/professores/PS-jjairo.html"
     imagem: "http://www.est.ufpr.br/professores/jjairo.jpeg"
     formacao:
@@ -372,10 +417,12 @@ docentes:
       nome_original: José Jairo de Santana e Silva
       email_original: jose.jairo
       link_perfil: José Jairo de Santana e Silva
+      tipo_docente_original: Docentes Substitutos
   guilhermeeliaseggmonteiro:
     nome: Guilherme Elias Egg Monteiro
     email: guilherme.egg@ufpr.br
     telefone: 3361-3573
+    tipo_docente: Docentes Substitutos
     url_perfil: "http://www.est.ufpr.br/professores/PS-guiegg.html"
     imagem: "http://www.est.ufpr.br/professores/guiegg.jpeg"
     formacao:
@@ -385,10 +432,12 @@ docentes:
       nome_original: Guilherme Elias Egg Monteiro
       email_original: guilherme.egg
       link_perfil: Guilherme Elias Egg Monteiro
+      tipo_docente_original: Docentes Substitutos
   anselmochavesneto:
     nome: Anselmo Chaves Neto
     email: anselmo@ufpr.br
     telefone: 3361-3141
+    tipo_docente: Docentes Colaboradores - UFPR
     url_perfil: "http://www.est.ufpr.br/professores/CS1-anselmo.html"
     imagem: "http://www.est.ufpr.br/professores/anselmo.jpg"
     formacao:
@@ -400,9 +449,11 @@ docentes:
       nome_original: Anselmo Chaves Neto
       email_original: anselmo
       link_perfil: Anselmo Chaves Neto
+      tipo_docente_original: Docentes Colaboradores - UFPR
   pauloafonsobracarensecosta:
     nome: Paulo Afonso Bracarense Costa
     email: bracarense@ufpr.br
+    tipo_docente: Docentes Colaboradores - UFPR
     url_perfil: "http://www.est.ufpr.br/professores/CS2-bracarense.html"
     imagem: "http://www.est.ufpr.br/professores/bracaren.jpg"
     formacao:
@@ -414,9 +465,11 @@ docentes:
       nome_original: Paulo Afonso Bracarense Costa
       email_original: bracarense
       link_perfil: Paulo Afonso Bracarense Costa
+      tipo_docente_original: Docentes Colaboradores - UFPR
   suelyruizgiolo:
     nome: Suely Ruiz Giolo
     email: giolo@ufpr.br
+    tipo_docente: Docentes Colaboradores - UFPR
     homepage: "https://docs.ufpr.br/~giolo/"
     url_perfil: "http://www.est.ufpr.br/professores/CS3-suely.html"
     imagem: "http://www.est.ufpr.br/professores/giolo.jpg"
@@ -429,9 +482,11 @@ docentes:
       nome_original: Suely Ruiz Giolo
       email_original: giolo
       link_perfil: Suely Ruiz Giolo
+      tipo_docente_original: Docentes Colaboradores - UFPR
   eliasteixeirakrainski:
     nome: Elias Teixeira Krainski
     email: eliaskr@ufpr.br
+    tipo_docente: Docentes Colaboradores - UFPR
     homepage: "http://leg.ufpr.br/~elias"
     url_perfil: "http://www.est.ufpr.br/professores/08-elias.html"
     imagem: "http://www.est.ufpr.br/professores/elias.jpg"
@@ -444,9 +499,11 @@ docentes:
       nome_original: Elias Teixeira Krainski
       email_original: eliaskr
       link_perfil: Elias Teixeira Krainski
+      tipo_docente_original: Docentes Colaboradores - UFPR
   walmesmarqueszeviani:
     nome: Walmes Marques Zeviani
     email: walmes@ufpr.br
+    tipo_docente: Docentes Colaboradores - UFPR
     homepage: "http://www.leg.ufpr.br/~walmes"
     url_perfil: "http://www.est.ufpr.br/professores/22-walmes.html"
     imagem: "http://www.est.ufpr.br/professores/walmes.jpg"
@@ -459,3 +516,4 @@ docentes:
       nome_original: Walmes Marques Zeviani
       email_original: walmes
       link_perfil: Walmes Marques Zeviani
+      tipo_docente_original: Docentes Colaboradores - UFPR

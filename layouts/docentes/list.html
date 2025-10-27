@@ -1,4 +1,3 @@
-
 {{ define "main" }}
  <div class="site-about-espaco"></div>
 <section class="site-docentes">
@@ -10,67 +9,109 @@
           <p>Conheça nossos professores e pesquisadores</p>
         </div>
         
-<!-- Filtro por áreas de pesquisa -->
-<div class="area-filter mb-4">
-  <label for="area-select" class="form-label">Filtrar por área de pesquisa</label>
-  <select id="area-select" class="form-select">
-    <option value="all">Todas as áreas</option>
-    {{ $allAreas := slice }}
-    {{ range .Site.Data.docentes.docentes }}
-      {{ if .areas_pesquisa }}
-        {{ if reflect.IsSlice .areas_pesquisa }}
-          {{ $allAreas = $allAreas | append .areas_pesquisa }}
-        {{ else }}
-          {{ $allAreas = $allAreas | append (slice .areas_pesquisa) }}
-        {{ end }}
-      {{ end }}
-    {{ end }}
-    
-    {{ $uniqueAreas := slice }}
-    {{ $areaCounts := dict }}
-    {{ range $allAreas }}
-      {{ if reflect.IsSlice . }}
-        {{ range . }}
-          {{ $area := . | string }}
-          <!-- Normalizar a string: remover pontos finais e trim espaços -->
-          {{ $normalizedArea := $area | replaceRE "\\.$" "" }}
-          {{ $normalizedArea = $normalizedArea | replaceRE "^\\s+|\\s+$" "" }}
-          {{ $normalizedArea = $normalizedArea | title }}
-          {{ if not (in $uniqueAreas $normalizedArea) }}
-            {{ $uniqueAreas = $uniqueAreas | append $normalizedArea }}
-            {{ $areaCounts = merge $areaCounts (dict $normalizedArea 1) }}
-          {{ else }}
-            {{ $currentCount := index $areaCounts $normalizedArea | default 0 }}
-            {{ $areaCounts = merge $areaCounts (dict $normalizedArea (add $currentCount 1)) }}
-          {{ end }}
-        {{ end }}
-      {{ else }}
-        {{ $area := . | string }}
-        <!-- Normalizar a string: remover pontos finais e trim espaços -->
-        {{ $normalizedArea := $area | replaceRE "\\.$" "" }}
-        {{ $normalizedArea = $normalizedArea | replaceRE "^\\s+|\\s+$" "" }}
-        {{ $normalizedArea = $normalizedArea | title }}
-        {{ if not (in $uniqueAreas $normalizedArea) }}
-          {{ $uniqueAreas = $uniqueAreas | append $normalizedArea }}
-          {{ $areaCounts = merge $areaCounts (dict $normalizedArea 1) }}
-        {{ else }}
-          {{ $currentCount := index $areaCounts $normalizedArea | default 0 }}
-          {{ $areaCounts = merge $areaCounts (dict $normalizedArea (add $currentCount 1)) }}
-        {{ end }}
-      {{ end }}
-    {{ end }}
-    
-    {{ range sort $uniqueAreas }}
-    <option value="{{ . | urlize }}">{{ . }} ({{ index $areaCounts . }})</option>
-    {{ end }}
-  </select>
-</div>
-</div>
+        <!-- Filtro por tipo de docente -->
+        <div class="tipo-filter mb-3">
+          <label for="tipo-select" class="form-label">Filtrar por categoria</label>
+          <select id="tipo-select" class="form-select">
+            <option value="all">Todas as categorias</option>
+            {{ $allTipos := slice }}
+            {{ range .Site.Data.docentes.docentes }}
+              {{ if .tipo_docente }}
+                {{ $allTipos = $allTipos | append .tipo_docente }}
+              {{ else }}
+                {{ $allTipos = $allTipos | append "Sem categoria" }}
+              {{ end }}
+            {{ end }}
+            
+            {{ $uniqueTipos := slice }}
+            {{ $tipoCounts := dict }}
+            {{ range $allTipos }}
+              {{ $tipo := . | string }}
+              {{ if not (in $uniqueTipos $tipo) }}
+                {{ $uniqueTipos = $uniqueTipos | append $tipo }}
+                {{ $tipoCounts = merge $tipoCounts (dict $tipo 1) }}
+              {{ else }}
+                {{ $currentCount := index $tipoCounts $tipo | default 0 }}
+                {{ $tipoCounts = merge $tipoCounts (dict $tipo (add $currentCount 1)) }}
+              {{ end }}
+            {{ end }}
+            
+            {{ range sort $uniqueTipos }}
+            <option value="{{ . | urlize }}">{{ . }} ({{ index $tipoCounts . }})</option>
+            {{ end }}
+          </select>
+        </div>
+
+        <!-- Filtro por áreas de pesquisa -->
+        <div class="area-filter mb-4">
+          <label for="area-select" class="form-label">Filtrar por área de pesquisa</label>
+          <select id="area-select" class="form-select">
+            <option value="all">Todas as áreas</option>
+            {{ $allAreas := slice }}
+            {{ range .Site.Data.docentes.docentes }}
+              {{ if .areas_pesquisa }}
+                {{ if reflect.IsSlice .areas_pesquisa }}
+                  {{ $allAreas = $allAreas | append .areas_pesquisa }}
+                {{ else }}
+                  {{ $allAreas = $allAreas | append (slice .areas_pesquisa) }}
+                {{ end }}
+              {{ end }}
+            {{ end }}
+            
+            {{ $uniqueAreas := slice }}
+            {{ $areaCounts := dict }}
+            {{ range $allAreas }}
+              {{ if reflect.IsSlice . }}
+                {{ range . }}
+                  {{ $area := . | string }}
+                  <!-- Normalizar a string: remover pontos finais e trim espaços -->
+                  {{ $normalizedArea := $area | replaceRE "\\.$" "" }}
+                  {{ $normalizedArea = $normalizedArea | replaceRE "^\\s+|\\s+$" "" }}
+                  {{ $normalizedArea = $normalizedArea | title }}
+                  {{ if not (in $uniqueAreas $normalizedArea) }}
+                    {{ $uniqueAreas = $uniqueAreas | append $normalizedArea }}
+                    {{ $areaCounts = merge $areaCounts (dict $normalizedArea 1) }}
+                  {{ else }}
+                    {{ $currentCount := index $areaCounts $normalizedArea | default 0 }}
+                    {{ $areaCounts = merge $areaCounts (dict $normalizedArea (add $currentCount 1)) }}
+                  {{ end }}
+                {{ end }}
+              {{ else }}
+                {{ $area := . | string }}
+                <!-- Normalizar a string: remover pontos finais e trim espaços -->
+                {{ $normalizedArea := $area | replaceRE "\\.$" "" }}
+                {{ $normalizedArea = $normalizedArea | replaceRE "^\\s+|\\s+$" "" }}
+                {{ $normalizedArea = $normalizedArea | title }}
+                {{ if not (in $uniqueAreas $normalizedArea) }}
+                  {{ $uniqueAreas = $uniqueAreas | append $normalizedArea }}
+                  {{ $areaCounts = merge $areaCounts (dict $normalizedArea 1) }}
+                {{ else }}
+                  {{ $currentCount := index $areaCounts $normalizedArea | default 0 }}
+                  {{ $areaCounts = merge $areaCounts (dict $normalizedArea (add $currentCount 1)) }}
+                {{ end }}
+              {{ end }}
+            {{ end }}
+            
+            {{ range sort $uniqueAreas }}
+            <option value="{{ . | urlize }}">{{ . }} ({{ index $areaCounts . }})</option>
+            {{ end }}
+          </select>
+        </div>
+      </div>
       
       {{ range $key, $docente := .Site.Data.docentes.docentes }}
       <div class="col-lg-6 col-md-6 docente-member" 
-           data-areas="{{ if $docente.areas_pesquisa }}{{ if reflect.IsSlice $docente.areas_pesquisa }}{{ range $docente.areas_pesquisa }}{{ . | urlize }} {{ end }}{{ else }}{{ $docente.areas_pesquisa | urlize }}{{ end }}{{ end }}">
+           data-areas="{{ if $docente.areas_pesquisa }}{{ if reflect.IsSlice $docente.areas_pesquisa }}{{ range $docente.areas_pesquisa }}{{ . | urlize }} {{ end }}{{ else }}{{ $docente.areas_pesquisa | urlize }}{{ end }}{{ end }}"
+           data-tipo="{{ if $docente.tipo_docente }}{{ $docente.tipo_docente | urlize }}{{ else }}sem-categoria{{ end }}">
         <div class="site-docente-member">
+          
+          <!-- Badge do tipo de docente -->
+          {{ if $docente.tipo_docente }}
+          <div class="docente-badge">
+            {{ $docente.tipo_docente }}
+          </div>
+          {{ end }}
+          
           <div class="site-docente-member-image">
             {{ $imagePath := printf "images/docentes/%s.jpg" $key }}
             {{ $image := resources.Get $imagePath }}
@@ -135,28 +176,34 @@
   </div>
 </section>
 
-<!-- Script para o filtro -->
+<!-- Script para os filtros -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+  const tipoSelect = document.getElementById('tipo-select');
   const areaSelect = document.getElementById('area-select');
   const docenteMembers = document.querySelectorAll('.docente-member');
   
-  areaSelect.addEventListener('change', function() {
-    const selectedArea = this.value;
+  function aplicarFiltros() {
+    const selectedTipo = tipoSelect.value;
+    const selectedArea = areaSelect.value;
     
     docenteMembers.forEach(member => {
-      if (selectedArea === 'all') {
+      const memberTipo = member.getAttribute('data-tipo');
+      const memberAreas = member.getAttribute('data-areas').split(' ');
+      
+      let showTipo = selectedTipo === 'all' || memberTipo === selectedTipo;
+      let showArea = selectedArea === 'all' || memberAreas.includes(selectedArea);
+      
+      if (showTipo && showArea) {
         member.style.display = 'block';
       } else {
-        const memberAreas = member.getAttribute('data-areas').split(' ');
-        if (memberAreas.includes(selectedArea)) {
-          member.style.display = 'block';
-        } else {
-          member.style.display = 'none';
-        }
+        member.style.display = 'none';
       }
     });
-  });
+  }
+  
+  tipoSelect.addEventListener('change', aplicarFiltros);
+  areaSelect.addEventListener('change', aplicarFiltros);
 });
 </script>
 
@@ -172,11 +219,45 @@ document.addEventListener('DOMContentLoaded', function() {
   margin-bottom: 30px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
 }
 
 .site-docente-member:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Badge do tipo de docente */
+.docente-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #3498db;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  z-index: 10;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Cores diferentes para cada tipo de docente */
+[data-tipo*="corpo-docente"] .docente-badge {
+  background: #27ae60;
+}
+
+[data-tipo*="substitutos"] .docente-badge {
+  background: #e74c3c;
+}
+
+[data-tipo*="colaboradores"] .docente-badge {
+  background: #f39c12;
+}
+
+[data-tipo*="sem-categoria"] .docente-badge {
+  background: #95a5a6;
 }
 
 .site-docente-member-image {
@@ -278,9 +359,9 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 
 /* Filtro styles */
-.area-filter {
+.tipo-filter, .area-filter {
   max-width: 400px;
-  margin: 0 auto 2rem;
+  margin: 0 auto 1rem;
 }
 
 .form-select {
@@ -328,6 +409,14 @@ document.addEventListener('DOMContentLoaded', function() {
   
   .docente-formacao ul {
     text-align: left;
+  }
+  
+  .docente-badge {
+    position: relative;
+    top: auto;
+    right: auto;
+    display: inline-block;
+    margin-bottom: 10px;
   }
 }
 </style>
