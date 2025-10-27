@@ -113,18 +113,37 @@
           {{ end }}
           
 <div class="site-docente-member-image">
-  {{ $nomeArquivo := $docente.nome | lower | replaceRE `[áàâãä]` "a" | replaceRE `[éèêë]` "e" | replaceRE `[íìîï]` "i" | replaceRE `[óòôõö]` "o" | replaceRE `[úùûü]` "u" | replaceRE `[ç]` "c" | replaceRE `[^a-z0-9]` "" }}
+  {{ $nomeArquivo := $docente.nome | lower | replaceRE "[áàâãä]" "a" | replaceRE "[éèêë]" "e" | replaceRE "[íìîï]" "i" | replaceRE "[óòôõö]" "o" | replaceRE "[úùûü]" "u" | replaceRE "[ç]" "c" | replaceRE "[^a-z0-9]" "" }}
   
-  {{ $imagePath := printf "images/docentes/%s.jpg" $nomeArquivo }}
-  {{ $image := resources.Get $imagePath }}
+  <!-- Tentar diferentes variações do nome de arquivo -->
+  {{ $possiveisArquivos := slice 
+    (printf "images/docentes/%s.jpg" $nomeArquivo)
+    (printf "images/docentes/%s.jpeg" $nomeArquivo)
+    (printf "images/docentes/%s.png" $nomeArquivo)
+    (printf "images/docentes/%s.webp" $nomeArquivo)
+  }}
   
-  {{ if $image }}
-    <img src="{{ $image.RelPermalink }}" alt="{{ $docente.nome }}" class="docente-photo">
+  {{ $imagemEncontrada := false }}
+  {{ $imagemSrc := "" }}
+  
+  {{ range $possiveisArquivos }}
+    {{ if not $imagemEncontrada }}
+      {{ $img := resources.Get . }}
+      {{ if $img }}
+        {{ $imagemEncontrada = true }}
+        {{ $imagemSrc = $img.RelPermalink }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  
+  {{ if $imagemEncontrada }}
+    <img src="{{ $imagemSrc }}" alt="{{ $docente.nome }}" class="docente-photo">
   {{ else }}
-    <!-- Fallback -->
+    <!-- Fallback para imagem do YAML ou placeholder -->
     <img src="{{ $docente.imagem | default "/images/team/placeholder.png" }}" 
          alt="{{ $docente.nome }}" 
-         class="docente-photo">
+         class="docente-photo"
+         onerror="this.src='/images/team/placeholder.png'">
   {{ end }}
 </div>
           <div class="site-docente-member-content">
