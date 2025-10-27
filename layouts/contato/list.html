@@ -110,16 +110,15 @@
     </div>
     {{ end }}
   </div>
-</section>
-
-<!-- Mapa (Opcional) -->
-{{ with .Site.Params.contact.map_embed }}
-<div class="container-fluid px-0 mt-5">
-  <div class="row justify-content-center">
-    <div class="col-12 text-center">
-      {{ . | safeHTML }}
+  <!-- Mapa (Opcional) -->
+  {{ with .Site.Params.contact.map_embed }}
+  <div class="container-fluid px-0 mt-5">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center">
+        {{ . | safeHTML }}
+      </div>
     </div>
   </div>
-</div>
-{{ end }}
+  {{ end }}
+</section>
 {{ end }}
