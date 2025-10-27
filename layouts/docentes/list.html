@@ -112,16 +112,21 @@
           </div>
           {{ end }}
           
-          <div class="site-docente-member-image">
-            {{ $imagePath := printf "images/docentes/%s.jpg" $key }}
-            {{ $image := resources.Get $imagePath }}
-            {{ if $image }}
-              <img src="{{ $image.RelPermalink }}" alt="{{ $docente.nome }}" class="docente-photo">
-            {{ else }}
-              <!-- Fallback para imagem do YAML se não existir localmente -->
-              <img src="{{ $docente.imagem }}" alt="{{ $docente.nome }}" class="docente-photo">
-            {{ end }}
-          </div>
+<div class="site-docente-member-image">
+  {{ $nomeArquivo := $docente.nome | lower | replaceRE `[áàâãä]` "a" | replaceRE `[éèêë]` "e" | replaceRE `[íìîï]` "i" | replaceRE `[óòôõö]` "o" | replaceRE `[úùûü]` "u" | replaceRE `[ç]` "c" | replaceRE `[^a-z0-9]` "" }}
+  
+  {{ $imagePath := printf "images/docentes/%s.jpg" $nomeArquivo }}
+  {{ $image := resources.Get $imagePath }}
+  
+  {{ if $image }}
+    <img src="{{ $image.RelPermalink }}" alt="{{ $docente.nome }}" class="docente-photo">
+  {{ else }}
+    <!-- Fallback -->
+    <img src="{{ $docente.imagem | default "/images/team/placeholder.png" }}" 
+         alt="{{ $docente.nome }}" 
+         class="docente-photo">
+  {{ end }}
+</div>
           <div class="site-docente-member-content">
             <h3>{{ $docente.nome }}</h3>
             
