@@ -1,0 +1,461 @@
+# Arquivo YAML gerado automaticamente a partir do CSV de docentes
+# Data de geração: 
+# 2025-10-27 00:05:13.007124
+
+# Para atualizar utilize esse repositório https://github.com/pet-estatistica/raspagem-informacoes-professores
+
+docentes:
+  amandamerianfreitasmendes:
+    nome: Amanda Merian Freitas Mendes
+    email: amandamerian@ufpr.br
+    telefone: 3361-3141
+    homepage: "http://leg.ufpr.br/~amanda"
+    url_perfil: "http://www.est.ufpr.br/professores/00-amanda.html"
+    imagem: "http://www.est.ufpr.br/professores/amanda.jpeg"
+    formacao:
+      graduacao: Estatística - UFC Universidade Federal do Ceará, 2018.
+      mestrado: Estatística - UNICAMP - Universidade Estadual de Campinas, Campinas, SP, 2020.
+      doutorado: Estatística - UNICAMP - Universidade Estadual de Campinas, Campinas, SP, 2020. , 2024.
+    areas_pesquisa: [Modelos de Variáveis Latentes, Modelos de regressão não gaussianos, Análise de Medidas repetidas, Verificação da qualidade de ajuste e seleção de Modelos, Inferência Bayesiana, Regressão Quantílica.]
+    informacoes_adicionais:
+      nome_original: Amanda Merian Freitas Mendes
+      email_original: amandamerian
+      link_perfil: Amanda Merian Freitas Mendes
+  andersonluizarasouza:
+    nome: Anderson Luiz Ara Souza
+    email: ara@ufpr.br
+    telefone: 3361-3141
+    homepage: "http://leg.ufpr.br/~ara"
+    url_perfil: "http://www.est.ufpr.br/professores/01-anderson.html"
+    imagem: "http://www.est.ufpr.br/professores/anderson.jpg"
+    formacao:
+      graduacao: Bacharel em Estatística - UFSCar - Universidade Federal de São Carlos, São Carlos, SP, 2009.
+      mestrado: Estatística - UFSCar - Universidade Federal de São Carlos, São Carlos, SP, 2011.
+      doutorado: Estatística - UFSCar - Universidade Federal de São Carlos, São Carlos, SP, 2016.
+    areas_pesquisa: [Statistical Machine Learning, Statistical Inference and Computational Methods.]
+    informacoes_adicionais:
+      nome_original: Anderson Luiz Ara Souza
+      email_original: ara
+      link_perfil: Anderson Luiz Ara Souza
+  aryeliassabbagjunior:
+    nome: Ary Elias Sabbag Junior
+    email: sabbag@ufpr.br
+    telefone: 3361-3141
+    url_perfil: "http://www.est.ufpr.br/professores/02-sabbag.html"
+    imagem: "http://www.est.ufpr.br/professores/ary.jpg"
+    formacao:
+      graduacao: Estatística - UFPR - Universidade Federal do Paraná, Curitiba, PR, 1982.
+      mestrado: Estatística - UFRJ - Universidade Federal do Rio de Janeiro, Rio de Janeiro, RJ, 1989.
+    areas_pesquisa: [Inferência Bayesiana, Amostragem e Probabilidade.]
+    informacoes_adicionais:
+      nome_original: Ary Elias Sabbag Junior
+      email_original: sabbag
+      link_perfil: Ary Elias Sabbag Junior
+  benitoorlandoolivaresaguilera:
+    nome: Benito Orlando Olivares Aguilera
+    email: benitoag@ufpr.br
+    telefone: 3208-6317
+    url_perfil: "http://www.est.ufpr.br/professores/03-benito.html"
+    imagem: "http://www.est.ufpr.br/professores/benito.jpg"
+    formacao:
+      graduacao: Licenciatura em Matemática - Universidad de La Serena, La Serena, CHILE, 1987.
+      mestrado: Estatística - UNICAMP - Universidade Estadual de Campinas, Campinas, SP, 1993.
+    areas_pesquisa: Probabilidade e Processos Estocásticos.
+    informacoes_adicionais:
+      nome_original: Benito Orlando Olivares Aguilera
+      email_original: benitoag
+      link_perfil: Benito Orlando Olivares Aguilera
+  brunogrimaldomartinhochurata:
+    nome: Bruno Grimaldo Martinho Churata
+    email: churata@ufpr.br
+    telefone: 3361-3654
+    homepage: "http://people.ufpr.br/~churata"
+    url_perfil: "http://www.est.ufpr.br/professores/04-bruno.html"
+    imagem: "http://www.est.ufpr.br/professores/bruno.jpg"
+    formacao:
+      graduacao: Agronomia - UFV - Universidade Federal de Viçosa, Viçosa, MG, 1992.
+      mestrado: Genética - UNESP - Universidade Estadual Paulista, SP, 1994.
+      doutorado: Genética - UFV - Universidade Federal de Viçosa, Viçosa, MG, 1999.
+    areas_pesquisa: [Estatística Genética, Planejamento de Experimento e Modelos Lineares.]
+    informacoes_adicionais:
+      nome_original: Bruno Grimaldo Martinho Churata
+      email_original: churata
+      link_perfil: Bruno Grimaldo Martinho Churata
+  cesaraugustotaconeli:
+    nome: Cesar Augusto Taconeli
+    email: taconeli@ufpr.br
+    telefone: 3361-3573
+    homepage: "http://people.ufpr.br/~taconeli"
+    url_perfil: "http://www.est.ufpr.br/professores/05-taconeli.html"
+    imagem: "http://www.est.ufpr.br/professores/cesar.jpg"
+    formacao:
+      graduacao: Estatística - UFSCar - Universidade Federal de São Carlos, São Carlos, SP, 2003.
+      mestrado: Estatística - UFSCar - Universidade Federal de São Carlos, São Carlos, SP, 2005.
+      doutorado: Agronomia - ESALQ/USP - Universidade de São Paulo, São Paulo, SP, 2008.
+    areas_pesquisa: [Estatística Multivariada, Amostragem e Reamostragem e Ensino de Estatística.]
+    informacoes_adicionais:
+      nome_original: Cesar Augusto Taconeli
+      email_original: taconeli
+      link_perfil: Cesar Augusto Taconeli
+  deisymorselligysi:
+    nome: Deisy Morselli Gysi
+    email: deisy.gysi@ufpr.br
+    telefone: 3361-3141
+    homepage: "https://deisygysi.github.io/"
+    url_perfil: "http://www.est.ufpr.br/professores/24-deisy.html"
+    imagem: "http://www.est.ufpr.br/professores/deisy.jpg"
+    formacao:
+      graduacao: [Biotecnologia - PUCPR - Pontifícia Universidade Católica do Paraná (2011), Estatística - UFPR - Universidade Federal do Paraná (2013)]
+    areas_pesquisa: [Medicina de Precisão, Métodos Estatísticos em Genética Quantitativa e Genômica, Medicina de Redes, Biologia de Sistemas, Bioinformática.]
+    informacoes_adicionais:
+      nome_original: Deisy Morselli Gysi
+      email_original: deisy.gysi
+      link_perfil: Deisy Morselli Gysi
+  eduardovargasferreira:
+    nome: Eduardo Vargas Ferreira
+    email: e.ferreira@ufpr.br
+    telefone: 3208-3141
+    homepage: "http://leg.ufpr.br/~eferreira"
+    url_perfil: "http://www.est.ufpr.br/professores/06-eduardo.html"
+    imagem: "http://www.est.ufpr.br/professores/eduardo.jpg"
+    formacao:
+      graduacao: Estatística - UNICAMP - Universidade Estadual de Campinas, Campinas, SP, 2011.
+      mestrado: Estatística - UNICAMP - Universidade Estadual de Campinas, Campinas, SP, 2014.
+      doutorado: Machine Learning - Technische Universität Berlin, TUBerlin, Alemanha (em andamento).
+    areas_pesquisa: [Teoria da Resposta ao Item (TRI), Modelos de Regressão e Inferência Bayesiana.]
+    informacoes_adicionais:
+      nome_original: Eduardo Vargas Ferreira
+      email_original: e.ferreira
+      link_perfil: Eduardo Vargas Ferreira
+  elianemariawilbertwinter:
+    nome: Eliane Maria Wilbert Winter
+    email: elianew@ufpr.br
+    telefone: 3361-3264
+    url_perfil: "http://www.est.ufpr.br/professores/07-eliane.html"
+    imagem: "http://www.est.ufpr.br/professores/elianew.jpg"
+    formacao:
+      graduacao: Estatística - UFPR - Universidade Federal do Paraná, Curitiba, PR, 1995.
+      mestrado: Genética - UFPR - Universidade Federal do Paraná, Curitiba, PR, 2005.
+    areas_pesquisa: [Bioestatística, Análise de Sobrevivência e Melhoramento Genético Animal.]
+    informacoes_adicionais:
+      nome_original: Eliane Maria Wilbert Winter
+      email_original: elianew
+      link_perfil: Eliane Maria Wilbert Winter
+  fernandabuhrerrizzato:
+    nome: Fernanda Buhrer Rizzato
+    email: fernandab@ufpr.br
+    telefone: 3361-3120
+    url_perfil: "http://www.est.ufpr.br/professores/09-fernanda.html"
+    imagem: "http://www.est.ufpr.br/professores/fernanda.jpg"
+    formacao:
+      graduacao: Licenciatura em Matemática - IME/USP - Universidade de São Paulo, São Paulo, SP, 2003.
+      mestrado: Agronomia - ESALQ/USP - Universidade de São Paulo, São Paulo, SP, 2007.
+      doutorado: Agronomia - ESALQ/USP - Universidade de São Paulo, São Paulo, SP, 2011.
+    areas_pesquisa: Modelos Lineares Generalizados e Modelos Mistos.
+    informacoes_adicionais:
+      nome_original: Fernanda Buhrer Rizzato
+      email_original: fernandab
+      link_perfil: Fernanda Buhrer Rizzato
+  fernandolucambioprez:
+    nome: Fernando Lucambio Pérez
+    email: lucambio@ufpr.br
+    telefone: 3208-6324
+    homepage: "http://docs.ufpr.br/~lucambio/"
+    url_perfil: "http://www.est.ufpr.br/professores/10-lucambio.html"
+    imagem: "http://www.est.ufpr.br/professores/lucambio.jpg"
+    formacao:
+      graduacao: Matemática - Universidad de Oriente, Santiago de Cuba, CUBA, 1990.
+      mestrado: Estatística - UNICAMP - Universidade Estadual de Campinas, Campinas, SP, 1998.
+      doutorado: Estatística - USP - Universidade de São Paulo, São Paulo, SP, 2004.
+    areas_pesquisa: [Estatística Teórica, Modelos de Regressão, Análise de Dados Longitudinais]
+    informacoes_adicionais:
+      nome_original: Fernando Lucambio Pérez
+      email_original: lucambio
+      link_perfil: Fernando Lucambio Pérez
+  fernandodepolmayer:
+    nome: Fernando de Pol Mayer
+    email: fernando.mayer@ufpr.br
+    homepage: "http://www.leg.ufpr.br/~fernandomayer"
+    url_perfil: "http://www.est.ufpr.br/professores/11-mayer.html"
+    imagem: "http://www.est.ufpr.br/professores/fmayer.jpg"
+    formacao:
+      graduacao: Oceanografia - UNIVALI - Universidade do Vale do Itajaí, Itajaí, SC, 2005.
+      mestrado: Ecologia - UFSC - Universidade Federal de Santa Catarina, Florianópolis, SC, 2011.
+      doutorado: Estatística e Experimentação Agronômica - ESALQ/USP - Universidade de São Paulo, Piracicaba, SP, 2019.
+    areas_pesquisa: [Estatística Espacial, Inferência Bayesiana e Estatística Computacional.]
+    informacoes_adicionais:
+      nome_original: Fernando de Pol Mayer
+      email_original: fernando.mayer
+      link_perfil: Fernando de Pol Mayer
+  jomarantoniocamarinhafilho:
+    nome: Jomar Antonio Camarinha Filho
+    email: jomarc@ufpr.br
+    telefone: 3361-3414
+    homepage: "http://docs.ufpr.br/~jomarc/"
+    url_perfil: "http://www.est.ufpr.br/professores/12-jomar.html"
+    imagem: "http://www.est.ufpr.br/professores/jomar.jpg"
+    formacao:
+      graduacao: Engenharia Agronômica - ESALQ/USP - Universidade de São Paulo, Piracicaba, SP, 1987.
+      mestrado: Engenharia Agronômica - ESALQ/USP - Universidade de São Paulo, Piracicaba, SP, 1995.
+      doutorado: Estatística e Experimentação Agronômica - ESALQ/USP - Universidade de São Paulo, Piracicaba, SP, 2002.
+    areas_pesquisa: Modelos Lineares e Planejamento Experimental.
+    informacoes_adicionais:
+      nome_original: Jomar Antonio Camarinha Filho
+      email_original: jomarc
+      link_perfil: Jomar Antonio Camarinha Filho
+  jorgefesta:
+    nome: Jorge Festa
+    email: festa@ufpr.br
+    telefone: 3361-3415
+    url_perfil: "http://www.est.ufpr.br/professores/13-festa.html"
+    imagem: "http://www.est.ufpr.br/professores/festa.jpg"
+    formacao:
+      graduacao: Estatística - UFPR - Universidade Federal do Paraná, Curitiba, PR, 1987.
+      mestrado: Métodos Numéricos em Engenharia - UFPR - Universidade Federal do Paraná, Curitiba, PR, 2005.
+    areas_pesquisa: [Cálculo de Probabilidades, Inferência e Ciências Atuariais]
+    informacoes_adicionais:
+      nome_original: Jorge Festa
+      email_original: festa
+      link_perfil: Jorge Festa
+  josluizpadilhadasilva:
+    nome: José Luiz Padilha da Silva
+    email: jlpadilha@ufpr.br
+    telefone: 3208-6315
+    homepage: "https://docs.ufpr.br/~jlpadilha"
+    url_perfil: "http://www.est.ufpr.br/professores/14-joseluiz.html"
+    imagem: "http://www.est.ufpr.br/professores/padilha.jpg"
+    formacao:
+      graduacao: Estatística - UFPR - Universidade Federal do Paraná, Curitiba, PR, 2007.
+      mestrado: Estatística - UFMG - Universidade Federal de Minas Gerais, Belo Horizonte, MG, 2011.
+      doutorado: EStatística - UFMG - Universidade Federal de Minas Gerais, Belo Horizonte, MG, 2015.
+    areas_pesquisa: [Análise de Dados Longitudinais, Missing Data e Análise de Sobrevivência.]
+    informacoes_adicionais:
+      nome_original: José Luiz Padilha da Silva
+      email_original: jlpadilha
+      link_perfil: José Luiz Padilha da Silva
+  mrioluizferreiradasilva:
+    nome: Mário Luiz Ferreira da Silva
+    email: marioluiz@ufpr.br
+    telefone: 3361-3651
+    homepage: "https://docs.ufpr.br/~marioluiz/"
+    url_perfil: "http://www.est.ufpr.br/professores/15-mario.html"
+    imagem: "http://www.est.ufpr.br/professores/user.jpg"
+    formacao:
+      graduacao: Estatística - UFPR - Universidade Federal do Paraná, Curitiba, PR, 1991.
+    areas_pesquisa: [Estatística Experimental, DOE, Otimização de Processos, Métodos de Taguchi e Melhoria da Qualidade.]
+    informacoes_adicionais:
+      nome_original: Mário Luiz Ferreira da Silva
+      email_original: marioluiz
+      link_perfil: Mário Luiz Ferreira da Silva
+  niveadasilvamatudamachado:
+    nome: Nivea da Silva Matuda Machado
+    email: niveam@ufpr.br
+    telefone: 3361-3471
+    url_perfil: "http://www.est.ufpr.br/professores/16-nivea.html"
+    imagem: "http://www.est.ufpr.br/professores/nivea.jpg"
+    formacao:
+      graduacao: Estatística - UNICAMP - Universidade Estadual de Campinas, Campinas, SP, 1990.
+      mestrado: Estatística - UNICAMP - Universidade Estadual de Campinas, Campinas, SP, 1998.
+      doutorado: Saúde Pública - USP - Universidade de São Paulo, São Paulo, SP, 2005.
+    areas_pesquisa: [Análise de Sobrevivência, Estatística de Saúde e Demografia.]
+    informacoes_adicionais:
+      nome_original: Nivea da Silva Matuda Machado
+      email_original: niveam
+      link_perfil: Nivea da Silva Matuda Machado
+  paulojustinianoribeirojunior:
+    nome: Paulo Justiniano Ribeiro Junior
+    email: paulojus@ufpr.br
+    telefone: 3361-3573
+    homepage: "http://leg.ufpr.br/~paulojus"
+    url_perfil: "http://www.est.ufpr.br/professores/17-paulojus.html"
+    imagem: "http://www.est.ufpr.br/professores/paulojus.jpg"
+    formacao:
+      graduacao: Agronomia - ESAL - Escola Superior de Agricultura de Lavras, Lavras, MG, 1989. Atualmente UFLA - Universidade Federal de Lavras.
+      mestrado: Agronomia - ESALQ/USP-Universidade de São Paulo, Piracicaba, SP, 1995.
+      doutorado: PhD in Statistics - Department of Mathematics and Statistics, Lancaster University, UK, 2002.
+    areas_pesquisa: [Estatística Espacial, Geoestatística e Processos Pontuais Marcados.]
+    informacoes_adicionais:
+      nome_original: Paulo Justiniano Ribeiro Junior
+      email_original: paulojus
+      link_perfil: Paulo Justiniano Ribeiro Junior
+  pauloricardobittencourtguimares:
+    nome: Paulo Ricardo Bittencourt Guimarães
+    email: prbg@ufpr.br
+    telefone: 3208-6318
+    homepage: "https://docs.ufpr.br/~prbg/prbg.htm"
+    url_perfil: "http://www.est.ufpr.br/professores/18-prbg.html"
+    imagem: "http://www.est.ufpr.br/professores/prbg.jpg"
+    formacao:
+      graduacao: Estatística - UFPR - Universidade Federal do Paraná, Curitiba, PR, 1990. Atualmente UFLA - Universidade Federal de Lavras.
+      mestrado: Estatística - UNICAMP - Universidade de Campinas, Campinas, SP, 1994.
+      doutorado: Engenharia Florestal - UFPR - Universidade Federal do Paraná, Curitiba, PR, 2011.
+    areas_pesquisa: [Estatística Aplicada, Análise de Dados Longitudinais e Pesquisa de Mercado.]
+    informacoes_adicionais:
+      nome_original: Paulo Ricardo Bittencourt Guimarães
+      email_original: prbg
+      link_perfil: Paulo Ricardo Bittencourt Guimarães
+  pedrohenriquetoledodeoliveirasousa:
+    nome: Pedro Henrique Toledo de Oliveira Sousa
+    email: pedro.henrique3@ufpr.br
+    telefone: 3361-3573
+    url_perfil: "http://www.est.ufpr.br/professores/25-pedro.html"
+    imagem: "http://www.est.ufpr.br/professores/pedro.jpeg"
+    formacao:
+      graduacao: Estatística - UnB - Universidade de Brasília, 2016
+      mestrado: Estatística - UnB - Universidade de Brasília, 2019.
+      doutorado: Estatística - UNICAMP - Universidade Estadual de Campinas, Campinas, SP, 2023.
+    areas_pesquisa: [Dados funcionais, seleção de variáveis, aplicações de aprendizado de máquina.]
+    informacoes_adicionais:
+      nome_original: Pedro Henrique Toledo de Oliveira Sousa
+      email_original: pedro.henrique3
+      link_perfil: Pedro Henrique Toledo de Oliveira Sousa
+  silviaemikoshimakura:
+    nome: Silvia Emiko Shimakura
+    email: silvia.shimakura@ufpr.br
+    telefone: 3361-3254
+    homepage: "http://leg.ufpr.br/~silvia"
+    url_perfil: "http://www.est.ufpr.br/professores/19-silvia.html"
+    imagem: "http://www.est.ufpr.br/professores/silvia.jpg"
+    formacao:
+      graduacao: Estatística - UNESP - Universidade Estadual Paulista, Presidente Prudente, SP, 1989.
+      mestrado: Estatística - UNICAMP - Universidade Estadual de Campinas, Campinas, SP, 1994.
+      doutorado: PhD in Statistics - Department of Mathematics and Statistics, Lancaster University, UK, 2003.
+    areas_pesquisa: [Análise de Sobrevivência, Estatística Espacial e Epidemiologia Ambiental.]
+    informacoes_adicionais:
+      nome_original: Silvia Emiko Shimakura
+      email_original: silvia.shimakura
+      link_perfil: Silvia Emiko Shimakura
+  stelaadamivayego:
+    nome: Stela Adami Vayego
+    email: vayego@ufpr.br
+    telefone: 3361-3264
+    homepage: "https://docs.ufpr.br/~vayego/"
+    url_perfil: "http://www.est.ufpr.br/professores/20-stela.html"
+    imagem: "http://www.est.ufpr.br/professores/stela.jpg"
+    formacao:
+      graduacao: Matemática - UNESP - Universidade Estadual Paulista, Rio Preto, SP, 1993.
+      mestrado: Matemática Aplicada e Computacional - UNESP - Universidade Estadual Paulista, Rio Preto, SP, 1997.
+      doutorado: Genética - Melhoramento Genético Animal - UFPR - Universidade Federal do Paraná, Curitiba, PR, 2007.
+    areas_pesquisa: [Melhoramento genético animal, Modelos Mistos e Regressão Aleatória.]
+    informacoes_adicionais:
+      nome_original: Stela Adami Vayego
+      email_original: vayego
+      link_perfil: Stela Adami Vayego
+  wagnerhugobonat:
+    nome: Wagner Hugo Bonat
+    email: wbonat@ufpr.br
+    telefone: 3361-3573
+    homepage: "http://www.leg.ufpr.br/doku.php/pessoais:wbonat"
+    url_perfil: "http://www.est.ufpr.br/professores/21-wagner.html"
+    imagem: "http://www.est.ufpr.br/professores/wagner.jpg"
+    formacao:
+      graduacao: Estatística - UFPR - Universidade Federal do Paraná, Curitiba, PR, 2008.
+      mestrado: Métodos Numéricos em Engenharia - UFPR - Universidade Federal do Paraná, Curitiba, PR, 2010.
+      doutorado: PhD in Mathematics and Computer Science - University of Southern Denmark, SDU, Dinamarca, 2016.
+    areas_pesquisa: [Estatística Espacial, Inferência Bayesiana e Estatística Social.]
+    informacoes_adicionais:
+      nome_original: Wagner Hugo Bonat
+      email_original: wbonat
+      link_perfil: Wagner Hugo Bonat
+  josjairodesantanaesilva:
+    nome: José Jairo de Santana e Silva
+    email: jose.jairo@ufpr.br
+    telefone: 3361-3573
+    url_perfil: "http://www.est.ufpr.br/professores/PS-jjairo.html"
+    imagem: "http://www.est.ufpr.br/professores/jjairo.jpeg"
+    formacao:
+      graduacao: Licenciado em Matemática (2016) - UFPE - Universidade Federal de Pernambuco, Recife, PE.
+      mestrado: Estatística (2019) - UFPR - Universidade Federal do Pernambuco, Recife, PE
+      doutorado: Estatística (2023) - UFPR - Universidade Federal do Pernambuco, Recife, PE.
+    areas_pesquisa: [modelos de regressão, testes de detecção de má especificação, regressão beta, simulação, bootstrap]
+    informacoes_adicionais:
+      nome_original: José Jairo de Santana e Silva
+      email_original: jose.jairo
+      link_perfil: José Jairo de Santana e Silva
+  guilhermeeliaseggmonteiro:
+    nome: Guilherme Elias Egg Monteiro
+    email: guilherme.egg@ufpr.br
+    telefone: 3361-3573
+    url_perfil: "http://www.est.ufpr.br/professores/PS-guiegg.html"
+    imagem: "http://www.est.ufpr.br/professores/guiegg.jpeg"
+    formacao:
+      graduacao: Licenciado em Matemática (2009) - PUC - Pontifícia Universidade Católica do Paraná, Curitiba, PR.
+      mestrado: Matemática (2016) - UTFPR - Universidade Tecnológica Federal do Paraná
+    informacoes_adicionais:
+      nome_original: Guilherme Elias Egg Monteiro
+      email_original: guilherme.egg
+      link_perfil: Guilherme Elias Egg Monteiro
+  anselmochavesneto:
+    nome: Anselmo Chaves Neto
+    email: anselmo@ufpr.br
+    telefone: 3361-3141
+    url_perfil: "http://www.est.ufpr.br/professores/CS1-anselmo.html"
+    imagem: "http://www.est.ufpr.br/professores/anselmo.jpg"
+    formacao:
+      graduacao: Matemática (1971) e Engenharia Civil (1974) - UFPR - Universidade Federal do Paraná, Curitiba, PR.
+      mestrado: Estatística - UNICAMP - Universidade Estadual de Campinas, Campinas, SP, 1985.
+      doutorado: Engenharia Elétrica - PUC - Pontifícia Universidade Católica, Rio de Janeiro, RJ, 1991.
+    areas_pesquisa: [Métodos Estatísticos Multivariados, Séries Temporais e Engenharia da Qualidade.]
+    informacoes_adicionais:
+      nome_original: Anselmo Chaves Neto
+      email_original: anselmo
+      link_perfil: Anselmo Chaves Neto
+  pauloafonsobracarensecosta:
+    nome: Paulo Afonso Bracarense Costa
+    email: bracarense@ufpr.br
+    url_perfil: "http://www.est.ufpr.br/professores/CS2-bracarense.html"
+    imagem: "http://www.est.ufpr.br/professores/bracaren.jpg"
+    formacao:
+      graduacao: Estatística - UFPR-Universidade Federal do Paraná, Curitiba, PR, 1986.
+      mestrado: Agronomia - ESALQ/USP-Universidade de São Paulo, Piracicaba, SP, 1995.
+      doutorado: Engenharia de Produção - Inteligência Artificial - UFSC-Universidade Federal de Santa Catarina, Florianópolis, SC, 1999.
+    areas_pesquisa: [Inferência Estatística, Lógica Fuzzy, Filosofia da Incerteza e Educação Estatística.]
+    informacoes_adicionais:
+      nome_original: Paulo Afonso Bracarense Costa
+      email_original: bracarense
+      link_perfil: Paulo Afonso Bracarense Costa
+  suelyruizgiolo:
+    nome: Suely Ruiz Giolo
+    email: giolo@ufpr.br
+    homepage: "https://docs.ufpr.br/~giolo/"
+    url_perfil: "http://www.est.ufpr.br/professores/CS3-suely.html"
+    imagem: "http://www.est.ufpr.br/professores/giolo.jpg"
+    formacao:
+      graduacao: Matemática (1989) e Estatística (1991) - UNESP - Universidade Estadual Paulista, Presidente Prudente, SP.
+      mestrado: Estatística - UNICAMP - Universidade Estadual de Campinas, Campinas, SP, 1994.
+      doutorado: Estatística e Experimentação Agronômica - ESALQ/USP e Lancaster University, UK, 2003.
+    areas_pesquisa: [Análise de Sobrevivência, Métodos Estatísticos em Genética Quantitativa e Genômica, Análise de Dados Categóricos, Modelos Lineares Generalizados.]
+    informacoes_adicionais:
+      nome_original: Suely Ruiz Giolo
+      email_original: giolo
+      link_perfil: Suely Ruiz Giolo
+  eliasteixeirakrainski:
+    nome: Elias Teixeira Krainski
+    email: eliaskr@ufpr.br
+    homepage: "http://leg.ufpr.br/~elias"
+    url_perfil: "http://www.est.ufpr.br/professores/08-elias.html"
+    imagem: "http://www.est.ufpr.br/professores/elias.jpg"
+    formacao:
+      graduacao: Estatística - UNICAMP - Universidade Estadual de Campinas, Campinas, SP, 2005.
+      mestrado: Estatística - UFMG - Universidade Federal de Minas Gerais, Belo Horizonte, MG, 2008.
+      doutorado: Mathematical Sciences - Norwegian University of Science and Technology, NTNU, Noruega, 2018.
+    areas_pesquisa: Estatística Espacial. Bayesian Computing with INLA.
+    informacoes_adicionais:
+      nome_original: Elias Teixeira Krainski
+      email_original: eliaskr
+      link_perfil: Elias Teixeira Krainski
+  walmesmarqueszeviani:
+    nome: Walmes Marques Zeviani
+    email: walmes@ufpr.br
+    homepage: "http://www.leg.ufpr.br/~walmes"
+    url_perfil: "http://www.est.ufpr.br/professores/22-walmes.html"
+    imagem: "http://www.est.ufpr.br/professores/walmes.jpg"
+    formacao:
+      graduacao: Agronomia - UFGD - Universidade Federal da Grande Dourados, Dourados, MS, 2007.
+      mestrado: Estatística e Experimentação Agropecuária - UFLA - Universidade Federal de Lavras, Lavras, MG, 2009.
+      doutorado: Estatística e Experimentação Agropecuária - UFLA - Universidade Federal de Lavras, Lavras, MG, 2013.
+    areas_pesquisa: [Modelos de Regressão não linear, Estatística Experimental e Modelos Lineares Mistos.]
+    informacoes_adicionais:
+      nome_original: Walmes Marques Zeviani
+      email_original: walmes
+      link_perfil: Walmes Marques Zeviani

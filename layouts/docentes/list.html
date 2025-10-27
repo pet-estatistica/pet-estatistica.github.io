@@ -1,0 +1,334 @@
+
+{{ define "main" }}
+ <div class="site-about-espaco"></div>
+<section class="site-docentes">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="section-title">
+          <h2>Corpo Docente</h2>
+          <p>Conheça nossos professores e pesquisadores</p>
+        </div>
+        
+<!-- Filtro por áreas de pesquisa -->
+<div class="area-filter mb-4">
+  <label for="area-select" class="form-label">Filtrar por área de pesquisa</label>
+  <select id="area-select" class="form-select">
+    <option value="all">Todas as áreas</option>
+    {{ $allAreas := slice }}
+    {{ range .Site.Data.docentes.docentes }}
+      {{ if .areas_pesquisa }}
+        {{ if reflect.IsSlice .areas_pesquisa }}
+          {{ $allAreas = $allAreas | append .areas_pesquisa }}
+        {{ else }}
+          {{ $allAreas = $allAreas | append (slice .areas_pesquisa) }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+    
+    {{ $uniqueAreas := slice }}
+    {{ $areaCounts := dict }}
+    {{ range $allAreas }}
+      {{ if reflect.IsSlice . }}
+        {{ range . }}
+          {{ $area := . | string }}
+          <!-- Normalizar a string: remover pontos finais e trim espaços -->
+          {{ $normalizedArea := $area | replaceRE "\\.$" "" }}
+          {{ $normalizedArea = $normalizedArea | replaceRE "^\\s+|\\s+$" "" }}
+          {{ $normalizedArea = $normalizedArea | title }}
+          {{ if not (in $uniqueAreas $normalizedArea) }}
+            {{ $uniqueAreas = $uniqueAreas | append $normalizedArea }}
+            {{ $areaCounts = merge $areaCounts (dict $normalizedArea 1) }}
+          {{ else }}
+            {{ $currentCount := index $areaCounts $normalizedArea | default 0 }}
+            {{ $areaCounts = merge $areaCounts (dict $normalizedArea (add $currentCount 1)) }}
+          {{ end }}
+        {{ end }}
+      {{ else }}
+        {{ $area := . | string }}
+        <!-- Normalizar a string: remover pontos finais e trim espaços -->
+        {{ $normalizedArea := $area | replaceRE "\\.$" "" }}
+        {{ $normalizedArea = $normalizedArea | replaceRE "^\\s+|\\s+$" "" }}
+        {{ $normalizedArea = $normalizedArea | title }}
+        {{ if not (in $uniqueAreas $normalizedArea) }}
+          {{ $uniqueAreas = $uniqueAreas | append $normalizedArea }}
+          {{ $areaCounts = merge $areaCounts (dict $normalizedArea 1) }}
+        {{ else }}
+          {{ $currentCount := index $areaCounts $normalizedArea | default 0 }}
+          {{ $areaCounts = merge $areaCounts (dict $normalizedArea (add $currentCount 1)) }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+    
+    {{ range sort $uniqueAreas }}
+    <option value="{{ . | urlize }}">{{ . }} ({{ index $areaCounts . }})</option>
+    {{ end }}
+  </select>
+</div>
+</div>
+      
+      {{ range $key, $docente := .Site.Data.docentes.docentes }}
+      <div class="col-lg-6 col-md-6 docente-member" 
+           data-areas="{{ if $docente.areas_pesquisa }}{{ if reflect.IsSlice $docente.areas_pesquisa }}{{ range $docente.areas_pesquisa }}{{ . | urlize }} {{ end }}{{ else }}{{ $docente.areas_pesquisa | urlize }}{{ end }}{{ end }}">
+        <div class="site-docente-member">
+          <div class="site-docente-member-image">
+            {{ $imagePath := printf "images/docentes/%s.jpg" $key }}
+            {{ $image := resources.Get $imagePath }}
+            {{ if $image }}
+              <img src="{{ $image.RelPermalink }}" alt="{{ $docente.nome }}" class="docente-photo">
+            {{ else }}
+              <!-- Fallback para imagem do YAML se não existir localmente -->
+              <img src="{{ $docente.imagem }}" alt="{{ $docente.nome }}" class="docente-photo">
+            {{ end }}
+          </div>
+          <div class="site-docente-member-content">
+            <h3>{{ $docente.nome }}</h3>
+            
+            <!-- Informações de contato -->
+            <div class="docente-contact">
+              {{ if $docente.email }}<p><i class="fa fa-envelope"></i> <a href="mailto:{{ $docente.email }}">{{ $docente.email }}</a></p>{{ end }}
+              {{ if $docente.telefone }}<p><i class="fa fa-phone"></i> {{ $docente.telefone }}</p>{{ end }}
+            </div>
+            
+            <!-- Formação acadêmica -->
+            <div class="docente-formacao">
+              <h5>Formação Acadêmica</h5>
+              <ul>
+                {{ if $docente.formacao.graduacao }}
+                  {{ if reflect.IsSlice $docente.formacao.graduacao }}
+                    {{ range $docente.formacao.graduacao }}
+                      <li><strong>Graduação:</strong> {{ . }}</li>
+                    {{ end }}
+                  {{ else }}
+                    <li><strong>Graduação:</strong> {{ $docente.formacao.graduacao }}</li>
+                  {{ end }}
+                {{ end }}
+                {{ if $docente.formacao.mestrado }}<li><strong>Mestrado:</strong> {{ $docente.formacao.mestrado }}</li>{{ end }}
+                {{ if $docente.formacao.doutorado }}<li><strong>Doutorado:</strong> {{ $docente.formacao.doutorado }}</li>{{ end }}
+              </ul>
+            </div>
+            
+            <!-- Áreas de pesquisa -->
+            {{ if $docente.areas_pesquisa }}
+            <div class="docente-areas">
+              <h5>Áreas de Pesquisa</h5>
+              <p>
+                {{ if reflect.IsSlice $docente.areas_pesquisa }}
+                  {{ delimit $docente.areas_pesquisa ", " }}
+                {{ else }}
+                  {{ $docente.areas_pesquisa }}
+                {{ end }}
+              </p>
+            </div>
+            {{ end }}
+            
+            <!-- Links -->
+            <ul class="site-docente-member-links">
+              {{ if $docente.homepage }}<li><a href="{{ $docente.homepage }}" target="_blank" title="Homepage"><i class="fa fa-globe"></i></a></li>{{ end }}
+              {{ if $docente.url_perfil }}<li><a href="{{ $docente.url_perfil }}" target="_blank" title="Perfil Institucional"><i class="fa fa-user"></i></a></li>{{ end }}
+            </ul>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<!-- Script para o filtro -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const areaSelect = document.getElementById('area-select');
+  const docenteMembers = document.querySelectorAll('.docente-member');
+  
+  areaSelect.addEventListener('change', function() {
+    const selectedArea = this.value;
+    
+    docenteMembers.forEach(member => {
+      if (selectedArea === 'all') {
+        member.style.display = 'block';
+      } else {
+        const memberAreas = member.getAttribute('data-areas').split(' ');
+        if (memberAreas.includes(selectedArea)) {
+          member.style.display = 'block';
+        } else {
+          member.style.display = 'none';
+        }
+      }
+    });
+  });
+});
+</script>
+
+<style>
+.site-docentes {
+  padding: 80px 0;
+}
+
+.site-docente-member {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.site-docente-member:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.site-docente-member-image {
+  text-align: center;
+  padding: 20px;
+}
+
+.docente-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #f8f9fa;
+}
+
+.site-docente-member-content {
+  padding: 20px;
+}
+
+.site-docente-member-content h3 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+}
+
+.docente-contact {
+  margin-bottom: 15px;
+}
+
+.docente-contact p {
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+.docente-contact a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.docente-contact a:hover {
+  text-decoration: underline;
+}
+
+.docente-formacao, .docente-areas {
+  margin-bottom: 15px;
+}
+
+.docente-formacao h5, .docente-areas h5 {
+  color: #2c3e50;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.docente-formacao ul {
+  padding-left: 20px;
+  margin-bottom: 0;
+}
+
+.docente-formacao li {
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.docente-areas p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+.site-docente-member-links {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0 0 0;
+  display: flex;
+  gap: 10px;
+}
+
+.site-docente-member-links li {
+  display: inline-block;
+}
+
+.site-docente-member-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #3498db;
+  color: white;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.site-docente-member-links a:hover {
+  background: #2980b9;
+  transform: scale(1.1);
+}
+
+/* Filtro styles */
+.area-filter {
+  max-width: 400px;
+  margin: 0 auto 2rem;
+}
+
+.form-select {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 2.25rem 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 16px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 0.375rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  appearance: none;
+}
+
+.form-select:focus {
+  border-color: #86b7fe;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.docente-member {
+  transition: all 0.3s ease;
+}
+
+.docente-member[style*="display: none"] {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .site-docente-member {
+    text-align: center;
+  }
+  
+  .docente-formacao ul {
+    text-align: left;
+  }
+}
+</style>
+{{ end }}
