@@ -117,6 +117,7 @@ docentes:
     imagem: "http://www.est.ufpr.br/professores/deisy.jpg"
     formacao:
       graduacao: [Biotecnologia - PUCPR - Pontifícia Universidade Católica do Paraná (2011), Estatística - UFPR - Universidade Federal do Paraná (2013)]
+	  doutorado: Doutorado: Ciência da Computação. Universität Leipzig, Leipzig, Alemanha. (2019).
     areas_pesquisa: [Medicina de Precisão, Métodos Estatísticos em Genética Quantitativa e Genômica, Medicina de Redes, Biologia de Sistemas, Bioinformática.]
     informacoes_adicionais:
       nome_original: Deisy Morselli Gysi
