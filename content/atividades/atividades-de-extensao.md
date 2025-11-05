@@ -13,6 +13,10 @@ Durante o ano, diversas atividades de extensão são realizadas na UFPR, as quai
 Planejar e organizar atividades que sejam lúdicas e de divertidas para todas as idades, com a finalidade de apresentar a estatística.
 
 ### Últimos eventos:
+#### 2025 1º Feira de Profissões CELC - [Colégio Estadual Leôncio Correia](https://leonciocorreia.com/)
+
+{{< gallery folder="images/atividades/atividades-de-extensao/2025/Feira-de profissoes-em-escola-publica/" >}}
+
 #### 2025 Apresentação PET Estatística no 16º SIEPE
 
 {{< gallery folder="images/atividades/atividades-de-extensao/2025/Siepe/" >}}
