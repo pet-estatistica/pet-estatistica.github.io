@@ -16,7 +16,11 @@ Garantir a participação ativa dos bolsistas do PET Estatística em todas as re
 
 #### 2025
 
-{{< gallery folder="images/atividades/organizacao-participacao-interpet/2025/" >}}
+Novembro
+{{< gallery folder="images/atividades/organizacao-participacao-interpet/2025/Novembro" >}}
+
+Abril
+{{< gallery folder="images/atividades/organizacao-participacao-interpet/2025/Abril" >}}
 
 ---
 [Voltar para Atividades](/atividades/)
