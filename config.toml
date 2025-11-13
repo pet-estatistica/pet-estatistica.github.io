@@ -95,7 +95,7 @@ removePathAccents = true
   # googleAnalitycsID = "G-4QGDQVC922"
   # We're using formspree.io for form handling, paste your formspree url below
   fabform  = "https://fabform.io/f/USAg2Jl"
-  tokenInstagram = "IGAANtnh5nLCdBZAFB3TmszZAXZAGelUzTXJVQ0g3V1M4SHJVQUFUc0tBYngxZA3c0eEtqUlRfRENYYW1CVzdjbVk2b0tTT0pOaWpnYkJTc3E3NDhlUGk1MkZAPdTF5YUl4M1VGTVB2NjZAnRWw1RUhSTjJ3TW9iekZAhMFJWQml2QjNYWQZDZD"
+  tokenInstagram = "IGAANtnh5nLCdBZAFRiS2RPZAjVJMUs4SE5VTWJoX1k4MWFPN25WN1dndTN0VGJkRkxpOVpRVzk2OGFSWDU3Q3FlYWZAHR29YU1BiOTdkQWJ5Sm1yQk5hcGhoOENwZAGdDal8yRk9uenVPNVpXc2FVZAERJWWdHcXFRb0cxbEZAPbjA2cwZDZD"
   
   # Banner Section
   [params.banner]
