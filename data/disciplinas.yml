@@ -90,6 +90,7 @@ disciplinas:
                 arquivo: "/pdfs/CE330/2025/ExercíciosExtraPréProbP3.2025.pdf"
                 tipo: "PDF"
                 autor: "Júlia Zorzo Ferreira"
+                url_autor: "/integrantes/#julia-zorzo-ferreira"
       - ano: 2024
         professores: "Dra. Fernanda Buhrer Rizzato"
         semestre: "2"
