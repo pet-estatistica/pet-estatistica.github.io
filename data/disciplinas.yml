@@ -86,6 +86,10 @@ disciplinas:
               - descricao: "Lista 5 - Análise Combinatória"
                 arquivo: "/pdfs/CE330/2025/Analise-combinatoria-lista-1.pdf"
                 tipo: "PDF"
+              - descricao: "Exercícios extra P3"
+                arquivo: "/pdfs/CE330/2025/ExercíciosExtraPréProbP3.2025.pdf"
+                tipo: "PDF"
+                autor: "Júlia Zorzo Ferreira"
       - ano: 2024
         professores: "Dra. Fernanda Buhrer Rizzato"
         semestre: "2"
