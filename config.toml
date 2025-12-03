@@ -123,7 +123,7 @@ removePathAccents = true
   [params.call_to_action]
     enable              = true
     background_image    = "images/backgrounds/cta-background.jpg"
-    title               = "PROCESSO SELETIVO ENCERRADO"
+    title               = "PROCESSO SELETIVO FINALIZADO"
     primary_button      = "Inscreva-se"
     primary_button_url  = "https://forms.gle/niHaxxmeTHHieQuW8"
     secondary_button    = "Mais Informações"
