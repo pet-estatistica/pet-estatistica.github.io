@@ -6,7 +6,8 @@
   {{ $prazoStr := printf "%s-%s-%s" $ano $mes $dia }}
   {{ $prazo := time $prazoStr }}
   {{ $hoje := now }}
-  {{ $encerrado := $hoje.After $prazo }}
+  {{ $ontem := $hoje.AddDate 0 0 -1 }}
+  {{ $encerrado := $ontem.After $prazo }}
 
   <article class="processo-detalhes container">
     <div class="row justify-content-center">
