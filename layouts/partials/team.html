@@ -11,68 +11,104 @@
                 {{ .title }}
               </h2>
             </div>
-            
-            <!-- Filtro por interesses -->
-            <div class="interest-filter mb-4">
-              <label for="interest-select" class="form-label">Filtrar por área de interesse:</label>
-              <select id="interest-select" class="form-select">
-                <option value="all">Todas as áreas</option>
-                {{ $allInterests := slice }}
-                {{ range .members }}
-                  {{ if .interesse }}
-                    {{ if reflect.IsSlice .interesse }}
-                      {{ $allInterests = $allInterests | append .interesse }}
-                    {{ else }}
-                      <!-- Se for string, converte para slice -->
-                      {{ $allInterests = $allInterests | append (slice .interesse) }}
-                    {{ end }}
-                  {{ end }}
-                {{ end }}
-                
-                {{ $uniqueInterests := slice }}
-                {{ $interestCounts := dict }}
-                {{ range $allInterests }}
-                  {{ if reflect.IsSlice . }}
-                    {{ range . }}
-                      {{ $interest := . | string }}
-                      {{ if not (in $uniqueInterests $interest) }}
-                        {{ $uniqueInterests = $uniqueInterests | append $interest }}
-                        {{ $interestCounts = merge $interestCounts (dict $interest 1) }}
-                      {{ else }}
-                        {{ $currentCount := index $interestCounts $interest | default 0 }}
-                        {{ $interestCounts = merge $interestCounts (dict $interest (add $currentCount 1)) }}
+                 
+            <!-- Filtros combinados -->
+            <div class="row justify-content-center mb-4">
+              <div class="col-md-5">
+                <div class="status-filter mb-3">
+                  <label for="status-select" class="form-label">Filtrar por status:</label>
+                  <select id="status-select" class="form-select">
+                    {{ $activeCount := 0 }}
+                    {{ $inactiveCount := 0 }}
+                    {{ $totalCount := 0 }}
+                    
+                    <!-- Calcular contadores -->
+                    {{ range .members }}
+                      {{ $status := default "ATIVO" .status | upper }}
+                      {{ $totalCount = add $totalCount 1 }}
+                      {{ if eq $status "ATIVO" }}
+                        {{ $activeCount = add $activeCount 1 }}
+                      {{ else if eq $status "INATIVO" }}
+                        {{ $inactiveCount = add $inactiveCount 1 }}
                       {{ end }}
                     {{ end }}
-                  {{ else }}
-                    {{ $interest := . | string }}
-                    {{ if not (in $uniqueInterests $interest) }}
-                      {{ $uniqueInterests = $uniqueInterests | append $interest }}
-                      {{ $interestCounts = merge $interestCounts (dict $interest 1) }}
-                    {{ else }}
-                      {{ $currentCount := index $interestCounts $interest | default 0 }}
-                      {{ $interestCounts = merge $interestCounts (dict $interest (add $currentCount 1)) }}
+                    
+                    <option value="ativo">Atuais ({{ $activeCount }})</option>
+                    <option value="inativo">Ex-membros ({{ $inactiveCount }})</option>
+                    <option value="all" selected>Todos ({{ $totalCount }})</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-5">
+                <div class="interest-filter">
+                  <label for="interest-select" class="form-label">Filtrar por área de interesse:</label>
+                  <select id="interest-select" class="form-select">
+                    <option value="all">Todas as áreas</option>
+                    {{ $allInterests := slice }}
+                    {{ range .members }}
+                      {{ if .interesse }}
+                        {{ if reflect.IsSlice .interesse }}
+                          {{ $allInterests = $allInterests | append .interesse }}
+                        {{ else }}
+                          <!-- Se for string, converta para slice -->
+                          {{ $allInterests = $allInterests | append (slice .interesse) }}
+                        {{ end }}
+                      {{ end }}
                     {{ end }}
-                  {{ end }}
-                {{ end }}
-                
-                {{ range sort $uniqueInterests }}
-                <option value="{{ . | urlize }}">{{ . }} ({{ index $interestCounts . }})</option>
-                {{ end }}
-              </select>
+                    
+                    {{ $uniqueInterests := slice }}
+                    {{ $interestCounts := dict }}
+                    {{ range $allInterests }}
+                      {{ if reflect.IsSlice . }}
+                        {{ range . }}
+                          {{ $interest := . | string }}
+                          {{ if not (in $uniqueInterests $interest) }}
+                            {{ $uniqueInterests = $uniqueInterests | append $interest }}
+                            {{ $interestCounts = merge $interestCounts (dict $interest 1) }}
+                          {{ else }}
+                            {{ $currentCount := index $interestCounts $interest | default 0 }}
+                            {{ $interestCounts = merge $interestCounts (dict $interest (add $currentCount 1)) }}
+                          {{ end }}
+                        {{ end }}
+                      {{ else }}
+                        {{ $interest := . | string }}
+                        {{ if not (in $uniqueInterests $interest) }}
+                          {{ $uniqueInterests = $uniqueInterests | append $interest }}
+                          {{ $interestCounts = merge $interestCounts (dict $interest 1) }}
+                        {{ else }}
+                          {{ $currentCount := index $interestCounts $interest | default 0 }}
+                          {{ $interestCounts = merge $interestCounts (dict $interest (add $currentCount 1)) }}
+                        {{ end }}
+                      {{ end }}
+                    {{ end }}
+                    
+                    {{ range sort $uniqueInterests }}
+                    <option value="{{ . | urlize }}">{{ . }} ({{ index $interestCounts . }})</option>
+                    {{ end }}
+                  </select>
+                </div>
+              </div>
             </div>
           </div>
           
           {{ range .members }}
+          {{ $memberStatus := default "ATIVO" .status | lower }}
           <div class="col-lg-6 col-md-6 team-member" 
-               data-interests="{{ if .interesse }}{{ if reflect.IsSlice .interesse }}{{ range .interesse }}{{ . | urlize }} {{ end }}{{ else }}{{ .interesse | urlize }}{{ end }}{{ end }}">
-            <div class="site-team-member">
+               data-interests="{{ if .interesse }}{{ if reflect.IsSlice .interesse }}{{ range .interesse }}{{ . | urlize }} {{ end }}{{ else }}{{ .interesse | urlize }}{{ end }}{{ end }}"
+               data-status="{{ $memberStatus }}">
+            <div class="site-team-member {{ if eq $memberStatus "inativo" }}inactive-member{{ end }}">
               <div class="site-team-member-image">
                 <img src="{{ .image | absURL }}" alt="team-member" id="{{ .name | urlize }}">
               </div>
               <div class="site-team-member-content" id="{{ .name | urlize }}">
-                <h3>{{ .name }}</h3>
+                <h3>{{ .name }}
+                  <span class="status-indicator status-{{ $memberStatus }}">
+                    {{ if eq $memberStatus "ativo" }}✓{{ else }}●{{ end }}
+                  </span>
+                </h3>
                 <p>{{ .designation }}</p>
                 {{ if .company_position }}<p><strong>{{ if ne .company_position "Professor Tutor PET" }}Time:{{ end }}</strong> {{ .company_position }}</p>{{ end }}
+                
                 <p class="site-team-item-body">
                   {{ if .quote }}<blockquote>{{ .quote }}</blockquote>{{ end }}
                 </p>
@@ -92,6 +128,12 @@
                   {{ if .site }}<li><a href="{{ .site | absURL }}"><i class="fa fa-globe" style="font-size:15px"></i></a></li>{{ end }}
                 </ul>
               </div>
+                <!-- Mostrar data de saída para membros inativos -->
+                {{ if and (eq $memberStatus "inativo") .saida }}
+                <p class="departure-date">
+                  <strong>Saída:</strong> {{ .saida }}
+                </p>
+                {{ end }}           
             </div>
           </div>
           {{ end }}
@@ -99,32 +141,61 @@
       </div>
     </section>
 
-    <!-- Script para o filtro -->
+    <!-- Script para os filtros -->
     <script>
     document.addEventListener('DOMContentLoaded', function() {
       const interestSelect = document.getElementById('interest-select');
+      const statusSelect = document.getElementById('status-select');
       const teamMembers = document.querySelectorAll('.team-member');
       
-      interestSelect.addEventListener('change', function() {
-        const selectedInterest = this.value;
+      // Função para aplicar ambos os filtros
+      function applyFilters() {
+        const selectedInterest = interestSelect.value;
+        const selectedStatus = statusSelect.value;
         
         teamMembers.forEach(member => {
-          if (selectedInterest === 'all') {
+          const memberInterests = member.getAttribute('data-interests').split(' ');
+          const memberStatus = member.getAttribute('data-status');
+          
+          // Filtro por interesse
+          let interestMatch = selectedInterest === 'all' || memberInterests.includes(selectedInterest);
+          
+          // Filtro por status
+          let statusMatch = selectedStatus === 'all' || memberStatus === selectedStatus;
+          
+          // Mostrar apenas se ambos os filtros forem satisfeitos
+          if (interestMatch && statusMatch) {
             member.style.display = 'block';
           } else {
-            const memberInterests = member.getAttribute('data-interests').split(' ');
-            if (memberInterests.includes(selectedInterest)) {
-              member.style.display = 'block';
-            } else {
-              member.style.display = 'none';
-            }
+            member.style.display = 'none';
           }
         });
-      });
+      }
+      
+      // Event listeners para ambos os filtros
+      interestSelect.addEventListener('change', applyFilters);
+      statusSelect.addEventListener('change', applyFilters);
+      
+      // Aplicar filtros inicialmente
+      applyFilters();
     });
     </script>
     
     <style>
+  /* Estilo para a data de saída dos membros inativos */
+  .departure-date {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    padding: 3px 8px;
+    background-color: rgba(108, 117, 125, 0.1);
+    border-radius: 4px;
+    display: inline-block;
+  }
+  
+  .inactive-member .departure-date {
+    background-color: rgba(108, 117, 125, 0.15);
+  }		
   .form-select {
     display: block;
     width: 100%;
@@ -187,30 +258,73 @@
     box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
   }
 
-  /* Para navegadores que não suportam appearance: none */
   @supports (-webkit-appearance: none) or (-moz-appearance: none) {
     .form-select {
       -webkit-appearance: none;
       -moz-appearance: none;
     }
   }
-    
-    .interest-filter {
-      max-width: 400px;
-      margin: 0 auto 2rem;
-    }
-    
-    .team-member {
-      transition: all 0.3s ease;
-    }
-    
-    .team-member[style*="display: none"] {
-      opacity: 0;
-      height: 0;
-      overflow: hidden;
-      margin: 0;
-      padding: 0;
-    }
+  
+  .status-counters {
+    font-size: 1.1rem;
+  }
+  
+  .status-counters .badge {
+    font-size: 1rem;
+    padding: 0.5rem 0.75rem;
+  }
+  
+  .status-filter,
+  .interest-filter {
+    margin-bottom: 1rem;
+  }
+  
+  .team-member {
+    transition: all 0.3s ease;
+  }
+  
+  .team-member[style*="display: none"] {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Estilo para membros inativos - mais escuro */
+  .inactive-member {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+  
+  .inactive-member .site-team-member-content {
+    opacity: 0.8;
+  }
+  
+  .inactive-member h3 {
+    color: #6c757d;
+  }
+  
+  .inactive-member .site-team-member-image img {
+    filter: grayscale(30%);
+  }
+  
+  /* Indicador de status ao lado do nome */
+  .status-indicator {
+    font-size: 0.8rem;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+  
+  .status-ativo .status-indicator {
+    color: #28a745;
+  }
+  
+  .status-inativo .status-indicator {
+    color: #6c757d;
+  }
     </style>
     {{ end }}
   {{ end }}

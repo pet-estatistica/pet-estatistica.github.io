@@ -1,7 +1,8 @@
 enable  : true
 title   : Quer saber como diferentes expertises se unem para criar soluções em dados?
 members  :
-  - image       : images/team/anderson_ara.jpeg
+  - status : ATIVO
+    image : images/team/anderson_ara.jpeg
     name  : "Anderson Ara"
     company_position: "Professor Tutor PET"
     quote : > 
@@ -11,7 +12,8 @@ members  :
     #linkedin    : https://www.linkedin.com/
     #instagram   : https://www.instagram.com/brunowzk/
     
-  - image       : images/team/alexandre_kobus.jpg
+  - status : ATIVO
+    image : images/team/alexandre_kobus.jpg
     name  : "Alexandre Kobus"
     company_position: "Administração"
     quote : > 
@@ -21,9 +23,10 @@ members  :
     #linkedin    : https://www.linkedin.com/
     instagram   : https://www.instagram.com/@alexsgkobus2903
 
-  - image       : images/team/ana_marques.jpg
+  - status : ATIVO
+    image       : images/team/ana_marques.jpg
     name  : "Ana Beatriz da Silva Marques"
-    company_position: "Comunicação"
+    company_position: "Ensino"
     quote : > 
             "Descobri na Estatística a perfeita união entre minha paixão por números e o desejo de resolver problemas reais. No curso, me encantei especialmente pela Análise Multivariada e Modelagem Preditiva, onde dados ganham significado e se transformam em insights poderosos. Como membro ativo do PET, tenho explorado aplicações práticas no Mercado Financeiro, desenvolvendo tanto habilidades técnicas em R quanto a capacidade de comunicar resultados complexos de forma acessível. Fora da universidade, levo esse pensamento analítico para estratégias em jogos competitivos, porque acredito que a estatística está em tudo - basta saber olhar." 
     interesse: ["Visualização de Dados", "Dashboards", "Machine Learning"]
@@ -31,7 +34,8 @@ members  :
     #linkedin    : https://www.linkedin.com/
     #instagram   : https://www.instagram.com/brunowzk/
 
-  - image       : images/team/anderson_inacio.jpg
+  - status : ATIVO
+    image       : images/team/anderson_inacio.jpg
     name  : "Anderson José de Souza Inácio"
     company_position: "Comunicação"
     quote : > 
@@ -42,7 +46,8 @@ members  :
     instagram   : https://www.instagram.com/nosrednawall
     site        : https://psychic-happiness.netlify.app
 
-  - image       : images/team/arthur-hideio-noguti.jpg
+  - status : ATIVO  
+    image       : images/team/arthur-hideio-noguti.jpg
     name  : "Arthur Hideio Noguti"
     company_position: "Ensino"
     quote : > 
@@ -52,7 +57,9 @@ members  :
     linkedin    : https://www.linkedin.com/in/arthur-hideio-noguti-0904a8199
     #instagram   : https://www.instagram.com/brunowzk/
 
-  - image       : images/team/bruno_wavrzenczak.jpg
+  - status : INATIVO
+    saida: "Dez 2025"  
+    image       : images/team/bruno_wavrzenczak.jpg
     name  : "Bruno Wavrzenczak"
     company_position: "Ensino"
     quote : > 
@@ -62,7 +69,8 @@ members  :
     #linkedin    : https://www.linkedin.com/
     #instagram   : https://www.instagram.com/brunowzk/
 
-  - image       : images/team/camilla_rodrigues.jpg
+  - status : ATIVO  
+    image       : images/team/camilla_rodrigues.jpg
     name  : "Camilla Virginia Rodrigues da Silva"
     company_position: "Eventos"
     quote : > 
@@ -72,7 +80,9 @@ members  :
     #linkedin    : https://www.linkedin.com/
     #instagram   : https://www.instagram.com/_camilla.rodrigues_/
     
-  - image       : images/team/cristian_pessatti.jpg
+  - status : INATIVO  
+    saida: "Dez 2025"  
+    image       : images/team/cristian_pessatti.jpg
     name  : "Cristian Pessatti dos Anjos"
     company_position: "Ensino"
     quote : > 
@@ -82,9 +92,10 @@ members  :
     #linkedin    : https://www.linkedin.com/
     #instagram   : https://www.instagram.com/
 
-  - image       : images/team/gabriel_bittencourt.jpg
+  - status : ATIVO
+    image       : images/team/gabriel_bittencourt.jpg
     name  : "Gabriel Muller Bittencourt"
-    company_position: "Administração"
+    company_position: "Eventos"
     quote : > 
             "Descobri na Estatística a perfeita união entre minha paixão por números e o desejo de resolver problemas reais. No curso, me encantei especialmente pela Análise Multivariada e Modelagem Preditiva, onde dados ganham significado e se transformam em insights poderosos. Como membro ativo do PET, tenho explorado aplicações práticas no Mercado Financeiro, desenvolvendo tanto habilidades técnicas em R quanto a capacidade de comunicar resultados complexos de forma acessível. Fora da universidade, levo esse pensamento analítico para estratégias em jogos competitivos, porque acredito que a estatística está em tudo - basta saber olhar." 
     interesse: ["Visualização de Dados", "Machine Learning", "Otimização"]
@@ -92,17 +103,32 @@ members  :
     #linkedin    : https://www.linkedin.com/
     #instagram   : https://www.instagram.com/
 
-  - image       : images/team/julia-zorzo-ferreira.jpg
-    name  : "Júlia Zorzo Ferreira"
+
+  - status : ATIVO
+    image       : images/team/gabriely_ferreira_polli.jpeg
+    name  : "Gabriely Ferreira Polli"
+    company_position: "Administração"
+    quote : > 
+            "A capacidade de traduzir números em informações importantes para a sociedade foi o que me atraiu ao curso de Estatística e Ciência de Dados. Vejo na análise de dados uma ferramenta poderosa de interpretação do mundo. Fora do ambiente acadêmico, gosto muito de ler e praticar esportes." 
+    interesse: ["Sports Analytics", "Pesquisa Operacional e Logística", "Data Storytelling" ]
+    #github      : https://www.github.com/
+    #linkedin    : https://www.linkedin.com/
+    instagram   : https://www.instagram.com/gabypolli
+
+
+  - status : ATIVO
+    image       : images/team/joaquim_rafael_lara_almeida.jpeg
+    name  : "Joaquim Rafael Lara Almeida"
     company_position: "Ensino"
     quote : > 
-            "Comecei a cursar Estatística pelo interesse em estudar matemática e tecnologia aplicadas em múltiplas áreas. Me juntei ao PET para um maior envolvimento, aprendizado e desenvolvimento no curso. Sou apaixonada por voleibol e esporte, música, teatro, confeitaria, diferentes culturas e viagens." 
-    interesse: ["Inferência", "Modelagem", "Visualização de Dados", "Aprendizado de Máquina"]
-    github      : https://github.com/zorzojulia
-    linkedin    : https://www.linkedin.com/in/zorzojulia
-    instagram   : https://www.instagram.com/zorzojulia
+            "Sou programador de formação e atuei por 6 anos na área. Já havia cursado um semestre de Estatística em 2016, porém decidi dar um foco maior na TI naquela época. Voltei ao curso em 2023, pois sentia a necessidade de terminar o que comecei. Retornei inicialmente motivado por interesses computacionais, mas, após a disciplina de Fundamentos Matemáticos para Probabilidade com o Prof. Benito, meu interesse voltou-se para a parte teórica da estatística. Hoje, meu foco está muito mais no fundamento matemático do que apenas nos métodos computacionais. Nas horas vagas, gosto de praticar corrida, jogar retro-games, ler e ouvir música." 
+    interesse: ["Fundamentos Matemáticos da Estatística", "Probabilidade", "Linux"]
+    github      : https://github.com/almeida-joaquim/
+    linkedin    : https://www.linkedin.com/in/joaquim-almeida-41bbb0133
+    #instagram   : https://www.instagram.com
 
-  - image       : images/team/joao_lago.jpg
+  - status : ATIVO
+    image       : images/team/joao_lago.jpg
     name  : "João Otávio"
     company_position: "Comunicação"
     quote : > 
@@ -111,10 +137,23 @@ members  :
     #github      : https://www.github.com/
     #linkedin    : https://www.linkedin.com/
     instagram   : https://www.instagram.com/jotaveokkkk
-    
-  - image       : images/team/kamila_macedo.jpg
+
+  - status : ATIVO
+    image       : images/team/julia-zorzo-ferreira.jpg
+    name  : "Júlia Zorzo Ferreira"
+    company_position: "Administração"
+    quote : > 
+            "Comecei a cursar Estatística pelo interesse em estudar matemática e tecnologia aplicadas em múltiplas áreas. Me juntei ao PET para um maior envolvimento, aprendizado e desenvolvimento no curso. Sou apaixonada por voleibol e esporte, música, teatro, confeitaria, diferentes culturas e viagens." 
+    interesse: ["Inferência", "Modelagem", "Visualização de Dados", "Aprendizado de Máquina"]
+    github      : https://github.com/zorzojulia
+    linkedin    : https://www.linkedin.com/in/zorzojulia
+    instagram   : https://www.instagram.com/zorzojulia
+
+
+  - status : ATIVO
+    image       : images/team/kamila_macedo.jpg
     name  : "Kamila de Lazari Macedo"
-    company_position: "Ensino"
+    company_position: "Comunicação"
     quote : > 
             "Graduanda em Estatística, tenho grande interesse pela integração entre dados, matemática e computação. Gosto de explorar técnicas de modelagem e machine learning aplicadas a diferentes contextos, como recuperação de crédito. Busco sempre unir teoria e prática para extrair valor a partir dos dados e apoiar a tomada de decisão." 
     interesse: ["Modelagem estatística", "Machine Learning", "Inteligência Artificial", "Estatística Computacional"]
@@ -122,7 +161,8 @@ members  :
     #linkedin    : https://www.linkedin.com/
     #instagram   : https://www.instagram.com/
     
-  - image       : images/team/maria_moreira.jpg
+  - status : ATIVO
+    image       : images/team/maria_moreira.jpg
     name  : "Maria Eduarda Moreira"
     company_position: "Eventos"
     quote : > 
@@ -132,17 +172,32 @@ members  :
     #linkedin    : https://www.linkedin.com/
     #instagram   : https://www.instagram.com/
 
-  - image       : images/team/thiago_jose.jpg
+  - status : ATIVO
+    image       : images/team/thiago_jose.jpg
     name  : "Thiago José"
-    company_position: "Administração"
+    company_position: "Ensino"
     quote : > 
             "Tenho 22 anos, me formei como técnico em Eletrônica na UTFPR, onde notei que combino mais com as ciências puras, por esse motivo resolvi fazer estatística. Gosto bastante de cantar e no meu tempo livre aproveito para jogar." 
     interesse: ["Séries Temporais","Teoria de Resposta ao Item","Regressão Linear"]
     #github      : https://www.github.com/
     #linkedin    : https://www.linkedin.com/
     #instagram   : https://www.instagram.com/
+
+  - status : ATIVO
+    image       : images/team/thiago_roberto_alves.jpg
+    name  : "Thiago Roberto Alves"
+    company_position: "Ensino"
+    quote : > 
+            "Sou estudante de Estatística e Ciência de Dados na UFPR, com trajetória prévia em Física e experiência com Meteorologia, áreas que reforçaram meu interesse por modelagem, computação científica e análise de fenômenos complexos. Trabalho com automação de processos, análise de dados e desenvolvimento de ferramentas em R, Shiny, Python e Google Apps Script, especialmente para integração de fluxos de trabalho no Google Workspace. Atuo também na SAMECA, onde aplico dados e organização para apoiar ações de saúde mental. Acredito na Estatística como instrumento científico e social para geração de conhecimento, inovação e justiça social." 
+    interesse: ["Estatística Computacional", "Ciência de Dados", "Automação de Processos", "Visualização de Dados", "Modelagem Estatística", "Aplicações Sociais da Estatística"]
+    github      : https://github.com/skewoof
+    linkedin    : https://www.linkedin.com/feed/
+    instagram   : https://www.instagram.com/nevoheiro
+    site        : https://sameca.org
     
-  - image       : images/team/vitor_kiemo.jpg
+  - status : INATIVO
+    saida: "Dez 2025"
+    image       : images/team/vitor_kiemo.jpg
     name  : "Vitor Yuji Kiemo"
     company_position: "Eventos"
     quote : > 
