@@ -117,6 +117,18 @@ members  :
 
 
   - status : ATIVO
+    image       : images/team/henrique_dayrell_oliveira.jpeg
+    name  : "Henrique Dayrell Oliveira"
+    company_position: "Eventos"
+    quote : > 
+            "Tenho 18 amos, Sou Graduando de Estatística pela Universidade Federal do Paraná. Sempre me interessei por números e tecnologia e, no curso, encontrei a união ideal entre ambos. Entrei no PET em 2025 pelo meu interesse em me envolver mais com os programas ofertados pela universidade e aprender com colegas e tutores. No meu tempo livre, gosto de praticar esportes como futebol, lutar boxe e jogar videogames." 
+    interesse: ["Big Data", "Machine Learning", "Inteligência artificial", "Visualização de Dados", "Clustering", "Estatística Espacial"]
+    #github      : https://www.github.com/
+    linkedin    : https://www.linkedin.com/in/henrique-dayrell-oliveira-546230346/
+    #instagram   : https://www.instagram.com/gabypolli
+
+
+  - status : ATIVO
     image       : images/team/joaquim_rafael_lara_almeida.jpeg
     name  : "Joaquim Rafael Lara Almeida"
     company_position: "Ensino"
