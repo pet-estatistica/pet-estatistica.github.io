@@ -28,11 +28,11 @@ members  :
     name  : "Ana Beatriz da Silva Marques"
     company_position: "Ensino"
     quote : > 
-            "Descobri na Estatística a perfeita união entre minha paixão por números e o desejo de resolver problemas reais. No curso, me encantei especialmente pela Análise Multivariada e Modelagem Preditiva, onde dados ganham significado e se transformam em insights poderosos. Como membro ativo do PET, tenho explorado aplicações práticas no Mercado Financeiro, desenvolvendo tanto habilidades técnicas em R quanto a capacidade de comunicar resultados complexos de forma acessível. Fora da universidade, levo esse pensamento analítico para estratégias em jogos competitivos, porque acredito que a estatística está em tudo - basta saber olhar." 
-    interesse: ["Visualização de Dados", "Dashboards", "Machine Learning"]
-    #github      : https://www.github.com/
-    #linkedin    : https://www.linkedin.com/
-    #instagram   : https://www.instagram.com/brunowzk/
+            "Amo matemática e jogos que desafiam a lógica. Sou pesquisadora e aplico a Estatística na área de Segurança Viária, utilizando a linguagem R e ferramentas de visualização. Meu foco atualmente é a ferramenta Shiny e Comunicação de Análises. Entrei no PET com o objetivo de me desenvolver academicamente e melhorar minha comunicação. No tempo livre, gosto de jogar, resolver palavras-cruzadas, pintar, aprender japonês e cuidar das minhas plantinhas." 
+    interesse: ["Visualização de Dados", "R", "Shiny", "Women on STEM", "Machine Learning"]
+    github      : https://github.com/betrizmarques
+    linkedin    : https://www.linkedin.com/in/ana-beatriz-marques-97a790237
+    instagram   : https://www.instagram.com/btrizmarques
 
   - status : ATIVO
     image       : images/team/anderson_inacio.jpg
