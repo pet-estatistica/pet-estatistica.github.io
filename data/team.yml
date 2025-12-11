@@ -173,6 +173,19 @@ members  :
     #linkedin    : https://www.linkedin.com/
     #instagram   : https://www.instagram.com/
     
+    
+  - status : ATIVO
+    image       : images/team/kelly_huang.jpeg
+    name  : "Kelly Huang"
+    company_position: "Comunicação"
+    quote : > 
+            "Graduanda de Estatística, tenho interesse em conectar a teoria estatística e aplicações reais. Entrei no PET com o propósito de fortalecer a minha formação e transformar dificuldades em excelência acadêmica. Amo conhecer novas pessoas, nadar, desenhar e ouvir música." 
+    interesse: ["Ciência de Dados" , "Bioestatística" , "Machine Learning"]
+    #github      : https://www.github.com/
+    #linkedin    : https://www.linkedin.com/
+    #instagram   : https://www.instagram.com/
+    
+    
   - status : ATIVO
     image       : images/team/maria_moreira.jpg
     name  : "Maria Eduarda Moreira"
