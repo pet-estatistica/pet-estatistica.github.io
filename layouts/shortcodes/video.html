@@ -1,0 +1,597 @@
+{{/* video.html */}}
+
+{{ $videoFile := .Get "file" }}
+{{ $videoUrl := .Get "url" }}
+{{ $orientation := .Get "orientation" | default "landscape" }}
+{{ $socialNetwork := .Get "social" | default "" }}
+{{ $socialLink := .Get "link" | default "" }}
+{{ $isYoutube := false }}
+{{ $isVimeo := false }}
+{{ $youtubeId := "" }}
+{{ $vimeoId := "" }}
+{{ $isExternal := false }}
+{{ $finalVideoUrl := "" }}
+{{ $fileExt := "" }}
+
+{{/* Verificar se é URL do YouTube */}}
+{{ if $videoUrl }}
+  {{ $isExternal = true }}
+  {{ if findRE "youtube\\.com|youtu\\.be" $videoUrl }}
+    {{ $isYoutube = true }}
+    {{/* Extrair ID do YouTube */}}
+    {{ if findRE "youtube\\.com/watch\\?v=" $videoUrl }}
+      {{ $youtubeId = index (findRE "v=[^&]+" $videoUrl) 0 }}
+      {{ $youtubeId = replace $youtubeId "v=" "" }}
+    {{ else if findRE "youtu\\.be/" $videoUrl }}
+      {{ $youtubeId = index (findRE "youtu\\.be/[^?]+" $videoUrl) 0 }}
+      {{ $youtubeId = replace $youtubeId "youtu.be/" "" }}
+    {{ else if findRE "youtube\\.com/embed/" $videoUrl }}
+      {{ $youtubeId = index (findRE "embed/[^?]+" $videoUrl) 0 }}
+      {{ $youtubeId = replace $youtubeId "embed/" "" }}
+    {{ end }}
+    {{ $finalVideoUrl = printf "https://www.youtube.com/embed/%s" $youtubeId }}
+  {{ else if findRE "vimeo\\.com" $videoUrl }}
+    {{ $isVimeo = true }}
+    {{/* Extrair ID do Vimeo */}}
+    {{ $vimeoId = index (findRE "vimeo\\.com/[0-9]+" $videoUrl) 0 }}
+    {{ $vimeoId = replace $vimeoId "vimeo.com/" "" }}
+    {{ $finalVideoUrl = printf "https://player.vimeo.com/video/%s" $vimeoId }}
+  {{ else }}
+    {{ $finalVideoUrl = $videoUrl }}
+  {{ end }}
+{{ else if $videoFile }}
+  {{/* Verificar se é arquivo local */}}
+  {{ $path := printf "static/videos/%s" $videoFile }}
+  {{ if fileExists $path }}
+    {{ $finalVideoUrl = printf "/videos/%s" $videoFile }}
+    {{ $fileExt = path.Ext $videoFile | lower }}
+  {{ else }}
+    {{/* Verificar se é URL completa para arquivo de vídeo */}}
+    {{ if findRE "^https?://" $videoFile }}
+      {{ $isExternal = true }}
+      {{ $finalVideoUrl = $videoFile }}
+      {{ $videoFile = replaceRE "^https?://[^/]+/" "" $videoFile }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ if or $finalVideoUrl $isYoutube $isVimeo }}
+  {{ $fileName := "" }}
+  {{ if $videoFile }}
+    {{ $fileName = replaceRE "\\.[^.]+$" "" $videoFile }}
+    {{ $fileName = $fileName | urlize }}
+  {{ else if $youtubeId }}
+    {{ $fileName = printf "youtube-%s" $youtubeId }}
+  {{ else if $vimeoId }}
+    {{ $fileName = printf "vimeo-%s" $vimeoId }}
+  {{ else }}
+    {{ $fileName = printf "video-%s" (md5 $finalVideoUrl) }}
+  {{ end }}
+  
+  <div class="video-player-container orientation-{{ $orientation }}">
+    <div class="video-wrapper">
+      {{ if $socialNetwork }}
+      <div class="social-badge-minimal" data-social="{{ $socialNetwork | lower }}">
+        {{ $socialIcon := "📱" }}
+        
+        {{ $socialIcons := dict 
+          "instagram" ""
+          "instagram reels" ""
+          "tiktok" ""
+          "youtube" ""
+          "youtube shorts" ""
+          "facebook" ""
+          "facebook reels" ""
+          "twitter" ""
+          "x" ""
+          "linkedin" ""
+          "whatsapp" ""
+          "telegram" ""
+          "snapchat" ""
+          "pinterest" ""
+          "reddit" ""
+          "vimeo" ""
+        }}
+        
+        {{ range $key, $icon := $socialIcons }}
+          {{ if eq ($socialNetwork | lower) $key }}
+            {{ $socialIcon = $icon }}
+          {{ end }}
+        {{ end }}
+        
+        {{ if $socialLink }}
+          <a href="{{ $socialLink }}" target="_blank" rel="noopener noreferrer" class="social-link" title="Ver no {{ $socialNetwork }}">
+            <span class="social-icon-minimal">{{ $socialIcon }}</span>
+          </a>
+        {{ else }}
+          <span class="social-icon-minimal">{{ $socialIcon }}</span>
+        {{ end }}
+      </div>
+      {{ end }}
+      
+      {{ if $isYoutube }}
+        <!-- Player do YouTube -->
+        <div class="youtube-player">
+          <iframe 
+            id="video-{{ $fileName }}"
+            class="responsive-video youtube-iframe"
+            src="{{ $finalVideoUrl }}?rel=0&amp;showinfo=0&amp;modestbranding=1{{ with .Get "autoplay" }}{{ if eq . "true" }}&amp;autoplay=1{{ end }}{{ end }}"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+      {{ else if $isVimeo }}
+        <!-- Player do Vimeo -->
+        <div class="vimeo-player">
+          <iframe 
+            id="video-{{ $fileName }}"
+            class="responsive-video vimeo-iframe"
+            src="{{ $finalVideoUrl }}?title=0&byline=0&portrait=0{{ with .Get "autoplay" }}{{ if eq . "true" }}&amp;autoplay=1{{ end }}{{ end }}"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+      {{ else }}
+        <!-- Player de vídeo HTML5 padrão -->
+        <video 
+          id="video-{{ $fileName }}"
+          class="responsive-video"
+          controls
+          controlsList="{{ if $isExternal }}nodownload{{ else }}nodownload{{ end }}"
+          preload="metadata"
+          poster="{{ .Get "poster" | default "" }}"
+          {{ with .Get "autoplay" }}autoplay{{ end }}
+          {{ with .Get "loop" }}loop{{ end }}
+          {{ with .Get "muted" }}muted{{ end }}
+          {{ with .Get "playsinline" }}playsinline{{ end }}
+        >
+          <source src="{{ $finalVideoUrl }}" type="{{ if $isExternal }}video/mp4{{ else if and $fileExt (eq $fileExt ".mp4") }}video/mp4{{ else if and $fileExt (eq $fileExt ".webm") }}video/webm{{ else if and $fileExt (eq $fileExt ".ogg") }}video/ogg{{ else }}video/mp4{{ end }}">
+          Seu navegador não suporta a tag de vídeo HTML5.
+        </video>
+      {{ end }}
+    </div>
+    
+    <div class="video-footer-minimal">
+      {{ if and (not $isExternal) (not $isYoutube) (not $isVimeo) (.Get "download" | default false) }}
+      <a href="{{ $finalVideoUrl }}" download class="download-btn-minimal" title="Baixar vídeo">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        Baixar
+      </a>
+      {{ end }}
+      
+      {{ with .Get "caption" }}
+      <div class="video-caption-minimal">
+        {{ . | markdownify }}
+      </div>
+      {{ end }}
+      
+      {{ if and $socialNetwork $socialLink }}
+      <div class="social-link-info">
+        <small>
+          <a href="{{ $socialLink }}" target="_blank" rel="noopener noreferrer" class="external-link">
+            Ver original no {{ $socialNetwork }}
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+          </a>
+        </small>
+      </div>
+      {{ end }}
+      
+
+    </div>
+  </div>
+
+  <style>
+    .video-player-container {
+      margin: 2rem 0;
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .video-wrapper {
+      position: relative;
+      background: #000;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      width: 100%;
+    }
+    
+    .social-badge-minimal {
+      font-family: "Symbols Nerd Font", "Symbols Nerd Font Mono", "Font Awesome", sans-serif;
+      font-size: 18px;
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      backdrop-filter: blur(4px);
+      transition: transform 0.2s ease;
+    }
+    
+    .social-badge-minimal:hover {
+      transform: scale(1.1);
+    }
+    
+    .social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+      color: inherit;
+      border-radius: 50%;
+    }
+    
+    .social-icon-minimal {
+      font-size: 16px;
+      line-height: 1;
+    }
+    
+    /* Players de iframe (YouTube, Vimeo) */
+    .youtube-player, .vimeo-player {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+    
+    .youtube-iframe, .vimeo-iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    
+    /* Cores de fundo específicas para cada rede social */
+    .social-badge-minimal[data-social*="instagram"] {
+      background: linear-gradient(45deg, #405DE6, #C13584);
+      color: white;
+    }
+    
+    .social-badge-minimal[data-social*="tiktok"] {
+      background: #000000;
+      color: #00f2ea;
+    }
+    
+    .social-badge-minimal[data-social*="youtube"] {
+      background: #FF0000;
+      color: white;
+    }
+    
+    .social-badge-minimal[data-social*="facebook"] {
+      background: #1877F2;
+      color: white;
+    }
+    
+    .social-badge-minimal[data-social*="twitter"],
+    .social-badge-minimal[data-social*="x"] {
+      background: #000000;
+      color: white;
+    }
+    
+    .social-badge-minimal[data-social*="linkedin"] {
+      background: #0A66C2;
+      color: white;
+    }
+    
+    .social-badge-minimal[data-social*="whatsapp"] {
+      background: #25D366;
+      color: white;
+    }
+    
+    .social-badge-minimal[data-social*="telegram"] {
+      background: #0088CC;
+      color: white;
+    }
+    
+    .social-badge-minimal[data-social*="snapchat"] {
+      background: #FFFC00;
+      color: #000000;
+    }
+    
+    .social-badge-minimal[data-social*="pinterest"] {
+      background: #E60023;
+      color: white;
+    }
+    
+    .social-badge-minimal[data-social*="reddit"] {
+      background: #FF4500;
+      color: white;
+    }
+    
+    /* Estilos para orientação landscape (padrão) */
+    .orientation-landscape .video-wrapper,
+    .orientation-landscape .youtube-player,
+    .orientation-landscape .vimeo-player {
+      max-width: 800px;
+      aspect-ratio: 16/9;
+    }
+    
+    .orientation-landscape .responsive-video {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    
+    /* Estilos para orientação portrait */
+    .orientation-portrait .video-wrapper,
+    .orientation-portrait .youtube-player,
+    .orientation-portrait .vimeo-player {
+      max-width: 400px;
+      aspect-ratio: 9/16;
+    }
+    
+    .orientation-portrait .responsive-video {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    
+    /* Estilos para orientação square */
+    .orientation-square .video-wrapper,
+    .orientation-square .youtube-player,
+    .orientation-square .vimeo-player {
+      max-width: 500px;
+      aspect-ratio: 1/1;
+    }
+    
+    .orientation-square .responsive-video {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    
+    .video-footer-minimal {
+      width: 100%;
+      margin-top: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    /* Controles nativos estilizados */
+    .responsive-video::-webkit-media-controls-panel {
+      background: rgba(0, 0, 0, 0.7);
+    }
+    
+    .responsive-video::-webkit-media-controls-play-button,
+    .responsive-video::-webkit-media-controls-volume-slider,
+    .responsive-video::-webkit-media-controls-mute-button,
+    .responsive-video::-webkit-media-controls-timeline,
+    .responsive-video::-webkit-media-controls-current-time-display,
+    .responsive-video::-webkit-media-controls-time-remaining-display,
+    .responsive-video::-webkit-media-controls-fullscreen-button {
+      filter: brightness(1.2);
+    }
+    
+    .download-btn-minimal {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: none;
+      color: #666;
+      padding: 6px 12px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      transition: all 0.2s ease;
+      border: 1px solid #dee2e6;
+      cursor: pointer;
+    }
+    
+    .download-btn-minimal:hover {
+      background: #f8f9fa;
+      color: #4dabf7;
+      border-color: #4dabf7;
+    }
+    
+    .download-btn-minimal svg {
+      width: 14px;
+      height: 14px;
+    }
+    
+    .video-caption-minimal {
+      font-size: 14px;
+      color: #666;
+      text-align: center;
+      max-width: 100%;
+      line-height: 1.5;
+      font-style: italic;
+    }
+    
+    .video-caption-minimal p {
+      margin: 0;
+    }
+    
+    .social-link-info {
+      margin-top: 4px;
+    }
+    
+    .external-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      color: #666;
+      text-decoration: none;
+      font-size: 12px;
+      transition: color 0.2s ease;
+    }
+    
+    .external-link:hover {
+      color: #4dabf7;
+      text-decoration: underline;
+    }
+    
+    .external-link svg {
+      width: 12px;
+      height: 12px;
+    }
+    
+    .external-source-info {
+      margin-top: 4px;
+    }
+    
+    .source-badge {
+      display: inline-flex;
+      align-items: center;
+      background: #f8f9fa;
+      padding: 4px 8px;
+      border-radius: 12px;
+      font-size: 11px;
+      color: #666;
+      border: 1px solid #dee2e6;
+    }
+    
+    /* Ajustes para telas pequenas */
+    @media (max-width: 768px) {
+      .orientation-landscape .video-wrapper,
+      .orientation-landscape .youtube-player,
+      .orientation-landscape .vimeo-player {
+        max-width: 100%;
+        aspect-ratio: 16/9;
+      }
+      
+      .orientation-portrait .video-wrapper,
+      .orientation-portrait .youtube-player,
+      .orientation-portrait .vimeo-player {
+        max-width: 320px;
+        aspect-ratio: 9/16;
+      }
+      
+      .orientation-square .video-wrapper,
+      .orientation-square .youtube-player,
+      .orientation-square .vimeo-player {
+        max-width: 320px;
+        aspect-ratio: 1/1;
+      }
+      
+      .social-badge-minimal {
+        top: 8px;
+        right: 8px;
+        width: 28px;
+        height: 28px;
+        font-size: 16px;
+      }
+      
+      .social-icon-minimal {
+        font-size: 14px;
+      }
+      
+      .download-btn-minimal {
+        font-size: 12px;
+        padding: 5px 10px;
+      }
+      
+      .download-btn-minimal svg {
+        width: 12px;
+        height: 12px;
+      }
+      
+      .external-link {
+        font-size: 11px;
+      }
+      
+      .source-badge {
+        font-size: 10px;
+        padding: 3px 6px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .orientation-portrait .video-wrapper,
+      .orientation-portrait .youtube-player,
+      .orientation-portrait .vimeo-player {
+        max-width: 280px;
+      }
+      
+      .orientation-square .video-wrapper,
+      .orientation-square .youtube-player,
+      .orientation-square .vimeo-player {
+        max-width: 280px;
+      }
+      
+      .social-badge-minimal {
+        width: 24px;
+        height: 24px;
+        font-size: 14px;
+      }
+      
+      .social-icon-minimal {
+        font-size: 12px;
+      }
+    }
+    
+    /* Ajustes para modo tela cheia */
+    .video-wrapper:fullscreen {
+      width: 100vw;
+      height: 100vh;
+      max-width: none;
+      border-radius: 0;
+    }
+    
+    .video-wrapper:fullscreen .responsive-video,
+    .video-wrapper:fullscreen .youtube-iframe,
+    .video-wrapper:fullscreen .vimeo-iframe {
+      object-fit: contain;
+    }
+    
+    .video-wrapper:fullscreen .social-badge-minimal {
+      top: 20px;
+      right: 20px;
+      width: 40px;
+      height: 40px;
+    }
+    
+    .video-wrapper:fullscreen .social-icon-minimal {
+      font-size: 20px;
+    }
+  </style>
+
+{{ else }}
+  <div class="video-error">
+    <p>❌ Nenhum vídeo especificado ou não encontrado.</p>
+    <p>Use <code>file="nome_do_arquivo.mp4"</code> para arquivos locais ou <code>url="https://..."</code> para links externos.</p>
+  </div>
+  
+  <style>
+    .video-error {
+      background: #fff5f5;
+      border: 1px solid #feb2b2;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      color: #c53030;
+    }
+    
+    .video-error code {
+      background: #fed7d7;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+  </style>
+{{ end }}
