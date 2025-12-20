@@ -101,7 +101,12 @@ removePathAccents = true
   [params.banner]
     enable                = true
     #background_image      = "images/backgrounds/dark-blue-bg.png"
-    background_image      = "images/backgrounds/2025-2.png"
+    background_image      = "images/backgrounds/800x600px.png"
+    background_image_mobile = "images/backgrounds/800x1600px.png"
+    background_image_hd   = "images/backgrounds/1280x720px.png"
+    background_image_fullhd      = "images/backgrounds/1920x1080px.png"
+    background_image_ultrawide = "images/backgrounds/2560x1440px.png"
+    background_image_ultra_ultrawide = "images/backgrounds/3840x1600px.png"
     heading               = "PET ESTATÍSTICA UFPR"
     tagline               = ""
     primary_button        = "Veja nossas Atividades"

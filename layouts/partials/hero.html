@@ -1,12 +1,65 @@
 {{ with .Site.Params.banner }}
   {{ if .enable }}
-  {{ "<!-- Site Hero Start -->" | safeHTML }}
+{{ "<!-- Site Hero Start -->" | safeHTML }}
   <!-- <section class="site-hero" style="background-image: url('{{ .background_image }}');"> -->
-  <section class="site-hero" style="background-image: url('{{ .background_image }}'); padding-top: 125px;">
+<!--   <section class="site-hero" style="background-image: url('{{ .background_image }}'); padding-top: 125px;"> -->
+
+
+<style>
+  
+  /* Mobile First: 0px - 767px */
+  .site-hero {
+    background-image: url('{{ .background_image_mobile | default .background_image | absURL }}');
+    background-attachment: scroll;
+  }
+  
+  /* Tablet: 768px - 1366px */
+  @media (min-width: 768px) and (max-width: 1366px) {
+    .site-hero {
+      background-image: url('{{ .background_image | absURL }}');
+      background-attachment: fixed;
+    }
+  }
+  
+  /* HD: 1367px - 1920px */
+  @media (min-width: 1367px) and (max-width: 1920px) {
+    .site-hero {
+      background-image: url('{{ .background_image_hd | default .background_image | absURL }}');
+      background-attachment: fixed;
+    }
+  }
+  
+  /* FULL HD: 1921px - 2560px */
+  @media (min-width: 1921px) and (max-width: 2560px) {
+    .site-hero {
+      background-image: url('{{ .background_image_fullhd | default .background_image_hd | default .background_image | absURL }}');
+      background-attachment: fixed;
+    }
+  }
+  
+  /* Ultra WIDE: 2561px - 3840px */
+  @media (min-width: 2561px) and (max-width: 3840px) {
+    .site-hero {
+      background-image: url('{{ .background_image_ultrawide | default .background_image_fullhd | default .background_image_hd | default .background_image | absURL }}');
+      background-attachment: fixed;
+    }
+  }
+  
+  /* Ultra Ultra WIDE: 3841px+ */
+  @media (min-width: 3841px) {
+    .site-hero {
+      background-image: url('{{ .background_image_ultra_ultrawide | default .background_image_ultrawide | default .background_image_fullhd | default .background_image_hd | default .background_image | absURL }}');
+      background-attachment: fixed;
+    }
+  }
+</style>
+
+<section class="site-hero" style="padding-top: 125px;">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
            <div class="site-hero-content text-center">
+             <!--
             <h6>{{ .tagline }}</h6>
 
             <h1>
@@ -34,7 +87,7 @@
               </li>
             </ul>
 
-
+-->
           </div> 
         </div>
       </div>
