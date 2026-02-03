@@ -69,7 +69,8 @@ members  :
     #linkedin    : https://www.linkedin.com/
     #instagram   : https://www.instagram.com/brunowzk/
 
-  - status : ATIVO  
+  - status : INATIVO
+    saida: "Dez 2025"
     image       : images/team/camilla_rodrigues.jpg
     name  : "Camilla Virginia Rodrigues da Silva"
     company_position: "Eventos"
