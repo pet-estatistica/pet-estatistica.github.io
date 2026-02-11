@@ -126,7 +126,7 @@ removePathAccents = true
     scroll_down = "scroll down"
 
   [params.call_to_action]
-    enable              = true
+    enable              = false
     background_image    = "images/backgrounds/cta-background.jpg"
     title               = "PROCESSO SELETIVO FINALIZADO"
     primary_button      = "Inscreva-se"
