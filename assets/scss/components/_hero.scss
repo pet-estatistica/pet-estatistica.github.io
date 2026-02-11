@@ -36,7 +36,20 @@
   @include mobile{
     padding: 250px 0; // Aumentado para compensar o menu
     min-height: auto;
-    background-attachment: fixed; // Remove o fixed em mobile para melhor performance
+    background-attachment: scroll !important; /* ← MUDOU DE fixed PARA scroll */
+    background-size: cover !important;
+    background-position: center center !important;
+    width: 100%;
+    left: 0;
+    right: 0;
+    overflow-x: hidden;
+    
+    /* Garante que o background não force largura extra */
+    &::before {
+      width: 100%;
+      left: 0;
+      right: 0;
+    }
   }
 
   @include desktop{
