@@ -41,10 +41,12 @@ members  :
     quote : > 
             "Sou um profissional formado em Bacharelado de Sistemas de Informação, também estudante de Estatística e amante de ferramentas Linux." 
     interesse: ["Visualização de Dados", "Dashboards", "Machine Learning", "Linux", " Arch Linux", "DWM Window Manager"]
-    github      : https://github.com/nosrednawall
-    linkedin    : https://www.linkedin.com/in/anderson-jose-de-souza-inacio
-    instagram   : https://www.instagram.com/nosrednawall
-    site        : https://psychic-happiness.netlify.app
+    github       : https://github.com/nosrednawall
+    linkedin     : https://www.linkedin.com/in/anderson-jose-de-souza-inacio
+    instagram    : https://www.instagram.com/nosrednawall
+    site         : https://psychic-happiness.netlify.app
+    #linux        : https://archlinux.org/
+    #my_anime_list: https://myanimelist.net/profile/nosrednawall
 
   - status : ATIVO  
     image       : images/team/arthur-hideio-noguti.jpg

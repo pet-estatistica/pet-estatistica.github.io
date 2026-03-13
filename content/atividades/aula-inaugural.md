@@ -14,6 +14,11 @@ Organizar uma aula que apresente a Universidade e o Curso para o calouro, dando 
 
 ### Últimos eventos:
 
+#### 2026
+
+{{< gallery folder="images/atividades/aula-inaugural/2026/" >}}
+
+
 #### 2025
 
 {{< gallery folder="images/atividades/aula-inaugural/2025/" >}}
