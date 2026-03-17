@@ -6,7 +6,7 @@ tags: ["Orientação", "Informações sobre o Curso", "Calouros", "Apresentaçã
   
 ### **Descrição e Justificativa**
   
-assar no vestibular e adentrar a Universidade é uma grande conquista e uma fase com muitas mudanças. Para um aluno ter êxito, é necessário haver uma mudança de postura com relação aos estudos, bem como ter conhecimento sobre o funcionamento do Curso e da Universidade. A aula inaugural é realizada pelo PET Estatística todos os anos para orientar os alunos calouros sobre o curso e a Universidade.
+Passar no vestibular e adentrar a Universidade é uma grande conquista e uma fase com muitas mudanças. Para um aluno ter êxito, é necessário haver uma mudança de postura com relação aos estudos, bem como ter conhecimento sobre o funcionamento do Curso e da Universidade. A aula inaugural é realizada pelo PET Estatística todos os anos para orientar os alunos calouros sobre o curso e a Universidade.
 
 ### **Objetivos**
 
