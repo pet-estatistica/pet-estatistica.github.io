@@ -97,6 +97,8 @@ function getInstagramFeed() {
                     const imgElement = document.createElement('img');
                     imgElement.src = post.media_url;
                     imgElement.alt = post.caption || 'Instagram post';
+                    img.className = 'w-full h-full object-cover';
+					img.loading = 'lazy';
                     mediaElement.appendChild(imgElement);
                 } else if (post.media_type === "VIDEO") {
                     // Cria o elemento de vídeo

@@ -235,13 +235,56 @@ disciplinas:
             itens:
               - descricao: "Lista 1"
                 arquivo: "/pdfs/CE308/2019/lista1_2019.pdf"
-                tipo: "PDF"                  
+                tipo: "PDF"
+                
                 
                 
   - codigo: "CM310"
     nome: "Pré-Cálculo"
     emoji: "∫"
     anos:
+      - ano: 2026
+        professores: ""
+        semestre: "1"
+        materiais:
+          - categoria: "📚 Listas de exercícios"
+            itens:
+              - descricao: "resolução-lista1.pdf"
+                arquivo: "/pdfs/CM310/2026/resolução-lista1.pdf"
+                autor: "Thiago Roberto Alves"
+                url_autor: "/integrantes/#thiago-roberto-alves"    
+                tipo: "PDF"
+              - descricao: "resolução-lista2.pdf"
+                arquivo: "/pdfs/CM310/2026/resolução-lista2.pdf"
+                autor: "Thiago Roberto Alves"
+                url_autor: "/integrantes/#thiago-roberto-alves"    
+                tipo: "PDF"
+              - descricao: "resolução-lista3.pdf"
+                arquivo: "/pdfs/CM310/2026/resolução-lista3.pdf"
+                autor: "Thiago Roberto Alves"
+                url_autor: "/integrantes/#thiago-roberto-alves"    
+                tipo: "PDF"
+              - descricao: "resolução-lista4.pdf"
+                arquivo: "/pdfs/CM310/2026/resolução-lista4.pdf"
+                autor: "Thiago Roberto Alves"
+                url_autor: "/integrantes/#thiago-roberto-alves"    
+                tipo: "PDF"
+              - descricao: "resolução-lista5.pdf"
+                arquivo: "/pdfs/CM310/2026/resolução-lista5.pdf"
+                autor: "Thiago Roberto Alves"
+                url_autor: "/integrantes/#thiago-roberto-alves"    
+                tipo: "PDF"
+              - descricao: "resolução-lista6.pdf"
+                arquivo: "/pdfs/CM310/2026/resolução-lista6.pdf"
+                autor: "Thiago Roberto Alves"
+                url_autor: "/integrantes/#thiago-roberto-alves"    
+                tipo: "PDF"
+              - descricao: "resolução-lista7.pdf"
+                arquivo: "/pdfs/CM310/2026/resolução-lista7.pdf"
+                autor: "Thiago Roberto Alves"
+                url_autor: "/integrantes/#thiago-roberto-alves"    
+                tipo: "PDF"
+ 
       - ano: 2025
         professores: "Dr. Pedro Danizete Damázio"
         semestre: "1"

@@ -24,7 +24,7 @@ members  :
     instagram   : https://www.instagram.com/@alexsgkobus2903
 
   - status : ATIVO
-    image       : images/team/ana_marques.jpg
+    image       : images/team/ana-marques.jpg
     name  : "Ana Beatriz da Silva Marques"
     company_position: "Ensino"
     quote : > 
@@ -132,7 +132,7 @@ members  :
 
 
   - status : ATIVO
-    image       : images/team/joaquim_rafael_lara_almeida.jpeg
+    image       : images/team/joaquim-rafael-lara-almeida.jpeg
     name  : "Joaquim Rafael Lara Almeida"
     company_position: "Ensino"
     quote : > 
@@ -201,7 +201,7 @@ members  :
     #instagram   : https://www.instagram.com/
 
   - status : ATIVO
-    image       : images/team/thiago_jose.jpg
+    image       : images/team/thiago-jose.jpg
     name  : "Thiago José"
     company_position: "Ensino"
     quote : > 
@@ -212,7 +212,7 @@ members  :
     #instagram   : https://www.instagram.com/
 
   - status : ATIVO
-    image       : images/team/thiago_roberto_alves.jpg
+    image       : images/team/thiago-roberto-alves.jpg
     name  : "Thiago Roberto Alves"
     company_position: "Ensino"
     quote : > 
