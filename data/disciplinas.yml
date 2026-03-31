@@ -7,6 +7,13 @@ disciplinas:
         professores: "Dra. Amanda Merian Freitas Mendes, Dra. Sílvia Emiko Shimakura, Dr. Paulo Justiniano Ribeiro Junior"
         semestre: "1"
         materiais:
+          - categoria: "📝 Provas"
+            itens:
+              - descricao: "Resolução da avaliação 01"
+                arquivo: "/pdfs/CE301/2025/Prova01_EstatisticaBasica.pdf"
+                tipo: "PDF"
+                autor: "Ana Beatriz da Silva Marques"
+                url_autor: "/integrantes/#ana-beatriz-da-silva-marques"                
           - categoria: "🌐 Atividades Online"
             itens:
               - descricao: "Respostas Atividade online 1"
