@@ -384,6 +384,24 @@ docentes:
       email_original: vayego
       link_perfil: Stela Adami Vayego
       tipo_docente_original: Corpo Docente do Departamento de Estatística
+  tatianefontana:
+    nome: Tatiane Fontana Ribeiro
+    email: tatianefontana@ufpr.br
+    telefone: 3361-3141
+    tipo_docente: Corpo Docente do Departamento de Estatística
+    homepage: ""
+    url_perfil: "http://www.est.ufpr.br/professores/26-tatiane.html"
+    imagem: "http://www.est.ufpr.br/professores/tatiane.jpeg"
+    formacao:
+      graduacao: Matemática - Universidade Regional Integrada do Alto Uruguai e das Missões, 2017.
+      mestrado: Estatística -  Universidade Federal de Pernambuco (UFPE), 2020.
+      doutorado: Estatística - Universidade de São Paulo, IME/USP, SP, 2023.
+    areas_pesquisa: [Geração de distribuições de probabilidades, análise multivariada, modelos de regressão, modelos de sáries temporais, redes neurais. ]
+    informacoes_adicionais:
+      nome_original: Tatiane Fontana Ribeiro
+      email_original: tatianefontana
+      link_perfil: Tatiane Fontana Ribeiro
+      tipo_docente_original: Corpo Docente do Departamento de Estatística      
   wagnerhugobonat:
     nome: Wagner Hugo Bonat
     email: wbonat@ufpr.br
