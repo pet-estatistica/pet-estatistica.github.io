@@ -362,6 +362,17 @@ disciplinas:
     nome: "Cálculo 2"
     emoji: "∫"
     anos:
+      - ano: 2026
+        professores: "Me. Matheus Moraes Santos"
+        semestre: "1"
+        materiais:
+          - categoria: "📚 Listas de exercícios"
+            itens:
+              - descricao: "Resolução parcial Lista 1"
+                arquivo: "/pdfs/CM312/2026/parcial-gabarito-L1.pdf"
+                tipo: "PDF"  
+                autor: "Joaquim Rafael Lara Almeida"
+                url_autor: "/integrantes/#joaquim-rafael-lara-almeida"
       - ano: 2025
         professores: "Me. Matheus Moraes Santos"
         semestre: "1"
