@@ -1,0 +1,309 @@
+{{ define "main" }}
+
+<!-- PORTUGUÊS --> 
+{{ if eq .Site.Language.Lang "pt" }}
+  {{ with .Site.Data.dashboads }}
+    {{ if .enable }}
+    <br>
+    <section class="site-team">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-title">
+              <h2>
+                {{ .title }}
+              </h2>
+            </div>
+                 
+            <!-- Filtros combinados -->
+            <div class="row justify-content-center mb-4">
+              <div class="col-md-5">
+                <div class="tag-filter">
+                  <label for="tag-select" class="form-label">Filtrar por tags:</label>
+                  <select id="tag-select" class="form-select">
+                    <option value="all">Todas as tags</option>
+                    {{ $allTags := slice }}
+                    {{ range .dashboads }}
+                      {{ if .tags }}
+                        {{ if reflect.IsSlice .tags }}
+                          {{ $allTags = $allTags | append .tags }}
+                        {{ else }}
+                          <!-- Se for string, converta para slice -->
+                          {{ $allTags = $allTags | append (slice .tags) }}
+                        {{ end }}
+                      {{ end }}
+                    {{ end }}
+                    
+                    {{ $uniqueTags := slice }}
+                    {{ $tagsCounts := dict }}
+                    {{ range $allTags }}
+                      {{ if reflect.IsSlice . }}
+                        {{ range . }}
+                          {{ $tag := . | string }}
+                          {{ if not (in $uniqueTags $tag) }}
+                            {{ $uniqueTags = $uniqueTags | append $tag }}
+                            {{ $tagsCounts = merge $tagsCounts (dict $tag 1) }}
+                          {{ else }}
+                            {{ $currentCount := index $tagsCounts $tag | default 0 }}
+                            {{ $tagsCounts = merge $tagsCounts (dict $tag (add $currentCount 1)) }}
+                          {{ end }}
+                        {{ end }}
+                      {{ else }}
+                        {{ $tag := . | string }}
+                        {{ if not (in $uniqueTags $tag) }}
+                          {{ $uniqueTags = $uniqueTags | append $tag }}
+                          {{ $tagsCounts = merge $tagsCounts (dict $tag 1) }}
+                        {{ else }}
+                          {{ $currentCount := index $tagsCounts $tag | default 0 }}
+                          {{ $tagsCounts = merge $tagsCounts (dict $tag (add $currentCount 1)) }}
+                        {{ end }}
+                      {{ end }}
+                    {{ end }}
+                    
+                    {{ range sort $uniqueTags }}
+                    <option value="{{ . | urlize }}">{{ . }} ({{ index $tagsCounts . }})</option>
+                    {{ end }}
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {{ range .dashboads }}
+          {{ $dashboadstatus := default "ATIVO" .status | lower }}
+          
+          <div class="col-lg-6 col-md-6 team-member" 
+               data-tags="{{ if .tags }}{{ if reflect.IsSlice .tags }}{{ range .tags }}{{ . | urlize }} {{ end }}{{ else }}{{ .tags | urlize }}{{ end }}{{ end }}"
+               data-status="{{ $dashboadstatus }}">
+            
+            <div class="site-team-member {{ if eq $dashboadstatus "inativo" }}inactive-member{{ end }}">
+              
+              <div class="card-img-top">
+                <img src="{{ .imagem | absURL }}" alt="team-member" id="{{ .name | urlize }}" class="card-img-top">
+              </div>
+              
+              <div class="card-body" id="{{ .name | urlize }}">
+                <h3>{{ .name }}</h3>
+                <p>Autor(a): {{ .autor }}</p>
+                <p>{{ .descricao }}</p>
+                <p class="site-team-item-body"> {{ if .quote }}<blockquote>{{ .quote }}</blockquote>{{ end }}</p>
+                {{ if .tags }}
+                  <p><strong>Tags:</strong> 
+                    {{ if reflect.IsSlice .tags }}
+                      {{ delimit .tags ", " }}
+                    {{ else }}
+                      {{ .tags }}
+                    {{ end }}
+                  </p>
+                {{ end }}
+                <h5><a href="{{ .url }}" target="_blank">Acesso ShinyApps</a></h5>
+                <h5><a href="{{ .repositorio }}" target="_blank">Acesso Github</a></h5>
+              </div>
+              
+            </div>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+
+    <!-- Script para os filtros -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const tagSelect = document.getElementById('tag-select');
+      const statusSelect = document.getElementById('status-select');
+      const teamdashboads = document.querySelectorAll('.team-member');
+      
+      // Função para aplicar ambos os filtros
+      function applyFilters() {
+        const selectedtag = tagSelect.value;
+        const selectedStatus = statusSelect.value;
+        
+        teamdashboads.forEach(member => {
+          const membertags = member.getAttribute('data-tags').split(' ');
+          const dashboadstatus = member.getAttribute('data-status');
+          
+          // Filtro por tags
+          let tagMatch = selectedtag === 'all' || membertags.includes(selectedtag);
+          
+          // Filtro por status
+          let statusMatch = selectedStatus === 'all' || dashboadstatus === selectedStatus;
+          
+          // Mostrar apenas se ambos os filtros forem satisfeitos
+          if (tagMatch && statusMatch) {
+            member.style.display = 'block';
+          } else {
+            member.style.display = 'none';
+          }
+        });
+      }
+      
+      // Event listeners para ambos os filtros
+      tagSelect.addEventListener('change', applyFilters);
+      statusSelect.addEventListener('change', applyFilters);
+      
+      // Aplicar filtros inicialmente
+      applyFilters();
+    });
+    </script>
+    
+    <style>
+ .card img {
+  max-width: 25%;
+  margin: auto;
+  padding: 0.5em;
+  border-radius: 0.7em;
+}
+    
+  /* Estilo para a data de saída dos membros inativos */
+  .departure-date {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    padding: 3px 8px;
+    background-color: rgba(108, 117, 125, 0.1);
+    border-radius: 4px;
+    display: inline-block;
+  }
+  
+  .inactive-member .departure-date {
+    background-color: rgba(108, 117, 125, 0.15);
+  }		
+  .form-select {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 2.25rem 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 0.375rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    appearance: none;
+  }
+
+  .form-select:focus {
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  }
+
+  .form-select:disabled {
+    background-color: #e9ecef;
+    opacity: 1;
+  }
+
+  /* Tamanhos diferentes como no Bootstrap */
+  .form-select-sm {
+    padding: 0.25rem 2rem 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    border-radius: 0.25rem;
+  }
+
+  .form-select-lg {
+    padding: 0.5rem 2.5rem 0.5rem 1rem;
+    font-size: 1.25rem;
+    border-radius: 0.5rem;
+  }
+
+  /* Estados de validação */
+  .form-select.is-valid {
+    border-color: #198754;
+  }
+
+  .form-select.is-valid:focus {
+    border-color: #198754;
+    box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
+  }
+
+  .form-select.is-invalid {
+    border-color: #dc3545;
+  }
+
+  .form-select.is-invalid:focus {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
+  }
+
+  @supports (-webkit-appearance: none) or (-moz-appearance: none) {
+    .form-select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+    }
+  }
+  
+  .status-counters {
+    font-size: 1.1rem;
+  }
+  
+  .status-counters .badge {
+    font-size: 1rem;
+    padding: 0.5rem 0.75rem;
+  }
+  
+  .status-filter,
+  .tag-filter {
+    margin-bottom: 1rem;
+  }
+  
+  .team-member {
+    transition: all 0.3s ease;
+  }
+  
+  .team-member[style*="display: none"] {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Estilo para membros inativos - mais escuro */
+  .inactive-member {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+  
+  .inactive-member .site-team-member-content {
+    opacity: 0.8;
+  }
+  
+  .inactive-member h3 {
+    color: #6c757d;
+  }
+  
+  .inactive-member .site-team-member-image img {
+    filter: grayscale(30%);
+  }
+  
+  /* Indicador de status ao lado do nome */
+  .status-indicator {
+    font-size: 0.8rem;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+  
+  .status-ativo .status-indicator {
+    color: #28a745;
+  }
+  
+  .status-inativo .status-indicator {
+    color: #6c757d;
+  }
+    </style>
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+
+{{ end }}
+
+

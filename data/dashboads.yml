@@ -1,0 +1,12 @@
+enable  : true
+title   : Dashboads desenvolvidos pelos membros do PET
+dashboads  :
+  - status : ATIVO
+    autor : "Anderson José de Souza Inácio"
+    descricao : "Dashboard para análise de características e estatísticas dos pokémons."
+    imagem : "images/dashboads/anderson_inacio_pokemon_analise2.png"
+    name  : "Análise de Pokémons"
+    tags: ["Teoria do Aprendizado Estatístico", "Inferência Estatística", "Métodos Computacionais", "Descritiva"]
+    url: https://anderson-inacio.shinyapps.io/Dashboard-Analise-Pokemons/
+    repositorio : https://github.com/nosrednawall/dashboard-analise-pokemons/
+    

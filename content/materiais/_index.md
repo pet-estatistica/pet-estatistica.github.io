@@ -44,12 +44,12 @@ materials:
     link: "/materiais/links_uteis"
     tags: ["websites", "recursos online"]
 
-  - title: "Artigos Fundamentais"
+  - title: "Dashboads"
     description: "Seleção de artigos científicos relevantes para a formação estatística"
     category: "Referências Técnicas"
-    date: "2025-04-20"
+    date: "2026-04-23"
     icon: "fa fa-book"
-    link: "/materiais/artigos"
+    link: "/materiais/dashboads"
     tags: ["publicações", "pesquisa"]
 
   - title: "Canal PET Estatística"
