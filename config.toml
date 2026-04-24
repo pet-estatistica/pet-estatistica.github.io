@@ -43,6 +43,26 @@ removePathAccents = true
     url     = "materiais"
     weight  = 8
   [[menu.nav]]
+    name    = "PROVAS E EXERCÍCIOS RESOLVIDOS"
+    url     = "/materiais/disciplinas/"
+    parent  = "MATERIAIS"
+    weight  = 1
+  [[menu.nav]]
+    name    = "DASHBOADS"
+    url     = "/materiais/dashboads/"
+    parent  = "MATERIAIS"
+    weight  = 2    
+  [[menu.nav]]
+    name    = "YOUTUBE"
+    url     = "https://www.youtube.com/c/PETEstat%C3%ADsticaUFPR"
+    parent  = "MATERIAIS"
+    weight  = 8      
+  [[menu.nav]]
+    name    = "LINKS UTEIS"
+    url     = "/materiais/links_uteis/"
+    parent  = "MATERIAIS"
+    weight  = 9    
+  [[menu.nav]]
     name    = "CONTATO"
     url     = "contato"
     weight  = 9

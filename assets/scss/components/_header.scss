@@ -1,78 +1,4 @@
-<nav class="navbar navbar-expand-lg site-navigation">
-  <div class="container">
-    <a class="navbar-brand" href="{{ .Site.BaseURL }}">
-      <img src="{{ .Site.Params.logo | absURL }}" alt="logo" />
-    </a>
-    
-    <button
-      class="navbar-toggler collapsed"
-      type="button"
-      data-toggle="collapse"
-      data-target="#sitenavbar"
-    >
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      
-    </button>
-
-    <div class="collapse navbar-collapse" id="sitenavbar">
-      <ul class="navbar-nav ml-auto main-nav">
-        {{ $currentPage := . }}
-        {{ $menu := .Site.Menus.nav }}
-        
-        {{ range $menu }}
-          {{ if .HasChildren }}
-            <!-- Item com submenu (dropdown) -->
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" 
-                 href="#" 
-                 id="navbarDropdown{{ .Identifier }}" 
-                 role="button" 
-                 data-toggle="dropdown" 
-                 aria-haspopup="true" 
-                 aria-expanded="false">
-                {{ .Name }}
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown{{ .Identifier }}">
-                {{ range .Children }}
-                  <a class="dropdown-item" href="{{ .URL | absURL }}">
-                    {{ .Name }}
-                  </a>
-                {{ end }}
-              </div>
-            </li>
-          {{ else }}
-            <!-- Verifica se é o último item (para o botão especial) -->
-            {{ $isLast := eq (add (index (where $menu "Name" .Name) 0).Weight 1) (len $menu) }}
-            {{ if $isLast }}
-              <li class="nav-item">
-                <a
-                  class="nav-link btn btn-sm btn-primary btn-sm-rounded"
-                  href="{{ .URL | absURL }}"
-                >
-                  <span class="btn-area">
-                    <span data-text="{{ .Name }}">
-                      {{ .Name }}
-                    </span>
-                  </span>
-                </a>
-              </li>
-            {{ else }}
-              <li class="nav-item">
-                <a class="nav-link" href="{{ .URL | absURL }}"
-                  >{{ .Name }}</a
-                >
-              </li>
-            {{ end }}
-          {{ end }}
-        {{ end }}
-      </ul>
-    </div>
-  </div>
-</nav>
-<style>
-  /* ==================== 
+/* ==================== 
    DROPDOWN MENU STYLES 
    ==================== */
 
@@ -254,10 +180,6 @@
    MOBILE RESPONSIVE
    ==================== */
 
-/* ==================== 
-   MOBILE RESPONSIVE - CORRIGIDO
-   ==================== */
-
 @media (max-width: 991.98px) {
   /* Mobile dropdown styles */
   .navbar .dropdown-menu {
@@ -273,7 +195,6 @@
     opacity: 1;
     visibility: visible;
     display: none;
-    text-align: center;
   }
   
   /* Mostra o dropdown no mobile quando ativo */
@@ -291,47 +212,26 @@
   
   /* Estilo dos itens no mobile */
   .navbar .dropdown-item {
-    padding: 0.6rem 1rem;
+    padding: 0.6rem 1rem 0.6rem 2rem;
     color: #666;
-    text-align: center;
   }
   
   .navbar .dropdown-item:hover {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    padding-left: 1rem; /* Mantém o padding original */
+    padding-left: 2.2rem;
   }
   
-  /* CORREÇÃO: Centraliza o texto do dropdown-toggle no mobile */
-  .navbar .dropdown-toggle {
-    display: block; /* Muda de flex para block */
-    text-align: center; /* Centraliza o texto */
-    position: relative;
-  }
-  
-  /* Seta do dropdown no mobile - posicionada à direita, mas texto centralizado */
+  /* Seta do dropdown no mobile */
   .navbar .dropdown-toggle::after {
-    position: absolute;
-    right: 0; /* Alinha a seta à direita */
-    top: 50%;
-    transform: translateY(-50%);
-    margin-left: 0;
-    float: none;
+    float: right;
+    margin-top: 0.5rem;
   }
   
-  /* Quando aberto, mantém a seta rotacionada */
-  .navbar .dropdown.show .dropdown-toggle::after {
-    transform: translateY(-50%) rotate(180deg);
-  }
-  
-  /* Ajuste para os itens normais do menu no mobile */
-  .navbar-nav .nav-link {
-    text-align: center;
-  }
-  
-  /* Ajuste para o botão especial no mobile */
-  .navbar-nav .btn-sm-rounded {
-    display: inline-block;
-    text-align: center;
+  /* Área clicável maior no mobile */
+  .navbar .dropdown-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
@@ -393,4 +293,3 @@
 .navbar-dark .dropdown-divider {
   background-color: #2a2a3e;
 }
-</style>
