@@ -84,21 +84,29 @@
           </div>
           
           <div class="disciplina-body">
-            <!-- Apostila se existir -->
-            {{ with $disciplina.apostila }}
-            <div class="apostila-section mb-4">
-              <div class="apostila-card">
-                <h4 class="apostila-titulo">📘 Apostila da Disciplina</h4>
-                <a href="{{ .link }}" class="apostila-link" target="_blank">
-                  {{ .descricao }} ({{ .tipo }})
-                </a>
-                <div class="apostila-autores">
-                  Desenvolvido por: {{ .autores }}
-                </div>
-              </div>
-            </div>
-            {{ end }}
+<!-- Apostila se existir -->
+{{ with $disciplina.apostilas }}
+<div class="apostila-section mb-4">
+    <h4 class="apostila-section-title">📚 Apostilas</h4>
 
+    {{ range $apostilaIndex, $apostila := . }}
+    <div class="apostila-card">
+        <div class="apostila-header">
+            <span class="apostila-badge">{{ $apostila.tipo }}</span>
+            <span class="apostila-autores">
+                👥 {{ $apostila.autores }}
+            </span>
+        </div>
+
+        <h5 class="apostila-title">
+            <a href="{{ $apostila.link }}" class="apostila-link" target="_blank">
+                {{ $apostila.apostila }}
+            </a>
+        </h5>
+    </div>
+    {{ end }}
+</div>
+{{ end }}
             <!-- Secção do material de Apoio -->
             {{ with $disciplina.material_apoio }}
             <div class="material-apoio-section mb-4">
@@ -161,8 +169,7 @@
             <div class="ano-card" data-ano="{{ $ano.ano }}" data-semestre="{{ $ano.semestre }}">
               <div class="ano-header">
                 <h3 class="ano-titulo">
-                  {{ $ano.ano }} • {{ if eq $ano.semestre "1" }}1º Semestre{{ else }}2º Semestre{{ end }}
-                </h3>
+                  {{ $ano.ano }} • {{ if eq $ano.semestre "1" }}1º Semestre{{ else }}2º Semestre{{ end }} </h3>
                 {{ with $ano.professores }}
                 <div class="professores">{{ . }}</div>
                 {{ end }}

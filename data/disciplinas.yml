@@ -2,6 +2,19 @@ disciplinas:
   - codigo: "CE301"
     nome: "Estatística Básica"
     emoji: "📊"
+    apostilas:
+        - apostila: "2007 Estatística II"
+          link: "/pdfs/CE301/apostilas/2007-apostila-estatistica-II.pdf"
+          tipo: "PDF"
+          autores: "Anjos"
+        - apostila: "2008 Apostila de Estatística aplicada a Engenharia"
+          link: "/pdfs/CE301/apostilas/2008-apostila-estatistica-engenharia.pdf"
+          tipo: "PDF"
+          autores: "SONIA ISOLDI MARTY GAMA MÜLLER"
+        - apostila: "2014 Estatística II"
+          link: "/pdfs/CE301/apostilas/2014-apostila-estatistica-II.pdf"
+          tipo: "PDF"
+          autores: "GIOVANNI LEOPOLDO ROZZA"
     anos:
       - ano: 2025
         professores: "Dra. Amanda Merian Freitas Mendes, Dra. Sílvia Emiko Shimakura, Dr. Paulo Justiniano Ribeiro Junior"
