@@ -41,5 +41,3 @@ layout: "materiais"
 - [FiveThirtyEight](https://data.fivethirtyeight.com/) - Dados de pesquisas e estatísticas esportivas
 - [Google Dataset Search](https://datasetsearch.research.google.com/) - Buscador de conjuntos de dados
 - [Kaggle](https://www.kaggle.com/) - Plataforma para competições de ciência de dados
-
-[Voltar para Materiais](/materiais/)

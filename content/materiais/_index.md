@@ -57,7 +57,7 @@ materials:
     category: "Multimídia"
     date: "2025-04-20"
     icon: "fa fa-play"
-    link: "https://www.youtube.com/c/PETEstat%C3%ADsticaUFPR"
+    link: "/materiais/videos"
     external: true
     tags: ["vídeos", "youtube"]
 ---

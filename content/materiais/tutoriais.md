@@ -6,4 +6,3 @@ layout: "materiais"
 
 em desenvolvimento.
 
-[Voltar para Materiais](/materiais/)

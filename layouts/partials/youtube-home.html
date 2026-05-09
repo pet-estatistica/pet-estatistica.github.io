@@ -1,0 +1,201 @@
+{{ $channelId := .Site.Params.YouTubeAPI.channelId }}
+{{ $apiKey := .Site.Params.YouTubeAPI.apiKey }}
+{{ $maxResults := 3 }}
+
+{{ if not $channelId }}
+  <p class="error">⚠️ Erro: Channel ID não configurado em params.toml</p>
+{{ else if not $apiKey }}
+  <p class="error">⚠️ Erro: API Key não configurada em params.toml</p>
+{{ else }}
+  {{ $apiUrl := printf "https://www.googleapis.com/youtube/v3/search?key=%s&channelId=%s&part=snippet,id&order=date&maxResults=%d&type=video" $apiKey $channelId $maxResults }}
+  
+  {{ $data := getJSON $apiUrl }}
+  
+  {{ if $data.items }}
+    <div class="youtube-gallery">
+      <h2 class="gallery-title"> Nossos Últimos Vídeos</h2>
+      <div class="videos-grid">
+        {{ range $data.items }}
+          {{ $videoId := .id.videoId }}
+          {{ $title := .snippet.title }}
+          {{ $description := .snippet.description | truncate 120 }}
+          {{ $publishedAt := .snippet.publishedAt | time.Format "02/01/2006" }}
+          {{ $thumbnail := .snippet.thumbnails.medium.url }}
+          
+          <div class="video-card">
+            <div class="video-thumbnail" data-video-id="{{ $videoId }}" data-video-title="{{ $title }}">
+              <img src="{{ $thumbnail }}" alt="{{ $title }}" loading="lazy">
+              <div class="play-button">▶</div>
+            </div>
+            <div class="video-info">
+              <h3 class="video-title">
+                <a href="#" class="video-link" data-video-id="{{ $videoId }}" data-video-title="{{ $title }}">
+                  {{ $title }}
+                </a>
+              </h3>
+              <p class="video-description">{{ $description }}</p>
+              <div class="video-meta">
+                <span class="video-date">{{ $publishedAt }}</span>
+                <button class="watch-btn" data-video-id="{{ $videoId }}" data-video-title="{{ $title }}">
+                  Assistir
+                </button>
+              </div>
+            </div>
+          </div>
+        {{ end }}
+      </div>
+    </div>
+
+      <!-- Modal para assistir vídeo -->
+    <div id="videoModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3 id="modalTitle"></h3>
+        <div class="video-container">
+          <div id="playerFrame"></div>
+        </div>
+        <div class="video-actions">
+          <button id="watchOnYouTubeBtn" class="youtube-btn">
+            Abrir no YouTube
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+  {{ else }}
+    <p>⚠️ Nenhum vídeo encontrado no canal.</p>
+  {{ end }}
+{{ end }}
+
+<script>
+  // Aguardar o DOM carregar completamente
+  document.addEventListener('DOMContentLoaded', function() {
+    // Modal functionality for watching videos
+    const modal = document.getElementById('videoModal');
+    const closeBtn = document.querySelector('#videoModal .close');
+    const modalTitle = document.getElementById('modalTitle');
+    const playerFrame = document.getElementById('playerFrame');
+    const watchOnYouTubeBtn = document.getElementById('watchOnYouTubeBtn');
+    const copyEmbedBtn = document.getElementById('copyEmbedBtn');
+    const embedCodeContainer = document.getElementById('embedCodeContainer');
+    const embedCodePre = document.getElementById('embedCode');
+    const copyCodeBtn = document.getElementById('copyCodeBtn');
+    
+    let currentVideoId = '';
+    let currentVideoTitle = '';
+    
+    // Verificar se os elementos existem
+    if (!modal) {
+      console.error('Modal não encontrado');
+      return;
+    }
+    
+    // Function to load video in modal
+    function loadVideo(videoId, videoTitle) {
+      currentVideoId = videoId;
+      currentVideoTitle = videoTitle;
+      
+      modalTitle.textContent = videoTitle;
+      
+      // Create YouTube iframe embed with player controls
+      const embedHtml = `<iframe src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&hd=1" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                         </iframe>`;
+      
+      playerFrame.innerHTML = embedHtml;
+      modal.style.display = 'block';
+      document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+      
+      // Hide embed code container initially
+      if (embedCodeContainer) {
+        embedCodeContainer.style.display = 'none';
+      }
+    }
+    
+    // Function to generate embed code
+    function generateEmbedCode(videoId, videoTitle) {
+      return `<iframe width="560" height="315" src="https://www.youtube.com/embed/${videoId}" title="${videoTitle}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+    }
+    
+    // Close modal function
+    function closeModal() {
+      modal.style.display = 'none';
+      playerFrame.innerHTML = ''; // Stop video when closing
+      if (embedCodeContainer) {
+        embedCodeContainer.style.display = 'none';
+      }
+      document.body.style.overflow = 'auto'; // Restore scrolling
+      currentVideoId = '';
+      currentVideoTitle = '';
+    }
+    
+    // Botão close - versão corrigida
+    if (closeBtn) {
+      closeBtn.onclick = function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log('Fechando modal');
+        closeModal();
+      };
+    } else {
+      console.error('Botão close não encontrado');
+    }
+    
+    // Fechar ao clicar fora do modal
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        closeModal();
+      }
+    }
+    
+    // Fechar com tecla ESC
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape' && modal.style.display === 'block') {
+        closeModal();
+      }
+    });
+    
+    // Add click event to thumbnails
+    const thumbnails = document.querySelectorAll('.video-thumbnail');
+    thumbnails.forEach(thumbnail => {
+      thumbnail.addEventListener('click', () => {
+        const videoId = thumbnail.getAttribute('data-video-id');
+        const videoTitle = thumbnail.getAttribute('data-video-title');
+        loadVideo(videoId, videoTitle);
+      });
+    });
+    
+    // Add click event to video links
+    const videoLinks = document.querySelectorAll('.video-link');
+    videoLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const videoId = link.getAttribute('data-video-id');
+        const videoTitle = link.getAttribute('data-video-title');
+        loadVideo(videoId, videoTitle);
+      });
+    });
+    
+    // Add click event to watch buttons
+    const watchBtns = document.querySelectorAll('.watch-btn');
+    watchBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const videoId = btn.getAttribute('data-video-id');
+        const videoTitle = btn.getAttribute('data-video-title');
+        loadVideo(videoId, videoTitle);
+      });
+    });
+    
+    // Watch on YouTube button
+    if (watchOnYouTubeBtn) {
+      watchOnYouTubeBtn.addEventListener('click', () => {
+        if (currentVideoId) {
+          window.open(`https://www.youtube.com/watch?v=${currentVideoId}`, '_blank');
+        }
+      });
+    }
+  });
+</script>

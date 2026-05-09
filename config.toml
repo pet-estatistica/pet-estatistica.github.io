@@ -51,12 +51,17 @@ removePathAccents = true
     name    = "DASHBOADS"
     url     = "/materiais/dashboads/"
     parent  = "MATERIAIS"
-    weight  = 2    
+    weight  = 8    
+  #[[menu.nav]]
+  #  name    = "YOUTUBE"
+  #  url     = "https://www.youtube.com/c/PETEstat%C3%ADsticaUFPR"
+  #  parent  = "MATERIAIS"
+  #  weight  = 8      
   [[menu.nav]]
-    name    = "YOUTUBE"
-    url     = "https://www.youtube.com/c/PETEstat%C3%ADsticaUFPR"
+    name    = "VÍDEOS"
+    url     = "/materiais/videos/"
     parent  = "MATERIAIS"
-    weight  = 8      
+    weight  = 2       
   [[menu.nav]]
     name    = "LINKS UTEIS"
     url     = "/materiais/links_uteis/"
@@ -121,7 +126,7 @@ removePathAccents = true
   [params.YouTubeAPI]
     channelId = "UCPFo2Z9zZeB-Xgg8sm9sBKg"        # ID do canal PET-Estatística UFPR
     apiKey = "AIzaSyD1aqwWNLbpcIZDeILwA5Pg2tUyxNjXuzk"   # Obter no Google Cloud Console
-    maxResults = 3                                      # Número de vídeos a exibir
+    maxResults = 12                                      # Número de vídeos a exibir
     cacheTimeout = 3600                                  # Cache em segundos (1 hora)
 
   
