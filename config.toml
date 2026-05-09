@@ -117,6 +117,14 @@ removePathAccents = true
   fabform  = "https://fabform.io/f/USAg2Jl"
   tokenInstagram = "IGAANtnh5nLCdBZAGFYMy1aZAzF6S1otRVZASckdWbktMRDU4ZAVpueDY0M3VxT1FVR0NuZATQxMmxMNTNhcE1aRmQyZADBFUHQzMjlncWhjbHZAmZA1YzTUl3Ml9zQ0NSWktwaTNoU3ZApeDNZAbEhDMldGVUFNR0FJTWNvTnhMQmh3TmhNSQZDZD"
   
+  # Parâmetros para API do YouTube
+  [params.YouTubeAPI]
+    channelId = "UCPFo2Z9zZeB-Xgg8sm9sBKg"        # ID do canal PET-Estatística UFPR
+    apiKey = "AIzaSyD1aqwWNLbpcIZDeILwA5Pg2tUyxNjXuzk"   # Obter no Google Cloud Console
+    maxResults = 3                                      # Número de vídeos a exibir
+    cacheTimeout = 3600                                  # Cache em segundos (1 hora)
+
+  
   # Banner Section
   [params.banner]
     enable                = true

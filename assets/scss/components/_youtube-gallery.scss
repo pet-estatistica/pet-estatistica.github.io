@@ -1,0 +1,278 @@
+  .youtube-gallery {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  
+  .gallery-title {
+    text-align: center;
+    color: #ff0000;
+    margin-bottom: 30px;
+    font-size: 2em;
+  }
+  
+  .videos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 25px;
+  }
+  
+  .video-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .video-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+  }
+  
+  .video-thumbnail {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .video-thumbnail img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background: rgba(255,0,0,0.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .video-thumbnail:hover .play-button {
+    opacity: 1;
+  }
+  
+  .video-info {
+    padding: 15px;
+  }
+  
+  .video-title {
+    margin: 0 0 10px 0;
+    font-size: 1.1em;
+    line-height: 1.4;
+  }
+  
+  .video-title a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .video-title a:hover {
+    color: #ff0000;
+  }
+  
+  .video-description {
+    color: #666;
+    font-size: 0.9em;
+    line-height: 1.5;
+    margin: 10px 0;
+  }
+  
+  .video-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    font-size: 0.85em;
+  }
+  
+  .video-date {
+    color: #999;
+  }
+  
+  .watch-btn {
+    background: #ff0000;
+    color: white;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.85em;
+    transition: background 0.2s;
+  }
+  
+  .watch-btn:hover {
+    background: #cc0000;
+    transform: scale(1.05);
+  }
+  
+  /* Modal styles */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.85);
+  }
+  
+  .modal-content {
+    background-color: #1a1a1a;
+    margin: 2% auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 900px;
+    border-radius: 12px;
+    max-height: 90%;
+    overflow-y: auto;
+    position: relative;
+  }
+  
+  .modal-content h3 {
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-right: 30px;
+  }
+  
+  .close {
+    color: #aaa;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    z-index: 1001;
+    background: none;
+    border: none;
+    line-height: 1;
+  }
+  
+  .close:hover {
+    color: #fff;
+  }
+  
+  .video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #000;
+  }
+  
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
+  .video-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: center;
+  }
+  
+  .youtube-btn, .embed-btn-modal {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s;
+  }
+  
+  .youtube-btn {
+    background: #ff0000;
+    color: white;
+  }
+  
+  .youtube-btn:hover {
+    background: #cc0000;
+    transform: translateY(-2px);
+  }
+  
+  .embed-btn-modal {
+    background: #4CAF50;
+    color: white;
+  }
+  
+  .embed-btn-modal:hover {
+    background: #45a049;
+    transform: translateY(-2px);
+  }
+  
+  .embed-code-container {
+    background: #2d2d2d;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    position: relative;
+  }
+  
+  #embedCode {
+    background: #1e1e1e;
+    color: #d4d4d4;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+    font-size: 0.85em;
+    margin: 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: 'Courier New', monospace;
+  }
+  
+  .copy-btn {
+    margin-top: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .copy-btn:hover {
+    background: #0056b3;
+  }
+  
+  @media (max-width: 768px) {
+    .videos-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .modal-content {
+      width: 95%;
+      margin: 5% auto;
+      padding: 15px;
+    }
+    
+    .video-actions {
+      flex-direction: column;
+    }
+    
+    .youtube-btn, .embed-btn-modal {
+      width: 100%;
+    }
+  }
