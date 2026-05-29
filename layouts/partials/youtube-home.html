@@ -12,8 +12,14 @@
   {{ $data := getJSON $apiUrl }}
   
   {{ if $data.items }}
+
+  
     <div class="youtube-gallery">
-      <h2 class="gallery-title"> Nossos Últimos Vídeos</h2>
+            <!-- Título e subtítulo -->
+    <div class="mb-4">
+      <h3 class="mb-2">Nossos Últimos Vídeos</h3>
+      <p class="text-muted">Os conteúdos mais recentes postados no youtube do pet</p>
+    </div>
       <div class="videos-grid">
         {{ range $data.items }}
           {{ $videoId := .id.videoId }}

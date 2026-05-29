@@ -167,3 +167,8 @@ function getInstagramFeed() {
   // Call the function to fetch and display the Instagram feed
   getInstagramFeed();
 </script>
+
+<script>
+  console.log('Token via param:', '{{ .Site.Params.tokenInstagram }}');
+  console.log('Comprimento do token:', '{{ .Site.Params.tokenInstagram }}'.length);
+</script>

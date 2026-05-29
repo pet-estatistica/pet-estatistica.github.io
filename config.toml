@@ -110,7 +110,6 @@ removePathAccents = true
 
 # Site Params
 [params]
-
   logo = "images/logo-pet.png"
   logo_footer = "images/logo-pet-tbg.png"
   favicon_icon = "images/favicon.ico"
@@ -124,8 +123,8 @@ removePathAccents = true
   # googleAnalitycsID = "G-4QGDQVC922"
   # We're using formspree.io for form handling, paste your formspree url below
   fabform  = "https://fabform.io/f/USAg2Jl"
-  tokenInstagram = "IGAANtnh5nLCdBZAGFYMy1aZAzF6S1otRVZASckdWbktMRDU4ZAVpueDY0M3VxT1FVR0NuZATQxMmxMNTNhcE1aRmQyZADBFUHQzMjlncWhjbHZAmZA1YzTUl3Ml9zQ0NSWktwaTNoU3ZApeDNZAbEhDMldGVUFNR0FJTWNvTnhMQmh3TmhNSQZDZD"
-  
+  tokenInstagram = 'IGAANtnh5nLCdBZAGFYMy1aZAzF6S1otRVZASckdWbktMRDU4ZAVpueDY0M3VxT1FVR0NuZATQxMmxMNTNhcE1aRmQyZADBFUHQzMjlncWhjbHZAmZA1YzTUl3Ml9zQ0NSWktwaTNoU3ZApeDNZAbEhDMldGVUFNR0FJTWNvTnhMQmh3TmhNSQZDZD'
+
   # Parâmetros para API do YouTube
   [params.YouTubeAPI]
     channelId = "UCPFo2Z9zZeB-Xgg8sm9sBKg"        # ID do canal PET-Estatística UFPR

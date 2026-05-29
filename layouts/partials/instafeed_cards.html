@@ -1,0 +1,360 @@
+
+{{ $maxCards := 3 }}
+{{ $title := "Últimas do Instagram" }}
+{{ $showViewAllLink := true }}
+{{ $token := $.Site.Params.tokenInstagram }}
+{{ $id := "instagram-feed" }}  <!-- Adicione um ID único -->
+
+<section class="instagram-section py-5">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
+      <div>
+        <h3 class="mb-0">{{ $title }}</h3>
+        <p class="text-muted mt-2">Acompanhe nossas atividades e novidades</p>
+      </div>
+      {{ if $showViewAllLink }}
+      <a href="https://www.instagram.com/petestatistica.ufpr/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary">
+        Seguir no Instagram →
+      </a>
+      {{ end }}
+    </div>
+    
+    <div id="{{ $id }}" class="row"></div>
+  </div>
+      <!-- Botão centralizado na parte inferior - SEMPRE VISÍVEL -->
+    <div class="text-center mt-5">
+      <a href="/redessociais" class="btn btn-primary btn-lg px-5">
+        📚 Ver todos os posts →
+      </a>
+    </div>
+</section>
+
+<style>
+  .instagram-section {
+    background-color: white;
+  }
+  
+  .instagram-loading {
+    text-align: center;
+    padding: 3rem;
+  }
+  
+  .instagram-loading .spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3897f0;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 1rem;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .site-blog-post {
+    margin-bottom: 1.5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+  }
+  
+  .site-blog-post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  }
+  
+  .site-blog-post-thumb {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background-color: #f0f0f0;
+  }
+  
+  .site-blog-post-content {
+    position: static;
+    margin-top: 0;
+    color: #000;
+    text-align: left;
+    font-size: 14px;
+    padding: 1rem;
+    background: white;
+    flex-grow: 1;
+  }
+  
+  .instagram-view-link {
+    display: inline-block;
+    margin-top: 0.75rem;
+    font-size: 14px;
+    color: #3897f0;
+    font-weight: 550;
+    text-decoration: none;
+  }
+  
+  .instagram-view-link:hover {
+    text-decoration: underline;
+  }
+  
+  .site-blog-post-thumb img,
+  .site-blog-post-thumb video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+  
+  .site-blog-post-thumb video {
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+  }
+  
+  .site-blog-post-thumb video:hover {
+    opacity: 1;
+  }
+  
+  .site-blog-post-thumb .instagram-icon {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
+  
+  .site-blog-post-thumb .instagram-icon img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .post-caption {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: #666;
+    margin-bottom: 0.5rem;
+  }
+  
+  .post-date {
+    font-size: 0.7rem;
+    color: #999;
+    margin-top: 0.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    .site-blog-post-content {
+      padding: 0.75rem;
+    }
+    
+    .post-caption {
+      font-size: 0.8rem;
+    }
+  }
+</style>
+
+<script>
+  // Usar uma única função anônima para evitar conflitos
+  (function() {
+    // Verificar se já foi executado para este ID
+    const containerId = "{{ $id }}";
+    const executionFlag = `instagram_feed_loaded_${containerId}`;
+    
+    if (window[executionFlag]) {
+      console.log(`Instagram feed ${containerId} já carregado, ignorando...`);
+      return;
+    }
+    
+    // Marcar como executado
+    window[executionFlag] = true;
+    
+    // Configurações
+    const maxCards = {{ $maxCards }};
+    const accessToken = "{{ $token | safeJS }}";
+    
+    console.log(`[${containerId}] Token recebido:`, accessToken ? `✅ Sim (${accessToken.length} chars)` : '❌ Não');
+    
+    function formatDate(timestamp) {
+      const date = new Date(timestamp);
+      const now = new Date();
+      const diffTime = Math.abs(now - date);
+      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+      
+      if (diffDays === 1) return 'Ontem';
+      if (diffDays < 7) return `${diffDays} dias atrás`;
+      if (diffDays < 30) return `${Math.floor(diffDays / 7)} semanas atrás`;
+      return date.toLocaleDateString('pt-BR');
+    }
+    
+    function truncateText(text, maxLength = 100) {
+      if (!text) return '';
+      if (text.length <= maxLength) return text;
+      return text.substring(0, maxLength) + '...';
+    }
+    
+    function getInstagramFeed() {
+      const feedContainer = document.getElementById(containerId);
+      
+      if (!feedContainer) {
+        console.error(`Elemento ${containerId} não encontrado`);
+        return;
+      }
+      
+      // Verificar se já tem conteúdo (evitar recarregar)
+      if (feedContainer.hasAttribute('data-loaded')) {
+        console.log(`Container ${containerId} já carregado, abortando`);
+        return;
+      }
+      
+      if (!accessToken) {
+        feedContainer.innerHTML = `
+          <div class="col-12 text-center py-5">
+            <div class="alert alert-warning">
+              <strong>⚠️ Token do Instagram não configurado</strong><br>
+              <small>Configure o token no arquivo de configuração do Hugo</small>
+            </div>
+          </div>
+        `;
+        feedContainer.setAttribute('data-loaded', 'error');
+        return;
+      }
+      
+      feedContainer.innerHTML = `
+        <div class="col-12 text-center py-5">
+          <div class="instagram-loading">
+            <div class="spinner"></div>
+            <p>Carregando posts do Instagram...</p>
+          </div>
+        </div>
+      `;
+      
+      const url = `https://graph.instagram.com/v12.0/me/media?fields=id,caption,media_type,media_url,permalink,timestamp&limit=${maxCards}&access_token=${accessToken}`;
+      
+      fetch(url)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+          }
+          return response.json();
+        })
+        .then(data => {
+          if (data.error) {
+            throw new Error(`${data.error.code}: ${data.error.message}`);
+          }
+          
+          if (!data.data || data.data.length === 0) {
+            feedContainer.innerHTML = `
+              <div class="col-12 text-center py-5">
+                <div class="empty-state">
+                  <span class="display-4">📷</span>
+                  <h3 class="mt-3">Nenhum post encontrado</h3>
+                  <p class="text-muted">Siga nosso Instagram para acompanhar as novidades!</p>
+                </div>
+              </div>
+            `;
+            feedContainer.setAttribute('data-loaded', 'empty');
+            return;
+          }
+          
+          feedContainer.innerHTML = '';
+          
+          data.data.forEach((post, index) => {
+            const postElement = document.createElement('div');
+            postElement.classList.add('col-lg-4', 'col-md-6', 'mb-4');
+            
+            const articleElement = document.createElement('article');
+            articleElement.classList.add('site-blog-post');
+            
+            const mediaElement = document.createElement('div');
+            mediaElement.classList.add('site-blog-post-thumb');
+            
+            if (post.media_type === "IMAGE" || post.media_type === "CAROUSEL_ALBUM") {
+              const imgElement = document.createElement('img');
+              imgElement.src = post.media_url;
+              imgElement.alt = post.caption || 'Instagram post';
+              imgElement.loading = 'lazy';
+              mediaElement.appendChild(imgElement);
+            } else if (post.media_type === "VIDEO") {
+              const videoElement = document.createElement('video');
+              videoElement.src = post.media_url;
+              videoElement.style.maxWidth = "100%";
+              videoElement.controls = false;
+              videoElement.muted = true;
+              
+              videoElement.addEventListener('mouseenter', () => {
+                videoElement.controls = true;
+              });
+              
+              videoElement.addEventListener('mouseleave', () => {
+                videoElement.controls = false;
+              });
+              
+              mediaElement.appendChild(videoElement);
+            }
+            
+            const iconeInstagramElement = document.createElement('div');
+
+            
+            const contentElement = document.createElement('div');
+            contentElement.classList.add('site-blog-post-content');
+            
+            const captionElement = document.createElement('div');
+            captionElement.classList.add('post-caption');
+            captionElement.textContent = truncateText(post.caption, 120);
+            contentElement.appendChild(captionElement);
+            
+            const dateElement = document.createElement('div');
+            dateElement.classList.add('post-date');
+            dateElement.innerHTML = `📅 ${formatDate(post.timestamp)}`;
+            contentElement.appendChild(dateElement);
+            
+            const viewLink = document.createElement('a');
+            viewLink.classList.add('instagram-view-link');
+            viewLink.href = post.permalink;
+            viewLink.target = '_blank';
+            viewLink.rel = 'noopener noreferrer';
+            viewLink.innerHTML = 'Ver no Instagram →';
+            contentElement.appendChild(viewLink);
+            
+            articleElement.appendChild(mediaElement);
+            articleElement.appendChild(contentElement);
+            postElement.appendChild(articleElement);
+            feedContainer.appendChild(postElement);
+          });
+          
+          feedContainer.setAttribute('data-loaded', 'success');
+        })
+        .catch(error => {
+          console.error('Erro detalhado:', error);
+          feedContainer.innerHTML = `
+            <div class="col-12 text-center py-5">
+              <div class="alert alert-danger">
+                <strong>⚠️ Erro ao carregar posts do Instagram</strong><br>
+                ${error.message}<br>
+                <small>Verifique se o token é válido e se a conta é do tipo Business ou Creator</small>
+              </div>
+            </div>
+          `;
+          feedContainer.setAttribute('data-loaded', 'error');
+        });
+    }
+    
+    // Executar apenas uma vez quando o DOM estiver pronto
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', getInstagramFeed);
+    } else {
+      getInstagramFeed();
+    }
+  })();
+</script>
