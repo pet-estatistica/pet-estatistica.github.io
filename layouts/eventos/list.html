@@ -1,0 +1,353 @@
+{{ define "main" }}
+<section class="eventos-section py-5">
+  <div class="container">
+    <h1 class="text-center mb-5">{{ .Title }}</h1>
+    
+    <!-- Filtros -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="filter-container">
+          <!-- Filtro por Ano -->
+          <div class="filter-group">
+            <label for="year-filter" class="filter-label">Filtrar por Ano:</label>
+            <select id="year-filter" class="form-select filter-select">
+              <option value="all">Todos os Anos</option>
+              {{ $years := slice }}
+              {{ range .Pages }}
+                {{ $dateParts := split .Params.prazo "/" }}
+                {{ $year := index $dateParts 2 }}
+                {{ $years = $years | append $year }}
+              {{ end }}
+              {{ range ($years | uniq | sort) }}
+                {{ $currentYear := . }}
+                <option value="year-{{ $currentYear }}">{{ $currentYear }}</option>
+              {{ end }}
+            </select>
+          </div>
+          
+          <!-- Filtro por Status -->
+          <div class="filter-group">
+            <label for="tag-filter" class="filter-label">Filtrar por Status:</label>
+            <select id="tag-filter" class="form-select filter-select">
+              <option value="all">Todos os Status</option>
+              <option value="encerrado">Encerrados</option>
+              <option value="ativo">Ativos</option>
+            </select>
+          </div>
+          
+          <button id="reset-filters" class="btn btn-outline-secondary">Limpar Filtros</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Lista de eventos -->
+    <div class="eventos-list">
+      {{ range .Pages }}
+        {{ $dateParts := split .Params.prazo "/" }}
+        {{ $year := index $dateParts 2 }}
+        {{ $month := index $dateParts 1 }}
+        {{ $day := index $dateParts 0 }}
+        
+        {{ $isEncerrado := in .Title "Encerrado" }}
+        
+          <div class="evento-item mb-12" 
+               data-year="year-{{ $year }}" 
+               data-status="{{ if $isEncerrado }}encerrado{{ else }}ativo{{ end }}">
+            <article class="evento-card {{ if $isEncerrado }}evento-encerrado{{ end }}">
+              <div class="card shadow-sm w-100 h-100 {{ if $isEncerrado }}bg-light text-muted{{ end }}">
+                <!-- Imagem no topo do card (se existir) -->
+                {{ if .Params.imagem }}
+                <div class="card-img-top-wrapper">
+                  <img src="{{ .Params.imagem }}" class="card-img-top {{ if $isEncerrado }}img-encerrado{{ end }}" alt="{{ .Title }}">
+                </div>
+                {{ end }}
+                <!-- Conteúdo do card -->
+                <div class="card-body d-flex flex-column">
+                  <h2 class="card-title">
+                    <a href="{{ .RelPermalink }}" class="text-decoration-none {{ if $isEncerrado }}text-secondary{{ end }}">
+                      {{ .Title }}
+                    </a>
+                  </h2>
+                  <p class="card-text">
+                    <strong>{{ if $isEncerrado }}Inscrições encerradas em:{{ else }}Prazo de inscrição até:{{ end }}</strong> 
+                    {{ .Params.inscricoes }}
+                  </p>
+                  <p class="card-text">
+                    <strong>{{ if $isEncerrado }}Encerrado em:{{ else }}Finaliza em:{{ end }}</strong> 
+                    {{ .Params.prazo }}
+                  </p>
+                  <p class="card-text flex-grow-1">{{ .Summary | truncate 200 }}</p>
+                  <div class="mt-3">
+                    <a href="{{ .RelPermalink }}" class="btn {{ if $isEncerrado }}btn-outline-secondary{{ else }}btn-primary{{ end }}">
+                      Ver Detalhes
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+      {{ end }}
+    </div>
+    
+    <!-- Mensagem quando não há resultados -->
+    <div id="no-results" class="text-center py-5" style="display: none;">
+      <div class="alert alert-info">
+        Nenhum evento seletivo encontrado com os filtros selecionados.
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .form-select {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 2.25rem 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 0.375rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    appearance: none;
+  }
+
+  .form-select:focus {
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  }
+
+  .form-select:disabled {
+    background-color: #e9ecef;
+    opacity: 1;
+  }
+
+  /* Tamanhos diferentes como no Bootstrap */
+  .form-select-sm {
+    padding: 0.25rem 2rem 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    border-radius: 0.25rem;
+  }
+
+  .form-select-lg {
+    padding: 0.5rem 2.5rem 0.5rem 1rem;
+    font-size: 1.25rem;
+    border-radius: 0.5rem;
+  }
+
+  /* Estados de validação */
+  .form-select.is-valid {
+    border-color: #198754;
+  }
+
+  .form-select.is-valid:focus {
+    border-color: #198754;
+    box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
+  }
+
+  .form-select.is-invalid {
+    border-color: #dc3545;
+  }
+
+  .form-select.is-invalid:focus {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
+  }
+
+  /* Para navegadores que não suportam appearance: none */
+  @supports (-webkit-appearance: none) or (-moz-appearance: none) {
+    .form-select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+    }
+  }
+
+  .filter-container {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-items: flex-end;
+  }
+  
+  .filter-group {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .filter-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+  
+  .filter-select {
+    width: 100%;
+  }
+  
+  /* Estilo para os cards com imagem no topo */
+  .evento-item {
+    margin-bottom: 2rem;
+  }
+  
+  .evento-card {
+    transition: all 0.3s ease;
+    height: 100%;
+  }
+  
+  .evento-card .card {
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  .evento-card:hover .card {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  }
+  
+  /* Wrapper para a imagem do topo */
+  .card-img-top-wrapper {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background-color: #f0f0f0;
+  }
+  
+  .card-img-top {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .evento-card:hover .card-img-top {
+    transform: scale(1.05);
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .card-title a {
+    color: inherit;
+    transition: color 0.2s;
+  }
+  
+  .card-title a:hover {
+    color: var(--bs-primary);
+  }
+  
+  .card-text {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Estilo para eventos encerrados */
+  .evento-encerrado {
+    opacity: 0.85;
+  }
+  
+  .evento-encerrado .card {
+    background-color: #f8f9fa;
+    border-color: #dee2e6;
+  }
+  
+  .evento-encerrado .img-encerrado {
+    filter: grayscale(70%);
+    opacity: 0.7;
+  }
+  
+  .evento-encerrado .btn-outline-secondary {
+    border-color: #6c757d;
+    color: #6c757d;
+  }
+  
+  .evento-encerrado .btn-outline-secondary:hover {
+    background-color: #6c757d;
+    color: white;
+  }
+  
+  /* Layout responsivo em grid */
+  .eventos-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    .filter-container {
+      flex-direction: column;
+    }
+    
+    .filter-group {
+      width: 100%;
+    }
+    
+    .eventos-list {
+      grid-template-columns: 1fr;
+    }
+    
+    .card-img-top-wrapper {
+      height: 180px;
+    }
+  }
+</style>
+
+<script>
+  // Script para filtrar os eventos
+  document.addEventListener('DOMContentLoaded', function() {
+    const yearFilter = document.getElementById('year-filter');
+    const tagFilter = document.getElementById('tag-filter');
+    const resetButton = document.getElementById('reset-filters');
+    const eventoItems = document.querySelectorAll('.evento-item');
+    const noResults = document.getElementById('no-results');
+    
+    function filtereventos() {
+      const selectedYear = yearFilter.value;
+      const selectedTag = tagFilter.value;
+      let visibleCount = 0;
+      
+      eventoItems.forEach(item => {
+        const yearMatch = selectedYear === 'all' || item.getAttribute('data-year') === selectedYear;
+        const tagMatch = selectedTag === 'all' || item.getAttribute('data-status') === selectedTag;
+        
+        if (yearMatch && tagMatch) {
+          item.style.display = 'block';
+          visibleCount++;
+        } else {
+          item.style.display = 'none';
+        }
+      });
+      
+      // Mostrar ou ocultar mensagem de nenhum resultado
+      if (visibleCount === 0) {
+        noResults.style.display = 'block';
+      } else {
+        noResults.style.display = 'none';
+      }
+    }
+    
+    yearFilter.addEventListener('change', filtereventos);
+    tagFilter.addEventListener('change', filtereventos);
+    
+    resetButton.addEventListener('click', function() {
+      yearFilter.value = 'all';
+      tagFilter.value = 'all';
+      filtereventos();
+    });
+    
+    // Filtrar inicialmente se houver valores selecionados
+    filtereventos();
+  });
+</script>
+
+{{ end }}

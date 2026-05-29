@@ -1,0 +1,80 @@
+{{ define "main" }}
+  {{ $dataParts := split .Params.prazo "/" }}
+  {{ $dia := index $dataParts 0 }}
+  {{ $mes := index $dataParts 1 }}
+  {{ $ano := index $dataParts 2 }}
+  {{ $prazoStr := printf "%s-%s-%s" $ano $mes $dia }}
+  {{ $prazo := time $prazoStr }}
+  {{ $hoje := now }}
+  {{ $ontem := $hoje.AddDate 0 0 -1 }}
+  {{ $encerrado1 := $ontem.After $prazo }}
+  {{ $encerrado := .Params.encerrado }}
+
+  <div class="site-about-espaco"></div>
+  <article class="evento-detalhes container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10 col-xl-8">
+        <div class="evento-detalhes-header text-center mb-4">
+
+          <h1 class="mb-3">{{ .Title }}</h1>
+          
+          {{ if .Params.imagem }}
+            <div class="evento-imagem img-fluid mb-4">
+              <img src="{{ .Params.imagem }}" 
+                   alt="{{ .Title }}" 
+                   class="img-fluid rounded shadow-sm"
+                   loading="lazy"
+                   style="max-height: 300px; object-fit: contain;">
+            </div>
+          {{ end }}
+          
+        </div>
+
+        <div class="evento-detalhes-content bg-white p-4 p-md-5 rounded shadow-sm mb-4">
+          {{ .Content | replaceRE "<table>" "<div class='table-responsive'><table class='table table-striped table-hover'>" | replaceRE "</table>" "</table></div>" | safeHTML }}
+          
+          <style>
+            .evento-detalhes-content table {
+              width: 100%;
+              border-collapse: collapse;
+              margin: 1.5rem 0;
+              font-size: 0.95rem;
+            }
+            .evento-detalhes-content table th {
+              background-color: #f8f9fa;
+              font-weight: 600;
+              text-align: left;
+              padding: 12px 15px;
+              border-bottom: 2px solid #dee2e6;
+            }
+            .evento-detalhes-content table td {
+              padding: 10px 15px;
+              border-bottom: 1px solid #dee2e6;
+              vertical-align: top;
+            }
+            .evento-detalhes-content table tr:last-child td {
+              border-bottom: none;
+            }
+            .evento-detalhes-content table tr:hover td {
+              background-color: #f1f3f5;
+            }
+            @media (max-width: 768px) {
+              .evento-detalhes-content table {
+                font-size: 0.85rem;
+              }
+              .evento-detalhes-content table th, 
+              .evento-detalhes-content table td {
+                padding: 8px 10px;
+              }
+            }
+          </style>
+        </div>
+
+        <a href="/eventos" class="evento-detalhes-back d-inline-flex align-items-center text-decoration-none">
+          <i class="bi bi-arrow-left me-2"></i>
+          Voltar para a lista de eventos
+        </a>
+      </div>
+    </div>
+  </article>
+{{ end }}

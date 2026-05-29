@@ -14,6 +14,14 @@
 
 {{ partial "call-to-action.html" . }}
 
+  <!-- Chamando os cards de eventos - mostra 3 cards -->
+  {{ partial "eventos-cards.html" (dict 
+    "site" .Site 
+    "max" 3 
+    "title" "Próximos Eventos"
+    "showViewAllLink" true
+  ) }}
+
 {{ partial "youtube-home.html" . }}
 
 {{ partial "sobre_pet.html" . }}

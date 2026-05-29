@@ -1,0 +1,163 @@
+{{ $maxCards := .max | default 3 }}
+{{ $showFilters := .showFilters | default false }}
+{{ $title := .title | default "Próximos Eventos" }}
+
+<section class="eventos-section py-5">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2 class="mb-0">{{ $title }}</h2>
+      {{ if .showViewAllLink }}
+      <a href="/eventos" class="btn btn-outline-primary">Ver todos →</a>
+      {{ end }}
+    </div>
+    
+    <!-- Lista de eventos (limitada) -->
+    <div class="eventos-grid">
+      {{ $events := where .site.RegularPages "Section" "eventos" }}
+      {{ $events = $events | complement (where $events "Title" "in" (slice "Arquivo" "Arquivos")) }}
+      {{ $events = $events | first $maxCards }}
+      
+      {{ range $events }}
+        {{ $dateParts := split .Params.prazo "/" }}
+        {{ $year := index $dateParts 2 }}
+        {{ $isEncerrado := in .Title "Encerrado" }}
+        
+        <div class="evento-item">
+          <article class="evento-card {{ if $isEncerrado }}evento-encerrado{{ end }}">
+            <div class="card shadow-sm h-100 {{ if $isEncerrado }}bg-light text-muted{{ end }}">
+              <!-- Imagem no topo do card -->
+              {{ if .Params.imagem }}
+              <div class="card-img-top-wrapper">
+                <img src="{{ .Params.imagem }}" class="card-img-top {{ if $isEncerrado }}img-encerrado{{ end }}" alt="{{ .Title }}">
+              </div>
+              {{ else }}
+              <div class="card-img-top-wrapper bg-secondary d-flex align-items-center justify-content-center">
+                <span class="text-white-50">Sem imagem</span>
+              </div>
+              {{ end }}
+              
+              <!-- Conteúdo do card -->
+              <div class="card-body d-flex flex-column">
+                <!-- Badge de status -->
+                <div class="mb-2">
+                  {{ if $isEncerrado }}
+                    <span class="badge bg-secondary">Encerrado</span>
+                  {{ else }}
+                    <span class="badge bg-success text-white">Inscrições Abertas</span>
+                  {{ end }}
+                </div>
+                
+                <h3 class="card-title h5">
+                  <a href="{{ .RelPermalink }}" class="text-decoration-none {{ if $isEncerrado }}text-secondary{{ end }}">
+                    {{ .Title }}
+                  </a>
+                </h3>
+                
+                <p class="card-text small text-muted mb-2">
+                  <i class="bi bi-calendar-event"></i> 
+                  <strong>{{ if $isEncerrado }}Encerrado:{{ else }}Até:{{ end }}</strong> {{ .Params.prazo }}
+                </p>
+                
+                <p class="card-text small text-muted mb-3">
+                  <i class="bi bi-geo-alt"></i> {{ .Params.local | default "Local a definir" }}
+                </p>
+                
+                <p class="card-text flex-grow-1">{{ .Summary | default .Description | default "Clique para mais detalhes sobre este evento." | truncate 120 }}</p>
+                
+                <div class="mt-3">
+                  <a href="{{ .RelPermalink }}" class="btn {{ if $isEncerrado }}btn-outline-secondary{{ else }}btn-primary{{ end }} btn-sm w-100">
+                    Saiba mais →
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Estilo para os cards */
+  .eventos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .evento-item {
+    height: 100%;
+  }
+  
+  .evento-card {
+    transition: all 0.3s ease;
+    height: 100%;
+  }
+  
+  .evento-card .card {
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+    overflow: hidden;
+    border: none;
+  }
+  
+  .evento-card:hover .card {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  }
+  
+  /* Wrapper para a imagem do topo */
+  .card-img-top-wrapper {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    background-color: #f0f0f0;
+  }
+  
+  .card-img-top {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .evento-card:hover .card-img-top {
+    transform: scale(1.05);
+  }
+  
+  .card-title a {
+    color: inherit;
+    transition: color 0.2s;
+  }
+  
+  .card-title a:hover {
+    color: var(--bs-primary);
+  }
+  
+  /* Estilo para eventos encerrados */
+  .evento-encerrado {
+    opacity: 0.85;
+  }
+  
+  .evento-encerrado .card {
+    background-color: #f8f9fa;
+  }
+  
+  .evento-encerrado .img-encerrado {
+    filter: grayscale(70%);
+    opacity: 0.7;
+  }
+  
+  @media (max-width: 768px) {
+    .eventos-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .card-img-top-wrapper {
+      height: 180px;
+    }
+  }
+</style>
