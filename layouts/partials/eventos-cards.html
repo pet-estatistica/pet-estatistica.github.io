@@ -2,6 +2,22 @@
 {{ $showFilters := .showFilters | default false }}
 {{ $title := .title | default "Próximos Eventos" }}
 
+{{/* Coletar apenas eventos NÃO encerrados */}}
+{{ $eventosAtivos := slice }}
+
+{{ range where .site.RegularPages "Section" "eventos" }}
+  {{ $isEncerrado := in .Title "Encerrado" }}
+  {{ if not $isEncerrado }}
+    {{ $eventosAtivos = $eventosAtivos | append . }}
+  {{ end }}
+{{ end }}
+
+{{/* Limitar ao número máximo de cards */}}
+{{ $eventosAtivos = first $maxCards $eventosAtivos }}
+{{ $totalEventosAtivos := len $eventosAtivos }}
+
+{{/* Só mostra a seção se houver eventos ativos */}}
+{{ if gt $totalEventosAtivos 0 }}
 <section class="eventos-section py-5">
   <div class="container">
     <div class="d-flex justify-content-between align-items-center mb-4">
@@ -13,22 +29,17 @@
     
     <!-- Lista de eventos (limitada) -->
     <div class="eventos-grid">
-      {{ $events := where .site.RegularPages "Section" "eventos" }}
-      {{ $events = $events | complement (where $events "Title" "in" (slice "Arquivo" "Arquivos")) }}
-      {{ $events = $events | first $maxCards }}
-      
-      {{ range $events }}
+      {{ range $eventosAtivos }}
         {{ $dateParts := split .Params.prazo "/" }}
         {{ $year := index $dateParts 2 }}
-        {{ $isEncerrado := in .Title "Encerrado" }}
         
         <div class="evento-item">
-          <article class="evento-card {{ if $isEncerrado }}evento-encerrado{{ end }}">
-            <div class="card shadow-sm h-100 {{ if $isEncerrado }}bg-light text-muted{{ end }}">
+          <article class="evento-card">
+            <div class="card shadow-sm h-100">
               <!-- Imagem no topo do card -->
               {{ if .Params.imagem }}
               <div class="card-img-top-wrapper">
-                <img src="{{ .Params.imagem }}" class="card-img-top {{ if $isEncerrado }}img-encerrado{{ end }}" alt="{{ .Title }}">
+                <img src="{{ .Params.imagem }}" class="card-img-top" alt="{{ .Title }}">
               </div>
               {{ else }}
               <div class="card-img-top-wrapper bg-secondary d-flex align-items-center justify-content-center">
@@ -40,22 +51,18 @@
               <div class="card-body d-flex flex-column">
                 <!-- Badge de status -->
                 <div class="mb-2">
-                  {{ if $isEncerrado }}
-                    <span class="badge bg-secondary">Encerrado</span>
-                  {{ else }}
-                    <span class="badge bg-success text-white">Inscrições Abertas</span>
-                  {{ end }}
+                  <span class="badge bg-success text-white">🔥 Inscrições Abertas</span>
                 </div>
                 
                 <h3 class="card-title h5">
-                  <a href="{{ .RelPermalink }}" class="text-decoration-none {{ if $isEncerrado }}text-secondary{{ end }}">
+                  <a href="{{ .RelPermalink }}" class="text-decoration-none">
                     {{ .Title }}
                   </a>
                 </h3>
                 
                 <p class="card-text small text-muted mb-2">
                   <i class="bi bi-calendar-event"></i> 
-                  <strong>{{ if $isEncerrado }}Encerrado:{{ else }}Até:{{ end }}</strong> {{ .Params.prazo }}
+                  <strong>Data final:</strong> {{ .Params.prazo }}
                 </p>
                 
                 <p class="card-text small text-muted mb-3">
@@ -65,7 +72,7 @@
                 <p class="card-text flex-grow-1">{{ .Summary | default .Description | default "Clique para mais detalhes sobre este evento." | truncate 120 }}</p>
                 
                 <div class="mt-3">
-                  <a href="{{ .RelPermalink }}" class="btn {{ if $isEncerrado }}btn-outline-secondary{{ else }}btn-primary{{ end }} btn-sm w-100">
+                  <a href="{{ .RelPermalink }}" class="btn btn-primary btn-sm w-100">
                     Saiba mais →
                   </a>
                 </div>
@@ -137,20 +144,6 @@
     color: var(--bs-primary);
   }
   
-  /* Estilo para eventos encerrados */
-  .evento-encerrado {
-    opacity: 0.85;
-  }
-  
-  .evento-encerrado .card {
-    background-color: #f8f9fa;
-  }
-  
-  .evento-encerrado .img-encerrado {
-    filter: grayscale(70%);
-    opacity: 0.7;
-  }
-  
   @media (max-width: 768px) {
     .eventos-grid {
       grid-template-columns: 1fr;
@@ -161,3 +154,4 @@
     }
   }
 </style>
+{{ end }}

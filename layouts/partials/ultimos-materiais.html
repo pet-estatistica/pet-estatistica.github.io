@@ -1,0 +1,335 @@
+{{ $maxCards := .max | default 3 }}
+{{ $title := .title | default "📚 Últimos Materiais Adicionados" }}
+
+{{/* Coletar todos os materiais de todas as disciplinas */}}
+{{ $todosMateriais := slice }}
+
+{{ range .site.Data.disciplinas.disciplinas }}
+  {{ $codigoDisciplina := .codigo }}
+  {{ $nomeDisciplina := .nome }}
+  {{ $emojiDisciplina := .emoji | default "📚" }}
+  
+  {{/* Apostilas da disciplina (array) */}}
+  {{ with .apostilas }}
+    {{ range . }}
+      {{ $material := dict 
+        "titulo" .apostila
+        "disciplina_codigo" $codigoDisciplina
+        "disciplina_nome" $nomeDisciplina
+        "disciplina_emoji" $emojiDisciplina
+        "tipo" "apostila"
+        "descricao" .apostila
+        "link" .link
+        "autor" (default "PET-Estatística" .autores)
+        "data" (default "2000-01-01" .data)
+        "categoria" "Apostila"
+      }}
+      {{ $todosMateriais = $todosMateriais | append $material }}
+    {{ end }}
+  {{ end }}
+  
+  {{/* Apostila única (objeto) */}}
+  {{ with .apostila }}
+    {{ $material := dict 
+      "titulo" .descricao
+      "disciplina_codigo" $codigoDisciplina
+      "disciplina_nome" $nomeDisciplina
+      "disciplina_emoji" $emojiDisciplina
+      "tipo" (lower .tipo)
+      "descricao" .descricao
+      "link" .link
+      "autor" (default "PET-Estatística" .autores)
+      "data" (default "2000-01-01" .data)
+      "categoria" "Apostila"
+    }}
+    {{ $todosMateriais = $todosMateriais | append $material }}
+  {{ end }}
+  
+  {{/* Material de apoio */}}
+  {{ with .material_apoio }}
+    {{ range . }}
+      {{ range .itens }}
+        {{ $material := dict 
+          "titulo" .descricao
+          "disciplina_codigo" $codigoDisciplina
+          "disciplina_nome" $nomeDisciplina
+          "disciplina_emoji" $emojiDisciplina
+          "tipo" (lower .tipo)
+          "descricao" .descricao
+          "link" .arquivo
+          "autor" (default "PET-Estatística" .autor)
+          "data" (default "2000-01-01" .data)
+          "categoria" .categoria
+        }}
+        {{ $todosMateriais = $todosMateriais | append $material }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  
+  {{/* Materiais por ano/semestre */}}
+  {{ range .anos }}
+    {{ $anoAtual := .ano }}
+    {{ $semestreAtual := .semestre }}
+    {{ range .materiais }}
+      {{ $categoriaAtual := .categoria }}
+      {{ range .itens }}
+        {{ $material := dict 
+          "titulo" .descricao
+          "disciplina_codigo" $codigoDisciplina
+          "disciplina_nome" $nomeDisciplina
+          "disciplina_emoji" $emojiDisciplina
+          "tipo" (lower .tipo)
+          "descricao" .descricao
+          "link" .arquivo
+          "autor" (default "PET-Estatística" .autor)
+          "data" (default "2000-01-01" .data)
+          "categoria" $categoriaAtual
+          "ano" $anoAtual
+          "semestre" $semestreAtual
+        }}
+        {{ $todosMateriais = $todosMateriais | append $material }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{/* Ordenar por data (mais recente primeiro) e pegar os primeiros */}}
+{{ $materiaisRecentes := sort $todosMateriais "data" "desc" | first $maxCards }}
+{{ $totalMateriais := len $todosMateriais }}
+
+<section class="ultimos-materiais py-5">
+  <div class="container">
+    <!-- Título e subtítulo -->
+    <div class="text-center mb-4">
+      <h3 class="mb-2">{{ $title }}</h3>
+      <p class="text-muted">Os conteúdos mais recentes adicionados ao site</p>
+    </div>
+    
+    {{ if gt $totalMateriais 0 }}
+      <!-- Grid de cards (só mostra se tiver materiais) -->
+      <div class="materiais-grid">
+        {{ range $materiaisRecentes }}
+          {{ $dataParts := split .data "-" }}
+          {{ $ano := index $dataParts 0 }}
+          {{ $mes := index $dataParts 1 }}
+          {{ $dia := index $dataParts 2 }}
+          
+          <div class="material-card">
+            <div class="card h-100 shadow-sm">
+              <!-- Cabeçalho com disciplina e tipo -->
+              <div class="card-header bg-transparent border-bottom-0 pt-3 px-3">
+                <div class="d-flex justify-content-between align-items-start flex-wrap gap-2">
+                  <span class="badge {{ if eq .tipo "pdf" }}bg-danger{{ else if eq .tipo "zip" }}bg-warning{{ else if eq .tipo "apostila" }}bg-primary{{ else if eq .tipo "jpg" }}bg-success{{ else if eq .tipo "html" }}bg-info{{ else }}bg-secondary{{ end }} p-2 text-white">
+                    {{ if eq .tipo "pdf" }}📄 PDF
+                    {{ else if eq .tipo "zip" }}📦 ZIP
+                    {{ else if eq .tipo "apostila" }}📚 Apostila
+                    {{ else if eq .tipo "jpg" }}🖼️ Imagem
+                    {{ else if eq .tipo "html" }}🌐 HTML
+                    {{ else if eq .tipo "link" }}🔗 Link
+                    {{ else }}📁 {{ .tipo | upper }}{{ end }}
+                  </span>
+                  <small class="text-muted">
+                    📅 {{ $dia }}/{{ $mes }}/{{ $ano }}
+                  </small>
+                </div>
+              </div>
+              
+              <!-- Corpo do card -->
+              <div class="card-body">
+                <div class="disciplina-tag mb-2">
+                  <span class="badge bg-info bg-opacity-10 text-white p-2">
+                    {{ .disciplina_emoji }} {{ .disciplina_codigo }} - {{ .disciplina_nome | truncate 40 }}
+                  </span>
+                </div>
+                
+                <h3 class="h6 card-title mb-2">
+                  <a href="{{ .link }}" class="text-decoration-none stretched-link" target="_blank" rel="noopener noreferrer">
+                    {{ .titulo | truncate 80 }}
+                  </a>
+                </h3>
+                
+                {{ if .categoria }}
+                <div class="categoria-tag mb-2">
+                  <small class="text-muted">
+                    📂 {{ .categoria }}
+                  </small>
+                </div>
+                {{ end }}
+                
+                {{ if .ano }}
+                <div class="ano-tag mb-2">
+                  <small class="text-muted">
+                    🗓️ {{ .ano }} • {{ if eq .semestre "1" }}1º Semestre{{ else if eq .semestre "2" }}2º Semestre{{ else }}{{ .semestre }}{{ end }}
+                  </small>
+                </div>
+                {{ end }}
+                
+                {{ if .autor }}
+                <div class="autor mt-2">
+                  <small class="text-muted">
+                    👤 {{ .autor | truncate 50 }}
+                  </small>
+                </div>
+                {{ end }}
+              </div>
+              
+              <!-- Footer com link -->
+              <div class="card-footer bg-transparent border-top-0 pb-3 px-3">
+                <small class="text-primary">
+                  🔗 Clique para acessar →
+                </small>
+              </div>
+            </div>
+          </div>
+        {{ end }}
+      </div>
+    {{ else }}
+      <!-- Mensagem quando não tem materiais -->
+      <div class="text-center py-5">
+        <div class="empty-state">
+          <span class="display-1">📭</span>
+          <h3 class="mt-3">Nenhum material encontrado</h3>
+          <p class="text-muted">Novos materiais aparecerão em breve!</p>
+        </div>
+      </div>
+    {{ end }}
+    
+    <!-- Botão centralizado na parte inferior - SEMPRE VISÍVEL -->
+    <div class="text-center mt-5">
+      <a href="/materiais/disciplinas/" class="btn btn-primary btn-lg px-5">
+        📚 Ver todos os materiais →
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Grid de materiais */
+  .materiais-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+    justify-items: center;
+    align-items: stretch;
+  }
+  
+  .material-card {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  /* Centralização quando tem menos cards */
+  .materiais-grid:has(.material-card:first-child:last-child) {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  
+  .materiais-grid:has(.material-card:nth-child(2):last-child) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  
+  /* Estilo dos cards */
+  .material-card .card {
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    height: 100%;
+    border: 1px solid #e9ecef;
+  }
+  
+  .material-card .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important;
+  }
+  
+  .card-header {
+    padding-bottom: 0;
+    background-color: white !important;
+  }
+  
+  .card-title {
+    line-height: 1.4;
+  }
+  
+  .card-title a {
+    color: #2d3436;
+    transition: color 0.2s;
+  }
+  
+  .card-title a:hover {
+    color: #0d6efd;
+  }
+  
+  .stretched-link::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    content: "";
+  }
+  
+  /* Badges */
+  .badge {
+    font-weight: 500;
+    padding: 0.35rem 0.75rem;
+  }
+  
+  .disciplina-tag .badge {
+    background-color: #e3f2fd !important;
+    color: #1976d2 !important;
+    font-weight: normal;
+  }
+  
+  /* Botão maior e mais destacado */
+  .btn-outline-primary.btn-lg {
+    padding: 0.75rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-outline-primary.btn-lg:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3);
+  }
+  
+  /* Empty state */
+  .empty-state {
+    padding: 3rem;
+    background: #f8f9fa;
+    border-radius: 16px;
+  }
+  
+  /* Responsivo */
+  @media (max-width: 992px) {
+    .materiais-grid,
+    .materiais-grid:has(.material-card:nth-child(2):last-child) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .materiais-grid,
+    .materiais-grid:has(.material-card:nth-child(2):last-child),
+    .materiais-grid:has(.material-card:nth-child(3)) {
+      grid-template-columns: 1fr;
+    }
+    
+    .material-card {
+      max-width: 100%;
+    }
+    
+    .card-title {
+      font-size: 0.95rem;
+    }
+    
+    .btn-outline-primary.btn-lg {
+      width: 100%;
+      padding: 0.75rem 1rem;
+    }
+  }
+</style>

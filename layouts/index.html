@@ -21,7 +21,13 @@
     "title" "Próximos Eventos"
     "showViewAllLink" true
   ) }}
-
+ <!-- Adicione a seção de últimos materiais -->
+  {{ partial "ultimos-materiais.html" (dict 
+    "site" .Site 
+    "max" 3
+    "title" "Últimos Materiais Adicionados"
+    "showViewAllLink" true
+  ) }}
 {{ partial "youtube-home.html" . }}
 
 {{ partial "sobre_pet.html" . }}
