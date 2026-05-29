@@ -168,6 +168,7 @@
             <ul class="site-docente-member-links">
               {{ if $docente.homepage }}<li><a href="{{ $docente.homepage }}" target="_blank" title="Homepage"><i class="fa fa-globe"></i></a></li>{{ end }}
               {{ if $docente.url_perfil }}<li><a href="{{ $docente.url_perfil }}" target="_blank" title="Perfil Institucional"><i class="fa fa-user"></i></a></li>{{ end }}
+              {{ if $docente.lattes }}<li><a href="{{ $docente.lattes }}" target="_blank" title="Currículo Lattes"><i class="fa fa-id-card"></i></a></li>{{ end }}
             </ul>
           </div>
         </div>

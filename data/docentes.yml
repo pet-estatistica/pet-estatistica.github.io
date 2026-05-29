@@ -11,6 +11,7 @@ docentes:
     homepage: "http://leg.ufpr.br/~amanda"
     url_perfil: "http://www.est.ufpr.br/professores/00-amanda.html"
     imagem: "http://www.est.ufpr.br/professores/amanda.jpeg"
+    lattes: " http://lattes.cnpq.br/6054083310993609"
     formacao:
       graduacao: Estatística - UFC Universidade Federal do Ceará, 2018.
       mestrado: Estatística - UNICAMP - Universidade Estadual de Campinas, Campinas, SP, 2020.
@@ -29,6 +30,7 @@ docentes:
     homepage: "http://leg.ufpr.br/~ara"
     url_perfil: "http://www.est.ufpr.br/professores/01-anderson.html"
     imagem: "http://www.est.ufpr.br/professores/anderson.jpg"
+    lattes: "http://lattes.cnpq.br/8916772290938469"
     formacao:
       graduacao: Bacharel em Estatística - UFSCar - Universidade Federal de São Carlos, São Carlos, SP, 2009.
       mestrado: Estatística - UFSCar - Universidade Federal de São Carlos, São Carlos, SP, 2011.
@@ -79,6 +81,7 @@ docentes:
     homepage: "http://people.ufpr.br/~churata"
     url_perfil: "http://www.est.ufpr.br/professores/04-bruno.html"
     imagem: "http://www.est.ufpr.br/professores/bruno.jpg"
+    lattes: "http://lattes.cnpq.br/4053747979722167"
     formacao:
       graduacao: Agronomia - UFV - Universidade Federal de Viçosa, Viçosa, MG, 1992.
       mestrado: Genética - UNESP - Universidade Estadual Paulista, SP, 1994.
@@ -97,6 +100,7 @@ docentes:
     homepage: "http://people.ufpr.br/~taconeli"
     url_perfil: "http://www.est.ufpr.br/professores/05-taconeli.html"
     imagem: "http://www.est.ufpr.br/professores/cesar.jpg"
+    lattes: "http://lattes.cnpq.br/3614331382746575"
     formacao:
       graduacao: Estatística - UFSCar - Universidade Federal de São Carlos, São Carlos, SP, 2003.
       mestrado: Estatística - UFSCar - Universidade Federal de São Carlos, São Carlos, SP, 2005.
@@ -115,6 +119,7 @@ docentes:
     homepage: "https://deisygysi.github.io/"
     url_perfil: "http://www.est.ufpr.br/professores/24-deisy.html"
     imagem: "http://www.est.ufpr.br/professores/deisy.jpg"
+    lattes: "http://lattes.cnpq.br/8705355235534573"
     formacao:
       graduacao: [Biotecnologia - PUCPR - Pontifícia Universidade Católica do Paraná (2011), Estatística - UFPR - Universidade Federal do Paraná (2013)]
       doutorado: Ciência da Computação. Universität Leipzig, Leipzig, Alemanha. (2019).
@@ -132,6 +137,7 @@ docentes:
     homepage: "http://leg.ufpr.br/~eferreira"
     url_perfil: "http://www.est.ufpr.br/professores/06-eduardo.html"
     imagem: "http://www.est.ufpr.br/professores/eduardo.jpg"
+    lattes: "http://lattes.cnpq.br/6295059687055801"
     formacao:
       graduacao: Estatística - UNICAMP - Universidade Estadual de Campinas, Campinas, SP, 2011.
       mestrado: Estatística - UNICAMP - Universidade Estadual de Campinas, Campinas, SP, 2014.
@@ -165,6 +171,7 @@ docentes:
     tipo_docente: Corpo Docente do Departamento de Estatística
     url_perfil: "http://www.est.ufpr.br/professores/09-fernanda.html"
     imagem: "http://www.est.ufpr.br/professores/fernanda.jpg"
+    lattes: "http://lattes.cnpq.br/5099148808782830"
     formacao:
       graduacao: Licenciatura em Matemática - IME/USP - Universidade de São Paulo, São Paulo, SP, 2003.
       mestrado: Agronomia - ESALQ/USP - Universidade de São Paulo, São Paulo, SP, 2007.
@@ -183,6 +190,7 @@ docentes:
     homepage: "http://docs.ufpr.br/~lucambio/"
     url_perfil: "http://www.est.ufpr.br/professores/10-lucambio.html"
     imagem: "http://www.est.ufpr.br/professores/lucambio.jpg"
+    lattes: "http://lattes.cnpq.br/2618112404926514"
     formacao:
       graduacao: Matemática - Universidad de Oriente, Santiago de Cuba, CUBA, 1990.
       mestrado: Estatística - UNICAMP - Universidade Estadual de Campinas, Campinas, SP, 1998.
@@ -200,6 +208,7 @@ docentes:
     homepage: "http://www.leg.ufpr.br/~fernandomayer"
     url_perfil: "http://www.est.ufpr.br/professores/11-mayer.html"
     imagem: "http://www.est.ufpr.br/professores/fmayer.jpg"
+    lattes: "http://lattes.cnpq.br/2222077812442414"
     formacao:
       graduacao: Oceanografia - UNIVALI - Universidade do Vale do Itajaí, Itajaí, SC, 2005.
       mestrado: Ecologia - UFSC - Universidade Federal de Santa Catarina, Florianópolis, SC, 2011.
@@ -218,6 +227,7 @@ docentes:
     homepage: "http://docs.ufpr.br/~jomarc/"
     url_perfil: "http://www.est.ufpr.br/professores/12-jomar.html"
     imagem: "http://www.est.ufpr.br/professores/jomar.jpg"
+    lattes: "http://lattes.cnpq.br/3704603458218333"
     formacao:
       graduacao: Engenharia Agronômica - ESALQ/USP - Universidade de São Paulo, Piracicaba, SP, 1987.
       mestrado: Engenharia Agronômica - ESALQ/USP - Universidade de São Paulo, Piracicaba, SP, 1995.
@@ -252,6 +262,7 @@ docentes:
     homepage: "https://docs.ufpr.br/~jlpadilha"
     url_perfil: "http://www.est.ufpr.br/professores/14-joseluiz.html"
     imagem: "http://www.est.ufpr.br/professores/padilha.jpg"
+    lattes: "http://lattes.cnpq.br/3046124981984913"
     formacao:
       graduacao: Estatística - UFPR - Universidade Federal do Paraná, Curitiba, PR, 2007.
       mestrado: Estatística - UFMG - Universidade Federal de Minas Gerais, Belo Horizonte, MG, 2011.
@@ -285,6 +296,7 @@ docentes:
     tipo_docente: Corpo Docente do Departamento de Estatística
     url_perfil: "http://www.est.ufpr.br/professores/16-nivea.html"
     imagem: "http://www.est.ufpr.br/professores/nivea.jpg"
+    lattes: "http://lattes.cnpq.br/4301193607872348"
     formacao:
       graduacao: Estatística - UNICAMP - Universidade Estadual de Campinas, Campinas, SP, 1990.
       mestrado: Estatística - UNICAMP - Universidade Estadual de Campinas, Campinas, SP, 1998.
@@ -303,6 +315,7 @@ docentes:
     homepage: "http://leg.ufpr.br/~paulojus"
     url_perfil: "http://www.est.ufpr.br/professores/17-paulojus.html"
     imagem: "http://www.est.ufpr.br/professores/paulojus.jpg"
+    lattes: "http://lattes.cnpq.br/0852938701434556"
     formacao:
       graduacao: Agronomia - ESAL - Escola Superior de Agricultura de Lavras, Lavras, MG, 1989. Atualmente UFLA - Universidade Federal de Lavras.
       mestrado: Agronomia - ESALQ/USP-Universidade de São Paulo, Piracicaba, SP, 1995.
@@ -321,6 +334,7 @@ docentes:
     homepage: "https://docs.ufpr.br/~prbg/prbg.htm"
     url_perfil: "http://www.est.ufpr.br/professores/18-prbg.html"
     imagem: "http://www.est.ufpr.br/professores/prbg.jpg"
+    lattes: "http://lattes.cnpq.br/6531583056351953"
     formacao:
       graduacao: Estatística - UFPR - Universidade Federal do Paraná, Curitiba, PR, 1990. Atualmente UFLA - Universidade Federal de Lavras.
       mestrado: Estatística - UNICAMP - Universidade de Campinas, Campinas, SP, 1994.
@@ -338,6 +352,7 @@ docentes:
     tipo_docente: Corpo Docente do Departamento de Estatística
     url_perfil: "http://www.est.ufpr.br/professores/25-pedro.html"
     imagem: "http://www.est.ufpr.br/professores/pedro.jpeg"
+    lattes: "http://lattes.cnpq.br/0880146154295423"
     formacao:
       graduacao: Estatística - UnB - Universidade de Brasília, 2016
       mestrado: Estatística - UnB - Universidade de Brasília, 2019.
@@ -356,6 +371,7 @@ docentes:
     homepage: "http://leg.ufpr.br/~silvia"
     url_perfil: "http://www.est.ufpr.br/professores/19-silvia.html"
     imagem: "http://www.est.ufpr.br/professores/silvia.jpg"
+    lattes: " http://lattes.cnpq.br/4949546028857946"
     formacao:
       graduacao: Estatística - UNESP - Universidade Estadual Paulista, Presidente Prudente, SP, 1989.
       mestrado: Estatística - UNICAMP - Universidade Estadual de Campinas, Campinas, SP, 1994.
@@ -374,6 +390,7 @@ docentes:
     homepage: "https://docs.ufpr.br/~vayego/"
     url_perfil: "http://www.est.ufpr.br/professores/20-stela.html"
     imagem: "http://www.est.ufpr.br/professores/stela.jpg"
+    lattes: "http://lattes.cnpq.br/3288975086616360s"
     formacao:
       graduacao: Matemática - UNESP - Universidade Estadual Paulista, Rio Preto, SP, 1993.
       mestrado: Matemática Aplicada e Computacional - UNESP - Universidade Estadual Paulista, Rio Preto, SP, 1997.
@@ -392,6 +409,7 @@ docentes:
     homepage: ""
     url_perfil: "http://www.est.ufpr.br/professores/26-tatiane.html"
     imagem: "http://www.est.ufpr.br/professores/tatiane.jpeg"
+    lattes: "http://lattes.cnpq.br/2735127586002037"
     formacao:
       graduacao: Matemática - Universidade Regional Integrada do Alto Uruguai e das Missões, 2017.
       mestrado: Estatística -  Universidade Federal de Pernambuco (UFPE), 2020.
@@ -410,6 +428,7 @@ docentes:
     homepage: "http://www.leg.ufpr.br/doku.php/pessoais:wbonat"
     url_perfil: "http://www.est.ufpr.br/professores/21-wagner.html"
     imagem: "http://www.est.ufpr.br/professores/wagner.jpg"
+    lattes: "http://lattes.cnpq.br/5010022819750220"
     formacao:
       graduacao: Estatística - UFPR - Universidade Federal do Paraná, Curitiba, PR, 2008.
       mestrado: Métodos Numéricos em Engenharia - UFPR - Universidade Federal do Paraná, Curitiba, PR, 2010.
