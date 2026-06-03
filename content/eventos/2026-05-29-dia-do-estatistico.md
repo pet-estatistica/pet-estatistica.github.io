@@ -1,10 +1,14 @@
 ---
-title: "Dia do Estatístico 2026 - UFPR"
+title: "Dia do Estatístico 2026 - UFPR Encerrado"
 description: "Prepare-se para um evento especial repleto de **palestras inspiradoras** e **MUITO APRENDIZADO Estatístico**! O PET-Estatística da UFPR convida toda a comunidade para celebrar o Dia do Estatístico com uma programação de alto nível."
 prazo: "29/05/2026"
 inscricoes: "29/05/2026"
 imagem: "/images/eventos/2026-05-29-dia-estatistico.png"
 ---
+## Fotos do Evento
+
+{{< gallery folder="images/atividades/dia-do-estatistico/2026/" >}}
+
 
 ### 🎉 Venha comemorar esse dia conosco!
 

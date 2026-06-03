@@ -16,6 +16,14 @@ Apoiar o Departamento de Estatística com a co-organização de eventos científ
 
 Abaixo teremos uma galeria de fotos contendo os últimos eventos aos quais o PET Estatística UFPR esteve organizando e ou auxiliando.
 
+
+#### Dia do Estatístico 2026
+
+{{< gallery folder="images/atividades/dia-do-estatistico/2026/" >}}
+
+Site: https://pet.leg.ufpr.br/eventos/2026-05-29-dia-do-estatistico/
+
+
 #### 2º Encontro Sul Brasileiro de Estatística e Ciência de Dados e 5º RDAY
 
 {{< gallery folder="images/atividades/eventos-cientificos/2025/2southstat-meeting/" >}}
