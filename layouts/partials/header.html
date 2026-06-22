@@ -44,7 +44,7 @@
             </li>
           {{ else }}
             <!-- Verifica se é o último item (para o botão especial) -->
-            {{ $isLast := eq (add (index (where $menu "Name" .Name) 0).Weight 1) (len $menu) }}
+            {{ $isLast := eq (add (index (where $menu "Name" .Name) 0).Weight 0) (len $menu) }}
             {{ if $isLast }}
               <li class="nav-item">
                 <a

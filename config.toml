@@ -14,67 +14,81 @@ removePathAccents = true
     name    = "INÍCIO"
     url     = ""
     weight  = 1
+    
   [[menu.nav]]
     name    = "SOBRE"
     url     = "sobre"
     weight  = 2
+    
+  [[menu.nav]]
+    name    = "O GRUPO"
+    url     = "#"
+    weight  = 3
   [[menu.nav]]
     name    = "EVENTOS"
     url     = "eventos"
-    weight  = 3       
+    parent  = "O GRUPO"
+    weight  = 1
   [[menu.nav]]
     name    = "PROCESSOS"
     url     = "processos"
-    weight  = 4    
+    parent  = "O GRUPO"
+    weight  = 2
   [[menu.nav]]
     name    = "INTEGRANTES"
     url     = "integrantes"
-    weight  = 5
+    parent  = "O GRUPO"
+    weight  = 3
   [[menu.nav]]
-    name    = "DOCENTES"
+    name    = "DOCENTES DEST"
     url     = "docentes"
-    weight  = 6    
+    parent  = "O GRUPO"
+    weight  = 4
+    
   [[menu.nav]]
-    name    = "REDES SOCIAIS"
-    url     = "redessociais"
-    weight  = 7
-  [[menu.nav]]
-    name    = "ATIVIDADES"
-    url     = "atividades"
-    weight  = 8
+    name    = "RECURSOS"
+    url     = "#"
+    weight  = 4
   [[menu.nav]]
     name    = "MATERIAIS"
     url     = "materiais"
-    weight  = 8
-  [[menu.nav]]
-    name    = "PROVAS E EXERCÍCIOS RESOLVIDOS"
-    url     = "/materiais/disciplinas/"
-    parent  = "MATERIAIS"
+    parent  = "RECURSOS"
     weight  = 1
   [[menu.nav]]
-    name    = "DASHBOADS"
-    url     = "/materiais/dashboads/"
-    parent  = "MATERIAIS"
-    weight  = 8    
-  #[[menu.nav]]
-  #  name    = "YOUTUBE"
-  #  url     = "https://www.youtube.com/c/PETEstat%C3%ADsticaUFPR"
-  #  parent  = "MATERIAIS"
-  #  weight  = 8      
+    name    = "PROVAS E EXERCÍCIOS"
+    url     = "/materiais/disciplinas/"
+    parent  = "RECURSOS"
+    weight  = 2
   [[menu.nav]]
     name    = "VÍDEOS"
     url     = "/materiais/videos/"
-    parent  = "MATERIAIS"
-    weight  = 2       
+    parent  = "RECURSOS"
+    weight  = 3
   [[menu.nav]]
-    name    = "LINKS UTEIS"
+    name    = "DASHBOARDS"
+    url     = "/materiais/dashboads/"
+    parent  = "RECURSOS"
+    weight  = 4
+  [[menu.nav]]
+    name    = "LINKS ÚTEIS"
     url     = "/materiais/links_uteis/"
-    parent  = "MATERIAIS"
-    weight  = 9    
+    parent  = "RECURSOS"
+    weight  = 5
+    
+  [[menu.nav]]
+    name    = "REDES SOCIAIS"
+    url     = "redessociais"
+    weight  = 5
+    
+  [[menu.nav]]
+    name    = "ATIVIDADES"
+    url     = "atividades"
+    weight  = 6
+    
   [[menu.nav]]
     name    = "CONTATO"
     url     = "contato"
-    weight  = 9
+    weight  = 7
 
 [params.contact]
   email = "pet.estatistica.ufpr@gmail.com"
