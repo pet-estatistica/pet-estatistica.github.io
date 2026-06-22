@@ -13,7 +13,6 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
-      
     </button>
 
     <div class="collapse navbar-collapse" id="sitenavbar">
@@ -22,26 +21,27 @@
         {{ $menu := .Site.Menus.nav }}
         
         {{ range $menu }}
-          {{ if .HasChildren }}
-            <!-- Item com submenu (dropdown) -->
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" 
-                 href="#" 
-                 id="navbarDropdown{{ .Identifier }}" 
-                 role="button" 
-                 data-toggle="dropdown" 
-                 aria-haspopup="true" 
-                 aria-expanded="false">
-                {{ .Name }}
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown{{ .Identifier }}">
-                {{ range .Children }}
-                  <a class="dropdown-item" href="{{ .URL | absURL }}">
-                    {{ .Name }}
-                  </a>
-                {{ end }}
-              </div>
-            </li>
+        {{ if .HasChildren }}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" 
+               href="#" 
+               id="navbarDropdown{{ .Identifier }}" 
+               role="button" 
+               data-toggle="dropdown" 
+               aria-haspopup="true" 
+               aria-expanded="false">
+              {{ .Name }}
+              <span class="submenu-badge d-lg-none">▼</span>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown{{ .Identifier }}">
+              {{ range .Children }}
+                <a class="dropdown-item" href="{{ .URL | absURL }}">
+                  {{ .Name }}
+                </a>
+              {{ end }}
+            </div>
+          </li>
+
           {{ else }}
             <!-- Verifica se é o último item (para o botão especial) -->
             {{ $isLast := eq (add (index (where $menu "Name" .Name) 0).Weight 0) (len $menu) }}
@@ -72,22 +72,144 @@
   </div>
 </nav>
 <style>
-  /* ==================== 
-   DROPDOWN MENU STYLES 
-   ==================== */
+/* ========================================
+   MENU COMPLETO - NAVBAR (VERSÃO CORRIGIDA)
+   ======================================== */
 
-/* Estilo base do dropdown */
-.navbar .dropdown {
+/* ---------- ESTILOS BASE ---------- */
+.navbar-nav .nav-link {
   position: relative;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  z-index: 1;
 }
 
-/* Link do dropdown */
+.navbar-nav .nav-link:hover {
+  color: #667eea;
+  transform: translateY(-2px);
+}
+
+/* ---------- SUBLINHADO ANIMADO (Desktop) ---------- */
+@media (min-width: 992px) {
+  .navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 2px;
+  }
+  
+  .navbar-nav .nav-link:hover::after {
+    width: 100%;
+  }
+  
+  .navbar-nav .nav-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    opacity: 0;
+    border-radius: 8px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
+    transform: scale(0.95);
+  }
+  
+  .navbar-nav .nav-link:hover::before {
+    opacity: 0.08;
+    transform: scale(1);
+  }
+  
+  .navbar-nav .nav-link:hover {
+    text-shadow: 0 2px 15px rgba(102, 126, 234, 0.2);
+  }
+}
+
+/* ---------- LINK ATIVO ---------- */
+.navbar-nav .nav-link.active {
+  color: #667eea;
+  font-weight: 600;
+}
+
+@media (min-width: 992px) {
+  .navbar-nav .nav-link.active::after {
+    width: 100%;
+  }
+}
+
+/* ---------- BOTÃO ESPECIAL (ÚLTIMO ITEM) ---------- */
+.navbar-nav .btn-sm-rounded {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  color: #fff !important;
+  font-weight: 500;
+  transform: none !important;
+}
+
+.navbar-nav .btn-sm-rounded::after {
+  display: none !important;
+}
+
+.navbar-nav .btn-sm-rounded::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  display: block !important;
+  z-index: 1;
+}
+
+.navbar-nav .btn-sm-rounded:hover::before {
+  left: 100%;
+}
+
+.navbar-nav .btn-sm-rounded:hover {
+  transform: translateY(-3px) scale(1.05) !important;
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+}
+
+.navbar-nav .btn-sm-rounded .btn-area span {
+  position: relative;
+  display: inline-block;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 2;
+}
+
+.navbar-nav .btn-sm-rounded:hover .btn-area span {
+  transform: translateY(-2px);
+}
+
+/* ---------- DROPDOWN TOGGLE ---------- */
 .navbar .dropdown-toggle {
   position: relative;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Seta do dropdown */
+.navbar .dropdown-toggle:hover {
+  color: #667eea;
+}
+
 .navbar .dropdown-toggle::after {
   display: inline-block;
   margin-left: 0.5em;
@@ -97,15 +219,14 @@
   border-right: 0.3em solid transparent;
   border-bottom: 0;
   border-left: 0.3em solid transparent;
-  transition: transform 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Rotaciona a seta quando aberto */
-.navbar .dropdown.show .dropdown-toggle::after {
+.navbar .dropdown-toggle:hover::after {
   transform: rotate(180deg);
 }
 
-/* Menu dropdown */
+/* ---------- DROPDOWN MENU ---------- */
 .navbar .dropdown-menu {
   position: absolute;
   top: 100%;
@@ -127,17 +248,16 @@
   opacity: 0;
   visibility: hidden;
   transform: translateY(-10px);
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Abre o dropdown */
-.navbar .dropdown.show .dropdown-menu {
+.navbar .dropdown.show .dropdown-menu,
+.navbar .dropdown:hover .dropdown-menu {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
 }
 
-/* Seta superior do dropdown */
 .navbar .dropdown-menu::before {
   content: '';
   position: absolute;
@@ -151,18 +271,7 @@
   filter: drop-shadow(0 -2px 2px rgba(0, 0, 0, 0.05));
 }
 
-/* Ajuste para dropdowns alinhados à direita */
-.navbar .dropdown-menu.dropdown-menu-right {
-  right: 0;
-  left: auto;
-}
-
-.navbar .dropdown-menu.dropdown-menu-right::before {
-  right: 20px;
-  left: auto;
-}
-
-/* Itens do dropdown */
+/* ---------- DROPDOWN ITEMS ---------- */
 .navbar .dropdown-item {
   display: block;
   width: 100%;
@@ -175,19 +284,17 @@
   white-space: nowrap;
   background-color: transparent;
   border: 0;
-  transition: all 0.25s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
 }
 
-/* Efeito hover nos itens */
-.navbar .dropdown-item:hover,
-.navbar .dropdown-item:focus {
+.navbar .dropdown-item:hover {
   color: #fff;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  padding-left: 1.8rem;
+  padding-left: 2rem;
+  transform: translateX(5px);
 }
 
-/* Efeito de barra lateral nos itens */
 .navbar .dropdown-item::before {
   content: '';
   position: absolute;
@@ -197,149 +304,14 @@
   width: 3px;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   opacity: 0;
-  transition: opacity 0.25s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navbar .dropdown-item:hover::before {
   opacity: 1;
 }
 
-/* Separador entre itens */
-.navbar .dropdown-divider {
-  height: 1px;
-  margin: 0.5rem 0;
-  overflow: hidden;
-  background-color: #e9ecef;
-}
-
-/* Ícones nos itens do dropdown (opcional) */
-.navbar .dropdown-item i {
-  width: 1.5rem;
-  margin-right: 0.5rem;
-  display: inline-block;
-  transition: transform 0.25s ease;
-}
-
-.navbar .dropdown-item:hover i {
-  transform: translateX(3px);
-}
-
-/* ==================== 
-   HOVER EFFECT (DESKTOP)
-   ==================== */
-
-@media (min-width: 992px) {
-  /* Abre o dropdown no hover para desktop */
-  .navbar .dropdown:hover .dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-  
-  .navbar .dropdown:hover .dropdown-toggle::after {
-    transform: rotate(180deg);
-  }
-  
-  /* Pequeno delay para evitar fechamento acidental */
-  .navbar .dropdown-menu {
-    transition-delay: 0s;
-  }
-  
-  .navbar .dropdown:hover .dropdown-menu {
-    transition-delay: 0.1s;
-  }
-}
-
-/* ==================== 
-   MOBILE RESPONSIVE
-   ==================== */
-
-/* ==================== 
-   MOBILE RESPONSIVE - CORRIGIDO
-   ==================== */
-
-@media (max-width: 991.98px) {
-  /* Mobile dropdown styles */
-  .navbar .dropdown-menu {
-    position: static;
-    float: none;
-    width: 100%;
-    margin-top: 0;
-    background-color: transparent;
-    border: none;
-    box-shadow: none;
-    padding: 0;
-    transform: none;
-    opacity: 1;
-    visibility: visible;
-    display: none;
-    text-align: center;
-  }
-  
-  /* Mostra o dropdown no mobile quando ativo */
-  .navbar .dropdown.show .dropdown-menu {
-    display: block;
-    transform: none;
-    opacity: 1;
-    visibility: visible;
-  }
-  
-  /* Remove a seta superior no mobile */
-  .navbar .dropdown-menu::before {
-    display: none;
-  }
-  
-  /* Estilo dos itens no mobile */
-  .navbar .dropdown-item {
-    padding: 0.6rem 1rem;
-    color: #666;
-    text-align: center;
-  }
-  
-  .navbar .dropdown-item:hover {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    padding-left: 1rem; /* Mantém o padding original */
-  }
-  
-  /* CORREÇÃO: Centraliza o texto do dropdown-toggle no mobile */
-  .navbar .dropdown-toggle {
-    display: block; /* Muda de flex para block */
-    text-align: center; /* Centraliza o texto */
-    position: relative;
-  }
-  
-  /* Seta do dropdown no mobile - posicionada à direita, mas texto centralizado */
-  .navbar .dropdown-toggle::after {
-    position: absolute;
-    right: 0; /* Alinha a seta à direita */
-    top: 50%;
-    transform: translateY(-50%);
-    margin-left: 0;
-    float: none;
-  }
-  
-  /* Quando aberto, mantém a seta rotacionada */
-  .navbar .dropdown.show .dropdown-toggle::after {
-    transform: translateY(-50%) rotate(180deg);
-  }
-  
-  /* Ajuste para os itens normais do menu no mobile */
-  .navbar-nav .nav-link {
-    text-align: center;
-  }
-  
-  /* Ajuste para o botão especial no mobile */
-  .navbar-nav .btn-sm-rounded {
-    display: inline-block;
-    text-align: center;
-  }
-}
-
-/* ==================== 
-   ANIMAÇÕES ADICIONAIS
-   ==================== */
-
-/* Animação de entrada dos itens */
+/* ---------- ANIMAÇÃO DE ENTRADA DOS ITENS ---------- */
 @keyframes dropdownFadeIn {
   from {
     opacity: 0;
@@ -352,10 +324,9 @@
 }
 
 .navbar .dropdown-item {
-  animation: dropdownFadeIn 0.3s ease backwards;
+  animation: dropdownFadeIn 0.3s cubic-bezier(0.4, 0, 0.2, 1) backwards;
 }
 
-/* Delay para cada item */
 .navbar .dropdown-item:nth-child(1) { animation-delay: 0.05s; }
 .navbar .dropdown-item:nth-child(2) { animation-delay: 0.1s; }
 .navbar .dropdown-item:nth-child(3) { animation-delay: 0.15s; }
@@ -367,11 +338,240 @@
 .navbar .dropdown-item:nth-child(9) { animation-delay: 0.45s; }
 .navbar .dropdown-item:nth-child(10) { animation-delay: 0.5s; }
 
-/* ==================== 
-   VARIANTE DARK (opcional)
-   ==================== */
+/* ========================================
+   RESPONSIVO - MOBILE (ATÉ 991.98px)
+   ======================================== */
 
-/* Se seu site tiver tema escuro */
+@media (max-width: 991.98px) {
+  /* ---------- LINKS DO MENU ---------- */
+  .navbar-nav .nav-link {
+    display: block;
+    text-align: center;
+    padding: 0.7rem 1rem;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Remove TODOS os pseudo-elementos no mobile */
+  .navbar-nav .nav-link::before,
+  .navbar-nav .nav-link::after {
+    display: none !important;
+  }
+  
+  /* Remove transformações no mobile */
+  .navbar-nav .nav-link:hover {
+    color: #667eea;
+    background: rgba(102, 126, 234, 0.05);
+    transform: none !important;
+    text-shadow: none !important;
+  }
+  
+  /* Último item sem borda */
+  .navbar-nav .nav-item:last-child .nav-link {
+    border-bottom: none;
+  }
+  
+  /* ---------- DROPDOWN NO MOBILE - CORRIGIDO ---------- */
+  .navbar .dropdown-toggle {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-right: 2.5rem !important;
+    gap: 8px;
+  }
+  
+  /* Badge indicador de submenu */
+  .navbar .dropdown-toggle .submenu-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    font-size: 0.6rem;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    animation: pulse-badge 2s infinite;
+  }
+  
+  @keyframes pulse-badge {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }
+  
+  /* Seta do dropdown */
+  .navbar .dropdown-toggle::after {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 0;
+    border-top: 0.4em solid;
+    border-right: 0.4em solid transparent;
+    border-left: 0.4em solid transparent;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 1.2rem;
+  }
+  
+  .navbar .dropdown.show .dropdown-toggle::after {
+    transform: translateY(-50%) rotate(180deg);
+  }
+  
+  /* ---------- DROPDOWN MENU NO MOBILE - SEM BORDAS DUPLAS ---------- */
+  .navbar .dropdown-menu {
+    position: static;
+    float: none;
+    width: 100%;
+    margin-top: 0;
+    background: rgba(102, 126, 234, 0.05);
+    border: none;
+    box-shadow: none;
+    padding: 0.5rem 0;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    display: none;
+    text-align: center;
+    border-radius: 0;
+    /* REMOVEMOS a borda lateral que causava o problema */
+    border-left: none !important;
+  }
+  
+  /* Remove a borda lateral duplicada */
+  .navbar .dropdown.show .dropdown-menu {
+    display: block;
+    /* REMOVEMOS a borda lateral */
+    border-left: none !important;
+    background: rgba(102, 126, 234, 0.05);
+  }
+  
+  /* Remove a seta superior */
+  .navbar .dropdown-menu::before {
+    display: none;
+  }
+  
+  /* ---------- ITENS DO DROPDOWN NO MOBILE ---------- */
+  .navbar .dropdown-item {
+    padding: 0.6rem 1rem;
+    color: #555;
+    text-align: center;
+    animation: none !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+  }
+  
+  /* Indicador visual de item de submenu - SETA SIMPLES */
+  .navbar .dropdown-item::before {
+    content: '▸';
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #667eea;
+    font-size: 0.8rem;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+  }
+  
+  .navbar .dropdown-item:hover {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding-left: 1.5rem;
+    transform: none;
+    color: #fff;
+    border-radius: 0;
+  }
+  
+  .navbar .dropdown-item:hover::before {
+    color: #fff;
+    opacity: 1;
+    transform: translateY(-50%) translateX(3px);
+  }
+  
+  .navbar .dropdown-item:last-child {
+    border-bottom: none;
+  }
+  
+  /* ---------- BOTÃO ESPECIAL NO MOBILE ---------- */
+  .navbar-nav .btn-sm-rounded {
+    display: inline-block !important;
+    width: auto !important;
+    margin: 0.5rem auto;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff !important;
+    border-radius: 50px;
+    padding: 0.5rem 2rem;
+    border-bottom: none !important;
+  }
+  
+  .navbar-nav .btn-sm-rounded::before {
+    display: block !important;
+  }
+  
+  .navbar-nav .btn-sm-rounded:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    transform: scale(1.05) !important;
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
+  }
+  
+  .navbar-nav .btn-sm-rounded:active {
+    transform: scale(0.95) !important;
+  }
+}
+
+/* ========================================
+   TEMA ESCURO (OPCIONAL)
+   ======================================== */
+
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #fff;
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+  color: #fff;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-dark .navbar-nav .nav-link {
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .navbar-dark .navbar-nav .nav-link:hover {
+    background: rgba(255, 255, 255, 0.05);
+  }
+  
+  .navbar-dark .dropdown-menu {
+    background: rgba(255, 255, 255, 0.03);
+  }
+  
+  .navbar-dark .dropdown.show .dropdown-menu {
+    background: rgba(255, 255, 255, 0.05);
+  }
+  
+  .navbar-dark .dropdown-item {
+    color: #bbb;
+    border-bottom-color: rgba(255, 255, 255, 0.05);
+  }
+  
+  .navbar-dark .dropdown-item::before {
+    color: #667eea;
+  }
+  
+  .navbar-dark .dropdown-item:hover {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+  }
+}
+
 .navbar-dark .dropdown-menu {
   background-color: #1a1a2e;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
@@ -390,7 +590,42 @@
   color: #fff;
 }
 
-.navbar-dark .dropdown-divider {
-  background-color: #2a2a3e;
+/* ========================================
+   AJUSTES PARA O TOGGLER (HAMBURGUER)
+   ======================================== */
+
+.navbar-toggler {
+  border: none;
+  padding: 0.5rem;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.navbar-toggler .icon-bar {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background: #333;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+.navbar-dark .navbar-toggler .icon-bar {
+  background: #fff;
+}
+
+.navbar-toggler:not(.collapsed) .icon-bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.navbar-toggler:not(.collapsed) .icon-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggler:not(.collapsed) .icon-bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
 }
 </style>
