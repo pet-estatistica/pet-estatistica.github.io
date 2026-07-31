@@ -50,11 +50,6 @@ removePathAccents = true
     url     = "#"
     weight  = 4
   [[menu.nav]]
-    name    = "MATERIAIS"
-    url     = "materiais"
-    parent  = "RECURSOS"
-    weight  = 1
-  [[menu.nav]]
     name    = "PROVAS E EXERCÍCIOS"
     url     = "/materiais/disciplinas/"
     parent  = "RECURSOS"

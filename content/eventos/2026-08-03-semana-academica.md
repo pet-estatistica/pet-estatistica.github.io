@@ -1,7 +1,7 @@
 ---
 title: "Semana Acadêmica"
 description: "Prepare-se para um evento especial repleto de **palestras inspiradoras** e **MUITO APRENDIZADO Estatístico**! O PET-Estatística da UFPR convida toda a comunidade para com uma programação de alto nível."
-prazo: "03/08/2026"
+prazo: "07/08/2026"
 inscricoes: "03/08/2026"
 imagem: "/images/eventos/2026-08-03-semana-academica.png"
 ---
