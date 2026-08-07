@@ -49,6 +49,18 @@ De **03 a 07 de agosto**, prepare-se para uma imersão completa no mundo da Esta
 
 ---
 
+
+### Mesa redonda: Bacharelado em Estatística e Ciência de dados: desafios e oportunidades
+| Convidado | Instituição/Atuação |
+|-------------|-------------------|
+| **Cesar Taconeli** | Coordenador do Bach. em Estatística e Ciência de Dados - UFPR |
+| **Fernanda Buhrer Rizzato** | Chefe do Departamento de Estatística - UFPR |
+| **Wagner Hugo Bonat** |  Colegiado do Bach. em Estatística e Ciência de Dados - UFPR |
+
+Formulário de acesso a mesa redonda: [https://forms.gle/A6szFc4jqMQjgWACA](https://forms.gle/A6szFc4jqMQjgWACA)
+
+---
+
 ### 📋 Programação Resumida
 
 #### **Dia 1 - 03/08 (REMOTO)**
@@ -69,7 +81,8 @@ De **03 a 07 de agosto**, prepare-se para uma imersão completa no mundo da Esta
 #### **Dia 4 - 06/08 (PRESENCIAL - PINT OF DATA SCIENCE)**
 📍 **Local: HOP CLUB - Rua do Herval, 1249 - Cristo Rei**
 - Ciência de dados no contexto psiquiátrico (Bruno Wavrzenczak e Felipe Queluz - UFPR)
-- Aventuras estatísticoceanográficas na Irlanda (Fernando de Pol Mayer - UFPR)
+- Aventuras estatístico oceanográficas na Irlanda (Fernando de Pol Mayer - UFPR)
+
 
 #### **Dia 5 - 07/08 (PRESENCIAL)**
 - **19h** - O que é o PET Estatística (Equipe PET - UFPR)
