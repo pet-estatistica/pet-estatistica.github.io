@@ -9,4 +9,11 @@ dashboads  :
     tags: ["Teoria do Aprendizado Estatístico", "Inferência Estatística", "Métodos Computacionais", "Descritiva"]
     url: https://anderson-inacio.shinyapps.io/Dashboard-Analise-Pokemons/
     repositorio : https://github.com/nosrednawall/dashboard-analise-pokemons/
-    
+  - status : ATIVO
+    autor : "João Otávio"
+    descricao : "Anime-se, dashboard para pesquisa e análise de animes"
+    imagem : "images/dashboads/joao_otavio_animes.png"
+    name  : "Análise de Pokémons"
+    tags: ["Teoria do Aprendizado Estatístico", "Métodos Computacionais", "Descritiva"]
+    url: https://jotaveo.shinyapps.io/anime-se/
+    repositorio : https://github.com/jotaveo
