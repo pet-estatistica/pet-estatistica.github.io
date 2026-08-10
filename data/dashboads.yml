@@ -13,7 +13,7 @@ dashboads  :
     autor : "João Otávio"
     descricao : "Anime-se, dashboard para pesquisa e análise de animes"
     imagem : "images/dashboads/joao_otavio_animes.png"
-    name  : "Análise de Pokémons"
+    name  : "Anime-se"
     tags: ["Teoria do Aprendizado Estatístico", "Métodos Computacionais", "Descritiva"]
     url: https://jotaveo.shinyapps.io/anime-se/
     repositorio : https://github.com/jotaveo
