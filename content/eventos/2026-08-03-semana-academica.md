@@ -1,10 +1,24 @@
 ---
-title: "Semana Acadêmica"
+title: "Semana Acadêmica 2026 - Encerrado"
 description: "Prepare-se para um evento especial repleto de **palestras inspiradoras** e **MUITO APRENDIZADO Estatístico**! O PET-Estatística da UFPR convida toda a comunidade para com uma programação de alto nível."
 prazo: "07/08/2026"
 inscricoes: "03/08/2026"
 imagem: "/images/eventos/2026-08-03-semana-academica.png"
 ---
+
+### Fotos do Evento
+
+Veja como que foi a nossa Semana Acadêmica de Estatística e Ciência de Dados
+
+{{< gallery folder="images/atividades/semana-academica/2026/" >}}
+
+
+### Apresentações dos palestrantes
+
+Alguns palestrantes disponibilizaram suas apresentações
+
+{{< apresentacoes_semana_academica ano="2026" >}}
+
 
 ### 🎲 Semana de Estatística e Ciência de Dados 2026 - UFPR
 

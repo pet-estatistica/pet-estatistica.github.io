@@ -1,0 +1,33 @@
+{{/* Shortcode para exibir apresentações da semana acadêmica filtradas por ano */}}
+{{ $ano := .Get "ano" | default "" }}
+{{ if not $ano }}
+  {{ errorf "O parâmetro 'ano' é obrigatório para o shortcode apresentacoes_semana_academica" }}
+{{ end }}
+
+{{ $anoInt := int $ano }} <!-- converte para inteiro para comparar com o campo do YAML -->
+
+{{ $apresentacoes := .Site.Data.apresentacoes_semana_academica.apresentacoes }}
+{{ if not $apresentacoes }}
+  <p>Nenhuma apresentação cadastrada.</p>
+{{ else }}
+  {{ $filtradas := where $apresentacoes "ano" $anoInt }}
+  {{ if eq (len $filtradas) 0 }}
+    <p>Não há apresentações para o ano de {{ $ano }}.</p>
+  {{ else }}
+    <div class="apresentacoes-lista">
+      {{ range $filtradas }}
+        <div class="apresentacao-item">
+          <h4>{{ .name }}</h4>
+          <p><strong>Autor(a):</strong> {{ .autor }}</p>
+          <p><strong>Descrição:</strong> {{ .descricao }}</p>
+          {{ if .arquivo }}
+            <p><a href="{{ .arquivo | relURL }}" target="_blank" rel="noopener">📄 Baixar PDF</a></p>
+          {{ else }}
+            <p><em>Arquivo não disponível</em></p>
+          {{ end }}
+        </div>
+        <hr>
+      {{ end }}
+    </div>
+  {{ end }}
+{{ end }}

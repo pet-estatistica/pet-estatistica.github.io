@@ -1,0 +1,13 @@
+enable  : true
+title   : Apresentações compartilhadas pelos palestrantes da semana acadêmica
+apresentacoes  :
+  - ano : 2026
+    autor : "Daiane Aparecida Zuanetti"
+    name  : "Métodos para identificação de tópicos em textos"
+    descricao : "Um dos objetivos da análise de texto é a modelagem de tópicos, cujas metodologias visam compreender a estrutura de tópicos (assuntos) que compõem uma coleção de documentos e segmentá-los com base em seus tópicos dominantes. Um dos métodos pioneiros nesse contexto é o modelo de mistura (MM), que pressupõe que cada documento é composto por palavras provenientes de um único tópico. Diante dessa limitação, a metodologia de Alocação Latente de Dirichlet (LDA) ganhou considerável visibilidade devido à sua maior flexibilidade. Tanto para a estimação do MM quanto do LDA, o número de tópicos precisa ser predeterminado. Caso seja desconhecido, a quantidade ideal pode ser definida por meio de critérios de seleção. Uma alternativa para selecionar o número de tópicos e estimar o modelo simultaneamente é o uso de metodologias Bayesianas não paramétricas. Neste trabalho, apresentamos e comparamos diferentes modelos e critérios para a escolha do número de tópicos. Para tanto, aplicamos os modelos e os critérios de seleção a dois conjuntos de dados reais. Trabalho realizado em conjunto com Edvaldo Capobiango Coelho Filho."
+    arquivo : "pdfs/atividades/semana_academica/2026/Apresentacao_Daiane.pdf"
+  - ano : 2026
+    autor : "Henrique Margotte"
+    name  : "IA Explicável: Por trás dos panos da Inteligência Artificial"
+    descricao : "IA Explicável, ou Explainable AI (XAI), é a área da Inteligência Artificial que busca entender como os modelos de IA aprendem e tomam decisões, de forma que seja compreensível para seres humanos. A XAI contribui para melhorarmos e corrigirmos modelos, identificarmos padrões e vieses nos dados, além de fornecer mais confiança para aplicações de IA!"
+    arquivo : "pdfs/atividades/semana_academica/2026/XAI.pdf"
