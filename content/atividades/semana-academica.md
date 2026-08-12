@@ -14,9 +14,23 @@ Um dos principais objetivos da semana acadêmica é complementar a formação pr
 
 ### Últimos eventos:
 
+#### 2026
+
+{{< gallery folder="images/atividades/semana-academica/2026/" >}}
+
+Site: https://sites.google.com/view/semana-de-estatstica-e-ciencia/home
+
+
+##### Apresentações dos palestrantes
+
+Alguns palestrantes disponibilizaram suas apresentações
+
+{{< apresentacoes_semana_academica ano="2026" >}}
+
+
 #### 2025
 
-{{< gallery folder="images/atividades/eventos-cientificos/2025/semana-academica-2025/" >}}
+{{< gallery folder="images/atividades/semana-academica/2025/" >}}
 
 Site: https://sites.google.com/view/semana-de-estatstica-2025/home?authuser=0
 
