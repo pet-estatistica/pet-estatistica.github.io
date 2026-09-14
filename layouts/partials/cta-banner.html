@@ -18,20 +18,31 @@
         </a>
         {{ end }}
       </div>
-      <button class="cta-banner-close" onclick="closeBanner()">&times;</button>
+      <button class="cta-banner-close" onclick="closeBannerPermanently()">&times;</button>
     </div>
   </div>
 
   <style>
+  :root {
+    /* 🛠️ AJUSTE AQUI: Coloque a altura do seu menu (ex: 60px, 80px, etc.) */
+    --altura-do-seu-menu: 120px; 
+    /* Altura estimada do banner para empurrar o conteúdo */
+    --altura-do-banner: 50px; 
+  }
+
   .cta-banner {
-    position: fixed;
-    top: 0;
+    position: absolute; /* Mapeia em relação ao topo da página, abaixo do menu */
+    top: var(--altura-do-seu-menu); /* ⬅️ Banner começa exatamente onde o menu termina */
     left: 0;
     width: 100%;
     padding: 0.75rem 0;
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
+
+  /* Se o seu menu também for 'fixed' e você quiser o banner fixo abaixo dele, */
+  /* descomente as duas linhas abaixo trocando o position: */
+  /* .cta-banner { position: fixed; } */
 
   .cta-banner-warning {
     background: #fff3cd;
@@ -135,12 +146,16 @@
     background: rgba(0, 0, 0, 0.1);
   }
 
-  /* Ajuste para conteúdo não ficar escondido atrás do banner */
+  /* Soma a altura do menu + a altura do banner para o conteúdo do site não sumir */
   body {
-    margin-top: 60px;
+    margin-top: calc(var(--altura-do-seu-menu) + var(--altura-do-banner));
   }
 
   @media (max-width: 768px) {
+    :root {
+      --altura-do-banner: 65px; /* Banner tende a ocupar mais espaço (2 linhas) no mobile */
+    }
+
     .cta-banner-text {
       font-size: 0.85rem;
       gap: 0.25rem;
@@ -148,10 +163,6 @@
 
     .cta-banner-content {
       padding: 0 0.5rem;
-    }
-
-    body {
-      margin-top: 70px;
     }
   }
   </style>
@@ -161,17 +172,17 @@
     const banner = document.getElementById('cta-banner');
     if (banner) {
       banner.style.display = 'none';
-      document.body.style.marginTop = '0';
+      // Restaura a margem padrão do body para a altura original do seu menu
+      const menuHeight = getComputedStyle(document.documentElement).getPropertyValue('--altura-do-seu-menu');
+      document.body.style.marginTop = menuHeight;
     }
   }
 
-  // Salvar preferência no localStorage
   function closeBannerPermanently() {
     closeBanner();
     localStorage.setItem('ctaBannerClosed', 'true');
   }
 
-  // Verificar se usuário já fechou o banner
   document.addEventListener('DOMContentLoaded', function() {
     if (localStorage.getItem('ctaBannerClosed') === 'true') {
       closeBanner();
