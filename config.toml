@@ -137,7 +137,7 @@ removePathAccents = true
   googleAnalitycsID = "G-ZPWNNN29C7"
   # We're using formspree.io for form handling, paste your formspree url below
   fabform  = "https://fabform.io/f/USAg2Jl"
-  tokenInstagram = 'IGAANtnh5nLCdBZAGFYMy1aZAzF6S1otRVZASckdWbktMRDU4ZAVpueDY0M3VxT1FVR0NuZATQxMmxMNTNhcE1aRmQyZADBFUHQzMjlncWhjbHZAmZA1YzTUl3Ml9zQ0NSWktwaTNoU3ZApeDNZAbEhDMldGVUFNR0FJTWNvTnhMQmh3TmhNSQZDZD'
+  tokenInstagram = 'IGAANtnh5nLCdBZAGFlMjRjTURqaWtUaUNseWZAGVlpMdVBFc2xRdlMtdVZApNDBaTHc4RGRqQ1RJNFNPSHZANN1R6dURKNWxPT3Q1VVNlTEh4VDluUWVDNFRfMWk3ZA0xIWWp1bTlmYU5xNVl4WVpEaGIwakExQjhQa3VQdWhvNEI0WQZDZD'
 
   # Parâmetros para API do YouTube
   [params.YouTubeAPI]
